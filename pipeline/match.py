@@ -46,7 +46,7 @@ def build_match_prompt(result, candidates, rows):
 
 def match_result(result, rows, k=5):
     # retrieve: the k AlgoWiki problems most similar to the paper's problem
-    query = f"{result.get('problem', '')}. {result.get('problem family') or ''}"
+    query = f"{result.get('problem') or ''}. {result.get('problem family') or ''}"
     candidates = search(query, k)
 
     # generate: the LLM picks the match and compares the bounds

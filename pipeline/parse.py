@@ -29,22 +29,21 @@ def render_page(pdf, page_num):
 def base64_encoding(pil_image):
     b_buf = io.BytesIO()
     pil_image.save(b_buf, format = "PNG")
-    return base64.b64encode(b_buf.getvalue()).decode()
+    return base64.b64encode(b_buf.getvalue()).decode() #takes the buffer, converts it to base64 then turns it back into a string
 
 #Payload and request
 def send_payload(image):
     payload = {
         "messages": [{"role": "user", "content": [{"type": "image_url", "image_url": {"url": "data:image/png;base64," + image}}]}],
         "model": "nvidia/nemotron-parse",
-        "frequency_penalty": 0,
+        "frequency_penalty": 0, # no penatly for token appearence
         "max_tokens": 8192, #endpoint max context is 9000 tokens (prompt + completion)
         "presence_penalty": 0,
-        "stream": False,
+        "stream": False, #send it back once its all complete
         "temperature": 0,
-        "top_p": 1
     }
     headers = {
-        "accept": "application/json",
+        "accept": "application/json", #send as json
         "Authorization": "Bearer " + API_KEY,
         "content-type": "application/json"
     }
@@ -59,14 +58,17 @@ def send_payload(image):
         except requests.RequestException as e:
             print(f" network error ({e}), retrying...")
             time.sleep(min(2 ** (attempt + 1), 60))
-            attempt += 1
+            if attempt < 5:
+                attempt += 1
             continue
         if response.status_code == 200:
             return response.json()
+        #if im rate limited i want to keep adding more time which is why we do 2/4/8/... 60
         if response.status_code in (402, 429) or response.status_code >= 500:
             print(f"  HTTP {response.status_code}, retrying...")
             time.sleep(min(2 ** (attempt + 1), 60))
-            attempt += 1
+            if attempt < 5: 
+                attempt += 1
             continue
         raise RuntimeError(f"HTTP {response.status_code}: {response.text[:500]}")
 
