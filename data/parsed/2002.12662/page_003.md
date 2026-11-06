@@ -1,0 +1,16 @@
+<tbc>to subpattern occurrences can be made very fast in practice, and comfortably outperform state-of-the-art methods based on wavelet trees.
+
+We emphasise that none of our new approaches are particularly exotic. They are, however, very fast, and so represent non-trivial baselines by which future (possibly more exotic) indexes for VLG pattern matching and related problems (such as regex matching) can be meaningfully measured.
+
+### Roadmap.
+
+The remainder of this paper is as follows. Section 2 then looks at a simple method for solving VLG matching that works by sorting and intersecting ranges of the suffix array that contain the occurrences of subpatterns of the VLG pattern. Sections 3 and 4 evolve this basic idea, presenting the results of small illustrative experiments along the way. In Section 5 we compare our best performing method to the recent wavelet-tree-based approach of Bader et al., which represents the current state-of-the-art for indexed pattern matching (details of our test machine and data sets can also be found in Section 5). Reflections and directions for future work are then offered in Section 6.
+
+### 2 VLG matching via sorting and scanning suffix array intervals
+
+Essential to the methods for VLG matching we will consider in this and later sections is the _suffix array_ [16] data structure. The suffix array of T, |T|=_n_, denoted SA, is an array SA[0_..n_-1], which contains a permutation of the integers 0_..n_ such that T[SA[0]_..n_-1]_\<_T[SA[1]_..n_-1]_\<_\(\cdots<\mathsf{T}[\mathsf{SA}[n]..n-1]\). In other words, SA[_j_]=_i_ iff T[_i..n_] is the _j_th suffix of T in ascending lexicographical order. Because of the lexicographic ordering, all the suffixes starting with a given substring _p_ of T form an interval SA[_s..e_], which can be determined by binary search in _O_(|_p_|log_n_) time. Clearly the integers in SA[_s..e_] correspond precisely to the distinct positions of occurrence of _p_ in T and once _s_ and _e_ are located it is straightforward to enumerate them in time _O(e-s_).
+
+The starting point for our approaches is a baseline algorithm from the study by Bader et al. called SA-scan, which makes use of the suffix array of T. A pseudo-C++ fragment adapted from Bader et al.’s codebase capturing the main thrust of SA-scan is shown in Fig. 1. For ease of reading the code here assumes two subpatterns, but is easy to generalize for _k\>_2.
+
+The operation of SA-scan can be summarized as follows. First, search for each of the _k_ subpatterns using SA to arrive at _k_ ranges of the SA containing the subpattern occurrences (in the code listing this is acheived by the two `search` method calls). Next, for each range, allocate a memory buffer equal to the range’s size and copy the contents of the range from SA to the newly allocated memory and sort the contents of the buffer (positions of subpattern occurrence) into ascending order. Finally, intersect the positions for subpatterns _p_<sub>0</sub> and _p_<sub>1</sub> with respect to the gap constraints. Experimenting with SA-scan we observed the time taken to find the ranges of subpattern occurrences in SA constituted less than 1% of the overall runtime, with the vast majority of time spent sorting.
+

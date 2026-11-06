@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Temporal discretization matrix B_M for fractional evolution equations",
+      "problem family": "fractional evolution equations",
+      "bound": "\\{B_M\\}_M\\sim_{\\mathrm{GLT},\\sigma} g_\\beta(\\theta),\\theta\\in[-\\pi,\\pi]",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Moreover, \\{B_M\\}_M\\sim_\\lambda b_0.",
+      "page": 9
+    },
+    {
+      "problem": "All-at-once space-time linear system for variable-coefficient fractional evolution equations",
+      "problem family": "fractional evolution equations",
+      "bound": "\\{\\mathcal{A}_{N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\gamma^*a(x)f_\\alpha(\\theta_1)+g_\\beta(\\theta_2)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\{\\mathcal{A}_{N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\gamma^*a(x)f_\\alpha(\\theta_1)+g_\\beta(\\theta_2)",
+      "page": 10
+    },
+    {
+      "problem": "Preconditioned system for forward block substitution (Technique 1)",
+      "problem family": "fractional evolution equations",
+      "bound": "\\{P_N^{-1}A_N\\}_N\\sim_{\\mathrm{GLT},\\sigma} 1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\{P_N^{-1}A_N\\}_N\\sim_{\\mathrm{GLT},\\sigma} 1 when a is a constant",
+      "page": 12
+    },
+    {
+      "problem": "Preconditioned system for global solution approach (Technique 2)",
+      "problem family": "fractional evolution equations",
+      "bound": "\\{P_{\\alpha,\\beta,NM}^{-1}\\mathcal{A}_{N,M}\\}_{N,M}\\sim_{\\mathrm{GLT},\\sigma} 1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\{P_{\\alpha,\\beta,NM}^{-1}\\mathcal{A}_{N,M}\\}_{N,M}\\sim_{\\mathrm{GLT},\\sigma} 1 when a is a constant",
+      "page": 13
+    },
+    {
+      "problem": "Global solution approach (Technique 2) for all-at-once fractional evolution systems",
+      "problem family": "fractional evolution equations",
+      "bound": "O(MN\\log NM)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "we end up fast methods, with optimal cost of O(MN log NM) arithmetic operations for the second proposal.",
+      "page": 11
+    }
+  ],
+  "paper": "2608.25796",
+  "usage": {
+    "prompt_tokens": 40441,
+    "completion_tokens": 14204,
+    "total_tokens": 54645,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13556,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

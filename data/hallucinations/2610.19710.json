@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Dynamic 3-coloring of bipartite graphs",
+      "problem family": "graph coloring",
+      "bound": "$O(\\log n)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists a dynamic graph algorithm which maintains a 3-coloring with a locality of O(log n) in the dynamic-LOCAL model for input sequences of node and edge insertions where the resulting graph is bipartite at every step.",
+      "page": 2
+    }
+  ],
+  "paper": "2610.19710",
+  "usage": {
+    "prompt_tokens": 16716,
+    "completion_tokens": 7390,
+    "total_tokens": 24106,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7262,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

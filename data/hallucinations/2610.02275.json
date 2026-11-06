@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maximum Edge Open Packing",
+      "problem family": "AT-free graphs",
+      "bound": "O(n^2 + m^4)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "_The_ Maximum Edge Open Packing _problem can be solved in O(n_<sup>2</sup>+_m_<sup>4</sup>) _time on an AT-free graph with n vertices and m edges._",
+      "page": 4
+    },
+    {
+      "problem": "Maximum Edge Open Packing",
+      "problem family": "chordal graphs",
+      "bound": "O(n^4)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "2^{O(\\omega)}\\mathrm{poly}(n)",
+      "quote": "_For a chordal graph G on n vertices, the dynamic program computes_ $\\rho_\\mathrm{e}^\\circ(G)$ _and an optimum edge open packing in O(n_<sup>4</sup>) _time._",
+      "page": 8
+    },
+    {
+      "problem": "Maximum Edge Open Packing",
+      "problem family": "convex bipartite graphs",
+      "bound": "O(n^4)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{42})",
+      "quote": "_The_ Maximum Edge Open Packing _problem can be solved in O(n_<sup>4</sup>) _time and O(n_<sup>2</sup>) _space on convex bipartite graphs._",
+      "page": 10
+    },
+    {
+      "problem": "Maximum Edge Open Packing",
+      "problem family": "convex bipartite graphs",
+      "bound": "O(n^2)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "_The_ Maximum Edge Open Packing _problem can be solved in O(n_<sup>4</sup>) _time and O(n_<sup>2</sup>) _space on convex bipartite graphs._",
+      "page": 10
+    }
+  ],
+  "paper": "2610.02275",
+  "usage": {
+    "prompt_tokens": 14036,
+    "completion_tokens": 10242,
+    "total_tokens": 24278,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9769,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

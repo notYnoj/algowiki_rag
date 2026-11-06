@@ -1,0 +1,18 @@
+<tbc>The directed color-transition multigraph \(D(\alpha,\beta)\) has vertex set \[_q_\], so its vertices represent colors. For every vertex \(v\in V(G)\), it contains one arc from \(\alpha(v)\) to \(\beta(v)\). Parallel arcs are kept and regarded as distinct. Notice that the vertices of \(D(\alpha,\beta)\) represent colors, not vertices of _G_. Thus, \(D(\alpha,\beta)\) has only _q_ vertices but one arc for every vertex of _G_, and arbitrarily many graph vertices may give rise to parallel copies of the same arc. In an arc-disjoint cycle decomposition (defined below), these copies are treated as distinct. We write \(D^\neq(\alpha,\beta)\) for the directed multigraph obtained by deleting all loops.
+
+An _arc-disjoint cycle decomposition_ of \(D^\neq(\alpha,\beta)\) into directed simple cycles is a collection of directed simple cycles such that every arc belongs to exactly one cycle. Here a directed cycle is simple if it visits every color at most once, except that its first and last colors coincide. Since \(\alpha\) and \(\beta\) have the same histogram, every color has equal indegree and outdegree in \(D^\neq(\alpha,\beta)\), and hence such an arc-disjoint cycle decomposition exists.
+
+The following statement is the unit-cost interchange-distance characterization of Amir et al. \[2, Lemma 1\], stated in our coloring notation.
+
+**Lemma 2.** _Let_ \(M=|E(D^\neq(\alpha,\beta))|\)_, where parallel arcs are counted with multiplicity, and let_ \(\rho\) _be the maximum number of cycles in an arc decomposition of_ \(D^\neq(\alpha,\beta)\) _into directed simple cycles. Then the minimum number of swaps transforming_ \(\alpha\) _into_ \(\beta\) _is_ \(M-\rho\).
+
+Hence, a maximum-cardinality cycle decomposition determines the optimum swap distance. Computing such a decomposition is NP-hard when _q_ is unbounded \[2, Corollary 2.6\]; Amir et al. also give a polynomial-time algorithm for every fixed alphabet \[2, Theorem 2.9\]. For two fixed colorings, the cycle-type ILP below in fact yields fixed-parameter tractability parameterized by _q_: it uses one variable for each directed simple cycle type on \[_q_\]. Note that this does not solve Swap-CD parameterized by _q_ alone, since its proper target coloring is not given. Indeed, Swap-CD remains NP-complete for every fixed \(q\ge 3\) \[13\]. The additional vertex- cover parameter lets us encode all possible proper targets by boundedly many neighborhood types, while the cycle part of the ILP depends only on _q_.
+
+**Theorem 3.** Swap-CD _is fixed-parameter tractable parameterized by_ vc(_G_)+_q._
+
+_Proof._ Compute a minimum vertex cover _C_ of size _k_ by the standard bounded- search-tree algorithm, and put _I=V(G_)\\_C_. Enumerate the _q<sup>k</sup>_ maps \(\gamma:C\rightarrow[q]\) and discard those that are not proper on _G_\[_C_\]. Partition _I_ into the at most 2_<sup>k</sup>_ classes _R_ of equal neighborhoods in _C_.
+
+We write the following ILP (the full details are presented in Appendix B). For a fixed \(\gamma\), introduce a nonnegative integer variable _x<sub>R,a,c</sub>_ for every class _R_ and colors _a,c_. It counts vertices in _R_ that initially have color _a_ and finally have color _c_. We require \(\sum_cx_{R,a,c}=|R\cap\varphi^{-1}(a)|\). We set _x<sub>R,a,c</sub>_=0 whenever _c_ occurs on _N(R_) under \(\gamma\).
+
+Together with the fixed transitions \(\varphi(v)\rightarrow\gamma(v)\) on _C_, the variables determine a multiplicity \(T_{a,c}=|\{v\in C:\varphi(v)=a,\gamma(v)=c\}|+\sum_Rx_{R,a,c}\) for every ordered color pair. These variables model the arcs of transition multigraph. Let \(\Gamma_q\) be the set of directed simple cycles on \[_q_\], including loops, and
+

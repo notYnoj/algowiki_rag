@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Subsequence (LCS) approximation",
+      "problem family": null,
+      "bound": "\\tilde{O}(n) time, O(n^{3/4}\\log n)-approximation",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a deterministic algorithm that receives two input sequences x and y with n=|x|+|y|, and returns in \\tilde{O}(n) time a common subsequence L of x and y such that |L|\\ge|\\text{LCS}(x,y)|/(n^{3/4}logn).",
+      "page": 3
+    }
+  ],
+  "paper": "2507.22486",
+  "usage": {
+    "prompt_tokens": 13331,
+    "completion_tokens": 4903,
+    "total_tokens": 18234,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4739,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Filtered Information Retrieval",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "55\\%",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "existing methods",
+      "quote": "Our proposal increased recall@1 of single-label searches by up to 55% and fewer disk I/Os compared with existing methods.",
+      "page": 1
+    },
+    {
+      "problem": "Filtered Information Retrieval",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\frac{1}{78}",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": "existing methods",
+      "quote": "This also retains the main advantages of AiSAQ, which can reduce DRAM footprint by up to 1/78 and index switching time comparing with existing methods.",
+      "page": 1
+    },
+    {
+      "problem": "Filtered Information Retrieval",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\sim 90\\%",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "Filtered-DiskANN",
+      "quote": "AiSAQ-in-Filtering achieves ∼90% recall@1 in single-label filtering search, much higher than the baseline of Filtered-DiskANN.",
+      "page": 1
+    },
+    {
+      "problem": "Label-inclusive Product Quantization",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\text{no increase in compressed vector size}",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Our new product quantization method named LiPQ (Label-inclusive Product Quantization) can encode label data along with unstructured vector data without increase of compressed vector size.",
+      "page": 1
+    },
+    {
+      "problem": "Index loading",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\text{stable (label-count independent)}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "Filtered-DiskANN",
+      "quote": "In contrast, our proposal has stable index load times regardless of the total number of labels.",
+      "page": 4
+    }
+  ],
+  "paper": "2610.17627",
+  "usage": {
+    "prompt_tokens": 6420,
+    "completion_tokens": 8674,
+    "total_tokens": 15094,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8172,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

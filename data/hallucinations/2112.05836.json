@@ -1,0 +1,161 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "grammar-compressed k-LCS",
+      "problem family": "string distance measures",
+      "bound": "(M^{k-1}m)^{1-o(1)} time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "If the k'-OV hypothesis is true for all constants k', then for any constant \\epsilon\\in(0,1] grammar-compressed k-LCS requires (M^{k-1}m)^{1-o(1)} time when the alphabet size is |\\Sigma|=\\Theta(k) and m=M^{\\epsilon\\pm o(1)}. Here, M denotes the total length of the k input strings and m is their total compressed size.",
+      "page": 21
+    },
+    {
+      "problem": "grammar-compressed k-median edit distance",
+      "problem family": "string distance measures",
+      "bound": "(M^{k-1}m)^{1-o(1)} time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "If the k'-OV hypothesis is true for all constants k', then for all constant \\epsilon\\in(0,1] grammar-compressed k-median edit distance requires (M^{k-1}m)^{1-o(1)} time when the alphabet size is |\\Sigma|=\\Theta(k) and m=M^{\\epsilon\\pm o(1)}. Here, M and m denote the total uncompressed and compressed length of the k input strings respectively.",
+      "page": 23
+    },
+    {
+      "problem": "grammar-compressed k-center edit distance",
+      "problem family": "string distance measures",
+      "bound": "(M^{k-1}m)^{1-o(1)} time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "We are given k strings of length M with a SLP of size m. The center k-edit distance problem on these strings requires (M^{k-1}m)^{1-o(1)} time if SETH is true.",
+      "page": 23
+    },
+    {
+      "problem": "grammar-compressed median k-edit distance",
+      "problem family": "string distance measures",
+      "bound": "\\widetilde{O}(\\epsilon^{-O(k)}n^{k/2}N^{k/2}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given k=O(1) straight-line programs \\mathbf{G}_{X_i} of total size n generating strings X_i of total length N>0 and a parameter \\epsilon\\in(0,1], an integer between \\delta_E(X_1,\\dots,X_k) and (1+\\epsilon)\\delta_E(X_1,\\dots,X_k) can be computed in \\widetilde{O}(\\epsilon^{-O(k)}n^{k/2}N^{k/2}) time.",
+      "page": 11
+    },
+    {
+      "problem": "grammar-compressed center k-edit distance",
+      "problem family": "string distance measures",
+      "bound": "O(\\epsilon^{-O(k)}n^{k/2}N^{k/2+o(1)}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(N^{2k}) exact [NR05]",
+      "quote": "Given k=O(1) straight-line programs \\mathbf{G}_{X_i} of total size n generating strings X_i of total length N>0 and a parameter \\epsilon\\in(0,1], an integer between \\delta_{CE}(X_1,\\dots,X_k) and (1+\\epsilon)\\delta_{CE}(X_1,\\dots,X_k) can be computed in O(\\epsilon^{-O(k)}n^{k/2}N^{k/2+o(1)}) time.",
+      "page": 16
+    },
+    {
+      "problem": "grammar-compressed edit distance of two strings",
+      "problem family": "string distance measures",
+      "bound": "\\bar{O}((nm(N+M))^{2/3}\\epsilon^{-1/3}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "\\widetilde{O}(nN) exact [Tis15]",
+      "quote": "Given a straight-line program \\mathbf{G}_X of size n generating a string X of length N>0, a straight-line program \\mathbf{G}_Y of size m generating a string Y of length M>0, and a parameter \\epsilon\\in(0,1], an integer between \\delta_E(X,Y) and (1+\\epsilon)\\delta_E(X,Y) can be computed in \\bar{O}((nm(N+M))^{2/3}\\epsilon^{-1/3}) time.",
+      "page": 5
+    },
+    {
+      "problem": "grammar-compressed LCS of two strings",
+      "problem family": "string distance measures",
+      "bound": "\\widetilde{O}((nm(N+M))^{2/3}\\epsilon^{-1/3}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given a straight-line program \\mathbf{G}_X of size n generating a string X of length N>0, a straight-line program \\mathbf{G}_Y of size m generating a string Y of length M>0, and a parameter \\epsilon\\in(0,1], a (1+\\epsilon)-approximation of LCS(X,Y) can be computed in \\widetilde{O}((nm(N+M))^{2/3}\\epsilon^{-1/3}) time.",
+      "page": 10
+    },
+    {
+      "problem": "grammar-compressed edit distance of two strings (exact, output-sensitive)",
+      "problem family": "string distance measures",
+      "bound": "\\widetilde{O}(\\sqrt{(1+\\delta_E(X,Y))nm(N+M)}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "\\widetilde{O}(\\min(nN, n+D^2)) [Tis15, LV88, MSU97]",
+      "quote": "Given a straight-line program \\mathbf{G}_X of size n generating a string X of length N>0 and a straight-line program \\mathbf{G}_Y of size m generating a string Y of length M>0, the edit distance \\delta_E(X,Y) can be computed in \\widetilde{O}(\\sqrt{(1+\\delta_E(X,Y))nm(N+M)}) time.",
+      "page": 4
+    },
+    {
+      "problem": "grammar-compressed Hamming distance of two strings",
+      "problem family": "string distance measures",
+      "bound": "O(n\\sqrt{N}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(n^{1.41}N^{0.593}) [ABBK17]",
+      "quote": "We also get improved results for the Hamming distance, which is a more basic measure trivially computable in O(N) time. Here, we present an O(n\\sqrt{N})-time algorithm which improves upon the O(n^{1.41}N^{0.593}) bound of [ABBK17].",
+      "page": 4
+    },
+    {
+      "problem": "grammar-compressed median Hamming distance of k strings",
+      "problem family": "string distance measures",
+      "bound": "O(nN^{1-1/k}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Additionally, we note that natural generalizations to multiple strings (including the median Hamming distance) can be computed in O(nN^{1-1/k}) time.",
+      "page": 4
+    },
+    {
+      "problem": "general string distance via tensor product of k grammar-compressed strings",
+      "problem family": "string distance measures",
+      "bound": "O((\\prod_{i=1}^k n_i)^{1/k}N^{1-1/k}) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given k=O(1) straight-line programs \\mathbf{G}_i of size n_i representing strings X_i\\in\\Sigma_i^N of the same length N>0 and a function \\delta:\\times_{i=1}^k\\Sigma_i\\rightarrow\\mathbb{R} that can be evaluated in O(1) time, the value \\delta(X_1,\\dots,X_k):=\\sum_{j=1}^N\\delta(X_1[j],\\dots,X_k[j]) can be computed in O((\\prod_{i=1}^kn_i)^{1/k}N^{1-1/k}) time.",
+      "page": 44
+    },
+    {
+      "problem": "k-Shift Distance",
+      "problem family": "string distance measures",
+      "bound": "O(|\\Sigma|N^{k-1}lg(|\\Sigma|N)) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is an O(|\\Sigma|N^{k-1}lg(|\\Sigma|N)) algorithm for k-Shift Distance.",
+      "page": 45
+    },
+    {
+      "problem": "k-Shift Distance",
+      "problem family": "string distance measures",
+      "bound": "N^{k-1-o(1)} time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Let a and k be constants. Let N be the input string length for k-SD. If the (a(k-1))-OV hypothesis holds then k-SD requires N^{k-1-o(1)} time even when the strings compress down to length m=N^{1/a+o(1)} with an alphabet of size O(1).",
+      "page": 46
+    },
+    {
+      "problem": "k-Shift Distance approximation",
+      "problem family": "string distance measures",
+      "bound": "O(|\\Sigma|N^{\\lceil(k-1)/\\ell\\rceil}lg(|\\Sigma|N)) time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is an O(|\\Sigma|N^{\\lceil(k-1)/\\ell\\rceil}lg(|\\Sigma|N)) time algorithm to get an \\ell approximation of the k-Shift Distance distance for any integer \\ell\\ge 2.",
+      "page": 48
+    }
+  ],
+  "paper": "2112.05836",
+  "usage": {
+    "prompt_tokens": 79789,
+    "completion_tokens": 12452,
+    "total_tokens": 92241,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10151,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

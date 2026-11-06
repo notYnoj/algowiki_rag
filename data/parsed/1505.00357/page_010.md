@@ -1,0 +1,18 @@
+<tbc>is the expected number of nodes (including, by convention, leaves) visited for a random query _v_. Fig. 6 shows two gbsts for a single instance.
+
+To prove Thm. 4, we observe that \[11\]’s Lemma 4 and algorithm fail on the instance in Fig. 6. There is a solution of cost only 1762 (in Fig. 6(b)), but the algorithm gives cost 1763 for the instance (as in Fig. 6(a)), as can be verified by executing the Python code for the algorithm in Appendix 7.1. The intuition is that the optimal substructure property fails for the subproblems defined by \[11\]: the circled subtree in (a) (with root _A_2) is cheaper than the corresponding subtree in (b), but leads to larger global cost. For more intuition and the full proof, see Appendix 7.3.
+
+## 6 Proof of Thm. 5 (_O(n_log_n_) time without equality)
+
+Fix any 2wcst instance \(\mathcal{I}=(\mathcal{K},\mathcal{Q},\mathcal{C},\alpha,\beta)\) with \(\mathcal{C}\subseteq\{<,\le\}\). Let _n_=|K|. We show that, in _O(n_log_n_) time, one can compute an equivalent instance \(\mathcal{I}'=(\mathcal{K}',\mathcal{Q}',\mathcal{C}',\alpha',\beta')\) with \(\mathcal{K}'=\mathcal{Q}',\mathcal{C}'=\{<\}\), and \(|\mathcal{K}'|\le 2n+1\). (_Equivalent_ means that, given an optimal 2wcst \(T'\) for \(\mathcal{I}'\), one can compute in _O(n_log_n_) time an optimal 2wcst _T_ for I.) The idea is that, when \(\mathcal{C}\subseteq\{<,\le\}\), open intervals are functionally equivalent to keys.
+
+Assume without loss of generality that \(\mathcal{C}=\{<,\le\}\). (Otherwise no correct tree exists unless K=Q, and we are done.) Assume without loss of generality that no two elements in Q are equivalent (in that they relate to all keys in K in the same way; otherwise, remove all but one query from each equivalence class). Hence, at most one query lies between any two consecutive keys, and \(|\mathcal{Q}|\le 2|\mathcal{K}|+1\).
+
+Let instance \(\mathcal{I}'=(\mathcal{K}',\mathcal{Q},\mathcal{C}',\alpha',\beta')\) be obtained by taking the key set \(\mathcal{K}'=\mathcal{Q}\) to be the key set, but restricting comparisons to \(\mathcal{C}'=\{<\}\) (and adjusting the probability distribution appropriately -- take \(\alpha'\equiv=0\), take \(\beta_i\) to be the probability associated with the _i_th query -- the appropriate \(\alpha_j\) or \(\beta_j\)).
+
+Given any irreducible 2wcst _T_ for I, one can construct a tree \(T'\) for \(\mathcal{I}'\) of the same cost as follows. Replace each node \(\langle v\le k\rangle\) with a node \(\langle v<q\rangle\), where _q_ is the least query value larger than _k_ (there must be one, since \(\langle v\le k\rangle\) is in _T_ and _T_ is irreducible). Likewise, replace each node \(\langle v<k\rangle\) with a node \(\langle v<q\rangle\), where _q_ is the least query value greater than or equal to _k_ (there must be one, since \(\langle v<k\rangle\) is in _T_ and _T_ is irreducible). \(T'\) is correct because _T_ is.
+
+Conversely, given any irreducible 2wcst \(T'\) for \(\mathcal{I}'\), one can construct an equivalent 2wcst _T_ for I as follows. Replace each node \(N'=\langle v<q\rangle\) as follows. If \(q\in\mathcal{K}\), replace \(N'\) by \(\langle v<k\rangle\). Otherwise, replace \(N'\) by \(\langle v\le k\rangle\), where key _k_ is the largest key less than _q_. (There must be such a key _k_. Node \(\langle v<q\rangle\) is in \(T'\) but \(T'\) is irreducible, so there is a query, and hence a key _k_, smaller than _q_.) Since \(T'\) correctly classifies each query in Q, so does _T_.
+
+To finish, we note that the instance \(\mathcal{I}'\) can be computed from I in _O(n_log_n_) time (by sorting the keys, under reasonable assumptions about Q), and the second mapping (from \(T'\) to _T_) can be computed in _O(n_log_n_) time. Since \(\mathcal{I}'\)
+

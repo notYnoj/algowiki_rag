@@ -1,0 +1,2 @@
+The first part is immediately improved from \(\tilde{O}(r)\) to \(\tilde{O}(\sqrt{r})\) using our new data structure. The second part can be solved by having a recursive max flow/min _st_-cut data structure for each piece. The final part remains unchanged and runs in time \(\tilde{O}(n/\sqrt{r})\) using FR-Dijkstra. We thus get the following recurrence for the improved worst-case time: \(T(n)=\tilde{O}(n/\sqrt{r}+\sqrt{r})+T(r)\). Picking _r_ to be a constant factor smaller than _n_, we get the desired \(\tilde{O}(\sqrt{n})\) worst-case bound from a geometric sums argument.
+

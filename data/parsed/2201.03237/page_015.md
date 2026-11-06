@@ -1,0 +1,4 @@
+<tbc>neighbor set only includes nodes close to it. It is effective especially for (_r,p_)- MSNET. According to the equation (4), when _l_ is much greater than _r_, the min\_prob is going to be large. Therefore, it does not make much sense to add nodes far away to the candidate set.
+
+However, for the datasets that consist of multiple separate clusters, taking the nearest neighbors set as candidate may result in the loss of global connectivity. Therefore, in order to construct a (_r,p_)-MSNET with global connectivity, we propose TBSG (Tree-based Search Graph), which consists of two parts: Cover Tree and BKNNG (Bi-directed K Nearest Neighbor Graph). The Cover Tree is a data structure for exact NNS, which recursively divides a spherical space into several smaller spherical spaces and owns strong connectivity. The BKNNG is a graph in which each node has bidirectional connections with its _K_ nearest<tbc>
+

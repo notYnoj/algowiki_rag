@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Traceback/witness reconstruction for width-bounded DP DAGs",
+      "problem family": "Width-bounded dynamic programs",
+      "bound": "O(\\omega \\log T + \\mathsf{polylog} T)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "\\Theta(T) \\text{ space (naive traceback)}",
+      "quote": "Under Assumptions 1 and 2, the Universal Hirschberg algorithm computes a canonical optimal witness path to t using space $\\mathsf{SPACE}_\\mathrm{traceback}=O(\\omega\\mathrm{log}T+\\mathrm{polylog}T)$, measured in tape cells over a fixed finite alphabet.",
+      "page": 14
+    },
+    {
+      "problem": "Asymmetric sequence alignment on an m x n grid (m <= n)",
+      "problem family": "Sequence alignment",
+      "bound": "O(m \\log(mn) + \\mathsf{polylog}(mn))",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "O(m+n) \\text{ words (classical Hirschberg)}",
+      "quote": "an optimal alignment between A and B, runs in time polynomial in mn, and uses space $\\mathsf{SPACE}=O\\big(mlog(mn)+polylog(mn)\\big)$, measured in tape cells over a fixed finite alphabet.",
+      "page": 16
+    },
+    {
+      "problem": "One-dimensional recurrence traceback on a chain of length T",
+      "problem family": "One-dimensional recurrences",
+      "bound": "O(\\mathsf{polylog} T)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the witness sequence can be reconstructed deterministically in space $\\mathsf{SPACE}=O\\big(polylogT\\big)\\\\text{\\textit{cells}}$.",
+      "page": 16
+    },
+    {
+      "problem": "Banded global alignment on an N x N grid with bandwidth B",
+      "problem family": "Banded sequence alignment",
+      "bound": "O(B \\log(BN) + \\mathsf{polylog}(BN))",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "\\Theta(BN) \\text{ words (naive back-pointer storage)}",
+      "quote": "an optimal alignment confined to the band can be reconstructed deterministically in space $\\mathsf{SPACE}=O\\big(Blog(BN)+polylog(BN)\\big)$.",
+      "page": 17
+    },
+    {
+      "problem": "Traceback on DP DAGs of bounded pathwidth",
+      "problem family": "Bounded pathwidth graphs",
+      "bound": "O(\\mathsf{pw}(G) \\log |V| + \\mathsf{polylog}|V|)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "an optimal witness path to any sink can be reconstructed in space $\\mathsf{SPACE}=O\\big(pw(G)log|V|+polylog|V|\\big)$.",
+      "page": 17
+    },
+    {
+      "problem": "Traceback in forward-only single-pass models",
+      "problem family": "Streaming traceback",
+      "bound": "\\Omega(\\omega)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then A must use $\\Omega(\\omega)$ bits of work-tape space in the worst case.",
+      "page": 18
+    }
+  ],
+  "paper": "2512.10132",
+  "usage": {
+    "prompt_tokens": 28367,
+    "completion_tokens": 10437,
+    "total_tokens": 38804,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9653,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

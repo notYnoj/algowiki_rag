@@ -1,0 +1,271 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Matroid k-packing (decision)",
+      "problem family": "Matroid packing",
+      "bound": "Preprocessing \\(O(k^2m+(kr)^\\omega)\\), Space \\(O(km+(kr)^2\\log(kr))\\), Query \\(O((k^2\\delta)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "This oracle requires \\(O(k^2m+(kr)^\\omega)\\) preprocessing time, \\(O(km+(kr)^2\\log(kr))\\) space, and answers queries in \\(O((k^2\\delta)^\\omega)\\) time.",
+      "page": 18
+    },
+    {
+      "problem": "Matroid k-packing (weighted)",
+      "problem family": "Matroid packing",
+      "bound": "Preprocessing \\(\\widetilde{O}(k^2m+W(kr)^3)\\), Space \\(O(km+W(kr)^3\\log(kr))\\), Query \\(\\widetilde{O}(W\\cdot kr\\cdot(k^2\\delta)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "This oracle requires \\(\\widetilde{O}(k^2m+W(kr)^3)\\) preprocessing time, \\(O(km+W(kr)^3\\log(kr))\\) space, and answers queries in \\(\\widetilde{O}(W\\cdot kr\\cdot(k^2\\delta)^\\omega)\\) time.",
+      "page": 18
+    },
+    {
+      "problem": "Matroid k-covering (decision)",
+      "problem family": "Matroid covering",
+      "bound": "Preprocessing \\(O((kr)^\\omega)\\), Space \\(O((kr)^2\\log(kr))\\), Query \\(O((\\delta k)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "This oracle requires \\(O((kr)^\\omega)\\) preprocessing time, \\(O((kr)^2\\log(kr))\\) space, and answers queries in \\(O((\\delta k)^\\omega)\\) time.",
+      "page": 22
+    },
+    {
+      "problem": "Subset matroid k-packing (decision)",
+      "problem family": "Matroid packing",
+      "bound": "Preprocessing \\(O(k^2(m+\\sigma)+\\sigma^2(kr)^{\\omega-2}+(kr)^\\omega)\\), Space \\(O(\\sigma^2)\\), Query \\(O(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "This oracle requires \\(O(k^2(m+\\sigma)+\\sigma^2(kr)^{\\omega-2}+(kr)^\\omega)\\) preprocessing time, \\(O(\\sigma^2)\\) space, and answers queries in \\(O(f^\\omega)\\) time.",
+      "page": 20
+    },
+    {
+      "problem": "Subset matroid k-covering",
+      "problem family": "Matroid covering",
+      "bound": "Preprocessing \\(O(k^2|E_0|+\\sigma^2(kr)^{\\omega-2}+(kr)^\\omega)\\), Space \\(O(\\sigma^2)\\), Query \\(O(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "This oracle requires \\(O(k^2|E_0|+\\sigma^2(kr)^{\\omega-2}+(kr)^\\omega)\\) preprocessing time, \\(O(\\sigma^2)\\) space, and answers queries in \\(O(f^\\omega)\\) time.",
+      "page": 23
+    },
+    {
+      "problem": "All-pairs k-bounded flow",
+      "problem family": "Max-flow / Min-cut",
+      "bound": "Preprocessing \\(O((kn)^\\omega)\\), Space \\(O((kn)^2\\log n)\\), Query \\(O((fk^2)^\\omega\\log k)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Bounded Flow \\& \\(O((kn)^\\omega)\\) \\& \\(O((kn)^2\\log n)\\) \\& \\(O((fk^2)^\\omega\\log k)\\) \\& \\(\\lambda^*=\\min(k,\\lambda_{G+U}(s,t))\\)",
+      "page": 24
+    },
+    {
+      "problem": "Fixed (s,t)-exact max-flow",
+      "problem family": "Max-flow / Min-cut",
+      "bound": "Preprocessing \\(O((fn)^\\omega)\\), Space \\(O((fn)^2\\log n)\\), Query \\(\\widetilde{O}(f^{3\\omega})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Max-Flow \\& \\(O((fn)^\\omega)\\) \\& \\(O((fn)^2\\log n)\\) \\& \\(\\widetilde{O}(f^{3\\omega})\\) \\& \\(\\lambda_{G+U}(s,t)\\)",
+      "page": 27
+    },
+    {
+      "problem": "s-min-cut",
+      "problem family": "Min-cut",
+      "bound": "Preprocessing \\(O(f^\\omega n^{\\omega+1}+T_{aug})\\), Space \\(O(f^2n^3\\log n)\\), Query \\(\\widetilde{O}(f^{3\\omega+1})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "s-Min-Cut Value \\& \\(O(f^\\omega n^{\\omega+1}+T_{aug})\\) \\& \\(O(f^2n^3\\log n)\\) \\& \\(\\widetilde{O}(f^{3\\omega+1})\\) \\& \\(\\mu_{G+U}(s)\\)",
+      "page": 28
+    },
+    {
+      "problem": "Global min-cut",
+      "problem family": "Min-cut",
+      "bound": "Preprocessing \\(O(f^\\omega n^{\\omega+1}+T_{aug})\\), Space \\(O(f^2n^3\\log n)\\), Query \\(\\widetilde{O}(f^{3\\omega+1})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Global Min-Cut Value \\& \\(O(f^\\omega n^{\\omega+1}+T_{aug})\\) \\& \\(O(f^2n^3\\log n)\\) \\& \\(\\widetilde{O}(f^{3\\omega+1})\\) \\& \\(\\mu_{G+U}\\)",
+      "page": 29
+    },
+    {
+      "problem": "k-disjoint arborescences",
+      "problem family": "Spanning structures",
+      "bound": "Preprocessing \\(O((kn)^\\omega)\\), Space \\(O((kn)^2\\log n)\\), Query \\(O((fk^2)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision \\& \\(O((kn)^\\omega)\\) \\& \\(O((kn)^2\\log n)\\) \\& \\(O((fk^2)^\\omega)\\) \\& Whether G+U has k-disjoint s-rooted arborescences",
+      "page": 30
+    },
+    {
+      "problem": "k-disjoint spanning trees",
+      "problem family": "Spanning structures",
+      "bound": "Preprocessing \\(O((kn)^\\omega)\\), Space \\(O((kn)^2\\log n)\\), Query \\(O((fk^2)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision \\& \\(O((kn)^\\omega)\\) \\& \\(O((kn)^2\\log n)\\) \\& \\(O((fk^2)^\\omega)\\) \\& Whether G+U has k edge-disjoint spanning trees",
+      "page": 32
+    },
+    {
+      "problem": "Colorful spanning trees",
+      "problem family": "Spanning structures",
+      "bound": "Preprocessing \\(O(n^\\omega)\\), Space \\(O(n^2\\log n)\\), Query \\(O(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision \\& \\(O(n^\\omega)\\) \\& \\(O(n^2\\log n)\\) \\& \\(O(f^\\omega)\\) \\& Whether G+U has a colorful spanning tree",
+      "page": 33
+    },
+    {
+      "problem": "Packing spanning forests (arboricity)",
+      "problem family": "Spanning structures",
+      "bound": "Preprocessing \\(O((kn)^\\omega)\\), Space \\(O((kn)^2\\log n)\\), Query \\(O((kf)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision \\& \\(O((kn)^\\omega)\\) \\& \\(O((kn)^2\\log n)\\) \\& \\(O((kf)^\\omega)\\) \\& Whether G+U partitions into k forests",
+      "page": 34
+    },
+    {
+      "problem": "Matroid parity (general sensitivity)",
+      "problem family": "Matroid parity",
+      "bound": "Preprocessing \\(O(c^2m+r^\\omega)\\), Space \\(O(r^2\\log r)\\), Query \\(O((c^2f)^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision Oracle: Decides if a parity basis exists. This oracle requires \\(O(c^2m+r^\\omega)\\) preprocessing time, \\(O(r^2\\log(r))\\) space, and answers queries in \\(O((c^2f)^\\omega)\\) time.",
+      "page": 35
+    },
+    {
+      "problem": "k-bounded \\alpha-factor",
+      "problem family": "\\alpha-factors / Matchings",
+      "bound": "Preprocessing \\(O((kn)^\\omega)\\), Space \\(O((kn)^2\\log n)\\), Query \\(O(f^\\omega k^{2\\omega})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Existence \\& \\(O((kn)^\\omega)\\) \\& \\(O((kn)^2\\log n)\\) \\& \\(O(f^\\omega k^{2\\omega})\\) \\& Whether G+U has an \\alpha-factor",
+      "page": 37
+    },
+    {
+      "problem": "Arbitrary degree \\alpha-factor",
+      "problem family": "\\alpha-factors / Matchings",
+      "bound": "Preprocessing \\(O((fn)^\\omega+T_\\alpha)\\), Space \\(O((fn)^2\\log n)\\), Query \\(O(f^{3\\omega})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Existence \\& \\(O((fn)^\\omega+T_\\alpha)\\) \\& \\(O((fn)^2\\log n)\\) \\& \\(O(f^{3\\omega})\\) \\& Whether G+U has an \\alpha-factor",
+      "page": 40
+    },
+    {
+      "problem": "Subset (s,t)-max-flow",
+      "problem family": "Max-flow / Min-cut",
+      "bound": "Preprocessing \\(O(m^{1+o(1)}+\\sigma^2(fn)^{\\omega-2})\\), Space \\(O(\\sigma^2)\\), Query \\(\\widetilde{O}(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Max-Flow \\& \\(O(m^{1+o(1)}+\\sigma^2(fn)^{\\omega-2})\\) \\& \\(O(\\sigma^2)\\) \\& \\(\\widetilde{O}(f^\\omega)\\) \\& \\(\\lambda_{G+U}(s,t)\\)",
+      "page": 44
+    },
+    {
+      "problem": "Subset s-min-cut and global min-cut value via arborescences",
+      "problem family": "Min-cut",
+      "bound": "Space \\(O(f\\sigma^2)\\), Query \\(\\widetilde{O}(f^\\omega)\\)",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Then there exist subset sensitivity oracles that, for any update set \\(U\\in E_Q^f\\), report the values \\(\\mu_{G+U}(s)\\) (for a source s fixed at preprocessing) and \\(\\mu_{G+U}\\), each with \\(O(f\\sigma^2)\\) space and \\(\\widetilde{O}(f^\\omega)\\) query time, with high probability.",
+      "page": 46
+    },
+    {
+      "problem": "Subset matroid parity",
+      "problem family": "Matroid parity",
+      "bound": "Preprocessing \\(O(\\sigma^2r^{\\omega-2}+r^\\omega)\\), Space \\(O(\\sigma^2)\\), Query \\(O(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Decision Oracle: Requires \\(O(\\sigma^2r^{\\omega-2}+r^\\omega)\\) preprocessing time, \\(O(\\sigma^2)\\) space, and answers queries in \\(O(f^\\omega)\\) time.",
+      "page": 49
+    },
+    {
+      "problem": "Subset arbitrary degree \\alpha-factor",
+      "problem family": "\\alpha-factors / Matchings",
+      "bound": "Preprocessing \\(O(\\sigma^2(fn)^{\\omega-2}+(fn)^\\omega+T_\\alpha)\\), Space \\(O(\\sigma^2)\\), Query \\(O(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Existence \\& \\(O(\\sigma^2(fn)^{\\omega-2}+(fn)^\\omega+T_\\alpha)\\) \\& \\(O(\\sigma^2)\\) \\& \\(O(f^\\omega)\\) \\& Whether G+U has an \\alpha-factor",
+      "page": 50
+    },
+    {
+      "problem": "Lower bound for flows and cuts (subset sensitivity)",
+      "problem family": "Max-flow / Min-cut",
+      "bound": "\\(\\Omega(\\min\\{\\sigma^2,n^2\\})\\) bits of space for f=2 updates",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "any subset sensitivity oracle supporting at most f=2 updates requires \\(\\Omega(\\min\\{\\sigma^2,n^2\\})\\) bits of space for each of the following problems: (a) k-bounded (s,t) maximum flow and (s,t) minimum cut, for k=1; (b) Global directed minimum cut; (c) s-min-cut and s-rooted spanning arborescences (fixed source s).",
+      "page": 50
+    },
+    {
+      "problem": "Lower bound for colorful spanning trees (subset sensitivity)",
+      "problem family": "Spanning structures",
+      "bound": "\\(\\Omega(\\min(\\sigma^2,n^2))\\) bits of space under f=2 updates",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "any subset sensitivity oracle for colorful spanning tree requires \\(\\Omega(\\min(\\sigma^2,n^2))\\) bits of space under f=2 updates.",
+      "page": 51
+    },
+    {
+      "problem": "Lower bound for bipartite matching (subset sensitivity)",
+      "problem family": "Matchings",
+      "bound": "\\(\\Omega(\\min(\\sigma^2,n^2))\\) bits of space under f=2 updates",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "any subset sensitivity oracle for maximum bipartite matching requires \\(\\Omega(\\min(\\sigma^2,n^2))\\) bits of space under f=2 updates.",
+      "page": 52
+    },
+    {
+      "problem": "Maximum \\alpha-factor (general sensitivity)",
+      "problem family": "\\alpha-factors / Matchings",
+      "bound": "Preprocessing \\(O((fn)^\\omega+T_\\alpha)\\), Space \\(O((fn)^2\\log n)\\), Query \\(\\widetilde{O}(f^{3\\omega})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Maximum \\alpha-factor \\& \\(O((fn)^\\omega+T_\\alpha)\\) \\& \\(O((fn)^2\\log n)\\) \\& \\(\\widetilde{O}(f^{3\\omega})\\) \\& Size of maximum \\alpha-factor in G+U",
+      "page": 67
+    },
+    {
+      "problem": "Maximum \\alpha-factor (subset sensitivity)",
+      "problem family": "\\alpha-factors / Matchings",
+      "bound": "Preprocessing \\(O(\\sigma^2(fn)^{\\omega-2}+(fn)^\\omega+T_\\alpha)\\), Space \\(O(\\sigma^2)\\), Query \\(\\widetilde{O}(f^\\omega)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Maximum \\alpha-factor \\& \\(O(\\sigma^2(fn)^{\\omega-2}+(fn)^\\omega+T_\\alpha)\\) \\& \\(O(\\sigma^2)\\) \\& \\(\\widetilde{O}(f^\\omega)\\) \\& Size of maximum \\alpha-factor in G+U",
+      "page": 67
+    }
+  ],
+  "paper": "2609.01283",
+  "usage": {
+    "prompt_tokens": 69111,
+    "completion_tokens": 15973,
+    "total_tokens": 85084,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11864,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

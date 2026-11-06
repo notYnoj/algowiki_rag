@@ -1,0 +1,24 @@
+<tbc>relation can be solved in time \(O((|v|\cdot|A_u|)^{1-\epsilon})\), then we can also compute the length of the longest common subsequence of _u_ and _v_ in time \(O((|u|\cdot|v|)^{1-\epsilon})\).
+
+For the min-variant of the matching problem for the supersequence relation, assume that it can be solved in time \(O((|w|m)^{1-\epsilon})\). Let _u_ and _v_ be two strings over \(\Sigma\). We build an \(\varepsilon\)NFA _A<sub>u</sub>_ that accepts exactly the supersequences of _u_, which has _O_(|_u_|) states and \(O(|u|\cdot|\Sigma|)\) transitions: this can be done in time \(O(|u|\cdot|\Sigma|)\), again as a special case of the more general result from \[BLS15, Lemma 8\] reviewed in Section 3. As \(|\Sigma|\) is a constant, the construction is in _O_(|_u_|). Now, solving the min-variant of the matching problem for the supersequence relation in the prescribed complexity gives us the length of the shortest common supersequence of _u_ and _v_ in time \(O((|u|\cdot|v|)^{1-\epsilon})\).
+
+This leaves the question of the optimality of _O_(|_w|m_)-time for the min-variant of the \(\unknown_\text{sub}\)- matching problem and the max-variant of the \(\unknown_\text{sup}\)-matching problem. For these, similarly as in Theorem 7.4, we provide SETH-based conditional lower bounds via a reduction from the orthogonal vectors problem. However, now we consider its _unbalanced_ variant (UOV), in which we are given two sets _U_={_u_<sub>1</sub>_,...,u<sub>n</sub>},V_={_v_<sub>1</sub>_,...,v<sub>t</sub>_} of Boolean _d_-dimensional vectors, where \(d=\omega(logn)\) and \(t=n^\alpha\) for \(\alpha\in(0,1]\), and want to determine whether there exist \(i\in[n],j\in[t]\) such that \(u_i\perp v_j\). The Unbalanced Orthogonal Vector Hypothesis (UOVH) states that for every \(\epsilon>0\) there is no algorithm for UOV that runs in \(O(n^{1+\alpha-\epsilon}\text{poly}(d))\) time. As UOVH is equivalent to the Orthogonal Vectors Hypothesis \[BK18, BN21\], an algorithm for UOV achieving such a running time bound would refute SETH (recall Lemma 7.3). We can now show:
+
+**Theorem 7.6.** _If the max-variant of the matching problem for the supersequence relation or the min-variant of the matching problem for the subsequence relation can be solved in time_ \(O((|w|m)^{1-\epsilon})\)_, for some_ \(\epsilon>0\)_, then SETH fails. This holds even if we operate on an alphabet of constant size and if we only require the length of the answer strings._
+
+_Proof._ In order to simplify the presentation we operate on regular expressions instead of \(\varepsilon\)NFAs, as an \(\varepsilon\)NFA can be created from a regular expression in linear time. For a string _s_ and regular expression _r_, let MaxSup(_s,r_) be the length of the longest supersequence of _s_ that matches _r_ and MinSub(_s,r_) be the length of the shortest subsequence of _s_ that matches _r_. Further, for strings \(a_1,\dots,a_d\in\Sigma^*\) and for an integer predicate P, we denote by \(\prod_{j\in[d]:\mathcal{P}(j)}a_j\) the concatenation of all \(a_j\in\Sigma^*\) over the \(j\in[d]\) such that P holds for _j_. For example, let \(b=010110\in\{0,1\}^*\) be a string of length 6 and let _a_<sub>1</sub>_,...,a_<sub>6</sub> be strings over some larger alphabet \(\Sigma\). Then \(\prod_{j\in[6]:b[j]=1}a_j=a_2a_4a_5\) concatenates all strings _a<sub>j</sub>_ for which _b_\[_j_\]=1 holds.
+
+We will present a reduction from UOV in which we are given two sets of binary vectors _U_={_u_<sub>1</sub>_,...,u<sub>n</sub>},V_={_v_<sub>1</sub>_,...,v<sub>t</sub>_} ⊆\(\{0,1\}^d\) where \(d=\omega(logn)\) and \(t=n^\alpha\) for \(\alpha\in(0,1]\) to be chosen later. First we consider the alphabet \(\Sigma=\{\#,\$,c_1,c_2,\dots,c_d\}\) of non-constant size and later show how to reduce it. Observe that the following identities follow immediately from the properties of the subsequence relation:
+
+**Claim 7.7.** _Let A_<sub>1</sub>_,...,A<sub>k</sub>,B_<sub>1</sub>_,...,B<sub>k</sub> be strings over_ \(\Sigma\backslash\{\#\}\) _and_ A:=_A_<sub>1</sub>#_A_<sub>2</sub>#_...A<sub>k</sub>_# _and_ B:=_B_<sub>1</sub>#_B_<sub>2</sub>#_...B<sub>k</sub>_#_. Then the following hold:_
+
+• \(\mathcal{A}\unknown_\text{sub}\mathcal{B}\) _iff for all_ \(i\in[k]\) _we have_ \(A_i\unknown_\text{sub}B_i\)<tbc>
+
+• \(\text{\textit{MaxSup}}(\mathcal{A},\mathcal{B})=\sum_{i\in[k]}(\text{\textit{MaxSup}}(A_i,B_i)+1)\)<tbc>
+
+• \(\text{\textit{MinSub}}(\mathcal{A},\mathcal{B})=\sum_{i\in[k]}(\text{\textit{MinSub}}(A_i,B_i)+1)\)
+
+Note that, in the statement above and throughout the proof, we abuse notation to see strings as regular expressions, i.e., the string B in the expressions MaxSup(A,B) and MinSub(A,B) denotes the regular expression that accepts precisely B.
+
+Claim 7.7 will allow us to combine independent gadgets into one big string, ensuring that they do not affect each other. We start with the max-variant of the matching problem for the supersequence relation.
+

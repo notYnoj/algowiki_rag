@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Edit Distance (ED)",
+      "problem family": null,
+      "bound": "\\frac{n^2}{2^{log^{\\Omega(1)}(n)}}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "n^2",
+      "quote": "For any constant \\(\\varepsilon>0\\), there exists a randomized algorithm that runs in time \\(\\frac{n^2}{2^{log^{\\Omega(1)}(n)}}\\) and, with high probability, computes a \\((1+\\varepsilon)\\)-approximation to the edit distance for two strings with total length n.",
+      "page": 27
+    },
+    {
+      "problem": "Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "\\frac{n^2}{2^{\\mathrm{log}^{\\Omega(1)}(n)}}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "n^2",
+      "quote": "For any constant \\(\\varepsilon>0\\), there exists a randomized algorithm that runs in time \\(\\frac{n^2}{2^{\\mathrm{log}^{\\Omega(1)}(n)}}\\) and, with high probability, computes a \\((1-\\varepsilon)\\)-approximation for the longest common subsequence of two strings with total length n.",
+      "page": 45
+    }
+  ],
+  "paper": "2603.29702",
+  "usage": {
+    "prompt_tokens": 73851,
+    "completion_tokens": 4421,
+    "total_tokens": 78272,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4104,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

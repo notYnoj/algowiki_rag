@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "CHQ viscoelastic phase-separation model",
+      "problem family": "viscoelastic Cahn-Hilliard",
+      "bound": "\\mathcal{E}^{n+1}-\\mathcal{E}^n+\\frac{1}{4}\\big[\\gamma\\|\\nabla D^2\\phi^{n+1}\\|^2+\\|D^2q^{n+1}\\|^2+2\\left(D^2r^{n+1}\\right)^2\\big]+\\Delta t\\widetilde{\\mathcal{D}}^{n+1}=0,\\ \\widetilde{\\mathcal{D}}^{n+1}\\ge 0\\ \\text{for every }\\Delta t>0\\ \\implies\\ \\mathcal{E}^{n+1}\\le\\mathcal{E}^n",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "reference nonlinear Newton-BDF2 scheme [6] requires a nonlinear solve at every time step",
+      "quote": "That is, the SAV-BDF2 scheme is unconditionally energy stable: the modified discrete energy never increases, at any step size.",
+      "page": 9
+    },
+    {
+      "problem": "CHQ viscoelastic phase-separation model",
+      "problem family": "viscoelastic Cahn-Hilliard",
+      "bound": "\\text{linear system (S1)-(S4) uniquely solvable for every }\\Delta t>0",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the linear system (S1)-(S4) is uniquely solvable for every $\\Delta t>0$.",
+      "page": 10
+    },
+    {
+      "problem": "CHQ viscoelastic phase-separation model",
+      "problem family": "viscoelastic Cahn-Hilliard",
+      "bound": "M^n:=\\int_\\Omega\\phi^n\\ \\text{satisfies}\\ M^n\\equiv M^0\\ \\text{for every }n",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "$M^n:=\\int_\\Omega\\phi^n$ satisfies $M^n\\equiv M^0$ for every n.",
+      "page": 10
+    },
+    {
+      "problem": "CHQ viscoelastic phase-separation model",
+      "problem family": "viscoelastic Cahn-Hilliard",
+      "bound": "O(\\Delta t^2)\\ \\text{temporal accuracy} \\ (p_t \\approx 2.00)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "first-order backward-Euler startup",
+      "quote": "The method achieves second-order temporal convergence, including for the thin interface $\\gamma=10^{-3}$",
+      "page": 17
+    },
+    {
+      "problem": "CHQ viscoelastic phase-separation model",
+      "problem family": "viscoelastic Cahn-Hilliard",
+      "bound": "2.5\\text{--}3.0\\times\\ \\text{fewer linear iterations and }1.7\\text{--}2.0\\times\\ \\text{less wall time vs. Newton-BDF2}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "independent nonlinear Newton-BDF2 solver",
+      "quote": "the SAV scheme uses 2.5-3.0× fewer linear iterations and 1.7-2.0× less wall time than Newton-BDF2 at N=64-128",
+      "page": 16
+    }
+  ],
+  "paper": "2610.30077",
+  "usage": {
+    "prompt_tokens": 31434,
+    "completion_tokens": 12551,
+    "total_tokens": 43985,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11769,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

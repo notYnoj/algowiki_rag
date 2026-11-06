@@ -1,0 +1,6 @@
+<tbc>cyclotomic power basis preserve polynomial bit length. Thus the exact answer and its decoded coefficients have polynomial total length, and the decoding takes polynomial time. The largest exponent with a nonzero coefficient identifies _D<sub>⋆</sub>_. Equations (41) and (40) then recover |#MC(_H_)|. Zeroing later layers as before proves the claim for _p\>_2.
+
+The final remark identifies the representation and precision limitations of the one-query proof.
+
+**Remark B.2.** _The one-query result uses the explicit number field representation above. It also holds for exact encodings that allow polynomial-time conversion to and from these basis coefficients, but is not claimed for arbitrary exact algebraic encodings. The proof uses exact outputs and gives no O(N_)_-bit replacement for the Fourier argument in Section 2.3. Whether substantially higher precision permits algebraic reconstruction from a single value is a separate question. The decoding argument does not require padding. With the main-text mixer choices_ \(\mathrm{tan}\beta_1=1/2\) _and_ \(\beta_2=\pi/4\)_, the coefficients lie in the fixed field_ \(\mathbb{Q}(\mathrm{i},\sqrt{2},\sqrt{5})\subseteq\mathbb{Q}(\zeta_{40})\)_. Choosing q coprime to_ 40 _gives the same one-query conclusion on the unpadded graph_ G(_H). The padding above is used only to obtain equal mixer angles._
+

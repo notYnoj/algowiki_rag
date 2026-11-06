@@ -1,0 +1,26 @@
+<tbc>from _S_<sub>_i_-1</sub> all states that cannot be reached by any _w\[i_\]-labelled path from some other state from _S_<sub>_i_-1</sub>. It is not directly clear how this can be done by touching each transition only a constant number of times over the whole course of the state-set simulation. One ingredient to achieve this is to first decompose _A_<sub>sup</sub> into its _strongly connected components_ (SCCs).
+
+Recall that the _SCCs_ of a directed graph _G_ are the maximal subsets of vertices _R_ such that, for any two distinct vertices _u_ and _v_ in _R_, there is a directed path from _u_ to _v_ and from _v_ to _u_ in _G_. The SCCs of an \(\varepsilon\)NFA are simply its SCCs when seeing the automaton as a directed graph (ignoring the edge labels in \(\Sigma\cup\{\varepsilon\}\)).
+
+The _condensation_ of an \(\varepsilon\)NFA _A_, denoted by `cond`(_A_), is an \(\varepsilon\)NFA whose states are the SCCs of _A_. For convenience, for every state _p_ of _A_, we denote by `SCC`_<sub>A</sub>_\[_p_\] (or simply `SCC`\[_p_\] if _A_ is clear from the context) the SCC of _A_ that contains _p_, which, by definition, is a state of `cond`(_A_). The transitions of `cond`(_A_) are as follows: for every transition (_p,a,q_) of _A_, we have a transition (`SCC`_<sub>A</sub>_\[_p_\]_,a,_`SCC`_<sub>A</sub>_\[_q_\]) in `cond`(_A_). Note that `SCC`_<sub>A</sub>_\[_p_\]=`SCC`_<sub>A</sub>_\[_q_\] is possible, and note that several transitions may be merged in `cond`(_A_). The initial state of `cond`(_A_) is `SCC`_<sub>A</sub>_\[_q_<sub>0</sub>\] and the final state of `cond`(_A_) is `SCC`_<sub>A</sub>_\[_q<sub>t</sub>_\].
+
+**Proposition 4.2.** _Given an_ \(\varepsilon\)_NFA A, we can construct `cond`_(_A_) _in time O(m)._
+
+_Proof._ We can compute the SCCs of _A_ in time _O(m_). Now, we go over the transitions of _A_ and add the corresponding transitions to `cond`(_A_), again in time _O(m_).
+
+Leaving aside the self-loops, the condensation of an \(\varepsilon\)NFA has the convenient property of being a directed acyclic graph (DAG). However, constructing the condensation of an automaton changes in general the language that it accepts (e.g., if _A_ can read some string _u_ by going from state _p_ to state _q_ and we have `SCC`_<sub>A</sub>_\[_p_\]=`SCC`_<sub>A</sub>_\[_q_\], then `cond`(_A_) could read any permutation of _u_, which in general changes the accepted language). However, we shall next see that this is not the case for the \(\varepsilon\)NFA _A_<sub>`sup`</sub>, i.e., we have `L`(_A_<sub>`sup`</sub>)=`L`(`cond`(_A_<sub>`sup`</sub>)).
+
+**Lemma 4.3.** _Let A be an_ \(\varepsilon\)_NFA and let_ \(w\in\Sigma^*\)_. Then_ `L`(_A_<sub>`sup`</sub>)=`L`(_cond(A_<sub>`sup`</sub>)).
+
+Before proving this lemma, let us first prove an auxiliary result:
+
+**Proposition 4.4.** _Let A be an_ \(\varepsilon\)_NFA and let C be some fixed state of `cond`_(_A_<sub>`sup`</sub>)_. Assume that a string_ \(u=u[1]\cdots u[|u|]\) _can be read by `cond`_(_A_<sub>`sup`</sub>)_, starting in state C and following the sequence of transitions_ (_C,u_\[1\]_,C),(C,u_\[2\]_,C),...,(C,u_\[|u|\]_,C). Then there is a path in A_<sub>`sup`</sub>_, labelled with u, between any two states of C._
+
+_Proof._ If there is a transition (_C,b,C_) in `cond`(_A_<sub>`sup`</sub>), then there must be a transition (_p,b,q_) in _A_<sub>`sup`</sub> with \(p,q\in C\). Now let \(p',q'\) be arbitrary states from _C_. Since \(p,p',q,q'\in C\), there is a path from \(p'\) to _p_ and a path from _q_ to \(q'\) in _A_<sub>`sup`</sub> that only use states from _C_. By construction of _A_<sub>`sup`</sub>, we can further assume that these paths have only \(\varepsilon\)-transitions. Hence, we can join these two paths with the transition (_p,b,q_), which yields a path from \(p'\) to \(q'\) with exactly one non-\(\varepsilon\)-transition, which is a _b_-transition. Consequently, if `cond`(_A_<sub>`sup`</sub>) has a transition (_C,b,C_), then, for every \(p',q'\in C\), _A_<sub>`sup`</sub> has a path from \(p'\) to \(q'\) with exactly one non-\(\varepsilon\)-transition, which is a _b_-transition. This directly implies that if a string \(u=u[1]\cdots u[|u|]\) is read by `cond`(_A_<sub>`sup`</sub>), starting in state _C_ and following the sequence of transitions (_C,u_\[1\]_,C),(C,u_\[2\]_,C),...,(C,u_\[|u|\]_,C_), then there is a path in _A_<sub>`sup`</sub>, labelled with _u_ (each non-\(\varepsilon\)-transition being potentially surrounded by \(\varepsilon\)-transitions), between any two states of _C_.
+
+Now we can give the proof of Lemma 4.3.
+
+_Proof._ For every transition (_p,b,q_) of _A_<sub>`sup`</sub>, the transition (`SCC`\[_p_\]_,b,_`SCC`\[_q_\]) of `cond`(_A_<sub>`sup`</sub>) is called a _move-transition_ if \(\mathsf{SCC}[p]\neq\mathsf{SCC}[q]\) and a _stay-transition_ if `SCC`\[_p_\]=`SCC`\[_q_\].
+
+Let \(w\in\Sigma^*\). Every accepting run of _A_<sub>`sup`</sub> on _w_ translates into an accepting run of `cond`(_A_<sub>`sup`</sub>) on _w_ in the following way: for every transition (_p,b,q_) of the run of _A_<sub>`sup`</sub>, we take its corresponding transition (`SCC`\[_p_\]_,b,_`SCC`\[_q_\]) in `cond`(_A_<sub>`sup`</sub>). Thus, \(\mathsf{L}(A_\mathsf{sup})\subseteq\mathsf{L}(\mathsf{cond}(A_\mathsf{sup}))\).
+

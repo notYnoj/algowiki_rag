@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Exact uniformity of greedy maximal independent set on trees",
+      "problem family": "trees",
+      "bound": "b(T)=0 \\iff T\\cong K_1 \\text{ or } K_2",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "_then b(T_)=0 _if and only if_ \\(T\\cong K_1\\) _or K_<sub>2</sub>.",
+      "page": 1
+    },
+    {
+      "problem": "Total variation bias of greedy maximal independent set on mixed spiders",
+      "problem family": "mixed spiders",
+      "bound": "b(T_{k,2^k-k})=O\\left(\\frac{\\sqrt{k}}{4^k}\\right)=O\\left(\\frac{\\sqrt{\\log n_k}}{n_k^2}\\right)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "With _l_=2_<sup>k</sup>_-_k_ the total-variation bias is positive and satisfies \\(b(T_{k,2^k-k})=O\\left(\\frac{\\sqrt{k}}{4^k}\\right)=O\\left(\\frac{\\sqrt{logn_k}}{n_k^2}\\right),n_k=2^k+k+1.\\)",
+      "page": 1
+    }
+  ],
+  "paper": "2610.02276",
+  "usage": {
+    "prompt_tokens": 7656,
+    "completion_tokens": 7962,
+    "total_tokens": 15618,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7640,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

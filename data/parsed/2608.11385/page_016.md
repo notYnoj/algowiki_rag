@@ -1,0 +1,12 @@
+<tbc>related approaches can be computationally hard to evaluate in the worst case, at least if exponential precision is required; we point the reader to \[58, Sec. III.D\] for additional relevant discussion. Our present results neither establish nor rule out potential quantum advantage for these algorithms.
+
+#### Connections to quantum supremacy experiments
+
+Our main result provides an expectation value analogue of existing sampling-hardness results for low-depth QAOA circuits \[13, 36, 37\]. Already at QAOA depth _p_=2, we show classical evaluation of a restricted QAOA for MaxCut expectation value suffices to recover #P-hard counting information. However, this does not by itself constitute an experimentally accessible quantum-advantage result. In particular, by Hoeffding’s inequality, estimating an edge correlator with measurement outcomes in \(\{\pm 1\}\) to additive error \(\varepsilon\) using independent circuit measurements can be achieved with \(O(\varepsilon^{-2}log\frac{1}{\delta})\) independent samples to achieve failure probability at most \(\delta\). For the global MaxCut observable, a computational basis measurement instead returns a cut value in \[0_,m_\], where _m_=|_E(G_)|. Directly estimating the unnormalized expectation \(\langle C_G\rangle\) to additive error \(\varepsilon\) can be achieved with \(O(m^2\varepsilon^{-2}log\frac{1}{\delta})\) samples. At the accuracy \(\varepsilon=2^{-\alpha N}\) used in our reduction, these standard direct-sampling bounds are exponential; the additional _m_<sup>2</sup>=poly(_N_) factor for the global objective doesn’t change this scaling. Our result should consequently be interpreted as a structural worst-case statement about QAOA expectation value landscapes, rather than as one concerning experimentally accessible precision.
+
+## Acknowledgment
+
+The author is grateful to Lucas Braydwood and Phillip Lotshaw for helpful discussions regarding the results of Ref. \[5\]. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of Advanced Scientific Computing Research under Award Number 89243024SSC000129, and under Prime Contract No. 80ARC020D0010 with the NASA Ames Research Center. The author acknowledges the use of ChatGPT-5.6-Sol AI tools as part of the drafting of Figure 1 and for verification of the proofs of this manuscript. The author assumes complete responsibility for all reported findings.
+
+## References
+

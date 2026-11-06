@@ -1,0 +1,20 @@
+<tbc>strip, and the other strip is external. Therefore, the points of \(X_i\cap S'\) will never participate in type-1 crossings again. Recall that, from Observation 2.7, the total number of crossings in \(\mathrm{Cr}_\hat{\sigma}(L)\) is bounded by \(2|S'\cap X_i|\). We say that the points of \(S'\cap X_i\) pay for these crossings. Since every point of _X<sub>i</sub>_ will pay for a type-1 crossing at most once, we conclude that the total number of type-1 crossings in \(\bigcup_{L\in\mathcal{L}_i\backslash\{L_i^*\}}\mathrm{Cr}_\hat{\sigma}(L)\) is bounded by 2|_X<sub>i</sub>_|. \(\square\)
+
+We conclude that the total number of all crossings in \(\bigcup_{L\in\mathcal{L}_i\backslash\{L_i^*\}}\mathrm{Cr}_\hat{\sigma}(L)\) is at most \(\mathsf{WB}(X_i)+O(|X_i|)\). Since, for every line _L_, \(\mathrm{Cr}_\hat{\sigma}^{\hat{F}}(L)\subseteq\mathrm{Cr}_\hat{\sigma}(L)\), we get that \(\sum_{L\in\mathcal{L}_i\backslash\{L_i^*\}}|\mathrm{Cr}_\hat{\sigma}^{\hat{F}}(L)|\le\mathsf{WB}(X_i)+O(|X_i|)\). \(\square\)
+
+\(\square\)
+
+To summarize, we have transformed a permutation \(\sigma\) of L into a permutation \(\sigma'\) of L, and we have shown that \(\mathsf{WB}_{\sigma^\prime}(X)\ge\mathsf{WB}(X)/4-2\sum_{i=1}^N\mathsf{WB}(X_i)-O(|X|)\).
+
+### Transforming \(\sigma'\) into \(\tilde{\sigma}\).
+
+In this final step, we transform the permutation \(\sigma'\) of L into a permutation \(\tilde{\sigma}\) of \(\tilde{\mathcal{L}}\), and we will show that \(\mathsf{WB}_\tilde{\sigma}(\tilde{X})\ge\mathsf{WB}_{\sigma^\prime}(X)-|X|\).
+
+The transformation is straightforward. Consider some block B_<sub>i</sub>_, and the corresponding set \(\mathcal{L}_i\subseteq\mathcal{L}\) of lines. Recall that the lines in L_<sub>i</sub>_ are indexed \(L_i^1,\dots,L_i^{q_i+1}\) in this left-to-right order, where \(L_i^1\) appears to the left of the first column of B_<sub>i</sub>_, and \(L_i^{q_i+1}\) appears to the right of the last column of B_<sub>i</sub>_. Recall also that, in the current permutation \(\sigma'\), one of the following happens: either (i) line \(L_i^1\) appears in the permutation first, and lines \(L_i^{q_i+1},L_i^2,\dots,L_i^q\) appear at some later point consecutively in this order; or (ii) line \(L_i^{q_i+1}\) appears in the permutation first, and lines \(L_i^1,L_i^2,\dots,L_i^q\) appear somewhere later in the permutation consecutively in this order. Therefore, for all \(2\le j\le q\), line \(L_i^j\) separates a strip whose left boundary is \(L_i^{j-1}\) and right boundary is \(L_i^{q_i+1}\). It is easy to see that the cost of each such line \(L_i^j\) in permutation \(\sigma'\) is bounded by the number of points of _X_ that lie on the unique active column that appears between \(L_i^{j-1}\) and \(L_i^j\). The total cost of all such lines is then bounded by |_X<sub>i</sub>_|.
+
+Let \(\tilde{\sigma}^*\) be a sequence of lines obtained from \(\sigma'\) by deleting, for all \(1\le i\le N\), all lines \(L_i^2,\dots,L_i^q\) from it. Then \(\tilde{\sigma}^*\) naturally defines a permutation \(\tilde{\sigma}\) of the set \(\tilde{\mathcal{L}}\) of vertical lines. Moreover, from the above discussion, the total contribution of all deleted lines to \(\mathsf{WB}_{\sigma^\prime}(X)\) is at most |_X_|, so \(\mathsf{WB}_\tilde{\sigma}(\tilde{X})\ge\mathsf{WB}_{\sigma^\prime}(X)-|X|\ge\mathsf{WB}(X)/4-2\sum_i\mathsf{WB}(X_i)-O(|X|)\). We conclude that \(\mathsf{WB}(\tilde{X})\ge\mathsf{WB}_\tilde{\sigma}(\tilde{X})\ge\mathsf{WB}(X)/4-2\sum_i\mathsf{WB}(X_i)-O(|X|)\), and \(\mathsf{WB}(X)\le 4\mathsf{WB}(\tilde{X})+8\sum_i\mathsf{WB}(X_i)+O(|X|)\).
+
+## 4 Separation of OPT and the Strong Wilber Bound
+
+In this section we present our negative results, proving Theorem 1.1. We start with a useful claim that allows us to upper-bound WB-costs in Section 4.1. We then define several important instances and analyze their properties in Section 4.2. In Section 4.3, we present two structural tools that we use in analyzing our instance. From Section 4.4 onward, we describe our construction and its analysis.
+

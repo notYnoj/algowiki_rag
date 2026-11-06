@@ -1,0 +1,131 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\cdot w^2) = \\mathcal{O}(t \\log^2(n+t)) \\text{ CoT steps}; \\mathcal{O}(t \\cdot w) = \\mathcal{O}(t \\log(n+t)) \\text{ for multiplication-free instruction sets}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "Let M be a flat Word RAM program with word size w. Then there exists a rightmost UHAT T with finite precision, O(w) heads each of width O(w), and total model dimension O(w^2)=O(log^2(n+t)), such that, for any t≥n, T can simulate t steps of M with t·O(w^2) CoT steps. Further, if M does not use ×, ÷, or mod, T can simulate t steps of M with t·O(w) CoT steps.",
+      "page": 5
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log^2 t) \\text{ CoT steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "T can simulate t steps of M with full-arithmetic flat instructions using O(t log^2 t) steps.",
+      "page": 6
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log t) \\text{ CoT steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "T can simulate t steps of M with simple-arithmetic flat instructions using O(t log t) steps.",
+      "page": 6
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\cdot \\kappa(w)) \\text{ decoding steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "Let M be a d-dimensional-array Word RAM with word size w=log(n+t)+O(1) and per-instruction bit-serial cost bound \\kappa(w). Then there exists a log-precision, finite-width continuous CoT transformer T such that, for any t\\ge n, t steps of M can be simulated by T using \\mathcal{O}(t\\kappa(w)) decoding steps.",
+      "page": 8
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(t) \\text{ CoT steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "T can simulate t steps of M with arbitrary poly(w)-time instructions using \\tilde{\\mathcal{O}}(t) steps.",
+      "page": 8
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log^2 t) \\text{ CoT steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "T can simulate t steps of M with full-arithmetic flat instructions using O(t log^2 t) steps.",
+      "page": 9
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log t) \\text{ CoT steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "T can simulate t steps of M with simple-arithmetic flat instructions using O(t log t) steps.",
+      "page": 9
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\cdot \\kappa(w)) \\text{ steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "Let M be a c-dimensional-array Word RAM with word size w=log(n+t)+O(1) and maximum instruction cost \\kappa(w). Then there exists a log-precision, fixed-width hybrid model H with a single RNN layer at the bottom such that, for any t\\ge n, t steps of M can be simulated by H using \\mathcal{O}(t\\kappa(w)) steps.",
+      "page": 9
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(t) \\text{ steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "H can simulate t steps of M with arbitrary poly(w)-time instructions using \\tilde{\\mathcal{O}}(t) steps.",
+      "page": 10
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log^2 t) \\text{ steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "H can simulate t steps of M with full-arithmetic flat instructions using O(t log^2 t) steps.",
+      "page": 10
+    },
+    {
+      "problem": "Word RAM simulation",
+      "problem family": null,
+      "bound": "\\mathcal{O}(t \\log t) \\text{ steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(t^2) CoT tokens via Turing-machine-based CoT simulation",
+      "quote": "H can simulate t steps of M with simple-arithmetic flat instructions using O(t log t) steps.",
+      "page": 10
+    }
+  ],
+  "paper": "2606.19697",
+  "usage": {
+    "prompt_tokens": 30330,
+    "completion_tokens": 13176,
+    "total_tokens": 43506,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11760,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

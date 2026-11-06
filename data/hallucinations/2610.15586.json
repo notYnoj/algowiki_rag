@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Expected energy-norm error for Galerkin reconstruction in sample-based quantum Krylov sampling",
+      "problem family": null,
+      "bound": "\\mathbb{E}\\big[\\|x_{\\mathscr{S}}-x^*\\|_A^2\\big]\\le\\lambda_{\\max}\\sum_z|\\hat{x}_z|^2e^{-Mq(z)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Let S be the set of distinct indices observed with M/d shots on each Krylov state. Then \\(\\mathbb{E}\\big[\\|x_\\mathcal{S}-x^*\\|_A^2\\big]\\le\\lambda_\\mathrm{max}\\sum_z|\\hat{x}_z|^2e^{-Mq\\left(z\\right)}.\\)",
+      "page": 5
+    },
+    {
+      "problem": "Sample complexity for expected energy-norm accuracy",
+      "problem family": null,
+      "bound": "M\\ge\\frac{\\ln(2\\kappa/\\epsilon^2)}{q_{\\min}(\\mathscr{E}_\\epsilon)}\\implies\\mathbb{E}[\\|x_{\\mathscr{S}}-x^*\\|_A^2]\\le\\epsilon^2\\|x^*\\|_A^2",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "If \\(M\\ge\\frac{\\mathrm{ln}(2\\kappa/\\epsilon^2)}{q_\\mathrm{min}(\\mathscr{E}_\\epsilon)},\\) then \\(\\mathbb{E}[\\|x_\\mathscr{S}-x^*\\|_A^2]\\le\\epsilon^2\\|x^*\\|_A^2,\\) where \\(\\kappa=\\lambda_\\mathrm{max}/\\lambda_\\mathrm{min}\\).",
+      "page": 6
+    },
+    {
+      "problem": "High-probability Galerkin reconstruction guarantee",
+      "problem family": null,
+      "bound": "M\\ge\\frac{\\ln(|\\mathscr{E}_\\epsilon|/\\delta)}{q_{\\min}(\\mathscr{E}_\\epsilon)}\\implies\\Pr\\big(\\|x_{\\mathscr{S}}-x^*\\|_A\\le\\epsilon\\|x^*\\|_A\\big)\\ge1-\\delta",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For \\(0<\\delta<1\\), if \\(M\\ge\\frac{\\mathrm{ln}(|\\mathscr{E}_\\epsilon|/\\delta)}{q_\\mathrm{min}(\\mathscr{E}_\\epsilon)},\\) then with probability at least \\(1-\\delta\\) every index of \\(\\mathscr{E}_\\epsilon\\) is observed and \\(\\|x_\\mathscr{S}-x^*\\|_A\\le\\epsilon\\|x^*\\|_A\\).",
+      "page": 6
+    },
+    {
+      "problem": "Lower bound on shots and sampling efficiency",
+      "problem family": null,
+      "bound": "M\\ge K_\\epsilon,\\quad \\eta_\\mathrm{s}=|\\mathscr{E}_\\epsilon|q_{\\min}(\\mathscr{E}_\\epsilon)\\le 1",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Any sampling protocol needs \\(M\\ge K_\\epsilon\\) shots, because each shot adds at most one index. ... We therefore define the sampling efficiency \\(\\eta_\\mathrm{s}=|\\mathscr{E}_\\epsilon|q_\\mathrm{min}(\\mathscr{E}_\\epsilon)\\le 1.\\)",
+      "page": 6
+    },
+    {
+      "problem": "Robustness to replacement noise in the outcome law",
+      "problem family": null,
+      "bound": "q'(z)\\ge(1-p)q(z),\\quad \\text{budget increases by factor }1/(1-p)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Suppose that each shot is independently replaced, with probability \\(p<1\\), by an index drawn from an arbitrary distribution. Then the outcome law satisfies \\(q'(z)\\ge(1-p)q(z),\\) and the sufficient budget of Corollary 3 increases at most by the factor \\(1/(1-p)\\).",
+      "page": 6
+    },
+    {
+      "problem": "Support completeness of the dephased outcome law",
+      "problem family": null,
+      "bound": "q^\\infty(z)\\ge\\frac{|\\hat{x}_z|^2}{\\sum_\\lambda\\lambda^{-2}}\\ge\\frac{|\\hat{x}_z|^2}{\\mathrm{tr}\\,A^{-2}}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every index z, \\(q^\\infty(z)\\ge\\frac{|\\hat{x}_z|^2}{\\sum_\\lambda\\lambda^{-2}}\\ge\\frac{|\\hat{x}_z|^2}{\\text{tr}A^{-2}}.\\)",
+      "page": 7
+    },
+    {
+      "problem": "Spectral bounds for elliptic operators on Riemannian cross sections",
+      "problem family": null,
+      "bound": "\\lambda_{\\min}(K)+c_{\\min}\\le\\lambda_{\\min}(A)\\le\\lambda_{\\max}(A)\\le\\lambda_{\\max}(K)+c_{\\max}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let C be diagonal with entries in \\([c_\\min,c_\\max]\\). Then \\(\\lambda_\\mathrm{min}(K)+c_\\min\\le\\lambda_\\mathrm{min}(A)\\le\\lambda_\\max(A)\\le\\lambda_\\max(K)+c_\\max.\\)",
+      "page": 10
+    },
+    {
+      "problem": "Stability under metric perturbation (Class I approximation)",
+      "problem family": null,
+      "bound": "\\frac{\\|\\tilde{x}-x^*\\|_A}{\\|x^*\\|_A}\\le\\frac{\\epsilon+\\|\\delta b\\|_{A^{-1}}/\\|x^*\\|_A}{1-\\epsilon}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let \\(\\tilde{A}=A+\\delta A\\) with \\(|\\langle v,\\delta Av\\rangle|\\le\\epsilon\\langle v,Av\\rangle\\) for all v and some \\(\\epsilon<1\\), and let \\(\\tilde{b}=b+\\delta b\\) and \\(\\tilde{x}=\\tilde{A}^{-1}\\tilde{b}\\). Then \\(\\frac{\\|\\tilde{x}-x^*\\|_A}{\\|x^*\\|_A}\\le\\frac{\\epsilon+\\|\\delta b\\|_{A^{-1}}/\\|x^*\\|_A}{1-\\epsilon}.\\)",
+      "page": 11
+    },
+    {
+      "problem": "First-order shape perturbation bound via Lie derivative of the metric",
+      "problem family": null,
+      "bound": "\\epsilon=|s|\\max\\big\\{\\sup_\\Omega\\frac{1}{2}(\\mu_1-\\mu_2),\\sup_\\Omega\\frac{1}{2}|\\mu_1+\\mu_2|\\big\\}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Hence Proposition 15 applies, to first order, with \\(\\epsilon=|s|\\mathrm{max}\\big\\{\\mathrm{sup}_\\Omega\\frac{1}{2}(\\mu_1-\\mu_2),\\mathrm{sup}_\\Omega\\frac{1}{2}|\\mu_1+\\mu_2|\\big\\},\\) and with \\(\\delta b=s\\mathrm{diag}(\\mathrm{div}_gV)b\\), when \\(\\rho\\), \\(\\gamma\\), and f are transported with the deformation.",
+      "page": 11
+    },
+    {
+      "problem": "Symmetry selection rule for measurement outcomes",
+      "problem family": null,
+      "bound": "q(z)=0\\text{ and }\\hat{x}_z=0\\text{ for every index with }\\chi_z\\neq\\chi",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If the measurement basis F diagonalizes P, with \\(FPF^\\dagger=\\mathrm{diag}(\\chi_z)\\), then q(z)=0 and \\(\\hat{x}_z=0\\) for every index with \\(\\chi_z\\neq\\chi\\).",
+      "page": 10
+    }
+  ],
+  "paper": "2610.15586",
+  "usage": {
+    "prompt_tokens": 32723,
+    "completion_tokens": 10263,
+    "total_tokens": 42986,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8282,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

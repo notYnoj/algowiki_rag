@@ -1,0 +1,873 @@
+[paper] 2610.20297
+[paper] 2610.17372
+[paper] 2610.07455
+[paper] 2610.20270
+  WARNING: 2610.20270.json hit max_tokens, reply is cut off
+  FAILED on 2610.20270: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2610.28528
+[paper] 2610.22689
+  WARNING: 2610.22689.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.15663
+  WARNING: 2610.15663.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.10494
+  WARNING: 2610.10494.json hit max_tokens, reply is cut off
+  FAILED on 2610.10494: Unterminated string starting at: line 1 column 2320 (char 2319)
+[paper] 2610.06783
+  WARNING: page 15 hit max_tokens, saved text is cut off
+  WARNING: 2610.06783.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.25212
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: 2608.25212.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.18992
+  WARNING: 2608.18992.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.22133
+  WARNING: 2610.22133.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.10354
+  WARNING: 2610.10354.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.09156
+  WARNING: 2610.09156.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.21276
+  WARNING: 2607.21276.json hit max_tokens, reply is cut off
+  FAILED on 2607.21276: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2607.18714
+  WARNING: page 12 hit max_tokens, saved text is cut off
+  WARNING: page 18 hit max_tokens, saved text is cut off
+  WARNING: 2607.18714.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.00857
+  WARNING: 2607.00857.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.26554
+  WARNING: 2606.26554.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.01809
+  WARNING: 2606.01809.json hit max_tokens, reply is cut off
+  FAILED on 2606.01809: Unterminated string starting at: line 1 column 2027 (char 2026)
+[paper] 2603.27736
+  WARNING: page 26 hit max_tokens, saved text is cut off
+  WARNING: 2603.27736.json had a hallcuination, response is written in data/hallucinations
+[paper] 2601.19907
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: page 4 hit max_tokens, saved text is cut off
+  WARNING: page 6 hit max_tokens, saved text is cut off
+[paper] 2411.06502
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: page 24 hit max_tokens, saved text is cut off
+  WARNING: page 29 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+  WARNING: page 34 hit max_tokens, saved text is cut off
+  WARNING: page 35 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 49 hit max_tokens, saved text is cut off
+  WARNING: 2411.06502.json had a hallcuination, response is written in data/hallucinations
+[paper] 2408.04613
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: 2408.04613.json had a hallcuination, response is written in data/hallucinations
+[paper] 2309.13225
+  WARNING: 2309.13225.json had a hallcuination, response is written in data/hallucinations
+[paper] 2309.04683
+  WARNING: 2309.04683.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.11385
+  WARNING: 2608.11385.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.31657
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: 2606.31657.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34324
+  WARNING: 2610.34324.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.17581
+  WARNING: 2610.17581.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.17236
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: 2610.17236.json hit max_tokens, reply is cut off
+  FAILED on 2610.17236: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2609.40036
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  HTTP 502, retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: 2609.40036.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.00891
+  WARNING: 2604.00891.json hit max_tokens, reply is cut off
+  FAILED on 2604.00891: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2510.15712
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: 2510.15712.json hit max_tokens, reply is cut off
+  FAILED on 2510.15712: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2610.35228
+[paper] 2610.19980
+  WARNING: page 4 hit max_tokens, saved text is cut off
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2610.19980.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.19850
+  WARNING: 2610.19850.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.18029
+[paper] 2610.13096
+  WARNING: 2610.13096.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.08961
+[paper] 2610.24944
+  WARNING: 2610.24944.json hit max_tokens, reply is cut off
+  FAILED on 2610.24944: Unterminated string starting at: line 1 column 1026 (char 1025)
+[paper] 2610.01904
+[paper] 2610.02275
+  WARNING: 2610.02275.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.38800
+[paper] 2609.34585
+[paper] 2607.00244
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: page 16 hit max_tokens, saved text is cut off
+[paper] 2610.02276
+[paper] 2501.17563
+  WARNING: 2501.17563.json hit max_tokens, reply is cut off
+  FAILED on 2501.17563: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2411.14387
+  WARNING: page 19 hit max_tokens, saved text is cut off
+  WARNING: 2411.14387.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+[paper] 2209.08024
+  WARNING: 2209.08024.json had a hallcuination, response is written in data/hallucinations
+[paper] 2208.14481
+  WARNING: 2208.14481.json had a hallcuination, response is written in data/hallucinations
+[paper] 2010.14338
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 2010.14338.json had a hallcuination, response is written in data/hallucinations
+[paper] 2010.00931
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: page 18 hit max_tokens, saved text is cut off
+  WARNING: 2010.00931.json had a hallcuination, response is written in data/hallucinations
+[paper] 1912.02900
+  HTTP 502, retrying...
+  WARNING: 1912.02900.json had a hallcuination, response is written in data/hallucinations
+[paper] 1907.06310
+  WARNING: 1907.06310.json had a hallcuination, response is written in data/hallucinations
+[paper] 1806.10498
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 1806.10498.json had a hallcuination, response is written in data/hallucinations
+[paper] 1702.08207
+  WARNING: 1702.08207.json had a hallcuination, response is written in data/hallucinations
+[paper] 1505.00357
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: page 14 hit max_tokens, saved text is cut off
+  WARNING: 1505.00357.json had a hallcuination, response is written in data/hallucinations
+[paper] 2407.16443
+  WARNING: 2407.16443.json had a hallcuination, response is written in data/hallucinations
+[paper] 1806.10498
+[paper] 2610.30697
+[paper] 2610.21676
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: 2610.21676.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.21325
+  WARNING: 2610.21325.json hit max_tokens, reply is cut off
+  FAILED on 2610.21325: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2610.19068
+[paper] 2610.17627
+  WARNING: 2610.17627.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.15130
+  WARNING: 2610.15130.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.35751
+  WARNING: page 3 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: page 7 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2610.35751.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34248
+  WARNING: page 11 hit max_tokens, saved text is cut off
+  WARNING: 2610.34248.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34109
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 7 hit max_tokens, saved text is cut off
+  WARNING: 2610.34109.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.33224
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: 2610.33224.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.30425
+  WARNING: 2610.30425.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.27508
+  WARNING: 2610.27508.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.23232
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 2610.23232.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.21464
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 5 hit max_tokens, saved text is cut off
+[paper] 2510.00566
+  WARNING: page 11 hit max_tokens, saved text is cut off
+  WARNING: page 12 hit max_tokens, saved text is cut off
+  WARNING: 2510.00566.json hit max_tokens, reply is cut off
+  FAILED on 2510.00566: Unterminated string starting at: line 1 column 29 (char 28)
+[paper] 2201.03237
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 15 hit max_tokens, saved text is cut off
+  WARNING: 2201.03237.json had a hallcuination, response is written in data/hallucinations
+[paper] 2011.06135
+  WARNING: 2011.06135.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.31056
+  WARNING: 2610.31056.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.07309
+  WARNING: 2608.07309.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.09289
+  WARNING: 2607.09289.json had a hallcuination, response is written in data/hallucinations
+[paper] 2502.04581
+  WARNING: 2502.04581.json hit max_tokens, reply is cut off
+  FAILED on 2502.04581: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2403.19117
+  WARNING: page 9 hit max_tokens, saved text is cut off
+[paper] 2307.12582
+  WARNING: 2307.12582.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.32580
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+  WARNING: 2610.32580.json had a hallcuination, response is written in data/hallucinations
+[paper] 2601.01390
+  WARNING: 2601.01390.json had a hallcuination, response is written in data/hallucinations
+  FAILED on 2601.01390: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2507.15511
+  WARNING: 2507.15511.json hit max_tokens, reply is cut off
+  FAILED on 2507.15511: Unterminated string starting at: line 1 column 1397 (char 1396)
+[paper] 2308.04093
+  WARNING: 2308.04093.json had a hallcuination, response is written in data/hallucinations
+[paper] 2601.18573
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 2601.18573.json hit max_tokens, reply is cut off
+  FAILED on 2601.18573: Unterminated string starting at: line 1 column 7735 (char 7734)
+[paper] 2601.14195
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: page 15 hit max_tokens, saved text is cut off
+  WARNING: page 20 hit max_tokens, saved text is cut off
+  WARNING: page 24 hit max_tokens, saved text is cut off
+  WARNING: page 39 hit max_tokens, saved text is cut off
+  WARNING: 2601.14195.json had a hallcuination, response is written in data/hallucinations
+[paper] 2112.05777
+  WARNING: 2112.05777.json had a hallcuination, response is written in data/hallucinations
+[paper] 2009.14191
+  WARNING: page 30 hit max_tokens, saved text is cut off
+  WARNING: 2009.14191.json had a hallcuination, response is written in data/hallucinations
+  HTTP 500, retrying...
+[paper] 2005.08150
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: 2005.08150.json had a hallcuination, response is written in data/hallucinations
+[paper] 1408.2782
+  WARNING: 1408.2782.json had a hallcuination, response is written in data/hallucinations
+[paper] 1011.1135
+[paper] 0812.4893
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: 0812.4893.json had a hallcuination, response is written in data/hallucinations
+  HTTP 500, retrying...
+[paper] 1508.03735
+  HTTP 500, retrying...
+  WARNING: 1508.03735.json had a hallcuination, response is written in data/hallucinations
+[paper] 1409.4304
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+  WARNING: 1409.4304.json had a hallcuination, response is written in data/hallucinations
+[paper] 2508.10129
+  WARNING: 2508.10129.json had a hallcuination, response is written in data/hallucinations
+[paper] 2409.10575
+  WARNING: 2409.10575.json had a hallcuination, response is written in data/hallucinations
+[paper] 2208.09583
+  WARNING: 2208.09583.json hit max_tokens, reply is cut off
+  FAILED on 2208.09583: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2204.13485
+  WARNING: page 24 hit max_tokens, saved text is cut off
+  WARNING: 2204.13485.json had a hallcuination, response is written in data/hallucinations
+[paper] 2001.10875
+  WARNING: 2001.10875.json had a hallcuination, response is written in data/hallucinations
+[paper] 1904.05974
+  WARNING: page 24 hit max_tokens, saved text is cut off
+  WARNING: 1904.05974.json had a hallcuination, response is written in data/hallucinations
+[paper] 1902.05678
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 1902.05678.json hit max_tokens, reply is cut off
+  FAILED on 1902.05678: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 1809.08453
+  WARNING: 1809.08453.json had a hallcuination, response is written in data/hallucinations
+[paper] 2403.00306
+  WARNING: page 31 hit max_tokens, saved text is cut off
+  WARNING: page 53 hit max_tokens, saved text is cut off
+  WARNING: 2403.00306.json had a hallcuination, response is written in data/hallucinations
+[paper] 1307.0571
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: 1307.0571.json had a hallcuination, response is written in data/hallucinations
+[paper] 1108.5217
+[paper] 2610.17958
+  WARNING: 2610.17958.json had a hallcuination, response is written in data/hallucinations
+[paper] 2002.12662
+[paper] 2603.03476
+[paper] 2607.17481
+ network error (('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))), retrying...
+  WARNING: page 5 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+[paper] 2508.21287
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: 2508.21287.json hit max_tokens, reply is cut off
+  FAILED on 2508.21287: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2507.17215
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2507.17215.json had a hallcuination, response is written in data/hallucinations
+[paper] 2504.19328
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 10 hit max_tokens, saved text is cut off
+[paper] 2503.22368
+  WARNING: page 10 hit max_tokens, saved text is cut off
+[paper] 2502.14446
+  WARNING: 2502.14446.json had a hallcuination, response is written in data/hallucinations
+[paper] 2501.04258
+  WARNING: page 7 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+[paper] 2412.05788
+  WARNING: page 11 hit max_tokens, saved text is cut off
+  WARNING: page 28 hit max_tokens, saved text is cut off
+[paper] 2512.10132
+  WARNING: 2512.10132.json had a hallcuination, response is written in data/hallucinations
+[paper] cs/0611037
+  WARNING: page 4 hit max_tokens, saved text is cut off
+  WARNING: cs_0611037.json had a hallcuination, response is written in data/hallucinations
+[paper] cs/0605099
+[paper] cs/0604016
+  WARNING: cs_0604016.json had a hallcuination, response is written in data/hallucinations
+[paper] 2404.16314
+  WARNING: 2404.16314.json had a hallcuination, response is written in data/hallucinations
+[paper] 2511.01513
+  WARNING: 2511.01513.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.03341
+[paper] 2607.01222
+  WARNING: page 17 hit max_tokens, saved text is cut off
+[paper] 2606.19316
+  WARNING: 2606.19316.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.00137
+  WARNING: page 7 hit max_tokens, saved text is cut off
+  WARNING: page 19 hit max_tokens, saved text is cut off
+[paper] 2509.02109
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: 2509.02109.json had a hallcuination, response is written in data/hallucinations
+[paper] 2509.01109
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: page 19 hit max_tokens, saved text is cut off
+[paper] 2505.07747
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: page 14 hit max_tokens, saved text is cut off
+  WARNING: page 18 hit max_tokens, saved text is cut off
+[paper] 2504.15108
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 10 hit max_tokens, saved text is cut off
+[paper] 2501.09433
+  WARNING: page 7 hit max_tokens, saved text is cut off
+[paper] 2411.19654
+  WARNING: page 7 hit max_tokens, saved text is cut off
+[paper] 2410.16019
+[paper] 2409.08615
+[paper] 2605.13630
+[paper] 2604.17390
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 15 hit max_tokens, saved text is cut off
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: page 27 hit max_tokens, saved text is cut off
+  WARNING: page 31 hit max_tokens, saved text is cut off
+  WARNING: page 32 hit max_tokens, saved text is cut off
+[paper] 2604.01204
+  WARNING: page 7 hit max_tokens, saved text is cut off
+  WARNING: page 8 hit max_tokens, saved text is cut off
+[paper] 2603.20128
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: page 7 hit max_tokens, saved text is cut off
+[paper] 2512.04139
+[paper] 2511.12009
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: 2511.12009.json had a hallcuination, response is written in data/hallucinations
+[paper] 2312.16312
+  WARNING: page 3 hit max_tokens, saved text is cut off
+[paper] 2109.08083
+  WARNING: page 143 hit max_tokens, saved text is cut off
+[paper] 2105.11431
+[paper] 1912.05935
+  WARNING: 1912.05935.json had a hallcuination, response is written in data/hallucinations
+[paper] 1806.10221
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: 1806.10221.json had a hallcuination, response is written in data/hallucinations
+[paper] 1803.00735
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 12 hit max_tokens, saved text is cut off
+[paper] 2508.01088
+  WARNING: page 3 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+  WARNING: page 12 hit max_tokens, saved text is cut off
+[paper] 1609.00853
+  WARNING: 1609.00853.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.19194
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: 2610.19194.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.00567
+  WARNING: page 12 hit max_tokens, saved text is cut off
+  WARNING: page 23 hit max_tokens, saved text is cut off
+  WARNING: page 27 hit max_tokens, saved text is cut off
+  WARNING: page 30 hit max_tokens, saved text is cut off
+  WARNING: 2610.00567.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.24829
+  WARNING: page 12 hit max_tokens, saved text is cut off
+  WARNING: 2609.24829.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.09829
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: page 25 hit max_tokens, saved text is cut off
+  WARNING: page 44 hit max_tokens, saved text is cut off
+  WARNING: 2610.09829.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.11720
+  WARNING: page 6 hit max_tokens, saved text is cut off
+[paper] 2608.02522
+  WARNING: 2608.02522.json hit max_tokens, reply is cut off
+  FAILED on 2608.02522: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2607.07705
+  WARNING: 2607.07705.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.06817
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+  WARNING: 2607.06817.json hit max_tokens, reply is cut off
+  FAILED on 2607.06817: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2610.22687
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: page 12 hit max_tokens, saved text is cut off
+  WARNING: 2610.22687.json had a hallcuination, response is written in data/hallucinations
+[paper] 2402.03617
+  WARNING: page 5 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+[paper] 2104.11463
+  WARNING: page 6 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+[paper] 2607.27040
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: page 33 hit max_tokens, saved text is cut off
+[paper] 2607.11850
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2607.11850.json had a hallcuination, response is written in data/hallucinations
+[paper] 2508.19785
+  WARNING: 2508.19785.json had a hallcuination, response is written in data/hallucinations
+[paper] 2507.16326
+[paper] 2608.10421
+  WARNING: 2608.10421.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.15623
+  WARNING: 2606.15623.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.07134
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: 2608.07134.json had a hallcuination, response is written in data/hallucinations
+[paper] 2409.07868
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: 2409.07868.json had a hallcuination, response is written in data/hallucinations
+[paper] 2407.21591
+  WARNING: page 7 hit max_tokens, saved text is cut off
+[paper] 2311.05773
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2311.05773.json had a hallcuination, response is written in data/hallucinations
+[paper] 2310.09483
+  WARNING: 2310.09483.json had a hallcuination, response is written in data/hallucinations
+[paper] 2307.02294
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: page 18 hit max_tokens, saved text is cut off
+  WARNING: 2307.02294.json had a hallcuination, response is written in data/hallucinations
+[paper] 2306.11951
+  WARNING: 2306.11951.json had a hallcuination, response is written in data/hallucinations
+[paper] 2304.13594
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: page 11 hit max_tokens, saved text is cut off
+[paper] 2302.12440
+  WARNING: 2302.12440.json had a hallcuination, response is written in data/hallucinations
+[paper] 2211.12441
+  WARNING: page 4 hit max_tokens, saved text is cut off
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: page 34 hit max_tokens, saved text is cut off
+  WARNING: 2211.12441.json had a hallcuination, response is written in data/hallucinations
+[paper] 2605.14419
+[paper] 2605.10390
+  HTTP 502, retrying...
+  WARNING: 2605.10390.json hit max_tokens, reply is cut off
+  FAILED on 2605.10390: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2603.08929
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 7 hit max_tokens, saved text is cut off
+  WARNING: 2603.08929.json had a hallcuination, response is written in data/hallucinations
+[paper] 2603.05676
+  WARNING: page 14 hit max_tokens, saved text is cut off
+  WARNING: 2603.05676.json hit max_tokens, reply is cut off
+  FAILED on 2603.05676: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2511.15142
+  WARNING: 2511.15142.json had a hallcuination, response is written in data/hallucinations
+[paper] 2509.19021
+  WARNING: 2509.19021.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.12653
+  WARNING: 2604.12653.json had a hallcuination, response is written in data/hallucinations
+[paper] 2601.14087
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: page 4 hit max_tokens, saved text is cut off
+[paper] 2509.24540
+[paper] 2509.08150
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: page 8 hit max_tokens, saved text is cut off
+[paper] 2509.00303
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+[paper] 2306.11951
+[paper] 2207.12713
+[paper] 2111.11460
+  WARNING: page 21 hit max_tokens, saved text is cut off
+  WARNING: 2111.11460.json had a hallcuination, response is written in data/hallucinations
+[paper] 2102.11489
+  WARNING: page 16 hit max_tokens, saved text is cut off
+  WARNING: page 22 hit max_tokens, saved text is cut off
+  WARNING: 2102.11489.json had a hallcuination, response is written in data/hallucinations
+[paper] 2101.05032
+  WARNING: 2101.05032.json had a hallcuination, response is written in data/hallucinations
+[paper] 2004.13197
+  WARNING: 2004.13197.json had a hallcuination, response is written in data/hallucinations
+[paper] 1811.01313
+  WARNING: 1811.01313.json had a hallcuination, response is written in data/hallucinations
+[paper] 1808.05212
+  WARNING: page 21 hit max_tokens, saved text is cut off
+  WARNING: page 25 hit max_tokens, saved text is cut off
+  WARNING: page 26 hit max_tokens, saved text is cut off
+  WARNING: page 28 hit max_tokens, saved text is cut off
+  WARNING: page 31 hit max_tokens, saved text is cut off
+  WARNING: page 33 hit max_tokens, saved text is cut off
+  WARNING: page 40 hit max_tokens, saved text is cut off
+  WARNING: page 42 hit max_tokens, saved text is cut off
+  WARNING: page 43 hit max_tokens, saved text is cut off
+  WARNING: page 44 hit max_tokens, saved text is cut off
+  WARNING: page 46 hit max_tokens, saved text is cut off
+  WARNING: page 47 hit max_tokens, saved text is cut off
+  WARNING: 1808.05212.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.33193
+  WARNING: 2610.33193.json hit max_tokens, reply is cut off
+  FAILED on 2610.33193: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2610.24377
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+  WARNING: 2610.24377.json hit max_tokens, reply is cut off
+  FAILED on 2610.24377: Unterminated string starting at: line 1 column 1766 (char 1765)
+[paper] 2610.20079
+  WARNING: 2610.20079.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.00843
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: 2609.00843.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.27040
+[paper] 2606.27727
+  WARNING: 2606.27727.json had a hallcuination, response is written in data/hallucinations
+[paper] 2606.19697
+  WARNING: page 16 hit max_tokens, saved text is cut off
+  WARNING: 2606.19697.json had a hallcuination, response is written in data/hallucinations
+[paper] 2409.18036
+  WARNING: page 29 hit max_tokens, saved text is cut off
+  WARNING: 2409.18036.json had a hallcuination, response is written in data/hallucinations
+[paper] 2002.07287
+  WARNING: page 8 hit max_tokens, saved text is cut off
+  WARNING: 2002.07287.json had a hallcuination, response is written in data/hallucinations
+[paper] 1905.04092
+[paper] 2610.28387
+  WARNING: 2610.28387.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.32731
+  WARNING: page 6 hit max_tokens, saved text is cut off
+  WARNING: 2610.32731.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.26380
+  WARNING: 2610.26380.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.26407
+  WARNING: 2610.26407.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.15791
+  WARNING: 2610.15791.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+[paper] 2610.02771
+  WARNING: page 10 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+  WARNING: 2610.02771.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.01951
+  WARNING: page 10 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: 2610.01951.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.10780
+  WARNING: 2610.10780.json had a hallcuination, response is written in data/hallucinations
+[paper] 1706.00834
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: page 24 hit max_tokens, saved text is cut off
+  WARNING: 1706.00834.json had a hallcuination, response is written in data/hallucinations
+[paper] 2305.01669
+  WARNING: 2305.01669.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.07234
+  WARNING: 2604.07234.json had a hallcuination, response is written in data/hallucinations
+[paper] 2603.29702
+  WARNING: page 38 hit max_tokens, saved text is cut off
+  WARNING: 2603.29702.json had a hallcuination, response is written in data/hallucinations
+  FAILED on 2603.29702: Unterminated string starting at: line 1 column 85 (char 84)
+[paper] 2511.08958
+  WARNING: 2511.08958.json had a hallcuination, response is written in data/hallucinations
+[paper] 2504.16288
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: 2504.16288.json hit max_tokens, reply is cut off
+  FAILED on 2504.16288: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2407.19796
+  WARNING: page 4 hit max_tokens, saved text is cut off
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 2407.19796.json had a hallcuination, response is written in data/hallucinations
+[paper] 2407.18113
+  WARNING: 2407.18113.json had a hallcuination, response is written in data/hallucinations
+[paper] 2407.10925
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: page 14 hit max_tokens, saved text is cut off
+[paper] 2402.19146
+  WARNING: page 15 hit max_tokens, saved text is cut off
+  WARNING: page 22 hit max_tokens, saved text is cut off
+  WARNING: 2402.19146.json had a hallcuination, response is written in data/hallucinations
+[paper] 2401.03063
+  WARNING: 2401.03063.json had a hallcuination, response is written in data/hallucinations
+[paper] 2211.16660
+[paper] 2112.08454
+[paper] 2112.05836
+  WARNING: page 17 hit max_tokens, saved text is cut off
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 26 hit max_tokens, saved text is cut off
+  WARNING: page 48 hit max_tokens, saved text is cut off
+  WARNING: 2112.05836.json had a hallcuination, response is written in data/hallucinations
+[paper] 2111.10538
+  WARNING: 2111.10538.json had a hallcuination, response is written in data/hallucinations
+[paper] 2108.09115
+  WARNING: 2108.09115.json hit max_tokens, reply is cut off
+  FAILED on 2108.09115: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2106.08195
+[paper] 2105.03028
+  WARNING: 2105.03028.json had a hallcuination, response is written in data/hallucinations
+[paper] 2003.13589
+[paper] 2003.07285
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: 2003.07285.json had a hallcuination, response is written in data/hallucinations
+[paper] 2507.22486
+  WARNING: 2507.22486.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.37979
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: page 11 hit max_tokens, saved text is cut off
+  WARNING: page 41 hit max_tokens, saved text is cut off
+  WARNING: page 52 hit max_tokens, saved text is cut off
+  WARNING: 2609.37979.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.02041
+[paper] 2609.01283
+  WARNING: page 53 hit max_tokens, saved text is cut off
+  WARNING: 2609.01283.json had a hallcuination, response is written in data/hallucinations
+[paper] 2605.09547
+  WARNING: 2605.09547.json had a hallcuination, response is written in data/hallucinations
+[paper] 2507.06576
+  WARNING: page 21 hit max_tokens, saved text is cut off
+  WARNING: page 24 hit max_tokens, saved text is cut off
+[paper] 2609.05068
+  WARNING: page 35 hit max_tokens, saved text is cut off
+  WARNING: page 36 hit max_tokens, saved text is cut off
+  WARNING: 2609.05068.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.14633
+  WARNING: 2604.14633.json had a hallcuination, response is written in data/hallucinations
+[paper] 2602.22916
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2602.22916.json had a hallcuination, response is written in data/hallucinations
+[paper] 2409.17905
+[paper] 2404.16217
+  WARNING: 2404.16217.json had a hallcuination, response is written in data/hallucinations
+[paper] 2401.04638
+  WARNING: 2401.04638.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+[paper] 2304.04667
+  WARNING: 2304.04667.json had a hallcuination, response is written in data/hallucinations
+[paper] 2510.18274
+  WARNING: 2510.18274.json had a hallcuination, response is written in data/hallucinations
+[paper] 2510.24954
+  WARNING: 2510.24954.json had a hallcuination, response is written in data/hallucinations
+[paper] 2602.07230
+  WARNING: 2602.07230.json had a hallcuination, response is written in data/hallucinations
+[paper] 2603.15782
+  WARNING: 2603.15782.json had a hallcuination, response is written in data/hallucinations
+[paper] 2601.20137
+  WARNING: 2601.20137.json had a hallcuination, response is written in data/hallucinations
+[paper] 2511.00254
+ network error (('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+  WARNING: 2511.00254.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.38205
+  WARNING: 2610.38205.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34302
+  WARNING: 2610.34302.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.26563
+  WARNING: page 33 hit max_tokens, saved text is cut off
+  WARNING: 2610.26563.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34273
+[paper] 2610.30054
+  WARNING: page 19 hit max_tokens, saved text is cut off
+  WARNING: page 20 hit max_tokens, saved text is cut off
+ network error (('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out.), retrying...
+  WARNING: 2610.30054.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out.), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=120)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+[paper] 2610.28627
+ network error (('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))), retrying...
+  WARNING: page 5 hit max_tokens, saved text is cut off
+[paper] 2610.26945
+  WARNING: 2610.26945.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.22133
+[paper] 2610.24377
+  WARNING: 2610.24377.json hit max_tokens, reply is cut off
+  FAILED on 2610.24377: Unterminated string starting at: line 1 column 6655 (char 6654)
+[paper] 2610.13905
+  HTTP 502, retrying...
+  WARNING: page 42 hit max_tokens, saved text is cut off
+  WARNING: page 44 hit max_tokens, saved text is cut off
+  WARNING: page 45 hit max_tokens, saved text is cut off
+  WARNING: 2610.13905.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.20297
+[paper] 2610.18914
+  WARNING: 2610.18914.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.15663
+[paper] 2610.10494
+  WARNING: 2610.10494.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.10593
+  WARNING: 2610.10593.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.13556
+  WARNING: 2610.13556.json had a hallcuination, response is written in data/hallucinations
+[paper] 2509.05845
+  WARNING: 2509.05845.json had a hallcuination, response is written in data/hallucinations
+[paper] 2403.04905
+  WARNING: page 6 hit max_tokens, saved text is cut off
+[paper] 2610.23824
+  WARNING: page 9 hit max_tokens, saved text is cut off
+  WARNING: 2610.23824.json had a hallcuination, response is written in data/hallucinations
+[paper] 2508.16308
+  WARNING: 2508.16308.json had a hallcuination, response is written in data/hallucinations
+[paper] 2411.02980
+  WARNING: 2411.02980.json hit max_tokens, reply is cut off
+  FAILED on 2411.02980: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2406.15563
+[paper] 2610.31489
+  WARNING: page 13 hit max_tokens, saved text is cut off
+  WARNING: 2610.31489.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.19710
+  WARNING: 2610.19710.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.27133
+  WARNING: 2610.27133.json hit max_tokens, reply is cut off
+  FAILED on 2610.27133: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2609.09837
+  WARNING: 2609.09837.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.38644
+  WARNING: page 16 hit max_tokens, saved text is cut off
+[paper] 2610.37333
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: page 17 hit max_tokens, saved text is cut off
+[paper] 2610.33763
+  WARNING: page 123 hit max_tokens, saved text is cut off
+  WARNING: page 124 hit max_tokens, saved text is cut off
+  WARNING: page 140 hit max_tokens, saved text is cut off
+  WARNING: page 152 hit max_tokens, saved text is cut off
+  WARNING: page 154 hit max_tokens, saved text is cut off
+  WARNING: 2610.33763.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.33537
+  WARNING: page 16 hit max_tokens, saved text is cut off
+[paper] 2610.30397
+[paper] 2610.30077
+  WARNING: 2610.30077.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.27017
+[paper] 2610.04873
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: 2610.04873.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.01740
+  WARNING: page 2 hit max_tokens, saved text is cut off
+  WARNING: 2610.01740.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.25796
+  WARNING: 2608.25796.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.09661
+  WARNING: page 5 hit max_tokens, saved text is cut off
+  WARNING: 2608.09661.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.11051
+  WARNING: 2609.11051.json had a hallcuination, response is written in data/hallucinations
+[paper] 2609.00895
+  WARNING: 2609.00895.json had a hallcuination, response is written in data/hallucinations
+[paper] 2608.14001
+  WARNING: 2608.14001.json had a hallcuination, response is written in data/hallucinations
+[paper] 2607.07213
+[paper] 2605.19542
+[paper] 2605.14351
+  WARNING: 2605.14351.json had a hallcuination, response is written in data/hallucinations
+[paper] 2605.00376
+  WARNING: page 11 hit max_tokens, saved text is cut off
+  WARNING: page 14 hit max_tokens, saved text is cut off
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: 2605.00376.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.21648
+  WARNING: 2604.21648.json had a hallcuination, response is written in data/hallucinations
+[paper] 2604.03923
+  WARNING: page 3 hit max_tokens, saved text is cut off
+  WARNING: 2604.03923.json hit max_tokens, reply is cut off
+  FAILED on 2604.03923: the JSON object must be str, bytes or bytearray, not NoneType
+[paper] 2511.17107
+  WARNING: page 10 hit max_tokens, saved text is cut off
+  WARNING: 2511.17107.json had a hallcuination, response is written in data/hallucinations
+[paper] 2509.10378
+  WARNING: page 15 hit max_tokens, saved text is cut off
+[paper] 2306.03574
+  WARNING: 2306.03574.json had a hallcuination, response is written in data/hallucinations
+[paper] 2212.14208
+  WARNING: 2212.14208.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.38516
+  WARNING: page 1 hit max_tokens, saved text is cut off
+  WARNING: page 44 hit max_tokens, saved text is cut off
+  WARNING: 2610.38516.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.34661
+  WARNING: 2610.34661.json hit max_tokens, reply is cut off
+  FAILED on 2610.34661: Unterminated string starting at: line 1 column 2889 (char 2888)
+[paper] 2610.28808
+  WARNING: page 17 hit max_tokens, saved text is cut off
+  WARNING: page 19 hit max_tokens, saved text is cut off
+[paper] 2610.15586
+  WARNING: 2610.15586.json had a hallcuination, response is written in data/hallucinations
+[paper] 2610.09909
+[paper] 2610.06541
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+  WARNING: 2610.06541.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+[paper] 2608.29985
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=240)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))), retrying...
+  WARNING: 2608.29985.json had a hallcuination, response is written in data/hallucinations
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Read timed out. (read timeout=600)), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...
+ network error (HTTPSConnectionPool(host='integrate.api.nvidia.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NameResolutionError("HTTPSConnection(host='integrate.api.nvidia.com', port=443): Failed to resolve 'integrate.api.nvidia.com' ([Errno 8] nodename nor servname provided, or not known)"))), retrying...

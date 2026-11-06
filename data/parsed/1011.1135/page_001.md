@@ -1,0 +1,10 @@
+# Reciprocating Preferences Stablize Matching: College Admissions Revisited
+
+**Jerry Jian Liu** \(\cdot\) **Dah Ming Chiu**
+
+the date of receipt and acceptance should be inserted later
+
+**Abstract** In considering the college admissions problem, almost fifty years ago, Gale and Shapley came up with a simple abstraction based on preferences of students and colleges. They introduced the concept of stability and optimality; and proposed the _deferred acceptance_ (DA) algorithm that is proven to lead to a stable and optimal solution. This algorithm is simple and computationally efficient. Furthermore, in subsequent studies it is shown that the DA algorithm is also strategy-proof, which means, when the algorithm is played out as a mechanism for matching two sides (e.g. colleges and students), the parties (colleges or students) have no incentives to act other than according to their true preferences. Yet, in practical college admission systems, the DA algorithm is often not adopted. Instead, an algorithm known as the _Boston Mechanism_ (BM) or its variants are widely adopted. In BM, colleges accept students without deferral (considering other colleges’ decisions), which is exactly the opposite of Gale-Shapley’s DA algorithm. To explain and rationalize this reality, we introduce the notion of _reciprocating preference_ to capture the influence of a student’s interest on a college’s decision. This model is inspired by the actual mechanism used to match students to universities in Hong Kong. The notion of reciprocating preference defines a class of matching algorithms, allowing different degrees of reciprocating preferences by the students and colleges. DA and BM are but two extreme cases (with zero and a hundred percent reciprocation) of this set. This model extends the notion of stability and optimality as well. As in Gale-Shapley’s original paper, we discuss how the analogy<tbc>
+
+J. Liu<br> Department of Information Engineering, The Chinese University of Hong Kong, Shatin, NT, Hong Kong.<br> Tel.: +852-3163-4296<br> Fax: +852-2603-5032<br> E-mail: liujtm@gmail.com<br> D. Chiu<br> E-mail: dmchiu@ie.cuhk.edu.hk
+

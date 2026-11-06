@@ -1,0 +1,22 @@
+In this section, we show that 3-DSRI-ML, the restriction of MDSRI-ML to _d_=3, is NP-complete, even if the master poset is strictly ordered. In order to do so, we reduce from Perfect-SMTI-ML. The input of this problem is an instance of Maximum Stable Marriage with Ties and Incomplete Preferences, where the preferences of men are derived from a weak order of women with maximum tie size two (called _master list of women_) and the preferences of women are derived from a strict order of men (called _master list of men_). Here, the preferences of men (women) are derived from a master list \(\succ_w\) (\(\succ_m\)) if the preferences of each man _m_ (woman _w_) arise through the deletion of a set of agents from \(\succ_w\) (\(\succ_m\)). Perfect- SMTI-ML then asks whether there exists a perfect (weakly) stable matching, i.e., a set _M_ of man-woman pairs such that every man and every woman is contained in exactly one pair, and there is no pair (_m,w_) preferring each other to their partner assigned in the matching. Note that for Perfect-SMTI-ML, we denote the assignments of a matching (as well as blocking pairs) as pairs in order to avoid confusion with 2-sets contained in the preferences of an agent in a 3-DSRI-ML instance.
+
+Perfect-SMTI-ML is NP-complete \[26\].
+
+For the rest of this section, we fix a Perfect-SMTI-ML instance \(\mathcal{I}=(G,\succ_m,\succ_w)\), where _G_ is the acceptability graph (i.e., the graph where each agent is a vertex, and two agents are connected by an edge if and only if they are contained in each other’s preference list), and \(\succ_m\) and \(\succ_w\) are the master lists of men and women, respectively. We denote the set of men by _U_, and the set of women by _W_. We assume that |_U_|=|_W_|. Let _W_={_w_<sub>1</sub>_,...,w_<sub>|_W_|</sub>} such that \(w_i\succ_mw_{i+1}\) or \(w_i\perp_mw_{i+1}\) for all \(i\in[|W|-1]\) and let _U_={_m_<sub>1</sub>_,...,m_<sub>|_U_|</sub>} such that \(m_i\succ_wm_{i+1}\) for all \(i\in[|U|-1]\).
+
+The basic idea of the reduction is as follows. For each _m<sub>i</sub>_, we add an agent _a<sub>i</sub>_, and for each _w<sub>j</sub>_, we add an agent _b<sub>j</sub>_. For every acceptable pair (_m<sub>i</sub>,w<sub>j</sub>_), we add an agent _c<sub>i,j</sub>_, and the 3-set {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_} will be acceptable. Intuitively, a stable 3-dimensional matching matches each agent _a<sub>i</sub>_ to a 2-set {_b<sub>j</sub>,c<sub>i,j</sub>_}, which corresponds edge (_m<sub>i</sub>,w<sub>j</sub>_) being part of a stable matching. Thus, the preferences of _a<sub>i</sub>_ and _b<sub>j</sub>_ correspond to those of _m<sub>i</sub>_ and _w<sub>j</sub>_, i.e., _a<sub>i</sub>_ prefers {_b<sub>j</sub>,c<sub>i,j</sub>_} to \(\{b_{j^\prime},c_{i,j^\prime}\}\) if _m<sub>i</sub>_ prefers _w<sub>j</sub>_ to \(w_{j^\prime}\) (but _a<sub>i</sub>_ preferring {_b<sub>j</sub>,c<sub>i,j</sub>_} to \(\{b_{j^\prime},c_{i,j^\prime}\}\) does not imply _m<sub>i</sub>_ preferring _w<sub>j</sub>_ to \(w_{j^\prime}\) as _m<sub>i</sub>_ may tie _w<sub>j</sub>_ and \(w_{j^\prime}\)), and _b<sub>j</sub>_ prefers {_a<sub>i</sub>,c<sub>i,j</sub>_} to \(\{a_{i^\prime},c_{i^\prime,j}\}\) if and only if _w<sub>j</sub>_ prefers _m<sub>i</sub>_ to \(m_{i^\prime}\). However, the preferences of men may contain ties (of size two), while the preferences of _a<sub>i</sub>_ must not contain ties. We will use so-called _tie gadgets_ to model such ties. Finally, the reduction shall ensure that every _a<sub>i</sub>_ is matched (as this implies that every _m<sub>i</sub>_ is matched). This will be done by a _cut-off gadget_.
+
+We now describe the two gadgets (tie gadget and cut-off gadget) used in the reduction. Afterwards, we describe the reduction in detail and prove its correctness.
+
+\begin{tabular}{cc}
+\multicolumn{2}{c}{MDSRI-ML} \\
+_Input:_ & An MDSRI instance, and a strict order \(\succ_\text{ML}\) of the agents (called _master poset_) such that for each agent _a_, \(\succ_a\) arises from \(\succ_\text{ML}\) through the deletion of some (_d_-1)-sets. \\
+_Task:_ & Decide whether there exists a stable matching. \\
+\end{tabular}
+
+\begin{tabular}{cc}
+\multicolumn{2}{c}{Perfect-SMTI-ML} \\
+_Input:_ & A Stable Marriage with Ties and Incomplete Preferences instance, where the preferences are derived from two master lists \(\succ_w\) (which is a strict order) and \(\succ_m\) (which may contain ties of size at most two). \\
+_Task:_ & Decide whether there exists a perfect stable matching. \\
+\end{tabular}
+

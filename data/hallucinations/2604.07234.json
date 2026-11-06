@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "quenched-annealed free energy gap of the Random Subsequence Model",
+      "problem family": "spin glass models",
+      "bound": "\\(f_{\\mathrm{pl}}(\\alpha)>f_{\\mathrm{null}}^{\\mathrm{ann}}(\\alpha)\\) and \\(\\frac{h(2\\alpha)}{2}\\le f_{\\mathrm{null}}(\\alpha)<f_{\\mathrm{null}}^{\\mathrm{ann}}(\\alpha)\\) for \\(\\alpha\\in(0,1/2)\\)",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Defining \\(f_\\mathrm{null}^\\mathrm{ann}(\\alpha):=\\mathrm{lim}_{N\\rightarrow\\infty}\\frac{1}{N}\\mathrm{log}\\mathbb{E}\\left[Z_{X^\\prime,Y}\\right]\\), there exists a constant \\(f_\\mathrm{pl}(\\alpha)>0\\) such that \\(\\frac{1}{N}\\mathrm{log}Z_{X,Y}-\\rightarrow^p f_\\mathrm{pl}(\\alpha)>f_\\mathrm{null}^\\mathrm{ann}(\\alpha)\\), where \\(-\\rightarrow^p\\) denotes convergence in probability.",
+      "page": 5
+    },
+    {
+      "problem": "uniform capacity of the binary deletion channel",
+      "problem family": "deletion channel",
+      "bound": "\\(C_{\\mathrm{unif}}(p)>0\\) for all \\(p\\in[0,1)\\)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "It holds for all deletion probabilities \\(p\\in[0,1)\\) that \\(C_\\mathrm{unif}(p)>0\\).",
+      "page": 5
+    },
+    {
+      "problem": "annealed free energy of the planted Random Subsequence Model",
+      "problem family": "spin glass models",
+      "bound": "\\(f_{\\mathrm{pl}}^{\\mathrm{ann}}(\\alpha)=-h(\\alpha)-\\alpha\\log 2-\\log x_\\alpha-\\alpha\\log y_\\alpha\\)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "efficient algorithmic approximation by [PIW24]",
+      "quote": "Then \\((x_\\alpha,y_\\alpha)\\in(0,\\infty)^2\\) and \\(f_\\mathrm{pl}^\\mathrm{ann}(\\alpha)=-h(\\alpha)-\\alpha\\mathrm{log}2-\\mathrm{log}x_\\alpha-\\alpha\\mathrm{log}y_\\alpha\\).",
+      "page": 6
+    },
+    {
+      "problem": "uniform capacity of the binary deletion channel",
+      "problem family": "deletion channel",
+      "bound": "\\(C_{\\mathrm{unif}}(p)\\ge\\frac{(\\beta(1-p))^3}{51200\\cdot(\\kappa(1-p))^5}>0\\)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For \\(p\\in(0,1)\\)_, we have that\\) \\(C_\\mathrm{unif}(p)\\ge\\frac{\\left(\\beta(1-p)\\right)^3}{51200\\cdot\\left(\\kappa(1-p)\\right)^5}>0\\).",
+      "page": 28
+    }
+  ],
+  "paper": "2604.07234",
+  "usage": {
+    "prompt_tokens": 58778,
+    "completion_tokens": 7308,
+    "total_tokens": 66086,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6521,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

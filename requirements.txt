@@ -1,0 +1,5 @@
+requests>=2.32   # HTTP calls to the hosted NIM endpoints
+numpy>=2.0       # vector store + cosine similarity
+pypdf>=5.0       # PDF -> text extraction
+pypdfium2>=5.14.0
+pillow>=13.0.0

@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Subset sum (all-targets)",
+      "problem family": "subset sum",
+      "bound": "\\widetilde{O}(t)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(t\\sqrt{n}) deterministic (Koiliaris and Xu)",
+      "quote": "Given a set X of n integers in [t], we can compute \\Sigma(X)\\cap[t] in \\widetilde{O}(t) deterministic time.",
+      "page": 6
+    },
+    {
+      "problem": "Output-sensitive subset sum (all-targets)",
+      "problem family": "subset sum",
+      "bound": "\\widetilde{O}(|\\Sigma(X)\\cap[t]|\\sqrt{n})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(|\\Sigma(X)\\cap[t]|\\sqrt{n}) randomized (Bringmann, Fischer, and Nakos)",
+      "quote": "Given a set X of n integers in [t], we can compute \\Sigma(X)\\cap[t] in \\widetilde{O}(|\\Sigma(X)\\cap[t]|\\sqrt{n}) deterministic time.",
+      "page": 9
+    },
+    {
+      "problem": "Output-sensitive subset sum (all-targets)",
+      "problem family": "subset sum",
+      "bound": "\\widetilde{O}(|\\Sigma(X)\\cap[t]|^{4/3})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(|\\Sigma(X)\\cap[t]|^{4/3}) randomized (Bringmann and Nakos)",
+      "quote": "Given a set X of n integers in [t], we can compute \\Sigma(X)\\cap[t] in \\widetilde{O}(|\\Sigma(X)\\cap[t]|^{4/3}) deterministic time.",
+      "page": 10
+    },
+    {
+      "problem": "0-1 knapsack",
+      "problem family": "0-1 knapsack",
+      "bound": "O(t^2/2^{\\Omega(\\sqrt{\\log t})})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "randomized \\widetilde{O}(t^{2-\\varepsilon'}) via reduction to min-plus convolution (Cygan et al.)",
+      "quote": "In particular, this implies a deterministic O(t^2/2^{\\Omega(\\sqrt{\\log t})})-time algorithm for 0-1 knapsack, by using Chan and Williams' deterministic min-plus matrix multiplication algorithm [CW21] together with a known reduction from min-plus matrix multiplication to convolution [BCD+14].",
+      "page": 2
+    },
+    {
+      "problem": "All-capacities 0-1 knapsack",
+      "problem family": "0-1 knapsack",
+      "bound": "\\widetilde{O}(T(t))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "randomized reduction from all-targets 0-1 knapsack to min-plus convolution (Cygan et al.)",
+      "quote": "If min-plus convolution for two real vectors of length n could be computed in T(n) deterministic time, then the all-capacities version of the 0-1 knapsack problem could be solved in \\widetilde{O}(T(t)) deterministic time.",
+      "page": 14
+    }
+  ],
+  "paper": "2601.01390",
+  "usage": {
+    "prompt_tokens": 13520,
+    "completion_tokens": 6978,
+    "total_tokens": 20498,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6251,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

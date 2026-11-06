@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "All-Pairs Max-Flow on undirected graphs with unit node-capacities (All-Pairs Vertex Connectivity)",
+      "problem family": null,
+      "bound": "\\hat{O}(m^2) \\text{ time (via } \\tilde{O}(m) \\text{ Max-Flow calls + } \\tilde{O}(mn) \\text{ time outside calls)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\hat{O}(m^{11/5}) \\text{ [HLSW23]}",
+      "quote": "This algorithm is also combinatorial, and runs in $\\hat{O}(m^2)$ time using the recent near linear $\\hat{O}(m)$ time Max-Flow algorithm [CKL+22, vdBCP+23], improving on the recent $\\hat{O}(m^{11/5})$ [HLSW23] time algorithm for the problem.",
+      "page": 3
+    },
+    {
+      "problem": "All-Pairs Max-Flow on undirected graphs with unit node-capacities",
+      "problem family": null,
+      "bound": "\\text{No } \\Omega(n^{\\omega(\\log_n m,1,1)+\\varepsilon}) \\text{ SETH-based lower bound (for } \\omega=2\\text{: } \\Omega(mn^{1+\\varepsilon})\\text{)}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Under NSETH, for any fixed $\\varepsilon>0$ there is no deterministic fine-grained reduction proving an $\\Omega(n^{\\omega(\\log_n m,1,1)+\\varepsilon})$ SETH-based lower bound for All-Pairs Max-Flow on undirected graphs with unit node-capacities.",
+      "page": 4
+    },
+    {
+      "problem": "All-Pairs Max-Flow on undirected graphs with unit node-capacities",
+      "problem family": null,
+      "bound": "O(n^2 + m^{3/2-\\varepsilon}) \\text{ time would refute SETH (conditional lower bound } n^2 + m^{3/2-o(1)} \\text{ under SETH)}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If for some fixed $\\varepsilon>0$ All-Pairs Max-Flow on undirected graphs with unit node-capacities can be solved in time $O(n^2+m^{3/2-\\varepsilon})$ then SETH is false.",
+      "page": 4
+    },
+    {
+      "problem": "All-Pairs Max-Flow on directed graphs with node-capacities",
+      "problem family": null,
+      "bound": "\\text{No } \\Omega(n^{\\omega(2,1,1)+\\varepsilon}) \\text{ SETH-based lower bound (for } \\omega=2\\text{: } \\Omega(n^{3+\\varepsilon})\\text{)}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "n^{3-o(1)} \\text{ [AKT20b]}",
+      "quote": "Under NSETH, for any fixed $\\varepsilon>0$ there is no deterministic fine-grained reduction proving an $\\Omega(n^{\\omega(2,1,1)+\\varepsilon})$ SETH-based lower bound for All-Pairs Max-Flow on directed graphs with node-capacities.",
+      "page": 5
+    },
+    {
+      "problem": "All-Pairs Max-Flow on directed graphs with unit edge-capacities",
+      "problem family": null,
+      "bound": "\\text{No } \\Omega(n^{5/2+\\varepsilon}\\sqrt{m} + n^{\\omega(2,1,1)+\\varepsilon'}) \\text{ SETH-based lower bound (for } \\omega=2\\text{: } \\Omega(n^{5/2+\\varepsilon}\\sqrt{m})\\text{)}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "n^{4-o(1)}",
+      "quote": "Under NSETH, for any fixed $\\varepsilon,\\varepsilon'>0$ there is no deterministic fine-grained reduction proving an $\\Omega(n^{5/2+\\varepsilon}\\sqrt{m}+n^{\\omega(2,1,1)+\\varepsilon'})$ SETH-based lower bound for All-Pairs Max-Flow on directed graphs with unit edge-capacities.",
+      "page": 6
+    },
+    {
+      "problem": "All-Pairs Max-Flow on directed graphs with edge-capacities",
+      "problem family": null,
+      "bound": "\\text{Under NSETH, if a deterministic fine-grained reduction from node-capacities to edge-capacities exists, then no } n^{4-o(1)} \\text{ SETH-based lower bound for edge-capacities}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Suppose there exists a deterministic fine-grained reduction proving that an $O(n^{4-\\varepsilon})$ time algorithm for All-Pairs Max-Flow on graphs with node-capacities implies an $O(n^{4-\\varepsilon'})$ algorithm for All-Pairs Max-Flow on directed graphs with edge-capacities, for some fixed $\\varepsilon,\\varepsilon'>0$. Then, under NSETH, it is not possible to have an $n^{4-o(1)}$ SETH-based lower bound for All-Pairs Max-Flow on directed graphs with edge-capacities.",
+      "page": 6
+    }
+  ],
+  "paper": "2304.04667",
+  "usage": {
+    "prompt_tokens": 31784,
+    "completion_tokens": 11576,
+    "total_tokens": 43360,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10363,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

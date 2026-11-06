@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting self-delimiting numbers",
+      "problem family": "Sorting",
+      "bound": "\\(O(k+\\frac{N}{\\log N})\\) time and \\(O(N)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(\\Omega(k\\log m)\\) bits",
+      "quote": "We present a sorting algorithm for self-delimiting numbers that runs in \\(O(k+\\frac{N}{logN})\\) time and uses _O(N_) bits.",
+      "page": 1
+    },
+    {
+      "problem": "Dense/competitive ranking of self-delimiting numbers",
+      "problem family": "Ranking",
+      "bound": "\\(O(k+\\frac{N}{\\log N})\\) time and \\(O(N)\\) bits; \\(O(1)\\)-time rank queries",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(\\Omega(k\\log(m/k))\\) bits",
+      "quote": "We present an algorithm to compute the dense/competitive rank on a sequence _S_ of length _N_ consisting of _k_ self-delimiting numbers in \\(O(k+\\frac{N}{logN})\\) time using _O(N_) bits and subsequently answer dense/competitive rank queries of a number \\(x\\in S\\) in constant time.",
+      "page": 3
+    },
+    {
+      "problem": "Tree isomorphism",
+      "problem family": "Graph isomorphism",
+      "bound": "\\(O(n)\\) time and \\(O(n)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(\\Theta(n\\log n)\\) bits",
+      "quote": "We present an _O(n_)-time and _O(n_)-bit tree-isomorphism algorithm that decides if two given unrooted unlabeled _n_-node trees are isomorphic.",
+      "page": 1
+    },
+    {
+      "problem": "Colored tree isomorphism",
+      "problem family": "Graph isomorphism",
+      "bound": "\\(O(n+b)\\) time and \\(O(n+b)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Given two (unrooted) colored n-node trees T_<sub>1</sub> and T_<sub>2</sub>, there is an algorithm that outputs if T_<sub>1</sub> and T_<sub>2</sub> are isomorphic in O(n+b_) time using O(n+b_) bits exactly if the colors of all nodes of T_<sub>1</sub> and T_<sub>2</sub> can be written within O(b_) bits.",
+      "page": 22
+    },
+    {
+      "problem": "Forest isomorphism",
+      "problem family": "Graph isomorphism",
+      "bound": "\\(O(n+b)\\) time and \\(O(n+b)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Given two colored n-node forests F_<sub>1</sub> and F_<sub>2</sub> with b being the sum of bits to write down the colors of all nodes of F_<sub>1</sub> and F_<sub>2</sub>, there is an algorithm that outputs if F_<sub>1</sub> and F_<sub>2</sub> are isomorphic in linear-time using O(n+b_) bits.",
+      "page": 24
+    },
+    {
+      "problem": "Maximal outerplanar graph isomorphism",
+      "problem family": "Graph isomorphism",
+      "bound": "\\(O(n)\\) time and \\(O(n)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(\\Omega(n\\log n)\\) bits",
+      "quote": "Let G and G' be two maximal outerplanar graphs. We can test isomorphism of G and G' in O(n_) time and bits.",
+      "page": 28
+    },
+    {
+      "problem": "Outerplanar graph isomorphism",
+      "problem family": "Graph isomorphism",
+      "bound": "\\(O(n)\\) time and \\(O(n)\\) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(\\Theta(n\\log n)\\) bits",
+      "quote": "Let G and G' be two partially embedded outerplanar graphs. We can answer if G is isomorphic to G' using O(n_) time and bits.",
+      "page": 29
+    }
+  ],
+  "paper": "2002.07287",
+  "usage": {
+    "prompt_tokens": 37716,
+    "completion_tokens": 13431,
+    "total_tokens": 51147,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12425,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

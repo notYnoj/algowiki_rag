@@ -1,0 +1,1386 @@
+[
+  {
+    "family": "Optimal Binary Search Trees",
+    "variation": "Approximate OBST"
+  },
+  {
+    "family": "Optimal Binary Search Trees",
+    "variation": "Alphabetic Tree Problem"
+  },
+  {
+    "family": "Nearest Neighbor Search",
+    "variation": "k-ANNS"
+  },
+  {
+    "family": "The Subset-Sum Problem",
+    "variation": "Subset Sum"
+  },
+  {
+    "family": "Stable Matching Problem",
+    "variation": "Almost Stable Marriage Problem"
+  },
+  {
+    "family": "Motif Search",
+    "variation": "Motif Search"
+  },
+  {
+    "family": "Texture Synthesis",
+    "variation": "Texture Synthesis"
+  },
+  {
+    "family": "n-Queens Problem",
+    "variation": "n-Queens Completion"
+  },
+  {
+    "family": "Cycle Detection",
+    "variation": "Cycle Detection"
+  },
+  {
+    "family": "Sorting",
+    "variation": "Comparison Sorting"
+  },
+  {
+    "family": "Sorting",
+    "variation": "Non-Comparison Sorting"
+  },
+  {
+    "family": "kth Order Statistic",
+    "variation": "kth Order Statistic"
+  },
+  {
+    "family": "Matrix Chain Multiplication",
+    "variation": "Matrix Chain Ordering Problem"
+  },
+  {
+    "family": "Longest Common Subsequence",
+    "variation": "LCS"
+  },
+  {
+    "family": "Maximum Flow",
+    "variation": ""
+  },
+  {
+    "family": "Matrix Product",
+    "variation": "Matrix Multiplication"
+  },
+  {
+    "family": "Graph Coloring",
+    "variation": "3-Graph Coloring"
+  },
+  {
+    "family": "Graph Coloring",
+    "variation": "4-Graph Coloring"
+  },
+  {
+    "family": "Linear System",
+    "variation": "General Linear System; Positive Definite, Hermitian Matrix; Non-Definite, Symmetric Matrix; Toeplitz Matrix; Vandermonde Matrix"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Positive Definite, Hermitian Matrix"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Non-Definite, Symmetric Matrix"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Toeplitz Matrix"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Vandermonde Matrix"
+  },
+  {
+    "family": "Linear Programming",
+    "variation": ""
+  },
+  {
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, line segments"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": "2-dimensional"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, General MST"
+  },
+  {
+    "family": "Closest Pair Problem",
+    "variation": "k-dimensional space, l_m (or l_infty) norm"
+  },
+  {
+    "family": "LU Decomposition",
+    "variation": "Square Matrix LU Decomposition"
+  },
+  {
+    "family": "Informed Search",
+    "variation": "Informed Search"
+  },
+  {
+    "family": "String Search",
+    "variation": "Single String Search"
+  },
+  {
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence, global alignment"
+  },
+  {
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence, local alignment"
+  },
+  {
+    "family": "Sequence Alignment",
+    "variation": "Edit distance"
+  },
+  {
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence"
+  },
+  {
+    "family": "Line Clipping",
+    "variation": "Rectangular Window"
+  },
+  {
+    "family": "Line Clipping",
+    "variation": "Convex Polygonal Window; Convex Polyhedral window"
+  },
+  {
+    "family": "NFA to DFA conversion",
+    "variation": ""
+  },
+  {
+    "family": "Multiplication",
+    "variation": "Multiplication"
+  },
+  {
+    "family": "Line Simplification",
+    "variation": ""
+  },
+  {
+    "family": "Nearest Neighbor Search",
+    "variation": "Nearest Neighbor Search (NNS)"
+  },
+  {
+    "family": "Maximum Subarray Problem",
+    "variation": "1D Maximum Subarray"
+  },
+  {
+    "family": "Rod-Cutting Problem",
+    "variation": "Rod-Cutting Problem"
+  },
+  {
+    "family": "Change-Making Problem",
+    "variation": "Change-Making Problem"
+  },
+  {
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Minimum TSP"
+  },
+  {
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Geometric Maximum TSP"
+  },
+  {
+    "family": "Feature Detection",
+    "variation": "Corner Detection"
+  },
+  {
+    "family": "The Set-Covering Problem",
+    "variation": "Unweighted Set-Covering"
+  },
+  {
+    "family": "Image Compositing",
+    "variation": "Image Compositing"
+  },
+  {
+    "family": "SLAM Algorithms",
+    "variation": "SLAM Algorithms"
+  },
+  {
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional space, Euclidean metric"
+  },
+  {
+    "family": "Maximum Flow",
+    "variation": "st-Maximum Flow"
+  },
+  {
+    "family": "Maximum Flow",
+    "variation": "Integer Maximum Flow"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Sparse Linear System"
+  },
+  {
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, convex polygons"
+  },
+  {
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, generalized segments"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": "2-dimensional; 3-dimensional"
+  },
+  {
+    "family": "Strongly Connected Components",
+    "variation": "SCCs"
+  },
+  {
+    "family": "Strongly Connected Components",
+    "variation": "Transitive Closure"
+  },
+  {
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional space, l_m (or l_infty) norm"
+  },
+  {
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional array representation"
+  },
+  {
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "general weights"
+  },
+  {
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "Nonnegative Weights"
+  },
+  {
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "Nonnegative Integer Weights"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Directed Graphs with Arbitrary Weights"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Unweighted Graphs; APSP on Sparse Undirected Unweighted Graphs"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Graphs with Arbitrary Weights; APSP on Sparse Undirected Graphs with Arbitrary Weights"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Graphs with Positive Integer Weights; APSP on Sparse Undirected Graphs with Positive Integer Weights"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Geometrically Weighted Graphs"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Directed Graphs with Arbitrary Weights; APSP on Dense Undirected Graphs with Arbitrary Weights"
+  },
+  {
+    "family": "Integer Factoring",
+    "variation": "First Category Integer Factoring"
+  },
+  {
+    "family": "Integer Factoring",
+    "variation": "Second Category Integer Factoring"
+  },
+  {
+    "family": "LU Decomposition",
+    "variation": "Rectangular Matrix LU Decomposition"
+  },
+  {
+    "family": "Line Clipping",
+    "variation": "convex polygonal window"
+  },
+  {
+    "family": "Line Clipping",
+    "variation": "convex and non-convex polyhedral window"
+  },
+  {
+    "family": "Mutual Exclusion",
+    "variation": ""
+  },
+  {
+    "family": "Shown Surface Determination",
+    "variation": ""
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Eigenpair with the Largest Eigenvalue"
+  },
+  {
+    "family": "Delaunay Triangulation",
+    "variation": ""
+  },
+  {
+    "family": "Integer Relation",
+    "variation": "Integer Relation"
+  },
+  {
+    "family": "Deadlock Avoidance",
+    "variation": "Dining Philosophers Problem"
+  },
+  {
+    "family": "De Novo Genome Assembly",
+    "variation": "De Novo Genome Assembly"
+  },
+  {
+    "family": "Ray Tracing",
+    "variation": ""
+  },
+  {
+    "family": "Feature Detection",
+    "variation": "Blob Detection"
+  },
+  {
+    "family": "Culling",
+    "variation": "Culling"
+  },
+  {
+    "family": "Texture Mapping",
+    "variation": "Diffuse Reflection"
+  },
+  {
+    "family": "Texture Mapping",
+    "variation": "Specular Reflection"
+  },
+  {
+    "family": "Image Segmentation",
+    "variation": ""
+  },
+  {
+    "family": "Mesh Simplification",
+    "variation": "Mesh Simplification"
+  },
+  {
+    "family": "POMDPs",
+    "variation": "POMDPs"
+  },
+  {
+    "family": "Rasterization",
+    "variation": "Rasterization"
+  },
+  {
+    "family": "Texture Mapping",
+    "variation": "Environment Mapping"
+  },
+  {
+    "family": "Occupancy Grid Mapping",
+    "variation": "Occupancy Grid Mapping"
+  },
+  {
+    "family": "Matrix Chain Multiplication",
+    "variation": "Approximate MCSP"
+  },
+  {
+    "family": "Matrix Chain Multiplication",
+    "variation": "Approximate MCOP"
+  },
+  {
+    "family": "Matrix Chain Multiplication",
+    "variation": "Matrix Chain Scheduling Problem"
+  },
+  {
+    "family": "Max Independent Set",
+    "variation": "3-Graph Coloring"
+  },
+  {
+    "family": "Graph Coloring",
+    "variation": "3-Coloring a Random 3-Colorable Graph"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": ""
+  },
+  {
+    "family": "String Search",
+    "variation": "Multiple String Search"
+  },
+  {
+    "family": "Sequence Alignment",
+    "variation": "Edit Sequence, constant-size alphabet"
+  },
+  {
+    "family": "Joins",
+    "variation": ""
+  },
+  {
+    "family": "Maximum Cardinality Matching",
+    "variation": "Bipartite Graph MCM"
+  },
+  {
+    "family": "Maximum Cardinality Matching",
+    "variation": "Planar Bipartite Graph MCM"
+  },
+  {
+    "family": "Maximum Cardinality Matching",
+    "variation": "General Graph MCM"
+  },
+  {
+    "family": "Maximum Cardinality Matching",
+    "variation": "Planar Bipartite Graph Perfect Matching"
+  },
+  {
+    "family": "Key Exchange",
+    "variation": "Key Exchange"
+  },
+  {
+    "family": "Mutual Exclusion",
+    "variation": "2-thread Mutual Exclusion"
+  },
+  {
+    "family": "SDD Systems Solvers",
+    "variation": "Inexact Laplacian Solver"
+  },
+  {
+    "family": "SDD Systems Solvers",
+    "variation": "Exact Laplacian Solver"
+  },
+  {
+    "family": "Cycle Detection",
+    "variation": ""
+  },
+  {
+    "family": "Generating Random Permutations",
+    "variation": "General Permutations"
+  },
+  {
+    "family": "Generating Random Permutations",
+    "variation": "Cyclic Permutations"
+  },
+  {
+    "family": "Convex Optimization (Non-linear)",
+    "variation": "General, Constrained optimization"
+  },
+  {
+    "family": "Convex Optimization (Non-linear)",
+    "variation": "Stochastic optimization"
+  },
+  {
+    "family": "Gröbner Bases",
+    "variation": "Gröbner Bases"
+  },
+  {
+    "family": "Minimum value in each row of an implicitly-defined totally monotone matrix",
+    "variation": ""
+  },
+  {
+    "family": "All Permutations",
+    "variation": "All Permutations"
+  },
+  {
+    "family": "Optimal Binary Search Trees",
+    "variation": "OBST"
+  },
+  {
+    "family": "Nash Equilibria",
+    "variation": "2-player"
+  },
+  {
+    "family": "Maximum-Weight Matching",
+    "variation": "Bipartite Maximum-Weight Matching"
+  },
+  {
+    "family": "Maximum-Weight Matching",
+    "variation": "Maximum-Weight Matching"
+  },
+  {
+    "family": "Constructing Eulerian Trails in a Graph",
+    "variation": "Constructing Eulerian Trails in a Graph"
+  },
+  {
+    "family": "Discrete Fourier Transform",
+    "variation": "Discrete Fourier Transform"
+  },
+  {
+    "family": "Line Drawing",
+    "variation": "Line Drawing"
+  },
+  {
+    "family": "Polygon Clipping",
+    "variation": "Polygon Clipping with Arbitrary Clipping Polygon"
+  },
+  {
+    "family": "Polygon Clipping",
+    "variation": "Polygon Clipping with Convex Clipping Polygon"
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Eigenpair closest to mu; Any eigenpair; Any eigenvalue"
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Any eigenpair; Any eigenvalue"
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Any eigenvalue"
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "All eigenvalues; Any eigenvalue"
+  },
+  {
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "All eigenpairs; Eigenpair closest to mu; Any eigenpair; Any eigenvalue; All eigenvalues"
+  },
+  {
+    "family": "Root Computation",
+    "variation": "General Root Computation"
+  },
+  {
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous first derivative"
+  },
+  {
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous second derivative"
+  },
+  {
+    "family": "Coset Enumeration",
+    "variation": "Coset Enumeration"
+  },
+  {
+    "family": "Maximum Likelihood Parameters",
+    "variation": ""
+  },
+  {
+    "family": "Cardinality Estimation",
+    "variation": "Cardinality Estimation"
+  },
+  {
+    "family": "Cardinality Estimation",
+    "variation": "streaming"
+  },
+  {
+    "family": "Register Allocation",
+    "variation": "Global Register Allocation"
+  },
+  {
+    "family": "Register Allocation",
+    "variation": ""
+  },
+  {
+    "family": "Voronoi Diagrams",
+    "variation": "Voronoi Diagrams"
+  },
+  {
+    "family": "Variance Calculations",
+    "variation": "Variance Calculations"
+  },
+  {
+    "family": "Topological Sorting",
+    "variation": "Topological Sorting"
+  },
+  {
+    "family": "DFA Minimization",
+    "variation": "DFA Minimization"
+  },
+  {
+    "family": "DFA Minimization",
+    "variation": "Acyclic DFA Minimization"
+  },
+  {
+    "family": "DFA Minimization",
+    "variation": "Cyclic Nontrivial SCCs DFA Minimization"
+  },
+  {
+    "family": "Lowest Common Ancestor",
+    "variation": "Off-Line Lowest Common Ancestor"
+  },
+  {
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Static Trees"
+  },
+  {
+    "family": "Graph Edit Distance Computation",
+    "variation": "Exact GED"
+  },
+  {
+    "family": "Graph Edit Distance Computation",
+    "variation": "Inexact GED"
+  },
+  {
+    "family": "Graph Edit Distance Computation",
+    "variation": ""
+  },
+  {
+    "family": "Clique Problems",
+    "variation": "Enumerating Maximal Cliques, arbitrary graph"
+  },
+  {
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Approximate TSP"
+  },
+  {
+    "family": "Poisson Problem",
+    "variation": "2-Dimensional Poisson Problem"
+  },
+  {
+    "family": "Poisson Problem",
+    "variation": "3-Dimensional Poisson Problem"
+  },
+  {
+    "family": "Delaunay Triangulation",
+    "variation": "2-Dimensional Delaunay Triangulation"
+  },
+  {
+    "family": "Dependency Inference Problem",
+    "variation": "Functional Dependency Inference Problem"
+  },
+  {
+    "family": "BCNF Decomposition",
+    "variation": "Decisional Perfect BCNF"
+  },
+  {
+    "family": "4NF Decomposition",
+    "variation": ""
+  },
+  {
+    "family": "Dependency Inference Problem",
+    "variation": "Multivalued Dependency Inference Problem"
+  },
+  {
+    "family": "Disk Scheduling",
+    "variation": "Disk Scheduling"
+  },
+  {
+    "family": "The Vertex Cover Problem",
+    "variation": "The Vertex Cover Problem"
+  },
+  {
+    "family": "The Vertex Cover Problem",
+    "variation": "The Vertex Cover Problem, Degrees Bounded By 3"
+  },
+  {
+    "family": "CFG Problems",
+    "variation": "CFG Recognition"
+  },
+  {
+    "family": "CFG Problems",
+    "variation": "CFG Parsing"
+  },
+  {
+    "family": "Finding Frequent Itemsets",
+    "variation": "Finding Frequent Itemsets"
+  },
+  {
+    "family": "Data Compression",
+    "variation": "Lossy Compression"
+  },
+  {
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Distinct-degree; Equal-degree"
+  },
+  {
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Factorization of Polynomials Over Finite Fields"
+  },
+  {
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Square-free"
+  },
+  {
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Distinct-degree"
+  },
+  {
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Equal-degree"
+  },
+  {
+    "family": "Cryptanalysis of Linear Feedback Shift Registers",
+    "variation": "Cryptanalysis of Linear Feedback Shift Registers"
+  },
+  {
+    "family": "Stable Matching Problem",
+    "variation": "Stable Marriage Problem"
+  },
+  {
+    "family": "Stable Matching Problem",
+    "variation": "Stable Roommates Problem"
+  },
+  {
+    "family": "Stable Matching Problem",
+    "variation": "Arc Consistency?"
+  },
+  {
+    "family": "Longest Path Problem",
+    "variation": "Longest Path on Interval Graphs"
+  },
+  {
+    "family": "Constructing Suffix Trees",
+    "variation": "Constructing Suffix Trees"
+  },
+  {
+    "family": "Entity Resolution",
+    "variation": "Entity Resolution"
+  },
+  {
+    "family": "Longest Palindromic Substring",
+    "variation": "Longest Palindromic Substring"
+  },
+  {
+    "family": "AST to Code Translation",
+    "variation": "Arithmetic Expression Binary Tree"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, General Graphs"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, Bounded Number of Vertices of Each Color"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Isomorphism of strongly regular graphs"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": ""
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Subgraph Isomorphism"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Circulant graphs"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Partial k-trees"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Hypergraphs isomorphism"
+  },
+  {
+    "family": "Graph Realization Problems",
+    "variation": "Digraph Realization Problem"
+  },
+  {
+    "family": "Graph Realization Problems",
+    "variation": "DAG Realization Problem"
+  },
+  {
+    "family": "Duplicate Elimination",
+    "variation": "Duplicate Elimination"
+  },
+  {
+    "family": "Hyperbolic Spline Interpolation",
+    "variation": "Hyperbolic Spline Interpolation"
+  },
+  {
+    "family": "Mesh Parameterization",
+    "variation": "Mesh Parameterization"
+  },
+  {
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables"
+  },
+  {
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables; multi-view model, discrete observations"
+  },
+  {
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables, Hidden Markov Models"
+  },
+  {
+    "family": "Collaborative Filtering",
+    "variation": "Matrix Factorization"
+  },
+  {
+    "family": "Filtering Problem (Stochastic Processes)",
+    "variation": "Filtering Problem (Stochastic Processes)"
+  },
+  {
+    "family": "Optimal Policies for MDPs",
+    "variation": "Optimal Policies for MDPs"
+  },
+  {
+    "family": "The Set-Covering Problem",
+    "variation": "Unweighted Set-Covering; Weighted Set-Covering"
+  },
+  {
+    "family": "Minimal Hitting Set Problem",
+    "variation": ""
+  },
+  {
+    "family": "The Set-Covering Problem",
+    "variation": "Weighted Set-Covering"
+  },
+  {
+    "family": "Motif Search",
+    "variation": "Short Olio"
+  },
+  {
+    "family": "Motif Search",
+    "variation": "Short Spaced Olio"
+  },
+  {
+    "family": "Motif Search",
+    "variation": "Z-Score"
+  },
+  {
+    "family": "Motif Search",
+    "variation": "Clique Variant"
+  },
+  {
+    "family": "All Maximal Non-Branching Paths in a Graph",
+    "variation": "All Maximal Non-Branching Paths in a Graph"
+  },
+  {
+    "family": "Link Analysis",
+    "variation": "InDegree Analysis"
+  },
+  {
+    "family": "Link Analysis",
+    "variation": "Link Analysis"
+  },
+  {
+    "family": "Distributed Locking Algorithms",
+    "variation": "Distributed Locking Algorithms"
+  },
+  {
+    "family": "Distributed Locking Algorithms",
+    "variation": "Consensus"
+  },
+  {
+    "family": "Cyclic Peptide Sequencing Problem",
+    "variation": "Cyclic Peptide Sequencing Problem"
+  },
+  {
+    "family": "Point-in-Polygon",
+    "variation": "Point-in-Polygon"
+  },
+  {
+    "family": "Clock Synchronization in Distributed Systems",
+    "variation": "Clock Synchronization in Distributed Systems"
+  },
+  {
+    "family": "d-Neighborhood of a String",
+    "variation": "d-Neighborhood of a String"
+  },
+  {
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut"
+  },
+  {
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut for Planar Graphs"
+  },
+  {
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut, Approximate"
+  },
+  {
+    "family": "Determinant of Matrices with Integer Entries",
+    "variation": "Determinant of Matrices with Integer Entries"
+  },
+  {
+    "family": "Sequence-to-Graph Alignment",
+    "variation": "Sequence-to-Graph Alignment"
+  },
+  {
+    "family": "Logarithm Calculations",
+    "variation": "Discrete Logarithm Over Finite Fields"
+  },
+  {
+    "family": "Logarithm Calculations",
+    "variation": "Discrete Logarithm Over Finite Fields, F_q"
+  },
+  {
+    "family": "Transitive Reduction Problem",
+    "variation": "Transitive Reduction Problem of Directed Graphs"
+  },
+  {
+    "family": "Turnpike Problem",
+    "variation": "Turnpike Problem"
+  },
+  {
+    "family": "n-Queens Problem",
+    "variation": "Counting Solutions; Constructing solutions"
+  },
+  {
+    "family": "n-Queens Problem",
+    "variation": "Counting Solutions"
+  },
+  {
+    "family": "Median String Problem",
+    "variation": "Median String Problem with Unbounded Alphabets"
+  },
+  {
+    "family": "Frequent Words with Mismatches Problem",
+    "variation": ""
+  },
+  {
+    "family": "Tower of Hanoi",
+    "variation": "Tower of Hanoi"
+  },
+  {
+    "family": "The Frequent Words Problem",
+    "variation": "The Frequent Words Problem"
+  },
+  {
+    "family": "Integral Equations",
+    "variation": ""
+  },
+  {
+    "family": "One-Way Hash Functions",
+    "variation": "Unkeyed Hash Functions"
+  },
+  {
+    "family": "One-Way Hash Functions",
+    "variation": "Keyed Hash Functions"
+  },
+  {
+    "family": "One-Way Hash Functions",
+    "variation": "Optional Key?"
+  },
+  {
+    "family": "Secret Sharing",
+    "variation": ""
+  },
+  {
+    "family": "Solutions to Nonlinear Equations",
+    "variation": "Solutions to Nonlinear Equations"
+  },
+  {
+    "family": "Block Ciphers",
+    "variation": "Block Ciphers"
+  },
+  {
+    "family": "Polynomial Interpolation",
+    "variation": "2-D Polynomial Interpolation"
+  },
+  {
+    "family": "Greatest Common Divisor",
+    "variation": "Greatest Common Divisor"
+  },
+  {
+    "family": "Interval Scheduling",
+    "variation": "Weighted Activity Selection Problem"
+  },
+  {
+    "family": "Interval Scheduling",
+    "variation": "Unweighted Interval Scheduling, Online"
+  },
+  {
+    "family": "Deadlock avoidance",
+    "variation": "Deadlock Avoidance"
+  },
+  {
+    "family": "Page Replacements",
+    "variation": "Offline"
+  },
+  {
+    "family": "Page Replacements",
+    "variation": "Online"
+  },
+  {
+    "family": "Recovery",
+    "variation": "Steal, No-Force"
+  },
+  {
+    "family": "Graph Diameter",
+    "variation": "Arbitrary edge weights, Dense graph"
+  },
+  {
+    "family": "Graph Diameter",
+    "variation": "Arbitrary edge weights, Sparse graph"
+  },
+  {
+    "family": "Graph Diameter",
+    "variation": "Unweighted"
+  },
+  {
+    "family": "Graph Diameter",
+    "variation": "Bounded integer weights"
+  },
+  {
+    "family": "Matrix Product",
+    "variation": "Boolean Matrix Multiplication"
+  },
+  {
+    "family": "Matrix Product",
+    "variation": "Boolean Matrix Multiplication (Combinatorial)"
+  },
+  {
+    "family": "Online Matrix Vector Multiplication (OMV)",
+    "variation": ""
+  },
+  {
+    "family": "Negative Triangle",
+    "variation": ""
+  },
+  {
+    "family": "Matrix Multiplication",
+    "variation": ""
+  },
+  {
+    "family": "5 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "family": "6 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "family": "Chromatic Number",
+    "variation": ""
+  },
+  {
+    "family": "#2 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "family": "#3 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "family": "#4 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "family": "Chromatic Polynomial",
+    "variation": ""
+  },
+  {
+    "family": "Linear System",
+    "variation": "General"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Toeplitz"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Toeplitz??"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Toeplitz?, Hermitian?"
+  },
+  {
+    "family": "Linear System",
+    "variation": "Sparse"
+  },
+  {
+    "family": "Linear Programming",
+    "variation": "0–1 Integer Linear Programming Decision Problem"
+  },
+  {
+    "family": "Line segment intersection",
+    "variation": "Counting number of intersection points / line segments"
+  },
+  {
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points / general polygons"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": "d-dimensional Convex Hull"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": "2-dimensional Convex Hull, Online"
+  },
+  {
+    "family": "Convex Hull",
+    "variation": "2-dimensional Convex Hull, Dynamic"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Dense MST"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Planar MST"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Integer Weights MST"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Directed (Optimum Branchings), General MST"
+  },
+  {
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Directed (Optimum Branchings), Super Dense MST"
+  },
+  {
+    "family": "Closest Pair Problem",
+    "variation": "k-dimensional space, Euclidean metric"
+  },
+  {
+    "family": "Shortest Path (Directed graphs)",
+    "variation": "nonnegative integer weights"
+  },
+  {
+    "family": "Shortest Path (Undirected graphs)",
+    "variation": "positive integer weights; assumes constant-time multiplication"
+  },
+  {
+    "family": "Betweenness Centrality (BC)",
+    "variation": "Unweighted"
+  },
+  {
+    "family": "Betweenness Centrality (BC)",
+    "variation": "Weighted"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Directed, Weighted (Arbitrary weights)"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Directed, Unweighted"
+  },
+  {
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Fully Dynamic APSP"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "CNF-SAT"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "Renamable Horn"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "k-SAT"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "3SAT"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "4SAT"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "NAE 3SAT"
+  },
+  {
+    "family": "Boolean Satisfiability",
+    "variation": "X3SAT"
+  },
+  {
+    "family": "Informed Search",
+    "variation": ""
+  },
+  {
+    "family": "String Search",
+    "variation": ""
+  },
+  {
+    "family": "Maximum cardinality matching",
+    "variation": "bipartite graph"
+  },
+  {
+    "family": "Maximum cardinality matching",
+    "variation": "general graph"
+  },
+  {
+    "family": "All permutations",
+    "variation": ""
+  },
+  {
+    "family": "Maximum-weight matching",
+    "variation": "Bipartite Maximum-Weight Matching"
+  },
+  {
+    "family": "Maximum-weight matching",
+    "variation": "Maximum-Weight Matching"
+  },
+  {
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous derivatives (up to d)"
+  },
+  {
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking"
+  },
+  {
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking Roots"
+  },
+  {
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking and Cutting"
+  },
+  {
+    "family": "3SUM",
+    "variation": "Integer 3SUM"
+  },
+  {
+    "family": "3SUM",
+    "variation": "Real 3SUM"
+  },
+  {
+    "family": "Maximum subarray problem",
+    "variation": "1-dimensional"
+  },
+  {
+    "family": "Maximum subarray problem",
+    "variation": "2-dimensional"
+  },
+  {
+    "family": "Wiener Index",
+    "variation": "Minimum Wiener Connector problem"
+  },
+  {
+    "family": "Orthogonal Vectors",
+    "variation": "k-OV"
+  },
+  {
+    "family": "Orthogonal Vectors",
+    "variation": "OV"
+  },
+  {
+    "family": "k-Clique Problem",
+    "variation": "k-Clique"
+  },
+  {
+    "family": "Min-Weight k-Clique Problem",
+    "variation": "3-Clique"
+  },
+  {
+    "family": "Exact-Weight k-Clique Problem",
+    "variation": "3-Clique"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomporhism, Trivalent Graphs"
+  },
+  {
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, Bounded Vertex Valences"
+  },
+  {
+    "family": "Self-Balancing Trees Creation",
+    "variation": ""
+  },
+  {
+    "family": "Self-Balancing Trees Insertion",
+    "variation": ""
+  },
+  {
+    "family": "Self-Balancing Trees Deletion",
+    "variation": ""
+  },
+  {
+    "family": "Self-Balancing Trees Search",
+    "variation": ""
+  },
+  {
+    "family": "Nash Equilibria",
+    "variation": "2 player games"
+  },
+  {
+    "family": "Nash Equilibria",
+    "variation": "Graphical games, Multi-agent influence diagrams"
+  },
+  {
+    "family": "Nash Equilibria",
+    "variation": "n player games"
+  },
+  {
+    "family": "4NF Decomposition",
+    "variation": "4NF Decomposition for Functional and Multivalued Dependency Sets"
+  },
+  {
+    "family": "4NF Decomposition",
+    "variation": "4NF Decomposition for Conflict-Free Dependency Sets"
+  },
+  {
+    "family": "Strongly Connected Components",
+    "variation": ""
+  },
+  {
+    "family": "Integer Factoring",
+    "variation": ""
+  },
+  {
+    "family": "Integer Relation",
+    "variation": ""
+  },
+  {
+    "family": "Point-in-Polygon",
+    "variation": ""
+  },
+  {
+    "family": "The Subset-Sum Problem",
+    "variation": "Dynamic Subset Sum"
+  },
+  {
+    "family": "Bin Packing Problem",
+    "variation": ""
+  },
+  {
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Detection"
+  },
+  {
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Counting"
+  },
+  {
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Detection (undirected)"
+  },
+  {
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Counting (undirected)"
+  },
+  {
+    "family": "The Set Splitting Problem",
+    "variation": "k-Set splitting"
+  },
+  {
+    "family": "The Set Splitting Problem",
+    "variation": "weighted k-Set splitting"
+  },
+  {
+    "family": "Minimum Tardiness Sequencing",
+    "variation": "weighted with precedence relations"
+  },
+  {
+    "family": "Minimum Tardiness Sequencing",
+    "variation": "unweighted"
+  },
+  {
+    "family": "Dominating Set",
+    "variation": ""
+  },
+  {
+    "family": "Dominating Set",
+    "variation": "counting"
+  },
+  {
+    "family": "Hitting Set",
+    "variation": "3-Hitting Set (Every subset has size at most 3)"
+  },
+  {
+    "family": "Voronoi Diagram",
+    "variation": ""
+  },
+  {
+    "family": "Set Packing",
+    "variation": "Maximum Independent Set"
+  }
+]

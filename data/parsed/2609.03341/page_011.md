@@ -1,0 +1,16 @@
+<tbc>(i.e., after 1/10 of total steps). When learning the UV atlas and 2D texture map (Sec. 4.2), we follow Nuvo’s optimization settings and use weight 0.4 for the proposed L<sub>distortion</sub> and 0.04 for L<sub>texture</sub>. We use _n_=4 or 8 charts depending on the complexity of the geometry, and fix memory usage by using a texture resolution of \(256\sqrt{2/n}\times 256\sqrt{2/n}\) for each chart. For editing evaluation, we use Objaverse assets with artist-created motion sequences to evaluate persistent editing under realistic deformation scenarios (Sec. 4.3).
+
+### 5.2 Simultaneous Geometry and Texture Editing
+
+PointGT supports texture editing by modifying the 2D texture atlas, and geometry editing by applying non-rigid deformations to the point cloud while preserving canonical UV lookup via our edit-time canonical correspondence (Sec. 4.3). We evaluate this capability under non-rigid deformations and both **local** edits (e.g., paste an icon into a localized region) and **global** edits (e.g., recolor or material-style changes).
+
+#### Non-rigid deformation with local and global edits.
+
+Figure 4 shows qualitative results on Objaverse assets with artist-created motion. PointGT preserves surface continuity under deformation and maintains edit attachment: the edited texture remains aligned with the deforming surface without noticeable drifting or popping.
+
+#### Comparison to GSTex.
+
+We choose GSTex \[16\] as the baseline for simultaneous geometry and texture editing. While Texture-GS \[27\] learns a texture map, the quality of its learned texture map is insufficient for reliable texture-space editing in practice, with evidence in the supplementary. Textured Gaussians \[3\] is architecturally close to GSTex, they both learn a per-Gaussian texture map which is queried by ray-Gaussian intersection. Since texture editing is not its focus and its released code does not provide an editing pipeline, we treat GSTex as the representative method of this family. NeST-Splatting \[30\] stores texture in a global shell texture anchored in world space rather than to individual Gaussians, so deforming the geometry causes ray-Gaussian intersections to sample the texture at the wrong locations. It thus cannot edit geometry without external proxies such as cages \[26, 29\], and it also does not release an editing pipeline. We provide the full analysis of both in the supplementary.
+
+In Figure 5 we add a "rocket" icon to a butterfly scene from Objaverse \[4\]. We edit PointGT by pasting the icon into the desired region on the 2D texture map. GSTex performs texture editing by editing a rendered view and projecting the edited pixels back to Gaussians. To apply the same local edit to the same region for a fair comparison, we use the edited pixels from our method’s rendered view as the editing input for GSTex. As shown, our method maintains sharp edit details across different point budgets (1,000 to 30,000), while GSTex renders blurry textures, especially with 1,000 or 60,000 Gaussians. Moreover, as shown in Figure 4 our method maintains surface continuity after non-rigid deformation, while GSTex exhibits extruded Gaussians and surface artifacts under deformations.
+

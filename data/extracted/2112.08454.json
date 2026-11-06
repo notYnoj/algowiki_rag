@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "\\(n^{o(1)}\\)-approximation in \\(O(n)\\) time",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "\\(n^{0.4}\\)-approximation in linear time",
+      "quote": "Theorem 1. LCS_<sub>n</sub> can be approximated up to n_<sup>_o_(1)</sup>_-factor, with high probability, and in O(n_) _time._",
+      "page": 2
+    }
+  ],
+  "paper": "2112.08454",
+  "usage": {
+    "prompt_tokens": 4255,
+    "completion_tokens": 4480,
+    "total_tokens": 8735,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4329,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

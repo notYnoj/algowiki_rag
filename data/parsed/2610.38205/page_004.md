@@ -1,0 +1,22 @@
+## 1.3 Our Contributions
+
+The discussion above exposes a concrete gap between existing construction algorithms: one can obtain a strong sparsity guarantee with a running time of roughly \(\widetilde{O}(n^{2.5})\), or a faster \(\widetilde{O}(n^\omega log(\Delta)/\varepsilon)\) running time with resource augmentation that may make the resulting sparsity guarantee prohibitively weak. Our results largely close this gap. We first give an \(\widetilde{O}(n^\omega log(\Delta)/\varepsilon)\)-time algorithm that reduces the resource augmentation from \(2\alpha(1+\varepsilon)\) to \(\alpha(1+\varepsilon)\). We then study the navigability- verification subroutine that forms the principal bottleneck in this algorithm, giving conditional lower bounds on improving or eliminating it.
+
+### Improved resource augmented approximation algorithm
+
+Our first result is an improvement of \[25\]’s resource augmented approximation algorithm, tightening the sparseness guarantee.
+
+**Theorem 1.2.** _For any_ \(\varepsilon>0\)_, there exists a randomized algorithm that, given point set P, arbitrary distance function_ \(d(\cdot,\cdot)\)_, and_ \(\alpha>1\)_, constructs an_ \(\alpha\)_-navigable graph, with at most_
+
+\(O\big(OPT_{\alpha(1+\varepsilon)}logn\big)\)
+
+_edges,_<sup>3</sup> _where_ \(OPT_{\alpha(1+\varepsilon)}\) _is the size of the sparsest_ \(\alpha(1+\varepsilon)\)_-navigable graph. The algorithm runs in_ \(\widetilde{O}\big(n^\omega\cdot log(\Delta_P)/\varepsilon\big)\) _time,_<sup>4</sup> _where_ \(\Delta_P\) _is the set’s aspect ratio._
+
+The starting point for Theorem 1.2 is the observation that a sparsest \(\alpha\)-navigable graph problem can be formulated as a combination of _n_ individual set cover problems. Since the \(\alpha\)-navigable constraint for a source-target pair (_s,t_) is satisfied by an edge (_s,v_) where \(d(v,t)<\frac{1}{\alpha}d(s,t)\), we can express a source point _s_ as a set cover problem where the elements to be covered are all targets \(t\neq s\). In this set cover instance, the sets correspond with potential outedges from _s_, with the set associated with edge (_s,v_) containing all targets _t_ where \(d(v,t)<\frac{1}{\alpha}d(s,t)\). Our main approach, then, is to efficiently solve these _n_ set cover instances.
+
+\[25\] also makes this observation, but its \(\widetilde{O}(n^\omega\cdot log(\Delta)/\varepsilon)\) time algorithm does not solve the set cover instances directly, instead adding edges through a geometric argument relying on triangle inequality. At a high level, the driving observation is that an edge from a source point _s_ to an intermediate point _v_ that approaches a given target by a factor of \(2\alpha\) can be replaced with an edge to some other point near _v_ and still approach the target by a factor of \(\alpha\). Thus, the authors add roughly \(OPT_{2\alpha(1+\varepsilon)}\) edges and argue that these solve a large number of the source-target constraints from required for an \(\alpha\)-navigable graph. This is the source of the factor of 2 from their resource augmentation.
+
+To eliminate the factor of 2, we replace this with a procedure that directly accesses and solves the underlying set cover instances. This not only comes with a tightening of the resource augmentation but also removes the requirement that the points live in a metric space. Unlike \[25\], our algorithm works on any symmetric distance function, without need for triangle inequality. We do, however, reuse a procedure from \[25\], which we detail in Section 2.5, that there is a small number of discrete pairwise distances among the points in _P_. To this end, we choose several fixed distance scales and round each distance to one of these, incurring up to a \((1+\varepsilon)\) distortion on all distances. Thus, we retain the \((1+\varepsilon)\) resource augmentation factor.
+
+<sup>3</sup>The guarantee is actually slightly stronger: the constructed graph not only minimizes the total number of edges, but also individual degrees. That is, the out-degree of each point is within _O_(log_n_) of its lowest possible out-degree in any \(\alpha\)-navigable graph over _P_. <sup>4</sup>We assume \(d(\cdot,\cdot)\) takes _O_(1) time. More generally, if computing \(d(\cdot,\cdot)\) takes _O(T_) time, then our algorithm runs in \(\widetilde{O}\big(n^\omega\cdot log(\Delta_P)/\varepsilon\big)+O(n^2\cdot T)\) time. The same caveat applies to the prior works discussed in Section 1.1, which also take on an additional \(O(n^2\cdot T)\) cost for computing distances.
+

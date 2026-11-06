@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "asymptotic rank of complete graph tensor GT_2(K_n)",
+      "problem family": "graph tensors",
+      "bound": "\\mathrm{log}_2\\widetilde{\\mathrm{R}}(\\mathsf{GT}_2(K_n)) \\le \\frac{n^2}{4}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "\\frac{3}{4}\\binom{n}{2}",
+      "quote": "Theorem 1.1 (complete graph tensors). For every integer \\(n\\ge 2\\), over the complex numbers, \\(\\left\\lfloor\\frac{n^2}{4}\\right\\rfloor\\le\\mathrm{log}_2\\widetilde{\\text{R}}\\big(\\mathsf{G}\\mathsf{T}_2(K_n)\\big)\\le\\frac{n^2}{4}.\\)",
+      "page": 5
+    },
+    {
+      "problem": "asymptotic rank of even complete graph tensor GT_2(K_{2m})",
+      "problem family": "graph tensors",
+      "bound": "\\mathrm{log}_2\\widetilde{\\mathrm{R}}(\\mathsf{GT}_2(K_{2m})) = m^2 = \\mathrm{MaxCut}(K_{2m})",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "\\frac{3}{4}\\binom{2m}{2}",
+      "quote": "Corollary 4.12 (maximum-cut equality for even complete graphs). For every positive integer m, \\(\\mathrm{log}_2\\widetilde{\\text{R}}\\big(\\mathsf{GT}_2(K_{2m})\\big)=\\mathrm{MaxCut}(K_{2m})=m^2,\\tau(K_{2m})=\\frac{m}{2m-1}.\\)",
+      "page": 33
+    },
+    {
+      "problem": "edge exponent of complete graph tensor \\tau(K_n)",
+      "problem family": "graph tensors",
+      "bound": "\\tau(K_n) \\le \\frac{n}{2(n-1)} < \\frac{2}{3}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "\\frac{3}{4}",
+      "quote": "Corollary 4.13 (edge exponents below two thirds). For every integer \\(n\\ge 5\\), \\(\\tau(K_n)\\le\\frac{n}{2(n-1)}<\\frac{2}{3}.\\)",
+      "page": 34
+    },
+    {
+      "problem": "operational barrier for polynomial constructions on complete graph tensors",
+      "problem family": "graph tensors",
+      "bound": "\\mathbf{G}_{n,2}\\unknown_{\\mathrm{poly},n}\\mathbf{I}_n(R)\\Longrightarrow\\mathrm{log}_2R\\ge\\frac{n^2}{4}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1.2 (barrier for the polynomial constructions). For every integer \\(n\\ge 3\\) and every positive integer R, \\(\\mathbf{G}_{n,2}\\unknown_{\\mathrm{poly},n}\\mathbf{I}_n(R)\\Longrightarrow\\mathrm{log}_2R\\ge\\frac{n^2}{4}.\\)",
+      "page": 8
+    }
+  ],
+  "paper": "2610.34273",
+  "usage": {
+    "prompt_tokens": 51836,
+    "completion_tokens": 10819,
+    "total_tokens": 62655,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10081,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

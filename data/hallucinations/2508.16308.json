@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "k-partial k-coloring",
+      "problem family": "partial coloring",
+      "bound": "\\text{NP-complete}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1. For every fixed integer \\(k\\ge 3\\), the problem of deciding whether an input graph G is k-partially k-colorable is NP-complete.",
+      "page": 3
+    },
+    {
+      "problem": "k-partial k-coloring",
+      "problem family": "partial coloring",
+      "bound": "\\Omega(n/k^3)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2. For every fixed integer \\(k\\ge 3\\) and for any k-partial k-coloring LOCAL algorithm A for k-partially k-colorable graphs, there exists an n-node k-partially k-colorable graph G such that A requires \\(\\Omega(n/k^3)\\) rounds to color G.",
+      "page": 3
+    }
+  ],
+  "paper": "2508.16308",
+  "usage": {
+    "prompt_tokens": 12576,
+    "completion_tokens": 5553,
+    "total_tokens": 18129,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5310,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

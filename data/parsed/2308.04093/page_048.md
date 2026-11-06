@@ -1,0 +1,4 @@
+Hence, \(\mathbf{E}_{h(j+1)\in[b^2]}[\sum_{i=1}^me_i^{(j+1)}]\le\sum_{i=1}^me_i^{(j)}\), and by enumerating all _b_<sup>2</sup> colors we can find a color \(h(j+1)\in[b^2]\) so that \(\sum_{i=1}^me_i^{(j+1)}\le\sum_{i=1}^me_i^{(j)}\). Eventually we can find a coloring \(h:[n]\rightarrow[b^2]\) such that \(\sum_{i=1}^me_i^{(n)}\le\sum_{i=1}^me_i^{(0)}<m/2\), satisfying the requirement.
+
+Now we analyze the time complexity. In each iteration \(1\le j\le n\), we try all _b_<sup>2</sup> colors and compute the estimators. Note that the estimators \(e_i^{(j)}\) are only updated when an element in _S<sub>i</sub>_ is colored. Hence the total time complexity for finding the coloring \(h:[n]\rightarrow[b^2]\) is \(O(n\cdot b^2+b^2\cdot\sum_{i=1}^m|S_i|)=O(nb^2+mb^3)\), which can be further reduced to _O(n+mb_<sup>3</sup>) by skipping elements \(j\in[n]\) that are not contained in any _S<sub>i</sub>_. This finishes the proof of Claim B.5.
+

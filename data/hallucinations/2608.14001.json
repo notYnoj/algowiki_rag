@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Generalized Vandermonde matrix pseudo-transfinite diameter",
+      "problem family": null,
+      "bound": "\\tilde{d}_m(\\mathbf{T})\\le m^{1/(m-1)}\\text{ and }\\tilde{\\tau}(\\mathbf{T}):=\\lim_{m\\rightarrow\\infty}\\tilde{d}_m(\\mathbf{T})=1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, $\\tilde{d}_m(\\mathbf{T})\\le m^{1/(m-1)}$ and $\\tilde{\\tau}(\\mathbf{T}):=lim_{m\\rightarrow\\infty}\\tilde{d}_m(\\mathbf{T})=1$.",
+      "page": 7
+    },
+    {
+      "problem": "Generalized Vandermonde matrix asymptotic rank and conditioning",
+      "problem family": null,
+      "bound": "\\lim_{\\ell\\rightarrow\\infty}\\mathrm{rank}(\\mathbf{T})=m,\\ \\lim_{\\ell\\rightarrow\\infty}\\tilde{d}_m(\\mathbf{T})=m^{1/(m-1)},\\) and \\(\\lim_{\\ell\\rightarrow\\infty}\\kappa\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right)=1",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Then, 1) $\\mathrm{lim}_{\\ell\\rightarrow\\infty}\\mathrm{rank}(\\mathbf{T})=m$; 2) $\\mathrm{lim}_{\\ell\\rightarrow\\infty}\\tilde{d}_m(\\mathbf{T})=m^{1/(m-1)}$; 3) $\\mathrm{lim}_{\\ell\\rightarrow\\infty}\\kappa\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right)=1$.",
+      "page": 8
+    },
+    {
+      "problem": "Generalized Vandermonde matrix scaled condition number",
+      "problem family": null,
+      "bound": "\\tilde{\\kappa}_m\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right):=\\kappa_m\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right)^{1/\\genfrac(){pt}{2}{m}{2}}\\le\\left(\\frac{1+\\varepsilon}{1-\\varepsilon}\\right)^\\frac{1}{m(m-1)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the scaled condition number has the upper bound: $\\tilde{\\kappa}_m\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right):=\\kappa_m\\left(\\sqrt{\\frac{m}{\\ell}}\\mathbf{T}\\right)^{1/\\genfrac(){pt}{2}{m}{2}}\\le\\left(\\frac{1+\\varepsilon}{1-\\varepsilon}\\right)^\\frac{1}{m(m-1)}$",
+      "page": 9
+    },
+    {
+      "problem": "Stable linear Takens' embedding with non-uniform sampling",
+      "problem family": null,
+      "bound": "\\unknown\\text{ satisfies (4) with probability one for some constants }C\\text{ and }\\delta<1",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "Linear Takens' Embedding for uniformly-spaced delays (Theorem III.1 of [6])",
+      "quote": "Then, for all distinct pairs of points $\\mathbf{x}_1,\\mathbf{x}_2\\in\\mathcal{M}$, with probability one $\\unknown$ satisfies (4) for some constants _C_ and $\\delta<1$.",
+      "page": 10
+    },
+    {
+      "problem": "Stable linear Takens' embedding with non-uniform sampling (asymptotic)",
+      "problem family": null,
+      "bound": "\\delta\\rightarrow\\delta_0=\\frac{A_2\\kappa_2^2-A_1\\kappa_1^2}{A_2\\kappa_2^2+A_1\\kappa_1^2}\\text{ as }\\ell\\rightarrow\\infty",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "Stable Linear Takens' Embedding for uniformly-spaced delays (Theorem III.2 of [6])",
+      "quote": "Then, for all distinct pairs of points $\\mathbf{x}_1,\\mathbf{x}_2\\in\\mathcal{M}$, with probability one $\\unknown$ satisfies (4) in the limit as $\\ell\\rightarrow\\infty$ with constants _C_ and $\\delta\\rightarrow\\delta_0$: $C:=d\\left(\\frac{\\kappa_1^2}{A_2}+\\frac{\\kappa_2^2}{A_1}\\right)\\delta_0:=\\frac{A_2\\kappa_2^2-A_1\\kappa_1^2}{A_2\\kappa_2^2+A_1\\kappa_1^2}$",
+      "page": 11
+    }
+  ],
+  "paper": "2608.14001",
+  "usage": {
+    "prompt_tokens": 28880,
+    "completion_tokens": 13854,
+    "total_tokens": 42734,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12728,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

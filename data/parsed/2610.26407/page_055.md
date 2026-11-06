@@ -1,0 +1,128 @@
+TEak
+TS-PPS-IDS
+KL-LUCB
+EMlp
+gap-e
+TTTS-IDS
+BOLD
+TEak-q' (t)
+TS-KKT(.5)-IDS
+AOAm
+EOC-m
+Uniform
+TTTS
+AOAP
+PCS
+k=1
+k=3
+k=5
+k=10
+1.0
+0.8
+I=20, budget 20k
+0.6
+0.4
+0.2
+k=1
+k=5
+k=10
+k=20
+1.0
+0.8
+I=50, budget 50k
+0.6
+0.4
+0.2
+0.0
+k=1
+k=5
+k=10
+k=20
+0.8
+I=100, budget 100k
+0.6
+0.4
+0.2
+0.0
+0
+25
+50
+75
+0
+25
+50
+75
+0
+25
+50
+75
+0
+25
+50
+75
+% of max budget
+
+TEak
+TS-PPS-IDS
+KL-LUCB
+Uniform
+TTTS
+PCS
+TEak-q' (t)
+TS-KKT(.5)-IDS
+gap-e
+TTTS-IDS
+BOLD
+k=1
+k=3
+k=5
+k=10
+1.0
+0.8
+0.6
+I=20, budget 20k
+0.4
+0.2
+0.0
+k=1
+k=5
+k=10
+k=20
+0.8
+0.6
+I=50, budget 50k
+0.4
+0.2
+0.0
+k=1
+k=5
+k=10
+k=20
+0.8
+0.6
+I=100, budget 100k
+0.4
+0.2
+0.0
+0
+25
+50
+75
+0
+25
+50
+75
+0
+25
+50
+75
+0
+25
+50
+75
+% of max budget
+
+**Figure 27** Gaussian: PCS.
+
+**Figure 28** Bernoulli: PCS.
+

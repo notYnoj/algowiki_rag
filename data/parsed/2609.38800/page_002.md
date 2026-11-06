@@ -1,0 +1,26 @@
+The most prevalent method for obtaining exact analytical quantum gradients, the Parameter-Shift Rule (PSR) \[Mitarai et al., 2018, Schuld et al., 2019\], computes each partial derivative \(\partial f/\partial\theta_j\) by evaluating the circuit at two shifted parameter configurations. This requires 2_p_ distinct circuit evaluations per gradient step, scaling linearly with the number of parameterized gates _p_. Furthermore, because quantum states collapse upon measurement, the expectation value must be approximated by taking a finite number of shots, meaning the "exact" PSR gradient is inherently corrupted by physical shot noise \[Sweke et al., 2020\].
+
+To avoid the prohibitive O(_p_) execution scaling, the quantum computing community frequently turns to gradient-free or simultaneous perturbation methods \[Spall, 2002\]. These estimators compute a descent direction using a constant number of circuit evaluations, regardless of the dimension _p_. However, this O(1) circuit complexity comes at a severe cost: simultaneous perturbation injects massive spatial variance into the gradient estimate that scales as O(_p_) \[Sweke et al., 2020, Gacon et al., 2021\]. In deep circuits, this variance often overwhelms the true descent signal, resulting in random-walk behavior. By coupling these quantum variance penalties with foundational non-convex bounds \[Ghadimi and Lan, 2013\], we observe a fundamental dimensionality barrier: despite their different per-step circuit costs, both PSR and SPSA ultimately suffer from the exact same asymptotic sample complexity of \(\mathcal{O}(p/\epsilon^4)\) to reach an \(\epsilon^2\)-accurate gradient. The injected variance penalty of SPSA precisely cancels its per-step efficiency advantage. This creates a significant structural bottleneck in the field: no existing method simultaneously achieves an O(1) per-step circuit cost, tightly bounded spatial variance, and compatibility with NISQ hardware constraints. The parameter-shift rule is precise but expensive and SPSA is computationally cheap but excessively noisy.
+
+### The Key Insight: Temporal State Caching.
+
+In this work, we resolve this trilemma by observing that the structure of variance reduction \[Johnson and Zhang, 2013, Nguyen et al., 2017\] creates a natural opportunity for a _classical-quantum memory bridge_ that has been entirely overlooked in the quantum optimization literature. By utilizing cheap classical RAM to store a quantum state’s expectation value, we can systematically bypass the dominant latency bottleneck of NISQ devices: Quantum State Preparation and Measurement (SPAM) overhead. Specifically:
+
+1. The _one-sided_ (forward) finite-difference gradient estimator explicitly evaluates the objective function at the _current_ parameter point \(\theta_t\), unlike the two-sided symmetric estimator which only evaluates at shifted points \(\theta_t\pm\epsilon\Delta\).<tbc>
+
+2. In a variance-reduced update framework, gradient estimates share a common reference point: the estimator requires the current center-point \(f(\theta_t)\), along with a reference center-point that was already physically evaluated, either statically at the epoch start \(f(\theta_0)\) (for non-recursive routing) or dynamically at the previous step \(f(\theta_{t-1})\) (for recursive routing).<tbc>
+
+3. By _caching_ these reference measurements in classical memory, we eliminate one full circuit execution and measurement per inner step, yielding a strict 25% reduction in quantum hardware utilization for both variants.
+
+This insight leads to the _Cached Recycled Variance-Reduced Gradient_ (CRVG), a quantum-native optimization framework that achieves robust and rapid convergence by leveraging structure-aware shifts, noise cancellation, and mathematical state-caching.
+
+## 1.1 Contributions
+
+We summarize our contributions as follows:
+
+1. We demonstrate that the historical preference for two-sided symmetric estimators \[Mitarai et al., 2018, Schuld et al., 2019, Mari et al., 2021\] creates an unnecessary hardware bottleneck within variance-reduction frameworks. By strategically adopting the one-sided estimator, we unlock temporal state caching. We propose a framework that exploits the one-sided estimator’s asymmetric structure to actively recycle unperturbed quantum state evaluations across update steps, reducing the per-step circuit cost from 4 to exactly 3 for both fixed-anchor and history-dependent routing paths.<tbc>
+
+2. We develop a non-recursive variance-reduction routing path for quantum optimization. Through rigorous Lyapunov analysis, we establish that this variant is structurally bottlenecked at a sample complexity of \(\mathcal{O}(max\{p/\epsilon^2,p^{2/3}/\epsilon^{10/3}\})\) to reach an \(\epsilon^2\)-stationary point when restricted to hardware-efficient single-sample inner loops.<tbc>
+
+3. We establish a recursive routing path that systematically overcomes the structural limitations of the non- recursive approach. Just as recursive tracking advanced classical optimization by breaking sample-size dependence, we prove that our recursive variant removes the dimensionality bottleneck, converging to an \(\epsilon^2\)-stationary point with an improved sample complexity of \(\mathcal{O}(max\{p/\epsilon^2,\sqrt{p}/\epsilon^3\})\).<tbc>
+

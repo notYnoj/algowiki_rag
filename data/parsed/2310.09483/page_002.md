@@ -1,0 +1,20 @@
+<tbc>differ by more than some threshold \(\delta\), the comparison is correct, otherwise the result of the comparison can be chosen arbitrarily by an adversary. There are two adversary models that have been considered (as described in \[AFJ<sup>+</sup>18\]): the _non-adaptive_ model, where all of the comparisons must be predetermined by the adversary before the algorithm is run, and the _adaptive_ model, where the comparisons can be chosen by the adversary at the time they are queried, possibly depending on the previous queries made by the algorithm. In this paper, we focus entirely on the adaptive model, and as our results are all upper bounds, all of our results imply equivalent results for the easier non-adaptive model. By scaling, we assume \(\delta=1\).
+
+Since the comparisons are imprecise, it is impossible to always determine the correct result, so algorithms in this setting instead strive to achieve a small approximation factor, which measures how far away the returned solution is from the correct one. More precisely, we say an ordering _Y_ of a set _X_ is a _k_-approximate sorting if all inversions differ in value by at most _k_. In their original paper, Ajtai, Feldman, Hassidim, and Nelson \[AFHN15\] give deterministic _k_-approximate algorithms for sorting and selection that use \(O(4^k\cdot n^{1+1/2^{k-1}})\) and \(O(2^k\cdot n^{1+1/2^{k-1}})\) comparisons respectively. They also give a lower bound of \(\Omega(n^{1+1/2^{k-1}})\) for deterministic _k_-approximate sorting and selection. Special consideration is given to the case of selecting the maximum element, for which they give a randomized algorithm that uses _O(n_) comparisons and returns a 3-approximation with probability 1-_n_<sup>-_r_</sup>. This maximum selection result was then improved by Acharya, Falahatgar, Jafarpour, Orlitsky, and Suresh \[AFJ<sup>+</sup>18\] who gave a randomized algorithm that uses \(O(nlog\frac{1}{\varepsilon})\) comparisons and returns a 2-approximation with probability \(1-\varepsilon\). The study of these problems in the parallel setting was introduced by Gopi, Kamath, Kulkarni, Nikolov, Wu, and Zhang \[GKK<sup>+</sup>20\], where they gave a randomized _d_-round algorithm that uses \(O(n^{1+\frac{1}{2^{d-1}}}d)\) comparisons and returns a 3-approximate maximum with probability 0.9. This raises the following questions: can _randomized_ algorithms yield an improvement in sorting and general selection? How many comparisons are required to do sorting and general selection in _d_ rounds?
+
+## 1.1 Results, Techniques, and Discussion
+
+To describe our results, we more formally define the model and the problems of approximate sorting and selection.
+
+**Definition 1.1.** _Suppose we are given n items x_<sub>1</sub>_,...,x<sub>n</sub> with unknown real values. An adversarial comparator C is a function that takes two items x<sub>i</sub> and x<sub>j</sub> and returns_ max{_x<sub>i</sub>,x<sub>j</sub>_} _if_ |_x<sub>i</sub>-x<sub>j</sub>|\>_1 _and x<sub>i</sub> or x<sub>j</sub> adversarially otherwise._
+
+Throughout this paper, we assume the _adaptive adversary_ model \[AFJ<sup>+</sup>18\], where the adversarial comparisons may depend on previous queries made by the algorithm.
+
+We first define a notion of _k_-approximate sorting, in which inversions may only occur between values that differ by at most _k_.
+
+**Definition 1.2.** _We say_ \(x_i\ge_kx_j\) _if_ \(x_i\ge x_j-k\)_. For sets of items Y,Z, we say_ \(Y\ge_kZ\) _if_ \(x_i\ge_kx_j\) _for all_ \(x_i\in Y\), \(x_j\in Z\)_. We say some ordering x_<sub>1</sub>_,...,x<sub>n</sub> of items in a set X is a k-approximate sorting if_ \(x_j\ge_kx_i\) _for all j\>i. Equivalently, for any pair x<sub>i</sub>,x<sub>j</sub> in the wrong order, they must differ by at most k._
+
+This leads to a notion of approximate _i_-selection, in which the result must be the _i_-th element of some approximate sorting.
+
+**Definition 1.3.** _We say an item x_<sup>∗</sup> _in a set X is a k-approximate i-selection if there exists a k-approximate sorting x_<sub>1</sub>_,...,x<sub>n</sub> of X such that x<sub>i</sub>=x_<sup>∗</sup>.
+

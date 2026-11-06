@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "SAT(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "O_R(\\mathsf{NRD}_n(\\mathsf{core}(R)) \\log n)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "there is a deterministic one-pass streaming algorithm for SAT(R) using O_R(NRD_n(R^\\star) log n) bits of space.",
+      "page": 21
+    },
+    {
+      "problem": "SAT(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "\\Omega_R(\\mathsf{NRD}_n(\\mathsf{core}(R)))",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "every randomized bounded-error one-pass streaming algorithm for SAT(R) uses \\Omega_R(NRD_n(R^\\star)) bits of space.",
+      "page": 21
+    },
+    {
+      "problem": "CSP sparsification",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "O_{R,\\varepsilon}(\\mathsf{NRD}_n(R) \\cdot \\mathrm{polylog}(n,m,1/\\varepsilon))",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The space used is O_{R,\\varepsilon}(NRD_n(R) \\cdot \\mathrm{polylog}(n,m,1/\\varepsilon)).",
+      "page": 22
+    },
+    {
+      "problem": "Min-CSP(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "O_{R,\\varepsilon}(\\mathsf{NRD}_n(\\mathsf{core}(R)) \\mathrm{polylog}(n,m,1/\\varepsilon))",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "there is a deterministic one-pass (1+\\varepsilon)-approximation algorithm for Min-CSP(R) using O_{R,\\varepsilon}(NRD_n(R^\\star) polylog(n,m,1/\\varepsilon)) bits of space;",
+      "page": 23
+    },
+    {
+      "problem": "Min-CSP(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "\\Omega_R(\\mathsf{NRD}_n(\\mathsf{core}(R)))",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "every randomized bounded-error one-pass finite-factor approximation algorithm for Min-CSP(R) uses \\Omega_R(NRD_n(R^\\star)) bits.",
+      "page": 23
+    },
+    {
+      "problem": "Exact-CSP(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "O_R(n^d \\log(n+1)) \\text{ where } d = \\deg_C(\\mathbf{1}_{R^\\star})",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a deterministic one-pass algorithm for Exact-CSP(R) using O_R(n^d log(n+1)) bits on unweighted simple instances.",
+      "page": 27
+    },
+    {
+      "problem": "Exact-CSP(R)",
+      "problem family": "Constraint Satisfaction Problems",
+      "bound": "\\Omega_R(n^d) \\text{ where } d = \\deg_C(\\mathbf{1}_{R^\\star}), d \\ge 1",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "If d \\ge 1, every randomized bounded-error one-pass algorithm for Exact-CSP(R) on unweighted simple instances uses \\Omega_R(n^d) bits of space.",
+      "page": 27
+    }
+  ],
+  "paper": "2610.07455",
+  "usage": {
+    "prompt_tokens": 39177,
+    "completion_tokens": 10722,
+    "total_tokens": 49899,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9881,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

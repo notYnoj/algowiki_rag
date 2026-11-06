@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "human-in-the-loop pairwise ranking",
+      "problem family": null,
+      "bound": "$\\text{at most } Kn + 6BT \\text{ VLM calls}$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The session total is therefore at most Kn + 6BT VLM calls, independent of n^2.",
+      "page": 8
+    }
+  ],
+  "paper": "2606.15623",
+  "usage": {
+    "prompt_tokens": 9601,
+    "completion_tokens": 6977,
+    "total_tokens": 16578,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6868,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

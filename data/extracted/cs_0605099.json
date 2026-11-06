@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Alphabetic coding with exponential costs",
+      "problem family": null,
+      "bound": "O(n^3) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "This note introduces a dynamic programming algorithm that finds the optimal solution in polynomial time and space",
+      "page": 1
+    },
+    {
+      "problem": "Alphabetic coding with exponential costs",
+      "problem family": null,
+      "bound": "O(n^2) space",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "This note introduces a dynamic programming algorithm that finds the optimal solution in polynomial time and space",
+      "page": 1
+    },
+    {
+      "problem": "Alphabetic coding with exponential costs",
+      "problem family": null,
+      "bound": "O(n) time (Shannon-like variant) and O(n log n) time (Huffman-like variant)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "two approximation algorithms which can find a suboptimal solution in linear time (for one) or _O(n_log_n_) time (for the other)",
+      "page": 1
+    },
+    {
+      "problem": "Alphabetic coding with exponential costs",
+      "problem family": null,
+      "bound": "\\(H_\\alpha(w)\\le L_a^\\bar{h}(w)\\le L_a^\\bar{a}(w)\\le L_a^\\bar{s}(w)<1+L_a^h(w)<2+H_\\alpha(w)\\)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "Campbell's Shannon-like bounds: \\(H_\\alpha(w)\\le L_a^\\mathrm{h}(w)\\le L_a^\\mathrm{s}(w)<1+H_\\alpha(w)\\)",
+      "quote": "Then \\(H_\\alpha(w)\\le L_a^\\mathrm{h}(w)\\le L_a^\\bar{\\mathrm{a}}(w)\\le L_a^\\bar{\\mathrm{h}}(w)<1+L_a^\\mathrm{h}(w)<2+H_\\alpha(w)\\)",
+      "page": 6
+    }
+  ],
+  "paper": "cs_0605099",
+  "usage": {
+    "prompt_tokens": 4968,
+    "completion_tokens": 7998,
+    "total_tokens": 12966,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7501,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

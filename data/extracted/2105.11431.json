@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "n-queens problem",
+      "problem family": null,
+      "bound": "\\mathcal{Q}(n)\\ge\\left(\\left(1-o\\left(1\\right)\\right)\\frac{n}{e^3}\\right)^n",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "Q(n) = \\Omega(1)",
+      "quote": "For all natural numbers n, \\(\\mathcal{Q}(n)\\ge\\left(\\left(1-o\\left(1\\right)\\right)\\frac{n}{e^3}\\right)^n.\\)",
+      "page": 1
+    }
+  ],
+  "paper": "2105.11431",
+  "usage": {
+    "prompt_tokens": 15323,
+    "completion_tokens": 5849,
+    "total_tokens": 21172,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5696,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

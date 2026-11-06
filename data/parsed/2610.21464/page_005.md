@@ -1,0 +1,16 @@
+<tbc>documents. Once retrieved, these documents are intended to make the model treat _ct_ as a supported conclusion and use it as a reason to favor or recommend _et_ in the final response. Rather than inducing a fixed answer to a particular query, this objective promotes the same entity through the same target claim across unseen topic queries.
+
+**Target queries.** Because our attack seeks to influence user decisions by promoting _et_ through _ct_, we focus on decision-oriented queries. Such queries ask the model for actionable advice, solution recommendations, option comparisons, or management strategies. Users rely on these responses to support decisions; misleading suggestions induced by poisoned retrieval context may therefore directly affect their choices and subsequent actions, causing serious real-world harm.
+
+### 4.2. Attacker Capabilities
+
+We adopt a black-box setting. The attacker selects an attack topic _T_ and specifies a target claim _ct_ containing a target entity _et_. The attacker knows only that the target system uses HNSW and has no knowledge of the unseen topic queries _Q<sub>T</sub>_, retriever or generator parameters, index topology, or HNSW configuration. The attacker cannot alter the system prompt, retrieval pipeline, reranker, or generation procedure. The attacker can use publicly available language models and a surrogate retriever to generate surrogate queries and construct and screen poisoned documents. The attacker can only place a small number of poisoned documents in public or third-party knowledge sources that the target system may later index and cannot directly modify the target knowledge base or index.
+
+## 5. Method
+
+To address existing attacks’ unstable retrieval and limited coverage of unseen topic queries in large-scale HNSW- RAG, we propose a topology-aware topic-level poisoning attack. As shown in Figure 3, our method combines retrieval- and generation-side designs. On the retrieval side, we construct a surrogate query space approximating the unknown topic-query distribution and introduce a role- differentiated Hub–Satellite structure. Satellites span distinct query regions as locally competitive retrieval entry points, while Hubs aggregate shared topic semantics to promote cohesion among dispersed Satellites. By exploiting HNSW’s embedding-based neighbor selection, this semantic coordination can induce a “multiple-entry, locally cohesive” poisoned-document neighborhood, facilitating cascading retrieval without direct graph manipulation. On the generation side, evidence anchoring and entity–claim coupling organize the argument of each candidate document to encourage the model to adopt the target claim and recommend the target entity. Finally, document-level multi-candidate joint scoring evaluates each candidate’s retrieval and generation utility, while set-level greedy complementary selection determines the final poisoned-document set based on marginal query coverage and Hub association.
+
+### 5.1. Query-Space Construction
+
+Queries within an attack topic often vary substantially in intent and formulation. Optimizing poisoned documents around only a few fixed queries tends to concentrate them within limited local semantic regions, leaving other directions in the topic-query space uncovered. Because the<tbc>
+

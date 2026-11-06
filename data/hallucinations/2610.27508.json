@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Partition-family Approximate Nearest Neighbor Search (IVF distance scan)",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "N + 4RK \\text{ INT8 product streams (dominant work), vs. } 4N \\text{ for full byte-split scan}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "4N",
+      "quote": "For _N_ probed candidates, a full byte-split scan performs four INT8 product streams per candidate, for a total cost of 4_N_. The cascade instead performs one stream for all candidates and four streams for only the \\(R\\cdot K\\) survivors, yielding dominant work of _N_ + 4_RK_.",
+      "page": 6
+    },
+    {
+      "problem": "Batched IVF distance scan",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "M_\\mathrm{eff} \\ge M^\\star = \\frac{\\pi}{\\beta}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "By Eq. 1, the scan becomes _compute-bound_ once \\(M_\\mathrm{eff}\\ge M^\\star=\\frac{\\pi}{\\beta}\\).",
+      "page": 3
+    }
+  ],
+  "paper": "2610.27508",
+  "usage": {
+    "prompt_tokens": 16147,
+    "completion_tokens": 7383,
+    "total_tokens": 23530,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7074,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

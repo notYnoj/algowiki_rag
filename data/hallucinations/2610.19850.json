@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Potential Maximal Clique (PMC) enumeration",
+      "problem family": null,
+      "bound": "\\tilde{O}(|\\Pi_G|)=O(n^4m|\\Pi_G|)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^2 m |\\Delta_G|^2) (output-quadratic, BT-enum)",
+      "quote": "Given a graph G with n=|V(G)|, one can compute the list of all PMCs of G in output-linear time \\tilde{O}(|\\Pi_G|)=O(n^4m|\\Pi_G|).",
+      "page": 6
+    },
+    {
+      "problem": "Treewidth, Minimum Fill-In, lis-(tw\\le t), max-(tw\\le t,\\varphi)",
+      "problem family": null,
+      "bound": "\\tilde{O}(|\\Pi_G|) for treewidth and minimum fill-in; O(n^{O(t)}|\\Pi_G|) for lis-(tw\\le t); O(n^{O(t)}\\cdot f(t,\\varphi)\\cdot|\\Pi_G|) for max-(tw\\le t,\\varphi)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "required \\Pi_G as input; PMC enumeration was output-quadratic O(n^2 m |\\Delta_G|^2)",
+      "quote": "treewidth and minimum fill-in can be solved in \\tilde{O}(|\\Pi_G|), lis-(tw\\le t) can be solved in O(n^{O(t)}|\\Pi_G|), max-(tw\\le t,\\varphi) can be solved in O(n^{O(t)}\\cdot f(t,\\varphi)\\cdot|\\Pi_G|), without the need to possess initially the list of PMCs.",
+      "page": 7
+    },
+    {
+      "problem": "PMC Superset",
+      "problem family": null,
+      "bound": "O(n^3m)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is an algorithm deciding PMC Superset in time O(n^3m). Furthermore, for a yes-instance, it produces a solution PMC.",
+      "page": 7
+    },
+    {
+      "problem": "PMC Extension",
+      "problem family": null,
+      "bound": "NP-complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "PMC Extension is NP-complete.",
+      "page": 8
+    },
+    {
+      "problem": "Minimal (a,b)-separator extension",
+      "problem family": null,
+      "bound": "NP-Complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Minimal (a,b)-separator extension is NP-Complete.",
+      "page": 46
+    },
+    {
+      "problem": "PMC Subset",
+      "problem family": null,
+      "bound": "NP-complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "PMC Subset is NP-complete.",
+      "page": 52
+    }
+  ],
+  "paper": "2610.19850",
+  "usage": {
+    "prompt_tokens": 51839,
+    "completion_tokens": 8933,
+    "total_tokens": 60772,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8222,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

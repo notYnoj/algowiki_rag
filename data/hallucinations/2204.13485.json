@@ -1,0 +1,191 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "vertex-del-sr",
+      "problem family": "vertex deletion",
+      "bound": "\\text{polynomial time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "polynomial time (Tan [27])",
+      "quote": "Algorithm 1 runs in in polynomial time and finds a smallest removable set.",
+      "page": 6
+    },
+    {
+      "problem": "vertex-subset-del-sr",
+      "problem family": "vertex deletion",
+      "bound": "\\text{NP-complete}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "vertex-subset-del-sr is NP-complete.",
+      "page": 7
+    },
+    {
+      "problem": "vertex-del-sqm",
+      "problem family": "vertex deletion",
+      "bound": "\\text{NP-complete even if capacities are at most } 3",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "vertex-del-sqm is NP complete even if the capacities are at most 3.",
+      "page": 9
+    },
+    {
+      "problem": "l1-min-pm",
+      "problem family": "preference modification",
+      "bound": "\\text{NP-hard even if each capacity is one; no }(2-\\varepsilon)\\text{-approximation assuming UGC for any }\\varepsilon>0",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "l1-min-pm is NP-hard even if each capacity is one. Furthermore, assuming the Unique Games Conjecture, it cannot be approximated within a factor of \\(2-\\varepsilon\\) for any \\(\\varepsilon>0\\).",
+      "page": 11
+    },
+    {
+      "problem": "l1-min-pm",
+      "problem family": "preference modification",
+      "bound": "\\text{polynomial time in bipartite graphs}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "l1-min-pm can be solved in polynomial time in bipartite graphs.",
+      "page": 12
+    },
+    {
+      "problem": "l1-min-pm",
+      "problem family": "preference modification",
+      "bound": "2\\text{-approximation in polynomial time}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a polynomial-time 2-approximation algorithm for the l1-min-pm problem.",
+      "page": 13
+    },
+    {
+      "problem": "l1-min-pmri",
+      "problem family": "preference modification",
+      "bound": "\\text{polynomial time in bipartite graphs; }2\\text{-approximation in general graphs}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "l1-min-pmri can be solved in polynomial time in bipartite graphs, and admits a polynomial-time 2-approximation in general graphs.",
+      "page": 14
+    },
+    {
+      "problem": "1-forced-sm-strat and 1-forbidden-sm-strat",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even if no woman's preference list is fixed}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "1-forced-sm-strat and 1-forbidden-sm-strat are NP-complete even if the preference list is fixed for none of the women.",
+      "page": 15
+    },
+    {
+      "problem": "1-forced-sm-strat and 1-forbidden-sm-strat",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even for complete bipartite graphs}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "1-forced-sm-strat and 1-forbidden-sm-strat are NP-complete even if the graph is a complete bipartite graph.",
+      "page": 17
+    },
+    {
+      "problem": "1-forced-smti and 1-forbidden-smti",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even with strict men's lists and single-tie women's lists}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "1-forced-smti and 1-forbidden-smti are NP-complete even if each man's preference list is strict and each woman's preference list is just a single tie.",
+      "page": 18
+    },
+    {
+      "problem": "sr-strat",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even for complete graphs}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "sr-strat is NP-complete even for complete graphs.",
+      "page": 18
+    },
+    {
+      "problem": "srt",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even for complete graphs with strict or single-tie lists}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "srt is NP complete even if the graph is complete and each preference list is either strict or a single tie.",
+      "page": 20
+    },
+    {
+      "problem": "sr-strat",
+      "problem family": "preference extension",
+      "bound": "\\text{polynomial time if preferences fixed on an independent set}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If the preferences are only fixed on an independent set, then sr-strat is polynomial-time solvable.",
+      "page": 20
+    },
+    {
+      "problem": "inc-max-spe",
+      "problem family": "preference extension",
+      "bound": "\\text{polynomial time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "inc-max-spe an be solved in polynomial time.",
+      "page": 21
+    },
+    {
+      "problem": "inc-max-SPE (lower bounds only)",
+      "problem family": "preference extension",
+      "bound": "\\text{polynomial time with only lower bounds}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If only lower bounds are given, then inc-max-SPE can be solved in polynomial time.",
+      "page": 21
+    },
+    {
+      "problem": "forced-spe",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete even for bipartite graphs with unit capacities}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "forced-spe is NP complete even for bipartite graphs with capacity one on each vertex.",
+      "page": 22
+    },
+    {
+      "problem": "red-blue-edge-cover",
+      "problem family": "preference extension",
+      "bound": "\\text{NP-complete}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "red-blue-edge-cover is NP-complete.",
+      "page": 24
+    }
+  ],
+  "paper": "2204.13485",
+  "usage": {
+    "prompt_tokens": 28167,
+    "completion_tokens": 10862,
+    "total_tokens": 39029,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9274,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

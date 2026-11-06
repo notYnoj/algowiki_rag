@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Almost stable matching",
+      "problem family": "Stable marriage",
+      "bound": "O(\\varepsilon^{-3} \\log^5(n))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\tilde{O}(n^2)",
+      "quote": "Theorem 4.7. \\(\\text{\\textbf{ASM}}(P,\\varepsilon,n)\\) runs in \\(O(\\varepsilon^{-3}log^5(n))\\) communication rounds.",
+      "page": 10
+    },
+    {
+      "problem": "Almost stable matching",
+      "problem family": "Stable marriage",
+      "bound": "O(\\varepsilon^{-3} \\log^2(n/(\\delta\\varepsilon^3)))",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{O}(n^2)",
+      "quote": "Theorem 5.1. There exists a randomized distributed algorithm, \\(\\text{\\textbf{RandASM}}(P,\\varepsilon,n,\\delta)\\), which for any \\(\\delta,\\varepsilon>0\\) finds a \\((1-\\varepsilon)\\)-stable matching with probability at least \\(1-\\delta\\) in \\(O(\\varepsilon^{-3}log^2(n/\\delta\\varepsilon^3))\\) rounds.",
+      "page": 10
+    },
+    {
+      "problem": "Almost stable matching",
+      "problem family": "Stable marriage",
+      "bound": "O(1)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{O}(n^2)",
+      "quote": "A randomized variant of the algorithm, \\textbf{RandASM} runs in \\(O(\\log^2(n))\\) rounds for general preferences, and can be improved to \\(O(1)\\) rounds for almost regular (and in particular complete) preferences.",
+      "page": 2
+    },
+    {
+      "problem": "Almost stable matching",
+      "problem family": "Stable marriage",
+      "bound": "O(\\alpha\\varepsilon^3 \\log(\\alpha/(\\delta\\varepsilon)))",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(1)",
+      "quote": "Theorem 5.2. There exists a randomized distributed algorithm **AlmostRegularASM**\\((P,\\varepsilon,\\delta,\\alpha)\\) which for \\(\\alpha\\)-almost-regular preferences _P_ finds a \\((1-\\varepsilon)\\)-stable matching with probability at least \\(1-\\delta\\). The run-time of **AlmostRegularASM**\\((P,\\varepsilon,\\delta,\\alpha)\\) is \\(O(\\alpha\\varepsilon^3log(\\alpha/\\delta\\varepsilon))\\) rounds.",
+      "page": 11
+    }
+  ],
+  "paper": "1408.2782",
+  "usage": {
+    "prompt_tokens": 11966,
+    "completion_tokens": 12819,
+    "total_tokens": 24785,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12186,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

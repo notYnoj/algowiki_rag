@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "In-place comparison-based sorting",
+      "problem family": null,
+      "bound": "$n\\lg n + O(n)$ comparisons with exponentially high probability, always $O(n)$ moves",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$n\\lg n + O(n\\lg\\lg n)$ comparisons and $O(n)$ moves",
+      "quote": "We present an in-place comparison-based sorting algorithm that sorts an array of _n_ elements using _n_lg_n_+O(_n_) comparisons with exponentially high probability and always _O(n_) moves.",
+      "page": 1
+    },
+    {
+      "problem": "In-place comparison-based sorting (worst-case)",
+      "problem family": null,
+      "bound": "$n\\lg n + O(n\\lg^{(t)}n)$ comparisons and $O(tn)$ moves, where $2 \\le t \\le \\lg^* n - 1$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$n\\lg n + O(n\\lg\\lg n)$ comparisons and $O(n)$ moves",
+      "quote": "For the worst-case, we present an algorithm that makes _n_lg_n_+O(_n_lg<sup>(_t_)</sup>_n_) comparisons and _O(tn_) data moves, where _t_ is an integer parameter satisfying \\(2\\le t\\le lg^*n-1\\) and lg<sup>(_t_)</sup>_n_ denotes the _t_-time iterated logarithm, improving over the previous upper bound of _n_lg_n_+O(_n_lggl_n_) comparisons and _O(n_) moves when using constant _t\\>_2.",
+      "page": 1
+    }
+  ],
+  "paper": "2607.27040",
+  "usage": {
+    "prompt_tokens": 35099,
+    "completion_tokens": 9095,
+    "total_tokens": 44194,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8696,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Average edit distance between two random binary strings",
+      "problem family": null,
+      "bound": "\\alpha_2 \\le 0.315514",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.36932 from [3]",
+      "quote": "We obtain \\alpha_2\\le 0.315514.",
+      "page": 8
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_3 \\le 0.47276",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.53426 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_4 \\le 0.56578",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.63182 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_5 \\le 0.6325",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.70197 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_6 \\le 0.68424",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.75149 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_7 \\le 0.72016",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.79031 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_8 \\le 0.74896",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.81166 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_{16} \\le 0.86462",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.89554 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_{32} \\le 0.93228",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "0.96588 from [3]",
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average edit distance between two random 100-ary strings",
+      "problem family": null,
+      "bound": "\\alpha_{100} \\le 0.97946",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The main contribution of this article is to improve the upper bounds on the value of \\alpha_k for small _k_ (see table 1a).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random binary strings",
+      "problem family": null,
+      "bound": "\\gamma_2 \\ge 0.789872",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.792665 from [11] (paper only beats Lueker [14])",
+      "quote": "Our result improves on the bound given by [14], but fail to improve on the bound given by [11].",
+      "page": 11
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_3 \\ge 0.68422",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.682218 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_4 \\ge 0.61422",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.614333 from [11] (paper only beats Lueker [14])",
+      "quote": "Our result improves on the bound given by [14], but fail to improve on the bound given by [11].",
+      "page": 11
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_5 \\ge 0.56206",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.549817 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_6 \\ge 0.51850",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.4992299 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_7 \\ge 0.48712",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.466481 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_8 \\ge 0.46074",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.438799 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_9 \\ge 0.43806",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.414876 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{10} \\ge 0.41826",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.393811 from [11]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{11} \\ge 0.40072",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.37196 from [7]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{12} \\ge 0.38504",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.35899 from [7]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{13} \\ge 0.37088",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.34737 from [7]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{14} \\ge 0.35798",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.33687 from [7]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random k-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{15} \\ge 0.34616",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.32732 from [7]",
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random 100-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{100} \\ge 0.0991",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    },
+    {
+      "problem": "Average length of longest common subsequence between two random 1000-ary strings",
+      "problem family": null,
+      "bound": "\\gamma_{1000} \\ge 0.01164",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "We improve the bounds for all considered values of \\gamma_k other than \\gamma_2 and \\gamma_4 (see table 1b).",
+      "page": 2
+    }
+  ],
+  "paper": "2407.18113",
+  "usage": {
+    "prompt_tokens": 12952,
+    "completion_tokens": 12490,
+    "total_tokens": 25442,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9502,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

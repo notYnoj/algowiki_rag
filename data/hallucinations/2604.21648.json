@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Convergence of nonsymmetric algebraic two-grid method with \\(E_+\\) operator",
+      "problem family": "Algebraic multigrid",
+      "bound": "\\|E_+^{\\nu_1,\\nu_2}(\\hat{P},\\hat{R})\\|_B^2 = \\|E_+^{\\nu_1,\\nu_2}(P_*,\\hat{R})\\|_B^2 = \\|E_+^{\\nu_1,\\nu_2}(\\hat{P},R_*)\\|_B^2 = (1-\\mu_{n_c+1})^2 < 1 \\text{ for } (\\nu_1,\\nu_2) \\in \\{(0,1),(1,0),(1,1)\\}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "[2, Theorems 4.5, 4.6] for \\nu_1=1, \\nu_2=0",
+      "quote": "For \\((\\nu_1,\\nu_2)\\in\\{(0,1),(1,0),(1,1)\\}\\) _it then holds_ \\(\\|E_+^{\\nu_1,\\nu_2}(\\hat{P},\\hat{R})\\|_B^2=\\|E_+^{\\nu_1,\\nu_2}(P_*,\\hat{R})\\|_B^2=\\|E_+^{\\nu_1,\\nu_2}(\\hat{P},R_*)\\|_B^2=(1-\\mu_{n_c+1})^2<1.\\)",
+      "page": 14
+    },
+    {
+      "problem": "Optimality of transfer operators for nonsymmetric two-grid method with \\(E_+\\) operator",
+      "problem family": "Algebraic multigrid",
+      "bound": "\\|E_+^{\\nu_1,\\nu_2}(\\hat{P},\\hat{R})\\|_B^2 = (1-\\mu_{n_c+1})^2 \\le \\|E_+^{\\nu_1,\\nu_2}(P,R)\\|_B^2 \\text{ for all } P,R",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "[2, Theorem 4.5, 4.6] for (\\nu_1,\\nu_2)=(1,0)",
+      "quote": "Then, for \\((\\nu_1,\\nu_2)\\in\\{(0,1),(1,0),(1,1)\\}\\) and all \\(P,R\\in\\mathbb{C}^{n\\times n_c}\\) such that \\(R^HA P\\) is nonsingular it holds \\(\\|E_+^{\\nu_1,\\nu_2}(\\hat{P},\\hat{R})\\|_B^2=(1-\\mu_{n_c+1})^2\\le\\|E_+^{\\nu_1,\\nu_2}(P,R)\\|_B^2.\\)",
+      "page": 16
+    },
+    {
+      "problem": "Convergence of nonsymmetric algebraic two-grid method with \\(E\\) operator",
+      "problem family": "Algebraic multigrid",
+      "bound": "\\rho(E^{\\nu_1,\\nu_2}(P_\\#,R_\\#)) = \\|E^{\\nu_1,\\nu_2}(P_\\#,R_\\#)\\|_B = |1-\\lambda_{n_c+1}|^{\\nu_1+\\nu_2}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "[16, Theorem 3.3] for diagonal HPD D",
+      "quote": "Then \\(\\Pi_A(P_\\#,R_\\#)\\) is B-orthogonal and it holds \\(\\rho(E^{\\nu_1,\\nu_2}(P_\\#,R_\\#))=\\|E^{\\nu_1,\\nu_2}(P_\\#,R_\\#)\\|_B=|1-\\lambda_{n_c+1}|^{\\nu_1+\\nu_2}.\\)",
+      "page": 19
+    },
+    {
+      "problem": "Optimality of transfer operators for nonsymmetric two-grid method with \\(E\\) operator",
+      "problem family": "Algebraic multigrid",
+      "bound": "\\|E^{\\nu_1,\\nu_2}(P_\\#,R_\\#)\\|_B = |1-\\lambda_{n_c+1}|^{\\nu_1+\\nu_2} \\le \\|E^{\\nu_1,\\nu_2}(P,R)\\|_B \\text{ for all } P,R",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "[16, Theorem 3.5] for diagonal HPD D",
+      "quote": "Then it holds \\(\\|E^{\\nu_1,\\nu_2}(P_\\#,R_\\#)\\|_B=|1-\\lambda_{n_c+1}|^{\\nu_1+\\nu_2}\\le\\|E^{\\nu_1,\\nu_2}(P,R)\\|_B\\) for all \\(P,R\\in\\mathbb{C}^{n\\times n_c}\\) such that \\(R^HA P\\) is nonsingular.",
+      "page": 21
+    }
+  ],
+  "paper": "2604.21648",
+  "usage": {
+    "prompt_tokens": 29383,
+    "completion_tokens": 9920,
+    "total_tokens": 39303,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8671,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "c-coloring directed cycles (quantum-PN, zero error)",
+      "problem family": "distributed symmetry breaking",
+      "bound": "T(n) > \\lfloor n/2 \\rfloor - 2 \\text{ rounds} \\; (\\Omega(n))",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1. For every fixed \\(c\\ge 3\\) and every even \\(n\\ge 4\\), any quantum-PN algorithm that properly c-colors directed n-cycles with probability 1 takes \\(T(n)>\\lfloor n/2\\rfloor-2\\) rounds.",
+      "page": 2
+    }
+  ],
+  "paper": "2608.11720",
+  "usage": {
+    "prompt_tokens": 28095,
+    "completion_tokens": 4969,
+    "total_tokens": 33064,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4796,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

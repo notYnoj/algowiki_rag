@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "All-pairs shortest communication time paths in temporal graphs",
+      "problem family": "Temporal graphs",
+      "bound": "$O(M^2 n^3)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For such a network, our algorithm finds the all-pair shortest paths in O(M^2 n^3)-time.",
+      "page": 1
+    }
+  ],
+  "paper": "2610.17372",
+  "usage": {
+    "prompt_tokens": 25376,
+    "completion_tokens": 5105,
+    "total_tokens": 30481,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4996,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

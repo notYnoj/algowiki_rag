@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Preconditioned linear system for 1D space-time fractional diffusion inverse problem",
+      "problem family": "Fractional diffusion equations / Inverse problems",
+      "bound": "\\{P_N^{-1}A_N\\}_N\\sim_{\\mathrm{GLT},\\sigma} 1 \\text{ and } \\{P_N^{-1}A_N\\}_N\\sim_\\lambda 1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "With A_N as in (6.11) and P_N as in (6.15), it holds\n\\{P_N^{-1}A_N\\}_N\\sim_{\\mathrm{GLT},\\sigma} 1.\nMoreover,\n\\{P_N^{-1}A_N\\}_N\\sim_\\lambda 1.",
+      "page": 88
+    },
+    {
+      "problem": "Preconditioned linear system for 2D space-time fractional diffusion inverse problem",
+      "problem family": "Fractional diffusion equations / Inverse problems",
+      "bound": "\\{P_{\\widetilde{\\mathbf{N}}}^{-1}A_{\\widetilde{\\mathbf{N}}}\\}_{\\widetilde{\\mathbf{N}}}\\sim_{\\mathrm{GLT},\\sigma} 1 \\text{ and } \\{P_{\\widetilde{\\mathbf{N}}}^{-1}A_{\\widetilde{\\mathbf{N}}}\\}_{\\widetilde{\\mathbf{N}}}\\sim_\\lambda 1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "With A_{\\widetilde{\\mathbf{N}}} as in (7.18) and P_{\\widetilde{\\mathbf{N}}} as in (7.22), it holds\n\\{P_{\\widetilde{\\mathbf{N}}}^{-1}A_{\\widetilde{\\mathbf{N}}}\\}_{\\widetilde{\\mathbf{N}}}\\sim_{\\mathrm{GLT},\\sigma} 1.\nMoreover,\n\\{P_{\\widetilde{\\mathbf{N}}}^{-1}A_{\\widetilde{\\mathbf{N}}}\\}_{\\widetilde{\\mathbf{N}}}\\sim_\\lambda 1.",
+      "page": 103
+    },
+    {
+      "problem": "Structure-preserving preconditioning for variable-coefficient space-fractional diffusion equation (1D)",
+      "problem family": "Space-fractional diffusion equations",
+      "bound": "\\{P_{N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\gamma^*\\hat{d}f_\\alpha(\\xi_1)+q_\\theta(\\xi_3) \\text{ and } \\{P_{N,M}^{-1}A_{\\alpha,N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\frac{\\gamma^*a(x)f_\\alpha(\\xi_1)+q_\\theta(\\xi_3)}{\\gamma^*\\hat{d}f_\\alpha(\\xi_1)+q_\\theta(\\xi_3)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let P_{N,M}\\in\\{\\widetilde{P}_{\\alpha,N,M},\\widehat{P}_{\\alpha,N,M}\\}, as defined in (8.35) and in (8.36), respectively. Then,\n\\{P_{N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\gamma^*\\hat{d}f_\\alpha(\\xi_1)+q_\\theta(\\xi_3),\nwith \\hat{d}=\\int_\\Omega a(x) and d=d_N converging to \\hat{d} as N tends to infinity and\n\\{P_{N,M}^{-1}A_{\\alpha,N,M}\\}_{N,M}\\sim_\\mathrm{GLT}\\frac{\\gamma^*a(x)f_\\alpha(\\xi_1)+q_\\theta(\\xi_3)}{\\gamma^*\\hat{d}f_\\alpha(\\xi_1)+q_\\theta(\\xi_3)}.",
+      "page": 128
+    },
+    {
+      "problem": "Structure-preserving preconditioning for variable-coefficient space-fractional diffusion equation (2D)",
+      "problem family": "Space-fractional diffusion equations",
+      "bound": "\\{P_{\\mathbf{n},M}\\}_{\\mathbf{n},M}\\sim_\\mathrm{GLT}\\hat{d}(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3) \\text{ and } \\{P_{\\mathbf{n},M}^{-1}A_{\\mathbf{n},M}\\}_{\\mathbf{n},M}\\sim_\\mathrm{GLT}\\frac{\\gamma^*a(x_1,x_2)(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3)}{\\gamma^*\\hat{d}(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let P\\in\\{\\widetilde{P}_{\\unknown,\\mathbf{n},M},\\widehat{P}_{\\unknown,\\mathbf{n},M}\\}, as defined in (8.39) and in (8.40), respectively. Then,\n\\{P_{\\mathbf{n},M}\\}_{\\mathbf{n},M}\\sim_\\mathrm{GLT}\\hat{d}(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3),\nwith \\hat{d}=\\int_\\Omega a(x_1,x_2) and d=d_\\mathbf{n} converging to \\hat{d} as \\mathbf{n} tends to infinity, and\n\\{P_{\\mathbf{n},M}^{-1}A_{\\mathbf{n},M}\\}_{\\mathbf{n},M}\\sim_\\mathrm{GLT}\\frac{\\gamma^*a(x_1,x_2)(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3)}{\\gamma^*\\hat{d}(\\gamma_1^*f_{\\alpha_1}(\\xi_1)+\\gamma_2^*f_{\\alpha_2}(\\xi_2))+q_\\theta(\\xi_3)},\nwhere necessarily \\gamma_2^*=0 if \\alpha_1>\\alpha_2 and alternatively \\gamma_1^*=0 if \\alpha_2>\\alpha_1.",
+      "page": 130
+    },
+    {
+      "problem": "Geometric mean of HPD GLT matrix sequences (scalar case)",
+      "problem family": "GLT matrix sequences",
+      "bound": "\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_\\mathrm{GLT}(\\kappa\\xi)^{1/2} \\text{ and } \\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_{\\sigma,\\lambda}(\\kappa\\xi)^{1/2}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "Requires at least one of \\kappa and \\xi nonzero almost everywhere (Theorem 9.1)",
+      "quote": "Let r=1 and d\\ge 1. Assume \\{A_\\mathbf{n}\\}_\\mathbf{n}\\sim_\\mathrm{GLT}\\kappa and \\{B_\\mathbf{n}\\}_\\mathbf{n}\\sim_\\mathrm{GLT}\\xi, where A_\\mathbf{n},B_\\mathbf{n}\\in\\mathcal{P}_\\mathbf{n} for every multi-index \\mathbf{n}. Then\n\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_\\mathrm{GLT}(\\kappa\\xi)^{1/2},\n\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_{\\sigma,\\lambda}(\\kappa\\xi)^{1/2}.",
+      "page": 148
+    },
+    {
+      "problem": "Geometric mean of HPD GLT matrix sequences (block case, commuting symbols)",
+      "problem family": "GLT matrix sequences",
+      "bound": "\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_\\mathrm{GLT}(\\kappa\\xi)^{1/2} \\text{ and } \\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_{\\sigma,\\lambda}(\\kappa\\xi)^{1/2} \\text{ when } \\kappa \\text{ and } \\xi \\text{ commute}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "Requires at least one symbol invertible a.e. (Theorem 9.3)",
+      "quote": "Let r>1 and d\\ge 1. Assume that \\{A_\\mathbf{n}\\}_\\mathbf{n}\\sim_\\mathrm{GLT}\\kappa and \\{B_\\mathbf{n}\\}_\\mathbf{n}\\sim_\\mathrm{GLT}\\xi, where A_\\mathbf{n},B_\\mathbf{n}\\in\\mathcal{P}_\\mathbf{n} for every multi-index \\mathbf{n}, with \\mathcal{P}_\\mathbf{n} denoting the set of HPD matrices of size rN(\\mathbf{n}). Under the assumption that \\kappa and \\xi commute we infer\n\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_\\mathrm{GLT}(\\kappa\\xi)^{1/2},\n\\{G(A_\\mathbf{n},B_\\mathbf{n})\\}_\\mathbf{n}\\sim_{\\sigma,\\lambda}(\\kappa\\xi)^{1/2}.",
+      "page": 150
+    }
+  ],
+  "paper": "2610.33763",
+  "usage": {
+    "prompt_tokens": 152275,
+    "completion_tokens": 14448,
+    "total_tokens": 166723,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12171,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

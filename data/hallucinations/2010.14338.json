@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn)",
+      "problem family": null,
+      "bound": "\\text{NP-hard}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The MinGMConn problem is NP-hard, even for an input that contains at most one point per row and column.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn) (s-thin instances)",
+      "problem family": null,
+      "bound": "O(\\log s)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "O(\\log n)",
+      "quote": "There exists an efficient O(log s)-approximation algorithm for an s-thin instance (P,D) of MinGMConn.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn)",
+      "problem family": null,
+      "bound": "O(\\sqrt{\\log n})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "O(\\log n)",
+      "quote": "There is an efficient O(sqrt(log n))-approximation algorithm for MinGMConn.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn) (complete k-partite demands)",
+      "problem family": null,
+      "bound": "O(\\log\\log n)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "O(\\log n)",
+      "quote": "There is an O(loglog n)-approximation algorithm for MinGMConn when the demands form a complete k-partite graph.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn) (unit-disk demands)",
+      "problem family": null,
+      "bound": "O(1)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For unit-disk demands, MinGMConn admits an O(1)-approximation. For two-disk demands, we can achieve an O(loglog n)-approximation. For (general) disk demands with maximal radius ratio Δ, there is an O(log Δ)-approximation.",
+      "page": 4
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn) (two-disk demands)",
+      "problem family": null,
+      "bound": "O(\\log\\log n)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For unit-disk demands, MinGMConn admits an O(1)-approximation. For two-disk demands, we can achieve an O(loglog n)-approximation. For (general) disk demands with maximal radius ratio Δ, there is an O(log Δ)-approximation.",
+      "page": 4
+    },
+    {
+      "problem": "Minimum Generalized Manhattan Connections (MinGMConn) (general disk demands)",
+      "problem family": null,
+      "bound": "O(\\log \\Delta)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For unit-disk demands, MinGMConn admits an O(1)-approximation. For two-disk demands, we can achieve an O(loglog n)-approximation. For (general) disk demands with maximal radius ratio Δ, there is an O(log Δ)-approximation.",
+      "page": 4
+    }
+  ],
+  "paper": "2010.14338",
+  "usage": {
+    "prompt_tokens": 27843,
+    "completion_tokens": 7010,
+    "total_tokens": 34853,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6223,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

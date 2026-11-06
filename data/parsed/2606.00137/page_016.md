@@ -1,0 +1,31 @@
+<tbc>Finally, applications in digital humans demand distinct capabilities: avatars for gaming, virtual try-on, and related interactive settings require textures that are high-fidelity and semantically editable (_e.g._, "change the shirt logo to #10") [MAPM20, CSST21]. In dynamic settings, even minor misalignments can cause perceptible flicker under motion, breaking realism. Accordingly, human texturing methods often place greater emphasis on semantic controllability and, when animation is involved, temporal consistency of attributes such as clothing patterns [CSST21, MAPM20].
+
+## Earlier neural pipelines.
+
+Earlier neural pipelines aim to generate full-body textures from sparse inputs, often a single image, typically leveraging 2D supervision through _UV mapping_. Lazova _et al._ [LIPM19] reconstruct a full 360\(^\circ\) human texture from a single view by fitting an SMPL mesh to the image, projecting visible pixels into its UV atlas, and training a network to inpaint occluded regions. Grigorev _et al._ [GSVL19] address pose variation through _coordinate-based inpainting_: they map an input person image into UV space using DensePose [GNK18] correspondences and train a GAN to fill missing UV regions, helping preserve fine clothing details such as logos and prints under re-posing. A related idea appears in DensePose Transfer [NGK19], which extracts a source UV texture, reprojects it onto a target pose, and refines seams and missing details via a neural network. These UV completion methods-- including UV-GAN [DCX\*18] for faces--leverage the maturity of 2D image synthesis in UV space, reducing 3D consistency to a 2D inpainting problem. AUV-Net [CYF22] formalizes this further by learning an _aligned_ UV parameterization for an entire shape class, mapping semantically corresponding surface points to shared UV coordinates across instances. By training a network to deform each mesh into a common UV template, it achieves dataset-wide texture alignment without manual unwrapping, enabling generative models (GANs or diffusion) trained in this UV space to produce textures transferable across meshes. TexturePose [PKD19] does not output an explicit texture map but enforces _texture consistency_ during training of a human mesh estimator: if consistent UV textures are predicted across viewpoints, the underlying 3D shape is more likely to be accurate. This is implemented by projecting the image from one view onto the predicted mesh, rendering it to a second view, and comparing against the true image. Although geometry- focused, its core idea--_consistent textures imply consistent geometry_--is conceptually related to later methods that jointly reason about shape and texture.
+
+## Supervised texture generation with human priors.
+
+Some methods treat human texturing as a direct translation problem from images of people or clothing into a UV texture, often leveraging human parsing or identity cues to handle misalignment. Zhao _et al._ [ZLZS20] propose a human-parsing-guided texture transfer model in which a single image’s semantic segmentation provides pose and shape cues. During training, they enforce _cross-view consistency_ by predicting textures from two views and _exchanging_ them to render the opposite view, optimizing a loss between the rendered and input images. This formulation requires no ground-truth 3D textures and enables plausible completion of invisible regions during inference. Wang _et al._ [WZL\*19] address the task using an identity objective, with a person re-identification network serving as a perceptual metric for texture generation. From an input image,
+
+they extract a partial texture from visible pixels, render a full-body image, and use a pretrained re-ID CNN to compare this render with the real image. The texture generator is then optimized so that the rendered avatar matches the input identity in feature space. Mir _et al._ [MAPM20] address a practical scenario: texturing 3D garments from catalog photos. Given front- and back-view clothing images, their model learns dense correspondences from 2D silhouette coordinates to the garment surface in UV space. Trained on synthetic data with known correspondences, it warps clothing patterns onto a garment template to generate a texture map and supports real-time virtual try-on.
+
+Later works extend part-specific texturing. PARTE [NKML25] segments the human mesh into semantic parts (torso, arms, pants, _etc._) and generates textures for each part to prevent cross-region bleeding. A _PartSegmenter_ labels each vertex by part, while a diffusion-based _PartTexturer_ fills the corresponding UV regions conditioned on part descriptions, part labels, and neighboring parts. This produces sharper transitions and cleaner textures, improving downstream reconstruction (Fig. 22). Chaudhuri _et al._ [CSST21] propose a semi-supervised framework for generating high-resolution (1024<sup>2</sup>) editable textures. Their region- adaptive VAE (ReAVAE) learns a latent _style code_ for each semantic region (face, shirt, pants, shoes, _etc._) on the UV map. At generation time, a segmentation mask and optional style vectors guide the synthesis of a consistent texture map, enabling localized edits such as changing only the shirt’s pattern or color. To overcome limited paired data, single-view images are projected into texture space and used as partial supervision. These supervised and weakly supervised methods leverage human-specific cues--such as parsing, keypoints, and identity features--to infer plausible textures from sparse inputs, enabling more flexible generative approaches.
+
+## High-fidelity generation via diffusion-based models.
+
+Recent methods move toward more flexible human texture generation using diffusion-based models, with a key focus on maintaining _3D consistency_ and _semantic control_. TexDreamer [LZT\*24] exemplifies this trend as a zero-shot multimodal 3D human texturing sys-
+
+AWARD
+GMA
+OC
+MA
+WARD
+SMA AWARDS
+Input image
+3D textureless human
+3D part-segmented human
+3D textured human
+
+**Figure 22:** _Part-aware human texturing. Given a single input image (left), the method segments a textureless human mesh into semantic parts and textures them to produce a detailed 3D human with clean region boundaries (right). Figure adapted from [NKML25]._
+

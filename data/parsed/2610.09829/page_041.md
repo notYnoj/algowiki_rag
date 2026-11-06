@@ -1,0 +1,28 @@
+1. for each \(i\in[q]\), we have \(\widetilde{\beta}_i\in V(\widetilde{P}_i)\), \(\widetilde{\beta}_i\) is \(\widetilde{\theta}_i\)-abiding and _d_-good.<tbc>
+
+2. \(\widetilde{\beta}_q\cap\widetilde{\gamma}_q=\widetilde{\gamma}_q[u,v]\), and for \(i'\in[q]\cap\{1,\tilde{p}\}\), \(\widetilde{\beta}_{i^\prime}\cap\widetilde{\gamma}_{i^\prime}=\widetilde{\gamma}_{i^\prime}[u_{i^\prime},v_{i^\prime}]\), and<tbc>
+
+3. for each \(i\in[q-1]\), \(\widetilde{\beta}_i\) and \(\widetilde{\beta}_{i+1}\) are _d_-diverse, i.e., \(w(E(\beta_i)\cap E(\beta_{i+1}))\le d\).
+
+In the above, if such a \(\widetilde{\mathcal{C}}\) does not exist, then \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=-\infty\).
+
+Fix \(\varepsilon_1=(u_1,v_1)\in\widetilde{\mathcal{A}}_1\) and \(\varepsilon_\tilde{p}=(u_\tilde{p},v_\tilde{p})\in\widetilde{\mathcal{A}}_\tilde{p}\), where if \(\tilde{p}\ge 2\), then \((\varepsilon_1,\varepsilon_\tilde{p})\) are _d_-diverse. We will next describe the (recursive) computation of \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)\), for each \(q\in[\tilde{p}]\) and \((u,v)\in\widetilde{\mathcal{A}}_q\), starting with the base case.
+
+_Base Case (q_=1). Consider \(u,v\in\widetilde{\mathcal{A}}_1\). If \((u,v)\neq(u_1,v_1)\), set \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=-\infty\) (see Def inition 5.12 (2)). Otherwise, we set \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=\mathrm{max}_{\beta\in\mathcal{D}_{1,u,v}}\Pi_\mathcal{P}(\beta,\widetilde{h}_1)\). The correctness and the applicability of the base case in polynomial time is immediate from its description (and the definition of \(\widetilde{\mathcal{A}}_1\)).
+
+_Recursive formula._ Consider \(q\in[\tilde{p}]\backslash\{1\}\), and \((u,v)\in\widetilde{\mathcal{A}}_q\). We assume that the entries \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q',u',v')\) have been computed correctly for each \(q'\in[q-1]\) and \((u',v')\in\widetilde{\mathcal{A}}_{q^\prime}\). Notice that if \(\tilde{p}=q\) and \((u,v)\neq(u_p,v_p)\), then we can correctly set \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=-\infty\) (see Definition 5.12 (2)).
+
+Intuitively, for our recursive formula we query the entry for _q_-1, over every choice of \(\beta\in\mathcal{D}_{q,u,v}\) and the choice of intersection, \(\widetilde{\gamma}_i[u',v']\), between the cycle \(\widetilde{\beta}_{q-1}\) and \(\widetilde{\gamma}_{q-1}\). We remark that while doing the above we need to ensure that the cycle selected for _q_-1 and the cycle selected from _q_, should be _d_-diverse from each other. This leads us to the following recursive formula.
+
+\(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=\mathrm{max}_{(\beta,(u^\prime,v^\prime))\in\mathcal{D}_{q,u,v}\times\widetilde{\mathcal{A}}_{q-1:w(E(\widetilde{\gamma}_{q-1}[u^\prime,v^\prime]\cap\widetilde{\gamma}_q[u,v]]))\le d}\big(\Pi_\mathcal{P}(\beta,\widetilde{h}_q)+\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q-1,u',v')-\zeta_{\widetilde{\gamma}_{q-1}[u^\prime,v^\prime],\widetilde{\gamma}_q[u,v]}\big)\) (1)
+
+In the above equation we note that the minus term is to reduce the weight of the edges (outside P) from \(\beta\) that belong to the cycle selected for _q_-1, where note that the intersection must be precisely \(\widetilde{\gamma}_{q-1}[u',v']\cap\widetilde{\gamma}_q[u,v]\). In the next lemma we prove the correctness of the recursive formula.
+
+**Lemma 5.7.** _In polynomial time, for each_ \(\varepsilon_1=(u_1,v_1)\in\widetilde{\mathcal{A}}_1\), \(\varepsilon_\tilde{p}=(u_\tilde{p},v_\tilde{p})\in\widetilde{\mathcal{A}}_\tilde{p}\)_, where_ \((\varepsilon_1,\varepsilon_\tilde{p})\) _is d-diverse if_ \(\tilde{p}\ge 2\), \(q\in[\tilde{p}]\)_, and_ \((u,v)\in\widetilde{\mathcal{A}}_q\)_, we can compute_ \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)\)_. Moreover, in polynomial time, using memoization, we can also find_ \(\widetilde{\mathcal{C}}=\{\tilde{t}_i|i\in[q]\}\) _that satisfies all the conditions of Definition 5.12 for_ \(\varepsilon_1,\varepsilon_\tilde{p}\)_, q, and_ (_u,v), that achieves the stated maximum.
+
+_Proof._ From the description of the base case and Equation (1), to obtain a proof of the lemma, it is enough to prove that recurrence relation given by Equation (1) is correct. We first show that:
+
+\(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)\le\mathrm{max}_{(\beta,(u^\prime,v^\prime))\in\mathcal{D}_{q,u,v}\times\widetilde{\mathcal{A}}_{q-1:w(E(\widetilde{\gamma}_{q-1}[u^\prime,v^\prime]\cap\widetilde{\gamma}_q[u,v]]))\le d}\big(\Pi_\mathcal{P}(\beta,\widetilde{h}_q)+\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q-1,u',v')-\zeta_{\widetilde{\gamma}_{q-1}[u^\prime,v^\prime],\widetilde{\gamma}_q[u,v]}\big)\)
+
+We assume that \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)\neq-\infty\), as otherwise, the inequality is trivially satisfied. Consider \(\widetilde{\mathcal{C}}=\{\widetilde{\beta}_i|i\in[q]\}\) that satisfies the conditions stated in Definition 5.12, such that \(\Lambda_{\varepsilon_1,\varepsilon_\tilde{p}}(q,u,v)=\sum_{\widetilde{\beta}_i\in\widetilde{\mathcal{C}}}\Pi_\mathcal{P}(\widetilde{\beta}_i,\widetilde{h}_i)-\sum_{i\in[q-1]}\zeta_{\widetilde{\beta}_i,\widetilde{\beta}_{i+1}}\). Note that from Definition 5.12 (1) (also see Definition 5.10), \(\theta_{q-1}\)-abiding and from the construction of _H_, there must exist distinct vertices \(\widehat{u},\widehat{v}\in V(\widetilde{\gamma}_{q-1})\), such that \(\widetilde{\beta}_{q-1}\cap\widetilde{\gamma}_{q-1}=\widetilde{\gamma}_{q-1}[\widehat{u},\widehat{v}]\). Let \(\widetilde{\mathcal{C}}=\widetilde{\mathcal{C}}\backslash\{\widetilde{\beta}_q\}\). Notice that by the constructions of D_<sub>q,u,u</sub>_, \(\widetilde{\mathcal{A}}_{q-1}\),<tbc>
+

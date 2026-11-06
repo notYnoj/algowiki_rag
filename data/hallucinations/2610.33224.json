@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Private Approximate Nearest Neighbor Search",
+      "problem family": "Nearest Neighbor Search",
+      "bound": "2.10\\text{--}11.13\\ \\text{MB wire per query on SIFT-1M in 1 RTT}",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": "Panther: 92.9 MB; SANNS: 1.77 GB; Compass: 12.2 MB over 8 RTTs",
+      "quote": "benchmark against SANNS \\[14\\], PRECO \\[40\\], Tiptoe \\[29\\], Pacmann \\[48\\], Panther \\[32\\], Compass \\[49\\], and Onyx \\[37\\] across all published recall conventions (2.10-11.13 MB CKKS wire on SIFT-1M in 1 RTT, 8.3\\(\\times\\)-44.2\\(\\times\\) below Panther’s 92.9 MB, 159\\(\\times\\)-843\\(\\times\\) below SANNS’s 1.77 GB, and below Compass’s 12.2 MB over 8 RTTs).",
+      "page": 3
+    },
+    {
+      "problem": "Private Approximate Nearest Neighbor Search",
+      "problem family": "Nearest Neighbor Search",
+      "bound": "5.37\\ \\text{MB wire in } 0.82\\ \\text{s server latency on SIFT-1M (HEIR-GPU CKKS)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Compass: 12.2 MB over 8 RTTs; Panther: 92.9 MB; SANNS: 1.77 GB",
+      "quote": "Conversely, when rotation keys can be registered for a session, **Holo-NN (CKKS)** is the lowest-wire single-server cryptographic system measured on SIFT-1M: **11.13** MB at _M_=300,000 (**29.7**s on a single RTX 3090 GPU via Phantom, or **9.5**s at _M_=98,300 for **4.24**MB), and **5.37** MB in **0.82**s under 32-bit RNS **HEIR-GPU** (**2.10** MB in **0.26**s at _M_=98,300, and **8.65** MB in **1.30**s at _M_=500,000) against Compass’s 12.2 MB, Panther’s 92.9 MB, and SANNS’s 1.77 GB, in _one_ round trip rather than Compass’s eight, SANNS/Panther’s multi-round 2PC, or Pacmann’s twenty to thirty-two, with no client-side index state and no preprocessing stream.",
+      "page": 11
+    }
+  ],
+  "paper": "2610.33224",
+  "usage": {
+    "prompt_tokens": 23308,
+    "completion_tokens": 14160,
+    "total_tokens": 37468,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13443,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

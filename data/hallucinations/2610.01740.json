@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Toeplitz infinite GMRES (Toeplitz infGMRES)",
+      "problem family": "parameterized linear systems",
+      "bound": "\\mathcal{O}(np^2+p^3) \\text{ arithmetic}, \\mathcal{O}(np+p^2) \\text{ storage}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}(np^3) \\text{ arithmetic and } \\mathcal{O}(np^2) \\text{ storage for direct infGMRES}; \\mathcal{O}(np^3+p^4) \\text{ arithmetic and } \\mathcal{O}(np+p^3) \\text{ storage for TOAR infGMRES}",
+      "quote": "We derive incremental recurrences requiring O(_np_<sup>2</sup>+_p_<sup>3</sup>) arithmetic and O(_np+p_<sup>2</sup>) storage for _p_ Arnoldi steps, excluding factorization setup and assuming linear-cost coefficient actions and triangular solves.",
+      "page": 1
+    },
+    {
+      "problem": "Dynamic Toeplitz infinite GMRES (Dynamic TiGMRES)",
+      "problem family": "parameterized linear systems",
+      "bound": "\\frac{2}{3}np^3+\\mathcal{O}(np^2+p^4) \\text{ arithmetic}, \\mathcal{O}(np+p^3) \\text{ storage}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}(np^3+p^4) \\text{ arithmetic and } \\mathcal{O}(np+p^3) \\text{ storage for TOAR infGMRES}",
+      "quote": "In the extreme case \\(\\tau=0\\), Dynamic TiGMRES will refresh at every step, leading to its \\(\\frac{2}{3}np^3+\\mathcal{O}(np^2+p^4)\\) arithmetic and O(_np+p_<sup>3</sup>) storage complexity.",
+      "page": 9
+    },
+    {
+      "problem": "Implicitly rebased Toeplitz infinite GMRES (IR-TiGMRES)",
+      "problem family": "parameterized linear systems",
+      "bound": "\\mathcal{O}(d(np^2+p^3)) \\text{ arithmetic}, \\mathcal{O}(np+dp^2) \\text{ storage}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}(d(np^2+p^3)+p^4) \\text{ arithmetic and } \\mathcal{O}(np+p^3) \\text{ storage for G-TOAR infGMRES}",
+      "quote": "Summing over _m_=2_,...,p_, including initialization, therefore gives O(_d(np_<sup>2</sup>+_p_<sup>3</sup>)) arithmetic operations. The recovery vectors, compact matrices, and nested evaluator data require O(_np+dp_<sup>2</sup>) storage.",
+      "page": 13
+    },
+    {
+      "problem": "infGMRES residual",
+      "problem family": "parameterized linear systems",
+      "bound": "\\frac{\\mathcal{R}_m(s)}{\\|z\\|_2}\\ge\\frac{|s|-1}{\\sqrt{(|s|-1)^2+C_m^2}} \\text{ for } |s|>1",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every |_s_|_>_1, \\(\\frac{\\mathcal{R}_m(s)}{\\|z\\|_2}\\ge\\frac{|s|-1}{\\sqrt{(|s|-1)^2+C_m^2}}.\\)",
+      "page": 15
+    }
+  ],
+  "paper": "2610.01740",
+  "usage": {
+    "prompt_tokens": 21004,
+    "completion_tokens": 6890,
+    "total_tokens": 27894,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6063,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

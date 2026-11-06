@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Mixture Wasserstein distance stability with respect to GMM parameters",
+      "problem family": "Optimal Transport",
+      "bound": "\\mathbb{E}\\left[\\mathrm{MW}_2^2(\\hat{\\mu},\\mu)\\right]\\le\\rho_\\mathcal{N}+\\frac{\\rho_w}{2}\\max_{k,\\ell}\\mathbb{E}\\left[\\mathrm{W}_2^2(\\mathcal{N}(\\hat{m}_k,\\hat{\\Sigma}_k),\\mathcal{N}(m_\\ell,\\Sigma_\\ell))\\right]",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "\\mathbb{E}\\left[\\mathrm{MW}_2^2(\\hat{\\mu},\\mu)\\right]\\le\\rho_\\mathcal{N}+\\frac{\\rho_w}{2}\\mathrm{max}_{k,\\ell}\\mathbb{E}\\left[\\mathrm{W}_2^2(\\mathcal{N}(\\hat{m}_k,\\hat{\\Sigma}_k),\\mathcal{N}(m_\\ell,\\Sigma_\\ell))\\right].",
+      "page": 9
+    },
+    {
+      "problem": "Mixture Wasserstein distance stability with respect to GMM parameters",
+      "problem family": "Optimal Transport",
+      "bound": "\\mathbb{E}\\left[\\left|\\mathrm{MW}_2^2(\\hat{\\mu}_0,\\hat{\\mu}_1)-\\mathrm{MW}_2^2(\\mu_0,\\mu_1)\\right|\\right]\\le 8R_m\\rho_m+8R_\\Sigma\\rho_\\Sigma+8(R_m^2+R_\\Sigma^2)\\rho_w",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "\\mathbb{E}\\left[\\left|\\mathrm{MW}_2^2(\\hat{\\mu}_0,\\hat{\\mu}_1)-\\mathrm{MW}_2^2(\\mu_0,\\mu_1)\\right|\\right]\\le 8R_m\\rho_m+8R_\\Sigma\\rho_\\Sigma+8(R_m^2+R_\\Sigma^2)\\rho_w.",
+      "page": 10
+    },
+    {
+      "problem": "Differentiable EM flow / bi-level optimization",
+      "problem family": "Expectation-Maximisation",
+      "bound": null,
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "This leads to the following algorithm, which we refer to as the Warm-Start EM Flow of a loss \\(\\mathcal{L}:\\Theta\\longrightarrow\\mathbb{R}\\).",
+      "page": 8
+    }
+  ],
+  "paper": "2509.02109",
+  "usage": {
+    "prompt_tokens": 51037,
+    "completion_tokens": 10719,
+    "total_tokens": 61756,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10097,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

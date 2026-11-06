@@ -1,0 +1,111 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Multiple Source Shortest Paths (MSSP) on undirected unweighted graphs",
+      "problem family": "Shortest Paths",
+      "bound": "n^{o(1)}\\mathsf{T}_{\\mathrm{BMM}}(|S_\\mathrm{in}|,n,n) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\hat{O}(\\min\\{n^\\omega, n^{2+\\sigma}\\})",
+      "quote": "MSSP on undirected unweighted graphs is equivalent to BMM(|S_in|,n,n), up to n^{o(1)} factors, for randomized algorithms. In particular, there is a randomized algorithm computing MSSP on undirected, unweighted graphs in n^{o(1)}T_{BMM}(|S_in|,n,n) time.",
+      "page": 4
+    },
+    {
+      "problem": "Multiple Source Shortest Paths (MSSP) on undirected graphs with integer edge weights in [B]",
+      "problem family": "Shortest Paths",
+      "bound": "n^{o(1)}\\mathsf{T}_{\\mathrm{MPP}}(|S_\\mathrm{in}|,n,n|B) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "MSSP on undirected graphs with integer edge weights in [B] is equivalent to MPP(|S_in|,n,n|B), up to n^{o(1)} log B factors, for randomized algorithms. In particular, if B \\le \\mathrm{poly}(n), there is a randomized algorithm computing MSSP on undirected graphs with integer edge weights in [B] in n^{o(1)}T_{MPP}(|S_in|,n,n|B) time.",
+      "page": 4
+    },
+    {
+      "problem": "Low Diameter Small Neighborhood Decomposition (LDSND)",
+      "problem family": "Graph Decomposition",
+      "bound": "n^{2+o(1)} \\text{ time algorithm that computes a } (2^{O(\\sqrt{\\log n})}, 2^{O(\\sqrt{\\log n})})\\text{-LDSND}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized n^{2+o(1)} time algorithm that computes a (2^{O(\\sqrt{\\log n})}, 2^{O(\\sqrt{\\log n})})-low diameter small neighborhood decomposition.",
+      "page": 4
+    },
+    {
+      "problem": "\\beta-hop-set construction on undirected graphs with integer weights",
+      "problem family": "Hop-sets",
+      "bound": "B n^{o(1)} \\mathsf{T}_{\\mathrm{MUL}}(n/\\beta,n,n) \\text{ time algorithm that computes a } \\beta\\text{-hop-set with } \\widetilde{O}(n^2/\\beta^2) \\text{ edges}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\min(n^3/\\beta, n^\\omega)",
+      "quote": "For all \\beta \\ge 1, there is a randomized B n^{o(1)} T_{MUL}(n/\\beta,n,n) time algorithm that computes a \\beta-hop-set with \\widetilde{O}(n^2/\\beta^2) edges on undirected graphs with integer weights in [B].",
+      "page": 28
+    },
+    {
+      "problem": "+4-emulator construction on undirected graphs with integer weights",
+      "problem family": "Emulators",
+      "bound": "O(B n^{\\omega(1,2/3,1)+o(1)}) = O(B n^{2.1321}) \\text{ time algorithm to construct } +4B\\text{-emulators of size } O(n^{4/3}\\log n)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\widetilde{O}(n^{7/3})",
+      "quote": "There is a randomized O(B n^{\\omega(1,2/3,1)+o(1)}) = O(B n^{2.1321}) time algorithm to construct +4B-emulators of size O(n^{4/3} log n) on undirected graphs with integer weights at most B.",
+      "page": 29
+    },
+    {
+      "problem": "Multiple Source Reachability in directed graphs",
+      "problem family": "Reachability",
+      "bound": "\\widetilde{O}(\\mathsf{T}_{\\mathrm{BMM}}(|S_\\mathrm{in}|,n,n)) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\hat{O}(n^{1+2\\omega(\\sigma,1,1)/3}) \\text{ (Elkin and Trehan)}",
+      "quote": "Multiple Source Reachability is equivalent to BMM(|S_in|,n,n), up to polylog(n) factors. In particular, there is a deterministic algorithm computing Multiple-Source Reachability in \\widetilde{O}(\\mathsf{T}_{\\mathrm{BMM}}(|S_\\mathrm{in}|,n,n)) time.",
+      "page": 5
+    },
+    {
+      "problem": "MSSP on unweighted directed acyclic graphs",
+      "problem family": "Shortest Paths on DAGs",
+      "bound": "\\widetilde{O}(\\mathsf{T}_{\\mathrm{MPP}}(|S_\\mathrm{in}|,n,n|n,1)) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(\\max_{1\\le t\\le n} \\mathsf{T}_{\\mathrm{MPP}}(s+t, t, n | n/t)) \\text{ (Grandoni and Vassilevska Williams)}",
+      "quote": "There is a deterministic algorithm computing MSSP on unweighted directed acyclic graphs in \\widetilde{O}(\\mathsf{T}_{\\mathrm{MPP}}(|S_\\mathrm{in}|,n,n|n,1)) time.",
+      "page": 6
+    },
+    {
+      "problem": "Shortcut set computation in directed graphs",
+      "problem family": "Shortcut Sets",
+      "bound": "\\widetilde{O}(n^2 + \\mathsf{T}_{\\mathrm{MPP}}(n/D^2, n, n | D, 1)) \\text{ time for } D=O(\\sqrt{n})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n^3/D^2) \\text{ (Kogan and Parter)}",
+      "quote": "For D=O(\\sqrt{n}), there is an algorithm that computes a D-shortcut-set of size \\widetilde{O}(n^2/D^3+n) in time \\widetilde{O}(n^2+\\mathsf{T}_{\\mathrm{MPP}}(n/D^2,n,n|D,1)).",
+      "page": 32
+    },
+    {
+      "problem": "Min-Plus Product with Distinct Entry Bounds",
+      "problem family": "Matrix Multiplication",
+      "bound": "\\mathsf{T}_{\\mathrm{MPP}}(n_1,n_2,n_3|B_1,B_2) = O(\\mathsf{T}_{\\mathrm{BMM}}(n_1 B_1, n_2, n_3 B_2)) \\text{ and if } B=B_1+B_2, \\mathsf{T}_{\\mathrm{MPP}}(n_1,n_2,n_3|B_1,B_2) = O(\\min(\\mathsf{T}_{\\mathrm{BMM}}(n_1 B, n_2 B_2, n_3), \\mathsf{T}_{\\mathrm{BMM}}(n_1, n_2 B_1, n_3 B)))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(\\max(B_1,B_2) \\mathsf{T}_{\\mathrm{MUL}}(n_1,n_2,n_3)) \\text{ (from [SZ99])}",
+      "quote": "Suppose \\mathsf{T}_{\\mathrm{BMM}}(a,b,c)=\\Omega(ab+ac+bc). For any integers n_1,n_2,n_3,B_1,B_2,B \\ge 0, \\mathsf{T}_{\\mathrm{MPP}}(n_1,n_2,n_3|B_1,B_2)=O(\\mathsf{T}_{\\mathrm{BMM}}(n_1 B_1,n_2,n_3 B_2)) and if B=B_1+B_2, \\mathsf{T}_{\\mathrm{MPP}}(n_1,n_2,n_3|B_1,B_2)=O(\\min(\\mathsf{T}_{\\mathrm{BMM}}(n_1 B,n_2 B_2,n_3), \\mathsf{T}_{\\mathrm{BMM}}(n_1,n_2 B_1,n_3 B))).",
+      "page": 40
+    }
+  ],
+  "paper": "2606.26554",
+  "usage": {
+    "prompt_tokens": 44874,
+    "completion_tokens": 11689,
+    "total_tokens": 56563,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9665,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,18 @@
+### 6.5 Dependence on the truncation level
+
+Finally, we solve the coarse problem on the mesh _H_=1/4 with Newton’s method from the zero initial guess for several truncation levels \(\tau\) and compare the results with the solution for \(\tau=85\). Here \(\mathrm{max}_{D_s}\left|U+\Phi_H\right|=2.508\). For every \(\tau\ge 3\) the truncation is never activated during the iteration and the computed solutions are bitwise identical, in agreement with Theorem 3.6. Because of the source term _f_ the bound 2_M<sub>U</sub>_=4 does not apply here, but the argument of Theorem 3.6, applied to the discrete problem, works with the threshold \(Z_\mathrm{max}\mathrm{max}\left|U+\Phi_H\right|=2.508\) in its place. For \(\tau=2.5\), just below this value, the truncation is activated and the solutions differ by \(3\cdot 10^{-9}\) in the maximum norm; for \(\tau=2\) and \(\tau=1.5\) the differences grow to \(6.4\cdot 10^{-4}\) and \(3.5\cdot 10^{-3}\), so the computed solution changes as soon as \(\tau\) drops below the threshold in Theorem 3.6. Newton’s method needed four iterations for \(\tau\ge 2.5\) and three for \(\tau\le 2\).
+
+## 7 Concluding remarks
+
+We have analyzed a two-grid finite element method for the nonlinear Poisson-Boltzmann equation based on the solution decomposition \(u=G+\Psi+\widehat{\Phi}\) of \[34\]. The nonlinear problem for \(\widehat{\Phi}\) is solved only on a coarse mesh, and the fine-mesh approximation is obtained by one Newton correction, so that only two symmetric positive definite linear systems are solved on the fine mesh. The analysis uses a _C_<sup>2</sup> truncation of the exponential that grows quadratically above a level \(\tau\). For \(\tau\ge 2Z_\mathrm{max}\left\|G+\Psi\right\|_{L^\infty(D_s)}\) the truncated problem has the same solution as the original one; this gives a new proof of well-posedness, shows that the overflow safeguard used in practice does not change the solution, and leads to error estimates that need no discrete maximum principle and no angle condition on the meshes. Under piecewise _H<sup>s</sup>_ regularity of the primal problem and \(H^\sigma\) regularity of a linear dual problem we proved \(\left\|\text{\textit{\textbf{}}}u-u_h^\mathrm{tg}\right\|\le C(h^{s-1}+H^{2(s-1)+t/2})\) with \(t=\mathrm{min}\{s,\sigma\}-1\), so that _H∼h_<sup>2/5</sup> suffices whenever \(\sigma\ge s\). The estimates include the error from replacing \(U=G+\Psi\) by its finite element approximation, allow the coarse problem to be assembled with coarse-mesh data, and hold for any number of ionic species. A test with a manufactured solution in three dimensions agrees with these results.
+
+Several extensions seem possible. Higher-order elements, and meshes that only approximate a curved interface, could be treated by combining the arguments of Section 4 with the approximation results of \[24\]. The same approach should apply to other regularized forms of the PBE, such as the two-component splitting of \[9, 18\]. For the size-modified PBE, whose nonlinearity is bounded, no truncation would be needed. The combination of solution decomposition and two-grid linearization can also be used for the Poisson-Nernst-Planck equations of ion channels \[35, 8\], where the coupling between potential and concentrations takes the place of the exponential nonlinearity; we plan to study this in future work, together with experiments on proteins using the PBE finite element package of \[34\].
+
+## Author Contributions
+
+All authors contributed to the analysis and to the writing of the manuscript. Z. Chao also designed the numerical test and performed the computations.
+
+## Acknowledgments
+
+Z. Chao was supported by an AMS-Simons Research Enhancement Grant for PUI Faculty.
+

@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "1-bit mean estimation",
+      "problem family": null,
+      "bound": "\\beta(n,\\gamma,L)=\\frac{\\sigma^2}{2L}+2\\sqrt{\\frac{3\\alpha_L\\sigma^2x_n(\\gamma)}{n}}+\\frac{\\alpha_LLx_n(\\gamma)}{n}",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For every \\(L\\ge\\sigma\\) and \\(\\gamma\\in(0,1)\\), with probability at least \\(1-\\gamma,|\\hat{\\mu}_n-\\mu|\\le\\beta(n,\\gamma,L)\\) for all \\(n\\ge 1\\), where \\(\\beta(n,\\gamma,L)=\\frac{\\sigma^2}{2L}+2\\sqrt{\\frac{3\\alpha_L\\sigma^2x_n(\\gamma)}{n}}+\\frac{\\alpha_LLx_n(\\gamma)}{n}\\),",
+      "page": 6
+    },
+    {
+      "problem": "1-bit mean estimation",
+      "problem family": null,
+      "bound": "n=O\\left(\\frac{\\sigma^2}{\\beta^2}\\mathrm{log}\\frac{\\sigma}{\\beta}\\left[\\mathrm{log}\\frac{1}{\\gamma}+\\mathrm{loglog}\\left(e+\\frac{\\sigma}{\\beta}\\right)\\right]\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O\\left(\\frac{\\sigma^2}{\\beta^2}\\mathrm{log}\\frac{\\sigma}{\\beta}\\mathrm{log}\\frac{1}{\\gamma}\\right) \\text{ from Lau and Scarlett } [21]",
+      "quote": "n=O\\left(\\frac{\\sigma^2}{\\beta^2}\\mathrm{log}\\frac{\\sigma}{\\beta}\\left[\\mathrm{log}\\frac{1}{\\gamma}+\\mathrm{loglog}\\left(e+\\frac{\\sigma}{\\beta}\\right)\\right]\\right).",
+      "page": 6
+    },
+    {
+      "problem": "fixed-confidence best-arm identification with 1-bit feedback",
+      "problem family": null,
+      "bound": "N_\\mathrm{fix}=O\\big(H_\\mathrm{fix}(\\varepsilon)\\left[\\mathrm{log}\\frac{K}{\\delta}+\\mathrm{loglog}H_\\mathrm{fix}(\\varepsilon)\\right]\\big)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "N_\\mathrm{fix}=O\\big(H_\\mathrm{fix}(\\varepsilon)\\left[\\mathrm{log}\\frac{K}{\\delta}+\\mathrm{loglog}H_\\mathrm{fix}(\\varepsilon)\\right]\\big).",
+      "page": 7
+    },
+    {
+      "problem": "fixed-confidence best-arm identification with 1-bit feedback",
+      "problem family": null,
+      "bound": "\\tau=O\\big(H_\\mathrm{gap}\\left[\\mathrm{log}\\frac{K}{\\delta}+\\mathrm{loglog}\\frac{\\sigma}{\\varepsilon}\\right]\\big)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "\\tau=O\\big(H_\\mathrm{gap}\\left[\\mathrm{log}\\frac{K}{\\delta}+\\mathrm{loglog}\\frac{\\sigma}{\\varepsilon}\\right]\\big).",
+      "page": 8
+    },
+    {
+      "problem": "fixed-confidence best-arm identification with 1-bit feedback",
+      "problem family": null,
+      "bound": "\\mathbb{E}_{\\nu^{(0)}}[\\tau]\\ge c(K-1)\\frac{\\sigma^2}{\\Delta^2}\\mathrm{log}\\frac{\\sigma}{\\Delta}\\mathrm{log}\\frac{1}{\\delta}",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "\\mathbb{E}_{\\nu^{(0)}}[\\tau]\\ge c(K-1)\\frac{\\sigma^2}{\\Delta^2}\\mathrm{log}\\frac{\\sigma}{\\Delta}\\mathrm{log}\\frac{1}{\\delta}",
+      "page": 9
+    }
+  ],
+  "paper": "2610.02771",
+  "usage": {
+    "prompt_tokens": 47139,
+    "completion_tokens": 7664,
+    "total_tokens": 54803,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6691,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

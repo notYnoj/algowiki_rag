@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimum-weight decoding / nearest codeword problem for homological cycle codes",
+      "problem family": "Cycle codes",
+      "bound": "\\text{NP-complete (decision); NP-hard (nearest-codeword) for every fixed } \\mathbb{F}_q \\text{ with } q>2",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "Polynomial time for binary cycle codes",
+      "quote": "For every fixed finite field $\\mathbb{F}_q$ with $q>2$, the following decision problem is NP-complete. Given a homological cycle code with parity-check matrix $B^T$, a syndrome $\\mathbf{s}$, and an integer $w\\ge 0$, decide whether there exists $\\mathbf{e}\\in\\mathbb{F}_q^m$ with $B^T\\mathbf{e}=\\mathbf{s}$ and $|\\mathbf{e}|\\le w$. Consequently, nearest-codeword decoding is NP-hard for these codes.",
+      "page": 13
+    },
+    {
+      "problem": "ML whole-word decoding error probability for cycle codes on random regular graphs",
+      "problem family": "Cycle codes",
+      "bound": "\\liminf_{n\\rightarrow\\infty}\\mathbb{E}_{G_n}P_\\mathrm{W}^\\mathrm{ML}(G_n,p,\\theta)\\ge(p\\theta_\\mathrm{max})^3\\left(1-\\exp\\left[-\\frac{(D-1)^3}{6}\\right]\right)>0",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Fix $D\\ge 3$, a finite field $\\mathbb{F}_q$, an even replacement distribution $\\theta$, and $0<p<1/2$. If $G_n$ is uniform among simple $D$-regular graphs on $n$ labeled vertices, then $\\liminf_{n\\rightarrow\\infty}\\mathbb{E}_{G_n}P_\\mathrm{W}^\\mathrm{ML}(G_n,p,\\theta)\\ge(p\\theta_\\mathrm{max})^3\\left(1-\\exp\\left[-\\frac{(D-1)^3}{6}\\right]\right)>0,$",
+      "page": 15
+    },
+    {
+      "problem": "ML decoding success probability on Linial-Simkin ensemble",
+      "problem family": "Cycle codes",
+      "bound": "(D-1)Z_\\theta(p)>1 \\Longrightarrow \\mathbb{E}_G P_\\mathrm{S}^\\mathrm{ML}(G,p,\\theta)\\rightarrow 0, \\quad \\delta_\\mathrm{rel}(D,\\theta)\\le\\delta_\\mathrm{cyc}(D,\\theta)",
+      "bound_type": "upper bound",
+      "deterministic": null,
+      "previous_best": "Binary case known [DZ97; NZ16]",
+      "quote": "Fix $D\\ge 3$, a finite field $\\mathbb{F}_q$, $c\\in(0,1)$, and an even replacement distribution $\\theta$. For the Linial-Simkin ensemble and independent errors with distribution (58), $(D-1)Z_\\theta(p)>1\\Longrightarrow\\mathbb{E}_G P_\\mathrm{S}^\\mathrm{ML}(G,p,\\theta)\\rightarrow 0,0<p\\le 1/2.$ In particular, $\\delta_\\mathrm{rel}(D,\\theta)\\le\\delta_\\mathrm{cyc}(D,\\theta)$.",
+      "page": 17
+    },
+    {
+      "problem": "Reliability threshold \\delta_\\mathrm{rel} for cycle codes on Linial-Simkin ensemble",
+      "problem family": "Cycle codes",
+      "bound": "(1-16\\gamma)\\delta_\\mathrm{cyc}(D,\\theta)\\le\\delta_\\mathrm{rel}(D,\\theta)\\le\\delta_\\mathrm{cyc}(D,\\theta) \\quad \\text{for } \\gamma=q/D^{2/3}\\le 1/32",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "Binary endpoint exact at every D\\ge 3 [DZ97; NZ16]",
+      "quote": "Fix $c\\in(0,1)$ and an even replacement distribution $\\theta$ on $\\mathbb{F}_q^\\times$. For the Linial-Simkin ensemble, if $\\gamma=q/D^{2/3}\\le 1/32$, then $(1-16\\gamma)\\delta_\\mathrm{cyc}(D,\\theta)\\le\\delta_\\mathrm{rel}(D,\\theta)\\le\\delta_\\mathrm{cyc}(D,\\theta).$",
+      "page": 17
+    },
+    {
+      "problem": "LP decoding failure probability for cycle codes",
+      "problem family": "Cycle codes",
+      "bound": "P_\\mathrm{W}^\\mathrm{LP}(G,p)\\le 2m(D-1)^{h-1}\\left[2\\sqrt{p(1-p)}\\right]^h \\quad \\text{for } 1\\le h<g_G",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let $G$ be a simple graph with $m$ edges, maximum degree at most $D\\ge 3$, and girth $g_G$. Consider its homological cycle code over $\\mathbb{F}_q$ with each position corrupted independently with probability $0<p<1/2$ and arbitrary nonzero error values. For every integer $1\\le h<g_G$, the probability that the LP decoder declares failure or returns an incorrect word satisfies $P_\\mathrm{W}^\\mathrm{LP}(G,p)\\le 2m(D-1)^{h-1}\\left[2\\sqrt{p(1-p)}\\right]^h.$",
+      "page": 19
+    },
+    {
+      "problem": "LP decoding on Linial-Simkin ensemble",
+      "problem family": "Cycle codes",
+      "bound": "p_\\mathrm{LP}^\\mathrm{cert}(D,c):=\\frac{1}{2}\\left(1-\\sqrt{1-(D-1)^{-2(1+1/c)}}\\right)>0; \\quad \\sup_{G\\in\\mathrm{supp}\\mathcal{L}_{n,D,c}}P_\\mathrm{W}^\\mathrm{LP}(G,p)=O_{D,c,p}(n^{-\\kappa})\\rightarrow 0 \\text{ for } 0<p<p_\\mathrm{LP}^\\mathrm{cert}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Fix $D\\ge 3$, a finite field $\\mathbb{F}_q$, and $c\\in(0,1)$. Define the certified rate $p_\\mathrm{LP}^\\mathrm{cert}(D,c):=\\frac{1}{2}\\left(1-\\sqrt{1-(D-1)^{-2(1+1/c)}}\\right)>0.$ For every fixed $0<p<p_\\mathrm{LP}^\\mathrm{cert}(D,c)$, there is a constant $\\kappa>0$ such that $\\sup_{G\\in\\mathrm{supp}\\mathcal{L}_{n,D,c}}P_\\mathrm{W}^\\mathrm{LP}(G,p)=O_{D,c,p}(n^{-\\kappa})\\rightarrow 0.$",
+      "page": 20
+    },
+    {
+      "problem": "DQI satisfaction fraction on Max-2-LINSAT",
+      "problem family": "Max-2-LINSAT",
+      "bound": "F_{D,\\theta,r}^\\mathrm{DQI}\\le F_\\rho(\\min\\{\\delta_\\mathrm{cyc}(D,\\theta),1-\\rho\\}); \\quad F_{D,\\theta,r}^\\mathrm{DQI}\\ge F_\\rho(\\min\\{(1-16\\gamma)\\delta_\\mathrm{cyc}(D,\\theta),1-\\rho\\}) \\text{ for } \\gamma=q/D^{2/3}\\le 1/32",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "Prior work showed DQI achieves nontrivial satisfaction fraction guarantee only on linear-girth graphs",
+      "quote": "Fix $D\\ge 3$, a finite field $\\mathbb{F}_q$, and $c\\in(0,1)$. Consider Max-2-LINSAT instances on the LS ensemble $G\\sim\\mathcal{L}_{n,D,c}$ (Definition 4) with target sets of common size $r$ such that the corresponding noise channels all have a shared error distribution $\\theta$. Let $\\rho=r/q$. ... Then $F_{D,\\theta,r}^\\mathrm{DQI}\\le F_\\rho(\\min\\{\\delta_\\mathrm{cyc}(D,\\theta),1-\\rho\\}).$ (88) If $\\gamma=q/D^{2/3}\\le 1/32$, then also $F_{D,\\theta,r}^\\mathrm{DQI}\\ge F_\\rho(\\min\\{(1-16\\gamma)\\delta_\\mathrm{cyc}(D,\\theta),1-\\rho\\}).$ (89)",
+      "page": 22
+    },
+    {
+      "problem": "MaxCut and Max-k-Cut",
+      "problem family": "MaxCut / Max-k-Cut",
+      "bound": "F_{q,D}^\\mathrm{DQI}=\\frac{q-1}{q}\\left(1+\\frac{1}{D-1}\\right)+o(D^{-1}) \\text{ for } q=o(D^{2/3}); \\quad F_{2,D}^\\mathrm{DQI}=\\frac{1}{2}+\\frac{1}{2(D-1)}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "TPM gives \\frac{k-1}{k}+\\frac{\\kappa_k}{\\sqrt{D}}+O_k(D^{-1})",
+      "quote": "Consequently, for $q=o(D^{2/3})$, $F_{q,D}^\\mathrm{DQI}=\\frac{q-1}{q}\\left(1+\\frac{1}{D-1}\\right)+o(D^{-1})$. For MaxCut, the exact binary threshold in (79) gives the exact reliable-decoding value $F_{2,D}^\\mathrm{DQI}=\\frac{1}{2}+\\sqrt{\\delta_\\mathrm{cyc}(D,2)(1-\\delta_\\mathrm{cyc}(D,2))}=\\frac{1}{2}+\\frac{1}{2(D-1)}$.",
+      "page": 24
+    },
+    {
+      "problem": "DQI satisfaction fraction with imperfect decoding, fixed targets",
+      "problem family": "Max-LINSAT / DQI",
+      "bound": "f_\\ell^*\\ge(1-\\varepsilon)\\left(F_\\rho(p_\\ell)-\\frac{1}{\\sqrt{m}}\\right)-\\frac{\\sqrt{(q-1)\\rho(1-\\rho)}\\varepsilon}{1-\\varepsilon}, \\quad f_\\ell^*\\le(1-\\varepsilon)F_\\rho(p_\\ell)+\\varepsilon+\\frac{\\sqrt{(q-1)\\rho(1-\\rho)}\\varepsilon}{1-\\varepsilon}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Then $f_\\ell^*\\ge(1-\\varepsilon)\\left(F_\\rho(p_\\ell)-\\frac{1}{\\sqrt{m}}\\right)-\\frac{\\sqrt{(q-1)\\rho(1-\\rho)}\\varepsilon}{1-\\varepsilon},f_\\ell^*\\le(1-\\varepsilon)F_\\rho(p_\\ell)+\\varepsilon+\\frac{\\sqrt{(q-1)\\rho(1-\\rho)}\\varepsilon}{1-\\varepsilon}.$",
+      "page": 9
+    },
+    {
+      "problem": "DQI satisfaction fraction with random target sets",
+      "problem family": "Max-LINSAT / DQI",
+      "bound": "(1-\\varepsilon_p)F_\\rho(p)-v\\le f\\le(1-\\varepsilon_p)F_\\rho(p)+\\varepsilon_p+v, \\quad v=2\\sqrt{\\frac{F_\\rho(p)(1-F_\\rho(p))\\varepsilon_p(1-\\varepsilon_p)}{m}}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "$(1-\\varepsilon_p)F_\\rho(p)-v\\le f\\le(1-\\varepsilon_p)F_\\rho(p)+\\varepsilon_p+v,$ $v=2\\sqrt{\\frac{F_\\rho(p)(1-F_\\rho(p))\\varepsilon_p(1-\\varepsilon_p)}{m}}.$",
+      "page": 13
+    }
+  ],
+  "paper": "2609.40036",
+  "usage": {
+    "prompt_tokens": 45556,
+    "completion_tokens": 15242,
+    "total_tokens": 60798,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12360,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

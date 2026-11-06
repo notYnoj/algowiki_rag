@@ -1,0 +1,24 @@
+The edges (_a_<sub>1</sub>_,b_<sub>1</sub>) and (_a<sub>t</sub>,b<sub>t</sub>_) are _new edges_ and so neither of these edges is in \(T'\). In the election between \(T'\) and _N_ when restricted to the vertices of _p_, we have \(\phi(T',N)=t_2-2\ge t-2\) (since \(T'\) loses out on the votes of _a_<sub>1</sub> and _b<sub>t</sub>_) and \(\phi(N,T')=t_1\le t\) (since _N_ preserves all its _t_<sub>1</sub> votes). Thus when restricted to the 2_t_ vertices of _p_, we have \(\phi(N,T')/\phi(T',N)\le t/(t-2)\). Note that _a_<sub>1</sub> and _b<sub>t</sub>_ are indifferent between \(T'\) and _N_ and hence abstain from voting.
+
+If \(t\ge 4\) then we have the desired bound, i.e., \(\phi(N,T')/\phi(T',N)\le t/(t-2)\le 2\). We need to argue out the cases of _t_=2 and _t_=3 separately.
+
+- Suppose _t_=2. Then \(p=\langle a_1,b_1,a_2,b_2\rangle\) and both _a_<sub>1</sub> and _b_<sub>2</sub> are in _W_. So their partners in _T_, i.e., _b_<sub>1</sub> and _a_<sub>2</sub>, are unstable vertices. However unstable vertices form an independent set in _G_, so \((a_2,b_1)\notin E\), contradicting that \((a_2,b_1)\in N\subseteq E\).<tbc>
+
+**-** Suppose _t_=3. Then \(p=\langle a_1,b_1,a_2,b_3,b_3\rangle\), where _a_<sub>1</sub>_,b_<sub>1</sub>_,a_<sub>3</sub>_,b_<sub>3</sub> are unstable vertices (see Fig. 4, left). We claim \(\phi(N\cap p,T'\cap p)\le 2\le\phi(T'\cap p,N\cap p)\). The matching _T_ is an extra-dominant matching (see Definition 3) and so it has a witness \(\unknown\) in _G_<sup>∗</sup> such that \(\alpha_{a_3}=-1\). We use this to show that at most 2 vertices among the 4 vertices _b_<sub>1</sub>_,a_<sub>2</sub>_,b_<sub>2</sub>_,a_<sub>3</sub> prefer _N_ to _T_.<tbc>
+
+(i) Suppose (_a_<sub>2</sub>_,b_<sub>1</sub>) is a blocking edge to _T_. Then \(\alpha_{b_1}=\alpha_{a_2}=1\) and this also implies that \(\alpha_{b_2}=-1\), because \(\alpha_{a_2}+\alpha_{b_2}=\mathsf{wt}_T(a_2,b_2)=0\). So \(\mathsf{wt}_T(a_3,b_2)\le\alpha_{a_3}+\alpha_{b_2}=-2\), i.e., (_a_<sub>3</sub>_,b_<sub>2</sub>) is a (-,-) edge wrt _T_. However the edge (_a_<sub>3</sub>_,b_<sub>3</sub>) is a new edge that was introduced in _G_<sup>∗</sup>, so _b_<sub>3</sub> is _a_<sub>3</sub>’s _last choice_ neighbor in _G_<sup>∗</sup>. Thus (_a_<sub>3</sub>_,b_<sub>2</sub>) cannot be a (-,-) edge wrt _T_ and so (_a_<sub>2</sub>_,b_<sub>1</sub>) cannot be a blocking edge to _T_. That is, this case never happens.<tbc>
+
+(ii) Hence (_a_<sub>2</sub>_,b_<sub>1</sub>) is _not_ a blocking edge to _T_ and so at least one of _a_<sub>2</sub>_,b_<sub>1</sub> prefers _T_ to _N_. We also know that \(\mathsf{wt}_T(a_3,b_2)\le\alpha_{a_3}+\alpha_{b_2}\le 0\) since \(\alpha_{a_3}=-1\). Thus at least one of _a_<sub>3</sub>_,b_<sub>2</sub> prefers _T_ to _N_. So at least 2 vertices among the 4 vertices _b_<sub>1</sub>_,a_<sub>2</sub>_,b_<sub>2</sub>_,a_<sub>3</sub> prefer _T_ to _N_. So \(\phi(N\cap p,T'\cap p)\le 2\le\phi(T'\cap p,N\cap p)\).
+
+_Case 2._ Exactly one endpoint of _p_ is in _W_ and _p_ has an even number of vertices. So \(p=\langle a_1,b_1,\dots,a_t,b_t\rangle\), where \((a_i,b_i)\in T\) and exactly one of _a_<sub>1</sub>_,b<sub>t</sub>_ is in _W_, say \(b_t\in W\). Among the 2_t_ vertices of _p_ in _G_<sup>∗</sup>, we have: \(\phi_{G^*}(T,N)=t_2\ge t\ge t_1=\phi_{G^*}(N,T)\).
+
+The edge (_a<sub>t</sub>,b<sub>t</sub>_) is a new edge and so \((a_t,b_t)\notin T'\). In the election between \(T'\) and _N_ when restricted to these 2_t_ vertices, we have \(\phi(N,T')=t_1\le t\) (since _N_ preserves all its _t_<sub>1</sub> votes from _p_) and \(\phi(T',N)=t_2-1\ge t-1\) votes (since \(T'\) gets all the votes in favor of _T_ other than _b<sub>t</sub>_’s vote). Thus when restricted to these 2_t_ vertices, we have \(\phi(N,T')/\phi(T',N)\le t/(t-1)\le 2\) since \(t\ge 2\).
+
+_Case 3._ Exactly one endpoint of _p_ is in _W_ and _p_ has an odd number of vertices, say 2_t_+1, i.e., let \(p=\langle a_0,b_1,a_1,\dots,a_t\rangle\), where \((a_i,b_i)\in T\) and \(a_t\in W\) (see Fig. 4, right). Among the 2_t_+1 vertices in _p_, we have: \(\phi_{G^*}(T,N)=t_2\ge t+1\) while \(\phi_{G^*}(N,T)=t_1\le t\). Again, the edge (_a<sub>t</sub>,b<sub>t</sub>_) is a new edge and so \((a_t,b_t)\notin T'\).
+
+In the election between \(T'\) and _N_ when restricted to these 2_t_+1 vertices, we have \(\phi(T',N)=t_2-1\ge t\) (since \(T'\) gets all the votes in favor of _T_ other than _a<sub>t</sub>_’s vote) while \(\phi(N,T')=t_1\le t\). Thus when restricted to these 2_t_+1 vertices, \(\phi(N,T')\le t\le\phi(T',N)\). \(\sqcap\sqcup\)
+
+## 3.4 Proofs of Theorem 8 and Theorem 9
+
+We know from Theorem 3 (proved in Section 6) that the popular matching polytope has no compact extended formulation. As mentioned in Section 2.1, this polytope has a compact extended formulation when _G_ admits a _perfect_ stable matching, i.e., when _G_ has no unstable vertex.
+

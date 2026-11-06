@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "weighted tree search",
+      "problem family": "tree search",
+      "bound": "n^{O\\left(\\frac{logn}{\\varepsilon^2}\\right)} time, (1+\\varepsilon)-approximation",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "\\hat{O}(\\log n)-approximation",
+      "quote": "There exists an algorithm running in \\(n^{O\\left(\\frac{logn}{\\varepsilon^2}\\right)}\\) time, providing a \\((1+\\varepsilon)\\)-approximation solution to the weighted tree search problem for any \\(0<\\varepsilon<1\\).",
+      "page": 8
+    },
+    {
+      "problem": "weighted tree search",
+      "problem family": "tree search",
+      "bound": "O(\\sqrt{logn})-approximation in polynomial time",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "\\hat{O}(\\log n)-approximation",
+      "quote": "There is a \\(O(\\sqrt{logn})\\)-approximation polynomial time algorithm for the weighted tree search problem.",
+      "page": 9
+    }
+  ],
+  "paper": "1702.08207",
+  "usage": {
+    "prompt_tokens": 27976,
+    "completion_tokens": 3858,
+    "total_tokens": 31834,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3580,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "epsilon-stable matching in bicoloured graphs",
+      "problem family": "stable marriage",
+      "bound": "\\(T\\le 4+2\\Delta^2/\\epsilon\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists a deterministic distributed algorithm that finds an \\(\\epsilon\\)-stable matching in a bicoloured graph in time \\(T\\le 4+2\\Delta^2/\\epsilon\\).",
+      "page": 3
+    },
+    {
+      "problem": "maximum-weight matching in bicoloured graphs",
+      "problem family": "matching",
+      "bound": "\\((2+\\epsilon)\\)-approximation in time \\(T\\le 4+2\\Delta/\\epsilon\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists a deterministic distributed algorithm that finds a \\((2+\\epsilon)\\)-approximation for maximum-weight matching in bicoloured graphs in time \\(T\\le 4+2\\Delta/\\epsilon\\).",
+      "page": 3
+    },
+    {
+      "problem": "estimating the size of a stable matching",
+      "problem family": "stable marriage",
+      "bound": "\\(25000\\epsilon^{-2}(\\Delta-1)^{3+4\\Delta/\\epsilon}\\ln\\delta^{-1}\\) queries",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For any \\(0<\\delta\\le 1/2\\), \\(0<\\epsilon\\le 1\\), and \\(\\Delta\\ge 3\\), there exists a randomised algorithm that, given access to a preference oracle for a bicoloured graph \\(\\EuScript{G}\\) without isolated nodes, makes at most \\(25000\\epsilon^{-2}(\\Delta-1)^{3+4\\Delta/\\epsilon}\\ln\\delta^{-1}\\) queries to the oracle and outputs with probability at least \\(1-\\delta\\) an estimate \\(\\hat{m}\\) such that \\(\\left|\\hat{m}-\\left|M\\right|\\right|\\le\\epsilon|M|\\) where M is a stable matching in \\(\\EuScript{G}\\).",
+      "page": 3
+    }
+  ],
+  "paper": "0812.4893",
+  "usage": {
+    "prompt_tokens": 11147,
+    "completion_tokens": 14497,
+    "total_tokens": 25644,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13957,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

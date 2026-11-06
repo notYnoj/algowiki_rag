@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "poset selection",
+      "problem family": null,
+      "bound": "O(k + OPT(G,k))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a poset selection algorithm using O(k+OPT(G,k)) comparisons for each input (G,k,≺).",
+      "page": 2
+    },
+    {
+      "problem": "poset selection",
+      "problem family": null,
+      "bound": "O(OPT(G,k) \\cdot \\log(k/OPT(G,k)))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a poset selection algorithm using O(OPT(G,k)·log(k/OPT(G,k))) comparisons for each input (G,k,≺) when G is a rooted forest and OPT(G,k)≤1/2 k.",
+      "page": 2
+    },
+    {
+      "problem": "poset selection",
+      "problem family": null,
+      "bound": "O(OPT(G,k) \\cdot \\log\\log(k/OPT(G,k))) \\text{ or } O(OPT(G,k) \\log OPT(G,k))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a poset selection algorithm using O(OPT(G,k)·loglog(k/OPT(G,k))) comparisons for each input (G,k,≺) when G is a rooted forest where each node of depth less than k has at least one child, and OPT(G,k)≤1/4 k. Alternatively, the number of comparisons can be bounded by O(OPT(G,k)logOPT(G,k)).",
+      "page": 3
+    },
+    {
+      "problem": "weighted soft heap",
+      "problem family": null,
+      "bound": "O(w \\cdot \\log(1/\\varepsilon)) \\text{ for delete, } O(1) \\text{ for all other operations}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Weighted soft heaps can be implemented with amortized time O(w·log(1/ε)) for delete, where w is the weight of the deleted element, and O(1) amortized time for all other operations. The amortized number of comparisons performed by increase-weight is zero.",
+      "page": 12
+    },
+    {
+      "problem": "poset selection",
+      "problem family": null,
+      "bound": "O(k + OPT(P,k)) \\text{ comparisons and } O(k + OPT(P,k) + e^*) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists an algorithm for poset selection that takes O(k+OPT(P,k)) comparisons and O(k+OPT(P,k)+e*) time for each instance (P,k), where e* is the number of edges incident to some prefix of P of size O(k+OPT(P,k)).",
+      "page": 22
+    },
+    {
+      "problem": "poset selection",
+      "problem family": "forests",
+      "bound": "OPT(F,k) \\ge \\frac{1}{2} c^*(F,k-1) - 1",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For each forest F on n nodes and k∈[n], we have OPT(F,k)≥1/2 c*(F,k-1)-1.",
+      "page": 9
+    },
+    {
+      "problem": "poset selection",
+      "problem family": "k-unbounded forests",
+      "bound": "OPT(F,k) \\ge \\Omega(m \\log \\frac{k-k'}{m})",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let k,k'∈N+ with k'<k and let F be a k-unbounded forest. Let m=c*(T,k'). Then OPT(F,k)≥Ω(m log((k-k')/m)).",
+      "page": 10
+    }
+  ],
+  "paper": "2610.32731",
+  "usage": {
+    "prompt_tokens": 26203,
+    "completion_tokens": 9345,
+    "total_tokens": 35548,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8425,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Newton step for systems with banded elemental Jacobians",
+      "problem family": null,
+      "bound": "\\mathcal{O}(qm^2n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}(qmn^2)",
+      "quote": "Superiority of the matrix-free Newton method follows immediately for \\(m\\checkmark n\\) as \\(\\mathcal{O}(qm^2n)<\\mathcal{O}(qmn^2)\\).",
+      "page": 6
+    },
+    {
+      "problem": "Newton step for systems with tridiagonal elemental Jacobians",
+      "problem family": null,
+      "bound": "\\mathcal{O}(qn)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\max(\\mathcal{O}(qn^2),\\mathcal{O}(n^3))",
+      "quote": "The total computational cost of the matrix-free Newton method adds up to \\(\\mathcal{O}(qn)<\\max(\\mathcal{O}(qn^2),\\mathcal{O}(n^3))\\).",
+      "page": 5
+    },
+    {
+      "problem": "Matrix-Free Newton Step",
+      "problem family": null,
+      "bound": "NP-complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.9. Matrix-Free Newton Step is NP-complete.",
+      "page": 10
+    }
+  ],
+  "paper": "2305.01669",
+  "usage": {
+    "prompt_tokens": 9665,
+    "completion_tokens": 4994,
+    "total_tokens": 14659,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4659,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

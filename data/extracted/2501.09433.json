@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "3D textured mesh generation",
+      "problem family": null,
+      "bound": "< 30\\text{ seconds}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "This pipeline generates high-quality 3D assets in less than 30 seconds, providing ready-to-use outputs for commercial applications.",
+      "page": 1
+    }
+  ],
+  "paper": "2501.09433",
+  "usage": {
+    "prompt_tokens": 12100,
+    "completion_tokens": 7494,
+    "total_tokens": 19594,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7392,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

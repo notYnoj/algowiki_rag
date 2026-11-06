@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "L-comoment covariance matrix computation",
+      "problem family": null,
+      "bound": "$O(n^2)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^6)$ time",
+      "quote": "For tie-free observations and fixed moment dimension, the full covariance matrix of the sample means, the second and third L-comoments, and the marginal second L-moments can be computed in O(n^2) arithmetic and O(n^2) memory using bivariate rank-prefix sums.",
+      "page": 23
+    },
+    {
+      "problem": "Leading asymptotic covariance estimation for L-comoments",
+      "problem family": null,
+      "bound": "$O(n \\log n)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Consequently, for tie-free observations, all n leave-one-out statistics, the empirical first projections (4.10), and $\\widehat{\\Omega}_n$ are computed in $O(n\\log n)$ time for fixed moment dimension.",
+      "page": 24
+    }
+  ],
+  "paper": "2610.28387",
+  "usage": {
+    "prompt_tokens": 41921,
+    "completion_tokens": 12595,
+    "total_tokens": 54516,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12336,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

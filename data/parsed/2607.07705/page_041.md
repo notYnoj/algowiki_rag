@@ -1,0 +1,24 @@
+the weakly connected component of \(v_\ell\) to the weakly connected component of _v<sub>r</sub>_ in _T-e_. Since \(e\notin E(X)\) and \(X\subseteq T+B\), _X_ then does not contain a path from \(v_\ell\) to _v<sub>r</sub>_.
+
+We move on to the converse direction. Suppose that _X_ satisfies \((F_0,R_0,B'_0)\) and contains no path from _u_ to _v_. Then for some pair of consecutive marked vertices \(v_\ell\) and _v<sub>r</sub>_, the path from \(v_\ell\) to _v<sub>r</sub>_ is also not present in _X_ (as otherwise the path from _u_ to _v_ can be assembled from these paths). If \(\mathcal{C}_{\ell,r}\) is obtained using A, Claim 20 implies that _X_ will satisfy \(\mathcal{C}_{\ell,r}\), and therefore C. Otherwise, since _X_ contains no path from \(v_\ell\) to _v<sub>r</sub>_, it cannot contain the edge \((v_\ell,v_r)\). Hence, \((v_\ell,v_r)\in S\). Given that _X_ satisfies \((F_0,R_0,B'_0)\), it follows that _X_ satisfies \((F_0,R,B'_0)\) as well, which belongs to C.
+
+The proof is completed.
+
+Finally, we combine this section’s results into the main tool for handling allowed edges.
+
+**Lemma 10.** _If_ I=(_G,_**w**_,k_) _is an_ Inv_-respecting instance of MAS/_\(\mathrm{Max}ST(\mathbb{Q}_{\ge 1})\)_, then there exists a family of constraint sets_ \(\{\mathcal{C}_{A^\prime}|A'\subseteq A\}\) _with the following properties:_
+
+• _for each_ \(S\subseteq E(T)\) _and_ \(A'\subseteq A\)_, if_ \(T-S+\mathrm{Inv}(S)+A'\) _satisfies_ \(\mathcal{C}_{A^\prime}\)_, then it is acyclic;_<tbc>
+
+• _there exist_ \(S\subseteq E(T)\) _and_ \(A'\subseteq A\) _such that_ \(T-S+\mathrm{Inv}(S)+A'\) _is a solution to_ I _that satisfies_ \(\mathcal{C}_{A^\prime}\);<tbc>
+
+• _for each triple_ \((F,R,B')\in\mathcal{C}_{A^\prime}\)_, it holds that_ \(\mathbf{w}(B')\le(\mathbf{w}(A)+k)^2\)_, and each of the sets F and R can be represented as a union of at most_ 4(**w**(_A_)+_k_+1)<sup>4</sup> _directed paths in T._
+
+_Proof._ For each \(A'\), we construct \(\mathcal{C}_{A^\prime}\) as follows. Let \(V'\) be the set of vertices incident to \(A'\). We first fix a set \(B'\subseteq B\) of weight at most (**w**(_A_)+_k_)<sup>2</sup> and a set <o>_P_</o> such that the graph \(G'\) from Claim 14 constructed by \(A'\) and <o>_P_</o> is acyclic. Additionally, for each \((a,b)\in B'\), we fix two edges on the directed path in _T_ from _b_ to _a_ (such a path exists by Observation 1).
+
+For a fixed choice of <o>_P_</o>, \(B'\), and pairs of edges, we start by constructing sets _F_<sub>0</sub> and _R_<sub>0</sub>. For each \((a,b)\in B'\), let _e_<sub>1</sub> and _e_<sub>2</sub> be the chosen edges on the path from _b_ to _a_ in _T_. Assume that _e_<sub>1</sub> appears earlier on this path than _e_<sub>2</sub>. Then we add _e_<sub>1</sub> and _e_<sub>2</sub> to _R_<sub>0</sub>, and we add to _F_<sub>0</sub> all edges lying on the paths in _T_ from _b_ to the start of _e_<sub>1</sub> and from the end of _e_<sub>2</sub> to _a_. By construction, \((F_0,R_0,B')\) is a strict restriction triple. Note that the edge sets added to _R_<sub>0</sub> and _F_<sub>0</sub> for a fixed element of \(B'\) are the unions of two directed paths in _T_. Then _R_<sub>0</sub> and _F_<sub>0</sub> can each be represented as a union of at most \(2|B'|\) directed paths in _T_.
+
+For each \((u,v)\in\overline{P}\), we apply Lemma 9 to the vertices _u,v_ and the triple \(\mathcal{R}:=(F_0,R_0,B')\) and obtain a constraint set C<sub>R_,u,v_</sub>. We note that the lemma guarantees that for each \((F,R,B'')\in\mathcal{C}_{\mathcal{R},u,v}\), we have \(B''=B'\). For each choice of triples \((F_{u,v},R_{u,v},B')\in\mathcal{C}_{\mathcal{R},u,v}\) for all \((u,v)\in\overline{P}\), we add the triple \((\bigcup F_{u,v},\bigcup R_{u,v},B')\) to \(\mathcal{C}_{A^\prime}\). This completes the construction.
+
+We now verify the required properties one by one. First, suppose that a subgraph \(X:=T-S+\mathrm{Inv}(S)+A'\) with \(S\subseteq E(T)\) and \(A'\subseteq A\) satisfies \(\mathcal{C}_{A^\prime}\). Then \(X':=X-A'\) also satisfies this constraint set. Consider a satisfied restriction triple \((\bigcup F_{u,v},\bigcup R_{u,v},B')\in\mathcal{C}_{A^\prime}\) and the corresponding sets <o>_P_</o>, _F_<sub>0</sub> and _R_<sub>0</sub>. It follows that for each \((u,v)\in\overline{P}\), \(X'\) satisfies \((F_{u,v},R_{u,v},B')\). Let \(\mathcal{R}:=(F_0,R_0,B')\). Since \((F_{u,v},R_{u,v},B')\in\mathcal{C}_{\mathcal{R},u,v}\), \(X'\) also satisfies this constraint set. Consequently, by Lemma 9, \(X'\) does not contain a directed path from _u_ to _v_ for every \((u,v)\in\overline{P}\). We are now in a position to apply Claim 14. Indeed, by Lemma 1, \(X'\) is acyclic. Moreover, by the choice of <o>_P_</o>, the graph \(G'\) constructed by <o>_P_</o> and \(A'\) is also acyclic. Then we obtain that \(X=X'+A\) is acyclic too.
+

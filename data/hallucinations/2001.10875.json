@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Regret-equal stable matching",
+      "problem family": "Stable Marriage with Incomplete lists (SMI)",
+      "bound": "$O(d_0 nm)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Algorithm REDI always terminates within O(d_0 nm) time, where d_0=|d_U(M_0)-d_W(M_0)|, n is the number of men or women in I, m is the total length of all preference lists and M_0 is the man-optimal stable matching.",
+      "page": 7
+    },
+    {
+      "problem": "Min-regret sum stable matching",
+      "problem family": "Stable Marriage with Incomplete lists (SMI)",
+      "bound": "$O(d_s m)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Algorithm MRS produces a min-regret sum stable matching in O(d_s m) time, where d_s=d_U(M_z)-d_U(M_0), m is the total length of all preference lists, and M_0 and M_z are the man-optimal and woman-optimal stable matchings respectively.",
+      "page": 9
+    },
+    {
+      "problem": "Regret-equal stable matching with minimum cost",
+      "problem family": "Stable Marriage with Incomplete lists (SMI)",
+      "bound": "$O(n m^{2.5})$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "This makes a total of O(n m^{2.5}) time to find a regret-equal stable matching with minimum cost.",
+      "page": 8
+    }
+  ],
+  "paper": "2001.10875",
+  "usage": {
+    "prompt_tokens": 31776,
+    "completion_tokens": 6788,
+    "total_tokens": 38564,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6404,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

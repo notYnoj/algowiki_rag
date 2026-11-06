@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "High-recall nearest-neighbor search with inverted-file indexes",
+      "problem family": "Nearest-neighbor search",
+      "bound": "\\text{Exact top-}k \\text{ of probed lists } S(\\mathbf{q}) \\text{ via certified screening}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "IVF-Flat (exact top-}k \\text{ but scans all probed vectors)",
+      "quote": "We prove that LYCHEE returns exactly the _k_ nearest vectors of the probed lists, which is the answer of an inverted-file search at full precision, while it reads a few hundred full vectors per query regardless of the number of probed lists.",
+      "page": 1
+    },
+    {
+      "problem": "Inverted-file nearest-neighbor search",
+      "problem family": "Nearest-neighbor search",
+      "bound": "O(|S(\\mathbf{q})|(m+5) + bD + |C|\\log|C| + V(\\mathbf{q})D)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(|S(\\mathbf{q})|D) for IVF-Flat",
+      "quote": "Algorithm 1 runs in time _O_(|_S_(**q**)|(_m_+5)+_bD_+|_C_|log|_C_|+_V_(**q**)_D_) per query, where _V_(**q**) counts the survivors verified in Lines 6 to 10.",
+      "page": 5
+    },
+    {
+      "problem": "Inverted-file nearest-neighbor search",
+      "problem family": "Nearest-neighbor search",
+      "bound": "O(b + |C|)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The extra space per query is _O_(_b_+|_C_|).",
+      "page": 5
+    },
+    {
+      "problem": "Inverted-file nearest-neighbor search",
+      "problem family": "Nearest-neighbor search",
+      "bound": "2(m+5)+4D \\text{ bytes (GPU)} \\; 2(m+5)+4D/s \\text{ bytes (host)}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Device memory per vector is 2(_m_+5)+4_D_ bytes when full vectors reside on the GPU and 2(_m_+5)+4_D/s_ bytes when they reside in pinned host memory, since only the anchors stay on the GPU at full precision.",
+      "page": 5
+    }
+  ],
+  "paper": "2610.30697",
+  "usage": {
+    "prompt_tokens": 16658,
+    "completion_tokens": 8947,
+    "total_tokens": 25605,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8355,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

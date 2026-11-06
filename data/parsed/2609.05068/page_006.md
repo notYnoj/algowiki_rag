@@ -1,0 +1,10 @@
+<tbc>proposed in [16] ; more details will be provided in Section 4.2. Furthermore, [15] considers an outer-approximation of a big-M reformulation of the delay constraints. The same authors study in [17] a robust version of the problem, where a random component is added to the delay function. While these works on the delay-constrained multi-commodity flow problem considered a set of paths given as input, in [32], the authors study a branch-and-price approach to solve a more general problem where the paths are built through an arc-node representation of the problem. In another approach, [10] and [28] provide efficient ways to compute locally optimal solutions of the delay- constrained multi-commodity flow problem.
+
+Another form of delay constraints, where delays are proportional to link loads, has been considered in [8], where the authors prove the NP- completeness of the problem and provide polynomial approximations under assumptions on the paths and graph topologies.
+
+## On convex envelopes
+
+The convex relaxation of the delay constraints in Section 3 relates to the extensive literature on convex envelopes and, more generally, on convex under-estimator computations. The best known and probably most widely used convex-estimator is obtained through the McCormick envelopes of the bilinear function _xy_ on a rectangular domain [25]. Several studies investigate the convex envelopes of function classes over special domains. We review here the works that are most closely related to the material presented in Section 3. [30] studies bilinear functions over "D-polytopes" where a D- polytope is such that all edges have a non-negative slope. Notice that the function studied in Section 3 is not bilinear and the polytope considered there is not a D-polytope.
+
+More recently, [23] studied the convex envelope of bivariate functions over polytopes under the assumption that the Hessian matrix is indefinite and that the restriction of the function along each edge is either concave or strictly convex. Their approach relies on solving a convex optimization problem.
+

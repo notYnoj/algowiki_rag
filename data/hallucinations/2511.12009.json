@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "N-Queens solution counting (27-Queens)",
+      "problem family": null,
+      "bound": "28.4 days using 8 RTX 5090 GPUs",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "17 months (estimated GPU verification time from [7])",
+      "quote": "Under the proposed optimization framework, we successfully verified the 27-Queens problem in just 28.4 days using eight RTX 5090 GPUs, thereby confirming the correctness of Preußer’s computational results.",
+      "page": 1
+    },
+    {
+      "problem": "N-Queens solution counting (28-Queens)",
+      "problem family": null,
+      "bound": "approximately 11 months using 8 RTX 5090 GPUs",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "over two decades (estimated for leading CUDA implementation [7])",
+      "quote": "Moreover, we have reduced the projected solving time for the next open case--the 28-Queens problem--to approximately 11 months, making its resolution computationally feasible.",
+      "page": 1
+    },
+    {
+      "problem": "N-Queens solution counting (26-Queens)",
+      "problem family": null,
+      "bound": "2.5 days using 8 RTX 5090 GPUs",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "~9 months (FPGA from Preußer et al.)",
+      "quote": "For the 26-queens problem, we successfully calculated the number of solutions under 8 RTX 5090 GPUs in 2.5 days.",
+      "page": 9
+    },
+    {
+      "problem": "N-Queens solution counting (24-Queens)",
+      "problem family": null,
+      "bound": "over 10× speedup on 8 A100 GPUs and over 26× acceleration on 8 RTX 5090 GPUs compared to [7]",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "16 hours on 8 NVIDIA A100 GPUs (DoubleSweep-Light from [7])",
+      "quote": "Notably, compared with the state-of-the-art CUDA implementation [7], our solution achieves over 10× performance improvement for the 24-queens problem under same configuration(8 A100 GPUs), and achieves over 26× performance improvement under 8 RTX 5090 GPUs.",
+      "page": 9
+    }
+  ],
+  "paper": "2511.12009",
+  "usage": {
+    "prompt_tokens": 11848,
+    "completion_tokens": 8368,
+    "total_tokens": 20216,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7773,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "maximum integer multiflow (maximization setting)",
+      "problem family": "planar",
+      "bound": "\\Omega(1) fraction of the value of f",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let (G,H,u) be a planar maximization instance where u is integral. Let f be a feasible fractional flow that is uncrossed. There exists a feasible integral flow f' that achieves an \\Omega(1) fraction of the value of f. This integral flow can be computed in polynomial time.",
+      "page": 3
+    },
+    {
+      "problem": "minimum congestion integer multiflow and unsplittable flow",
+      "problem family": "planar congestion",
+      "bound": "u'(e) \\le 2u(e) \\text{ and } u''(e) < 2u(e) + d_{\\max}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let (G,H,u,d) be a planar congestion instance where u,d are integral. Let f be a feasible fractional multiflow that is strongly uncrossed. Then there exists both: 1. an integral multiflow f' that is feasible for (G,H,u',d) where u'(e)\\le 2u(e) for each e\\in E(G), and 2. an unsplittable multiflow f'' that is feasible for (G,H,u'',d) where u''(e)<2u(e)+d_max for every e\\in E(G), where d_max=max_{h\\in E(H)}d(h). The integral and unsplittable multiflows can be computed in polynomial time.",
+      "page": 3
+    },
+    {
+      "problem": "maximum edge-disjoint paths, maximum node-disjoint paths, maximum integer multiflow, minimum congestion integer multiflow",
+      "problem family": "pairwise-planar",
+      "bound": "constant-factor approximation",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exist polynomial time constant-factor approximation algorithms for maximum edge-disjoint paths and maximum node-disjoint paths (and more generally, maximum integer multiflow), as well as minimum congestion integer multiflow, for inputs where (G,H) is pairwise-planar.",
+      "page": 3
+    },
+    {
+      "problem": "integral flow-multicut gap",
+      "problem family": "pairwise-planar",
+      "bound": "O(1) times the maximum value of an integral multiflow",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For any maximization instance (G,H,u) where (G,H) is pairwise-planar, the minimum capacity of a multicut is at most O(1) times the maximum value of an integral multiflow.",
+      "page": 3
+    },
+    {
+      "problem": "maximum uncrossed fractional multiflow",
+      "problem family": "planar",
+      "bound": "2^{\\Omega(\\log^{1-\\epsilon} n)} \\text{ inapproximability and no } n^{O(1/(\\log\\log n)^2)} \\text{ approximation}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For planar G, maximum uncrossed fractional multiflow is not approximable to within a factor of 2^{\\Omega(log^{1-\\epsilon} n)} for any \\epsilon>0 assuming that NP\\unknown\\subseteq DTIME(n^{polylog n}). Moreover, there is no n^{O\\big(\\frac{1}{(loglogn)^2}\\big)}-approximation polynomial-time algorithm assuming that for some constant \\delta>0, NP\\unknown\\subseteq DTIME(2^{n^\\delta}). These results hold even when G is maximum degree 3 (or even G is a wall graph) and the capacities are unit.",
+      "page": 4
+    },
+    {
+      "problem": "feasible fractional uncrossed multiflow (congestion setting)",
+      "problem family": "planar congestion",
+      "bound": "NP-complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "It is NP-complete to determine whether planar congestion instance (G,H,u,d) has a feasible fractional uncrossed multiflow, even with unit-valued capacities and demands.",
+      "page": 4
+    },
+    {
+      "problem": "uncrossed edge-disjoint paths",
+      "problem family": "planar with bounded face demands",
+      "bound": "polynomial time algorithm",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For instances where G is planar, the edges of H are incident with a bounded number of faces, and the capacities and demands are unit-valued, there is a polynomial time algorithm to find a feasible integral uncrossed multiflow for (G,H,u,d) or declare that none exists.",
+      "page": 4
+    },
+    {
+      "problem": "uncrossed edge-disjoint paths to planar node-disjoint paths reduction",
+      "problem family": "planar edge-disjoint paths",
+      "bound": "|V(\\hat{G})| \\le c\\Delta^3|V(G)|",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Suppose that G,H is a planar instance of edge-disjoint paths. We can compute a planar instance \\hat{G},\\hat{H} of node-disjoint paths such that G,H has an integral uncrossed flow if and only if \\hat{G},\\hat{H} has (totally) node-disjoint paths for the demands in \\hat{H}. Moreover, \\hat{G},\\hat{H} can be computed in polytime, and |V(\\hat{G})|\\le c\\Delta^3|V(G)| where \\Delta is the maximum degree in G and c is a constant.",
+      "page": 22
+    }
+  ],
+  "paper": "2511.00254",
+  "usage": {
+    "prompt_tokens": 42646,
+    "completion_tokens": 9850,
+    "total_tokens": 52496,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 39024
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8538,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

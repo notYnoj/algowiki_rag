@@ -1,0 +1,8 @@
+<tbc>as described by the partition. That is, we basically keep track of how many vertices are contained in the partial solution, which vertices in the portal set make up the interface to the rest of the graph, and which of these vertices are connected in the partial solution.
+
+**Theorem 5.** Maximum-Weight Induced Forest _can be solved in_ \(2^{\tilde{\mathcal{O}}(\sqrt{k})}n^{2.49}\) _time for planar input graphs._
+
+_Proof._ We again follow the recipe presented at the start of this section. To this end, we first choose \(\gamma(d)=2^{80\sqrt{d}log^{2(d)}}\big(2^{66000\sqrt{d}log^{10(d)}}\big)^2d\), \(\rho=2\), and \(\alpha_\pi=1\). The set \(S_\pi\) will contain the weight function _w_. A request \(r\in R_\pi(d,G,B,\mathcal{M},S_\pi)\) will be a triple \((\mathcal{M},P,\ell)\), where \(P\in\mathcal{M}\) is a partition of M and \(\ell\le d\). The output for a request is the maximum weight of an induced forest with at most \(\ell\) vertices and which contains exactly the vertices in M from _B_. It is easy to verify that \(S_\pi\) can be maintained in O(_n_<sup>2</sup>) time. We next show that \(R_\pi(d,G,B,\mathcal{M},S_\pi)\) can be computed in \(\mathcal{O}(\gamma(d)n^\rho)\) time. By Lemma 14, the number of possible partitions for a given pebble set is in \(\mathcal{O}(2^{66000\sqrt{d}log^{10(d)}})\) and all these partitions can be enumerated in \(\mathcal{O}(2^{66000\sqrt{d}log^{10(d)}}d)\) time. The number of possible values for \(\ell\le d\) is _d_, yielding a running time of O(2<sup>66000\sqrt{d}log^{10(d)}d^2)</sup>) for computing \(R_\pi(d,G,B,\mathcal{M},S_\pi)\).
+
+For the third step of our recipe, we define Maximum-Weight Induced Forest Request as follows.
+

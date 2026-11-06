@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{39/20}) time, \\Omega(\\lambda^3) approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Given strings A,B of length |A|=|B|=n with ||lcs(A,B)||=\\lambda, we can approximate the length of the LCS between the two strings within a factor \\Omega(\\lambda^3) in time \\widetilde{O}(n^{39/20}).",
+      "page": 13
+    },
+    {
+      "problem": "Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "n^{2-\\Omega_{\\epsilon\\lambda}(1)} time, (1-\\epsilon)\\lambda^2 approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Given strings A,B of length |A|=|B|=n with ||lcs(A,B)||=\\lambda where \\lambda is constant, we can approximate the length of the LCS between the two strings within a factor (1-\\epsilon)\\lambda^2 in n^{2-\\Omega_{\\epsilon\\lambda}(1)} time for any constant 0<\\epsilon<1.",
+      "page": 14
+    },
+    {
+      "problem": "Longest Common Subsequence (LCS) over balanced alphabet",
+      "problem family": null,
+      "bound": "O(n^{39/20}) time, O(|\\Sigma|^{3/4}) approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "1/|\\Sigma| approximation in linear time",
+      "quote": "Given a pair of strings (A,B) of length n over alphabet \\Sigma that satisfy the balance condition, we can approximate their LCS within an O(|\\Sigma|^{3/4}) factor in time O(n^{39/20}).",
+      "page": 15
+    },
+    {
+      "problem": "Longest Increasing Subsequence (LIS)",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{17/20}) time, \\Omega(\\lambda^3) approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Given a length-n sequence A with lis(A)=n\\lambda. We can approximate the length of the LIS within a factor of \\Omega(\\lambda^3) in time \\widetilde{O}(n^{17/20}).",
+      "page": 16
+    },
+    {
+      "problem": "Longest Increasing Subsequence (LIS)",
+      "problem family": null,
+      "bound": "\\widetilde{O}(\\lambda^{-7}\\sqrt{n}) time, \\Omega(\\lambda^3) approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Given a length-n sequence A such that lis(A)=n\\lambda where \\lambda\\in[1/n,1] is unknown to the algorithm. There is an algorithm that runs in time \\widetilde{O}(\\lambda^{-7}\\sqrt{n}) and outputs a number est such that \\Omega(\\mathsf{lis}(A)\\lambda^3)\\le\\mathsf{est}\\le O(\\mathsf{lis}(A)).",
+      "page": 52
+    },
+    {
+      "problem": "Longest Increasing Subsequence (LIS)",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^\\kappa\\cdot\\lambda^{-4^{O(1/\\kappa)}}) time, \\lambda^{4^{O(1/\\kappa)}} approximation factor",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Let \\kappa be a constant of (0,1) and \\lambda\\in(0,1). There exists a \\widetilde{O}(n^\\kappa\\cdot\\lambda^{-4^{O(1/\\kappa)}}) time algorithm for lis with approximation factor \\lambda^{4^{O(1/\\kappa)}} and success probability 1-exp(-\\Omega(\\log^3 n)).",
+      "page": 56
+    }
+  ],
+  "paper": "2111.10538",
+  "usage": {
+    "prompt_tokens": 57458,
+    "completion_tokens": 7727,
+    "total_tokens": 65185,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6779,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

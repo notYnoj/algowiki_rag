@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "O(IB_t C_\\ell + IB_t^2)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "DPBB returns a global optimizer of (8). Let C_l denote the cost of computing each value l_{i,t}(d). The total computational cost is O(IB_t C_l + IB_t^2).",
+      "page": 10
+    },
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "O(IB_t C_\\ell)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If, for every item i, D_{i,t}(0) \\ge D_{i,t}(1) \\ge \\cdots \\ge D_{i,t}(B_t-1), then GBB returns a global optimizer of (8). Its computational cost is O(IB_t C_l).",
+      "page": 10
+    },
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "\\mathrm{EOC}(\\mathcal{H}_t)\\rightarrow 0",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "EOC(\\mathcal{H}_t)\\rightarrow 0.",
+      "page": 13
+    },
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "\\limsup_{t\\rightarrow\\infty}-\\frac{\\log \\mathrm{EOC}(\\mathcal{H}_t)}{\\sum_i N_i(t)} \\le \\Gamma^*(\\theta^0)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Every sampling rule satisfies limsup_{t\\rightarrow\\infty} -log EOC(\\mathcal{H}_t) / \\sum_i N_i(t) \\le \\Gamma^*(\\theta^0).",
+      "page": 15
+    },
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "\\lim_{t\\rightarrow\\infty}-\\frac{\\log \\mathrm{EOC}(\\mathcal{H}_t)}{\\sum_i N_i(t)} \\ge \\frac{1}{2}\\Gamma^*(\\theta^0)",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Run Algorithm 3 with threshold q^\\dagger(t). Then lim_{t\\rightarrow\\infty} -log EOC(\\mathcal{H}_t) / \\sum_i N_i(t) \\ge 1/2 \\Gamma^*(\\theta^0).",
+      "page": 16
+    },
+    {
+      "problem": "Bayesian top-k identification",
+      "problem family": "Bayesian top-k identification",
+      "bound": "-\\frac{\\log \\mathrm{EOC}(\\mathcal{H}_t)}{\\sum_i N_i(t)} \\rightarrow \\Gamma(w(q_0);\\theta^0) \\ge \\left(\\sum_{i=1}^I 1/d_i(\\theta_i^0,q_0)\\right)^{-1}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Assume q(t) \\to q_0 \\in (\\theta_{k+1}^0,\\theta_k^0). Then ... -log EOC(\\mathcal{H}_t) / \\sum_i N_i(t) \\to \\Gamma(w(q_0); \\theta^0), ... \\Gamma(w(q_0); \\theta^0) \\ge (\\sum_{i=1}^I 1/d_i(\\theta_i^0, q_0))^{-1}.",
+      "page": 16
+    }
+  ],
+  "paper": "2610.26407",
+  "usage": {
+    "prompt_tokens": 45337,
+    "completion_tokens": 10304,
+    "total_tokens": 55641,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9424,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,24 @@
+To see that it is weaker than Talagrand’s _L_<sub>1</sub>-_L_<sub>2</sub> inequality, consider for example _X_<sub>1</sub>_,...,X<sub>n</sub>_ independent Bernoulli variables of parameter 1/2, and _S_ defined on {0,1}_<sup>n</sup>_ by _S(x_<sub>1</sub>_,...,x<sub>n</sub>_):=_x_<sub>1</sub>_...x_<sub>_n/_2</sub> (assuming _n_ is even). Then, for any \(j\in\{1,\dots,n/2\}\), \(\|\tau_jS\|_1=(1/2)^\frac{n}{2}-1\) and \(\|\tau_jS\|_2=\sqrt{\|\tau_jS\|_1}\). So on the one hand, Talagrand’s inequality gives a bound of order \((1/2)^\frac{n}{2}-1\), which is optimal, while on the other hand, our weaker bound gives an upper bound of order \(n(1/2)^\frac{n}{2}-1\).
+
+## 4 On the variance of the length of longest common subsequences
+
+To finish these notes, we present some applications of the above inequalities to subsequences problems, in particular to lower-bounding the variance of the length of the longest common subsequences between two random words. For (_x_<sub>1</sub>_,...,x<sub>s</sub>_), (_y_<sub>1</sub>_,...,y<sub>t</sub>_) two sequences taking values in a finite set A, we denote by \(LCS(x_1\cdots x_s;y_1\cdots y_t)\) the largest integer _k_ such that there exists \(1\le i_1<\cdots<i_k\le s\), \(1\le j_1<\cdots<j_k\le t\) satisfying _a_<sub>_i_<sub>1</sub></sub>=_b_<sub>_j_<sub>1</sub></sub>_,...,a<sub>i<sub>k</sub></sub>=b<sub>j<sub>k</sub></sub>_, or 0 if there is no such integer. In the sequel, we take A={1_,...,m_} (for some _m_ we specify in each case), _X_<sub>1</sub>_,...,X<sub>n</sub>,...Y_<sub>1</sub>_,...,Y<sub>n</sub>,..._ i.i.d. random variables taking values in A (according to a distribution we specify), and consider the length of the longest common subsequences of these two random words, written \(LCS(X_1\cdots X_n;Y_1\cdots Y_n)\) or simply _LC<sub>n</sub>_.
+
+### 4.1 A generic upper bound
+
+Via the Efron-Stein inequality, the upper bound \(\mathrm{Var}S\le nB_1\) was already obtained \[21\]. Let us study the variance of _LC<sub>n</sub>_ with our approach.
+
+Let now _Z_<sub>1</sub>_,...,Z_<sub>2_n_</sub> be _i.i.d._ Bernoulli random variables of parameter 1/2, and consider the _B<sub>k</sub>_’s of the function \(S(Z_1,\dots,Z_{2n}):=LCS(Z_1\cdots Z_{2n})=LC_n\). We know that \(\mathrm{Var}LC_n\le 2nB_1(2n)\). Using (3.6), \(B_1(2n)\le 1/4\) so \(\mathrm{Var}LC_n\le n/2\) (at result already known to \[21\]. But this last bound can be slightly improved: note that by symmetry of the zeros and ones in _LC<sub>n</sub>_ (that is, if \(\bar{Z}_i:=1-Z_i,i\in\{1,\dots,2n\}\), \(S(Z)=S(\bar{Z})\)), \(\mathbb{E}\tau_iS\)=0 so _B_<sub>2_n_</sub>(2_n_)=0. By convexity, \(B_1(2n)+\cdots+B_{2n}(2n)\le 2n(B_1(2n)+B_{2n}(2n))/2\), so \(\mathrm{Var}LC_n\le n/4\).
+
+In case of an alphabet {1_,...,m_}, conditioning on \(X_i\neq X'_i\) we get \(B_1(2n)\le\left(1-\sum_{k=1}^mp_k^2\right)/2\), and when additionally _B_<sub>2_n_</sub>(2_n_)=0, then \(\mathrm{Var}LC_n\le\left(1-\sum_{k=1}^mp_k^2\right)n/2\), which improves, by a factor of two, on the upper bound obtained in \[21\] (see also \[13\]). The condition _B_<sub>2_n_</sub>(2_n_)=0 is realized, for instance, when \(p_1=\cdots=p_m=1/m\) (by symmetry).
+
+In the remaining part of this manuscript, we focus on various lower bounds on the variance of _LC<sub>n</sub>_. Since by Theorem 1.2, \((B_k)_{1\le k\le 2n}\) is, in particular, non-decreasing,
+
+\(\mathrm{Var}LC_n\ge 2nB_{2n},\) (4.1)
+
+and this last inequality we will of use throughout this section. As a first instance, \[19, Theorem 2.1\] provides a lower bound on the variance of _LC<sub>n</sub>_, in the Bernoulli case, proving that when _p_ is smaller than some universal (but unspecified and extremely small) constant, the variance is of order _n_, see also \[13\] for more explicit bounds. To obtain this results, the authors of \[19\] first show Theorem 2.2 there, and then prove that it implies a variance lower bound of order _n_. The proof of this implication is long and we aim to show that the jackknives tools we developed greatly simplifies it. (This methodology also simplifies, in the quadratic case, the implication of \[13, Theorem 2.1\] towards the linear lower bound.) With our approach, we also generalize results for the case where one letter is omitted. We also proceed to prove, in the binary case, another slightly weaker bound: for some \(p_1\in(0.096,0.5)\) (so not as small as in \[19\] or \[13\]), or \(p_2\in(0.5,0.904)\), \(\mathrm{limsup}_{n\rightarrow+\infty}\mathrm{Var}LC_n/n>0\). Finally, we give further partial results on the order of the variance in the uniform case.
+
+### 4.2 On the order of the variance under a hypothesis on a modification of _LC<sub>n</sub>_
+
+In this section we prove how Theorem 2.2 in \[19\] or Theorem 2.1 in \[13\] imply their main theorem, namely the linear lower order of the variance. This shows how the use of the _B<sub>k</sub>_’s greatly simplify some proofs, and it is of interest to<tbc>
+

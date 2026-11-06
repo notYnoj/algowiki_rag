@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "2-way comparison search tree (2wcst)",
+      "problem family": null,
+      "bound": "O(n^4) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1. 2wcst has an O(n^4)-time algorithm.",
+      "page": 2
+    },
+    {
+      "problem": "2-way comparison search tree (2wcst) approximation",
+      "problem family": null,
+      "bound": "additive-3 approximation in O(n log n) time",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 2. Given any instance I=(K,Q,C,alpha,beta) of 2wcst, one can compute a tree of cost at most the optimum plus 3, in O(n log n) time.",
+      "page": 3
+    },
+    {
+      "problem": "binary split tree",
+      "problem family": null,
+      "bound": "O(n^4) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^5) time",
+      "quote": "Theorem 3. Given any instance I=(K={K1,...,Kn},alpha,beta) of the standard binary split tree problem, an optimal tree can be computed in O(n^4) time.",
+      "page": 3
+    },
+    {
+      "problem": "2-way comparison search tree without equality tests",
+      "problem family": null,
+      "bound": "O(n log n) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 5. Any 2wcst instance I=(K={K1,...,Kn},Q,C,alpha,beta) where = is not in C (equality tests are not allowed), can be solved in O(n log n) time.",
+      "page": 4
+    }
+  ],
+  "paper": "1505.00357",
+  "usage": {
+    "prompt_tokens": 14988,
+    "completion_tokens": 5112,
+    "total_tokens": 20100,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4680,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

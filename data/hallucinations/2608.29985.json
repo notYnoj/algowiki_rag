@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "indefinite complex symmetric linear systems",
+      "problem family": null,
+      "bound": "\\rho(\\mathscr{L}_{\\mathrm{VBP}})<1\\ \\text{if}\\ \\alpha>\\frac{b-c}{2}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If the parameter \\(\\alpha\\) satisfies the condition \\(\\alpha>\\frac{b-c}{2}\\), where \\(c=x^*Tx>0,b=x^*WT^{-1}Wx\\ge 0\\), with \\(x\\in\\mathbb{C}^n\\) such that \\(\\|x\\|_2=1\\), then the iterative scheme defined in (9) converges to the unique solution for any initial guess \\(x^{(0)}\\in\\mathbb{R}^n\\).",
+      "page": 6
+    },
+    {
+      "problem": "indefinite complex symmetric linear systems",
+      "problem family": null,
+      "bound": "\\sigma(\\mathscr{P}_{\\mathrm{VBP}}^{-1}\\mathscr{A})\\subset\\left[\\frac{\\lambda_{\\mathrm{min}}(T)+\\sigma_{\\mathrm{min}}^2(W)/\\lambda_{\\mathrm{max}}(T)}{\\alpha+\\lambda_{\\mathrm{max}}(T)},\\frac{\\lambda_{\\mathrm{max}}(T)+\\sigma_{\\mathrm{max}}^2(W)/\\lambda_{\\mathrm{min}}(T)}{\\alpha+\\lambda_{\\mathrm{min}}(T)}\\right]",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Under the assumptions of Theorem 1, the eigenvalues of the preconditioned matrix \\(\\mathscr{P}_{\\text{\\textit{VBP}}}^{-1}\\mathscr{A}\\) are real and positive, and lie in the interval \\(\\sigma(\\mathscr{P}_{\\text{\\textit{VBP}}}^{-1}\\mathscr{A})\\subset\\left[\\frac{\\lambda_{\\mathrm{min}}(T)+\\sigma_{\\mathrm{min}}^2(W)/\\lambda_{\\mathrm{max}}(T)}{\\alpha+\\lambda_{\\mathrm{max}}(T)},\\frac{\\lambda_{\\mathrm{max}}(T)+\\sigma_{\\mathrm{max}}^2(W)/\\lambda_{\\mathrm{min}}(T)}{\\alpha+\\lambda_{\\mathrm{min}}(T)}\\right]\\).",
+      "page": 8
+    },
+    {
+      "problem": "indefinite complex symmetric linear systems",
+      "problem family": null,
+      "bound": "\\text{GMRES terminates in at most }n+1\\text{ steps (minimal polynomial degree }\\le n+1\\text{)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 5 shows that with the VBP preconditioner \\(\\mathscr{P}_{\\mathrm{VBP}}\\), termination (in exact arithmetic) of the GMRES method will occur in at most \\(n+1\\) steps for any choice of the right hand side \\(\\mathbf{d}\\).",
+      "page": 14
+    }
+  ],
+  "paper": "2608.29985",
+  "usage": {
+    "prompt_tokens": 17087,
+    "completion_tokens": 12324,
+    "total_tokens": 29411,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 13008
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11636,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

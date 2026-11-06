@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimum s-t cut",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{8/5})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\widetilde{O}(n^{5/3})",
+      "quote": "There is a randomized algorithm that computes a minimum s-t cut of an undirected unweighted graph G. The algorithm always makes \\widetilde{O}(n^{8/5}) cut queries to G and succeeds with high probability.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum s-t cut",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n\\nu^{4/7})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n^{5/3})",
+      "quote": "There is a deterministic two-player communication protocol that computes a minimum s-t cut of an undirected unweighted graph G. The protocol uses \\widetilde{O}(n\\nu^{4/7}) bits of communication where \\nu denotes the value of G's minimum s-t cut, and always succeeds.",
+      "page": 3
+    }
+  ],
+  "paper": "2510.18274",
+  "usage": {
+    "prompt_tokens": 49999,
+    "completion_tokens": 4694,
+    "total_tokens": 54693,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4430,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

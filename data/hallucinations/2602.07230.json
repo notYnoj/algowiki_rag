@@ -1,0 +1,131 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Unsplittable Transshipment Problem",
+      "problem family": null,
+      "bound": "$y_a < x_a + d_{\\max}$ for all arcs $a$",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "DGG99: $y_a < x_a + d_{\\max}$ for single-source unsplittable flows (SSUF)",
+      "quote": "Given a b-transshipment x, the Modified DGG Algorithm efficiently computes an unsplittable transshipment such that the flow on each arc a is strictly less than x_a+d_max.",
+      "page": 9
+    },
+    {
+      "problem": "Congestion minimization in unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "2-approximation for minimizing congestion",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "DGG99: 2-approximation for SSUF congestion",
+      "quote": "Under the balance condition, the Modified DGG Algorithm yields a 2-approximation algorithm for minimizing congestion in unsplittable transshipment instances.",
+      "page": 8
+    },
+    {
+      "problem": "Unsplittable Transshipment Problem (capacity violation)",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "arc capacity violation $\\le \\min\\{\\max_{s\\in S^+} b(s), \\max_{t\\in S^-} |b(t)|\\}$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Reversing all arcs yields a maximum capacity violation of at most max_{s\\in S^+}b(s). Thus, the Modified DGG Algorithm computes, in polynomial time, an unsplittable transshipment whose arc capacity violation is bounded by the minimum of the maximum supply max_{s\\in S^+}b(s) and the maximum demand max_{t\\in S^-}|b(t)|.",
+      "page": 8
+    },
+    {
+      "problem": "Unsplittable Transshipment Problem (lower bounds on arc flows)",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "$y_a > x_a - d_{\\max}$ for all arcs $a$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Given a b-transshipment x, the adapted Modified DGG Algorithm efficiently computes an unsplittable transshipment such that the flow on each arc a is greater than x_a-d_max.",
+      "page": 10
+    },
+    {
+      "problem": "Unsplittable Transshipment Problem (number of paths)",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "at most $|S^+| + |S^-| - 1$ paths (edges in the source-sink bipartite graph)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "an arbitrary unsplittable transshipment may use up to $|S^+|\\cdot|S^-|$ paths",
+      "quote": "the bipartite graph associated with any unsplittable transshipment computed by the Modified DGG Algorithm is acyclic, and thus contains at most |S^+|+|S^-|-1 edges.",
+      "page": 10
+    },
+    {
+      "problem": "Unsplittable Transshipment Problem (tightness of $d_{\\max}$ bound)",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "$d_{\\max}$ capacity violation is unavoidable (tight) even when every sink is connected to arbitrarily many sources",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "DGG99 showed tightness of $d_{\\max}$ for SSUF",
+      "quote": "Thus, even when each sink is connected to arbitrarily many sources, no unsplittable transshipment can avoid a violation of d_max, establishing the tightness of the bound.",
+      "page": 17
+    },
+    {
+      "problem": "Cost of Confluence in unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "any confluent unsplittable transshipment has congestion at least $1 - 1/q$, tending to $d_{\\max} = 1$ as $q \\to \\infty$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Hence, in any confluent unsplittable transshipment, the capacity violation on that arc is at least 1-1/q, which tends to d_max=1 as q\\rightarrow\\infty.",
+      "page": 11
+    },
+    {
+      "problem": "Minimum number of rounds for unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "$(n+1)(N_{\\text{tot}} + 1)$ rounds when $d_{\\max} \\le (1 - 1/n) c_{\\min}$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "DGG99: 5 rounds for SSUF; no general constant bounds for transshipment",
+      "quote": "the total number of routing rounds is (n+1)\\cdot(N_tot+1).",
+      "page": 13
+    },
+    {
+      "problem": "Minimum number of rounds for unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "6 rounds when $d_{\\max} \\le c_{\\min} / 3$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Therefore, if d_max\\le c_min/3, then all demands can be routed unsplittably in six rounds.",
+      "page": 19
+    },
+    {
+      "problem": "Minimum number of rounds for unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "4 rounds when $d_{\\max} \\le c_{\\min} / 4$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Critically split sinks with the same label are grouped, and their paths are superimposed to form two additional rounds. No finer grouping is required for feasibility as c_a/2+d_max+d_max\\le c_a/2+c_min/2\\le c_a.",
+      "page": 19
+    },
+    {
+      "problem": "Maximum routable demand for unsplittable transshipment",
+      "problem family": "Unsplittable Transshipment",
+      "bound": "at least $0.07143 \\cdot d_{\\text{tot}}$ total demand can be routed (under $d_{\\max} \\le \\tfrac12 b_{\\text{avg}}^+$)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the maximum routable demand is lower bounded by max{d/6,1-d/8}\\cdot d_tot for d\\in[0,1], which attains its minimum at d=3/7 and is therefore always at least 0.07143\\cdot d_tot.",
+      "page": 14
+    }
+  ],
+  "paper": "2602.07230",
+  "usage": {
+    "prompt_tokens": 18572,
+    "completion_tokens": 14768,
+    "total_tokens": 33340,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13122,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,24 @@
+CertEx: Exact Visual Retrieval at Scale by Certified Exclusion
+
+### Abstract
+
+Exact _k_-nearest-neighbor (kNN) search over image descriptors and embeddings underlies visual retrieval, near- duplicate detection, the evaluation of learned representations, and increasingly the memory of LLM agents. However, exhaustive search computes every distance at full precision, whereas approximate indexes return recall below one. We observe that exact search only needs a proof that each excluded vector cannot be a neighbor. Because such a proof only has to be conservative, it can be checked in low precision, much as the retina examines the whole scene at low resolution. We call this principle certified exclusion and realize it in an exact kNN method for GPUs, which we call CertEx. Specifically, CertEx stores a lower-bounding projection of each vector in half precision and folds a rounding certificate into the same tensor-core dot product, so that only the few vectors that the test keeps need exact distances. We prove that CertEx returns the exact kNN of every query. On sixteen datasets with up to 100M vectors, CertEx is exact for every query at 7.1\(\times\) to 18.0\(\times\) the throughput of the fastest cuVS search on one H100 (8.8\(\times\) to 11.8\(\times\) on an A100) and outperforms quantized and graph indexes whenever every query must be exact.
+
+### 1 Introduction
+
+Exact kNN search over large datasets of visual features is a basic operation whose errors propagate into the tasks built on top of it. For instance, image retrieval ranks database descriptors such as SIFT [42] by their distance to a query descriptor, so that a missed neighbor removes a relevant image from the ranked list. Similarly, near-duplicate detection in web-scale training corpora such as LAION [58] compares every image embedding with its nearest neighbors [54], so that a missed neighbor keeps a duplicate pair in the training data. Likewise, the kNN classifier that evaluates self- supervised representations [12, 50, 70] reports the search error together with the quality of the representation whenever its neighbors are approximate. Moreover, LLMs and agents increasingly read long contexts and memories by nearest- neighbor search [4, 11, 34, 38, 39, 67, 69, 71], so that a<tbc>
+
+<tbc>missed neighbor drops a relevant memory. Finally, every benchmark of approximate search measures recall against exact neighbors and therefore inherits any error of the exhaustive search that computes them.
+
+Existing systems respond to the cost of exact search in two ways, both of which leave a gap. First, exhaustive search on GPUs [18, 35] computes every query-to-vector distance at full precision. The throughput of exhaustive search is therefore bounded by one full-precision distance per vector, and its capacity is bounded by device memory, which must hold every vector at full precision. Second, approximate indexes based on quantization [22, 28, 37] or proximity graphs [43, 49, 63] are much faster. However, these indexes trade recall for speed by design and rely on an index that must be built before the first query and repaired when the dataset changes [74]. Practitioners therefore choose between exact results at high cost and fast results whose errors are not controlled per query.
+
+To close this gap, we follow the division of labor in human vision: the periphery examines the whole visual field in parallel at low resolution, whereas high resolution is spent only on the few locations that attention selects [13, 65]. Transferred to kNN search, this principle examines every database vector at low precision in one parallel pass and spends full precision only on the few vectors that the pass cannot exclude. However, a low-precision distance is not exact. Consequently, unless every low-precision decision is certified to be conservative, the pass loses neighbors in the same way as an approximate index.
+
+We address this difficulty with a principle that we call _certified exclusion_: a test may run in any arithmetic as long as it never excludes a vector within the threshold, so that verifying the kept vectors yields the exact neighbors. We realize this principle in an exact search method that we call CertEx. Specifically, CertEx stores a lower-bounding projection of every vector in half precision, together with four coordinates that fold the rounding and accumulation errors [10, 29] of the tensor-core dot product into the product itself. As a result, one dot product and one comparison per vector decide whether the vector can still be a neighbor, without a top-_k_ selection and without a false dismissal. By analogy with human vision, we call this half-precision copy
+
+Dongfang Zhao <br>
+University of Washington, Tacoma School of Engineering and Technology <br>
+`dzhao@uw.edu`
+
+arXiv:2610.21325v2 [cs.CV] 22 Oct 2026
+

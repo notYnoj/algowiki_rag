@@ -1,0 +1,8 @@
+Shortest Cycle Packing admits a kernel with O(_k_<sup>2</sup>) vertices. By making use of a very similar approach, we are able to show that the special case of Diverse Shortest Cycle Coverage without constraints on covering \(\ell\) -- that is, the task of finding _k d_-diverse shortest cycles -- admits a kernel with O(_k_<sup>2</sup>) vertices on planar graphs. However, we could not obtain a similar result for the coverage variant, even without constraints on diversity; that is, the problem of finding _k_ shortest cycles covering the edge set of maximum total weight. Obtaining a polynomial kernel for coverage problem on planar graphs is the first natural step towards the kernel for Diverse Shortest Cycle Coverage.
+
+**Subexponential algorithms.** Many cycle- and packing-related problems on planar graphs admit subexponential-time algorithms, yet we do not know whether this holds for problems around packing of shortest cycles. Proving a lower bound that rules out \(2^{o(k)}\cdot n^{O(1)}\) algorithms under ETH, or obtaining a subexponential algorithm for Diverse Shortest Cycle Coverage and Edge- Disjoint Shortest Cycle Packing is another interesting open question.
+
+**Sparse classes of graphs.** We establish that Edge-Disjoint Shortest Cycle Packing is W[1]-hard even on subcubic graphs, so the problem remains intractable on sparse graphs in general. However, it is plausible that the problem could be FPT on sparse graphs of specific structure, such as _H_-minor-free graphs or graphs of bounded expansion. Our methods are tailored to planar graphs, and different techniques would most likely be needed here.
+
+## References
+

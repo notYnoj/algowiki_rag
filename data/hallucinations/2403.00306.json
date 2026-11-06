@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Quorum Planted Motif Search (qPMS)",
+      "problem family": "Planted Motif Search",
+      "bound": "O(nml(\\log|\\Sigma|)/w)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Here the space complexity of our algorithm is \\(O(nml(log[\\Sigma])/w)\\).",
+      "page": 45
+    },
+    {
+      "problem": "Quorum Planted Motif Search (qPMS)",
+      "problem family": "Planted Motif Search",
+      "bound": "O(nml/w) for DNA sequences",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For DNA sequences \\(log|\\Sigma|=2\\). So the space complexity becomes _O(nml/w_.",
+      "page": 45
+    },
+    {
+      "problem": "Quorum Planted Motif Search (qPMS)",
+      "problem family": "Planted Motif Search",
+      "bound": "O((n-q+1)^2 n m^2 (m+\\log n) n_B(l,d))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "TraverStringRef",
+      "quote": "The worst case time complexity is similar to TraverStringRef \\(O((n-q+1)^2nm^2(m+logn)n_B(l,d))\\).",
+      "page": 45
+    }
+  ],
+  "paper": "2403.00306",
+  "usage": {
+    "prompt_tokens": 22214,
+    "completion_tokens": 5848,
+    "total_tokens": 28062,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5505,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

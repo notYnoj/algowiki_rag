@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "QAOA ground state preparation",
+      "problem family": "Variational Quantum Algorithms",
+      "bound": "L \\in \\mathbb{Z}_{>0}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, there exist a finite circuit depth \\(L\\in\\mathbb{Z}_{>0}\\), parameter vectors \\(\\beta,\\gamma\\in\\mathbb{R}^L\\), a normalized ground state \\(|\\zeta\\rangle\\in H_{P,\\mathrm{min}}\\), and a global phase \\(\\phi\\in\\mathbb{R}\\) such that \\(U_L(\\beta,\\gamma)|\\xi\\rangle=|\\zeta\\rangle,\\)",
+      "page": 10
+    },
+    {
+      "problem": "Local unitary synthesis",
+      "problem family": "Dynamical Lie Algebra circuits",
+      "bound": "\\mathcal{T}_\\mathbf{a} \\le (2\\mathcal{D}_\\mathbf{a}-1)\\dim(\\mathfrak{g})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "every \\(g\\in U_{I,\\varphi_\\mathfrak{g}}\\) can be represented using at most \\(\\mathcal{T}_\\mathbf{a}:=\\sum_{j=1}^{\\mathcal{D}_\\mathbf{a}}(2j-1)c_j\\) native exponential factors.",
+      "page": 15
+    },
+    {
+      "problem": "Local state preparation",
+      "problem family": "Dynamical Lie Algebra circuits",
+      "bound": "\\mathcal{T}_{\\mathbf{a},\\psi} \\le (2\\mathcal{D}_{\\mathbf{a},\\psi}-1)m_\\psi",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists a neighborhood \\(\\mathcal{V}_{[\\psi]}\\) of the ray \\([\\psi]\\) in the projective state orbit \\(\\mathcal{O}_{[\\psi]}\\) such that every state \\(|\\zeta\\rangle\\) with \\([\\zeta]\\in\\mathcal{V}_{[\\psi]}\\) admits a finite product-of-exponentials realization \\(|\\zeta\\rangle=e^{i\\phi} U_L(\\theta)|\\psi\\rangle=e^{i\\phi} e^{\\theta_La_{j_L}}\\cdots e^{\\theta_1a_{j_1}}|\\psi\\rangle,\\) where \\(\\phi\\in[0,2\\pi]\\), \\(a_{j_s}\\in\\{a_1,\\dots,a_k\\}\\) for each \\(s\\in\\{1,\\dots,L\\}\\), and the required depth \\(L=\\mathcal{T}_{\\mathbf{a},\\psi}\\) satisfies (51).",
+      "page": 16
+    },
+    {
+      "problem": "MaxCut QAOA (free DLA)",
+      "problem family": "MaxCut",
+      "bound": "\\mathcal{D}_{\\mathfrak{g}} \\le 2n-1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The stabilization depth of the corresponding free dynamical Lie algebras satisfy \\(\\mathcal{D}_{\\mathfrak{g}_{P_n,\\mathrm{free}}}\\le 2n-1(n\\ge 2),\\mathcal{D}_{\\mathfrak{g}_{C_n,\\mathrm{free}}}\\le 2n-1(n\\ge 3),\\mathcal{D}_{\\mathfrak{g}_{K_n,\\mathrm{free}}}\\le 2n-1(n\\ge 2).\\)",
+      "page": 18
+    },
+    {
+      "problem": "Maximum Independent Set QAOA",
+      "problem family": "Maximum Independent Set",
+      "bound": "\\mathcal{D}_{\\mathfrak{g}_{\\Gamma,\\mathrm{free},\\mathcal{F}}} \\le 8|V(\\Gamma)|+4\\alpha(\\Gamma)-2",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\mathfrak{g}_{\\Gamma,\\mathrm{free},\\mathcal{F}}\\cong\\mathfrak{u}(W_\\mathcal{F})\\text{and}\\mathcal{D}_{\\mathfrak{g}_{\\Gamma,\\mathrm{free},\\mathcal{F}}}\\le 8|V(\\Gamma)|+4\\alpha(\\Gamma)-2.",
+      "page": 21
+    },
+    {
+      "problem": "Global unitary synthesis on invariant sectors",
+      "problem family": "Full unitary invariant sectors",
+      "bound": "L_\\mathrm{glob} \\le \\frac{D(D-1)}{2}\\cdot(K_X+K_\\mathrm{diag})+K_\\mathrm{diag}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Any unitary operator _U_ on _V_ (or \\(U\\in\\mathrm{SU}(V)\\) when \\(\\mathfrak{g}\\big|_V=\\mathfrak{su}(D)\\)) can be synthesized with a global depth _L_<sub>glob</sub> bounded by \\(L_\\mathrm{glob}\\le\\frac{D(D-1)}{2}\\cdot\\big(K_X+K_\\mathrm{diag}\\big)+K_\\mathrm{diag}.\\)",
+      "page": 24
+    },
+    {
+      "problem": "Projective unitary synthesis",
+      "problem family": "Standard gate decomposition",
+      "bound": "L_\\mathrm{glob}^\\mathrm{proj} \\le (4^q-3\\cdot 2^{q-1})K_{1\\mathrm{q}}+(\\frac{3}{4}4^q-\\frac{3}{2}2^q)K_\\mathrm{CX}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "every projective unitary \\([U]\\in\\mathrm{PU}(V)\\) can be synthesized with a circuit of depth \\(L_\\mathrm{glob}^\\mathrm{proj}\\le\\big(4^q-3\\cdot 2^{q-1}\\big)K_{1\\mathrm{q}}+\\big(\\frac{3}{4}4^q-\\frac{3}{2}2^q\\big)K_\\mathrm{CX}.\\)",
+      "page": 25
+    },
+    {
+      "problem": "Pauli-generated dynamical Lie algebra",
+      "problem family": "Pauli-generated systems",
+      "bound": "L_\\mathrm{glob} \\le 3(2\\mathcal{D}_\\mathbf{a}-1)\\left(\\frac{7}{4}\\cdot 4^n-3\\cdot 2^{n-1}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Any unitary operator _U_ on _W_ (or \\(U\\in\\mathrm{SU}(W)\\) when \\(\\mathfrak{g}\\simeq\\mathfrak{su}(W)\\)) can be synthesized with a global depth _L_<sub>glob</sub> bounded by \\(L_\\mathrm{glob}\\le 3(2\\mathcal{D}_\\mathbf{a}-1)\\left(\\frac{7}{4}\\cdot 4^n-3\\cdot 2^{n-1}\\right).\\)",
+      "page": 25
+    },
+    {
+      "problem": "Maximum Independent Set QAOA (Flip-or-Stay)",
+      "problem family": "Maximum Independent Set",
+      "bound": "L_\\mathrm{glob}(\\Gamma) \\le \\Delta_\\Gamma(D-1)(4D^2-3D+2)+2D^3-D^2",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Every unitary \\(U\\in\\mathrm{U}(W_\\mathcal{F})\\) admits an exact native Flip-or-Stay pulse synthesis with total depth \\(L_\\mathrm{glob}(\\Gamma)\\) bounded by \\(L_\\mathrm{glob}(\\Gamma)\\le\\Delta_\\Gamma(D-1)(4D^2-3D+2)+2D^3-D^2.\\)",
+      "page": 27
+    },
+    {
+      "problem": "Variational optimization landscape",
+      "problem family": "Hamiltonian variational circuits",
+      "bound": "L \\le \\mathcal{T}_\\mathfrak{g}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, there exists an identity block _V_(**_x_**) requiring at most T<sub>g</sub> elementary generator evolutions such that after appending _V_(**_x_**), exactly one of the following holds for the augmented loss function \\(\\ell_{(x,\\theta_p)}(\\rho,H_P)\\) associated with the extended unitary \\(U(x,\\theta_p)=V(x)U(\\theta_p)\\):",
+      "page": 29
+    }
+  ],
+  "paper": "2610.22689",
+  "usage": {
+    "prompt_tokens": 50218,
+    "completion_tokens": 10962,
+    "total_tokens": 61180,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8972,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

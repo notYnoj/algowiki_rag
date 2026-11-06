@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "\\langle 2,4,5\\rangle matrix multiplication",
+      "problem family": "APA matrix multiplication",
+      "bound": "\\operatorname{border\\ rank}(\\mathcal{M}_{\\langle 2,4,5\\rangle}) \\le 31",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "32",
+      "quote": "Our best result came in the case of \\langle 2,4,5\\rangle, where we found the first rank 31 APA algorithm and therefore lowered the border rank upper bound for this size to 31.",
+      "page": 13
+    },
+    {
+      "problem": "APA matrix multiplication",
+      "problem family": "APA matrix multiplication",
+      "bound": "\\text{Leading coefficient reduced via symbolic sparsification (e.g., } \\langle 2,4,5;31\\rangle: 50.218 \\to 7.546\\text{)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In doing so, we demonstrate that fast, symbolic basis transformations can be used to \"sparsify\" APA algorithms and therefore improve the leading coefficient in their arithmetic complexities.",
+      "page": 5
+    },
+    {
+      "problem": "Approximate-to-exact APA matrix multiplication",
+      "problem family": "APA matrix multiplication",
+      "bound": "\\|\\widehat{C}-C\\|\\le(k/k_0^L)\\left[\\sum_{j=1}^p\\left(\\prod_{i\\neq j}\\frac{|\\varepsilon_i|}{|\\varepsilon_i-\\varepsilon_j|}\\right)(g(\\delta_1,\\delta_2)f(\\varepsilon_j)\\mathbf{u}+(g(\\delta_1,\\delta_2)-1))E(\\varepsilon_j)^L\\right]\\|A\\|\\|B\\|+O(\\mathbf{u}^2)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In particular, we prove a weak forward stability bound for this procedure, in floating- point arithmetic and including the fast basis transformations from Section 3, that matches the format of existing bounds for fast exact matrix multiplication [21, 53].",
+      "page": 5
+    }
+  ],
+  "paper": "2610.13905",
+  "usage": {
+    "prompt_tokens": 51863,
+    "completion_tokens": 8460,
+    "total_tokens": 60323,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7938,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<tbc>woman has the best partner, and each man has the worst partner, that is possible in any stable marriage.
+
+Two important properties of the Gale-Shapley algorithm are that:<br>
+\- if _m_ proposes to _w_, then there is no stable marriage in which _m_ has a better match than _w_.<br>
+\- if _m_ proposes to _w_, then there is no stable marriage in which _w_ has a worse match than _m_. These properties justify the notion of preference shortlists obtained through the Gale-Shapley algorithm by removing any man _m_ from a woman _w_’s preference list and vice-versa, when _w_ receives a proposal from a man she prefers to _m_. Note that the shortlists that are obtained at the end of the algorithm do not depend on the order in which the proposals are made.
+
+**Example 2** _For instance, with the preferences of Example 1, the Gale-Shapley algorithm leads to the following shortlists:_
+
+\(m_1:1\succ_1^m2\succ_1^m3\succ_1^m4\succ_1^m5\succ_1^m6\succ_1^m7\succ_1^m9\succ_1^m10m_2:2\succ_2^m3\succ_2^m4\succ_2^m5\succ_2^m6\succ_2^m7\succ_2^m8\succ_2^m9\succ_2^m10m_3:3\succ_3^m4\succ_3^m5\succ_3^m6\succ_3^m7\succ_3^m10m_4:7\succ_4^m6\succ_4^m10m_5:6\succ_5^m7\succ_5^m10m_6:4\succ_6^m5\succ_6^m10m_7:5\succ_7^m4\succ_7^m10m_8:8\succ_8^m4\succ_8^m5\succ_8^m6\succ_8^m10\succ_8^m7m_9:10\succ_9^m4\succ_9^m6\succ_9^m7\succ_9^m9\succ_9^m5m_{10}:9\succ_{10}^m8\succ_{10}^m10w_1:1w_2:1\succ_2^w2w_3:1\succ_3^w2\succ_3^w3w_4:1\succ_4^w2\succ_4^w3\succ_4^w7\succ_4^w8\succ_4^w9\succ_4^w6w_5:1\succ_5^w2\succ_5^w3\succ_5^w6\succ_5^w8\succ_5^w9\succ_5^w7w_6:1\succ_6^w2\succ_6^w3\succ_6^w4\succ_6^w8\succ_6^w9\succ_6^w5w_7:1\succ_7^w2\succ_7^w3\succ_7^w5\succ_7^w8\succ_7^w9\succ_7^w4w_8:2\succ_8^w10\succ_8^w8w_9:1\succ_9^w2\succ_9^w9\succ_9^w10w_{10}:1\succ_{10}^w2\succ_{10}^w3\succ_{10}^w4\succ_{10}^w5\succ_{10}^w6\succ_{10}^w7\succ_{10}^w10\succ_{10}^w8\succ_{10}^w9\)
+
+These shortlists makes it possible to identify some transformations that can be applied from the man-optimal stable marriage to obtain other stable marriages (more favourable to women). These transformations are called rotations \[Irving and Leather, 1986\]. A rotation is a sequence \(\rho=(m_{i_0},w_{i_0}),\dots,(m_{i_{r-1}},w_{i_{r-1}})\) of man-woman pairs such that, for each \(i_k\left(0\le k\le r-1\right)\), (1) _w<sub>i<sub>k</sub></sub>_ is first in _m<sub>i<sub>k</sub></sub>_ ’s shortlist and (2) _w_<sub>_i<sub>k</sub>_+1</sub> (_k_+1 taken modulo _r_) is second in _m<sub>i<sub>k</sub></sub>_ ’s shortlist. Such a rotation is said to be exposed in the shortlists.
+
+**Example 3** _Continuing Example 1, there are two rotations exposed in the shortlists,_ \(\rho_1=(4,7),(5,6)\) _and_ \(\rho_2=(6,4),(7,5)\).
+
+Given a rotation, if each _m<sub>i<sub>k</sub></sub>_ exchanges his current partner _w<sub>i<sub>k</sub></sub>_ for _w_<sub>_i<sub>k</sub>_+1</sub>, then the matching remains stable. Eliminating a rotation \(\rho=(m_{i_0},w_{i_0}),\dots,(m_{i_{r-1}},w_{i_{r-1}})\) amounts to removing all successors _m_ of _m_<sub>_i<sub>k</sub>_-1</sub> in _w<sub>i<sub>k</sub></sub>_ ’s shortlist together with the corresponding appearances of _w<sub>i<sub>k</sub></sub>_ in the shortlists of men _m_. The obtained stable marriage can then be read from the modified shortlists by matching each man with the first woman in his shortlist. In<tbc>
+

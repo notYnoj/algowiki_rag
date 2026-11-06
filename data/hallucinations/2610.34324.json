@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Max-Cut semidefinite relaxation optimal rank",
+      "problem family": "Max-Cut",
+      "bound": "\\rho(K(m,2)) = m-1 = r_{\\mathrm{BP}}(n) \\text{ for } n=\\binom{m}{2}, m\\ge 5",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\rho(G) \\le r_{\\mathrm{BP}}(n) \\text{ (Barvinok-Pataki bound)}",
+      "quote": "In particular \\(\\rho(K(m,2))=r_\\mathrm{BP}(n)\\).",
+      "page": 2
+    },
+    {
+      "problem": "Max-Cut semidefinite relaxation optimal rank",
+      "problem family": "Max-Cut",
+      "bound": "\\exists \\text{ connected unweighted graph } G \\text{ on } n \\text{ vertices with } \\rho(G)=r, \\forall 1\\le r\\le r_{\\mathrm{BP}}(n)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\rho(G) \\le r_{\\mathrm{BP}}(n)",
+      "quote": "Theorem 1.2. _For every_ \\(n\\ge 1\\) _and every integer_ \\(1\\le r\\le r_\\mathrm{BP}(n)\\)_, there is a connected unweighted graph on n vertices whose Max-Cut semidefinite relaxation has a unique optimal solution of rank r._",
+      "page": 2
+    },
+    {
+      "problem": "Max-Cut semidefinite relaxation optimal rank",
+      "problem family": "Max-Cut",
+      "bound": "\\max_{G \\text{ connected unweighted on } n \\text{ vertices}} \\rho(G) = r_{\\mathrm{BP}}(n)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\rho(G) \\le r_{\\mathrm{BP}}(n)",
+      "quote": "Corollary 1.3. _For every_ \\(n\\ge 1\\)_, the maximum of_ \\(\\rho(G)\\) _over connected unweighted graphs on n vertices equals r_<sub>BP</sub>(_n)._",
+      "page": 2
+    },
+    {
+      "problem": "Max-Cut semidefinite relaxation optimal rank for random graphs",
+      "problem family": "Max-Cut",
+      "bound": "\\rho(G) \\ge c \\left(\\frac{n}{(\\log n)^3}\\right)^{1/7} \\text{ with probability tending to } 1",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 6.1. _There is an absolute constant c\\)>0 _such that, for_ \\(G\\sim G(n,\\frac{1}{2})\\), \\(\\mathbb{P}\\big\\{\\rho(G)\\ge c\\left(\\frac{n}{(\\mathrm{log}n)^3}\\right)^{1/7}\\big\\}\\longrightarrow 1.\\)",
+      "page": 6
+    }
+  ],
+  "paper": "2610.34324",
+  "usage": {
+    "prompt_tokens": 13062,
+    "completion_tokens": 6044,
+    "total_tokens": 19106,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5352,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

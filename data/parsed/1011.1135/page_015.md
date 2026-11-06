@@ -1,0 +1,15 @@
+<tbc>The expected social welfare under different values of \(\beta\) is shown in Fig. 5. In the same way, we obtain the upper bound of social welfare as \(\Pi^{up}=100\). When \(\beta\) is small (less than 0.5) and students have various preferences over colleges, we achieve about 93% and 86% of the upper bound under the hybrid mechanism and the GS mechanism respectively. When \(\beta\) approaches to one and students share common opinion on colleges, the ratio would both decrease to 80%. This comparative result of social welfare helps justify the implementation of JUPAS-like mechanism in college admissions. The transfer from the hybrid mechanism to the GS mechanism can only achieve the well-known incentive compatible property at the cost of potentially significant loss of efficiency, especially when students have independent opinions on different colleges.
+
+### 5.3 Strategy Issues
+
+As we have mentioned in the last section, when students’ preferences become more correlated, it would be easier for strategic students to manipulate the matching results successfully. Thus in the following simulation we use \(\beta=1\) as an example to illustrate the effect of possible strategies of students.
+
+When considering \(\beta=1\), the true preferences of students are all the same as _p<sub>s</sub>:c_<sub>1</sub>_\>c_<sub>2</sub>_\>c_<sub>3</sub>_\>c_<sub>4</sub>_\>c_<sub>5</sub>. We assume there are two types of students: the truthful ones and the strategic ones. The truthful students would always submit their true preferences while the strategic students are likely to manipulate their submitted preference lists based on the information they already collect. In our simulation setting, the key information strategic students may infer is the reciprocating factor of each college. Notice that in practical college admissions mechanism like JUPAS, students would know their own examination scores and overall performances of other students before submitting their applications. Here in the simulation we assume the strategic students would know exactly their score ranking out of all students. Then one possible strategy would be as follows:
+
+\(\text{Strategy S: submit}\left\{\begin{array}{ c c c c } p_s^{(0)} & :c_1>c_2>c_3>c_4>c_5 & f_s\text{is the highest score;} \\ p_s^{(1)} & :c_2>c_3>c_4>c_5>c_1 & f_s\text{is the second highest score;} \\ p_s^{(2)} & :c_3>c_2>c_4>c_5>c_1 & f_s\text{is the third highest score;} \\ p_s^{(3)} & :c_4>c_2>c_3>c_5>c_1 & f_s\text{is the fourth highest score;} \\ p_s^{(4)} & :c_5>c_2>c_3>c_4>c_1 & \text{else.}
+\end{array}\right.\)
+
+For student with the highest score, since he/she can be assured to get into _c_<sub>1</sub>, there is no need to strategize. For other students, since _c_<sub>1</sub> is already occupied, they can shield their first choice and list _c_<sub>1</sub> as their last choice. Thus the student would manipulate his/her first and second choice as _c_<sub>4</sub> and _c_<sub>5</sub> in order to obtain better opportunity.
+
+Fig. 6 shows the expected utility of students of either type. Since the aggregate utility of all ten students are always 40 under \(\beta=1\), the average<tbc>
+

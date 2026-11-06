@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "2.2\\text{--}3.4\\times \\text{ latency speedup over Seismic at recall@10 targets }\\in[90\\%,98\\%]\\text{ on MS MARCO v2 (138M, SPLADE-CoCondenser), including }2.5\\times\\text{ at }95\\%",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Seismic (state-of-the-art inverted index for LSR)",
+      "quote": "On the MS MARCO v2 benchmark (138M passages) with SPLADE embeddings, GRIP achieves a 2.5\\(\\times\\) latency improvement over Seismic, a state-of-the-art inverted index tailored for LSR, at 95% recall@10.",
+      "page": 1
+    },
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "1.4\\text{--}1.7\\times \\text{ speedup over Seismic at recall@10 targets }\\in[90\\%,99\\%]\\text{ on MS MARCO v1 (8.84M, SPLADE-CoCondenser)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Seismic",
+      "quote": "On MS MARCO v1 (8.84M passages), GRIP is 1.4-1.7\\(\\times\\) faster than Seismic with SPLADE-CoCondenser embeddings at every recall target from 90% to 99%.",
+      "page": 1
+    },
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "1.2\\times \\text{ speedup over Seismic at recall@10 }\\in[92\\%,95\\%]\\text{ and on par at }97\\%\\text{ on MS MARCO v1 with SPARSEUP (Seismic faster at }98\\text{--}99\\%\\text{)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Seismic",
+      "quote": "With SPARSEUP [15], a more recent sparse embedding model, GRIP is 1.2\\(\\times\\) faster than Seismic at 92-95% recall@10 and on par at 97%, while Seismic retains an edge in the extremely high-recall regime (98-99%).",
+      "page": 1
+    },
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "1.95\\text{--}2.59\\times \\text{ speedup of graph search via term-based entry point seeding on its own}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "standard graph-based search without term-based entry point seeding",
+      "quote": "GRIP differs from prior work in using the sparse embeddings themselves as the entry point selection mechanism, which requires no additional retrieval system and almost no additional work at query time, making graph search \\(1.95-2.59\\times\\) faster on its own in our experimental evaluations.",
+      "page": 2
+    },
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "1.22\\text{--}1.38\\times \\text{ search speedup via sparse sketching }(R=80)\\text{ at recall@10 targets }\\in[95\\%,99\\%]\\text{ on SPLADE-CoCondenser}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "full-vector (quantized) graph search without sparse sketching",
+      "quote": "On SPLADE-CoCondenser, whose documents have 127 non-zero components on average, we set _R_=80, which keeps only 62% of the non-zero entries while speeding up search by 1.22-1.38\\(\\times\\) at recall@10 targets between 95% and 99%.",
+      "page": 5
+    },
+    {
+      "problem": "learned sparse retrieval",
+      "problem family": "approximate nearest neighbor search",
+      "bound": "47\\text{ min construction time vs. }5.5\\text{ hours for HNSW (efc}=2000\\text{) on MS MARCO v1 (8.8M); }7.3\\text{ hours on MS MARCO v2 (138M) vs. days for HNSW}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "HNSW with efc=2000 (5.5 hours on MS MARCO v1; days on MS MARCO v2)",
+      "quote": "Sparse PiPNN builds the graph for the 8.8M-passage MS MARCO v1 collection in 47 minutes, compared to 5.5 hours for HNSW with an efc of 2000.",
+      "page": 6
+    }
+  ],
+  "paper": "2610.30425",
+  "usage": {
+    "prompt_tokens": 10679,
+    "completion_tokens": 15358,
+    "total_tokens": 26037,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14151,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

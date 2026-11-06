@@ -1,0 +1,3462 @@
+[
+  {
+    "queries": [
+      "All-Pairs Shortest Paths algorithm",
+      "APSP lower bound",
+      "APSP faster algorithm"
+    ],
+    "why": "These queries look for recent papers that improve on the best known APSP algorithms with a faster algorithm or a new lower bound.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP"
+  },
+  {
+    "queries": [
+      "Maximum Cut exact algorithm",
+      "Max Cut lower bound",
+      "Maximum Cut exponential time"
+    ],
+    "why": "These queries look for new exact algorithms or lower bounds for Maximum Cut that improve on the best listed exponential running times.",
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut"
+  },
+  {
+    "queries": [
+      "Maximum Independent Set algorithm",
+      "Max Independent Set lower bound",
+      "Independent Set exact algorithm"
+    ],
+    "why": "These queries seek recent exact algorithms improving on Robson's O*(2^0.2496n) or new lower bounds for Maximum Independent Set.",
+    "family": "Set Packing",
+    "variation": "Maximum Independent Set"
+  },
+  {
+    "queries": [
+      "approximate optimal binary search tree",
+      "approximate OBST lower bound",
+      "sublinear approximate OBST"
+    ],
+    "why": "They seek new algorithms or lower bounds that improve on the listed running times for approximate OBST.",
+    "family": "Optimal Binary Search Trees",
+    "variation": "Approximate OBST"
+  },
+  {
+    "queries": [
+      "alphabetic tree problem",
+      "optimal alphabetic binary tree",
+      "alphabetic tree lower bound"
+    ],
+    "why": "Since the best known algorithm already runs in linear O(n) time, these queries look for matching lower bounds or new improved/variant algorithms for the alphabetic tree problem.",
+    "family": "Optimal Binary Search Trees",
+    "variation": "Alphabetic Tree Problem"
+  },
+  {
+    "queries": [
+      "k approximate nearest neighbor",
+      "approximate nearest neighbor search",
+      "k ANNS lower bound"
+    ],
+    "why": "These queries look for recent papers that improve on HNSW's O(n log n) time for k-ANNS or prove new lower bounds for the problem.",
+    "family": "Nearest Neighbor Search",
+    "variation": "k-ANNS"
+  },
+  {
+    "queries": [
+      "subset sum faster algorithm",
+      "subset sum problem lower bound",
+      "subset sum fine grained"
+    ],
+    "why": "They seek new algorithms or lower bounds that improve upon the best listed Subset Sum running times.",
+    "family": "The Subset-Sum Problem",
+    "variation": "Subset Sum"
+  },
+  {
+    "queries": [
+      "almost stable marriage algorithm",
+      "almost stable matching lower bound",
+      "approximately stable marriage"
+    ],
+    "why": "They target recent algorithms or lower bounds that improve on the O(Δ²/ε) dependence on maximum degree and approximation error for almost stable marriage.",
+    "family": "Stable Matching Problem",
+    "variation": "Almost Stable Marriage Problem"
+  },
+  {
+    "queries": [
+      "planted motif search",
+      "motif finding algorithm",
+      "motif search lower bound"
+    ],
+    "why": "These queries look for recent algorithms faster than the listed O(nm) best-known methods or new lower bounds for motif search.",
+    "family": "Motif Search",
+    "variation": "Motif Search"
+  },
+  {
+    "queries": [
+      "texture synthesis algorithm",
+      "neural texture synthesis",
+      "texture synthesis lower bound"
+    ],
+    "why": "They seek new algorithms that beat the listed O(N) linear-time Spatial GAN method or new lower bounds proving that complexity is optimal for texture synthesis.",
+    "family": "Texture Synthesis",
+    "variation": "Texture Synthesis"
+  },
+  {
+    "queries": [
+      "n-Queens Completion algorithm",
+      "Queens Completion lower bound",
+      "n-Queens Completion hardness"
+    ],
+    "why": "They seek recent algorithms or lower bounds that improve upon or challenge the listed O(n) result for n-Queens Completion.",
+    "family": "n-Queens Problem",
+    "variation": "n-Queens Completion"
+  },
+  {
+    "queries": [
+      "cycle detection algorithm",
+      "cycle finding lower bound",
+      "iterated function cycle detection"
+    ],
+    "why": "These queries look for recent algorithms faster than Nivasch's O(mu + lambda) bound or new lower bounds for cycle detection.",
+    "family": "Cycle Detection",
+    "variation": "Cycle Detection"
+  },
+  {
+    "queries": [
+      "comparison sorting lower bound",
+      "comparison based sorting algorithm",
+      "optimal comparison sorting"
+    ],
+    "why": "These queries look for new comparison sorting algorithms or lower bounds that improve on the established O(n log n) sequential time and matching comparison lower bound.",
+    "family": "Sorting",
+    "variation": "Comparison Sorting"
+  },
+  {
+    "queries": [
+      "non-comparison sorting lower bound",
+      "integer sorting algorithm",
+      "word RAM sorting"
+    ],
+    "why": "These queries look for algorithms faster than the listed O(n log log n) best known bound or new lower bounds for non-comparison/integer sorting.",
+    "family": "Sorting",
+    "variation": "Non-Comparison Sorting"
+  },
+  {
+    "queries": [
+      "kth order statistic lower bound",
+      "selection problem algorithm",
+      "order statistics algorithm"
+    ],
+    "why": "They look for new lower bounds or improved selection algorithms, given that the best listed algorithm already runs in linear time, leaving only lower-bound proofs or model-specific improvements.",
+    "family": "kth Order Statistic",
+    "variation": "kth Order Statistic"
+  },
+  {
+    "queries": [
+      "matrix chain ordering lower bound",
+      "matrix chain multiplication faster algorithm",
+      "matrix chain ordering algorithm"
+    ],
+    "why": "They seek recent results that improve on the O(n log n) best known algorithm or establish new lower bounds for the matrix chain ordering problem.",
+    "family": "Matrix Chain Multiplication",
+    "variation": "Matrix Chain Ordering Problem"
+  },
+  {
+    "queries": [
+      "Longest Common Subsequence lower bound",
+      "LCS subquadratic algorithm",
+      "Longest Common Subsequence near linear"
+    ],
+    "why": "They seek recent algorithms faster than the listed O(mn) baseline or new conditional lower bounds for Longest Common Subsequence.",
+    "family": "Longest Common Subsequence",
+    "variation": "LCS"
+  },
+  {
+    "queries": [
+      "near linear maximum flow",
+      "max flow lower bounds",
+      "maximum flow new algorithm"
+    ],
+    "why": "These queries seek recent papers that improve on the best known near-linear maximum-flow bound or prove matching lower bounds for the problem.",
+    "family": "Maximum Flow",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "fast matrix multiplication",
+      "matrix multiplication exponent",
+      "matrix product lower bound"
+    ],
+    "why": "These queries look for recent papers that improve upon the listed O(n^2.3728639) upper bound or establish new lower bounds for matrix multiplication.",
+    "family": "Matrix Product",
+    "variation": "Matrix Multiplication"
+  },
+  {
+    "queries": [
+      "3-Graph Coloring exact algorithm",
+      "3-Coloring exponential time algorithm",
+      "3-Coloring lower bound"
+    ],
+    "why": "They look for exact algorithms beating the listed O(1.239^n) bound or new conditional lower bounds for 3-Coloring.",
+    "family": "Graph Coloring",
+    "variation": "3-Graph Coloring"
+  },
+  {
+    "queries": [
+      "4 coloring exact algorithm",
+      "graph 4 coloring algorithm",
+      "4 colorability lower bound"
+    ],
+    "why": "They look for exact 4-coloring algorithms faster than O(1.7272^n) or new lower bounds for the problem.",
+    "family": "Graph Coloring",
+    "variation": "4-Graph Coloring"
+  },
+  {
+    "queries": [
+      "linear system solver",
+      "Toeplitz linear system",
+      "Vandermonde linear system"
+    ],
+    "why": "They seek algorithms faster than O(n^3) Gaussian-Jordan elimination or new lower bounds for solving general and structured linear systems.",
+    "family": "Linear System",
+    "variation": "General Linear System; Positive Definite, Hermitian Matrix; Non-Definite, Symmetric Matrix; Toeplitz Matrix; Vandermonde Matrix"
+  },
+  {
+    "queries": [
+      "Hermitian positive definite solver",
+      "positive definite linear system",
+      "Hermitian positive definite lower bound"
+    ],
+    "why": "They look for new algorithms beating the O(n^3) Cholesky method or new lower bounds for Hermitian positive definite linear systems.",
+    "family": "Linear System",
+    "variation": "Positive Definite, Hermitian Matrix"
+  },
+  {
+    "queries": [
+      "symmetric indefinite linear system",
+      "indefinite symmetric matrix algorithm",
+      "symmetric indefinite factorization"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on Aasen's 1971 O(n^3) method for symmetric indefinite linear systems.",
+    "family": "Linear System",
+    "variation": "Non-Definite, Symmetric Matrix"
+  },
+  {
+    "queries": [
+      "fast Toeplitz linear solver",
+      "Toeplitz system lower bound",
+      "superfast Toeplitz matrix algorithm"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(n^2) Levinson–Durbin and Bareiss algorithms or establish new lower bounds for solving Toeplitz linear systems.",
+    "family": "Linear System",
+    "variation": "Toeplitz Matrix"
+  },
+  {
+    "queries": [
+      "fast Vandermonde solver",
+      "Vandermonde system lower bound",
+      "Vandermonde linear system algorithm"
+    ],
+    "why": "These queries seek algorithms faster than the O(n^2) Bjorck-Pereyra method or new lower bounds for solving Vandermonde linear systems.",
+    "family": "Linear System",
+    "variation": "Vandermonde Matrix"
+  },
+  {
+    "queries": [
+      "linear programming lower bound",
+      "faster linear programming algorithm",
+      "linear optimization interior point"
+    ],
+    "why": "These queries look for recent papers that improve on the current roughly O(n^2.373) matrix-multiplication-based interior point algorithm for linear programming or establish new lower bounds for the problem.",
+    "family": "Linear Programming",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "line segment intersection algorithm",
+      "segment intersection lower bound",
+      "output sensitive segment intersection"
+    ],
+    "why": "They target recent work that improves the O(n log n + k) reporting time or establishes matching lower bounds for line segment intersection.",
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, line segments"
+  },
+  {
+    "queries": [
+      "planar convex hull lower bound",
+      "2D convex hull algorithm",
+      "planar convex hull output sensitive"
+    ],
+    "why": "They search for new algorithms or lower bounds that improve on the listed O(n log h) output-sensitive bound for planar convex hull.",
+    "family": "Convex Hull",
+    "variation": "2-dimensional"
+  },
+  {
+    "queries": [
+      "minimum spanning tree lower bound",
+      "MST near linear time",
+      "undirected minimum spanning tree algorithm"
+    ],
+    "why": "These queries look for algorithms that improve on the near-linear inverse-Ackermann bound or establish matching lower bounds for general undirected MST, going beyond the listed optimal-but-unknown result.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, General MST"
+  },
+  {
+    "queries": [
+      "k dimensional closest pair",
+      "Chebyshev closest pair algorithm",
+      "closest pair lower bound"
+    ],
+    "why": "These queries seek recent algorithms that improve on the O(kn log n) Bentley–Shamos bound or new lower bounds for closest pair in high-dimensional l_m/l_infty spaces.",
+    "family": "Closest Pair Problem",
+    "variation": "k-dimensional space, l_m (or l_infty) norm"
+  },
+  {
+    "queries": [
+      "square matrix LU factorization",
+      "fast square LU decomposition",
+      "LU decomposition lower bound"
+    ],
+    "why": "These queries look for recent algorithms that improve on the listed O(n^2.376) square-matrix LU decomposition bound or new lower bounds for the problem.",
+    "family": "LU Decomposition",
+    "variation": "Square Matrix LU Decomposition"
+  },
+  {
+    "queries": [
+      "informed search lower bound",
+      "heuristic search new algorithm",
+      "informed search time complexity"
+    ],
+    "why": "These queries look for new algorithms or lower bounds that improve upon the best listed result, bidirectional A*'s O(b^(d/2)), for informed or heuristic search.",
+    "family": "Informed Search",
+    "variation": "Informed Search"
+  },
+  {
+    "queries": [
+      "single string matching",
+      "exact pattern matching",
+      "string matching lower bound"
+    ],
+    "why": "They seek results that improve on or match the linear O(n+m) best-known bound, including faster practical variants, lower-bound proofs, or new algorithmic models for exact single-pattern string search.",
+    "family": "String Search",
+    "variation": "Single String Search"
+  },
+  {
+    "queries": [
+      "global sequence alignment",
+      "subquadratic sequence alignment",
+      "global alignment lower bound"
+    ],
+    "why": "They seek recent subquadratic algorithms or fine-grained lower bounds that improve on the listed O(mn) best-known bound for global sequence alignment.",
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence, global alignment"
+  },
+  {
+    "queries": [
+      "local sequence alignment",
+      "Smith Waterman alignment",
+      "local alignment lower bound"
+    ],
+    "why": "They target algorithms that improve on the O(mn) best-known time or establish lower bounds for local sequence alignment.",
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence, local alignment"
+  },
+  {
+    "queries": [
+      "edit distance subquadratic algorithm",
+      "edit distance lower bound",
+      "Levenshtein distance approximation"
+    ],
+    "why": "These queries look for recent papers that improve on the O(mn / log n) Masek–Patterson bound with faster exact or approximation algorithms, or prove fine-grained lower bounds ruling out truly subquadratic edit distance algorithms.",
+    "family": "Sequence Alignment",
+    "variation": "Edit distance"
+  },
+  {
+    "queries": [
+      "edit distance lower bound",
+      "edit distance subquadratic algorithm",
+      "sequence alignment near linear"
+    ],
+    "why": "They look for recent exact algorithms faster than the listed O(mn/log n) bound or new conditional lower bounds ruling out such improvements.",
+    "family": "Sequence Alignment",
+    "variation": "Edit sequence"
+  },
+  {
+    "queries": [
+      "line clipping rectangular window",
+      "rectangular line clipping",
+      "line clipping rectangle lower bound"
+    ],
+    "why": "They look for algorithms or lower bounds that improve on the established O(n) methods for clipping lines against a rectangular window.",
+    "family": "Line Clipping",
+    "variation": "Rectangular Window"
+  },
+  {
+    "queries": [
+      "line clipping convex polyhedral window algorithm",
+      "line clipping convex polygonal lower bound",
+      "faster line clipping convex window algorithm"
+    ],
+    "why": "These queries seek algorithms beating the O(np) Cyrus–Beck bound or new lower bounds for line clipping against convex polygonal and polyhedral windows.",
+    "family": "Line Clipping",
+    "variation": "Convex Polygonal Window; Convex Polyhedral window"
+  },
+  {
+    "queries": [
+      "NFA determinization lower bound",
+      "NFA to DFA conversion",
+      "NFA determinization exponential"
+    ],
+    "why": "These queries search for recent advances that beat or match the 1959 O(2^n) Rabin–Scott powerset construction, such as faster NFA-to-DFA algorithms or new lower bounds.",
+    "family": "NFA to DFA conversion",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "integer multiplication lower bound",
+      "fast integer multiplication algorithm",
+      "integer multiplication complexity"
+    ],
+    "why": "They look for algorithms faster than the listed O(n log n) bound or new lower bounds for integer multiplication.",
+    "family": "Multiplication",
+    "variation": "Multiplication"
+  },
+  {
+    "queries": [
+      "line simplification lower bound",
+      "polyline simplification algorithm",
+      "approximate line simplification"
+    ],
+    "why": "They target new algorithms or lower bounds that improve upon or match the listed O(n) best-known running time for line simplification.",
+    "family": "Line Simplification",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Nearest Neighbor Search lower bound",
+      "Approximate Nearest Neighbor Search algorithm",
+      "Nearest Neighbor Search data structure"
+    ],
+    "why": "These queries look for algorithms or data structures that improve on the listed O(n) query time of linear search, k-d trees, and R-trees, or prove lower bounds that match or exceed that barrier.",
+    "family": "Nearest Neighbor Search",
+    "variation": "Nearest Neighbor Search (NNS)"
+  },
+  {
+    "queries": [
+      "maximum subarray problem lower bound",
+      "1D maximum subarray algorithm",
+      "maximum segment sum algorithm"
+    ],
+    "why": "Since Kadane's algorithm already achieves optimal linear time for the standard 1D problem, these queries target faster algorithms in specialized models such as dynamic or parallel settings, or new lower bounds that rule out further sequential improvements.",
+    "family": "Maximum Subarray Problem",
+    "variation": "1D Maximum Subarray"
+  },
+  {
+    "queries": [
+      "rod cutting algorithm",
+      "improved rod cutting",
+      "rod cutting lower bound"
+    ],
+    "why": "These queries look for recent algorithms that improve on the O(n^2) dynamic programming solution or establish new lower bounds for the rod-cutting problem.",
+    "family": "Rod-Cutting Problem",
+    "variation": "Rod-Cutting Problem"
+  },
+  {
+    "queries": [
+      "coin change algorithm",
+      "change making lower bound",
+      "faster change making"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on the listed O(n log n) probabilistic convolution tree for the change-making problem.",
+    "family": "Change-Making Problem",
+    "variation": "Change-Making Problem"
+  },
+  {
+    "queries": [
+      "Traveling Salesman Problem exact algorithm",
+      "Minimum TSP lower bound",
+      "TSP fine-grained complexity"
+    ],
+    "why": "They target new exact algorithms beating the O(V^2 2^V) Held–Karp runtime or new lower bounds that rule out such improvements for Minimum TSP.",
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Minimum TSP"
+  },
+  {
+    "queries": [
+      "Geometric Maximum TSP algorithm",
+      "Euclidean Max TSP lower bound",
+      "Geometric Max TSP hardness"
+    ],
+    "why": "They look for recent algorithms improving on the listed O(V^2 log log E) bound or new lower bounds for geometric maximum TSP.",
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Geometric Maximum TSP"
+  },
+  {
+    "queries": [
+      "corner detection algorithm",
+      "interest point detection",
+      "corner detection lower bound"
+    ],
+    "why": "Given the best listed algorithms run in O(n^2), these queries look for recent papers presenting sub-quadratic corner detection algorithms or new lower bounds for the problem.",
+    "family": "Feature Detection",
+    "variation": "Corner Detection"
+  },
+  {
+    "queries": [
+      "unweighted set cover algorithm",
+      "set cover lower bound",
+      "minimum set cover hardness"
+    ],
+    "why": "They target recent improvements on the 2006 O(n log n) algorithm or new hardness results for unweighted set cover.",
+    "family": "The Set-Covering Problem",
+    "variation": "Unweighted Set-Covering"
+  },
+  {
+    "queries": [
+      "image compositing algorithm",
+      "alpha compositing lower bound",
+      "fast image blending"
+    ],
+    "why": "These queries look for new compositing algorithms or lower bounds that improve upon the listed Petro Vlahos method.",
+    "family": "Image Compositing",
+    "variation": "Image Compositing"
+  },
+  {
+    "queries": [
+      "SLAM lower bound",
+      "SLAM sublinear algorithm",
+      "Simultaneous Localization and Mapping algorithm"
+    ],
+    "why": "They target new lower bounds or algorithms that improve on the listed O(m log n) per-iteration FastSLAM bound and O(n^2) alternatives.",
+    "family": "SLAM Algorithms",
+    "variation": "SLAM Algorithms"
+  },
+  {
+    "queries": [
+      "closest pair Euclidean algorithm",
+      "planar closest pair lower bound",
+      "Euclidean closest pair complexity"
+    ],
+    "why": "They look for recent results that improve on the O(n log n) deterministic algorithm or the O(n) randomized expected time, or establish matching lower bounds for the planar Euclidean closest pair problem.",
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional space, Euclidean metric"
+  },
+  {
+    "queries": [
+      "st maximum flow algorithm",
+      "st max flow lower bound",
+      "maximum flow near linear"
+    ],
+    "why": "These queries look for recent algorithms beating the listed O(VE) bound or new lower bounds showing that bound is optimal for st-maximum flow.",
+    "family": "Maximum Flow",
+    "variation": "st-Maximum Flow"
+  },
+  {
+    "queries": [
+      "integer maximum flow algorithm",
+      "st maximum flow lower bound",
+      "integral max flow faster"
+    ],
+    "why": "They look for recent algorithms that beat Goldberg and Rao's 1997 near-O(E^{3/2}) integer maximum-flow bound or new lower bounds showing such speedups are impossible.",
+    "family": "Maximum Flow",
+    "variation": "Integer Maximum Flow"
+  },
+  {
+    "queries": [
+      "sparse linear system algorithm",
+      "quantum sparse linear solver",
+      "sparse linear system lower bound"
+    ],
+    "why": "These queries look for algorithms that improve on the 2009 quantum O(k^2 log n) sparse linear system solver or prove matching lower bounds for it.",
+    "family": "Linear System",
+    "variation": "Sparse Linear System"
+  },
+  {
+    "queries": [
+      "line segment intersection convex polygons",
+      "segment intersection reporting convex polygons",
+      "convex polygon intersection reporting"
+    ],
+    "why": "These queries seek new algorithms that improve on the listed O(n log n + k) reporting bound or new lower bounds for convex polygon intersection reporting.",
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, convex polygons"
+  },
+  {
+    "queries": [
+      "line segment intersection reporting",
+      "generalized segments intersection",
+      "segment intersection lower bound"
+    ],
+    "why": "They target algorithms faster than the listed O(n log n + k) output-sensitive bound or new lower bounds for reporting all intersections of generalized segments.",
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points, generalized segments"
+  },
+  {
+    "queries": [
+      "convex hull algorithm",
+      "convex hull lower bound",
+      "3d convex hull"
+    ],
+    "why": "These queries target recent advances that improve on or match the O(n log n) Preparata–Hong bound and Chan's O(n log h) output-sensitive algorithm for two- and three-dimensional convex hulls, including new lower bounds.",
+    "family": "Convex Hull",
+    "variation": "2-dimensional; 3-dimensional"
+  },
+  {
+    "queries": [
+      "dynamic strongly connected components",
+      "parallel SCCs algorithm",
+      "strongly connected components lower bound"
+    ],
+    "why": "These queries target recent dynamic, parallel, and conditional lower-bound work on SCCs, since the listed static linear-time algorithms are already optimal in the classical sequential model.",
+    "family": "Strongly Connected Components",
+    "variation": "SCCs"
+  },
+  {
+    "queries": [
+      "strongly connected components transitive closure",
+      "SCC transitive closure",
+      "condensation graph transitive closure"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on the listed O(V^2 + VE) algorithm for transitive closure of strongly connected components.",
+    "family": "Strongly Connected Components",
+    "variation": "Transitive Closure"
+  },
+  {
+    "queries": [
+      "planar closest pair",
+      "L infinity closest pair",
+      "closest pair lower bound"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on or match the 1988 O(n log n) algorithm for closest pair in the plane under L_m/L_infty norms.",
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional space, l_m (or l_infty) norm"
+  },
+  {
+    "queries": [
+      "closest pair 2D array",
+      "parallel closest pair matrix",
+      "closest pair grid lower bound"
+    ],
+    "why": "They look for recent algorithms or lower bounds that improve on Dyer’s 1980 O(n)-time, O(n²)-processor result for closest pair on a 2D array, such as work-efficient parallel algorithms or matching hardness results.",
+    "family": "Closest Pair Problem",
+    "variation": "2-dimensional array representation"
+  },
+  {
+    "queries": [
+      "directed shortest path negative weights",
+      "single source shortest path arbitrary weights",
+      "shortest path general weights lower bound"
+    ],
+    "why": "These queries look for recent algorithms that beat the O(VE) Bellman–Ford running time or new lower bounds for directed single-source shortest paths with general edge weights.",
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "general weights"
+  },
+  {
+    "queries": [
+      "directed shortest path nonnegative weights",
+      "SSSP nonnegative weights directed",
+      "Dijkstra shortest path lower bound"
+    ],
+    "why": "They seek algorithms improving on the O(E + V log V) Fibonacci-heap Dijkstra bound or new lower bounds for directed nonnegative-weight shortest paths.",
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "Nonnegative Weights"
+  },
+  {
+    "queries": [
+      "directed shortest path integer weights",
+      "directed single source shortest path",
+      "shortest path nonnegative integer weights"
+    ],
+    "why": "These queries seek recent algorithms improving on Thorup's near-linear bound or matching lower bounds for directed single-source shortest paths with nonnegative integer weights.",
+    "family": "Shortest Path (Directed Graphs)",
+    "variation": "Nonnegative Integer Weights"
+  },
+  {
+    "queries": [
+      "APSP dense directed graphs",
+      "all pairs shortest paths directed",
+      "APSP subcubic lower bound"
+    ],
+    "why": "They look for algorithms that improve on Williams' slightly subcubic O(n^3/2^{sqrt(log n)}) bound or lower bounds showing dense directed APSP with arbitrary weights cannot be solved substantially faster.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Directed Graphs with Arbitrary Weights"
+  },
+  {
+    "queries": [
+      "all pairs shortest paths unweighted",
+      "undirected unweighted APSP algorithm",
+      "APSP unweighted lower bound"
+    ],
+    "why": "These queries look for recent algorithms that beat Seidel's O(n^{2.373} log n) time or new lower bounds showing such improvements are unlikely for undirected unweighted APSP.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Unweighted Graphs; APSP on Sparse Undirected Unweighted Graphs"
+  },
+  {
+    "queries": [
+      "undirected all pairs shortest paths",
+      "APSP arbitrary weights algorithm",
+      "undirected APSP arbitrary weights lower bound"
+    ],
+    "why": "These queries look for algorithms faster than the listed O(mn log α(m,n)) bound or new lower bounds for undirected all-pairs shortest paths with arbitrary weights.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Graphs with Arbitrary Weights; APSP on Sparse Undirected Graphs with Arbitrary Weights"
+  },
+  {
+    "queries": [
+      "undirected APSP integer weights",
+      "APSP positive integer weights",
+      "faster undirected all pairs shortest paths"
+    ],
+    "why": "These queries look for algorithms that beat Thorup's O(mn) bound or new lower bounds for undirected APSP with positive integer weights.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Undirected Graphs with Positive Integer Weights; APSP on Sparse Undirected Graphs with Positive Integer Weights"
+  },
+  {
+    "queries": [
+      "all-pairs shortest paths geometric graphs",
+      "APSP geometrically weighted graphs",
+      "geometrically weighted all-pairs shortest paths"
+    ],
+    "why": "These queries look for algorithms faster than the listed O(n^2.844) bound or new lower bounds for APSP on geometrically weighted graphs.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Geometrically Weighted Graphs"
+  },
+  {
+    "queries": [
+      "all pairs shortest paths lower bound",
+      "APSP dense graphs algorithm",
+      "all pairs shortest paths subcubic"
+    ],
+    "why": "They look for recent algorithms improving on Chan’s near-cubic bound or new lower bounds for dense all-pairs shortest paths with arbitrary weights.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "APSP on Dense Directed Graphs with Arbitrary Weights; APSP on Dense Undirected Graphs with Arbitrary Weights"
+  },
+  {
+    "queries": [
+      "integer factoring first category",
+      "integer factorization algorithm",
+      "integer factoring lower bound"
+    ],
+    "why": "They target improvements beyond the sub-exponential special number field sieve, seeking either faster algorithms or new lower bounds for first-category integer factoring.",
+    "family": "Integer Factoring",
+    "variation": "First Category Integer Factoring"
+  },
+  {
+    "queries": [
+      "integer factoring lower bound",
+      "integer factorization algorithm",
+      "second category integer factoring"
+    ],
+    "why": "These queries seek algorithms that improve on the general number field sieve's sub-exponential runtime or new lower bounds for integer factoring.",
+    "family": "Integer Factoring",
+    "variation": "Second Category Integer Factoring"
+  },
+  {
+    "queries": [
+      "rectangular matrix LU decomposition",
+      "LU factorization rectangular matrix",
+      "randomized rectangular LU decomposition"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on the listed 2016 randomized O(n^3) method for rectangular LU decomposition.",
+    "family": "LU Decomposition",
+    "variation": "Rectangular Matrix LU Decomposition"
+  },
+  {
+    "queries": [
+      "line clipping convex polygon",
+      "convex polygonal window clipping",
+      "line clipping polygonal window"
+    ],
+    "why": "These queries seek recent papers presenting faster algorithms or new lower bounds for line clipping against convex polygonal windows, improving on the listed best known bound.",
+    "family": "Line Clipping",
+    "variation": "convex polygonal window"
+  },
+  {
+    "queries": [
+      "line clipping polyhedral window",
+      "line clipping nonconvex polyhedron",
+      "line clipping convex polyhedron"
+    ],
+    "why": "They seek algorithms faster than Skala's O(np) bound or new lower bounds for line clipping against convex and non-convex polyhedral windows.",
+    "family": "Line Clipping",
+    "variation": "convex and non-convex polyhedral window"
+  },
+  {
+    "queries": [
+      "mutual exclusion lower bound",
+      "critical section algorithm",
+      "distributed mutual exclusion"
+    ],
+    "why": "They search for algorithms faster than the listed O(log n) bound or lower bounds showing that bound is optimal for mutual exclusion.",
+    "family": "Mutual Exclusion",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "hidden surface determination algorithm",
+      "visible surface determination lower bound",
+      "hidden surface removal complexity"
+    ],
+    "why": "They look for recent algorithms or lower bounds that improve on the listed O(np) and O(n log n + np) hidden-surface methods.",
+    "family": "Shown Surface Determination",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "dominant eigenpair algorithm",
+      "largest eigenvalue iteration",
+      "principal eigenpair lower bound"
+    ],
+    "why": "These queries search for recent work that improves on the O(n^2) power-iteration runtime or proves a matching lower bound for computing the dominant eigenpair.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Eigenpair with the Largest Eigenvalue"
+  },
+  {
+    "queries": [
+      "Delaunay triangulation lower bound",
+      "dynamic Delaunay triangulation",
+      "2D Delaunay triangulation algorithm"
+    ],
+    "why": "These queries target new lower bounds or faster dynamic/parallel algorithms that improve on Fortune's O(n log n) Delaunay triangulation.",
+    "family": "Delaunay Triangulation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "integer relation detection algorithm",
+      "integer relation lower bound",
+      "fast integer relation algorithm"
+    ],
+    "why": "These queries look for algorithms faster than the listed O(n^3) methods or new lower bounds for integer relation detection and finding.",
+    "family": "Integer Relation",
+    "variation": "Integer Relation"
+  },
+  {
+    "queries": [
+      "Dining Philosophers deadlock avoidance",
+      "Dining Philosophers lower bound",
+      "Dining Philosophers complexity"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on the exponential O(2^n) resource hierarchy and arbitrator solutions listed for the problem.",
+    "family": "Deadlock Avoidance",
+    "variation": "Dining Philosophers Problem"
+  },
+  {
+    "queries": [
+      "de novo genome assembly",
+      "genome assembly lower bound",
+      "string graph genome assembly"
+    ],
+    "why": "Given the listed O(n) string-graph FM-index algorithm, these queries search for new algorithms that improve on or match that bound, or new lower bounds showing optimality or hardness for de novo genome assembly.",
+    "family": "De Novo Genome Assembly",
+    "variation": "De Novo Genome Assembly"
+  },
+  {
+    "queries": [
+      "ray tracing lower bound",
+      "fast ray tracing",
+      "subquadratic ray tracing"
+    ],
+    "why": "They seek recent algorithms faster than the listed O(n^2) ray tracing methods or new lower bounds for the problem.",
+    "family": "Ray Tracing",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "blob detection algorithm",
+      "fast blob detection",
+      "blob detection lower bound"
+    ],
+    "why": "These queries look for algorithms that improve on the listed O(n log n) best known running time or establish new lower bounds for blob detection.",
+    "family": "Feature Detection",
+    "variation": "Blob Detection"
+  },
+  {
+    "queries": [
+      "culling lower bound",
+      "visibility culling",
+      "view frustum culling"
+    ],
+    "why": "All listed culling algorithms run in O(n^2), so these queries search for sub-quadratic algorithms or matching lower bounds for culling and its common variants.",
+    "family": "Culling",
+    "variation": "Culling"
+  },
+  {
+    "queries": [
+      "diffuse reflection texture mapping",
+      "Lambertian reflection texture mapping",
+      "diffuse reflection lower bound"
+    ],
+    "why": "They seek recent papers that improve on the decades-old O(k^3 n) and O(k n^2) bounds with faster algorithms or establish new lower bounds for diffuse texture mapping.",
+    "family": "Texture Mapping",
+    "variation": "Diffuse Reflection"
+  },
+  {
+    "queries": [
+      "specular reflection algorithm",
+      "specular shading lower bound",
+      "fast specular mapping"
+    ],
+    "why": "They seek algorithms faster than the listed Ward anisotropic O(n^1.67 log^2 n) bound or new lower bounds for specular reflection computation.",
+    "family": "Texture Mapping",
+    "variation": "Specular Reflection"
+  },
+  {
+    "queries": [
+      "lower bounds for image segmentation",
+      "near linear image segmentation",
+      "image partitioning efficient algorithm"
+    ],
+    "why": "They target results that improve on the listed O(n log n) best-known time for image segmentation, either with faster algorithms or matching lower bounds.",
+    "family": "Image Segmentation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "mesh simplification algorithm",
+      "mesh decimation lower bound",
+      "triangle mesh simplification"
+    ],
+    "why": "These queries look for recent faster algorithms or new lower bounds for mesh simplification beyond the classical 1990s decimation, clustering, and wavelet methods listed.",
+    "family": "Mesh Simplification",
+    "variation": "Mesh Simplification"
+  },
+  {
+    "queries": [
+      "POMDP approximate algorithm",
+      "POMDP lower bound",
+      "partially observable Markov decision process"
+    ],
+    "why": "These queries look for recent papers presenting faster POMDP solution methods or new lower bounds beyond the classical exact and point-based algorithms listed above.",
+    "family": "POMDPs",
+    "variation": "POMDPs"
+  },
+  {
+    "queries": [
+      "fast rasterization algorithm",
+      "scan conversion lower bound",
+      "efficient line rasterization"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on the O(n) DDA and Bresenham rasterization methods, such as faster GPU variants, output-sensitive approaches, or proofs that linear time is optimal.",
+    "family": "Rasterization",
+    "variation": "Rasterization"
+  },
+  {
+    "queries": [
+      "environment mapping algorithm",
+      "sphere mapping complexity",
+      "environment mapping lower bound"
+    ],
+    "why": "These queries look for new algorithms or lower bounds that improve on the best listed O(n^2) HEALPix environment mapping method.",
+    "family": "Texture Mapping",
+    "variation": "Environment Mapping"
+  },
+  {
+    "queries": [
+      "fast occupancy grid mapping",
+      "occupancy grid mapping lower bound",
+      "probabilistic occupancy grid mapping"
+    ],
+    "why": "These queries look for recent papers that improve on the listed 2004 O(n^3) maximum a posteriori occupancy mapping algorithm or establish new lower bounds for occupancy grid mapping.",
+    "family": "Occupancy Grid Mapping",
+    "variation": "Occupancy Grid Mapping"
+  },
+  {
+    "queries": [
+      "approximate matrix chain scheduling",
+      "approximate matrix chain scheduling algorithm",
+      "matrix chain scheduling lower bound"
+    ],
+    "why": "They seek recent algorithms faster than the listed O(n^2) method or new lower bounds for approximate matrix chain scheduling.",
+    "family": "Matrix Chain Multiplication",
+    "variation": "Approximate MCSP"
+  },
+  {
+    "queries": [
+      "approximate matrix chain ordering",
+      "matrix chain ordering problem",
+      "approximate matrix chain multiplication"
+    ],
+    "why": "These queries look for newer algorithms or lower bounds that improve on the listed O(log^4 n) result for approximate matrix chain ordering.",
+    "family": "Matrix Chain Multiplication",
+    "variation": "Approximate MCOP"
+  },
+  {
+    "queries": [
+      "Matrix Chain Scheduling algorithm",
+      "Matrix Chain Multiplication scheduling lower bound",
+      "Parallel Matrix Chain Scheduling complexity"
+    ],
+    "why": "These queries look for recent faster algorithms or new lower bounds that improve on the listed O(log^3 n) algorithm for Matrix Chain Scheduling.",
+    "family": "Matrix Chain Multiplication",
+    "variation": "Matrix Chain Scheduling Problem"
+  },
+  {
+    "queries": [
+      "maximum independent set 3-colorable graphs",
+      "maximum stable set 3-colorable",
+      "independent set 3-colorable lower bound"
+    ],
+    "why": "These queries look for algorithms improving on the listed O(1.2108^n) bound or new lower bounds for Maximum Independent Set on 3-colorable graphs.",
+    "family": "Max Independent Set",
+    "variation": "3-Graph Coloring"
+  },
+  {
+    "queries": [
+      "random 3-colorable graph coloring",
+      "3-coloring random 3-colorable graphs",
+      "planted 3-coloring random graphs"
+    ],
+    "why": "These queries look for recent papers presenting faster algorithms or new lower bounds for coloring random 3-colorable graphs beyond the currently listed polynomial-time algorithm.",
+    "family": "Graph Coloring",
+    "variation": "3-Coloring a Random 3-Colorable Graph"
+  },
+  {
+    "queries": [
+      "convex hull lower bound",
+      "dynamic convex hull",
+      "online convex hull"
+    ],
+    "why": "These queries look for algorithms that improve on the O(n log n) bound or new lower bounds for convex hull, including dynamic and online variants.",
+    "family": "Convex Hull",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "multiple pattern matching lower bound",
+      "dictionary matching new algorithm",
+      "multiple string search complexity"
+    ],
+    "why": "These queries look for recent algorithms that beat the listed O(n + m + z) bound or new lower bounds for multiple string search.",
+    "family": "String Search",
+    "variation": "Multiple String Search"
+  },
+  {
+    "queries": [
+      "edit sequence subquadratic",
+      "constant alphabet edit distance",
+      "edit sequence fine grained"
+    ],
+    "why": "They look for subquadratic algorithms or fine-grained lower bounds that improve on the listed O(mn) BLAST-based methods for constant-alphabet edit sequence alignment.",
+    "family": "Sequence Alignment",
+    "variation": "Edit Sequence, constant-size alphabet"
+  },
+  {
+    "queries": [
+      "worst case optimal join",
+      "join lower bound",
+      "relational join algorithm"
+    ],
+    "why": "They target recent worst-case optimal join algorithms and lower bounds that could improve on or match the linear-time hash join, as well as new join complexity results beyond the classical nested-loop, sort-merge, and hash joins.",
+    "family": "Joins",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "bipartite matching algorithm",
+      "maximum bipartite matching lower bound",
+      "bipartite graph matching near linear"
+    ],
+    "why": "They target new algorithms beating Madry’s O(E^{10/7} polylog V) time or new lower bounds for bipartite maximum cardinality matching.",
+    "family": "Maximum Cardinality Matching",
+    "variation": "Bipartite Graph MCM"
+  },
+  {
+    "queries": [
+      "planar bipartite maximum cardinality matching",
+      "bipartite planar matching algorithm",
+      "planar bipartite matching lower bound"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(V^(ω/2)) algorithm or establish new lower bounds for planar bipartite maximum cardinality matching.",
+    "family": "Maximum Cardinality Matching",
+    "variation": "Planar Bipartite Graph MCM"
+  },
+  {
+    "queries": [
+      "general graph maximum matching",
+      "maximum cardinality matching general graph",
+      "general graph matching lower bound"
+    ],
+    "why": "These queries target recent work that improves on the O(V^omega) general-graph matching bound or establishes new lower bounds for the problem.",
+    "family": "Maximum Cardinality Matching",
+    "variation": "General Graph MCM"
+  },
+  {
+    "queries": [
+      "planar bipartite perfect matching algorithm",
+      "planar bipartite matching lower bound",
+      "planar bipartite matching hardness"
+    ],
+    "why": "They seek algorithms improving on Klein's O(V^{4/3} log V) time or new lower bounds for planar bipartite perfect matching.",
+    "family": "Maximum Cardinality Matching",
+    "variation": "Planar Bipartite Graph Perfect Matching"
+  },
+  {
+    "queries": [
+      "key exchange lower bound",
+      "Diffie Hellman key agreement",
+      "post quantum key exchange"
+    ],
+    "why": "These queries seek recent papers that present faster key-exchange protocols or prove new lower bounds beyond the listed Diffie–Hellman and elliptic-curve complexities.",
+    "family": "Key Exchange",
+    "variation": "Key Exchange"
+  },
+  {
+    "queries": [
+      "two thread mutual exclusion",
+      "two process mutual exclusion",
+      "two thread mutual exclusion lower bound"
+    ],
+    "why": "These queries look for recent new or faster algorithms, or new lower bounds, for two-thread mutual exclusion that improve on Dekker's classic O(n) algorithm.",
+    "family": "Mutual Exclusion",
+    "variation": "2-thread Mutual Exclusion"
+  },
+  {
+    "queries": [
+      "inexact Laplacian solver",
+      "SDD linear system solver",
+      "Laplacian solver lower bound"
+    ],
+    "why": "These queries look for algorithms faster than the listed O(n^2) method or new lower bounds for solving symmetric diagonally dominant Laplacian systems inexactly.",
+    "family": "SDD Systems Solvers",
+    "variation": "Inexact Laplacian Solver"
+  },
+  {
+    "queries": [
+      "exact Laplacian solver",
+      "SDD linear system solver",
+      "graph Laplacian solver"
+    ],
+    "why": "These queries seek algorithms that improve on Gaussian elimination's O(n^3) runtime or establish new lower bounds for exactly solving symmetric diagonally dominant Laplacian linear systems.",
+    "family": "SDD Systems Solvers",
+    "variation": "Exact Laplacian Solver"
+  },
+  {
+    "queries": [
+      "cycle detection algorithm",
+      "cycle finding lower bound",
+      "tortoise hare cycle detection"
+    ],
+    "why": "These queries look for new algorithms faster than the classic linear-time Floyd and Brent cycle detection methods, or new lower bounds showing the problem cannot be solved substantially faster.",
+    "family": "Cycle Detection",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "random permutation generation lower bound",
+      "fast random shuffle algorithm",
+      "uniform random permutation complexity"
+    ],
+    "why": "These queries look for recent algorithms that improve on the listed O(n) best-known time in restricted or parallel models, or new lower bounds confirming that linear time is optimal for generating a uniform general permutation.",
+    "family": "Generating Random Permutations",
+    "variation": "General Permutations"
+  },
+  {
+    "queries": [
+      "random cyclic permutations",
+      "cyclic permutation generation",
+      "cyclic permutation sampling"
+    ],
+    "why": "These queries look for recent new algorithms, speedups, or lower bounds for random cyclic permutation generation, where the best known method already takes linear O(n) time.",
+    "family": "Generating Random Permutations",
+    "variation": "Cyclic Permutations"
+  },
+  {
+    "queries": [
+      "convex optimization lower bounds",
+      "constrained convex optimization algorithms",
+      "nonlinear convex programming complexity"
+    ],
+    "why": "They target new algorithms improving on the listed O(n^2) subgradient method or new lower bounds for general constrained convex optimization.",
+    "family": "Convex Optimization (Non-linear)",
+    "variation": "General, Constrained optimization"
+  },
+  {
+    "queries": [
+      "stochastic convex optimization lower bound",
+      "stochastic convex optimization algorithm",
+      "stochastic convex programming"
+    ],
+    "why": "These queries seek recent papers presenting faster algorithms or new lower bounds for stochastic convex optimization that improve on the listed 1993 O(n^2) dual subgradient and drift-plus-penalty method.",
+    "family": "Convex Optimization (Non-linear)",
+    "variation": "Stochastic optimization"
+  },
+  {
+    "queries": [
+      "Gröbner bases faster algorithm",
+      "Gröbner basis lower bound",
+      "Gröbner bases complexity improvement"
+    ],
+    "why": "These queries look for algorithms improving on Faugère's F4/F5 upper bound or new lower bounds for Gröbner basis computation.",
+    "family": "Gröbner Bases",
+    "variation": "Gröbner Bases"
+  },
+  {
+    "queries": [
+      "totally monotone matrix row minima",
+      "SMAWK totally monotone matrix",
+      "implicit matrix row minima"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve on the 1987 SMAWK O(n(1+log(m/n))) bound for finding row minima in totally monotone matrices.",
+    "family": "Minimum value in each row of an implicitly-defined totally monotone matrix",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "permutation generation algorithm",
+      "all permutations generation",
+      "permutation enumeration lower bound"
+    ],
+    "why": "They look for recent algorithms or lower bounds that improve on the decades-old O(n · n!) bound for generating all permutations.",
+    "family": "All Permutations",
+    "variation": "All Permutations"
+  },
+  {
+    "queries": [
+      "optimal binary search trees lower bound",
+      "linear time optimal binary search trees",
+      "OBST subquadratic time algorithm"
+    ],
+    "why": "They look for algorithms improving on the O(n^2) best known bound or new lower bounds for optimal binary search trees.",
+    "family": "Optimal Binary Search Trees",
+    "variation": "OBST"
+  },
+  {
+    "queries": [
+      "two player Nash equilibrium",
+      "bimatrix game equilibrium computation",
+      "Nash equilibrium lower bound"
+    ],
+    "why": "These queries seek recent papers that either present algorithms faster than the exponential Lemke–Howson method or establish lower bounds ruling out such improvements for two-player Nash equilibrium.",
+    "family": "Nash Equilibria",
+    "variation": "2-player"
+  },
+  {
+    "queries": [
+      "bipartite maximum weight matching algorithm",
+      "assignment problem faster algorithm",
+      "maximum weight bipartite matching lower bound"
+    ],
+    "why": "These queries look for algorithms that improve on the listed O(n^4) Hungarian algorithm or new lower bounds for bipartite maximum-weight matching.",
+    "family": "Maximum-Weight Matching",
+    "variation": "Bipartite Maximum-Weight Matching"
+  },
+  {
+    "queries": [
+      "maximum weight matching algorithm",
+      "weighted matching lower bound",
+      "maximum weight matching general graph"
+    ],
+    "why": "These queries look for recent algorithms improving on Edmonds' O(mn^2) time or new lower bounds for general maximum-weight matching.",
+    "family": "Maximum-Weight Matching",
+    "variation": "Maximum-Weight Matching"
+  },
+  {
+    "queries": [
+      "dynamic Eulerian trail algorithm",
+      "parallel Eulerian circuit construction",
+      "Eulerian path streaming lower bound"
+    ],
+    "why": "Since Hierholzer's algorithm already achieves optimal O(E) time for static sequential input, these queries look for new algorithms or lower bounds in dynamic, parallel, and streaming models.",
+    "family": "Constructing Eulerian Trails in a Graph",
+    "variation": "Constructing Eulerian Trails in a Graph"
+  },
+  {
+    "queries": [
+      "Discrete Fourier Transform lower bound",
+      "Fast Fourier Transform linear time",
+      "Discrete Fourier Transform sublinear algorithm"
+    ],
+    "why": "They seek algorithms that improve on the longstanding O(n log n) FFT bound—such as linear-time or sublinear methods—or new lower bounds that would establish its optimality.",
+    "family": "Discrete Fourier Transform",
+    "variation": "Discrete Fourier Transform"
+  },
+  {
+    "queries": [
+      "digital line drawing lower bound",
+      "fast raster line drawing",
+      "line drawing sublinear algorithm"
+    ],
+    "why": "They look for sublinear or faster rasterization algorithms, or lower bounds showing that the O(n) time of Bresenham and Wu is optimal.",
+    "family": "Line Drawing",
+    "variation": "Line Drawing"
+  },
+  {
+    "queries": [
+      "arbitrary polygon clipping",
+      "general polygon clipping algorithm",
+      "polygon clipping lower bound"
+    ],
+    "why": "These queries seek subquadratic algorithms or matching lower bounds for general polygon clipping, improving on the listed O(n^2) methods.",
+    "family": "Polygon Clipping",
+    "variation": "Polygon Clipping with Arbitrary Clipping Polygon"
+  },
+  {
+    "queries": [
+      "convex polygon clipping algorithm",
+      "fast convex polygon clipping",
+      "convex polygon clipping lower bound"
+    ],
+    "why": "These queries seek recent algorithms faster than the listed O(n^2) Sutherland–Hodgman method or new lower bounds for clipping a polygon against a convex polygon.",
+    "family": "Polygon Clipping",
+    "variation": "Polygon Clipping with Convex Clipping Polygon"
+  },
+  {
+    "queries": [
+      "eigenpair closest to shift",
+      "LOBPCG eigenproblem algorithm",
+      "inverse iteration eigenvalue problem"
+    ],
+    "why": "These queries seek recent papers presenting faster algorithms or lower bounds for iterative eigenpair and eigenvalue computation, aiming to improve on the classical O(n^2) methods such as inverse iteration, LOBPCG, and folded spectrum.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Eigenpair closest to mu; Any eigenpair; Any eigenvalue"
+  },
+  {
+    "queries": [
+      "iterative eigenvalue methods",
+      "eigenpair computation algorithms",
+      "eigenvalue iterative solver"
+    ],
+    "why": "These queries look for recent papers presenting faster iterative algorithms or new lower bounds for computing any single eigenpair or eigenvalue, improving on the listed O(n) MRRR and O(n^2) Rayleigh quotient iteration bounds.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Any eigenpair; Any eigenvalue"
+  },
+  {
+    "queries": [
+      "any eigenvalue algorithm",
+      "iterative eigenvalue computation",
+      "eigenvalue lower bound"
+    ],
+    "why": "They seek algorithms faster than the O(n^2) bisection and Laguerre methods, or lower bounds showing that computing any eigenvalue inherently requires quadratic time.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "Any eigenvalue"
+  },
+  {
+    "queries": [
+      "eigenvalue problem lower bound",
+      "fast eigensolver algorithm",
+      "eigenproblem time complexity"
+    ],
+    "why": "They target new algorithms beating the listed O(n log n) divide-and-conquer bound or new lower bounds for computing all or any eigenvalue.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "All eigenvalues; Any eigenvalue"
+  },
+  {
+    "queries": [
+      "iterative eigenvalue algorithms",
+      "eigenpair computation methods",
+      "eigenvalue computation complexity"
+    ],
+    "why": "These queries seek recent iterative algorithms that improve on the 1992 O(n^2) homotopy method or establish new complexity lower bounds for eigenpair and eigenvalue computation.",
+    "family": "Eigenvalues (Iterative Methods)",
+    "variation": "All eigenpairs; Eigenpair closest to mu; Any eigenpair; Any eigenvalue; All eigenvalues"
+  },
+  {
+    "queries": [
+      "general root computation algorithm",
+      "root finding lower bound",
+      "scalar root computation complexity"
+    ],
+    "why": "These queries look for recent algorithms faster than the ITP method's O(n_0 + log((b-a)/ε)) bound or new lower bounds for general root computation.",
+    "family": "Root Computation",
+    "variation": "General Root Computation"
+  },
+  {
+    "queries": [
+      "root computation continuous derivative",
+      "root finding first derivative",
+      "root computation derivative complexity"
+    ],
+    "why": "These queries target recent advances that improve on Newton's method's O(n_max) runtime for continuously differentiable root computation, either through faster algorithms or new lower bounds.",
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous first derivative"
+  },
+  {
+    "queries": [
+      "root finding second derivative",
+      "Halley method convergence",
+      "cubic convergence root finding"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve upon Halley's method, the listed 1940 O(n_max) algorithm, for root computation using continuous second derivatives.",
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous second derivative"
+  },
+  {
+    "queries": [
+      "coset enumeration algorithm",
+      "Todd Coxeter coset enumeration",
+      "coset enumeration lower bound"
+    ],
+    "why": "These queries look for recent algorithms faster than Knuth–Bendix's O(1.5^n n^2 log n) runtime or new lower bounds for coset enumeration.",
+    "family": "Coset Enumeration",
+    "variation": "Coset Enumeration"
+  },
+  {
+    "queries": [
+      "maximum likelihood parameter estimation",
+      "faster maximum likelihood estimation",
+      "maximum likelihood lower bounds"
+    ],
+    "why": "These queries look for algorithms improving on the O(n^2 log n) ECM bound or new lower bounds for maximum likelihood parameter estimation.",
+    "family": "Maximum Likelihood Parameters",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "cardinality estimation distinct elements",
+      "distinct elements streaming",
+      "cardinality estimation lower bound"
+    ],
+    "why": "They search for recent work that improves upon the linear-time HyperLogLog++ sketch or establishes new lower bounds for estimating the number of distinct elements.",
+    "family": "Cardinality Estimation",
+    "variation": "Cardinality Estimation"
+  },
+  {
+    "queries": [
+      "streaming cardinality estimation distinct elements",
+      "distinct elements data stream",
+      "cardinality estimation stream lower bound"
+    ],
+    "why": "These queries look for recent faster algorithms or lower bounds for streaming distinct-elements estimation that improve on the classic O(N) min/max and bottom-m sketch methods from 1980.",
+    "family": "Cardinality Estimation",
+    "variation": "streaming"
+  },
+  {
+    "queries": [
+      "global register allocation",
+      "register allocation lower bound",
+      "fast register allocation"
+    ],
+    "why": "These queries seek recent algorithms that improve on the best listed O(n) linear scan method or establish new lower bounds for global register allocation.",
+    "family": "Register Allocation",
+    "variation": "Global Register Allocation"
+  },
+  {
+    "queries": [
+      "register allocation algorithm",
+      "global register allocation",
+      "register allocation lower bound"
+    ],
+    "why": "These queries seek algorithms faster than the listed O(n^2) Cooper-Dasgupta method or new lower bounds for register allocation.",
+    "family": "Register Allocation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Voronoi diagram lower bound",
+      "Voronoi diagram faster algorithm",
+      "Dirichlet tessellation construction complexity"
+    ],
+    "why": "These queries seek new algorithms or lower bounds that improve upon or match the O(n log n) best-known construction time for Voronoi diagrams.",
+    "family": "Voronoi Diagrams",
+    "variation": "Voronoi Diagrams"
+  },
+  {
+    "queries": [
+      "variance computation lower bound",
+      "streaming variance algorithm",
+      "parallel variance computation"
+    ],
+    "why": "Given the best listed algorithm is an O(log n) parallel method, these queries search for faster parallel variance algorithms, new streaming variance techniques, or new lower bounds for variance computation.",
+    "family": "Variance Calculations",
+    "variation": "Variance Calculations"
+  },
+  {
+    "queries": [
+      "Topological Sorting lower bound",
+      "Topological ordering parallel algorithm",
+      "Topological Sort dynamic graph"
+    ],
+    "why": "They seek parallel or dynamic algorithms and lower bounds that go beyond the classical linear O(V+E) sequential algorithms.",
+    "family": "Topological Sorting",
+    "variation": "Topological Sorting"
+  },
+  {
+    "queries": [
+      "DFA minimization lower bounds",
+      "finite automata minimization algorithm",
+      "DFA minimization time complexity"
+    ],
+    "why": "They look for new algorithms beating Hopcroft's O(kn log n) or new lower bounds for DFA minimization.",
+    "family": "DFA Minimization",
+    "variation": "DFA Minimization"
+  },
+  {
+    "queries": [
+      "acyclic DFA minimization lower bound",
+      "acyclic automaton minimization algorithm",
+      "minimal acyclic DFA construction"
+    ],
+    "why": "These queries look for lower bounds or improved algorithms for acyclic DFA minimization beyond Revuz's linear-time method, such as in parallel, external-memory, or space-restricted models.",
+    "family": "DFA Minimization",
+    "variation": "Acyclic DFA Minimization"
+  },
+  {
+    "queries": [
+      "DFA minimization cyclic SCCs",
+      "cyclic DFA minimization lower bound",
+      "DFA minimization nontrivial SCCs"
+    ],
+    "why": "These queries seek new algorithms or lower bounds for cyclic nontrivial SCC DFA minimization, aiming to improve on or match the listed linear O(n) time.",
+    "family": "DFA Minimization",
+    "variation": "Cyclic Nontrivial SCCs DFA Minimization"
+  },
+  {
+    "queries": [
+      "offline lowest common ancestor",
+      "offline LCA lower bound",
+      "offline LCA algorithm"
+    ],
+    "why": "They look for new lower bounds or faster algorithms for offline LCA, where Tarjan's linear O(n+m) algorithm is already optimal in the standard sequential model.",
+    "family": "Lowest Common Ancestor",
+    "variation": "Off-Line Lowest Common Ancestor"
+  },
+  {
+    "queries": [
+      "lowest common ancestor static trees",
+      "LCA static tree algorithm",
+      "lowest common ancestor lower bound"
+    ],
+    "why": "These queries seek recent papers that improve on the linear O(n+m) static-tree LCA algorithms or prove matching lower bounds for the problem.",
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Static Trees"
+  },
+  {
+    "queries": [
+      "exact graph edit distance",
+      "graph edit distance algorithm",
+      "graph edit distance lower bound"
+    ],
+    "why": "These queries look for papers that beat the listed O(V!) exact algorithm with faster methods or establish new lower bounds for exact graph edit distance computation.",
+    "family": "Graph Edit Distance Computation",
+    "variation": "Exact GED"
+  },
+  {
+    "queries": [
+      "inexact graph edit distance",
+      "approximate graph edit distance",
+      "graph edit distance lower bound"
+    ],
+    "why": "These queries look for recent algorithms that improve on the listed O(V^2) best-known bound, better approximation methods, or new lower bounds for inexact graph edit distance.",
+    "family": "Graph Edit Distance Computation",
+    "variation": "Inexact GED"
+  },
+  {
+    "queries": [
+      "graph edit distance algorithms",
+      "exact graph edit distance",
+      "graph edit distance lower bound"
+    ],
+    "why": "They look for algorithms improving on the listed O(V E^2 log log E) bound or new lower bounds for graph edit distance computation.",
+    "family": "Graph Edit Distance Computation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "maximal clique enumeration",
+      "enumerate maximal cliques",
+      "output-sensitive maximal cliques"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve on the long-standing O(3^{n/3}) worst-case time for listing all maximal cliques in general graphs.",
+    "family": "Clique Problems",
+    "variation": "Enumerating Maximal Cliques, arbitrary graph"
+  },
+  {
+    "queries": [
+      "metric TSP approximation",
+      "traveling salesman approximation",
+      "TSP approximation algorithm"
+    ],
+    "why": "These queries look for recent approximation algorithms or lower bounds for metric TSP that improve on Christofides' 3/2-approximation ratio or cubic running time.",
+    "family": "The Traveling-Salesman Problem",
+    "variation": "Approximate TSP"
+  },
+  {
+    "queries": [
+      "2D Poisson equation solver",
+      "fast two dimensional Poisson solver",
+      "discrete Poisson equation lower bound"
+    ],
+    "why": "They look for algorithms faster than the listed O(n^2 log n) FFT and ADI methods or new lower bounds for the two-dimensional Poisson problem.",
+    "family": "Poisson Problem",
+    "variation": "2-Dimensional Poisson Problem"
+  },
+  {
+    "queries": [
+      "3D Poisson equation solver",
+      "fast 3D Poisson solver",
+      "3D Poisson lower bound"
+    ],
+    "why": "These queries seek recent faster algorithms or lower bounds for the 3D Poisson equation, improving on the listed O(n^3 log n) best-known methods.",
+    "family": "Poisson Problem",
+    "variation": "3-Dimensional Poisson Problem"
+  },
+  {
+    "queries": [
+      "Delaunay triangulation lower bound",
+      "2D Delaunay triangulation algorithm",
+      "Delaunay triangulation faster construction"
+    ],
+    "why": "These queries search for new algorithms or lower bounds that improve on the listed O(n log n) best known time (and the claimed O(n) special case) for 2D Delaunay triangulation.",
+    "family": "Delaunay Triangulation",
+    "variation": "2-Dimensional Delaunay Triangulation"
+  },
+  {
+    "queries": [
+      "functional dependency inference",
+      "dependency inference algorithm",
+      "dependency inference lower bound"
+    ],
+    "why": "They seek algorithms faster than Schlimmer's O(n 2^n p) or new lower bounds for functional dependency inference.",
+    "family": "Dependency Inference Problem",
+    "variation": "Functional Dependency Inference Problem"
+  },
+  {
+    "queries": [
+      "decisional perfect BCNF decomposition",
+      "perfect BCNF lower bound",
+      "decisional Boyce Codd decomposition"
+    ],
+    "why": "They look for algorithms faster than Liu's O(kn^2) or new lower bounds for deciding perfect BCNF decomposition.",
+    "family": "BCNF Decomposition",
+    "variation": "Decisional Perfect BCNF"
+  },
+  {
+    "queries": [
+      "4NF decomposition algorithm",
+      "fourth normal form decomposition",
+      "4NF decomposition lower bound"
+    ],
+    "why": "They look for faster-than-exponential algorithms or matching lower bounds to improve on the listed O(2^n) results.",
+    "family": "4NF Decomposition",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "multivalued dependency inference",
+      "multivalued dependency discovery",
+      "multivalued dependency inference lower bound"
+    ],
+    "why": "They look for faster algorithms or new lower bounds for multivalued dependency inference, improving on the listed exponential O(n^2 2^n p log p) and O(4^n) algorithms.",
+    "family": "Dependency Inference Problem",
+    "variation": "Multivalued Dependency Inference Problem"
+  },
+  {
+    "queries": [
+      "disk scheduling lower bound",
+      "disk arm scheduling algorithm",
+      "disk elevator scheduling"
+    ],
+    "why": "These queries seek recent faster algorithms or lower bounds for disk scheduling, because the best listed non-trivial policies run in O(n log n) and date to 1979.",
+    "family": "Disk Scheduling",
+    "variation": "Disk Scheduling"
+  },
+  {
+    "queries": [
+      "vertex cover parameterized algorithm",
+      "vertex cover kernelization lower bound",
+      "vertex cover exponential time hypothesis"
+    ],
+    "why": "These queries look for new parameterized algorithms that improve on the O(1.2738^k + kn) running time or conditional lower bounds ruling out such improvements.",
+    "family": "The Vertex Cover Problem",
+    "variation": "The Vertex Cover Problem"
+  },
+  {
+    "queries": [
+      "bounded degree vertex cover",
+      "maximum degree 3 vertex cover",
+      "degree 3 vertex cover lower bound"
+    ],
+    "why": "They target recent FPT algorithms improving on the O(k 1.2192^k) bound or new hardness lower bounds for vertex cover restricted to maximum degree three.",
+    "family": "The Vertex Cover Problem",
+    "variation": "The Vertex Cover Problem, Degrees Bounded By 3"
+  },
+  {
+    "queries": [
+      "CFG recognition lower bound",
+      "context free language membership algorithm",
+      "faster CFG recognition"
+    ],
+    "why": "These queries seek algorithms that improve on Valiant's O(n^ω |G|) time or new lower bounds showing CFG recognition is inherently harder.",
+    "family": "CFG Problems",
+    "variation": "CFG Recognition"
+  },
+  {
+    "queries": [
+      "subcubic context-free parsing",
+      "context-free parsing lower bound",
+      "context-free parsing hardness"
+    ],
+    "why": "They target results that improve on the O(n^3) Earley/GLR bound, either through subcubic parsing algorithms or conditional lower bounds showing cubic time is necessary for general CFG parsing.",
+    "family": "CFG Problems",
+    "variation": "CFG Parsing"
+  },
+  {
+    "queries": [
+      "frequent itemset mining algorithm",
+      "frequent itemsets lower bound",
+      "association rule mining complexity"
+    ],
+    "why": "These queries seek recent papers presenting faster-than-quadratic algorithms or new lower bounds for frequent itemset mining, also known as association rule mining, improving on the listed O(n^2) algorithms.",
+    "family": "Finding Frequent Itemsets",
+    "variation": "Finding Frequent Itemsets"
+  },
+  {
+    "queries": [
+      "lossy compression lower bound",
+      "lossy compression faster algorithm",
+      "rate distortion complexity"
+    ],
+    "why": "These queries look for recent papers that improve on the listed O(n) best-known algorithm for lossy compression or prove a lower bound showing linear time is optimal.",
+    "family": "Data Compression",
+    "variation": "Lossy Compression"
+  },
+  {
+    "queries": [
+      "polynomial factorization over finite fields",
+      "distinct degree factorization",
+      "equal degree factorization"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on Berlekamp's O(n^4 + pn^2) for factoring polynomials over finite fields, especially its distinct-degree and equal-degree stages.",
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Distinct-degree; Equal-degree"
+  },
+  {
+    "queries": [
+      "polynomial factorization over finite fields",
+      "finite field polynomial factoring",
+      "fast polynomial factorization finite fields"
+    ],
+    "why": "Given Schubert's 1940 O(p^{n/2+O(log n)}) algorithm, these queries seek recent papers that either present faster polynomial factorization over finite fields or prove new lower bounds for the problem.",
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Factorization of Polynomials Over Finite Fields"
+  },
+  {
+    "queries": [
+      "square-free factorization finite fields",
+      "squarefree decomposition finite fields",
+      "finite field squarefree factorization"
+    ],
+    "why": "They target new algorithms or lower bounds for square-free factorization over finite fields that improve on the 1975 O(n^3) algorithm.",
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Square-free"
+  },
+  {
+    "queries": [
+      "distinct degree factorization",
+      "distinct degree factorization algorithm",
+      "distinct degree factorization over finite fields"
+    ],
+    "why": "These queries seek recent new or faster algorithms, or new lower bounds, for distinct-degree factorization, improving on the listed O(n^3 + n log n) algorithm.",
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Distinct-degree"
+  },
+  {
+    "queries": [
+      "equal degree factorization finite fields",
+      "equal degree splitting algorithm",
+      "equal degree factorization lower bound"
+    ],
+    "why": "These queries look for algorithms faster than Shoup's O(n^2) equal-degree factorization or new lower bounds for the problem.",
+    "family": "Factorization of Polynomials Over Finite Fields",
+    "variation": "Equal-degree"
+  },
+  {
+    "queries": [
+      "linear feedback shift register cryptanalysis",
+      "LFSR cryptanalysis lower bound",
+      "fast LFSR algorithm"
+    ],
+    "why": "These queries target recent advances that beat the O(n^2) Berlekamp–Massey algorithm, including faster LFSR cryptanalysis techniques or new lower bounds on its complexity.",
+    "family": "Cryptanalysis of Linear Feedback Shift Registers",
+    "variation": "Cryptanalysis of Linear Feedback Shift Registers"
+  },
+  {
+    "queries": [
+      "stable marriage algorithm",
+      "stable matching lower bound",
+      "stable marriage subquadratic"
+    ],
+    "why": "These queries seek recent work that improves on the listed quadratic stable marriage algorithms or proves new lower bounds for stable matching.",
+    "family": "Stable Matching Problem",
+    "variation": "Stable Marriage Problem"
+  },
+  {
+    "queries": [
+      "stable roommates lower bound",
+      "stable roommates subquadratic algorithm",
+      "roommates problem complexity"
+    ],
+    "why": "They search for algorithms faster than Irving's O(n^2) method or new lower bounds for the Stable Roommates Problem.",
+    "family": "Stable Matching Problem",
+    "variation": "Stable Roommates Problem"
+  },
+  {
+    "queries": [
+      "stable matching arc consistency",
+      "stable marriage arc consistency",
+      "stable matching constraint propagation"
+    ],
+    "why": "These queries seek recent papers presenting faster arc consistency algorithms or new lower bounds for stable matching, improving on the listed O(n^3) algorithm.",
+    "family": "Stable Matching Problem",
+    "variation": "Arc Consistency?"
+  },
+  {
+    "queries": [
+      "longest path interval graphs",
+      "longest path in interval graphs",
+      "longest path interval graph algorithm"
+    ],
+    "why": "These queries look for recent papers presenting faster algorithms or lower bounds for longest path on interval graphs, improving on the listed O(n^4) algorithm.",
+    "family": "Longest Path Problem",
+    "variation": "Longest Path on Interval Graphs"
+  },
+  {
+    "queries": [
+      "suffix tree construction",
+      "parallel suffix tree construction",
+      "suffix tree lower bound"
+    ],
+    "why": "These queries look for recent papers that improve on the listed O(n) sequential and O(log n) parallel bounds or establish new lower bounds for suffix tree construction.",
+    "family": "Constructing Suffix Trees",
+    "variation": "Constructing Suffix Trees"
+  },
+  {
+    "queries": [
+      "entity resolution subquadratic",
+      "record linkage lower bound",
+      "data deduplication complexity"
+    ],
+    "why": "They seek new algorithms faster than the listed O(n^2 log n) best bound or new lower bounds for entity resolution.",
+    "family": "Entity Resolution",
+    "variation": "Entity Resolution"
+  },
+  {
+    "queries": [
+      "Longest Palindromic Substring streaming",
+      "Longest Palindrome dynamic",
+      "Palindromic Substring lower bound"
+    ],
+    "why": "These queries seek results that go beyond the known linear-time algorithms by exploring streaming, dynamic, or lower-bound settings for longest palindromic substring.",
+    "family": "Longest Palindromic Substring",
+    "variation": "Longest Palindromic Substring"
+  },
+  {
+    "queries": [
+      "arithmetic expression tree code generation",
+      "AST code generation registers",
+      "optimal expression tree evaluation"
+    ],
+    "why": "They seek recent lower bounds or algorithms improving on the listed O(n) Sethi-Ullman approach for arithmetic expression tree code generation.",
+    "family": "AST to Code Translation",
+    "variation": "Arithmetic Expression Binary Tree"
+  },
+  {
+    "queries": [
+      "graph isomorphism algorithms",
+      "graph isomorphism lower bounds",
+      "general graph isomorphism"
+    ],
+    "why": "These queries look for recent papers that improve on the exp(n^{1/2 + o(1)}) Babai-Luks algorithm or establish new lower bounds for general graph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, General Graphs"
+  },
+  {
+    "queries": [
+      "graph isomorphism bounded color classes",
+      "colored graph isomorphism bounded vertices",
+      "graph isomorphism color class lower bound"
+    ],
+    "why": "These queries search for recent papers that improve on the listed subexponential time bound or prove new lower bounds for graph isomorphism with bounded color classes.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, Bounded Number of Vertices of Each Color"
+  },
+  {
+    "queries": [
+      "strongly regular graph isomorphism",
+      "isomorphism of strongly regular graphs",
+      "strongly regular graph isomorphism lower bound"
+    ],
+    "why": "These queries look for recent papers that beat the listed n^{O(n^{1/3} log n)} bound with a faster algorithm or establish a new lower bound for strongly regular graph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Isomorphism of strongly regular graphs"
+  },
+  {
+    "queries": [
+      "graph isomorphism algorithm",
+      "graph isomorphism lower bound",
+      "graph isomorphism complexity"
+    ],
+    "why": "These queries look for recent papers that beat Babai's quasi-polynomial algorithm with a faster method or prove stronger lower bounds for graph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "subgraph isomorphism algorithm",
+      "subgraph matching lower bound",
+      "subgraph isomorphism complexity"
+    ],
+    "why": "These queries seek recent faster algorithms or lower bounds for subgraph isomorphism that improve on the classic Ullman backtracking approach.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Subgraph Isomorphism"
+  },
+  {
+    "queries": [
+      "circulant graph isomorphism algorithm",
+      "circulant isomorphism lower bound",
+      "isomorphism circulant graphs complexity"
+    ],
+    "why": "They look for algorithms faster than Muzychuk's O(n^2) method or new lower bounds for circulant graph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Circulant graphs"
+  },
+  {
+    "queries": [
+      "partial k-trees graph isomorphism",
+      "bounded treewidth graph isomorphism",
+      "graph isomorphism treewidth lower bound"
+    ],
+    "why": "They seek algorithms improving on Bodlaender's O(n^{k+4.5}) or new lower bounds for isomorphism on partial k-trees and bounded-treewidth graphs.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Partial k-trees"
+  },
+  {
+    "queries": [
+      "hypergraph isomorphism algorithm",
+      "hypergraph isomorphism lower bound",
+      "hypergraph isomorphism complexity"
+    ],
+    "why": "These queries search for new algorithms or hardness results that improve on the exp(O(k^2 sqrt(n))) moderately exponential time bound for hypergraph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Hypergraphs isomorphism"
+  },
+  {
+    "queries": [
+      "digraph realization algorithm",
+      "directed degree sequence realization",
+      "digraphic sequence lower bound"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve upon or match the existing linear-time digraph realization methods.",
+    "family": "Graph Realization Problems",
+    "variation": "Digraph Realization Problem"
+  },
+  {
+    "queries": [
+      "DAG realization problem",
+      "directed acyclic graph realization",
+      "DAG realization lower bound"
+    ],
+    "why": "They look for algorithms beating the listed exp(O(n)) bound or new lower bounds for the DAG realization problem.",
+    "family": "Graph Realization Problems",
+    "variation": "DAG Realization Problem"
+  },
+  {
+    "queries": [
+      "Duplicate Elimination lower bound",
+      "Element Uniqueness algorithm",
+      "Duplicate Detection complexity"
+    ],
+    "why": "These queries target recent work that either improves on the listed O(n log n) sorting-based algorithms or proves new lower bounds for duplicate elimination and its equivalent element-uniqueness formulation.",
+    "family": "Duplicate Elimination",
+    "variation": "Duplicate Elimination"
+  },
+  {
+    "queries": [
+      "hyperbolic spline interpolation",
+      "hyperbolic spline algorithm",
+      "hyperbolic spline lower bound"
+    ],
+    "why": "These queries look for recent algorithms faster than the listed O(n^3 log^2 K) method or new lower bounds for hyperbolic spline interpolation.",
+    "family": "Hyperbolic Spline Interpolation",
+    "variation": "Hyperbolic Spline Interpolation"
+  },
+  {
+    "queries": [
+      "mesh parameterization lower bound",
+      "surface parameterization algorithm",
+      "mesh parametrization complexity"
+    ],
+    "why": "These queries seek recent work that improves on the listed O(n) best-known time bound or establishes a matching lower bound for mesh parameterization.",
+    "family": "Mesh Parameterization",
+    "variation": "Mesh Parameterization"
+  },
+  {
+    "queries": [
+      "latent variable maximum likelihood",
+      "maximum likelihood unknown latent variables",
+      "expectation maximization convergence rate"
+    ],
+    "why": "They seek recent algorithms that beat the O(n^2 log^3 n) quasi-Newton EM bound or establish new lower bounds for maximum likelihood with unknown latent variables.",
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables"
+  },
+  {
+    "queries": [
+      "maximum likelihood latent variables",
+      "multi-view latent variable model",
+      "discrete latent variable estimation"
+    ],
+    "why": "These queries seek recent papers with algorithms faster than the listed O(n^2 log^2 n) method or new lower bounds for maximum likelihood estimation in multi-view discrete latent variable models.",
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables; multi-view model, discrete observations"
+  },
+  {
+    "queries": [
+      "hidden Markov model maximum likelihood",
+      "maximum likelihood latent variable models",
+      "hidden Markov model lower bound"
+    ],
+    "why": "These queries seek recent algorithms faster than alpha-HMM's O(n^2 log^2 n) or new lower bounds for maximum likelihood estimation in hidden Markov models and related latent variable models.",
+    "family": "Maximum Likelihood Methods in Unknown Latent Variables",
+    "variation": "Maximum Likelihood Methods in Unknown Latent Variables, Hidden Markov Models"
+  },
+  {
+    "queries": [
+      "collaborative filtering matrix factorization",
+      "low rank matrix factorization",
+      "matrix factorization recommender systems"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on the listed O(n^2) QR and Cholesky decomposition methods for collaborative filtering matrix factorization.",
+    "family": "Collaborative Filtering",
+    "variation": "Matrix Factorization"
+  },
+  {
+    "queries": [
+      "filtering problem lower bound",
+      "nonlinear filtering faster algorithm",
+      "stochastic filtering state estimation"
+    ],
+    "why": "They look for recent advances that beat the listed O(n^2) filtering algorithms or prove new complexity lower bounds for stochastic state estimation.",
+    "family": "Filtering Problem (Stochastic Processes)",
+    "variation": "Filtering Problem (Stochastic Processes)"
+  },
+  {
+    "queries": [
+      "Markov Decision Process optimal policy",
+      "MDP policy iteration complexity",
+      "Markov Decision Process lower bound"
+    ],
+    "why": "These queries seek algorithms faster than the listed O(n^3) policy iteration methods or new lower bounds for computing optimal policies in Markov Decision Processes.",
+    "family": "Optimal Policies for MDPs",
+    "variation": "Optimal Policies for MDPs"
+  },
+  {
+    "queries": [
+      "set cover approximation",
+      "weighted set cover",
+      "set cover lower bound"
+    ],
+    "why": "They target recent approximation algorithms, faster methods, and new hardness or lower-bound results for set cover beyond the listed polynomial-time ILP algorithm.",
+    "family": "The Set-Covering Problem",
+    "variation": "Unweighted Set-Covering; Weighted Set-Covering"
+  },
+  {
+    "queries": [
+      "Minimal Hitting Set algorithm",
+      "Minimal Hitting Set lower bound",
+      "Minimal Hitting Set enumeration"
+    ],
+    "why": "These queries seek recent algorithms faster than the listed O(n^2) method or new lower bounds for the Minimal Hitting Set Problem.",
+    "family": "Minimal Hitting Set Problem",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "weighted set cover exact algorithm",
+      "weighted set cover lower bound",
+      "weighted set cover approximation algorithm"
+    ],
+    "why": "These queries look for improved exact or approximation algorithms and new lower bounds for weighted set cover, improving on the listed 1972 brute-force O(U 2^n) algorithm.",
+    "family": "The Set-Covering Problem",
+    "variation": "Weighted Set-Covering"
+  },
+  {
+    "queries": [
+      "short olio motif search",
+      "short oligo search algorithm",
+      "short olio lower bound"
+    ],
+    "why": "They look for recent algorithms faster than the listed O(mn) method or new lower bounds for short olio motif search.",
+    "family": "Motif Search",
+    "variation": "Short Olio"
+  },
+  {
+    "queries": [
+      "short spaced olio motif search",
+      "spaced olio algorithm complexity",
+      "short spaced olio lower bound"
+    ],
+    "why": "They look for algorithms beating the listed O(mn) runtime or lower bounds proving that runtime is optimal for short spaced olio motif search.",
+    "family": "Motif Search",
+    "variation": "Short Spaced Olio"
+  },
+  {
+    "queries": [
+      "motif search z score",
+      "planted motif search",
+      "motif discovery z score"
+    ],
+    "why": "These queries seek new algorithms or lower bounds that improve on the listed YMF O(n^0.66 m) result for Z-score motif search.",
+    "family": "Motif Search",
+    "variation": "Z-Score"
+  },
+  {
+    "queries": [
+      "Motif Search Clique",
+      "Motif Clique Algorithm",
+      "Motif Search Lower Bound"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(nm^0.5) algorithm or establish new lower bounds for Motif Search Clique Variant.",
+    "family": "Motif Search",
+    "variation": "Clique Variant"
+  },
+  {
+    "queries": [
+      "maximal non-branching paths algorithm",
+      "non-branching paths lower bound",
+      "unitig computation graph"
+    ],
+    "why": "These queries look for algorithms or lower bounds that improve on or match the naive O(m) time for enumerating all maximal non-branching paths.",
+    "family": "All Maximal Non-Branching Paths in a Graph",
+    "variation": "All Maximal Non-Branching Paths in a Graph"
+  },
+  {
+    "queries": [
+      "indegree analysis algorithm",
+      "link analysis indegree",
+      "indegree analysis bound"
+    ],
+    "why": "They target algorithms faster than the listed O(mn) method or new lower bounds for indegree analysis.",
+    "family": "Link Analysis",
+    "variation": "InDegree Analysis"
+  },
+  {
+    "queries": [
+      "link analysis lower bound",
+      "linear time link analysis",
+      "PageRank link analysis"
+    ],
+    "why": "They seek algorithms that improve on the listed O(mn) best-known running time or establish matching lower bounds for link analysis/PageRank computation.",
+    "family": "Link Analysis",
+    "variation": "Link Analysis"
+  },
+  {
+    "queries": [
+      "distributed mutual exclusion",
+      "distributed locking algorithms",
+      "scalable distributed locking"
+    ],
+    "why": "These queries seek recent distributed locking algorithms with sublinear complexity or matching lower bounds, improving on the O(n) leases and Chubby algorithms.",
+    "family": "Distributed Locking Algorithms",
+    "variation": "Distributed Locking Algorithms"
+  },
+  {
+    "queries": [
+      "distributed consensus lower bound",
+      "fast consensus algorithm",
+      "consensus message complexity"
+    ],
+    "why": "These queries target recent papers that present consensus protocols faster than the listed O(n) algorithm or prove lower bounds that characterize the optimal complexity of distributed consensus.",
+    "family": "Distributed Locking Algorithms",
+    "variation": "Consensus"
+  },
+  {
+    "queries": [
+      "cyclic peptide sequencing algorithm",
+      "de novo peptide sequencing",
+      "cyclic peptide sequencing lower bound"
+    ],
+    "why": "These queries look for recent papers that improve on the exponential-time brute-force and branch-and-bound algorithms by presenting faster algorithms or proving lower bounds for cyclic peptide sequencing.",
+    "family": "Cyclic Peptide Sequencing Problem",
+    "variation": "Cyclic Peptide Sequencing Problem"
+  },
+  {
+    "queries": [
+      "point in polygon lower bound",
+      "point inclusion polygon algorithm",
+      "dynamic point in polygon"
+    ],
+    "why": "They seek new algorithms or lower bounds that improve on or justify the linear O(n) time of the best listed methods.",
+    "family": "Point-in-Polygon",
+    "variation": "Point-in-Polygon"
+  },
+  {
+    "queries": [
+      "distributed clock synchronization lower bound",
+      "physical clock synchronization algorithm",
+      "distributed network time synchronization"
+    ],
+    "why": "Given the best known O(n) algorithms, these queries search for faster sublinear methods or new lower bounds for distributed clock synchronization.",
+    "family": "Clock Synchronization in Distributed Systems",
+    "variation": "Clock Synchronization in Distributed Systems"
+  },
+  {
+    "queries": [
+      "d neighborhood string algorithm",
+      "string neighborhood lower bound",
+      "Hamming distance string enumeration"
+    ],
+    "why": "These queries seek algorithms that beat the naive binomial-time enumeration or lower bounds showing such improvement is impossible for the d-neighborhood of a string.",
+    "family": "d-Neighborhood of a String",
+    "variation": "d-Neighborhood of a String"
+  },
+  {
+    "queries": [
+      "planar max cut algorithm",
+      "planar maximum cut lower bound",
+      "planar maxcut complexity"
+    ],
+    "why": "These queries seek recent algorithms beating Hadlock's O(n^4) planar Max-Cut algorithm or new lower bounds for the problem.",
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut for Planar Graphs"
+  },
+  {
+    "queries": [
+      "approximate maximum cut algorithm",
+      "max cut approximation hardness",
+      "approximate max cut lower bound"
+    ],
+    "why": "They seek recent improvements over the listed polynomial-time algorithm, such as faster approximation schemes, better approximation ratios, or matching hardness and lower-bound results for approximate Maximum Cut.",
+    "family": "Maximum Cut",
+    "variation": "Maximum Cut, Approximate"
+  },
+  {
+    "queries": [
+      "integer matrix determinant algorithm",
+      "fast integer determinant computation",
+      "integer determinant lower bound"
+    ],
+    "why": "These queries look for recent papers that improve on the 1968 Bareiss-based bound or prove new lower bounds for exact integer matrix determinant computation.",
+    "family": "Determinant of Matrices with Integer Entries",
+    "variation": "Determinant of Matrices with Integer Entries"
+  },
+  {
+    "queries": [
+      "sequence to graph alignment",
+      "sequence graph alignment",
+      "sequence to variation graph"
+    ],
+    "why": "These queries look for recent papers presenting faster algorithms or matching lower bounds that improve on the O(V + mE) best-known complexity for sequence-to-graph alignment.",
+    "family": "Sequence-to-Graph Alignment",
+    "variation": "Sequence-to-Graph Alignment"
+  },
+  {
+    "queries": [
+      "discrete logarithm finite field algorithm",
+      "finite field discrete log lower bound",
+      "finite field discrete logarithm sieve"
+    ],
+    "why": "They seek recent advances that beat the subexponential Number Field Sieve or Function Field Sieve, or establish new lower bounds for finite-field discrete logarithms.",
+    "family": "Logarithm Calculations",
+    "variation": "Discrete Logarithm Over Finite Fields"
+  },
+  {
+    "queries": [
+      "discrete logarithm finite fields",
+      "finite field discrete log",
+      "index calculus discrete logarithm"
+    ],
+    "why": "They seek algorithms that improve on the subexponential index calculus method or establish matching lower bounds for discrete logarithms in finite fields.",
+    "family": "Logarithm Calculations",
+    "variation": "Discrete Logarithm Over Finite Fields, F_q"
+  },
+  {
+    "queries": [
+      "transitive reduction directed graphs",
+      "transitive reduction algorithm",
+      "transitive reduction lower bound"
+    ],
+    "why": "These queries look for recent algorithms that improve on the O(n^ω) bound or new lower bounds for transitive reduction of directed graphs.",
+    "family": "Transitive Reduction Problem",
+    "variation": "Transitive Reduction Problem of Directed Graphs"
+  },
+  {
+    "queries": [
+      "turnpike problem faster algorithm",
+      "turnpike reconstruction lower bound",
+      "partial digest problem algorithm"
+    ],
+    "why": "These queries seek new algorithms faster than the 1991 Outside-In O(2^n n log n) method, or lower bounds showing why the turnpike problem remains exponentially hard.",
+    "family": "Turnpike Problem",
+    "variation": "Turnpike Problem"
+  },
+  {
+    "queries": [
+      "n-Queens Problem counting solutions",
+      "n queens algorithm construction",
+      "n-Queens Problem lower bound"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(n!) algorithms for counting or constructing n-queens solutions, or establish new lower bounds for the problem.",
+    "family": "n-Queens Problem",
+    "variation": "Counting Solutions; Constructing solutions"
+  },
+  {
+    "queries": [
+      "n-queens counting solutions algorithm",
+      "counting n-queens solutions lower bound",
+      "n-queens problem counting complexity"
+    ],
+    "why": "These queries look for recent algorithms that beat the 1992 O(8^n poly(n)) bound for counting n-queens solutions, or lower bounds showing such speedups are impossible.",
+    "family": "n-Queens Problem",
+    "variation": "Counting Solutions"
+  },
+  {
+    "queries": [
+      "median string problem unbounded alphabets",
+      "string median problem lower bound",
+      "median string approximation algorithm"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on the listed naive exponential-time solution for the median string problem with unbounded alphabets.",
+    "family": "Median String Problem",
+    "variation": "Median String Problem with Unbounded Alphabets"
+  },
+  {
+    "queries": [
+      "Frequent Words with Mismatches",
+      "Approximate Frequent Words",
+      "Frequent k-mers with mismatches"
+    ],
+    "why": "These queries look for recent new or faster algorithms, or lower bounds, that improve on the listed naive solution for the Frequent Words with Mismatches problem.",
+    "family": "Frequent Words with Mismatches Problem",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Tower of Hanoi algorithm",
+      "Tower of Hanoi lower bound",
+      "Tower of Brahma algorithm"
+    ],
+    "why": "These queries seek recent new algorithms, faster variants, or tighter lower bounds for Tower of Hanoi beyond the classical O(2^n) algorithms listed.",
+    "family": "Tower of Hanoi",
+    "variation": "Tower of Hanoi"
+  },
+  {
+    "queries": [
+      "frequent words algorithm",
+      "frequent words lower bound",
+      "frequent k-mers complexity"
+    ],
+    "why": "They seek recent algorithms faster than the listed O(k(n-k)) Rabin-Karp bound or new lower bounds for the frequent words problem.",
+    "family": "The Frequent Words Problem",
+    "variation": "The Frequent Words Problem"
+  },
+  {
+    "queries": [
+      "integral equations fast algorithms",
+      "integral equation complexity lower bound",
+      "numerical integral equations algorithms"
+    ],
+    "why": "These queries look for algorithms that beat the naive O(2^n) runtime or lower bounds showing exponential time is necessary for integral equations.",
+    "family": "Integral Equations",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "unkeyed hash function lower bound",
+      "cryptographic hash function construction",
+      "one-way hash function collision resistance"
+    ],
+    "why": "They look for new lower bounds or improved constructions for unkeyed one-way hash functions, beyond the listed linear-time algorithms such as SHA-3.",
+    "family": "One-Way Hash Functions",
+    "variation": "Unkeyed Hash Functions"
+  },
+  {
+    "queries": [
+      "keyed hash function lower bound",
+      "message authentication code algorithm",
+      "keyed hash function construction"
+    ],
+    "why": "These queries look for new keyed hash function algorithms or lower bounds that improve on Whirlpool's O(n) result.",
+    "family": "One-Way Hash Functions",
+    "variation": "Keyed Hash Functions"
+  },
+  {
+    "queries": [
+      "one-way hash functions",
+      "optional key hash functions",
+      "keyed unkeyed hash functions"
+    ],
+    "why": "They seek new constructions, tighter one-wayness lower bounds, or improved algorithms for optional-key hash functions beyond BLAKE2's O(n) time.",
+    "family": "One-Way Hash Functions",
+    "variation": "Optional Key?"
+  },
+  {
+    "queries": [
+      "verifiable secret sharing",
+      "proactive secret sharing",
+      "secret sharing lower bound"
+    ],
+    "why": "These queries seek recent improvements or lower bounds for secret sharing beyond Shamir's O(t^2) scheme.",
+    "family": "Secret Sharing",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "nonlinear equations root finding",
+      "nonlinear equation solving algorithm",
+      "root finding lower bound"
+    ],
+    "why": "These queries look for recent papers that present faster algorithms or new lower bounds for nonlinear equation solving, improving on the classical O(n_max) methods such as Newton's method listed as best known.",
+    "family": "Solutions to Nonlinear Equations",
+    "variation": "Solutions to Nonlinear Equations"
+  },
+  {
+    "queries": [
+      "block cipher lower bound",
+      "block cipher cryptanalysis",
+      "lightweight block cipher"
+    ],
+    "why": "They seek recent block-cipher constructions, attacks, or complexity lower bounds that improve upon or establish limits for the listed O(n) algorithms.",
+    "family": "Block Ciphers",
+    "variation": "Block Ciphers"
+  },
+  {
+    "queries": [
+      "bivariate polynomial interpolation algorithm",
+      "2D polynomial interpolation lower bound",
+      "fast bivariate polynomial interpolation"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(n^2) algorithms or establish new lower bounds for 2-D (bivariate) polynomial interpolation.",
+    "family": "Polynomial Interpolation",
+    "variation": "2-D Polynomial Interpolation"
+  },
+  {
+    "queries": [
+      "greatest common divisor algorithm",
+      "GCD lower bound",
+      "fast greatest common divisor"
+    ],
+    "why": "They look for recent GCD algorithms or lower bounds that improve on the Stehle-Zimmermann O(n log^2 n log log n) bound.",
+    "family": "Greatest Common Divisor",
+    "variation": "Greatest Common Divisor"
+  },
+  {
+    "queries": [
+      "weighted interval scheduling lower bound",
+      "improved weighted activity selection",
+      "online weighted interval scheduling"
+    ],
+    "why": "These queries look for algorithms that beat the listed O(n log n) dynamic-programming bound or establish new lower bounds for weighted interval scheduling, also called weighted activity selection.",
+    "family": "Interval Scheduling",
+    "variation": "Weighted Activity Selection Problem"
+  },
+  {
+    "queries": [
+      "online interval scheduling",
+      "unweighted interval scheduling",
+      "online activity selection"
+    ],
+    "why": "They look for new or faster online algorithms and new lower bounds for unweighted interval scheduling, improving on the listed O(n) linear-time algorithms.",
+    "family": "Interval Scheduling",
+    "variation": "Unweighted Interval Scheduling, Online"
+  },
+  {
+    "queries": [
+      "deadlock avoidance algorithm",
+      "deadlock avoidance lower bound",
+      "bankers algorithm deadlock avoidance"
+    ],
+    "why": "These queries look for recent papers that improve on the Banker's Algorithm O(mn^2) bound with a faster deadlock avoidance algorithm or establish a new lower bound for the problem.",
+    "family": "Deadlock avoidance",
+    "variation": "Deadlock Avoidance"
+  },
+  {
+    "queries": [
+      "offline page replacement lower bound",
+      "optimal paging subquadratic algorithm",
+      "offline paging Belady improvement"
+    ],
+    "why": "They seek recent algorithms that beat the classic O(n^2) offline page replacement bound or establish matching lower bounds for the problem.",
+    "family": "Page Replacements",
+    "variation": "Offline"
+  },
+  {
+    "queries": [
+      "online paging algorithm",
+      "page replacement lower bound",
+      "competitive paging algorithm"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve on the O(nk) page replacement methods listed, especially the 2017 Longest Distance First algorithm.",
+    "family": "Page Replacements",
+    "variation": "Online"
+  },
+  {
+    "queries": [
+      "steal no force recovery",
+      "ARIES database recovery",
+      "database recovery no force"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve on the 1992 O(n) ARIES algorithm for steal/no-force database recovery.",
+    "family": "Recovery",
+    "variation": "Steal, No-Force"
+  },
+  {
+    "queries": [
+      "dense graph diameter",
+      "weighted graph diameter",
+      "dense graph diameter lower bound"
+    ],
+    "why": "These queries seek recent papers that improve on the listed O(V^3 / 2^(logV)^0.5) dense APSP-based algorithm for arbitrary-weight graph diameter or prove a new lower bound for this dense weighted problem.",
+    "family": "Graph Diameter",
+    "variation": "Arbitrary edge weights, Dense graph"
+  },
+  {
+    "queries": [
+      "graph diameter sparse graph",
+      "weighted graph diameter algorithm",
+      "graph diameter lower bound"
+    ],
+    "why": "These queries seek recent algorithms faster than the listed O(V^2 log V + VE) sparse APSP approach or new lower bounds for computing diameter in sparse graphs with arbitrary edge weights.",
+    "family": "Graph Diameter",
+    "variation": "Arbitrary edge weights, Sparse graph"
+  },
+  {
+    "queries": [
+      "unweighted graph diameter algorithm",
+      "graph diameter lower bound",
+      "combinatorial unweighted diameter algorithm"
+    ],
+    "why": "These queries seek new algorithms or lower bounds that improve upon or match the O(V^omega log V) matrix-multiplication result for unweighted graph diameter.",
+    "family": "Graph Diameter",
+    "variation": "Unweighted"
+  },
+  {
+    "queries": [
+      "graph diameter bounded integer weights",
+      "bounded weight graph diameter",
+      "integer weighted graph diameter"
+    ],
+    "why": "These queries search for new algorithms or lower bounds that improve on the listed O(M·V^ω polylog) time for diameter in bounded integer-weight graphs.",
+    "family": "Graph Diameter",
+    "variation": "Bounded integer weights"
+  },
+  {
+    "queries": [
+      "Boolean Matrix Multiplication algorithm",
+      "Boolean matrix multiplication lower bound",
+      "Boolean matrix product algorithm"
+    ],
+    "why": "These queries seek new algorithms or lower bounds that improve on the 1973 O(n^3) classical bound and the 2018 output-sensitive quantum result for Boolean matrix multiplication.",
+    "family": "Matrix Product",
+    "variation": "Boolean Matrix Multiplication"
+  },
+  {
+    "queries": [
+      "combinatorial Boolean matrix multiplication",
+      "Boolean matrix multiplication lower bound",
+      "combinatorial Boolean matrix product"
+    ],
+    "why": "These queries seek recent papers that improve the n^3/polylog n combinatorial algorithms for Boolean matrix multiplication or prove new lower bounds for the problem.",
+    "family": "Matrix Product",
+    "variation": "Boolean Matrix Multiplication (Combinatorial)"
+  },
+  {
+    "queries": [
+      "Online Matrix Vector Multiplication",
+      "OMV lower bound",
+      "Online matrix vector algorithm"
+    ],
+    "why": "These queries seek recent papers that beat the best known Larsen–Williams algorithm or establish new lower bounds for Online Matrix Vector Multiplication.",
+    "family": "Online Matrix Vector Multiplication (OMV)",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "negative triangle detection algorithm",
+      "negative weight triangle lower bound",
+      "negative triangle fine grained complexity"
+    ],
+    "why": "These queries look for recent papers that present a faster algorithm than the 2018 best known result or a new lower bound for negative triangle detection.",
+    "family": "Negative Triangle",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "matrix multiplication lower bound",
+      "fast matrix product algorithm",
+      "matrix multiplication exponent"
+    ],
+    "why": "These queries seek new algorithms faster than O(n^2.37285956) or new lower bounds for matrix multiplication.",
+    "family": "Matrix Multiplication",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Graph Coloring Chromatic Number Algorithm",
+      "Graph Coloring Chromatic Number Lower Bound",
+      "Graph Coloring Chromatic Number Exact"
+    ],
+    "why": "They target improvements on the O((2-eps)^n) exact algorithm or new lower bounds for graph coloring and the chromatic number.",
+    "family": "5 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "graph coloring exact algorithm",
+      "graph coloring lower bound",
+      "chromatic number algorithm"
+    ],
+    "why": "They seek recent exact algorithms that improve on the listed O((2-eps)^n) bound or new lower bounds for graph coloring.",
+    "family": "6 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "chromatic number exact algorithm",
+      "chromatic number fine grained complexity",
+      "graph coloring chromatic number lower bound"
+    ],
+    "why": "They seek recent exact algorithms improving on the O(2.2461^n) bound or fine-grained lower bounds showing such improvements are unlikely.",
+    "family": "Chromatic Number",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Graph Coloring Algorithm",
+      "Vertex Coloring",
+      "Graph Coloring Lower Bound"
+    ],
+    "why": "These queries look for new or faster coloring algorithms and lower bounds because the listed O(m) method only finds connected components and does not solve graph coloring.",
+    "family": "#2 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "exact graph coloring algorithm",
+      "graph coloring lower bound",
+      "vertex coloring exponential time"
+    ],
+    "why": "These queries seek recent exact algorithms or complexity lower bounds that improve upon the O(1.6262^n) best-known exponential-time algorithm for graph coloring.",
+    "family": "#3 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Graph Coloring algorithm",
+      "Chromatic Number lower bound",
+      "exact Graph Coloring"
+    ],
+    "why": "These queries look for recent papers that improve upon the listed O(1.9464^n) algorithm from 2007 by presenting faster exact algorithms or new lower bounds for graph coloring and chromatic number computation.",
+    "family": "#4 - Graph Coloring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "chromatic polynomial algorithm",
+      "chromatic polynomial lower bound",
+      "chromatic polynomial exact computation"
+    ],
+    "why": "Given the O(2^n poly(n)) exact algorithms from 2006, these queries look for a faster exact algorithm or a matching conditional lower bound for computing the chromatic polynomial.",
+    "family": "Chromatic Polynomial",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "general linear system algorithm",
+      "linear system solving lower bound",
+      "dense linear system solver"
+    ],
+    "why": "They seek algorithms that improve on the O(n^2.371339) matrix-multiplication-based bound or establish new lower bounds for solving general linear systems.",
+    "family": "Linear System",
+    "variation": "General"
+  },
+  {
+    "queries": [
+      "fast Toeplitz solver",
+      "Toeplitz linear system",
+      "Toeplitz system lower bound"
+    ],
+    "why": "These queries look for recent algorithms that beat the O(n log^2 n) best-known bound for solving Toeplitz linear systems, or new lower bounds for the problem.",
+    "family": "Linear System",
+    "variation": "Toeplitz"
+  },
+  {
+    "queries": [
+      "Toeplitz linear system solver",
+      "fast Toeplitz system algorithm",
+      "Toeplitz system lower bound"
+    ],
+    "why": "These queries look for algorithms that improve on Berlekamp-Massey or new lower bounds for solving Toeplitz linear systems.",
+    "family": "Linear System",
+    "variation": "Toeplitz??"
+  },
+  {
+    "queries": [
+      "Toeplitz linear system",
+      "Hermitian Toeplitz solver",
+      "Toeplitz system lower bound"
+    ],
+    "why": "These queries seek recent faster algorithms or new lower bounds that improve on the listed Schur algorithms for Toeplitz and Hermitian linear systems.",
+    "family": "Linear System",
+    "variation": "Toeplitz?, Hermitian?"
+  },
+  {
+    "queries": [
+      "sparse linear system algorithm",
+      "sparse linear system lower bound",
+      "sparse linear solver complexity"
+    ],
+    "why": "These queries target algorithms that beat the listed O(n^2.331642) bound or prove matching lower bounds for sparse linear systems.",
+    "family": "Linear System",
+    "variation": "Sparse"
+  },
+  {
+    "queries": [
+      "0-1 integer linear programming algorithm",
+      "binary integer programming lower bound",
+      "0-1 ILP faster algorithm"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on the current O(n^2.37285956) matrix-multiplication-based algorithm for 0-1 integer linear programming.",
+    "family": "Linear Programming",
+    "variation": "0–1 Integer Linear Programming Decision Problem"
+  },
+  {
+    "queries": [
+      "line segment intersection counting",
+      "segment intersection lower bound",
+      "counting segment intersections"
+    ],
+    "why": "These queries look for recent papers that beat the listed O(n^1.695) bound or prove new lower bounds for counting line segment intersections.",
+    "family": "Line segment intersection",
+    "variation": "Counting number of intersection points / line segments"
+  },
+  {
+    "queries": [
+      "line segment intersection general polygons",
+      "segment intersection reporting all intersections",
+      "polygon intersection reporting intersection points"
+    ],
+    "why": "These queries target recent papers that improve on the classic O((n+k) log n) algorithm for reporting all segment or polygon intersections, or establish matching lower bounds.",
+    "family": "Line segment intersection",
+    "variation": "Reporting all intersection points / general polygons"
+  },
+  {
+    "queries": [
+      "d-dimensional convex hull algorithm",
+      "high dimensional convex hull",
+      "multidimensional convex hull lower bound"
+    ],
+    "why": "They seek recent improvements or lower bounds on output-sensitive d-dimensional convex hull construction beyond the listed O(n^2 + f_1 log n), O(n f_1), and O(n f(h)/h) algorithms.",
+    "family": "Convex Hull",
+    "variation": "d-dimensional Convex Hull"
+  },
+  {
+    "queries": [
+      "online convex hull",
+      "incremental convex hull",
+      "online planar convex hull"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve on Preparata's O(log n) per-operation bound for online two-dimensional convex hull maintenance.",
+    "family": "Convex Hull",
+    "variation": "2-dimensional Convex Hull, Online"
+  },
+  {
+    "queries": [
+      "dynamic convex hull lower bound",
+      "dynamic planar convex hull",
+      "fully dynamic convex hull"
+    ],
+    "why": "They look for algorithms beating the O(log^2 n) per-operation bound of Overmars and van Leeuwen or for lower bounds showing that bound is optimal.",
+    "family": "Convex Hull",
+    "variation": "2-dimensional Convex Hull, Dynamic"
+  },
+  {
+    "queries": [
+      "dense undirected minimum spanning tree",
+      "MST dense graph algorithm",
+      "undirected MST lower bound"
+    ],
+    "why": "They look for recent algorithms or lower bounds that improve on the listed O(E) Cheriton–Tarjan result for dense undirected MST.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Dense MST"
+  },
+  {
+    "queries": [
+      "planar minimum spanning tree",
+      "planar MST algorithm",
+      "planar spanning tree lower bound"
+    ],
+    "why": "These queries look for new algorithms, simpler constructions, or matching lower bounds for planar MST given that the best known algorithm already runs in linear time.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Planar MST"
+  },
+  {
+    "queries": [
+      "Minimum Spanning Tree undirected integer weights",
+      "MST undirected integer weights",
+      "MST integer weights lower bound"
+    ],
+    "why": "They look for recent papers that improve on the linear O(E+V) Fredman–Willard algorithm for undirected integer-weight MST or prove matching lower bounds for it.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Undirected, Integer Weights MST"
+  },
+  {
+    "queries": [
+      "directed minimum spanning tree algorithm",
+      "optimum branching lower bound",
+      "minimum spanning arborescence faster algorithm"
+    ],
+    "why": "These queries seek recent advances that improve on the O(E + V log V) directed MST algorithm or establish matching lower bounds for optimum branching.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Directed (Optimum Branchings), General MST"
+  },
+  {
+    "queries": [
+      "directed minimum spanning tree",
+      "optimum branching dense graph",
+      "super dense MST lower bound"
+    ],
+    "why": "They look for algorithms beating Tarjan's O(V^2) bound for dense directed MST or new lower bounds for the super dense directed variant.",
+    "family": "Minimum Spanning Tree (MST)",
+    "variation": "Directed (Optimum Branchings), Super Dense MST"
+  },
+  {
+    "queries": [
+      "k dimensional closest pair",
+      "Euclidean minimum distance problem",
+      "closest pair lower bound"
+    ],
+    "why": "They look for subquadratic algorithms or lower bounds for k-dimensional Euclidean closest pair, improving on the listed O(n^2) upper bound.",
+    "family": "Closest Pair Problem",
+    "variation": "k-dimensional space, Euclidean metric"
+  },
+  {
+    "queries": [
+      "directed shortest path integer weights",
+      "single source shortest path directed",
+      "nonnegative integer weights shortest path"
+    ],
+    "why": "These queries look for recent algorithms that beat the listed O(E+LV) time bound or new lower bounds for directed single-source shortest paths with nonnegative integer weights.",
+    "family": "Shortest Path (Directed graphs)",
+    "variation": "nonnegative integer weights"
+  },
+  {
+    "queries": [
+      "undirected single source shortest path",
+      "SSSP undirected integer weights",
+      "undirected shortest path lower bound"
+    ],
+    "why": "These queries seek recent work that either improves on Thorup’s linear-time O(E) bound or establishes new lower bounds for undirected single-source shortest paths with integer weights.",
+    "family": "Shortest Path (Undirected graphs)",
+    "variation": "positive integer weights; assumes constant-time multiplication"
+  },
+  {
+    "queries": [
+      "unweighted betweenness centrality algorithm",
+      "node betweenness centrality lower bound",
+      "faster betweenness centrality computation"
+    ],
+    "why": "These queries look for recent exact algorithms improving on Brandes' O(nm) time or new conditional lower bounds for unweighted betweenness centrality.",
+    "family": "Betweenness Centrality (BC)",
+    "variation": "Unweighted"
+  },
+  {
+    "queries": [
+      "weighted betweenness centrality algorithm",
+      "weighted betweenness centrality lower bound",
+      "weighted betweenness centrality sparse graph"
+    ],
+    "why": "These queries look for recent algorithms that improve on Brandes’ O(nm + n^2 log n) runtime for weighted betweenness centrality or new lower bounds matching that complexity.",
+    "family": "Betweenness Centrality (BC)",
+    "variation": "Weighted"
+  },
+  {
+    "queries": [
+      "directed APSP arbitrary weights",
+      "APSP dense directed graphs",
+      "all pairs shortest paths lower bound"
+    ],
+    "why": "They look for algorithms faster than Johnson's O(V^2 log V + VE) bound—especially subcubic dense-directed APSP—or fine-grained lower bounds showing arbitrary-weight APSP is essentially cubic.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Directed, Weighted (Arbitrary weights)"
+  },
+  {
+    "queries": [
+      "all pairs shortest paths directed unweighted",
+      "APSP directed unweighted graph algorithm",
+      "directed unweighted all pairs distances"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve upon Zwick's O(V^2.575) algorithm for directed unweighted APSP.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Directed, Unweighted"
+  },
+  {
+    "queries": [
+      "fully dynamic all pairs shortest paths",
+      "fully dynamic APSP",
+      "dynamic all pairs shortest paths"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve upon Thorup's 2004 result for fully dynamic all-pairs shortest paths.",
+    "family": "All-Pairs Shortest Paths (APSP)",
+    "variation": "Fully Dynamic APSP"
+  },
+  {
+    "queries": [
+      "CNF SAT algorithm",
+      "CNF SAT lower bound",
+      "Boolean CNF SAT complexity"
+    ],
+    "why": "They look for new exact algorithms or lower bounds that improve on the O(2^n) worst-case runtime of DPLL and CDCL for CNF-SAT.",
+    "family": "Boolean Satisfiability",
+    "variation": "CNF-SAT"
+  },
+  {
+    "queries": [
+      "renamable Horn satisfiability algorithm",
+      "renamable Horn SAT complexity",
+      "renamable Horn formula lower bound"
+    ],
+    "why": "These queries look for recent algorithms faster than Lewis's O(mn^2) method or new lower bounds for renamable Horn satisfiability.",
+    "family": "Boolean Satisfiability",
+    "variation": "Renamable Horn"
+  },
+  {
+    "queries": [
+      "k-SAT algorithm lower bound",
+      "k-satisfiability exponential time algorithm",
+      "k-SAT improved upper bound"
+    ],
+    "why": "These queries seek recent improvements on the PPSZ exponential-time algorithm for k-SAT or new lower bounds matching its runtime.",
+    "family": "Boolean Satisfiability",
+    "variation": "k-SAT"
+  },
+  {
+    "queries": [
+      "3SAT 3-SAT algorithm",
+      "3-satisfiability lower bound",
+      "3SAT exponential time complexity"
+    ],
+    "why": "These queries seek a new 3SAT algorithm faster than Jiang and Cai's O(1.307031578^n) or a new lower bound matching that runtime.",
+    "family": "Boolean Satisfiability",
+    "variation": "3SAT"
+  },
+  {
+    "queries": [
+      "exact 4SAT algorithm",
+      "4-SAT lower bound",
+      "4SAT PPSZ improvement"
+    ],
+    "why": "These queries look for recent exact algorithms beating Hertli's O(1.46899^n) runtime or new lower bounds for 4SAT.",
+    "family": "Boolean Satisfiability",
+    "variation": "4SAT"
+  },
+  {
+    "queries": [
+      "NAE 3SAT algorithm",
+      "Not All Equal 3SAT",
+      "NAE 3SAT lower bound"
+    ],
+    "why": "They look for algorithms faster than Shi's 2009 method or new lower bounds for NAE 3SAT.",
+    "family": "Boolean Satisfiability",
+    "variation": "NAE 3SAT"
+  },
+  {
+    "queries": [
+      "X3SAT exact algorithm",
+      "1-in-3 SAT lower bound",
+      "X3SAT exponential time algorithm"
+    ],
+    "why": "They look for new exact algorithms or lower bounds that improve on the O(1.0984^n) XShort algorithm from 2007.",
+    "family": "Boolean Satisfiability",
+    "variation": "X3SAT"
+  },
+  {
+    "queries": [
+      "informed search lower bound",
+      "heuristic search new algorithm",
+      "informed search improved complexity"
+    ],
+    "why": "These queries look for recent papers that improve upon the listed O(b^d) algorithms with faster methods or establish new lower bounds for informed search.",
+    "family": "Informed Search",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "string search algorithm",
+      "fast string matching",
+      "string matching lower bound"
+    ],
+    "why": "These queries seek recent papers that present faster string search algorithms or new lower bounds beyond the listed classical results.",
+    "family": "String Search",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "bipartite maximum cardinality matching",
+      "maximum bipartite matching algorithm",
+      "bipartite matching lower bound"
+    ],
+    "why": "They seek new algorithms faster than the listed bound or new lower bounds for bipartite maximum cardinality matching.",
+    "family": "Maximum cardinality matching",
+    "variation": "bipartite graph"
+  },
+  {
+    "queries": [
+      "general graph maximum matching",
+      "maximum cardinality matching general graph",
+      "general graph matching lower bound"
+    ],
+    "why": "These queries look for recent papers that beat the best known general graph matching time or establish new lower bounds for maximum cardinality matching.",
+    "family": "Maximum cardinality matching",
+    "variation": "general graph"
+  },
+  {
+    "queries": [
+      "generating all permutations",
+      "permutation generation lower bound",
+      "permutation enumeration algorithm"
+    ],
+    "why": "Since the best known algorithms listed are all O(n!), these queries seek recent results that improve on factorial-time permutation generation or prove new lower bounds for enumerating all permutations.",
+    "family": "All permutations",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "bipartite maximum weight matching algorithm",
+      "assignment problem algorithm improvement",
+      "maximum weight bipartite matching lower bound"
+    ],
+    "why": "They look for recent algorithms faster than the O(mn + n^2 log n) Fredman-Tarjan bound or new lower bounds for bipartite maximum-weight matching.",
+    "family": "Maximum-weight matching",
+    "variation": "Bipartite Maximum-Weight Matching"
+  },
+  {
+    "queries": [
+      "maximum weight matching algorithm",
+      "maximum weighted matching lower bound",
+      "general graph matching complexity"
+    ],
+    "why": "These queries seek recent advances that improve on the O(mn + n^2 log n) bound or establish matching lower bounds for general maximum-weight matching.",
+    "family": "Maximum-weight matching",
+    "variation": "Maximum-Weight Matching"
+  },
+  {
+    "queries": [
+      "higher order root finding",
+      "Householder root computation",
+      "derivative based root finding"
+    ],
+    "why": "They look for recent work that improves on Householder's O(d·n_max) algorithm or establishes new lower bounds for root computation with continuous derivatives up to order d.",
+    "family": "Root Computation",
+    "variation": "Root Computation with continuous derivatives (up to d)"
+  },
+  {
+    "queries": [
+      "lowest common ancestor with linking",
+      "dynamic lowest common ancestor",
+      "incremental lowest common ancestor"
+    ],
+    "why": "These queries look for recent algorithms faster than the listed O(n + m log n) bound or new lower bounds for lowest common ancestor with linking.",
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking"
+  },
+  {
+    "queries": [
+      "lowest common ancestor linking roots",
+      "offline lowest common ancestor linking",
+      "union find lowest common ancestor"
+    ],
+    "why": "They look for algorithms faster than the inverse-Ackermann bound or new lower bounds for lowest common ancestor with linking roots.",
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking Roots"
+  },
+  {
+    "queries": [
+      "dynamic lowest common ancestor",
+      "link cut tree LCA",
+      "lowest common ancestor linking cutting"
+    ],
+    "why": "They seek recent algorithms or lower bounds for dynamic lowest common ancestor with link and cut operations that improve on the listed O(n + m log n) bound.",
+    "family": "Lowest Common Ancestor",
+    "variation": "Lowest Common Ancestor with Linking and Cutting"
+  },
+  {
+    "queries": [
+      "Integer 3SUM lower bound",
+      "3SUM subquadratic algorithm",
+      "Integer 3SUM word RAM"
+    ],
+    "why": "These queries look for recent papers presenting algorithms faster than the listed subquadratic word-RAM bounds or new lower bounds for Integer 3SUM.",
+    "family": "3SUM",
+    "variation": "Integer 3SUM"
+  },
+  {
+    "queries": [
+      "real 3sum algorithm",
+      "real 3sum lower bound",
+      "real 3sum fine grained"
+    ],
+    "why": "They look for algorithms faster than the O(n^2 polylog n / log^2 n) real 3SUM bound or new lower bounds proving near-quadratic complexity.",
+    "family": "3SUM",
+    "variation": "Real 3SUM"
+  },
+  {
+    "queries": [
+      "maximum subarray problem lower bound",
+      "1D maximum subarray parallel algorithm",
+      "maximum subarray sum faster algorithm"
+    ],
+    "why": "These queries look for recent papers that improve on Wen's O(log n) bound with new or faster algorithms, or establish matching lower bounds for the one-dimensional maximum subarray problem.",
+    "family": "Maximum subarray problem",
+    "variation": "1-dimensional"
+  },
+  {
+    "queries": [
+      "2D maximum subarray algorithm",
+      "maximum sum submatrix lower bound",
+      "two dimensional maximum subarray"
+    ],
+    "why": "These queries look for recent papers that beat the near-cubic exact algorithms or establish new lower bounds for the two-dimensional maximum subarray problem.",
+    "family": "Maximum subarray problem",
+    "variation": "2-dimensional"
+  },
+  {
+    "queries": [
+      "Minimum Wiener Connector",
+      "Wiener Connector algorithm",
+      "Wiener Connector lower bound"
+    ],
+    "why": "These queries look for new algorithms faster than the listed exhaustive search or new lower bounds for the Minimum Wiener Connector problem.",
+    "family": "Wiener Index",
+    "variation": "Minimum Wiener Connector problem"
+  },
+  {
+    "queries": [
+      "k Orthogonal Vectors algorithm",
+      "k OV lower bound",
+      "k Orthogonal Vectors fine grained complexity"
+    ],
+    "why": "They look for algorithms faster than the listed n^(k-1/O(d/log n)) runtime or lower bounds showing that runtime is optimal.",
+    "family": "Orthogonal Vectors",
+    "variation": "k-OV"
+  },
+  {
+    "queries": [
+      "Orthogonal Vectors lower bound",
+      "Orthogonal Vectors faster algorithm",
+      "Orthogonal Vectors hypothesis"
+    ],
+    "why": "These queries look for algorithms that improve on the listed near-quadratic runtime or new conditional lower bounds for Orthogonal Vectors.",
+    "family": "Orthogonal Vectors",
+    "variation": "OV"
+  },
+  {
+    "queries": [
+      "k-Clique algorithm",
+      "k-Clique lower bound",
+      "k clique matrix multiplication"
+    ],
+    "why": "These queries look for recent algorithms or lower bounds that improve upon the 1985 Nesetril–Poljak matrix-multiplication algorithm for k-Clique.",
+    "family": "k-Clique Problem",
+    "variation": "k-Clique"
+  },
+  {
+    "queries": [
+      "min weight triangle algorithm",
+      "3 clique lower bound",
+      "subcubic weighted triangle"
+    ],
+    "why": "These queries look for truly subcubic algorithms or conditional lower bounds for min-weight triangle (3-clique), aiming to improve on the listed slightly sub-cubic APSP-based algorithm.",
+    "family": "Min-Weight k-Clique Problem",
+    "variation": "3-Clique"
+  },
+  {
+    "queries": [
+      "exact weight 3 clique",
+      "weighted 3 clique",
+      "exact weight triangle"
+    ],
+    "why": "These queries look for recent papers that improve on the near-cubic O(n^3 (log log n)^2 / log n) bound or establish matching lower bounds for exact-weight triangle detection.",
+    "family": "Exact-Weight k-Clique Problem",
+    "variation": "3-Clique"
+  },
+  {
+    "queries": [
+      "trivalent graph isomorphism",
+      "cubic graph isomorphism algorithm",
+      "cubic graph isomorphism lower bound"
+    ],
+    "why": "These queries look for algorithms faster than the listed subexponential bound or new lower bounds for trivalent graph isomorphism.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomporhism, Trivalent Graphs"
+  },
+  {
+    "queries": [
+      "bounded degree graph isomorphism",
+      "bounded valence graph isomorphism",
+      "graph isomorphism bounded valences"
+    ],
+    "why": "They look for recent algorithms that improve on Babai's exponential-time bound or new lower bounds for graph isomorphism with bounded vertex valences.",
+    "family": "Graph Isomorphism Problem",
+    "variation": "Graph Isomorphism, Bounded Vertex Valences"
+  },
+  {
+    "queries": [
+      "self balancing tree construction",
+      "balanced binary search tree construction",
+      "self balancing trees lower bound"
+    ],
+    "why": "Given the O(n log n) best known creation time, these queries seek newer algorithms that run faster or lower bounds proving that time is optimal.",
+    "family": "Self-Balancing Trees Creation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "self balancing tree insertion",
+      "balanced binary search tree insertion",
+      "self adjusting binary search tree insertion"
+    ],
+    "why": "Given that AVL trees achieve O(log n) insertion, these queries seek recent papers presenting faster insertion algorithms or new lower bounds showing that bound is optimal.",
+    "family": "Self-Balancing Trees Insertion",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "self-balancing tree deletion",
+      "balanced binary search tree deletion",
+      "self-balancing BST deletion lower bound"
+    ],
+    "why": "Given the best listed deletion bound of O(log n) for AVL trees, these queries look for newer self-balancing tree deletion algorithms that improve on that bound or establish matching lower bounds.",
+    "family": "Self-Balancing Trees Deletion",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "self balancing binary search tree search",
+      "balanced search tree lower bound",
+      "self balancing tree search algorithm"
+    ],
+    "why": "These queries look for recent papers that improve on the classical O(log n) search time of AVL trees or prove new lower bounds for searching in self-balancing trees.",
+    "family": "Self-Balancing Trees Search",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "two player Nash equilibrium",
+      "bimatrix game algorithm",
+      "bimatrix game lower bound"
+    ],
+    "why": "These queries look for recent papers that improve on the exponential exact algorithm or the quasi-polynomial approximate algorithm, or prove lower bounds for computing Nash equilibria in two-player bimatrix games.",
+    "family": "Nash Equilibria",
+    "variation": "2 player games"
+  },
+  {
+    "queries": [
+      "graphical games Nash equilibrium algorithm",
+      "multi-agent influence diagrams algorithm",
+      "Nash equilibrium graphical games lower bound"
+    ],
+    "why": "These queries look for recent faster algorithms or lower bounds for computing Nash equilibria in graphical games and multi-agent influence diagrams, aiming to improve on the best known result listed above.",
+    "family": "Nash Equilibria",
+    "variation": "Graphical games, Multi-agent influence diagrams"
+  },
+  {
+    "queries": [
+      "nash equilibria n player games",
+      "multiplayer nash equilibrium algorithm",
+      "n player nash equilibrium lower bound"
+    ],
+    "why": "These queries look for recent papers that beat the listed exponential-time methods or prove new hardness results for computing Nash equilibria in n-player games.",
+    "family": "Nash Equilibria",
+    "variation": "n player games"
+  },
+  {
+    "queries": [
+      "4NF decomposition algorithm",
+      "fourth normal form decomposition",
+      "4NF decomposition lower bound"
+    ],
+    "why": "The best known algorithms from Fagin (1977) and Grahne and Räihä (1983) are exponential, so these queries look for recent faster algorithms or new lower bounds for 4NF decomposition.",
+    "family": "4NF Decomposition",
+    "variation": "4NF Decomposition for Functional and Multivalued Dependency Sets"
+  },
+  {
+    "queries": [
+      "4NF decomposition conflict-free dependencies",
+      "conflict-free dependency set decomposition",
+      "4NF conflict-free lower bound"
+    ],
+    "why": "These queries look for recent algorithms faster than the O(k^2 n^2) Lien bound or new lower bounds for 4NF decomposition of conflict-free dependency sets.",
+    "family": "4NF Decomposition",
+    "variation": "4NF Decomposition for Conflict-Free Dependency Sets"
+  },
+  {
+    "queries": [
+      "strongly connected components algorithm",
+      "SCC decomposition lower bound",
+      "dynamic strongly connected components"
+    ],
+    "why": "These queries seek recent faster algorithms, new lower bounds, or dynamic variants for strongly connected components, improving on the listed classic algorithm.",
+    "family": "Strongly Connected Components",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "integer factoring lower bound",
+      "integer factorization quantum algorithm",
+      "classical integer factoring algorithm"
+    ],
+    "why": "These queries seek new algorithms that beat the best known subexponential factoring methods or new lower bounds on the problem's computational difficulty.",
+    "family": "Integer Factoring",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "integer relation detection",
+      "integer relation algorithm",
+      "integer relation lower bound"
+    ],
+    "why": "These queries seek recent papers that improve on the listed algorithm with a faster integer relation method or prove a new lower bound for the problem.",
+    "family": "Integer Relation",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "point in polygon algorithm",
+      "point inclusion polygon",
+      "point in polygon lower bound"
+    ],
+    "why": "These queries look for recent papers presenting faster point-in-polygon algorithms or new lower bounds, improving on the Skala 1994 result listed as best known.",
+    "family": "Point-in-Polygon",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "dynamic subset sum algorithm",
+      "dynamic subset sum lower bound",
+      "dynamic subset sum data structure"
+    ],
+    "why": "They look for new algorithms or lower bounds that improve on the listed O(qt log t log n) dynamic subset sum algorithm.",
+    "family": "The Subset-Sum Problem",
+    "variation": "Dynamic Subset Sum"
+  },
+  {
+    "queries": [
+      "bin packing approximation algorithm",
+      "bin packing lower bound",
+      "bin packing exact algorithm"
+    ],
+    "why": "These queries seek recent papers that improve on the exponential-time Martello-Toth Procedure through faster exact algorithms, approximation schemes, or new lower bounds for bin packing.",
+    "family": "Bin Packing Problem",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "Hamiltonian cycle detection algorithm",
+      "Hamiltonian circuit exponential time algorithm",
+      "Hamiltonian cycle lower bound"
+    ],
+    "why": "They look for new exact detection algorithms faster than Held–Karp's O(EV 2^V) or new lower bounds ruling out such improvements.",
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Detection"
+  },
+  {
+    "queries": [
+      "counting Hamiltonian cycles",
+      "counting Hamiltonian circuits",
+      "Hamiltonian cycle counting lower bound"
+    ],
+    "why": "They seek algorithms faster than Karp's inclusion-exclusion O(EV^2 2^V) method or new lower bounds for counting Hamiltonian cycles and circuits.",
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Counting"
+  },
+  {
+    "queries": [
+      "Hamiltonian cycle detection algorithm",
+      "Hamiltonian circuit lower bound",
+      "undirected Hamiltonian cycle"
+    ],
+    "why": "These queries look for new algorithms beating Björklund’s O*(1.657^V) detection time or new lower bounds for undirected Hamiltonian cycle detection.",
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Detection (undirected)"
+  },
+  {
+    "queries": [
+      "counting Hamiltonian cycles",
+      "Hamiltonian circuit counting algorithms",
+      "Hamiltonian cycle counting lower bound"
+    ],
+    "why": "They target recent improvements or hardness results for counting undirected Hamiltonian cycles beyond the listed exponential parameterized algorithms.",
+    "family": "The Hamitonian Circuit Problem",
+    "variation": "Counting (undirected)"
+  },
+  {
+    "queries": [
+      "k-Set Splitting algorithm",
+      "Set Splitting kernelization",
+      "k-Set Splitting lower bound"
+    ],
+    "why": "These queries look for new algorithms or lower bounds that improve on the best listed O(1.963^k + N) fixed-parameter running time for k-Set Splitting.",
+    "family": "The Set Splitting Problem",
+    "variation": "k-Set splitting"
+  },
+  {
+    "queries": [
+      "weighted k set splitting algorithm",
+      "k set splitting lower bound",
+      "weighted set splitting parameterized"
+    ],
+    "why": "They look for algorithms faster than Chen-Lu's O(2^k N) or new lower bounds for weighted k-Set splitting.",
+    "family": "The Set Splitting Problem",
+    "variation": "weighted k-Set splitting"
+  },
+  {
+    "queries": [
+      "weighted tardiness precedence scheduling",
+      "precedence constrained weighted tardiness",
+      "tardiness minimization precedence constraints"
+    ],
+    "why": "These queries seek recent algorithms or lower bounds that improve upon the listed Schrage-Baker O(S poly(n)) algorithm for this weighted precedence-constrained tardiness problem.",
+    "family": "Minimum Tardiness Sequencing",
+    "variation": "weighted with precedence relations"
+  },
+  {
+    "queries": [
+      "minimum tardiness sequencing lower bound",
+      "total tardiness exact algorithm",
+      "unweighted tardiness exponential algorithm"
+    ],
+    "why": "These queries look for exact algorithms that improve on the O(2.247^n) state of the art or conditional lower bounds ruling out substantially faster running times for unweighted minimum tardiness sequencing.",
+    "family": "Minimum Tardiness Sequencing",
+    "variation": "unweighted"
+  },
+  {
+    "queries": [
+      "Dominating Set exact algorithm",
+      "Dominating Set lower bound",
+      "minimum dominating set algorithm"
+    ],
+    "why": "These queries look for new exact algorithms improving on the O(1.5063^n) bound or new lower bounds for Dominating Set.",
+    "family": "Dominating Set",
+    "variation": ""
+  },
+  {
+    "queries": [
+      "counting dominating sets",
+      "exact counting dominating set",
+      "counting dominating set lower bounds"
+    ],
+    "why": "They look for faster exact or parameterized algorithms and new lower bounds that improve on the O(1.5048^n) algorithm for counting dominating sets.",
+    "family": "Dominating Set",
+    "variation": "counting"
+  },
+  {
+    "queries": [
+      "3-Hitting Set algorithm",
+      "faster 3-Hitting Set",
+      "3-Hitting Set lower bound"
+    ],
+    "why": "They seek recent papers that improve on Wahlström’s 2004 O(1.6538^n) exact algorithm for 3-Hitting Set or establish a new lower bound for it.",
+    "family": "Hitting Set",
+    "variation": "3-Hitting Set (Every subset has size at most 3)"
+  },
+  {
+    "queries": [
+      "Voronoi diagram lower bound",
+      "Voronoi tessellation construction",
+      "fast Voronoi diagram algorithm"
+    ],
+    "why": "These queries seek papers that beat the O(n log n) barrier with faster construction algorithms or establish new lower bounds for Voronoi diagram computation.",
+    "family": "Voronoi Diagram",
+    "variation": ""
+  }
+]

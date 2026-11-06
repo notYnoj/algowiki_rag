@@ -1,0 +1,20 @@
+algorithms for the problem using combinatorial tools, or whether there are fundamental barriers that make continuous optimization necessary.
+
+## 1.1 Our Result
+
+In this paper we resolve both of the above questions for negative-weight SSSP: we present a simple combinatorial algorithm that reduces the running time all the way down to near-linear.
+
+**Theorem 1.1.** _There exists a randomized (Las Vegas) algorithm that takes O(m_log<sup>8</sup>(_n_)log(_W_)) _time with high probability (and in expectation) for an m-edge input graph G<sub>in</sub> and source s<sub>in</sub>. It either returns a shortest path tree from s<sub>in</sub> or returns a negative-weight cycle._
+
+Our algorithm relies only on basic combinatorial tools; the presentation is self-contained and only uses standard black-boxes such as Dijkstra’s and Bellman-Ford algorithms. In particular, it is a scaling algorithm enhanced by a simple graph decomposition algorithm called _Low Diameter Decomposition_ which has been studied since the 80s; our decomposition is obtained in a manner similar to some known algorithms (see Section 1.2 for a more detailed discussion). Our main technical contribution is showing how low-diameter decomposition--which works only on graphs with non-negative weights--can be used to develop a recursive scaling algorithm for SSSP with negative weights. As far as we know, all previous applications of this decomposition were used for parallel/distributed/dynamic settings for problems that do not involve negative weights, and our algorithm is also the first to take advantage of it in the classical sequential setting; we also show that in this setting, there is a simple and efficient algorithm to compute it.
+
+**Perspective on Other Problems:** While our result is specific to negative-weight SSSP, we note that question _(2)_ above in fact applies to a much wider range of problems. The current landscape of graph algorithms is that for many of the most fundamental problems, including ones taught in undergraduate courses and used regularly in practice, the state-of-the-art solution is a complex algorithm for the more general min-cost flow problem: some examples include negative-weight SSSP, bipartite matching, the assignment problem, edge/vertex-disjoint paths, s-t cut, densest subgraph, max flow, transshipment, and vertex connectivity. This suggests a research agenda of designing simple algorithms for these fundamental problems, and perhaps eventually their generalizations such as min-cost flow. We view our result on negative-weight SSSP as a first step in this direction.
+
+**Independent and Follow-Up Results.** Independently from our result, the recent major breakthrough by Chen, Kyng, Liu, Peng, Probst Gutenberg, and Sachdeva \[CKL<sup>+</sup>22\] culminates the line of works based on continuous optimization and dynamic algorithms (e.g. \[DS08, Mad13, LS14, Mad16, CMSV17, CLS19, Bra20, LS20, AMV20, BLSS20, BLN<sup>+</sup>20, BLL<sup>+</sup>21\]) and achieves an almost-linear time bound<sup>5</sup> for min-cost flow. The authors thus almost match our bounds for negative-weight SSSP as a special case of their result: their runtime is _m_<sup>1+_o_(1)</sup>log(_W_) versus our \(O(m\cdot\text{polylog}(n)log(W))\) bound. The two results are entirely different, and as far as we know there is no overlap in techniques.
+
+The above landmark result essentially resolves the running-time complexity for a wide range of fundamental graph problems, modulo the extra _m_<sup>_o_(1)</sup> factor. We believe that this makes it a natural time to pursue question _(2)_ for these problems, outlined above.
+
+In this paper, we prioritize simplicity and modularity, and not optimizing the logarithmic factors. The follow-up work by Bringmann, Cassis, and Fischer \[BCF23\] greatly optimizes our framework to reduce the running time to _O(m_log<sup>2</sup>(_n_)log(_nW_)loglog_n_). There is also follow-up work by<tbc>
+
+<sup>5</sup>\(\tilde{O}(m^{1+o(1)}log^2U)\) time when vertex demands, edge costs, and upper/lower edge capacities are all integral and bounded by _U_ in absolute value.
+

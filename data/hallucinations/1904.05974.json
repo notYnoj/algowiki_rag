@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "min-cost quasi-popular matching",
+      "problem family": "popular matchings",
+      "bound": "NP-hard to compute; NP-hard to approximate within any multiplicative factor",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given a marriage instance \\(G=(A\\cup B,E)\\) with a function \\(\\mathsf{cost}:E\\rightarrow\\{0,1\\}\\), it is NP-hard to compute a min-cost quasi-popular matching in G. Moreover, it is NP-hard to approximate its cost within any multiplicative factor.",
+      "page": 3
+    },
+    {
+      "problem": "min-cost quasi-popular matching",
+      "problem family": "popular matchings",
+      "bound": "polynomial time algorithm; \\(\\mathsf{cost}(M)\\le\\mathsf{opt}\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "NP-hard to approximate min-cost popular matching to any factor",
+      "quote": "Given a marriage instance \\(G=(A\\cup B,E)\\) with a function \\(\\mathsf{cost}:E\\rightarrow\\mathbb{R}\\), there is a polynomial time algorithm to compute a quasi-popular matching M such that \\(\\mathsf{cost}(M)\\le\\mathsf{opt}\\), where opt is the cost of a min-cost popular matching in G.",
+      "page": 3
+    },
+    {
+      "problem": "popular matching polytope and quasi-popular matching polytope extension complexity",
+      "problem family": "popular matchings",
+      "bound": "\\(2^{\\Omega(m/\\log m)}\\)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The extension complexity of the polytope P (also, of the polytope Q) is \\(2^{\\Omega(\\frac{m}{logm})}\\).",
+      "page": 4
+    },
+    {
+      "problem": "dominant matching polytope",
+      "problem family": "popular matchings",
+      "bound": "formulation of size \\(O(|M_G|)\\) in \\(\\mathbb{R}^m\\); \\(\\Omega(c^m)\\) facets for some constant \\(c>1\\)",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": "no complete linear description of D_G in the original space was known so far",
+      "quote": "The dominant matching polytope D_G admits a formulation of size O(|M_G|) in R^m. Moreover, there exists a constant c>1 such that D_G has \\Omega(c^m) facets.",
+      "page": 4
+    },
+    {
+      "problem": "min-cost quasi-popular matching via popular fractional matching",
+      "problem family": "popular matchings",
+      "bound": "polynomial time algorithm; \\(\\mathsf{cost}(N)\\le\\mathsf{cost}(\\mathbf{q})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "cost(M) \\le opt where opt is min-cost popular matching (Theorem 2)",
+      "quote": "Given a marriage instance \\(G=(A\\cup B,E)\\) with a function \\(\\mathsf{cost}:E\\rightarrow\\mathbb{R}\\), there is a polynomial time algorithm to compute a quasi-popular matching N such that \\(\\mathsf{cost}(N)\\le\\mathsf{cost}(\\mathbf{q})\\), where **q** is a min-cost popular fractional matching in G.",
+      "page": 20
+    },
+    {
+      "problem": "dominant matching polytope",
+      "problem family": "popular matchings",
+      "bound": "polynomial-size extended formulation R_G defined by constraints (19)-(24)",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The polytope R_G defined by constraints (19)-(24) is an extended formulation of the dominant matching polytope of G.",
+      "page": 32
+    }
+  ],
+  "paper": "1904.05974",
+  "usage": {
+    "prompt_tokens": 54465,
+    "completion_tokens": 8799,
+    "total_tokens": 63264,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7909,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

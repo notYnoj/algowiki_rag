@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "external memory sorting of integers",
+      "problem family": null,
+      "bound": "\\Omega\\big(min\\big\\{n,\\frac{n}{B}\\cdot lg_{2M/B}\\frac{n}{B}\\big\\}\\big)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O((n/B) lg_{M/B}(n/B)) (comparison based external memory sorting)",
+      "quote": "Assuming Conjecture 1, any randomized algorithm for the external memory sorting problem with \\(w=\\Omega(lgn)\\) bit integers, having error probability at most 1/3, must make an expected \\(\\Omega\\big(min\\big\\{n,\\frac{n}{B}\\cdot lg_{2M/B}\\frac{n}{B}\\big\\}\\big)\\) I/Os.",
+      "page": 2
+    },
+    {
+      "problem": "word-RAM sorting of integers",
+      "problem family": null,
+      "bound": "\\Omega\\big(min\\big\\{n,\\frac{nw}{b}\\cdot lg\\frac{nw}{b}\\big\\}\\big)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O(nw/b) (linear time to read/write input/output)",
+      "quote": "Assuming Conjecture 1, any randomized word-RAM algorithm for sorting \\(w=\\Omega(lgn)\\) bit integers, having error probability at most 1/3 and word size \\(b\\ge w\\) bits, must spend \\(\\Omega\\big(min\\big\\{n,\\frac{nw}{b}\\cdot lg\\frac{nw}{b}\\big\\}\\big)\\) time.",
+      "page": 2
+    },
+    {
+      "problem": "oblivious word-RAM sorting of integers",
+      "problem family": null,
+      "bound": "\\Omega(nlgn)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O(n) (Radix Sort)",
+      "quote": "Assuming Conjecture 1, any oblivious randomized word-RAM algorithm for sorting \\(\\Theta(lgn)\\) bit integers, having error probability at most 1/3 and word size \\(\\Theta(lgn)\\), must spend \\(\\Omega(nlgn)\\) time.",
+      "page": 2
+    },
+    {
+      "problem": "external memory matrix transpose",
+      "problem family": null,
+      "bound": "\\Omega\\left(min\\left\\{\\frac{n^2lg_{2M/B}B}{B},\\frac{n^2w}{lg(n^2w)}\\right\\}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(B lg B) for n=B, M=2B, oblivious (Adler et al.)",
+      "quote": "Assuming Conjecture 1, any randomized algorithm for the external memory matrix transpose problem with w bit integer entries, having error probability at most 1/3, must make an expected \\(\\Omega\\left(min\\left\\{\\frac{n^2lg_{2M/B}B}{B},\\frac{n^2w}{lg(n^2w)}\\right\\}\\right)\\) I/Os.",
+      "page": 3
+    },
+    {
+      "problem": "word-RAM matrix transpose",
+      "problem family": null,
+      "bound": "\\Omega\\left(min\\left\\{\\frac{n^2wlg(b/w)}{b},\\frac{n^2w}{lg(n^2w)}\\right\\}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O(b) (linear time to read/write input/output)",
+      "quote": "Assuming Conjecture 1, any randomized word-RAM algorithm for computing the transpose of an \\(n\\times n\\) matrices with w-bit integer entries, having error probability at most 1/3 and word size b bits, must spend \\(\\Omega\\left(min\\left\\{\\frac{n^2wlg(b/w)}{b},\\frac{n^2w}{lg(n^2w)}\\right\\}\\right)\\) time.",
+      "page": 3
+    },
+    {
+      "problem": "external memory permutation",
+      "problem family": null,
+      "bound": "\\Omega\\big(\\mathrm{min}\\big\\{n,\\frac{nw}{\\mathrm{lg}(nw)},\\frac{n}{B}\\cdot\\mathrm{lg}_{2M/B}\\frac{n}{B}\\big\\}\\big)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O(min{n, (n/B) · lg_{M/B}(n/B)}) I/Os",
+      "quote": "Assuming Conjecture 1, any randomized algorithm for the external memory permutation problem, having error probability at most 1/3, must make an expected \\(\\Omega\\big(\\mathrm{min}\\big\\{n,\\frac{nw}{\\mathrm{lg}(nw)},\\frac{n}{B}\\cdot\\mathrm{lg}_{2M/B}\\frac{n}{B}\\big\\}\\big)\\) I/Os.",
+      "page": 13
+    },
+    {
+      "problem": "oblivious external memory permutation",
+      "problem family": null,
+      "bound": "\\Omega\\big(\\frac{n}{B}\\cdot lg_{2M/B}\\frac{n}{B}\\big)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "O(min{n, (n/B) · lg_{M/B}(n/B)}) I/Os",
+      "quote": "Assuming Conjecture 1, any oblivious randomized algorithm for the external memory permutation problem, having error probability at most 1/3, must make an expected \\(\\Omega\\big(\\frac{n}{B}\\cdot lg_{2M/B}\\frac{n}{B}\\big)\\) I/Os.",
+      "page": 16
+    }
+  ],
+  "paper": "1811.01313",
+  "usage": {
+    "prompt_tokens": 25660,
+    "completion_tokens": 13657,
+    "total_tokens": 39317,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12366,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

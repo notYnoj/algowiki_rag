@@ -1,0 +1,12 @@
+find the JIDA integrator with sparse linear algebra more cost-effective than the GPU time integrators `diffrax` (Figure 5c). Every method tracks the \(O(\Delta x^2)\) spatial floor at the resolutions it reaches, although `Kvaerno5` saturates near \(2\times 10^{-7}\) from _N_=2<sup>12</sup> onward (Figure 5a). However, only the `JIDA` solver of `diff-soup` holds this accuracy at a low, fixed cost across all resolutions (Figure 5b).
+
+Across this range of resolution, `diff-soup` exhibits a nearly fixed cost of about 0.1 s, indicating that the wall time is dominated by the overhead of launching GPU kernels and of host-device synchronization at the branch points of the adaptive integration loop. To discriminate the performance gains of the GPU accelerator versus the sparse VSVO algorithm, we run the same algorithm on the CPU with the KLU sparse linear solver (Figure 5d). We note that once the cost is dominated by the sparse linear solver, the precise scaling follows the total cost of the factorization kernels, which depends nontrivially on both the number of nonzeros and the exact sparsity structure of the problem, so we plot the cost against the Jacobian nonzeros rather than the degrees of freedom. We find the cost of the CPU solver exceeds the GPU solver above approximately \(1.4\times 10^4\) nonzero Jacobian entries for this problem.
+
+## 4.2. Comparing performance with the Brusselator and Cahn-Hilliard problems
+
+To establish the performance of `diff-soup`, we benchmark our solvers against comparable scientific computing libraries that offer stiff time integrators, sparse linear solvers, and sensitivity analysis, namely SUNDIALS, PETSc, `DifferentialEquations.jl`, and `ode15s` in MATLAB. We select the two-dimensional Brusselator and a coupled chemo-mechanical Cahn- Hilliard system as model stiff problems. The Brusselator is a reaction- diffusion model [96] that is a conventional benchmark for stiff integrators [65, 97],
+
+\(\frac{\partial u}{\partial t}=A+u^2v-(B+1)u+\alpha\nabla^2u,\frac{\partial v}{\partial t}=Bu-u^2v+\alpha\nabla^2v,\) (19)
+
+where _u_ and _v_ are the concentrations of the two species, _A_=1 and _B_=3 are the feed and conversion rates, and \(\alpha=1/50\) is the diffusivity. The problem is solved on the unit square for \(t\in[0,10]\), with every wall held at the reaction steady state _u_=1, _v_=3, from the initial condition \(u=1+sin(2\pi x)sin(2\pi y)\),<tbc>
+

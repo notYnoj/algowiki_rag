@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Clique-based separator for intersection graphs of geodesic disks",
+      "problem family": null,
+      "bound": "O(n^{3/4+\\varepsilon}) \\text{ cliques}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "O(n^{2/3}) cliques for geodesic disks in a simple polygon [11]; open for polygons with holes",
+      "quote": "Our result is actually much more general, as it shows that _for any well-behaved shortest-path metric d_ defined on a path-connected and closed subset \\(F\\subset\\mathbb{R}^2\\), a set of geodesic disks with respect to that metric admits a separator consisting of \\(O(n^{3/4+\\varepsilon})\\) cliques.",
+      "page": 3
+    },
+    {
+      "problem": "q-Coloring on intersection graphs of geodesic disks",
+      "problem family": null,
+      "bound": "2^{O(n^{3/4+\\varepsilon})}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then q-Coloring can be solved in \\(2^{O(n^{\\frac{3}{4}+\\varepsilon})}\\) time on \\(\\mathcal{G}^\\times(\\mathcal{D})\\).",
+      "page": 11
+    },
+    {
+      "problem": "Distance oracle for intersection graphs of geodesic disks",
+      "problem family": null,
+      "bound": "O(n^{7/4+\\varepsilon}) \\text{ storage}, O(n^{3/4+\\varepsilon}) \\text{ query time}, \\text{additive error } 1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Our distance oracle uses \\(O(n^{7/4+\\varepsilon})\\) storage and can report the hop distance between any two nodes in \\(\\mathcal{G}^\\times(\\mathcal{D})\\) in \\(O(n^{3/4+\\varepsilon})\\) time, up to an additive error of one.",
+      "page": 4
+    }
+  ],
+  "paper": "2403.04905",
+  "usage": {
+    "prompt_tokens": 17368,
+    "completion_tokens": 12098,
+    "total_tokens": 29466,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11624,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

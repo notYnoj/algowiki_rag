@@ -1,0 +1,18 @@
+co-nondeterministic algorithms for APSP [11, 12], out of which one is inherently "non-smooth" due to integer hashing [11], we would be surprised if the intricacies in the prediction error definition were completely avoidable. In Section 1.3, we discuss minor simplifications of the error measure that could be within reach.
+
+On the positive side, we highlight that our prediction error only depends on _how many_ entries of the distance estimate matrix are wrong or unverifiable, and not by _how much_ they are off. This is in contrast to many learning-augmented results that concern the \(\ell_1\) prediction error [16, 36, 35, 19]. Our error measure is closer in spirit to the \(\ell_0\) error, which is generally smaller but harder to use (see, e.g., [13]). Employing this kind of error in our case seems possible due to two factors: (1) since verifying correctness of a presumed solution is part of our algorithm, we exactly spot where prediction errors lie, and (2) thanks to the Dijkstra-like order in which we fix these errors, we are able to guarantee correctness of an entry once we recalculate it for the first time - no matter how far off it was. Without this specific order, we would only be guaranteed to decrease an entry by at least 1 in a single recomputation, yielding a running time dependent on the \(\ell_1\) error \(\sum_{u,v}D[u,v]-D^*[u,v]\).
+
+In Section 7 we give some empirical evidence that one can hope for \(\eta\checkmark n^2\) in practice.
+
+In the remaining subsection, we go into more detail on how to compute and verify the distance estimate matrix, as well as how to order and fix wrong entries.
+
+**Algorithm outline.** Our algorithm proceeds in three stages (see Algorithm 1). In the first stage, we compute the distance estimate matrix _D_ from a given certificate. Remember that this corresponds to the entry-wise minimum matrix achievable by starting from _D[u,v_]=_w<sub>G</sub>(u,v_) and repeatedly relaxing entries _D[u,v_] with vertices \(w\in C[u,v]\). A natural idea how to compute such a matrix would be running the Floyd-Warshall algorithm but performing only relaxations that are indicated by the certificate. However, this approach fails, as shown by the simple counterexample in Figure 1.
+
+We circumvent this issue by changing the order of relaxations in Floyd-Warshall. Doing so requires two additional ideas: First, while we have to be careful with changing the order of relaxations in Floyd-Warshall [30], a sufficient condition for correctness of a reordering of relaxations is guaranteeing that any accessed entry already contains the correct distance. Second, we are in fact able to guarantee this condition by turning all edge weights non- negative with the well known Johnson’s trick [27] from negative shortest path algorithms and relaxing in increasing order of distances. Surprisingly, the resulting algorithm at first glance more closely resembles Dijkstra’s algorithm than Floyd-Warshall. To simplify the presentation, we perform Johnson’s trick once in the beginning as discussed in Section 5 and restrict our view to non-negative weights.
+
+The second stage is responsible for verification of the distance estimates, that is, detecting entries _D[u,v_] that could be relaxed further if we do not restrict to relaxations indicated by
+
+Input: Graph G, certificate C, and parameter p<br> Output: Distance matrix D<sup>∗</sup><br> fn FullAlgorithm(G, C, p):<br>   \(D\leftarrow\text{ComputeEstimates(G, C)}\) // Stage 1 (see Algorithm 2)<br>   \(U\leftarrow\text{VerifyEstimates(D, C, p)}\) // Stage 2 (see Algorithm 3)<br>   \(D^*\leftarrow\text{FixMistakes(D, U)}\) // Stage 3 (see Algorithm 4)<br>   return D<sup>∗</sup>
+
+**Algorithm 1** The full algorithm, combining all three stages
+

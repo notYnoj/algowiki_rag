@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maximum Weight Acyclic Subgraph Above MaxST (MAS/MaxST) with integer weights",
+      "problem family": "Maximum Acyclic Subgraph",
+      "bound": "2^{k^{\\mathcal{O}(1)}}\\cdot|\\mathcal{I}|^{\\mathcal{O}(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1. MAS/MaxST(\\mathbb{Z}_{\\ge 1}) admits an algorithm with 2^{k^{\\mathcal{O}(1)}}\\cdot|\\mathcal{I}|^{\\mathcal{O}(1)} running time.",
+      "page": 5
+    },
+    {
+      "problem": "Maximum Weight Acyclic Subgraph Above MaxST (MAS/MaxST) with rational weights not less than 1",
+      "problem family": "Maximum Acyclic Subgraph",
+      "bound": "n^{k^{\\mathcal{O}(1)}}\\cdot|\\mathcal{I}|^{\\mathcal{O}(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 2. MAS/MaxST(\\mathbb{Q}_{\\ge 1}) admits an algorithm with n^{k^{\\mathcal{O}(1)}}\\cdot|\\mathcal{I}|^{\\mathcal{O}(1)} running time.",
+      "page": 43
+    }
+  ],
+  "paper": "2607.07705",
+  "usage": {
+    "prompt_tokens": 55507,
+    "completion_tokens": 5571,
+    "total_tokens": 61078,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5255,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

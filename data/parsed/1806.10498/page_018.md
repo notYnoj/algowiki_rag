@@ -1,0 +1,2 @@
+of _T<sub>m</sub>_ to leaves of \(T'_1\) in the same order as they are stored in _T<sub>m</sub>_ and _T<sub>m</sub>_ is the _k_-neighbor tree. Therefore all nodes on the _h_ lowest levels of _T_<sub>1</sub> also satisfy conditions (2) and (3). The tree _T_<sub>2</sub> is obtained from \(\lceil f/2\rceil\) rightmost height-_h_ nodes of _T<sub>m</sub>_ in the same way. We can merge two mini-trees using a symmetric procedure.
+

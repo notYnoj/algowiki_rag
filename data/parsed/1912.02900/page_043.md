@@ -1,0 +1,20 @@
+## 5.3 Handling Vertical Cuts
+
+The goal of this section is to prove the following theorem:
+
+**Theorem 5.6** \(\mathsf{WB}(X^*)\le O(N^*logloglogN^*)\).
+
+For all \(1\le i\le N\), we denote by B_<sub>i</sub>_ the set of active columns that lie in the vertical strip \(S_i^V\), so that B<sub>1</sub>_,...,_B_<sub>N</sub>_ partition the set of active columns of _X_<sup>∗</sup>. Let \(\mathcal{L}'\) be a collection of lines at half-integral coordinates that partitions the bounding box _B_ into _N_ strips where each strip contains exactly the block B_<sub>i</sub>_ of columns. We consider the split of _X_<sup>∗</sup> by the lines \(\mathcal{L}'\): This is a collection of _N_ strip instances (that we will denote by \(X_1^*,\dots,X_N^*\)) and a compressed instance, that we denote by \(\tilde{X}\). In order to prove Theorem 5.6, we bound \(\mathsf{WB}(X_i^*)\) for every strip instance \(X_i^*\), and \(\mathsf{WB}(\tilde{X})\) for the compressed instance \(\tilde{X}\), and then combine them using Theorem 3.6 in order to obtain the final bound on WB(_X_<sup>∗</sup>).
+
+### 5.3.1 Bounding Wilber Bound for Strip Instances
+
+In this subsection, we prove the following lemma.
+
+**Lemma 5.7** _For all_ \(1\le i\le N\), \(\mathsf{WB}(X_i^*)\le O(NlogNlogloglogN)\).
+
+From now on we fix an index _i_, and consider the instance \(X_i^*\). Recall that in order to construct instance \(X_i^*\), we started with the instances _X_<sup>0_,i_</sup>_,X_<sup>1_,i_</sup>_,...,X_<sup>_N_-1_,i_</sup>, each of which has the same vertical shift (shift _i_), and horizontal shifts ranging from 0 to _N_-1. Let \(\hat{X}_i\) be the instance obtained by stacking these instances one on top of the other, similarly to the construction of instance \(\hat{X}\) in Section 4.3. As before, instance \(\hat{X}_i\) is a semi-permutation, so every row contains at most one point. Every column of \(\hat{X}_i\) contains exactly log_N_ points of \(\hat{X}_i\). Let C denote the set of all active columns of instance \(\hat{X}_i\). For every column \(C\in\mathcal{C}\), we replace _C_ with a block B(_C_) of log_N_ columns, and place all points of \(\hat{X}_i\cap C\) on the columns of B(_C_), so that they form an increasing sequence, while preserving their _y_-coordinates. The resulting instance is equivalent to \(X_i^*\) (to obtain instance \(X_i^*\) we also need to replace every active row _R_ with a block B(_R_) of log_N_ rows; but since every row contains at most one point of \(\hat{X}_i\), this amounts to inserting empty rows into the instance).
+
+The analysis of \(\mathsf{WB}(X_i^*)\) is very similar to the analysis of WB(_X_<sup>∗</sup>) for instance _X_<sup>∗</sup> constructed in Section 4.3. Notice that, as before, it is sufficient to show that \(\mathsf{WB}(\hat{X}_i)\le O(NlogNlogloglogN)\). Indeed, consider the partition \(\{\mathcal{B}(C)\}_{C\in\mathcal{C}}\) of the columns of \(X_i^*\). Then \(\hat{X}_i\) can be viewed as the compressed instance for \(X_i^*\) with the respect to this partition. Each resulting strip instance (defined by the block B(_C_) of columns) is an increasing sequence of log_N_ points, so the Wilber Bound value for such an instance is _O_(log_N_). Altogether, the total Wilber Bound of all such strip instances is _O(N_log_N_). Therefore, from Theorem 3.6, in order to prove Lemma 5.7, it is now sufficient to show that \(\mathsf{WB}(\hat{X}_i)\le O(NlogNlogloglogN)\).
+
+Let L be the set of all vertical lines with half-integral coordinates for the instance \(\hat{X}_i\), and let \(\sigma\) be any permutation of these lines. Our goal is to prove that \(\mathsf{WB}_\sigma(\hat{X}_i)\le O(NlogNlogloglogN)\). Let \(T=T(\sigma)\) be the partitioning tree associated with \(\sigma\). Consider some vertex \(v\in V(T)\) and the line _L_ that _v_ owns. As before, we classify crossings that are charged to _L_ into several types. A crossing \((p,p')\) is a type-1 crossing, if _p_ and \(p'\) both lie in the same instance _X_<sup>_j,i_</sup>. We say that instance _X_<sup>_j,i_</sup> is _bad_ for _L_, if it contributes at least one type-1 crossing to the cost of _L_. If \(p\in X^{j,i}\) and \(p'\in X^{j^\prime,i}\)<tbc>
+

@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "CMM",
+      "problem family": null,
+      "bound": "\\mathcal{O}(N^2) \\text{ time and } \\mathcal{O}(N) \\text{ space}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is an algorithm for CMM with f_E running in time O(N^2), where N := \\sum_{v\\in V}|v|.",
+      "page": 4
+    },
+    {
+      "problem": "CMM",
+      "problem family": null,
+      "bound": "No \\mathcal{O}(N^{2-\\varepsilon} \\mathrm{poly}(|E|,|V|)) \\text{ algorithm for any } \\varepsilon>0 \\text{ unless SETH fails}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is no algorithm solving CMM with f_E in time O(N^{2-\\varepsilon} \\mathrm{poly}(|E|,|V|)), for any \\varepsilon>0, unless SETH fails.",
+      "page": 16
+    },
+    {
+      "problem": "CMM with f_{\\chi^2}",
+      "problem family": null,
+      "bound": "\\mathcal{O}(N^2) \\text{ time and } \\mathcal{O}(N) \\text{ space}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is an algorithm for CMM with f_{\\chi^2} running in time O(N^2), where N = \\sum_{v\\in V}|v|.",
+      "page": 16
+    },
+    {
+      "problem": "CMM with f_{\\chi^2}",
+      "problem family": null,
+      "bound": "No \\mathcal{O}(N^{2-\\varepsilon} \\mathrm{poly}(|E|,|V|)) \\text{ algorithm for any } \\varepsilon>0 \\text{ unless SETH fails}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is no algorithm solving CMM with f_{\\chi^2} in time O(N^{2-\\varepsilon} \\mathrm{poly}(|E|,|V|)), for any \\varepsilon>0, unless SETH fails.",
+      "page": 16
+    },
+    {
+      "problem": "(\\ell,d)-CMM",
+      "problem family": null,
+      "bound": "\\mathcal{O}\\left(\\binom{\\ell}{d}^2 N^2\\right) \\text{ time and } \\mathcal{O}(N) \\text{ space}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}^*\\left(\\binom{\\ell}{d}^2 |\\Sigma|^{2(\\ell-d)}\\right) \\text{ time and } \\mathcal{O}^*\\left(\\binom{\\ell}{d}^2 |\\Sigma|^{2(\\ell-d)}\\right) \\text{ space}",
+      "quote": "There is an algorithm for (\\ell,d)-CMM with f_E running in time O(\\binom{\\ell}{d}^2 N^2), where N := \\sum_{v\\in V}|v|.",
+      "page": 6
+    },
+    {
+      "problem": "(\\ell,d)-CMM",
+      "problem family": null,
+      "bound": "W[1]-hard parameterized by d",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "(\\ell,d)-CMM is W[1]-hard by d for both f_E and f_{\\chi^2}.",
+      "page": 17
+    }
+  ],
+  "paper": "2610.17958",
+  "usage": {
+    "prompt_tokens": 30274,
+    "completion_tokens": 10757,
+    "total_tokens": 41031,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9932,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

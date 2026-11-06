@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "multiflow-multicut gap",
+      "problem family": "cactus graphs",
+      "bound": "\\frac{16}{7}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "2",
+      "quote": "In particular, we show that the multiflow-multicut gap is at least \\(\\frac{16}{7}\\) for the class of cactus graphs.",
+      "page": 4
+    }
+  ],
+  "paper": "2507.06576",
+  "usage": {
+    "prompt_tokens": 27046,
+    "completion_tokens": 11232,
+    "total_tokens": 38278,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11118,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

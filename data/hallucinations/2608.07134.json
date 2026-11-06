@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "heap evaluation",
+      "problem family": "heap",
+      "bound": "O(|S|) total time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n log n)",
+      "quote": "There is a deterministic comparison-based algorithm that, given a sequence S of `insert` and `delete-min` operations on an initially empty heap, computes the (unordered) list of elements remaining in the heap after the execution of S in O(|S|) total time.",
+      "page": 2
+    },
+    {
+      "problem": "sync heap",
+      "problem family": "heap",
+      "bound": "O(n + d \\log k) total time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n + d \\log n)",
+      "quote": "There is a data structure that can execute an online sequence of n heap operations of the form `insert`, (silent) `delete-min`, `find-min`, and `reveal-deletions` in O(n+d log k) total time, where d is the number of `delete-min` operations and k is the number of `find-min` and `reveal-deletions` operations.",
+      "page": 3
+    },
+    {
+      "problem": "single-machine maximum-profit unit-time scheduling",
+      "problem family": "scheduling",
+      "bound": "O(n) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n log n)",
+      "quote": "The mputs problem with n jobs can be solved in O(n) time.",
+      "page": 10
+    },
+    {
+      "problem": "sync heap",
+      "problem family": "heap",
+      "bound": "insert, find-min, and reveal-deletions in O(1) amortized time; silent delete-min in O(\\log k) amortized time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a deterministic data structure, the sync heap, that supports the operations `insert`, `find-min`, and `reveal-deletions` in constant amortized time and silent `delete-min` operations in O(log k) amortized time, where k is the number of `find-min` and `reveal-deletions` operations up to the current moment.",
+      "page": 10
+    }
+  ],
+  "paper": "2608.07134",
+  "usage": {
+    "prompt_tokens": 11953,
+    "completion_tokens": 7954,
+    "total_tokens": 19907,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7425,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

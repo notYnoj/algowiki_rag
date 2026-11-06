@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Bitonic Subsequence",
+      "problem family": null,
+      "bound": "O(Slg_+S+Mlg_+^2M)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(nm) time (dense baseline)",
+      "quote": "Algorithm 2 returns an LCBS in \\(O(Slg_+S+Mlg_+^2M)\\) time and \\(O(S+Mlg_+M)\\) auxiliary space.",
+      "page": 7
+    },
+    {
+      "problem": "Longest Common Bitonic Subsequence",
+      "problem family": null,
+      "bound": "O(S+Mlg_+M)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "O(S+M) space (dense baseline)",
+      "quote": "Algorithm 2 returns an LCBS in \\(O(Slg_+S+Mlg_+^2M)\\) time and \\(O(S+Mlg_+M)\\) auxiliary space.",
+      "page": 7
+    },
+    {
+      "problem": "Longest Common Bitonic Subsequence",
+      "problem family": null,
+      "bound": "No O(N^{2-\\varepsilon}) algorithm for any fixed \\varepsilon>0 (assuming SETH)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Assuming SETH, LCBS on two length-N integer sequences has no \\(O(N^{2-\\varepsilon})\\) algorithm for any fixed \\(\\varepsilon>0\\).",
+      "page": 8
+    }
+  ],
+  "paper": "2511.08958",
+  "usage": {
+    "prompt_tokens": 7890,
+    "completion_tokens": 8562,
+    "total_tokens": 16452,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8199,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

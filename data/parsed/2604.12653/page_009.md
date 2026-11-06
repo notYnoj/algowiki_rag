@@ -1,0 +1,20 @@
+To bound the total running time of all extractMin operations, we will eventually apply the interval lemma (Lemma 6) to Lemma 9. To this end, we first show:
+
+**Lemma 10.** _For every_ \(x\in X\)_, pick a distinct real number_ \(w(x)\in[\ell(x),r(x)]\)_. Then, the sorted order_ \(\unknown_w\) _on X induced by w is compatible with G._
+
+_Proof._ Let \(y\rightarrow x\) be an edge of _G_. In any topological order of _G_, the item _y_ appears before _x_. Since `UniTopSort` inserts the items into the heap in topological order, this shows that _a(y)\<a(x_). By assumption, the unknown linear order _L_ on _X_ is compatible with _G_. Therefore, _y\<<sub>L</sub>x_, so _y_ gets extracted from the heap before _x_ does. This shows that _b(y)\<b(x_). By the definition of \(\ell(x)\), this implies \(\ell(x)\ge a(y)+b(y)\). Hence, \(w(y)\le r(y)=a(y)+b(y)\le\ell(x)\le w(x)\). Since the values _w(._) are distinct, _w(y)\<w(x_), i.e. _y\<<sub>w</sub>x_. This shows the lemma.
+
+We now conclude the proof of Theorem 4: In the sorting phase, `UniTopSort` first inserts all items into the heap, and then extracts all items from the heap. The _n_ insert operations take _O(n_) amortized time. By Lemma 9, the running time of all _n_ extractMin operations is \(O(n+\sum_{x\in X}log(r(x)-\ell(x)))\). By Lemma 6, this sum is _O(n_+log|_Z_|), and by Lemma 10, \(|Z|\le e(G)\). Thus, the sorting phase of `UniTopSort` takes _O(n_+log_e(G_)) time, and hence performs _O(n_+log_e(G_)) comparisons. This shows Theorem 4.
+
+## 4 Deriving Theorem 5 from Theorem 4
+
+In this section, we use Lemma 7 to derive a black-box reduction that improves the time of the sorting phase from _O_(log_e(G_)+_n_) to _O_(log_e(G_)):
+
+**Theorem 11.** _Given G, in O(n+m_) _preprocessing time we can compute a subset_ \(Y\subseteq X\) _with_ \(|Y|\in O(loge(G))\) _and a graph H on Y with O(m_) _edges, such that if L is a linear order on X compatible with G, then the restriction of L to Y is compatible with H. Moreover, every linear order on Y compatible with H can be obtained in this way, thus_ \(e(H)\le e(G)\)_. Then, in the sorting phase, given the sorted order of Y, we can compute the sorted order of X in O_(log_e(G_)) _time._
+
+_Proof._ We first compute a longest path _P_ in _G_. The high-level idea is that we can shortcut _P_ down to _O(n_-|_P_|) vertices without losing any information. Formally, let the predecessor (or successor) in _P_ of a vertex \(u\in X-P\) be the last (or first) vertex in _P_ that has an edge to (from) _u_. We define _Y_ to be _X-P_, plus the predecessor and successor in _P_ of each vertex in _X-P_. Therefore, \(|Y|\le 3|X-P|\in O(loge(G))\) by Lemma 7. We define _H_ to be the graph induced by _G_ on _Y_ , plus additional edges to make \(Y\cap P\) a path with the same order as _P_. By construction, _H_ contains _O(m_) edges, and can be computed in _O(n+m_) time.
+
+Now, if _L_ is a linear order compatible with _G_, then _L_ in particular is compatible with _P_. Since every edge in _H_ is either an edge of _G_, or an edge on _P_ in the right direction, the restriction of _L_ to _Y_ is compatible with _H_. Conversely, given a linear order \(L'\) on _Y_ compatible with _H_, we create a linear order _L_ on _X_ by placing each item in _P-Y_ into \(L'\) right after its predecessor in _P_. This ensures that _L_ is compatible with all edges of _G_ that are incident to two vertices of _P_. _L_ is also compatible with all edges of _G_ incident to two vertices not on _P_, since these edges are also in _H_. Finally, for any edge \(x\rightarrow y\) in _G_ between a vertex on _P_ and a vertex not in _P_, there is a path in _G_ that uses only edges on _P_, or from a predecessor in _P_ or to a successor in _P_. Thus, _L_ is also compatible with these edges, so _L_ is compatible with _G_. In particular, this shows \(e(H)\le e(G)\).
+
+During preprocessing, we compute _H_ and perform the preprocessing of Lemma 7. All of this takes _O(n+m_) preprocessing time. In the sorting phase, if we are given the sorted order of _Y_ ,<tbc>
+

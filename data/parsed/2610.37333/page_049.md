@@ -1,0 +1,12 @@
+<tbc>dictive control and design of experiments, and to constrained optimization algorithms like `IPOPT` \[102\].
+
+By modernizing the PDE modeling, simulation, and inference stack, we aim to build an open-source ecosystem for dynamical systems that advances engineering and drives innovation in AI for science.
+
+## 7. Methods
+
+### 7.1. Benchmarking
+
+The benchmarks of Section 4 solve the heat equation, the Brusselator reaction-diffusion system, and the Cahn-Hilliard problem with elasticity. All problems are posed on Cartesian domains, the heat equation discretized by finite differences as in Section 4.1 and the other two by the finite-volume method. The Brusselator adapts the constants of the BRUSS problem of Hairer and Wanner \[65\]. The Cahn-Hilliard problem follows the elastic precipitate benchmark of PFHub \[98\] with a regular-solution bulk free energy, \(f_\mathrm{bulk}=A\left[\eta\mathrm{ln}\eta+(1-\eta)\mathrm{ln}(1-\eta)\right]+\omega\eta(1-\eta)\) with _A_=0.16 and \(\omega=0.40\), a gradient energy coefficient \(\kappa=0.29\) and a mobility _M_=5.0. The misfit strain is a dilatational strain of 0.005, and the cubic stiffness constants are (_C_<sub>1111</sub>_,C_<sub>1122</sub>_,C_<sub>1212</sub>)=(250,150,100) in the matrix and 1.1 times those in the precipitate, both interpolated between the phases by \(h(\eta)=\eta^3(6\eta^2-15\eta+10)\). The initial condition adds two zero-flux cosine modes of index 7 with peak amplitude 0.05 to a uniform composition of 0.5 on a 50 nm square domain. The boundaries are no-flux in \(\eta\) and \(\mu\) and traction free, and three displacement degrees of freedom at two corner cells are pinned to remove the rigid-body modes. In the gradient benchmark, the replaced constitutive relationship in both systems is a pointwise tanh network with two hidden layers of width 128, initialized by LeCun normal initialization \[103\] and fitted with Adam to the term it replaces. Its \(N_\theta\) active weights are drawn from each layer in proportion to its size, the remaining weights are held fixed, and L is the mean squared misfit at eight equally spaced times to target trajectories generated with the weights perturbed by 1%.
+
+Every benchmark runs on nodes of one type in an HPC cluster, with Intel Xeon Platinum 8562Y+ processors and NVIDIA L40S GPUs. In the forward benchmarks, the external comparators run each solve on eight CPU cores, except PETSc, which runs on one, and their hybrid GPU lanes on one L40S and one CPU core. The `diff-soup` lanes of Figures 5, 8, 9 and<tbc>
+

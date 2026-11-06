@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "SegE and MinSegE",
+      "problem family": null,
+      "bound": "O((|T||P|)^{1-\\epsilon}) \\text{ for any } \\epsilon>0 \\text{ (conditional lower bound under SETH)}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Neither SegE nor MinSegE over an alphabet of size three can be solved in O((|T||P|)^{1-\\epsilon}) time for any \\epsilon>0, unless SETH fails.",
+      "page": 4
+    },
+    {
+      "problem": "MinSegE",
+      "problem family": null,
+      "bound": "O(|T||P|)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(|T||P|^2)",
+      "quote": "The problem MinSegE can be solved in O(|T||P|) time.",
+      "page": 5
+    },
+    {
+      "problem": "SegE (f=2)",
+      "problem family": null,
+      "bound": "O(|T|+|P|)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(|T||P|)",
+      "quote": "The problem SegE with input f=2 can be decided in O(|T|+|P|) time with O(|P|) space.",
+      "page": 6
+    },
+    {
+      "problem": "SegE (f=2)",
+      "problem family": null,
+      "bound": "O(|P|)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The problem SegE with input f=2 can be decided in O(|T|+|P|) time with O(|P|) space.",
+      "page": 6
+    },
+    {
+      "problem": "SegLCS",
+      "problem family": null,
+      "bound": "O(f|T_2|(|T_1|-\\ell+1))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(f|T_1||T_2|)",
+      "quote": "Given strings T_1 and T_2 with |T_1|\\le|T_2| over a linearly sortable alphabet, and integer f, the problem SegLCS can be solved in O(f|T_2|(|T_1|-\\ell+1)) time using O(\\ell(|T_1|-\\ell/f+1)) space, where \\ell=\\mathsf{slcs}(T_1,T_2,f).",
+      "page": 7
+    },
+    {
+      "problem": "SegLCS",
+      "problem family": null,
+      "bound": "O(\\ell(|T_1|-\\ell/f+1))",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "O(f|T_1|+|T_2|)",
+      "quote": "Given strings T_1 and T_2 with |T_1|\\le|T_2| over a linearly sortable alphabet, and integer f, the problem SegLCS can be solved in O(f|T_2|(|T_1|-\\ell+1)) time using O(\\ell(|T_1|-\\ell/f+1)) space, where \\ell=\\mathsf{slcs}(T_1,T_2,f).",
+      "page": 7
+    },
+    {
+      "problem": "IndSegLCS",
+      "problem family": null,
+      "bound": "O(g_1 g_2 n_1 n_2) \\text{ where } g_a=\\min\\{f_a,\\max\\{\\lceil|T_a|/2\\rceil-f_a,1\\}\\}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(f_1 f_2 n_1 n_2)",
+      "quote": "The problem IndSegLCS can be solved in O(g_1 g_2 n_1 n_2) time for input T_1,T_2,f_1,f_2, where n_1=|T_1|, n_2=|T_2|, g_1=\\min\\{f_1,\\max\\{\\lceil|T_1|/2\\rceil-f_1,1\\}\\}, and g_2=\\min\\{f_2,\\max\\{\\lceil|T_2|/2\\rceil-f_2,1\\}\\}.",
+      "page": 14
+    }
+  ],
+  "paper": "2407.19796",
+  "usage": {
+    "prompt_tokens": 19983,
+    "completion_tokens": 13316,
+    "total_tokens": 33299,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12289,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

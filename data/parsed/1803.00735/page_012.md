@@ -1,0 +1,16 @@
+of two example states in the cavity fields are depicted in Fig. 7.
+
+Let us illustrate the measurement by considering only light scattered from the _x_-direction with incident wave vectors \(\mathbf{k}_m^x\). Since these plane waves are constant in _y_-direction, the atom-field overlaps do not depend on _j_. Neglecting cavity- induced tunneling, the field quadratures for a phase difference \(\phi\) are
+
+\(\mathrm{Re}(\langle a_m^\mathrm{st}\rangle e^{-i\phi})=\sum_i\mathrm{Re}\left(\frac{\eta_me^{-i\phi}}{\Delta_{c,m}+i\kappa_m}v_m^{i1}\right)\langle\hat{N}_i^x\rangle,\) (36)
+
+revealing that cavity fields are determined by the
+
+total occupations of the columns \(\hat{N}_i^x=\sum_j\hat{n}_{ij}\).
+
+For at least _N_ modes (\(M\ge N\)) this system of equations can be inverted yielding the column occupations \(\langle\hat{N}_i^x\rangle\). By measuring the cavity output field quadratures scattered from the diagonal pump light we obtain the occupations of each diagonal \(\langle\hat{N}_i^+\rangle\) and \(\langle\hat{N}_i^-\rangle\). Inverting the system of equations for diagonals demands at least as many pump modes as diagonals, that is 2_N_-1. Inversion can also be done efficiently and intuitively by using a discrete Fourier transform and its inverse. To reveal the Fourier relation, one has to express the \(v_m^{ij}\)’s in Eq. (36) within the harmonic (or in the deep lattice) approximation (see Appendix C). The so obtained approximate inversion formula also works well for realistic lattice depths.
+
+Strictly speaking the condition in Eq. (35) is sufficient only for classical configurations, like occupation number basis states \(|\phi_\nu\rangle\). Some superpositions \(|\psi\rangle=\sum_\nu c_\nu|\phi_\nu\rangle\) which are no solutions might also fulfill the above criterion, because summands in the field expectation values \(\langle a_m^\mathrm{st}\rangle=\sum_\nu|c_\nu|^2\langle\phi_\nu|a_m^\mathrm{st}|\phi_\nu\rangle\) can cancel each other. For instance, for _U_<sub>T</sub>=0 the solution from our example in Fig. 2 \(|\psi_\mathrm{sol}\rangle=|1,4,2,5,3\rangle\) scatters the same fields \(\langle a_m^\mathrm{st}\rangle\) as the superposition \(|\psi_\mathrm{nosol}\rangle=(|\psi_\mathrm{nosol}^1\rangle+|\psi_\mathrm{nosol}^2\rangle)/\sqrt{2}\) with \(|\psi_\mathrm{nosol}^1\rangle=|1,3,2,5,4\rangle\) and \(|\psi_\mathrm{nosol}^2\rangle=|1,4,5,2,3\rangle\), both of which are no solution. In this notation the state |_i_<sub>1</sub>_,i_<sub>2</sub>_,...,i<sub>N</sub>_〉 has one atom on each site (_i<sub>j</sub>,j_). However, these macroscopic superpositions are highly unstable. Even theoretically the measurement back-action [41, 61] projects superpositions of states scattering different fields (such as \(|\psi_\mathrm{nosol}\rangle\)) to one of its constituents. The inclusion of measurement back-action due to continuous measurement might thus lead to intriguing phenomena beyond those presented here and is subject to future work.
+
+We emphasize again that the measurements described above answer the question if we found a solution or not, which is the answer to the combinatorial decision problem. The exact configuration of the final state can be measured with single site resolution as demonstrated in several experiments [59, 60].
+

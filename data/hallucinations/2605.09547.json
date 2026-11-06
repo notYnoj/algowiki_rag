@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimum-cost flow",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{1.5}\\log(W/\\epsilon))\\text{ space and }\\widetilde{O}(\\sqrt{n}\\log(W/\\epsilon))\\text{ passes (total time }\\widetilde{O}(mn\\log^2(W/\\epsilon))\\text{)}",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized multi-pass streaming algorithm that, given an input graph G=(V,E) with integer capacities u\\in[1,W]^E and costs c\\in[1,W]^E, vertex demand vector b\\in\\mathbb{R}^V and accuracy parameter \\epsilon\\in[0,1], computes w.h.p. a min-cost flow in \\widetilde{O}(n^{1.5} log(W/\\epsilon)) space and \\widetilde{O}(\\sqrt{n} log(W/\\epsilon)) passes over the input.",
+      "page": 4
+    },
+    {
+      "problem": "Minimum-cost flow",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{1.5}\\log(W))\\text{ bits of communication}",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized communication protocol that, given an input graph G=(V,E) with integer capacities u\\in[1,W]^E and costs c\\in[1,W]^E, vertex demand vector b\\in\\mathbb{R}^V, where the edges are split among two parties, computes w.h.p. an exact min-cost flow in \\widetilde{O}(n^{1.5} log(W)) communication.",
+      "page": 5
+    }
+  ],
+  "paper": "2605.09547",
+  "usage": {
+    "prompt_tokens": 39048,
+    "completion_tokens": 8371,
+    "total_tokens": 47419,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7976,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

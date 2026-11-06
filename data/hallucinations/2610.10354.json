@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Low-Rank 3SUM",
+      "problem family": null,
+      "bound": "O(n^{2-\\epsilon'})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 1.4 (Informal Theorem 4.1). Let \\(\\epsilon>0\\). Any 3SUM instance (A,B,C) where one of the sets has rank at most \\(O(n^{1-\\epsilon})\\) can be solved in time \\(O(n^{2-\\epsilon'})\\) for some \\(\\epsilon'>0\\).",
+      "page": 7
+    },
+    {
+      "problem": "Min-Plus Convolution (small universe)",
+      "problem family": null,
+      "bound": "O(n^{1+\\gamma-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\tilde{O}(nu)",
+      "quote": "Theorem 1.6 (Small-Universe Reduction). Let \\(\\gamma\\in[0,1]\\). Min-Plus Convolution for length-n input sequences over a universe of size \\(u=n^\\gamma\\) cannot be solved in time \\(O(n^{1+\\gamma-\\epsilon})\\) (for any constant \\(\\epsilon>0\\)), unless the Strong Min-Plus Convolution Hypothesis fails.",
+      "page": 8
+    },
+    {
+      "problem": "Min-Plus Convolution (large universe)",
+      "problem family": null,
+      "bound": "Strong Min-Plus Convolution Hypothesis \\iff Min-Plus Convolution Hypothesis (under Hypothesis 1.7)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1.8 (Large-Universe Reduction). Under Hypothesis 1.7, the Strong Min-Plus Convolution Hypothesis and the Min-Plus Convolution Hypothesis are equivalent.",
+      "page": 8
+    },
+    {
+      "problem": "Min-Max Convolution",
+      "problem family": "Intermediate Convolution Problems",
+      "bound": "O(n^{3/2-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\tilde{O}(n^{1.5})",
+      "quote": "Theorem 1.9 (Min-Max Convolution). Min-Max Convolution cannot be solved in time \\(O(n^{3/2-\\epsilon})\\) (for any constant \\(\\epsilon>0\\)), unless the Strong Min-Plus Convolution Hypothesis fails.",
+      "page": 9
+    },
+    {
+      "problem": "Min-Equality Convolution",
+      "problem family": "Intermediate Convolution Problems",
+      "bound": "O(n^{3/2-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "n^{12/11-o(1)}",
+      "quote": "Theorem 1.10 (Min-Equality Convolution). Min-Equality Convolution cannot be solved in time \\(O(n^{3/2-\\epsilon})\\) (for any constant \\(\\epsilon>0\\)), unless the Strong Min-Plus Convolution Hypothesis fails.",
+      "page": 9
+    },
+    {
+      "problem": "Bounded Monotone Min-Plus Convolution",
+      "problem family": "Intermediate Convolution Problems",
+      "bound": "O(n^{3/2-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\tilde{O}(n^{1.5})",
+      "quote": "Theorem 1.11 (Bounded Monotone Min-Plus Convolution). Min-Plus Convolution between an arbitrary sequence and a monotone sequence bounded by [_n_] cannot be solved in time \\(O(n^{3/2-\\epsilon})\\) (for any constant \\(\\epsilon>0\\)), unless the Strong Min-Plus Convolution Hypothesis fails.",
+      "page": 10
+    },
+    {
+      "problem": "Min-Witness Convolution",
+      "problem family": "Intermediate Convolution Problems",
+      "bound": "O(n^{4/3-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1.12 (Min-Witness Convolution). Min-Witness Convolution cannot be solved in time \\(O(n^{4/3-\\epsilon})\\) (for any constant \\(\\epsilon>0\\)), unless the Strong Min-Plus Convolution Hypothesis fails.",
+      "page": 10
+    }
+  ],
+  "paper": "2610.10354",
+  "usage": {
+    "prompt_tokens": 59306,
+    "completion_tokens": 10472,
+    "total_tokens": 69778,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9467,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<tbc>used to construct the optimal transfer operators. The diagonalizability of _M_<sup>-1</sup>_A_ was first introduced in \[1\] and is a new assumption in the convergence theory that has no equivalent in the existing HPD theory. This assumption actually refers to the concept of _B_-normal matrices which are the generalization of normal matrices in arbitrary _B_- inner products. We combine this with the existing idea of _B_-orthogonal projections \[2, 35\] to obtain our results. For both of our error operators we state the optimal compatible transfer operators. We discuss the differences of both operators and show that the structure of the first operator allows us to obtain the same convergence results as for the second operator but without any additional assumption on the smoothing matrix _M_<sup>-1</sup>_A_. Our framework not only generalizes all existing results for the HPD theory, it also contains all herein mentioned results for nonsymmetric AMG.<br>
+In section 2 we recall some properties of projections and the concept of _B_-normal matrices. This is followed by the introduction of our two-grid setting in section 3. There, we define the two error propagation operators which we consider, discuss the _B_- orthogonality of the coarse-grid correction and introduce the symmetrized smoother matrices. Here, we already use the assumption of _B_-normality to achieve further results. Finally, in section 4 we prove the convergence of both error propagation matrices, state compatible transfer operators and show the optimality of these transfer operators. In a detailed discussion, we compare the two error operators and their respective assumptions for convergence. This is emphasized by some small theoretical examples that demonstrate the differences of the two error operators.<br>
+Our theoretical framework is continued in \[30\]. There we give sharp bounds for both error operators using _B_-orthogonal projections. We analyze the effect of the number of coarse variables on the norm of the error propagation matrices. Moreover, we extend McCormick’s landmark _V_ -cycle bound to nonsymmetric indefinite problems.
+
+**2. Projections and** _B_**-normal matrices.** In the classical theory for AMG, the matrix _A_ is Hermitian positive definite (HPD) and the _A_-norm is used for any norm based estimate. Now, the matrix _A_ is nonsymmetric and indefinite in the standard inner product. The idea is to consider a different inner product in which we can symmetrize certain operators and matrices. For this purpose, we require the notion of a general _B_-inner product. In the following we always consider an HPD matrix \(B\in\mathbb{C}^{n\times n}\). The _B_-inner product and the induced _B_-(vector-)norm are defined as<tbc>
+
+\(\langle x,y\rangle_B=y^HBx\text{and}\|x\|_B=\sqrt{\langle x,x\rangle_B}.\)
+
+<tbc>Two vectors \(x,y\in\mathbb{C}^n\) are called _B_-orthogonal (or orthogonal in the _B_-inner product) if \(\langle x,y\rangle_B=0\). We then write \(x\perp_By\). We can also define the _B_-(matrix-)norm as operator norm of the _B_-(vector-)norm. For a matrix \(C\in\mathbb{C}^{n\times n}\) the _B_-(matrix-)norm is given by
+
+\(\|C\|_B=sup_{x\neq 0}\frac{\|Cx\|_B}{\|x\|_B}=\|B^\frac{1}{2}CB^{-\frac{1}{2}}\|_2.\)
+
+Furthermore, we denote the range or image of the matrix _C_ by R(_C_) and the kernel of _C_ by N(_C_). One main ingredient for any multigrid method are projections.
+
+Definition 2.1. _A matrix_ \(\Pi\in\mathbb{C}^{n\times n}\) _is called projection if_ \(\Pi^2=\Pi\).
+
+We are specifically interested in the class of _B_-orthogonal projections, see also \[10, Definition 2.3\].
+
+Definition 2.2. _Let_ \(\mathcal{U}\subseteq\mathbb{C}^n\)_. The unique operator_ \(\Pi_{\mathcal{U},\mathcal{U}^{\perp_B}}\) _with_ \(\Pi_{\mathcal{U},\mathcal{U}^{\perp_B}}^2=\Pi_{\mathcal{U},\mathcal{U}^{\perp_B}}\) _and_ \(\mathcal{R}(\Pi_{\mathcal{U},\mathcal{U}^{\perp_B}})=\mathcal{U}\) _and_ \(\mathcal{N}(\Pi_{\mathcal{U},\mathcal{U}^{\perp_B}})=\mathcal{U}^{\perp_B}\) _is called the B-orthogonal projection onto_ U _along_ \(\mathcal{U}^{\perp_B}\).
+

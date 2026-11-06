@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Alternation bound subadditivity for composed sequences",
+      "problem family": "Dynamic Binary Search Trees",
+      "bound": "\\mathsf{Alt}(X) \\le \\mathsf{Alt}(\\widetilde{X}) + \\sum_j \\mathsf{Alt}(X^{(j)}) + O(|X|)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\mathsf{Alt}(X) \\le 4\\cdot\\mathsf{Alt}(\\widetilde{X}) + 8\\cdot\\sum_j \\mathsf{Alt}(X^{(j)}) + O(|X|) [6]",
+      "quote": "\\(\\mathsf{Alt}(X)\\le\\mathsf{Alt}\\big(\\widetilde{X}\\big)+\\sum_j\\mathsf{Alt}\\big(X^{(j)}\\big)+O(|X|)\\)",
+      "page": 4
+    },
+    {
+      "problem": "Funnel bound superadditivity for composed sequences",
+      "problem family": "Dynamic Binary Search Trees",
+      "bound": "\\mathsf{Funnel}(X) \\ge \\mathsf{Funnel}(\\widetilde{X}) + \\sum_j \\mathsf{Funnel}(X^{(j)}) - O(|X|)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\(\\mathsf{Funnel}(X)\\ge\\mathsf{Funnel}\\big(\\widetilde{X}\\big)+\\sum_j\\mathsf{Funnel}\\big(X^{(j)}\\big)-O(|X|)\\)",
+      "page": 4
+    },
+    {
+      "problem": "Hardness amplification of Alternation-Funnel separation",
+      "problem family": "Dynamic Binary Search Trees",
+      "bound": "\\overline{\\text{Alt}}(Y_n^{\\circ R}) \\le O(R), \\overline{\\text{Funnel}}(Y_n^{\\circ R}) \\ge \\Omega\\big(R log\\big(\\frac{log n}{R}\\big)\\big)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "\\overline{\\mathsf{Alt}}(Y) \\le O(1), \\overline{\\mathsf{Funnel}}(Y) \\ge \\Omega(\\log\\log n) [27]",
+      "quote": "\\(\\overline{\\text{Alt}}\\big(Y_n^{\\circ R}\\big)\\le O(R)\\overline{\\text{Funnel}}\\big(Y_n^{\\circ R}\\big)\\ge\\Omega\\big(Rlog\\big(\\frac{logn}{R}\\big)\\big)\\)",
+      "page": 5
+    },
+    {
+      "problem": "Competitive ratio trade-off for Alternation-based BST algorithms",
+      "problem family": "Dynamic Binary Search Trees",
+      "bound": "\\alpha(n) \\ge \\Omega\\big(log\\big(\\frac{log n}{\\beta(n)}\\big)\\big)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then \\(\\alpha(n)\\ge\\Omega\\big(log\\big(\\frac{logn}{\\beta(n)}\\big)\\big)\\).",
+      "page": 5
+    },
+    {
+      "problem": "Competitive ratio lower bound for Alternation-based BST algorithms",
+      "problem family": "Dynamic Binary Search Trees",
+      "bound": "\\alpha(n,s) \\ge \\Omega\\big(\\mathrm{log}\\big(\\frac{\\mathrm{log} n}{s}\\big)\\big)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then \\(\\alpha(n,s)\\ge\\Omega\\big(\\mathrm{log}\\big(\\frac{\\mathrm{log}n}{s}\\big)\\big)\\).",
+      "page": 6
+    }
+  ],
+  "paper": "2411.14387",
+  "usage": {
+    "prompt_tokens": 23304,
+    "completion_tokens": 14805,
+    "total_tokens": 38109,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13984,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

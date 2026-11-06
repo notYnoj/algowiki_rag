@@ -1,0 +1,14 @@
+## Chapter 5
+
+### Inverse source problems for a 2D generalized diffusion equation
+
+Having introduced in the previous chapters the analytical foundations of fractional operators, the spectral framework of matrix sequences, the main classes of structured matrices, and the GLT theory, we now turn to the study of inverse source problems (ISPs) for a two-dimensional generalized diffusion equation. This chapter is based on the work [64], with additional details, examples, and reformulations included for completeness of the thesis presentation. This chapter is devoted to the identification of unknown source coefficients in diffusion equation governed by generalized time- fractional derivative of Caputo-type and nonlocal boundary conditions. Such models arise naturally in the description of anomalous transport processes in heterogeneous and complex media, where memory and spatial nonlocality play a dominant role [93, 114, 76].
+
+We investigate two ISPs based on the given final time and integral observational data and derive explicit series representations of the solutions using a bi-orthogonal system of functions. [71, 72, 13, 59]. Rigorous existence and uniqueness results are established, and both ISPs are shown to be ill-posed in the sense of Hadamard, since small perturbations in the measured data may lead to unbounded reconstruction errors [106]. Special cases of the diffusion equation are obtained by appropriate choices of the memory kernel in the time-fractional derivative, allowing the proposed framework to encompass tempered, multi-term, mono-term, and classical diffusion models within a unified setting [113, 105]. The results presented in this chapter provide a rigorous mathematical foundation for ISPs in generalized FDEs and contribute to a deeper understanding of anomalous transport processes governed by memory dependent and nonlocal dynamics.
+
+The remainder of this chapter is organized as follows. Section 5.2 presents the spectral problem associated with the system (5.5)-(5.8), which forms the analytical foundation for the subsequent inverse analysis. Section 5.3 is devoted to the first inverse source problem, where the existence and uniqueness of the regular solution are established and its ill-posed nature is rigorously demonstrated. Section 5.4 investigates the second inverse source problem, proving the existence and uniqueness of a regular solution and analyzing its inherent instability. Section 5.5 provides several numerical examples that illustrate and validate the theoretical results.
+
+### 5.1 Mathematical formulation and preliminaries
+
+In this section, we introduce the generalized time-fractional derivative of Caputo- type and recall its main analytical properties. We then formulate the two dimensional generalized diffusion equation under consideration, discuss several important special cases of this equation, and define the mathematical formulation of the ISPs.
+

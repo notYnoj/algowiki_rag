@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Online coloring of k-colorable graphs in the random-arrival model",
+      "problem family": "Online graph coloring",
+      "bound": "O(k^3 \\log^2 k \\log^4 n) \\text{ colors in expectation}",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": "\\widetilde{O}(n^{1-\\frac{1}{k-1}}) \\text{ colors } [\\text{Vis92}]",
+      "quote": "Theorem 1. In the random-order model, when both n and k are known in advance, there exists a randomized online algorithm that colors any k-colorable n-vertex graph using O(k^3 log^2 k log^4 n) colors in expectation.",
+      "page": 4
+    },
+    {
+      "problem": "Online coloring for general graphs in the random-arrival model",
+      "problem family": "Online graph coloring",
+      "bound": "\\widetilde{O}(n^{2/3}) \\text{ competitive ratio}",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 2. In the random-order model, when n is known in advance, there exists a randomized online algorithm that attains a competitive ratio of \\widetilde{O}(n^{2/3}).",
+      "page": 4
+    }
+  ],
+  "paper": "2610.23824",
+  "usage": {
+    "prompt_tokens": 18937,
+    "completion_tokens": 4258,
+    "total_tokens": 23195,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3960,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

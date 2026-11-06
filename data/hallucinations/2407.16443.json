@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Alphabetic codes (dyadic distributions)",
+      "problem family": "Alphabetic codes",
+      "bound": "\\mathbb{E}[C]\\le H(\\phi)+1-\\phi_1-\\phi_m",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any dyadic probability distribution \\(\\phi=(\\phi_1,\\dots,\\phi_m)\\) on the symbols \\(s_1\\prec\\cdots\\prec s_m\\), we can construct in linear time an alphabetic code C with \\(\\mathbb{E}[C]\\le H(\\phi)+1-\\phi_1-\\phi_m\\).",
+      "page": 6
+    },
+    {
+      "problem": "Alphabetic codes (non-dyadic, positive endpoints)",
+      "problem family": "Alphabetic codes",
+      "bound": "\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1\\left(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil\\right)-\\phi_m\\left(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil\\right)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "L_{min}\\le H(\\phi)+2-(\\phi_1+\\phi_m+\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})) (Dagan et al., bound (5))",
+      "quote": "For any non-dyadic probability distribution \\(\\phi=(\\phi_1,\\dots,\\phi_m)\\) on the symbols \\(s_1\\prec\\cdots\\prec s_m\\) with \\(\\phi_1,\\phi_m>0\\), we can construct in linear time an alphabetic code C with \\(\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1\\left(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil\\right)-\\phi_m\\left(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil\\right)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})\\)",
+      "page": 7
+    },
+    {
+      "problem": "Alphabetic codes (non-dyadic, zero endpoints allowed)",
+      "problem family": "Alphabetic codes",
+      "bound": "\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_\\ell\\left(2-log_2\\phi_\\ell-\\lceil-log_2\\phi_\\ell\\rceil\\right)-\\phi_k\\left(2-log_2\\phi_k-\\lceil-log_2\\phi_k\\rceil\\right)-\\sum_{i=\\ell}^{k-1}min(\\phi_i,\\phi_{i+1})+\\phi_\\ell+\\phi_k",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any non-dyadic probability distribution \\(\\phi=(\\phi_1,\\dots,\\phi_m)\\) on the symbols \\(s_1\\prec\\cdots\\prec s_m\\), we can construct in linear time an alphabetic code C with \\(\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_\\ell\\left(2-log_2\\phi_\\ell-\\lceil-log_2\\phi_\\ell\\rceil\\right)-\\phi_k\\left(2-log_2\\phi_k-\\lceil-log_2\\phi_k\\rceil\\right)-\\sum_{i=\\ell}^{k-1}min(\\phi_i,\\phi_{i+1})+\\phi_\\ell+\\phi_k\\)",
+      "page": 8
+    },
+    {
+      "problem": "Alphabetic codes (dyadic)",
+      "problem family": "Alphabetic codes",
+      "bound": "\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1\\left(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil\\right)-\\phi_m\\left(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil\\right)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any dyadic probability distribution \\(\\phi=(\\phi_1,\\dots,\\phi_m)\\) on the symbols \\(s_1\\prec\\cdots\\prec s_m\\), we can construct in linear time an alphabetic code C with \\(\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1\\left(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil\\right)-\\phi_m\\left(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil\\right)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})\\)",
+      "page": 9
+    },
+    {
+      "problem": "Alphabetic codes (conditions on first/last two symbols)",
+      "problem family": "Alphabetic codes",
+      "bound": "\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil)-\\phi_m(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})-\\phi_1max(0,\\lceil-log_2\\phi_1\\rceil-\\lceil-log_2\\phi_2\\rceil-2)-\\phi_mmax(0,\\lceil-log_2\\phi_m\\rceil-\\lceil-log_2\\phi_{m-1}\\rceil-2)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "Theorem 3 bound (22)",
+      "quote": "For any probability distribution \\(\\phi=(\\phi_1,\\dots,\\phi_m)\\) on the symbols \\(s_1\\prec\\cdots\\prec s_m\\), with \\(\\phi_1,\\phi_2,\\phi_{m-1},\\phi_m>0\\), we can construct in linear time an alphabetic code C with \\(\\mathbb{E}[C]\\le H(\\phi)+2-\\phi_1(2-log_2\\phi_1-\\lceil-log_2\\phi_1\\rceil)-\\phi_m(2-log_2\\phi_m-\\lceil-log_2\\phi_m\\rceil)-\\sum_{i=1}^{m-1}min(\\phi_i,\\phi_{i+1})-\\phi_1max(0,\\lceil-log_2\\phi_1\\rceil-\\lceil-log_2\\phi_2\\rceil-2)-\\phi_mmax(0,\\lceil-log_2\\phi_m\\rceil-\\lceil-log_2\\phi_{m-1}\\rceil-2)\\)",
+      "page": 10
+    },
+    {
+      "problem": "Binary Search Trees",
+      "problem family": "Binary Search Trees",
+      "bound": "\\mathbb{E}[T]\\le\\mathbb{E}[C]-\\sum_{i=1}^nq_i-\\sum_{i=0}^{n-1}min(p_i,p_{i+1})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let \\(\\sigma=(\\sigma_1,\\dots,\\sigma_{2n+1})=(p_0,q_1,p_1,\\dots,q_n,p_n)\\) be a probability distribution that contains the probabilities \\(q_1,\\dots,q_n\\) and \\(p_0,\\dots,p_n\\) for successful and unsuccessful searches, respectively, on an ordered sequence \\(x_1\\prec\\cdots\\prec x_n\\). Let C be any alphabetic code for \\(\\sigma\\), of average length \\(\\mathbb{E}[C]\\). Then, one can construct in linear time a binary search tree T for \\(\\sigma\\) of cost \\(\\mathbb{E}[T]\\le\\mathbb{E}[C]-\\sum_{i=1}^nq_i-\\sum_{i=0}^{n-1}min(p_i,p_{i+1})\\).",
+      "page": 11
+    },
+    {
+      "problem": "Optimal Binary Search Trees (cost upper bound)",
+      "problem family": "Binary Search Trees",
+      "bound": "H(\\sigma)+2-\\sigma_1-\\sigma_{2n+1}-\\sum_{i=1}^{2n}min(\\sigma_i,\\sigma_{i+1})-\\sum_{i=1}^nq_i-\\sum_{i=0}^{n-1}min(p_i,p_{i+1})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "H(\\sigma)+1+\\sum_{i=0}^np_i (Mehlhorn, bound (8))",
+      "quote": "by using formula (23) of Theorem 3 in formula (36), we get the upper bound \\(H(\\sigma)+2-\\sigma_1-\\sigma_{2n+1}-\\sum_{i=1}^{2n}min(\\sigma_i,\\sigma_{i+1})-\\sum_{i=1}^nq_i-\\sum_{i=0}^{n-1}min(p_i,p_{i+1})\\)",
+      "page": 12
+    }
+  ],
+  "paper": "2407.16443",
+  "usage": {
+    "prompt_tokens": 25638,
+    "completion_tokens": 15662,
+    "total_tokens": 41300,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13362,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,24 @@
+which is the dimension formula of Theorem 2.2 by (B.3). At _d_=1, _N=n_+1 and \(|\mathcal{I}_2|=1+n+\genfrac(){pt}{2}{n}{2}\), so \(m=\frac{(n+1)(n+2)}{2}-\genfrac(){pt}{2}{n}{2}-n-1+1=n+1=N\). For \(d\ge 2\), take the two Gram vectors \(w_1=e_\emptyset-ae_{\{i,j\}}\) and _w_<sub>2</sub>=_e_<sub>{_i_}</sub>-_ae_<sub>{_j_}</sub> of §2. Both are orthogonal to _u_, and they represent the same polynomial (2.6). Hence \(w_1w_1^\top-w_2w_2^\top\) is a nonzero element of \(\mathbb{S}(V)\cap\mathcal{H}_d^\perp=\mathcal{L}\) by (4.3), so \(\mathrm{dim}\mathcal{L}\ge 1\) and _m\>N_. For the final clause, Theorem 3.1 holds here: X_<sub>⋆</sub>_={_X<sub>⋆</sub>_}, S_<sub>⋆</sub>_ is compact (Theorem B.2), and (_X<sub>⋆</sub>,S_<sub>sc</sub>) is an anchor pair. So Theorem C.2 gives \(\mathcal{S}_\star=(S_\mathrm{sc}+\mathcal{L})\cap\mathbb{S}_+(V)\). Since _S_<sub>sc</sub> is positive definite on _V_ , a relative neighborhood of _S_<sub>sc</sub> in _S_<sub>sc</sub>+L stays inside S_<sub>⋆</sub>_. Hence aff S_<sub>⋆</sub>=S_<sub>sc</sub>+L and dimS_<sub>⋆</sub>_=dimL=_m-N_.
+
+Finally, assume strict complementarity. Then S_<sub>⋆</sub>_ is compact and of positive dimension, so its relative boundary is nonempty. Every certificate positive definite on _V_ lies in riS_<sub>⋆</sub>_ (Theorem C.2). Hence every relative-boundary certificate loses rank, as claimed in §2. Without strict complementarity, the positive-dimension conclusion can genuinely fail. The affine set _S_<sub>0</sub>+L through a certificate _S_<sub>0</sub> can meet S<sub>+</sub>(_V_) in the single point _S_<sub>0</sub>, which is then rank-deficient. This is why Theorem 2.2 states the conclusion as a conditional clause.
+
+## C Endpoint Spectral Calculus
+
+### Conventions.
+
+If \(E\subseteq\mathbb{R}^p\) is a subspace with orthogonal projector _P<sub>E</sub>_, then \(\mathbb{S}(E):=\{H\in\mathbb{S}^p:H=P_EHP_E\}\) and \(\mathbb{S}_+(E):=\mathbb{S}(E)\cap\mathbb{S}_+^p\); the complement \(\mathbb{S}(E)^\perp\) is taken in S_<sup>p</sup>_. For a nonempty closed convex set _C_ and \(z\in C\),
+
+\(T_C(z):=\{h:\exists t_k\downarrow 0,z_k\in C,(z_k-z)/t_k\rightarrow h\},N_C(z):=\{h:\langle h,w-z\rangle\le 0\forall w\in C\},\)
+
+and \(N_C(z):=\emptyset\) for \(z\notin C\); ri, rb, aff, and cl denote relative interior, relative boundary, affine hull, and closure. Vectors take the Euclidean norm \(\|\cdot\|_2\), and \(\|\cdot\|_\mathrm{op}\) is the operator norm. Directional derivatives are \(F'(z;h):=\mathrm{lim}_{t\downarrow 0}(F(z+th)-F(z))/t\), positively homogeneous in _h_ but not necessarily linear. For a linear map \(B:E_1\rightarrow E_2\) between Euclidean spaces with \(E_1\neq\{0\}\), set \(\sigma_\mathrm{min}(B):=\mathrm{min}_{\|h\|=1}\| Bh\|\); it is positive if and only if _B_ is injective, and \(|\sigma_\mathrm{min}(B_1)-\sigma_\mathrm{min}(B_2)|\le\|B_1-B_2\|_\mathrm{op}\).
+
+### Blocks.
+
+Throughout, _U_=ran_X_<sub>sc</sub> and _V_=ran_S_<sub>sc</sub> are the fixed spaces of §3.1, with fixed orthonormal bases _B<sub>U</sub>,B<sub>V</sub>_. For \(H\in\mathbb{S}^p\) we write \(H_{UU}:=B_U^\top HB_U\), \(H_{UV}:=B_U^\top HB_V\), \(H_{VV}:=B_V^\top HB_V\); a statement such as "_H<sub>VV</sub>_=0" means _P<sub>V</sub>HP<sub>V</sub>_=0 and does not depend on the bases. For a matrix _A_ supported on _U_ we also write _A|<sub>U</sub>_:=_A<sub>UU</sub>_, and for one supported on _V_ we write _A|<sub>V</sub>_:=_A<sub>VV</sub>_. Thus \(\lambda_\mathrm{min}(X_\mathrm{sc}|_U)\) is the smallest eigenvalue of the _UU_ block of _X_<sub>sc</sub>. For an endpoint \(\bar{Z}=\bar{X}-\sigma\bar{S}\) the moving spaces are \(K_\bar{X}=\mathrm{ker}\bar{X}\cap U\) and \(K_\bar{S}=\mathrm{ker}\bar{S}\cap V\) , so that \(U=\mathrm{ran}\bar{X}\oplus K_\bar{X}\) and \(V=K_\bar{S}\oplus\mathrm{ran}\bar{S}\). (In the block notation of \[KY26b\], these four spaces are \(\alpha_+,\alpha_0^\mathrm{P},\alpha_0^\mathrm{D},\alpha_-.\))
+
+### C.1 The DR encoding and the optimal product
+
+**Lemma C.1** (DR and KKT encoding)**.** \(T_{\sigma,1}\) _is the Douglas-Rachford map_ \(Z\mapsto Z+\mathrm{prox}_{\sigma F}(2\Pi_+(Z)-Z)-\Pi_+(Z)\) _for_ \(F(X)=\langle C,X\rangle+\iota_{\{\mathcal{A}X=b\}}(X)\) _and_ \(G=\iota_{\mathbb{S}_+^p}\)_; each step applies the PSD projection_ \(\Pi_+=\mathrm{prox}_{\sigma G}\) _first and the affine proximal map_ \(\mathrm{prox}_{\sigma F}\) _second. Its fixed points are exactly the matrices_ \(X-\sigma S\) _with_ (_X,S_) _a KKT pair, decoded via_ \(X=\Pi_+(Z)\), \(S=-\sigma^{-1}\Pi_-(Z)\).
+
+_Proof of Theorem C.1._ The affine proximal map is \(\mathrm{prox}_{\sigma F}(W)=X_b+\mathsf{P}^\perp(W-\sigma C)\). Substituting it into \(Z^+=Z+\mathrm{prox}_{\sigma F}(2\Pi_+(Z)-Z)-\Pi_+(Z)\) gives (3.2); this is the standard DR construction \[EB92, BC17\]. The Moreau decomposition of _Z_ gives \(X:=\Pi_+(Z)\unknown 0\), \(S:=-\sigma^{-1}\Pi_-(Z)\unknown 0\), and _XS_=0.<tbc>
+

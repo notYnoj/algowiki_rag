@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "minimum balanced element cut (vertex and edge separators)",
+      "problem family": "balanced separators",
+      "bound": "O(OPT_c \\cdot \\sqrt{(\\log n)/\\varepsilon})\\)-approximation in O(n^\\varepsilon m^{1+o(1)}) time",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(\\sqrt{\\log n}) best-known polynomial-time approximation ratio via O(n) large SDP solves [18, 1]; O(OPT\\sqrt{(\\log n)/\\varepsilon}) in O(n^{1+O(\\varepsilon)} m^{1+o(1)}) max-flows [28]",
+      "quote": "we give a (Monte-Carlo randomized) algorithm running in \\(O(n^\\varepsilon m^{1+o(1)})\\) time that produces a \\(\\Theta(1)\\)-balanced element cut of size \\(O(OPT_c\\cdot\\sqrt{(logn)/\\varepsilon})\\) for any value \\(\\varepsilon\\in[\\Theta(1/log(n)),\\Theta(1)]\\).",
+      "page": 1
+    },
+    {
+      "problem": "balanced vertex separator and balanced edge separator",
+      "problem family": "balanced separators",
+      "bound": "O(\\sqrt{\\log n})\\)-approximation in O(m^{1+\\varepsilon}) time for any fixed \\varepsilon>0",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(\\sqrt{\\log n}) best-known ratio but via slow SDP-based algorithms requiring O(n) large SDP solves [18, 1]",
+      "quote": "Taking any fixed \\(\\varepsilon>0\\), we obtain \\(O(\\sqrt{logn})\\)-approximation in \\(O(m^{1+\\varepsilon})\\) time. This approximation factor is the best known for both vertex- and edge balanced separators.",
+      "page": 3
+    },
+    {
+      "problem": "minimum balanced element cut on graphs with padding bound",
+      "problem family": "balanced separators / padding bound",
+      "bound": "O(OPT_c \\cdot \\sqrt{\\beta}/\\varepsilon)\\)-approximation in m^{1+o(1)} n^\\varepsilon \\text{polylog}(n) time (O(\\sqrt{\\beta}) approximation in O(m^{1+\\varepsilon}) time for fixed \\varepsilon>0)",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(\\beta)\\)-approximation via standard polynomial-time LP-based approach (e.g., O(\\log h) for K_h-minor-free graphs [11])",
+      "quote": "In particular, by taking any fixed \\(\\varepsilon>0\\) we obtain an \\(O(\\sqrt{\\beta})\\) approximation in \\(O(m^{1+\\varepsilon})\\) time.",
+      "page": 3
+    },
+    {
+      "problem": "balanced vertex separator",
+      "problem family": "balanced separators",
+      "bound": "O(\\log n)\\)-approximation in O(T_{maxflow}(m,m) \\cdot \\text{polylog}(n)) time",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(\\log n) approximation via \\widetilde{O}(m^{1.5}) strongly-polynomial max-flows [3] or O(n) large LP solves [30, 31]",
+      "quote": "Taking \\(\\varepsilon=\\Theta(1/logn)\\), we obtain an \\(O(logn)\\)-approximation in \\(O(T_{maxflow}(m,m)\\cdot\\text{polylog}(n))\\) time.",
+      "page": 3
+    }
+  ],
+  "paper": "2603.15782",
+  "usage": {
+    "prompt_tokens": 28990,
+    "completion_tokens": 12772,
+    "total_tokens": 41762,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11928,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

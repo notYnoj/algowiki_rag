@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Perturbed SPD linear systems",
+      "problem family": null,
+      "bound": "\\left\\|x^*(t)-x_{\\ell+1}^{[P]}(t)\\right\\|_{A(t)}^2\\le\\frac{\\alpha(t,\\theta)^2}{\\theta^2}\\left\\|x^*(t)-x_\\ell^{[\\mathrm{D}]}(t)\\right\\|_{A(t)}^2+\\left(\\gamma_1q_k^{2\\ell}+\\gamma_2\\ell q_k^{2\\ell-1}\\right)t^2",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\left\\|x^*(t)-x_{\\ell+1}^{[P]}(t)\\right\\|_{A(t)}^2\\le\\frac{\\alpha(t,\\theta)^2}{\\theta^2}\\left\\|x^*(t)-x_\\ell^{[\\mathrm{D}]}(t)\\right\\|_{A(t)}^2+\\left(\\gamma_1q_k^{2\\ell}+\\gamma_2\\ell q_k^{2\\ell-1}\\right)t^2,",
+      "page": 13
+    },
+    {
+      "problem": "Perturbed SPD linear systems",
+      "problem family": null,
+      "bound": "\\alpha(t,\\lambda_k)/\\lambda_k<1 \\text{ and } \\alpha(t,\\theta_m)/\\theta_m<\\alpha(t,\\lambda_k)/\\lambda_k<1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, for sufficiently small \\(t\\ge 0\\), the bound (3.26) holds with \\(\\theta=\\lambda_k\\) and its leading factor is contractive, i.e., \\(\\alpha(t,\\lambda_k)/\\lambda_k<1\\).",
+      "page": 15
+    }
+  ],
+  "paper": "2610.28808",
+  "usage": {
+    "prompt_tokens": 23243,
+    "completion_tokens": 8491,
+    "total_tokens": 31734,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8041,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

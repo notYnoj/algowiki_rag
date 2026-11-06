@@ -1,0 +1,151 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Tree Edit Distance (weighted)",
+      "problem family": null,
+      "bound": "n^3/2^{\\Omega(\\sqrt{\\log n})}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^3)",
+      "quote": "Let F,F' be forests. Then, there is an algorithm for TED running in time n^3/2^{\\Omega(\\sqrt{logn})}, where n=max(|F|,|F'|).",
+      "page": 4
+    },
+    {
+      "problem": "Tree Edit Distance (unweighted)",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(n^{(3+\\omega)/2})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^{2.9148})",
+      "quote": "We also resolve Question 3 by providing an \\tilde{\\mathcal{O}}(n^{(3+\\omega)/2}) time algorithm for unweighted TED.",
+      "page": 5
+    },
+    {
+      "problem": "Tree Edit Distance (weighted, unbalanced forests)",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}\\left((n/m)^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MUL}(m)+m^{2+o(1)}\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Main Theorem 1. Let F,F' be forests of size n=|F|,m=|F'| with n>=m. Then, there is an algorithm computing Tree Edit Distance between F,F' in time \\tilde{\\mathcal{O}}\\left((n/m)^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MUL}(m)+m^{2+o(1)}\\right)\\right).",
+      "page": 4
+    },
+    {
+      "problem": "Tree Edit Distance (unweighted, unbalanced forests)",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}\\left((n/m)^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(m)+m^{2+o(1)}g(m)\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Main Theorem 2. Let F,F' be two forests of size n=|F|,m=|F'| with n>=m. Suppose that T_{MonMUL}(N,N,N,D)=O(f(N)g(D)). Then, there is an algorithm computing Unweighted Tree Edit Distance between F,F' in time \\tilde{\\mathcal{O}}\\left((n/m)^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(m)+m^{2+o(1)}g(m)\\right)\\right).",
+      "page": 5
+    },
+    {
+      "problem": "Tree Edit Distance (unweighted)",
+      "problem family": null,
+      "bound": "n^{1+o(1)}m^{(1+\\omega)/2}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Corollary 1.2. There is an algorithm for Unweighted TED running in time n^{1+o(1)}m^{(1+\\omega)/2}, where n=max(|F|,|F'|),m=min(|F|,|F'|).",
+      "page": 5
+    },
+    {
+      "problem": "Forest Edit Distance (weighted)",
+      "problem family": null,
+      "bound": "O(T_{MUL}(n)+n^{2+o(1)})",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Main Theorem 4. Suppose there exists an algorithm computing the min-plus product of two m×m matrices in time T_MUL(m). Then, there is an algorithm for FED running in time O(T_MUL(n)+n^{2+o(1)}), where n=max(|F|,|F'|).",
+      "page": 27
+    },
+    {
+      "problem": "Forest Edit Distance (unweighted)",
+      "problem family": null,
+      "bound": "O(T_{MonMUL}(n)+n^{2+o(1)}g(n))",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.1. There is an O(T_{MonMUL}(n)+n^{2+o(1)}g(n)) time algorithm for unweighted FED where n=max(|F|,|F'|) and T_{MonMUL}(n,n,n,D)=O(f(n)g(D)) for some functions f,g.",
+      "page": 22
+    },
+    {
+      "problem": "Spine Edit Distance (weighted)",
+      "problem family": null,
+      "bound": "O(T_{MUL}(n)+n^{2+o(1)})",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Main Theorem 3. Suppose there exists an algorithm computing the min-plus product of two m×m matrices in time T_MUL(m). Then, there is an algorithm for SED running in time O(T_MUL(n)+n^{2+o(1)}), where n=max(|F|,|F'|).",
+      "page": 36
+    },
+    {
+      "problem": "Spine Edit Distance (unweighted)",
+      "problem family": null,
+      "bound": "O(T_{MonMUL}(n)+n^{2+o(1)}g(n))",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 5.6. There is an algorithm for unweighted SED running in time O(T_{MonMUL}(n)+n^{2+o(1)}g(n)), where n=max(|F|,|F'|) and T_{MonMUL}(m,m,m,D)=O(f(m)g(D)).",
+      "page": 36
+    },
+    {
+      "problem": "Unbalanced Forest Edit Distance (weighted)",
+      "problem family": null,
+      "bound": "(n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MUL}(n')+n'^{2+o(1)}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.15. There is an algorithm for UFED running in time (n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MUL}(n')+n'^{2+o(1)}\\right) where |F|=n, |F'|=n' and n>=n'.",
+      "page": 33
+    },
+    {
+      "problem": "Unbalanced Forest Edit Distance (unweighted)",
+      "problem family": null,
+      "bound": "(n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(n')+n'^{2+o(1)}g(n')\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2.3. There is an algorithm for unweighted UFED running in time (n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(n')+n'^{2+o(1)}g(n')\\right) where n=|F|, n'=|F'|, n>=n' and T_{MonMUL}(n',n',n',D)=O(f(n')g(D)) for some functions f, g.",
+      "page": 33
+    },
+    {
+      "problem": "Spine Edit Distance (weighted, unbalanced)",
+      "problem family": null,
+      "bound": "(n/n')^{1+o(1)}\\cdot\\big(\\mathsf{T}_{MUL}(n')+n'^{2+o(1)}\\big)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 5.18. There is an (n/n')^{1+o(1)}\\cdot\\big(\\mathsf{T}_{MUL}(n')+n'^{2+o(1)}\\big) time algorithm for SED, where n=|F|, n'=|F'| and n>=n'.",
+      "page": 54
+    },
+    {
+      "problem": "Spine Edit Distance (unweighted, unbalanced)",
+      "problem family": null,
+      "bound": "(n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(n')+n'^{2+o(1)}g(n')\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2.2. There is an (n/n')^{1+o(1)}\\cdot\\left(\\mathsf{T}_{MonMUL}(n')+n'^{2+o(1)}g(n')\\right) algorithm for unweighted SED, where n=|F|,n'=|F'|, n>=n', and T_{MonMUL}(n',n',n',D)=O(f(n')g(D)) for some functions f, g.",
+      "page": 55
+    }
+  ],
+  "paper": "2411.06502",
+  "usage": {
+    "prompt_tokens": 76007,
+    "completion_tokens": 13971,
+    "total_tokens": 89978,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11833,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

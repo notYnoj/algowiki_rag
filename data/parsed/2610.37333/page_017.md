@@ -1,0 +1,2 @@
+Alternatively, forward-mode AD propagates tangents through the discrete computational graph of the adaptive integration loop, which `diff-soup` implements as a `lax.while` loop \[69\] as shown in Figure 2. The tangent \(\dot{y}_n=\frac{\partial y_n}{\partial\theta}\dot{\theta}\in\mathbb{R}^n\) is defined as the directional derivative of the accepted state along a seed direction \(\dot{\theta}\in\mathbb{R}^{n_\theta}\), and forward mode advances one tangent per<tbc>
+

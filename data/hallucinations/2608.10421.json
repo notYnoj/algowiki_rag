@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "adaptive sorting",
+      "problem family": "sorting",
+      "bound": "$nH + 3n$ comparisons",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$nH + 3n$ comparisons (Powersort and Peeksort)",
+      "quote": "Directional mergesort sorts an array of size n with run-based entropy H using no more than nH+3n comparisons and 1.5nH+5n element moves. Excluding the merge buffer of size ⌈n/2⌉, the algorithm uses O(lg n) auxiliary words.",
+      "page": 8
+    },
+    {
+      "problem": "adaptive sorting",
+      "problem family": "sorting",
+      "bound": "$1.5nH + 5n$ moves",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Directional mergesort sorts an array of size n with run-based entropy H using no more than nH+3n comparisons and 1.5nH+5n element moves. Excluding the merge buffer of size ⌈n/2⌉, the algorithm uses O(lg n) auxiliary words.",
+      "page": 8
+    },
+    {
+      "problem": "adaptive sorting",
+      "problem family": "sorting",
+      "bound": "$nH + 3n - r\\#$ comparisons",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$nH + 3n - 2r\\#$ comparisons (Peeksort)",
+      "quote": "Directional mergesort++ sorts an array of size n containing r# runs in at most nH+3n-r# comparisons (where H is defined for both non-decreasing and decreasing runs).",
+      "page": 18
+    },
+    {
+      "problem": "adaptive sorting",
+      "problem family": "sorting",
+      "bound": "$1.5nH + 6.5n$ moves",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Directional Mergesort++ sorts an array of size n with run-based entropy H (defined for both non-decreasing and decreasing runs) using no more than nH+3n comparisons and 1.5nH+6.5n moves. Excluding the merge buffer of size ⌈n/2⌉, the algorithm uses O(1) auxiliary words.",
+      "page": 15
+    },
+    {
+      "problem": "adaptive sorting",
+      "problem family": "sorting",
+      "bound": "$O(1)$ auxiliary words",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "$O(\\lg n)$ words (Powersort, Peeksort, Timsort)",
+      "quote": "Directional Mergesort++ sorts an array of size n with run-based entropy H (defined for both non-decreasing and decreasing runs) using no more than nH+3n comparisons and 1.5nH+6.5n moves. Excluding the merge buffer of size ⌈n/2⌉, the algorithm uses O(1) auxiliary words.",
+      "page": 15
+    }
+  ],
+  "paper": "2608.10421",
+  "usage": {
+    "prompt_tokens": 18783,
+    "completion_tokens": 12838,
+    "total_tokens": 31621,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12117,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,18 @@
+iii. Rooting the sub-sub-tree at 2: while it leaves {3,4,6} in the same connected component, 3 has zero-weight and therefore can be pushed down, so the root in this sub-component would be 6 followed by 4 as its child. Overall, the best weighted depth in this case is \(w\cdot[3,2,5,4,1,3,0]=9+4+0+8+3+9+0=33\).
+
+**Remark 2.3.** In the proof of Theorem 2.2 we found that \(OPT(U,w)\le 29.5\) compared to the best feasible STT that gives 30. This shows an integrality gap of \(\frac{60}{59}\). (This gap is the same if we solve for _f_ instead of _w_, since the scaling cancels out.)
+
+## 2.2 Counter Examples: A General Discussion and the Normals Method
+
+In Section 2.1 we gave a very specific "out of the blue" example. Now we give a broader context on how we found it and how to find others using what we call the _Normals Method_. Consider a fixed tree topology _U_. There are _N_ STTs over it, each inducing a different LP depths-vector, and all together span a convex polytope P in depth-space, that is, considering only _D_ out of (_X,Z,D_). Because we have a minimization problem over the depths, and because all the weights are nonnegative, we define and work with the polytope \(\mathbb{P}'=\{A|\exists P\in\mathbb{P}:\forall i:A_i\ge P_i\}\).<sup>4</sup> Loosely speaking \(\mathbb{P}'\) is the set of points dominated by P with respect to minimization.
+
+Note that P and \(\mathbb{P}'\) have the same vertices, because every vertex has a direction in which it uniquely minimizes the objective (See Theorem 3.6) so none is dominated by others. However, by trading the finite P with the infinite \(\mathbb{P}'\) we removed every facet that was dominated be a vertex. See Figure 4(a) versus 4(b).
+
+Given the _N_ known vertices induced by STTs, we can compute the facets of \(\mathbb{P}'\), and solve the LP in the direction of the normal to each facet. If the facet is "true", then the solution would yield an optimum whose value is equal to the value of each of the STTs that span this facet. However, if the facet is "false", because it "shaves off" vertices that we ignored, then we will find a solution<tbc>
+
+<sup>4</sup>\(\mathbb{P}'\) is the Minkowski sum of P with the positive orthant.
+
+\(\includegraphics{}\text{(a) Bounded polytope P}\) (b) Infinite polytope \(\mathbb{P}'\) (c) False facets (d) Iterative discovery
+
+Figure 4: A 2-Dimensional illustration of the _Normals Method_ described in Section 2.2. (a) Shows 3 vertices which are (conceptually) due to STTs, that span a bounded red triangle, P. Purple vertices denote additional (non- STT) vertices that we are unaware of, at this point. (b) shows the relaxed polytope \(\mathbb{P}'\), of all points _A_ such that \(\exists P\in\mathbb{P}:\forall i:P_i\le A_i\). \(\mathbb{P}'\) has the same vertices as _P_, but only the facets of the lower-envelope of P, as in this example. \(\mathbb{P}'\) may gain axes-parallel facets. (c) We solve the LP in directions according to each normal vector _f<sup>i</sup>_ to one of the facets of \(\mathbb{P}'\). On a "true" facet the LP solution will not be better than expected, as for _f_<sup>1</sup> and _f_<sup>4</sup> in this illustration. However, if the facet is "false", the LP solution would be strictly better, revealing a new purple vertex, as for _f_<sup>2</sup> and _f_<sup>3</sup>. Multiple normals may reveal the same vertex but only in 3 dimensions and higher, see also Figure 5. By scanning all the facets of \(\mathbb{P}'\) we determine if there are non-STT vertices, or not. (d) If we found new vertices, we can re-define the polytope and re-apply the method to search additional vertices as exemplified by the normal _f_<sup>5</sup>.
+

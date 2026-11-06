@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "(2,0)-Approximate APSP",
+      "problem family": "Multiplicative Approximation on Unweighted Graphs",
+      "bound": "\\tilde{O}(n^{2.03184039})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{O}(n^{2.25}) (Roditty)",
+      "quote": "Theorem 3.1. Let G be an undirected, unweighted graph with n vertices. Algorithm 1 computes a (2,0)-approximate APSP solution in expected time \\tilde{O}\\left(n^{2.03184039}\\right).",
+      "page": 5
+    },
+    {
+      "problem": "(2,0)-Approximate APSP",
+      "problem family": "Multiplicative Approximation on Unweighted Graphs",
+      "bound": "\\tilde{O}(n^{2.07203166})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\tilde{O}(n^{2.25}) (Roditty)",
+      "quote": "Theorem 3.3. Let G be an undirected, unweighted graph with n vertices. Algorithm 3 determinis tically computes a (2,0)-approximate APSP solution in time \\tilde{O}(n^{2.07203166}).",
+      "page": 5
+    },
+    {
+      "problem": "(2,0)-Multiplicative Approximation for \\delta(u,v)\\ge k",
+      "problem family": "Multiplicative Approximations for Long Paths",
+      "bound": "\\tilde{O}\\left(min\\left(n^{2-\\frac{2}{k+4}}m^{\\frac{2}{k+4}},n^{2+\\frac{1}{2(k-1)}},n^{2+\\frac{2}{3k+2}}\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{O}\\left(min\\left(n^{2-\\frac{2}{k+4}}m^{\\frac{2}{k+4}},n^{2+\\frac{2}{3k-2}}\\right)\\right) (Roditty)",
+      "quote": "Theorem 1.1 (Stated as Corollary E.11). Let $k\\ge 4$ be an even integer. Then, we can compute a (2,0)-approximation for distances $\\delta(u,v)\\ge k$ combinatorially in expected time $\\tilde{O}\\left(min\\left(n^{2-\\frac{2}{k+4}}m^{\\frac{2}{k+4}},n^{2+\\frac{1}{2(k-1)}},n^{2+\\frac{2}{3k+2}}\\right)\\right)$",
+      "page": 5
+    },
+    {
+      "problem": "(2,0)-Multiplicative Approximation for \\delta(u,v)\\ge k (with FMM)",
+      "problem family": "Multiplicative Approximations for Long Paths",
+      "bound": "\\tilde{O}(n^{2+\\frac{x}{l-k+2}})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{O}(n^{2+\\frac{1}{2(k-1)}}) (Theorem 4.1)",
+      "quote": "Theorem 4.2. Let $k\\ge 4$ be an even integer. Algorithm 4 computes a (2,0) approximation for all paths of length $\\delta(u,v)\\ge k$ in expected time $\\tilde{O}(n^{2+\\frac{x}{l-k+2}})$ where x,l are chosen to minimize, $max\\left(\\omega\\left(1-\\frac{k-2}{2(l-k+2)}x,1-x,1-\\frac{k-4}{2(l-k+2)}x\\right),2+\\frac{x}{l-k+2},1.5+x\\right)$",
+      "page": 27
+    },
+    {
+      "problem": "+\\beta-Additive Approximation",
+      "problem family": "Additive Approximation",
+      "bound": "\\tilde{O}\\left(n^{2+\\frac{2x}{\\beta+2}}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "\\tilde{O}(n^{2+\\frac{2}{3\\beta-2}}) (Dor et al.)",
+      "quote": "Theorem 5.6. Let $\\beta\\ge 4$ be an even integer. Let G be an undirected, unweighted graph with n vertices. Algorithm 6 computes $\\hat{\\delta}$ such that $\\delta(u,v)\\le\\hat{\\delta}(u,v)\\le\\delta(u,v)+\\beta$ for all $u,v\\in V$ in time, $\\tilde{O}\\left(n^{2+\\frac{2x}{\\beta+2}}\\right)$ where x is the solution to, $\\omega\\left(1-\\frac{\\beta-2}{\\beta+2}x,1-x,1-\\frac{\\beta-4}{\\beta+2}x\\right)=1+\\frac{4+2\\beta}{\\beta+2}x$.",
+      "page": 6
+    },
+    {
+      "problem": "(1+\\varepsilon, 2w_{u,v}) Approximation",
+      "problem family": "Weighted Approximation",
+      "bound": "\\tilde{O}\\left(\\frac{n^{2.15195331}}{\\varepsilon}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "n^{2.24} (Berman and Kasiviswanathan)",
+      "quote": "Theorem 6.2. Let $\\varepsilon>0$. Let G be an undirected, weighted graph with n vertices and weight function $w:E\\rightarrow\\mathbb{R}^+$. Algorithm 8 computes $\\hat{\\delta}$ in time, $\\tilde{O}\\left(\\frac{n^{2.15195331}}{\\varepsilon}\\right)$ such that $\\delta(u,v)\\le\\hat{\\delta}(u,v)\\le(1+\\varepsilon)\\delta(u,v)+2w_{u,v}$.",
+      "page": 48
+    },
+    {
+      "problem": "(1+\\varepsilon, 2w_{u,v}(\\beta)) Approximation",
+      "problem family": "Weighted Approximation",
+      "bound": "\\tilde{O}\\left(\\frac{n^{2+\\frac{x}{\\beta+1}}}{\\varepsilon}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "\\tilde{O}(n^{2+\\frac{2}{3\\beta-2}}) (Dor et al.)",
+      "quote": "Theorem 6.3. Let $\\beta\\ge 2$ be an integer and $\\varepsilon>0$. Let G be an undirected, unweighted graph with n vertices. Algorithm 9 computes $\\hat{\\delta}$ such that $\\delta(u,v)\\le\\hat{\\delta}(u,v)\\le(1+\\varepsilon)\\delta(u,v)+2w_{u,v}(\\beta)$ in time $\\tilde{O}\\left(\\frac{n^{2+}\\frac{x}{\\beta+1}}{\\varepsilon}\\right)$ where x is the solution to, $\\omega\\left(1-\\frac{\\beta-1}{\\beta+1}x,1-x,1-\\frac{\\beta-2}{\\beta+1}x\\right)=2+\\frac{x}{\\beta+1}$.",
+      "page": 7
+    },
+    {
+      "problem": "(\\alpha,\\beta)-Approximate APSP",
+      "problem family": "(\\alpha,\\beta)-Approximate APSP",
+      "bound": "\\tilde{O}(T(\\gamma))",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 7.1. Let $\\beta\\ge 2$ and $1<\\alpha<2$. Let $T(\\gamma)$ denote the running time of Algorithm 7 when given approximation parameter $\\gamma$. Then, Algorithm 10 produces a $(\\alpha,\\beta)$-approximate $\\hat{\\delta}$ such that for all u,v, $\\delta(u,v)\\le\\hat{\\delta}(u,v)\\le\\alpha\\delta(u,v)+\\beta$ in time $\\tilde{O}\\left(T(\\gamma)\\right)$ where $\\gamma$ is the largest even integer satisfying, $\\gamma\\le 1+\\frac{\\beta-1}{2-\\alpha}$",
+      "page": 55
+    },
+    {
+      "problem": "(\\alpha, 2w_{u,v}(\\beta))-Approximation",
+      "problem family": "(\\alpha,\\beta)-Approximate APSP",
+      "bound": "T(\\gamma)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 7.4. Let $1\\le\\alpha<3$ and $\\beta\\ge 1$ be an integer. Let $T(\\gamma)$ be the running time of Theorem 6.3 when asked to produce a $(1+\\varepsilon,2w_{u,v}(\\gamma))$ approximation. Let $\\gamma=\\left\\lceil\\frac{\\alpha(\\beta+1)+(\\beta-1)}{2}\\right\\rceil-1$. Then, Algorithm 9 produces an $(\\alpha,2w_{u,v}(\\beta))$-approximation in time $T(\\gamma)$.",
+      "page": 57
+    },
+    {
+      "problem": "(\\frac{7}{3},0)-Approximate APSP",
+      "problem family": "(\\alpha,\\beta)-Approximate APSP",
+      "bound": "\\tilde{O}(n^2)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Corollary D.2. There is an $\\tilde{O}(n^2)$-time algorithm that computes a $\\left(\\frac{7}{3},0\\right)$-approximate APSP solution in undirected, unweighted graphs.",
+      "page": 72
+    }
+  ],
+  "paper": "2309.13225",
+  "usage": {
+    "prompt_tokens": 93551,
+    "completion_tokens": 11649,
+    "total_tokens": 105200,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9321,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

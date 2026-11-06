@@ -1,0 +1,16 @@
+<tbc>we use a second layer of randomization on edges of _G_<sub>1</sub>, and independently color each edge with 1 or 2. This separates edges that belong to \(\mu\triangle\eta\) (say colored 1) from those that do not belong to \(\mu\triangle\eta\). Now for each component of _G_<sub>1</sub>, we look at the edges that have been colored 1, and compute the number of blocking edges, the increase in size and increase in the symmetric difference, if we modify using the \(\mu\)-alternating paths/cycle that are present in this component. This leads to an instance of the Two-Dimensional Knapsack (2D-KP) problem, which we solve in polynomial time using a known pseudo-polynomial time algorithm for the 2D-KP problem \[17\]. We derandomize this algorithm using the notion of an _n-p-q-lopsided universal_ family \[13\].
+
+**Related Work:** We present here some variants of the Stable Marriage problem which are closely related to our model. For some other variants of the problem, we refer the reader to \[7,21,15,19\].
+
+In the past, the notion of "almost stability" is defined for the Stable Roommate problem \[1\]. In the Stable Roommate problem, the goal is to find a stable matching in an arbitrary graph. As opposed to Stable Marriage, in which the graphs is a bipartite graph, an instance of Stable Roommate might not admit a stable matching. Therefore, the notion of almost stability is defined for the Stable Roommate problem, in which the goal is to find a matching with a minimum number of blocking edges. This problem is known as the Almost Stable Roommate problem. Abraham et al. \[1\] proved that the Almost Stable Roommate problem is NP-hard. Biro et al. \[4\] proved that the problem remains NP-hard even for constant-sized preference lists and studied it in the realm of approximation algorithms. Chen et al. \[6\] studied this problem in the realm of parameterized complexity and showed that the problem is W\[1\]-hard with respect to the number of blocking edges even when the maximum length of every preference list is five.
+
+Later in 2010, Biró et al. \[3\] considered the problem of finding, among all matchings of the maximum size, one that has the fewest blocking edges, in a bipartite graph and showed that the problem is NP-hard and not approximable within \(n^{1-\epsilon}\), for any \(\epsilon>0\) unless P=NP.
+
+The problem of finding the maximum sized stable matching in the presence of ties and incomplete preference lists, maxSMTI, has striking resemblance with ASM. In maxSMTI, the decision of resolving each tie comes down to deciding who should be at the top of each of tied lists, mirrors the choice we have to make in ASM in rematching the vertices who will be part of a blocking edge in the new matching. Despite this similarity, the W\[1\]-hardness result presented in \[28, Theorem 2\] does not yield the hardness result of ASM and LS-ASM as the reduction is not likely to be parameteric in terms of _k+t_ and _k+t+q_, or have the degree bounded by a constant.
+
+### 2 Preliminaries
+
+#### Sets.
+
+We denote the set of natural numbers \(\{1,\dots,\ell\}\) by \([\ell]\). For two sets _X_ and _Y_ , we use notation \(X\triangle Y\) to denote the symmetric difference between _X_ and _Y_ .
+

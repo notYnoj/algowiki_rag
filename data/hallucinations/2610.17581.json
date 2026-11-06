@@ -1,0 +1,171 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Densest Subgraph (weighted)",
+      "problem family": "heavy subgraph problems",
+      "bound": "(1+\\varepsilon)-approximation in O(n log^2 n / \\varepsilon^2) cut queries",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 3.4. Let _G_=(_V,E_) be a weighted graph. There is a randomized algorithm that makes \\(O(nlog^2n/\\varepsilon^2)\\) cut queries and returns a \\((1+\\varepsilon)\\)-approximation to the densest subgraph of _G_.",
+      "page": 8
+    },
+    {
+      "problem": "Densest Subgraph",
+      "problem family": "heavy subgraph problems",
+      "bound": "\\Omega(n/\\log n) queries for a (2-\\delta)-approximation",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Lemma 3.5. The randomized query complexity of a \\((2-\\delta)\\)-approximation for DSG is \\(\\Omega(n/logn)\\), for any \\(\\delta>0\\).",
+      "page": 9
+    },
+    {
+      "problem": "Max Cut (weighted)",
+      "problem family": "heavy subgraph problems",
+      "bound": "(1+\\varepsilon)-approximation in O(n log^2 n / \\varepsilon^2) cut queries",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n log^3 n (\\log n + 1/\\varepsilon^2)) queries by Plevrakis et al. [ICALP ’18]",
+      "quote": "Corollary 3.6. Let _G_=(_V,E_) be a weighted graph. There is a randomized algorithm that makes \\(O(nlog^2n/\\varepsilon^2)\\) cut queries and returns a \\((1+\\varepsilon)\\)-approximation to the maximum cut of _G_.",
+      "page": 3
+    },
+    {
+      "problem": "Densest Subhypergraph (weighted, rank-r)",
+      "problem family": "heavy subgraph problems",
+      "bound": "(1+\\varepsilon)-approximation in O(n r log n / \\varepsilon^2) cut and edge queries",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 3.7. Let _H_=(_V,E_) be a weighted hypergraph, with rank _r_ unknown. There is a randomized algorithm that makes \\(O(nrlogn/\\varepsilon^2)\\) cut and edge queries and returns a \\((1+\\varepsilon)\\)- approximation to the densest subhypergraph of _H_.",
+      "page": 10
+    },
+    {
+      "problem": "Densest Subhypergraph",
+      "problem family": null,
+      "bound": "No o(\\sqrt{n}/(1+p^{-1}))-approximation with cut queries alone with probability at least p",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 4.1. With only cut access to a hypergraph, it is impossible to obtain an \\(o(\\sqrt{n}/(1+p^{-1}))\\)-approximation for DSH with probability at least _p_.",
+      "page": 11
+    },
+    {
+      "problem": "Densest k-Subhypergraph",
+      "problem family": null,
+      "bound": "No approximation with cut queries alone with probability greater than 3/n",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 4.2. With only cut access to a hypergraph, it is impossible to obtain any approximation for D_kSH with probability greater than 3_/n_.",
+      "page": 11
+    },
+    {
+      "problem": "Densest k-Subhypergraph",
+      "problem family": null,
+      "bound": "No approximation with edge queries making t queries with probability greater than (1+2t)/2^{n/2}",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 4.3. With only edge access to a hypergraph, it is impossible for an algorithm making _t_ queries to obtain any approximation for D_kSH with probability greater than \\(\\frac{1+2t}{2^{n/2}}\\).",
+      "page": 13
+    },
+    {
+      "problem": "Densest k-Subhypergraph (rank-r)",
+      "problem family": null,
+      "bound": "Deterministic cut query complexity at least \\binom{n}{r}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 5.1. The deterministic cut query complexity of D_kSH on rank-_r_ hypergraphs is at least \\(\\genfrac(){pt}{2}{n}{r}\\), for any \\(r\\le k\\le n-r\\).",
+      "page": 15
+    },
+    {
+      "problem": "Densest k-Subgraph (weighted)",
+      "problem family": null,
+      "bound": "Deterministic query complexity at least \\binom{n}{2}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Corollary 5.3. The deterministic query complexity of D_kS on weighted graphs is at least \\(\\genfrac(){pt}{2}{n}{2}\\), for any \\(2\\le k\\le n-2\\).",
+      "page": 16
+    },
+    {
+      "problem": "Densest k-Subgraph (unweighted)",
+      "problem family": null,
+      "bound": "\\Omega(n^2/\\log n) queries for a (1.5-\\delta)-approximation",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Lemma 5.4. The randomized query complexity of a \\((1.5-\\delta)\\)-approximation for D_kS on unweighted graphs is \\(\\Omega(n^2/logn)\\), for any \\(\\delta>0\\).",
+      "page": 16
+    },
+    {
+      "problem": "Densest k-Subhypergraph (rank-r)",
+      "problem family": null,
+      "bound": "\\Omega(n \\binom{n/2}{\\lfloor(2r-1)/3\\rfloor} / (r^2 \\log n)) queries; if r=O(1), \\Omega(n^{\\lfloor(2r+2)/3\\rfloor} / \\log n)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 5.5. The randomized query complexity of D_kSH on rank-_r_ hypergraphs is at least \\(\\Omega(n\\genfrac(){pt}{2}{n/2}{\\lfloor(2r-1)/3\\rfloor}/(r^2logn))\\), for any combination of cut, add, and edge queries. If _r=O_(1), this yields a lower bound of \\(\\Omega(n^{\\lfloor(2r+2)/3\\rfloor}/logn)\\) queries.",
+      "page": 17
+    },
+    {
+      "problem": "Densest k-Subhypergraph (rank-r)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\binom{n}{r-1} / (n^2 r \\log n)\\right) queries for a (1+1/(r+1)-\\delta)-approximation; if r=O(1), \\Omega(n^{r-3}/\\log n)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 5.6. The randomized query complexity of a \\((1+1/(r+1)-\\delta)\\)-approximation of D_kSH on rank-_r_ hypergraphs is at least \\(\\Omega(\\genfrac(){pt}{2}{n}{r-1}/(n^2rlogn))\\), for any \\(\\delta>0\\) and any combination of cut, add, and edge queries. If _r=O_(1), this yields a lower bound of \\(\\Omega(n^{r-3}/logn)\\) queries.",
+      "page": 18
+    },
+    {
+      "problem": "Densest k-Subhypergraph (rank-r, r=O(1))",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^{\\max\\{r-3, \\lfloor(2r+2)/3\\rfloor\\}} / \\log n\\right) queries",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 5.7. The randomized query complexity of D_kSH on rank-_r_ hypergraphs where _r=O_(1) is \\(\\Omega(n^{max\\{r-3,\\lfloor(2r+2)/3\\rfloor\\}}/logn)\\).",
+      "page": 18
+    },
+    {
+      "problem": "add query simulation",
+      "problem family": null,
+      "bound": "With cut and is-edge queries, approximating add(S) with probability greater than 1/2 + 2t/2^{n/5} is impossible",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 6.1. With only cut and is-edge<sup>?</sup> access to a hypergraph, there exists a hypergraph _H_ with a node subset _S_ such that it is impossible for an algorithm making _t_ queries to obtain any approximation to add(_S_) with probability greater than \\(\\frac{1}{2}+\\frac{2t}{2^{n/5}}\\).",
+      "page": 20
+    },
+    {
+      "problem": "Densest Subgraph (weighted)",
+      "problem family": "heavy subgraph problems",
+      "bound": "(2+\\varepsilon)-approximation in O(n/\\varepsilon) cut queries",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 1. Let _G_=(_V,E_) be a weighted graph. There is a deterministic algorithm that makes \\(O(n/\\varepsilon)\\mathtt{cut}\\) queries and returns a \\((2+\\varepsilon)\\)-approximation to the densest subgraph of _G_.",
+      "page": 25
+    }
+  ],
+  "paper": "2610.17581",
+  "usage": {
+    "prompt_tokens": 29034,
+    "completion_tokens": 13015,
+    "total_tokens": 42049,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10654,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

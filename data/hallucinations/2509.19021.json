@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Integer sorting",
+      "problem family": "Non-comparison sorting",
+      "bound": "k < n \\log_2 n",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "O(n \\log n) for comparison-based sorting",
+      "quote": "First, the _Asymptotic Crossover_ (_k\\<n_log<sub>2</sub>_n_) defines when BNRS and SP-LSD can theoretically outperform the comparison sorting algorithms where _k_ is the maximum value and _n_ is the input size.",
+      "page": 1
+    },
+    {
+      "problem": "Integer sorting",
+      "problem family": "Non-comparison sorting",
+      "bound": "k > n^2",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Second, the _Round-feasibility Crossover_ (_k\\>n_<sup>2</sup>) defines when overhead cost of implemented model SP-LSD is amortized.",
+      "page": 1
+    },
+    {
+      "problem": "Integer sorting",
+      "problem family": "Non-comparison sorting",
+      "bound": "p > \\frac{R-2}{c(R-1)+(R-3)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Solving for _p_, we obtain the **Skew Crossover**: \\(p>\\frac{R-2}{c(R-1)+(R-3)}\\)",
+      "page": 8
+    },
+    {
+      "problem": "Integer sorting",
+      "problem family": "Non-comparison sorting",
+      "bound": "c > 1 - \\frac{2}{R(R-1)} \\quad \\text{and} \\quad R < \\frac{1 + \\sqrt{1 + \\frac{8}{1-c}}}{2}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Substituting \\(\\alpha=c\\beta\\) and solving for _c_: \\(c>\\frac{R^2-R-2}{R^2-R}=1-\\frac{2}{R(R-1)}\\) (1) Solving for _R_: \\(R<R_{\\text{max}}(c)=\\frac{1+\\sqrt{1+\\frac{8}{1-c}}}{2}\\) (2)",
+      "page": 9
+    }
+  ],
+  "paper": "2509.19021",
+  "usage": {
+    "prompt_tokens": 15256,
+    "completion_tokens": 8813,
+    "total_tokens": 24069,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8273,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

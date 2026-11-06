@@ -1,0 +1,20 @@
+{
+  "claims_new_result": false,
+  "results": [],
+  "paper": "2409.17905",
+  "usage": {
+    "prompt_tokens": 8472,
+    "completion_tokens": 965,
+    "total_tokens": 9437,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 950,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

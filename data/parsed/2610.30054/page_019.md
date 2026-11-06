@@ -1,0 +1,2 @@
+The degeneration can be seen quite directly from an example. For a tensor \(T\in\mathbb{F}^{n_1}\otimes\mathbb{F}^{n_2}\otimes\mathbb{F}^{n_3}\) and \(i\in[n_1]\), the _ith slice_ of _T_ is the \(n_2\times n_3\) matrix whose entry in row _j_ and column _k_ is the coefficient of \(e_i\otimes e_j\otimes e_k\) in _T_. Take _a_=3 and _b_=3. Then the slices of P<sub>_a,_3_b+a_-1</sub> look as follows, where we have split each slice into 9 blocks,<tbc>
+

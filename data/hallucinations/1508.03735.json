@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "One-to-one bipartite matching",
+      "problem family": "Bipartite matching",
+      "bound": "\\Omega(n/\\rho^4)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Suppose the coordination protocol \\Pi for one-to-one matching guarantees an approximation ratio of \\rho in expectation. Then, the coordinator of \\Pi must broadcast \\Omega(n/\\rho^4) bits on problem instances of size n (in the worst case).",
+      "page": 6
+    },
+    {
+      "problem": "Many-to-one bipartite matching",
+      "problem family": "Bipartite matching",
+      "bound": "\\Omega(k/\\rho^4)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "O(n log k) (trivial upper bound describing the matching)",
+      "quote": "Suppose that there exists a coordination protocol for many-to-one matchings that guarantees an approximation ratio of \\rho in expectation. Then such a protocol has coordination complexity of \\Omega(k/\\rho^4).",
+      "page": 8
+    },
+    {
+      "problem": "Linearly separable convex programs",
+      "problem family": "Linearly separable convex programs",
+      "bound": "O(k\\log(nk/\\eta\\varepsilon)) coordination complexity, with v(\\widehat{x})\\ge\\mathrm{OPT}-n(\\varepsilon+\\eta) and \\min_{x\\in\\mathcal{F}}\\|x-\\widehat{x}\\|\\le\\varepsilon",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The coordination mechanism ReC(\\eta,\\varepsilon) coordinates the players to play a joint solution \\widehat{x} that satisfies v(\\widehat{x})\\ge\\text{OPT}-n(\\varepsilon+\\eta) and \\min_{x\\in\\mathcal{F}}\\|x-\\widehat{x}\\|\\le\\varepsilon and has coordination complexity of O(klog(nk/\\eta\\varepsilon)).",
+      "page": 12
+    },
+    {
+      "problem": "Many-to-one bipartite matching",
+      "problem family": "Bipartite matching",
+      "bound": "O(k\\log(nk)) coordination complexity, with \\sum_{j=1}^k\\min\\left\\{\\sum_{i=1}^nv_{i,j}x'_{i,j},b_j\\right\\}\\ge\\left(1-O\\left(\\frac{\\sqrt{k}\\log(k/\\beta)}{\\sqrt{\\mathrm{OPT}}}\\right)\\right)\\mathrm{OPT}",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": "O(n log k) (trivial upper bound describing the matching)",
+      "quote": "There exists a coordination protocol with coordination complexity O(k log(nk)) such that the parties coordinate on a matching x' with total weight: \\sum_{j=1}^k\\min\\left\\{\\sum_{i=1}^nv_{i,j}x'_{i,j},b_j\\right\\}\\ge\\left(1-O\\left(\\frac{\\sqrt{k}log(k/\\beta)}{\\sqrt{OPT}}\\right)\\right)OPT as long as OPT\\ge 1.",
+      "page": 14
+    },
+    {
+      "problem": "Atomic routing games",
+      "problem family": "Routing games",
+      "bound": "\\widetilde{O}\\left(\\frac{\\lambda m^2n}{(\\varepsilon-2\\lambda m)^2}\\right) coordination complexity for \\varepsilon-approximate equilibrium flow",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Fix any \\varepsilon>2\\lambda m. Let r=\\frac{\\varepsilon-2\\lambda m}{6\\lambda m} , and \\alpha=\\varepsilon-\\lambda mr-\\lambda m . Then given any routing game instance \\Gamma=(G,\\{(s_i,d_i)\\}_i,c), the coordination protocol (\\text{BR-Sim}(\\Gamma,\\alpha,r),\\text{ExtractPath}((s_i,d_i),\\{U_e\\}_{e\\in E},\\alpha,r)) coordinates the players to play an \\varepsilon-approximate equilibrium flow and has coordination complexity of \\widetilde{O}\\left(\\frac{\\lambda m^2n}{(\\varepsilon-2\\lambda m)^2}\\right).",
+      "page": 23
+    },
+    {
+      "problem": "Many-to-one stable matching",
+      "problem family": "Stable matching",
+      "bound": "O(k\\log n) coordination complexity",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "O(n log k) (trivial upper bound describing the matching)",
+      "quote": "There exists a coordination protocol with coordination complexity of O(k log n) that coordinates the students to coordinate on a stable matching.",
+      "page": 28
+    },
+    {
+      "problem": "Jointly differentially private coordination",
+      "problem family": "Joint differential privacy",
+      "bound": "\\mathbb{E}[S(D,a)]\\ge\\frac{\\mathrm{OPT}(D)}{\\rho}-\\frac{2(\\ell+\\log(1/\\beta))}{\\varepsilon} with (\\varepsilon,0)-joint differential privacy",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "approximate joint differential privacy",
+      "quote": "Suppose that (\\sigma,\\pi) has coordination complexity \\ell and approximation ratio \\rho for the objective f. Then the algorithm \\mathrm{PriCoor}((\\sigma,\\pi),f,\\varepsilon,D) satisfies (\\varepsilon,0)-joint differential privacy, and with probability at least 1-\\beta, the resulting action profile a satisfies \\mathbb{E}\\left[S(D,a)\\right]\\ge\\frac{\\mathrm{OPT}(D)}{\\rho}-\\frac{2(\\ell+\\mathrm{log}(1/\\beta))}{\\varepsilon}, where the expectation is taken over the internal randomness of the encoding function \\sigma' and decoding function \\pi.",
+      "page": 16
+    }
+  ],
+  "paper": "1508.03735",
+  "usage": {
+    "prompt_tokens": 25712,
+    "completion_tokens": 11073,
+    "total_tokens": 36785,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9725,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

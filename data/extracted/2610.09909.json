@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Poisson equation on implicitly defined level-set domains",
+      "problem family": "UnCut finite element method",
+      "bound": "\\|\\tilde{u}-u_h\\|_{H^1(\\Omega_h)}\\le Ch^k\\|f\\|_{H^{k-1}(\\Omega_h)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then the numerical scheme in (1.3) admits a unique solution \\(u_h\\in S_h\\), and the following error estimate holds:",
+      "page": 6
+    },
+    {
+      "problem": "A posteriori error estimation for the UnCut FEM",
+      "problem family": "UnCut finite element method",
+      "bound": "\\|\\Delta e_h\\|_{L^2(\\Omega_h)}\\le\\eta+\\|r\\|_{L^2(\\Omega_h)}\\text{ and }\\eta\\le\\|\\Delta e_h\\|_{L^2(\\Omega_h)}+\\|r\\|_{L^2(\\Omega_h)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, the error \\(e_h:=\\tilde{u}-u_h\\) satisfies the reliability bound",
+      "page": 18
+    }
+  ],
+  "paper": "2610.09909",
+  "usage": {
+    "prompt_tokens": 26558,
+    "completion_tokens": 7825,
+    "total_tokens": 34383,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7525,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

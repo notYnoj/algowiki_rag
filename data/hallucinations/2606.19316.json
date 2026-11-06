@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Versatile and efficient volumetric editing with disentangled neural mesh-based implicit field",
+      "problem family": null,
+      "bound": "NeuMesh++: mesh-based neural radiance representation with disentangled geometry, texture, and semantic codes on mesh vertices",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "In this paper, we present a novel mesh-based representation by encoding the neural radiance field with disentangled geometry, texture, and semantic codes on mesh vertices, which empowers a set of efficient and comprehensive editing functionalities, including mesh-guided geometry editing, designated texture editing with texture swapping, filling and painting operations, and semantic-guided editing.",
+      "page": 1
+    },
+    {
+      "problem": "Novel view synthesis with neural mesh-based radiance field",
+      "problem family": null,
+      "bound": "15 fps (0.067 seconds per frame, 800x800)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "1.317 seconds per frame (BakedSDF*)",
+      "quote": "NeuMesh++ can reach 15 fps on Nvidia GTX 4070 GPU when rendering 800×800 images.",
+      "page": 8
+    },
+    {
+      "problem": "Texture painting on neural radiance fields",
+      "problem family": null,
+      "bound": "1 second",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "5492 seconds (NeuMesh)",
+      "quote": "For texture painting, we only fine-tune the modification color (decoder-free) on the painted region which only takes about 1 second.",
+      "page": 8
+    },
+    {
+      "problem": "Semantic-guided editing",
+      "problem family": null,
+      "bound": "2 seconds",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For semantic-guided editing, it only takes about 2 seconds for the 3D semantic propagation from clicking on a single-perspective image.",
+      "page": 8
+    }
+  ],
+  "paper": "2606.19316",
+  "usage": {
+    "prompt_tokens": 23239,
+    "completion_tokens": 9212,
+    "total_tokens": 32451,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8740,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

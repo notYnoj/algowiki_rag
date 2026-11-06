@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "shared-leg separation (tensor degeneration)",
+      "problem family": null,
+      "bound": "A^{\\oplus(M+n-1)}\\unknown\\rightarrow\\oplus_{h=1}^M(A_h\\otimes B_X(n))\\text{; source copies }M+n-1\\text{ (vs. }5M\\text{), }2M-1\\text{ for }n=M",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "5M source copies (Proposition 3.1 of the cited OpenAI preprint)",
+      "quote": "Then \\(A^{\\oplus(M+n-1)}\\unknown\\rightarrow\\oplus_{h=1}^M(A_h\\otimes B_X(n))\\).",
+      "page": 2
+    },
+    {
+      "problem": "matrix multiplication",
+      "problem family": null,
+      "bound": "\\omega_K\\le 9/4\\text{ for every algebraically closed field }K\\text{ (all characteristics)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\omega\\le 9/4\\text{ (cited OpenAI preprint), extended here to every characteristic}",
+      "quote": "For every algebraically closed field K, the matrix multiplication exponent satisfies \\(\\omega_K\\le 9/4\\).",
+      "page": 5
+    }
+  ],
+  "paper": "2610.18914",
+  "usage": {
+    "prompt_tokens": 3886,
+    "completion_tokens": 10560,
+    "total_tokens": 14446,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10246,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

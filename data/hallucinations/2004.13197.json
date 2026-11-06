@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "2RAMSORT (sorting with two key types in RAM)",
+      "problem family": "Sorting",
+      "bound": "\\Theta(anlogn+b(klogn+nlogn)+c\\sum_{i=1}^k\\ell_ilog\\ell_i)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1. 2RAMSORT has the following comparison cost complexity for the case \\(a\\le b\\le c\\): \\(\\Theta(anlogn+b(klogn+nlogn)+c\\sum_{i=1}^k\\ell_ilog\\ell_i)\\)",
+      "page": 6
+    },
+    {
+      "problem": "Two-Sized Sorting Sort(S,L)",
+      "problem family": "Sorting",
+      "bound": "\\Theta\\left(\\frac{S}{B}log_{M/B}\\frac{S}{B}+\\text{PLE}\\left(S,L\\right)+\\left(\\sum_{i=1}^k\\left(\\frac{L_i}{B}log_{M/w}\\frac{L_i}{w}\\right)+\\frac{L}{B}\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Then the I/O complexity of Two-Sized Sorting Sort(S,L) is \\(\\Theta\\left(\\frac{S}{B}log_{M/B}\\frac{S}{B}+\\text{PLE}\\left(S,L\\right)+\\left(\\sum_{i=1}^k\\left(\\frac{L_i}{B}log_{M/w}\\frac{L_i}{w}\\right)+\\frac{L}{B}\\right)\\right)\\).",
+      "page": 8
+    },
+    {
+      "problem": "PLE(S,L) (Placement of Large Elements / batched predecessor)",
+      "problem family": "Batched predecessor",
+      "bound": "\\Omega\\left(\\mathrm{min}\\left\\{\\frac{kw}{B}\\mathrm{log}_MS+\\frac{L}{B}\\mathrm{log}_Mk,\\frac{k}{B}\\mathrm{log}S+\\frac{L}{wB}\\mathrm{log}k+\\frac{L}{B}\\right\\}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "PLE(S,L) = \\Omega\\left(\\mathrm{min}\\left\\{\\frac{kw}{B}\\mathrm{log}_MS+\\frac{L}{B}\\mathrm{log}_Mk,\\frac{k}{B}\\mathrm{log}S+\\frac{L}{wB}\\mathrm{log}k+\\frac{L}{B}\\right\\}\\right).",
+      "page": 11
+    },
+    {
+      "problem": "PLE(S,L) (Placement of Large Elements / batched predecessor)",
+      "problem family": "Batched predecessor",
+      "bound": "O\\left(min\\left\\{\\frac{L}{B}log_MS+\\frac{S}{B},\\frac{L}{w}log_Bk+klog_BS+\\frac{L}{B}+\\frac{S}{B}\\right\\}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "PLE(S,L) = O\\left(min\\left\\{\\frac{L}{B}log_MS+\\frac{S}{B},\\frac{L}{w}log_Bk+klog_BS+\\frac{L}{B}+\\frac{S}{B}\\right\\}\\right).",
+      "page": 21
+    },
+    {
+      "problem": "Perfectly interleaved batched predecessor (k short sorted, k large unsorted, w>=B)",
+      "problem family": "Batched predecessor",
+      "bound": "O\\left(\\frac{k}{B}log_{M/B}\\frac{k}{B}\\right) I/Os preprocessing, O\\left(\\frac{k}{B}logk+\\frac{kw}{B}\\right) I/Os query",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists \\(k_0\\in\\mathbb{N}\\) such that for all input sizes k>k0, there is an algorithm that after \\(O\\left(\\frac{k}{B}log_{M/B}\\frac{k}{B}\\right)I/Os\\) in preprocessing outputs the sorted order in \\(O\\left(\\frac{k}{B}logk+\\frac{kw}{B}\\right)\\right)I/Os\\).",
+      "page": 22
+    }
+  ],
+  "paper": "2004.13197",
+  "usage": {
+    "prompt_tokens": 16902,
+    "completion_tokens": 5694,
+    "total_tokens": 22596,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4673,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

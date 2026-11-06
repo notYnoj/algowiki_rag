@@ -1,0 +1,21 @@
+A ubiquitous modern nearest-neighbor search algorithm, DiskANN \[28\] constructs graphs that are \(\alpha\)-navigable <sup>5</sup>. While the definition of navigability maintains that every greedy search converges, \(\alpha\)-navigable graphs aim to ensure fast convergence by imposing a rate of progress. Further, recent work \[21\] shows that greedy search over \(\alpha\)-Navigable graphs always returns an approximate nearest neighbor \(\widetilde{p}\) with \(d(q,\widetilde{p})\le\frac{\alpha+1}{\alpha-1}\cdot min_{p\in P}d(q,p)\), even when \(q\notin P\).
+
+## 2.2 Distance Access Model
+
+Our input is a set of points _P_={_p_<sub>1</sub>_,...,p<sub>n</sub>_} together with oracle access to a distance function \(d:P\times P\rightarrow\mathbb{R}_{\ge 0}\). A query to the oracle returns the distance between two points in _O_(1) time. We otherwise treat the points and the distance function as black boxes; in particular, our algorithms do not require access to an explicit representation of the points.
+
+We make only two assumptions on the distance function. The first is that _d_ is symmetric, that is, _d(p<sub>i</sub>,p<sub>j</sub>_)=_d(p<sub>j</sub>,p<sub>i</sub>_).<sup>6</sup> The second is that _d(p<sub>i</sub>,p<sub>j</sub>_) is 0 if _p<sub>i</sub>=p<sub>j</sub>_ and positive if \(p_i\neq p_j\). This is so that a point is its own nearest neighbor; otherwise, greedy traversal may not converge on a query even on a navigable graph. Notably, we do not require that _d_ is a metric.
+
+## 2.3 Reducing Sparsest Navigable Graphs to Minimum Set Cover
+
+It has been observed independently by \[12, 25\], that the problem of constructing a sparse \(\alpha\)-navigable graph over a point set _P_={_p_<sub>1</sub>_,...,p<sub>n</sub>_} can be cast as a collection of _n_ coupled set cover instances, each with _n_-1 elements, and _n_-1 sets. Specifically, we have a single set cover instance for each point. The instance corresponding to point _p<sub>i</sub>_ involves covering all points \(p_k\neq p_i\), and has a set for every \(j\neq i\), denoted by \(S_{i\rightarrow j}\). \(S_{i\rightarrow j}\) contains every point _p<sub>j</sub>_ provides a greedy step towards when standing at _p<sub>i</sub>_, i.e., all points _p<sub>k</sub>_ such that \(d(p_j,p_k)<\frac{1}{\alpha}\cdot d(p_i,p_k)\). In other words, if we consider source-target \(\alpha\)-navigability constraints in which _p<sub>i</sub>_ is the source, \(S_{i\rightarrow j}\) contains all targets which corresponding constraints are satisfied by adding the directed edge (_p<sub>i</sub>,p<sub>j</sub>_). Observe that a set cover for this instance corresponds to an out-neighborhood for _p<sub>i</sub>_ that covers all \(\alpha\)-navigability constraints in which _p<sub>i</sub>_ is the source, and a minimum set cover corresponds to a minimum such out- neighborhood. Consequently, finding minimum set cover for all said instances produces a minimum navigable graph. The relationship between these different set cover instances was leveraged by \[12\] to produce efficient query access to these instances without explicitly constructing them, which we will review next.
+
+## 2.4 Set Access Model and Efficient Query Access for Set Cover
+
+Under the distance access model described in Section 2.2, we can efficiently query the set cover instances induced by the problem of constructing a sparse navigable graph over _P_. In particular, within the set cover instance corresponding to _p<sub>i</sub>_, \[12\] showed that with _O(n_<sup>2</sup>log_n_) preprocessing, we can support the following three operations in constant time:
+
+\(\text{MemberOf}(p_k,S_{i\rightarrow j})\text{returns Yes if}p_k\in S_{i\rightarrow j}\text{and No otherwise.}\)<br>
+\(\text{FreqOf}(p_k)\text{returns the number of sets}S_{i\rightarrow j}\text{containing}p_k\text{.}\)
+
+<sup>5</sup>Since the algorithm producing a strict \(\alpha\)-navigable graphs is too slow in practice, the authors of \[28\] propose a faster heuristic method, which is widely used. <sup>6</sup>Technically, this is not strictly required since all distances during greedy traversal are computed against a common query point, so traversal converges even in the presence of asymmetric distances.
+

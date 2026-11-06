@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sparse α-Navigable Graph Construction",
+      "problem family": "α-navigable graphs",
+      "bound": "$O(\\mathsf{OPT}_{\\alpha(1+\\varepsilon)}\\log n)$ edges, $\\widetilde{O}(n^\\omega \\log(\\Delta_P)/\\varepsilon)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$\\widetilde{O}(n^\\omega \\log(\\Delta)/\\varepsilon)$ time with $O(\\mathsf{OPT}_{2\\alpha(1+\\varepsilon)}\\log n)$ edges (Khanna, Padaki, Waingarten, SODA 2026); $O(n^{2.5})$ time with $O(\\mathsf{OPT}_\\alpha\\log n)$ edges",
+      "quote": "Theorem 1.2. For any \\(\\varepsilon>0\\), there exists a randomized algorithm that, given point set P, arbitrary distance function \\(d(\\cdot,\\cdot)\\), and \\(\\alpha>1\\), constructs an \\(\\alpha\\)-navigable graph, with at most \\(O\\big(OPT_{\\alpha(1+\\varepsilon)}logn\\big)\\) edges, where \\(OPT_{\\alpha(1+\\varepsilon)}\\) is the size of the sparsest \\(\\alpha(1+\\varepsilon)\\)-navigable graph. The algorithm runs in \\(\\widetilde{O}\\big(n^\\omega\\cdot log(\\Delta_P)/\\varepsilon\\big)\\) time, where \\(\\Delta_P\\) is the set’s aspect ratio.",
+      "page": 4
+    },
+    {
+      "problem": "Sparse τ-Monotonic Graph Construction",
+      "problem family": "τ-monotonic graphs",
+      "bound": "$\\widetilde{O}(n^\\omega \\Delta_P/\\varepsilon)$ time; out-degree $O(\\mathsf{OPT}_{\\tau+\\varepsilon}(s)\\log n)$, $|E|\\le O(\\log n)\\cdot\\mathsf{OPT}_{\\tau+\\varepsilon}$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Corollary 3.12. Let P be a set of n points with aspect ratio \\(\\Delta_P\\), after normalizing its minimum nonzero pairwise distance to 1. For every \\(\\tau\\ge 0\\) and \\(0<\\epsilon\\le 1\\), there is a randomized algorithm running in \\(\\widetilde{O}\\left(n^\\omega\\frac{\\Delta_P}{\\epsilon}\\right)\\) time that constructs a \\(\\tau\\)-monotonic graph G such that, with high probability, every \\(s\\in P\\) has out-degree at most \\(O(\\mathsf{OPT}_{\\tau+\\epsilon}(s)logn)\\), where \\(\\mathsf{OPT}_{\\tau+\\epsilon}(s)\\) is the minimum out-degree required at s in any \\((\\tau+\\epsilon)\\)-monotonic graph. Consequently, \\(|E|\\le O(logn)\\cdot\\mathsf{OPT}_{\\tau+\\epsilon}\\).",
+      "page": 19
+    },
+    {
+      "problem": "α-navigability testing",
+      "problem family": "navigability verification",
+      "bound": "No $O(n^{2.5-\\delta})$ algorithm for any constant $\\delta>0$ unless the APSP conjecture is falsified",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Corollary 4.9. For every constant \\(\\varepsilon>0\\), there does not exist an \\(O(n^{2.5-\\varepsilon})\\) algorithm for \\(\\alpha\\)-navigability testing unless the APSP conjecture is falsified.",
+      "page": 23
+    }
+  ],
+  "paper": "2610.38205",
+  "usage": {
+    "prompt_tokens": 23430,
+    "completion_tokens": 10847,
+    "total_tokens": 34277,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9978,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

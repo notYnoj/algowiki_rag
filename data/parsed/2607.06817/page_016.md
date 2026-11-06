@@ -1,0 +1,14 @@
+<tbc>problem has a number of clauses that grows linearly with the order of each associated permutation group. On the other hand, by Proposition 2.2, larger associated permutation groups generally lead to smaller permutational Ramsey numbers. Consequently, increasing the order of the associated permutation groups has two competing effects: while the generated SAT instances become more difficult to solve for fixed \(n\in\mathbb{N}\), the Ramsey numbers themselves tend to decrease, reducing the values of \(n\in\mathbb{N}\) that need to be considered. This observation is also supported by the experimental findings of \[4\], which show that for fixed \(n\in\mathbb{N}\), SAT problems corresponding to ordered Ramsey numbers are generally easier to solve than those corresponding to cyclic Ramsey numbers. Our computational results further indicate that the reflective Ramsey numbers are often very close to the corresponding ordered Ramsey numbers, while the dihedral Ramsey numbers frequently coincide with the cyclic Ramsey numbers when one of the arguments is an alternating path.
+
+We conclude with the remark that it may be worthwhile to investigate more general permutational Ramsey numbers in which the permutation groups associated with graphs are tailored to the corresponding graphs. For instance, let \(n\in\mathbb{N}\), and consider the _monotone fan_ \(F_n^\mathrm{mon}\), defined as the fan graph in which 0 is adjacent to all the other vertices, while any two nonzero vertices are adjacent if and only if they are consecutive integers. Equivalently, \(F_n^\mathrm{mon}\) is the graph of order _n_ with edge set \(E(S_n^\mathrm{sc})\cup E(P_n^\mathrm{mon})\). Since 0 is a universal vertex, it is natural to associate this graph with a permutation group that fixes 0. For example, in analogy with the cyclic shift permutation, one could consider the permutation group \(\left\langle\left(012\cdots n-2n-1023\cdots n-11\right)\right\rangle\). This example illustrates one possible way in which the associated permutation groups can be chosen according to the structure of the underlying graphs. More generally, this motivates the study of permutational Ramsey numbers with arbitrary choices of associated permutation groups. Theorem 4.1 illustrates that allowing arbitrary associated permutation groups naturally leads to general results in certain cases. We believe that this could provide a fruitful direction for future research.
+
+## Acknowledgments
+
+I. Damnjanović is supported by the Ministry of Science, Technological Development and Innovation of the Republic of Serbia, grant number 451-03-34/2026-03/200102, and the Science Fund of the Republic of Serbia, grant #6767, Lazy walk counts and spectral radius of threshold graphs -- LZWK.
+
+## Conflict of interest
+
+The authors declare that they have no conflict of interest.
+
+## References
+

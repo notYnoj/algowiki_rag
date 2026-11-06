@@ -1,0 +1,20 @@
+## 1 Introduction
+
+First introduced by Selkow in the late 1970s \[Sel77\] as a generalization of the more than classical (String) Edit Distance Problem (ED), the Tree Edit Distance Problem (TED) is a problem of significant interest with applications spanning computational biology \[Gus97, SZ90, HTGK03, Wat95\], structured data analysis \[BGK03, Cha99, FLMM09\], image processing \[BK99, KTSK00, KSK01, SKK04\], compiler optimization \[DMRW10\] and more.
+
+In the classical formulation of TED, two rooted trees, **T** and \(\mathbf{T}'\), are given, with nodes arranged in a left-to-right order and labeled from a set \(\Sigma\). The goal is to compute the _tree edit distance_ between **T** and \(\mathbf{T}'\), denoted by \(\mathrm{ed}(\mathbf{T},\mathbf{T}')\), defined as the minimum cost required to transform **T** into \(\mathbf{T}'\) using a sequence of valid operations, which can be of three types: changing a label \(\ell\) to \(\ell'\) at a cost \(\delta(\ell,\ell')\); removing a vertex with label \(\ell\) at a cost \(\delta(\ell,\epsilon)\), while reattaching its children to its parent in the original order; or inserting a vertex with label \(\ell\) at a cost \(\delta(\epsilon,\ell)\) between an existing node and a subsequence of consecutive children of that node. In the _unweighted tree edit distance_ problem, we specify all operations to have cost 1.
+
+Over the past three decades, the algorithms for TED have been progressively improved, culminating in the current best-known O(_n_<sup>3</sup>) time algorithm by Demaine, Mozes, Rossman, and Weinmann \[DMRW10\] for two trees on _n_ nodes (see  1 for a summary).
+
+For the unweighted TED, a slightly subcubic running time O(_n_<sup>2.9546</sup>) was recently shown by Mao \[Mao22\] and later improved by Dürr \[Dür23\] to O(_n_<sup>2.9148</sup>). Nevertheless, even the O(_n_<sup>3</sup>) time algorithm for the more general weighted TED was not easy to obtain. The previous best \[Kle98\] ran in O(_n_<sup>3</sup>log_n_) time, and it is unclear whether further logs can be shaved.
+
+_Question 1: Is there an o(n_<sup>3</sup>) _time algorithm for TED?_
+
+To address this, \[BGMW20\] use fine-grained complexity. They show that a truly subcubic time (\(\mathcal{O}(n^{3-\epsilon})\) for constant \(\epsilon>0\)) algorithm for TED would imply a truly subcubic time algorithm for the All-Pairs Shortest Paths (APSP) problem, thus refuting the popular APSP hypothesis of fine-grained complexity (see the survey \[Vas18\]) which states that _n_<sup>3-_o_(1)</sup> is needed for APSP on _n_-node graphs in the word-RAM model of computation.
+
+This reduction explained why the exponent of the running time is stuck at 3 but did not address whether any tiny sub-polynomial improvement can be obtained over _n_<sup>3</sup>. More frustratingly, no reduction _from_ TED _to_ APSP is known to exist. This makes TED seem _different_ from the other problems for which APSP-based conditional lower bounds have been proven (e.g. graph radius, Wiener index, dynamic maximum matching etc., see \[Vas18, VW18, AV14, HKNS15\]) which are all either known to be fine-grained _equivalent_ to APSP or whose hardness can be based on even harder problems, such as OMv \[HKNS15\], or the Exact Triangle problem (which is known to be at least as hard as both 3SUM and APSP, see \[Vas18\]). A tantalizing open question is thus:
+
+_Question 2: Is TED fine-grained equivalent to APSP, or can its hardness be based on a harder problem such as Exact Triangle?_
+
+TED was originally conceived as a generalization of string Edit Distance, and the latter problem has been shown to be very hard within fine-grained complexity: Edit Distance requires _n_<sup>2-_o_(1)</sup> not only under the Orthogonal Vectors conjecture and the Strong Exponential Time Hypothesis (SETH) \[BI15\] but also under even more believable hypotheses such as NC-SETH, and even O(_n_<sup>2</sup>/log_<sup>c</sup>(n_)) time algorithms for Edit Distance for large enough _c_ would imply so-far unattainable Circuit Lower Bounds \[AHVW16\].
+

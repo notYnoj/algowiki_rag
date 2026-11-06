@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Parallel-in serial-out (PISO) sorting (Hourglass Sort)",
+      "problem family": "parallel sorting",
+      "bound": "O(n)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "O(n\\cdot\\log(n))",
+      "quote": "In this work, we propose a novel sorting method for the PISO scheme, that has O(_n_) hardware complexity, and is able to output its first sorted datum in O(_log(n_)) time.",
+      "page": 1
+    },
+    {
+      "problem": "Parallel-in serial-out (PISO) sorting (Hourglass Sort)",
+      "problem family": "parallel sorting",
+      "bound": "O(\\log n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "A latency of log_n is achieved for the output of the first element, after which the rest stream out for a total sorting time of _n_+log_n.",
+      "page": 1
+    },
+    {
+      "problem": "Parallel-in serial-out (PISO) sorting (Hourglass Sort)",
+      "problem family": "parallel sorting",
+      "bound": "n + \\log n",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "A latency of log_n is achieved for the output of the first element, after which the rest stream out for a total sorting time of _n_+log_n.",
+      "page": 1
+    },
+    {
+      "problem": "Parallel-in serial-out (PISO) sorting (Hourglass Sort)",
+      "problem family": "parallel sorting",
+      "bound": "O(1)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Contrary to other parallel sorting methods, clock speed does not degrade with _n_, and resources scale linearly with input size.",
+      "page": 1
+    }
+  ],
+  "paper": "2507.16326",
+  "usage": {
+    "prompt_tokens": 8251,
+    "completion_tokens": 13433,
+    "total_tokens": 21684,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13008,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

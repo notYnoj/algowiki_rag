@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "k-SUM",
+      "problem family": null,
+      "bound": "\\widetilde{O}\\left(n^{\\Psi_k}\\right)\\text{ where }\\Psi_k=\\underbrace{\\frac{2k-\\lfloor k/7\\rfloor-\\lfloor(k+3)/7\\rfloor}{6}}_{\\Phi_k}-\\frac{[k\\equiv 3mod7]}{9}-\\frac{[k\\equiv 6mod7]}{18}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\widetilde{O}(n^{k/3})",
+      "quote": "For every integer k>3, worst-case k-SUM can be solved in quantum time $\\widetilde{O}(n^{\\Psi_k})$, where $\\Psi_k=\\underbrace{\\frac{2k-\\lfloor k/7\\rfloor-\\lfloor(k+3)/7\\rfloor}{6}}_{\\Phi_k}-\\frac{[k\\equiv 3mod7]}{9}-\\frac{[k\\equiv 6mod7]}{18}$.",
+      "page": 3
+    },
+    {
+      "problem": "Subset Sum",
+      "problem family": null,
+      "bound": "O^*(2^{2n/7})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^*(2^{n/3})",
+      "quote": "The Subset Sum problem can be solved in quantum time $O^*(2^{2n/7})$.",
+      "page": 3
+    },
+    {
+      "problem": "Pigeonhole Modular Equal Subset Sum",
+      "problem family": null,
+      "bound": "O^*(3^{2n/7})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^*(2^{n/2})",
+      "quote": "The Pigeonhole Modular Equal Subset Sum problem can be solved in quantum time $O^*(3^{2n/7})$.",
+      "page": 11
+    }
+  ],
+  "paper": "2608.07309",
+  "usage": {
+    "prompt_tokens": 11769,
+    "completion_tokens": 12907,
+    "total_tokens": 24676,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 12443,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

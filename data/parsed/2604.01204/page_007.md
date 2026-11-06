@@ -1,0 +1,8 @@
+### 4.1 Primitive-bound feature embedding
+
+Spatial structures such as triplanes [12], voxel grids [58], and multi-resolution hash grids [49] are commonly used in neural fields to hold latent feature vectors that embed query positions into a higher-dimensional space before decoding the signal. Despite their effectiveness, these representations rely on globally defined regular grids, which limits their scalability to large scenes or high-frequency detail. Moreover, because these structures are fixed in space, they struggle to represent scenes undergoing motion, deformation, or editing.
+
+Instead, we exploit the Lagrangian nature and adaptivity of primitive-based representations by anchoring latent features to a virtual scaffold that encapsulates each primitive. Specifically, consider the isosurface ellipsoid defined by an anisotropic 3D Gaussian (Eq. (1)) with bounded support, which becomes a sphere in canonical space after whitening. We define the virtual tetrahedron bounding this sphere and assign a feature vector \(\mathbf{f}^j\in\mathbb{R}^{N_f}\) to each of its four vertices (\(j\in\{0..3\}\)) (Fig. 3a). For each primitive intersected by a ray, we determine the point **p**<sup>∗</sup> corresponding to the maximum Gaussian response along the ray [70]. The feature vector at this location, **f**, is obtained via barycentric interpolation of the vertex features **f**_<sup>j</sup>_. A detailed derivation is provided in the supplementary material.
+
+Compared to globally anchored feature representations, our formulation moves with the primitives and therefore naturally supports operations such as motion, deformation, or deletion during scene editing.
+

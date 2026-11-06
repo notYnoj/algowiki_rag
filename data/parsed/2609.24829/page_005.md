@@ -1,0 +1,22 @@
+<tbc>space budget of \(\widetilde{O}(m/\sqrt{n})\) in subsequent passes. We use this budget to separate edges into _heavy_ edges, those involved in at least \(\gamma=\widetilde{\Theta}(\sqrt{n})\) triangles, and _light_ edges, the rest. An oracle for this separation is constructed by sampling each vertex independently with a small probability and collecting all incident edges; a Chernoff bound argument shows that this oracle correctly classifies every edge with high probability. Triangles involving at least one heavy edge are then counted directly from the sampled edge set, while triangles consisting entirely of light edges are handled by running the one-pass subroutine on the substream of light edges. If this round again fails to produce an estimate, we learn that \(T=\widetilde{O}(\sqrt{n})\), shrinking the threshold \(\gamma\) accordingly and repeating. After _i_ rounds we have either output an approximation of _T_ or deduced that \(T=\widetilde{O}(n^{1/2^i})\). After _p_ rounds, one can output a partial estimate and an upper bound of \(\widetilde{O}(n^{1/2^p})\) on the remaining fraction, resulting in the \((1+\varepsilon,\widetilde{O}(n^{1/2^p}))\) mixed approximation. After _O_(loglog_n_) rounds, keeping all edges of the stream is within the space budget, providing an exact count.
+
+### Lower bound.
+
+We complement our algorithmic results with a space lower bound showing that parameter- free triangle estimation in a random-order stream is inherently expensive: even if the true number of triangles is moderately large, any algorithm that must return an \((\alpha,\beta)\)-approximation without being told the relevant scale in advance can still be forced to use \(\Omega(m/\sqrt{\beta})\) space, and in the fully parameter-free setting this becomes essentially linear space. In words, the algorithm cannot safely "wait until it realizes" that the graph has many triangles, because before it learns that, it must already have enough information to distinguish graphs with no triangles from graphs with only a small number of triangles, and that alone is hard.
+
+The technical contribution is a communication-complexity reduction that strengthens the McGregor- Vorotnikova lower bound from ordinary triangle testing to a _tolerant_ version: by adjoining a gadget that guarantees many triangles while revealing almost nothing new to Alice, the proof shows that any protocol that works even on graphs with at least \(\tau_2\ge\tau_1\ge 0\) triangles must still pay the full \(\Omega(m/\sqrt{\tau_1})\) communication needed to distinguish 0 from \(\tau_1\) triangles. This tolerant communication lower bound is then transferred to the random-order streaming model, yielding the stated space lower bound for parameter-free triangle estimation.
+
+## 2 Preliminaries
+
+### 2.1 Definitions and Problem Statement
+
+Let _G_=(_V,E_) be a simple graph with |_V_|=_n_ and |_E_|=_m_. We wish to count the number of triangles (three-cycles) in _G_, _T(G_) or simply _T_. Of course, a naive algorithm is to iterate over all triples of vertices and check how many of them form triangles. However, when _G_ is very large, this is often wasteful or even impossible when we cannot store the entirety of _G_ in memory. In the _insert-only random order_ graph streaming model, we see the edges of the graph one by one, arriving in the order of a uniformly random permutation on the edges. We refer to this stream as _S_. We wish to obtain an approximation of _T_ using sublinear (in _m_ the number of edges) space. The goal is to minimize the space used during the algorithm, as well as the number of passes over the stream. The success probability of the algorithm is dependent on the random permutation and the internal coin tosses of the algorithm.
+
+As it turns out, our algorithms provide _mixed approximation_ bounds on _T_ of the form:
+
+**Definition 2.1.** (Mixed approximation) We say that _X_ is an \((\alpha,\beta)\) approximation of _T_ if \(T\le X\le\alpha T+\beta\). If \(\beta=0\), we simply say that _X_ is an \(\alpha\) approximation, or specify that it is a multiplicative approximation.
+
+A desirable mixed approximation result would therefore be of the form: fix \(\varepsilon>0\) and return _X_, a \(1+\varepsilon\) approximation of _T_ with high probability.
+
+To fix notation and terminology, a key quantity in our analysis is the number of triangles adjacent to a given edge. For an edge _e_ and a set of edges _F_, let \(t_e^F\) be the number of triangles in \(\{e\}\cup F\) that include _e_.<tbc>
+

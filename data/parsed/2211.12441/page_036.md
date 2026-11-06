@@ -1,0 +1,22 @@
+By combining the last equation with (22) and separating out the term for (_i,j_)=(lo,hi), we obtain the following necessary condition for (21) to hold:
+
+\(\mathrm{DInv}_\rho(L_\mathrm{lo},L_\mathrm{hi})-\mathrm{DInv}_\rho(\{\ell_\mathrm{lo}\},\{\ell_\mathrm{hi}\})=-\sum_{1\le i<j\le k\sigma_1(i)<\sigma_2(j)\sigma_2(i)>\sigma_2(j)(i,j)\neq(\mathrm{lo},\mathrm{hi})}\mathrm{DInv}_\rho(L_i,L_j)+\sum_{1\le i<j\le k\sigma_1(i)>\sigma_2(j)\sigma_2(i)<\sigma_2(j)}\mathrm{DInv}_\rho(L_i,L_j).\) (24)
+
+In order for \(\Pi_T\) to have the partition property, it suffices to ensure that (24) fails whenever _u_<sub>lo</sub> and _u_<sub>hi</sub> are not both leaves. By (20) each of the terms \(\mathrm{DInv}_\rho(L_i,L_j)\) in (24) has the same parity as \(|L_i|\cdot|L_j|\). Since \(\mathrm{DInv}_\rho(\{\ell_\mathrm{lo}\},\{\ell_\mathrm{hi}\})\) is odd, it follows that (24) fails whenever at most one of the leaf sets _L<sub>i</sub>_ involved is odd, which is condition (a) in Proposition 51. Switching to the equivalent condition (b) from Proposition 51 allows us to conclude via Lemma 49:
+
+**Theorem 52.** _Let T be a tree without nodes of degree 1 such that the leaf child sets have size at most k, at most one of them is odd, and if there exists an odd one, say_ LC(_v_<sup>∗</sup>)_, then all ancestors of v_<sup>∗</sup> _have empty leaf child sets. Then_ \(\mathrm{D}(\Pi_T)\ge n!/(2(k!)^2)\).
+
+Theorem 8 follows by taking the base-2 logarithm of the bound.
+
+## 8.4 Counting cross inversions and evaluating the Mann-Whitney statistic
+
+We now apply the connectivity approach that we captured in Proposition 48 to the problem \(\Pi_\mathrm{XInv}\) of computing the number of cross inversions between two disjoint sets _A_ and _B_ with respect to a ranking \(\rho\) of \(X=A\sqcup B\). Note that this problem is a refinement of evaluating the Mann-Whitney statistic, or equivalently, of inversion minimization on the tree _T_ of Figure 2: Any algorithm that solves \(\Pi_\mathrm{XInv}\) with _q_ queries, can be transformed into an algorithm for \(\Pi_T\) with _q_ queries, namely by transforming the output _y_ of the algorithm for \(\Pi_\mathrm{XInv}\) to \(\mathrm{min}(y,|A|\cdot|B|-y)\). Viewed in the contrapositive, a lower bound for \(\Pi_\mathrm{XInv}\) is easier to obtain than one for \(\Pi_T\) on the tree _T_ of Figure 2. We first establish a lower bound for \(\Pi_\mathrm{XInv}\) and then see how it extends to \(\Pi_T\).
+
+One can think of \(\Pi_\mathrm{XInv}\) as inversion minimization on the Mann-Whitney tree without allowing swapping the two children of the root. As a result, the problem \(\Pi_\mathrm{XInv}\) is sensitive to _every_ adjacent- rank transposition between non-siblings, and therefore automatically satisfies the partition property (with _A_ and _B_ being the partition classes), so Proposition 48 applies. In contrast, the problem \(\Pi_T\) of minimizing inversions on the Mann-Whitney tree may not have the partition property. This is why analyzing \(\Pi_\mathrm{XInv}\) is a bit simpler, and why we handle it first.
+
+Let \(a\doteq|A|\) and \(b\doteq|B|\). By the partition property, the average sensitivity of \(\Pi_\mathrm{XInv}\) equals \(\frac{2ab}{a+b}\), which via the Sensitivity Lemma yields a query lower bound of \(\Omega(a\mathrm{log}(a))\) for \(a\le b\). To obtain the stronger lower bound of \(\Omega((a+b)\mathrm{log}(a))\) we need a more detailed analysis of the connectivity of the permutahedron graph \(G(\Pi_\mathrm{XInv})\).
+
+For a given ranking \(\rho\), let _x_<sub>1</sub>_,...,x<sub>a</sub>_ be the elements of _A_ listed in increasing order, and similarly for _y_<sub>1</sub>_,...,y<sub>b</sub>_ for the elements of _B_. We define _m_<sub>1</sub>_,...,m_<sub>_b_+1</sub> such that for each _i_, _m<sub>i</sub>_ is the number of elements of _A_ between _y_<sub>_i_-1</sub> and _y<sub>i</sub>_. (Here, _y_<sub>0</sub> and _y_<sub>_b_+1</sub> serve as sentinels with an infinitely low and infinitely high rank.) Similarly, we define _n_<sub>1</sub>_,...,n_<sub>_a_+1</sub> as the number of elements in _B_ between successive elements of _A_. The numbers _m<sub>i</sub>_ and _n<sub>i</sub>_ are the sizes of the connected components of the successor graph \(S(\Pi_\mathrm{XInv},\rho)\) (possibly with some additional zeroes). By Proposition 48, the connected component of \(\rho\) in \(G(\Pi_\mathrm{XInv})\) has size<tbc>
+
+\((m_1)!\cdots(m_{b+1})!(n_1)!\cdots(n_{a+1})!.\) (25)
+

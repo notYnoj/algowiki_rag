@@ -1,0 +1,191 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Constrained Shortest Path",
+      "problem family": "NP-hard graph optimization",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "NP-hard",
+      "quote": "There exist deterministic isomorphic-priors algorithms that solve Constrained Shortest Path and \\ell_p-Shortest Path using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "\\ell_p-Shortest Path",
+      "problem family": "NP-hard graph optimization",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "NP-hard",
+      "quote": "There exist deterministic isomorphic-priors algorithms that solve Constrained Shortest Path and \\ell_p-Shortest Path using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Constrained Spanning Tree",
+      "problem family": "NP-hard graph optimization",
+      "bound": "\\widetilde{O}(kn^\\omega) \\text{ preprocessing time and } \\widetilde{O}(n^\\omega) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "NP-complete",
+      "quote": "For Constrained Spanning Tree and \\ell_p-Spanning Tree, there exist randomized algorithms requiring \\widetilde{O}(kn^\\omega) preprocessing time and \\widetilde{O}(n^\\omega) query time, where \\omega<2.37134 is the matrix multiplication exponent.",
+      "page": 6
+    },
+    {
+      "problem": "\\ell_p-Spanning Tree",
+      "problem family": "NP-hard graph optimization",
+      "bound": "\\widetilde{O}(kn^\\omega) \\text{ preprocessing time and } \\widetilde{O}(n^\\omega) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "NP-complete",
+      "quote": "For Constrained Spanning Tree and \\ell_p-Spanning Tree, there exist randomized algorithms requiring \\widetilde{O}(kn^\\omega) preprocessing time and \\widetilde{O}(n^\\omega) query time, where \\omega<2.37134 is the matrix multiplication exponent.",
+      "page": 6
+    },
+    {
+      "problem": "Constrained Spanning Tree",
+      "problem family": "NP-hard graph optimization",
+      "bound": "O(kn^3\\log n) \\text{ preprocessing time and } O(n^3\\log n) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "NP-complete",
+      "quote": "There is an algorithm that solves the CST problem with k prior instances each of size at most n in O(kn^3log n) preprocessing time and O(n^3log n) query time.",
+      "page": 38
+    },
+    {
+      "problem": "Negative Triangle",
+      "problem family": "Problems in P",
+      "bound": "\\widetilde{O}(k\\cdot n^\\omega) \\text{ preprocessing time and } \\widetilde{O}(n^\\omega) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^3) in the worst case",
+      "quote": "There is an algorithm that solves Negative Triangle with k prior instances each having at most n vertices in \\widetilde{O}(k\\cdot n^\\omega) preprocesses time and \\widetilde{O}(n^\\omega) query time with high probability.",
+      "page": 22
+    },
+    {
+      "problem": "Replacement Path",
+      "problem family": "Problems in P",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "n^{3-o(1)} time in the worst case under standard fine-grained hypotheses",
+      "quote": "There exists a deterministic isomorphic-priors algorithm that solves Replacement Path using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Maximum Flow",
+      "problem family": "Problems in P",
+      "bound": "near-linear preprocessing and query times",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "current worst-case complexity [CKL+22, vdBCP+23, vdBLL+21, vdBLN+20]",
+      "quote": "Additionally, we can solve Maximum Flow with near-linear preprocessing and query times, which is slightly faster than the current worst-case complexity [CKL+22, vdBCP+23, vdBLL+21, vdBLN+20].",
+      "page": 6
+    },
+    {
+      "problem": "Parity Game",
+      "problem family": "Infinite-duration games",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "no polynomial-time algorithm known",
+      "quote": "There exist deterministic Isomorphic-Priors algorithms that solve Parity Game, Mean Payoff Game, Energy Game, and Simple Stochastic Game using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Mean Payoff Game",
+      "problem family": "Infinite-duration games",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "no polynomial-time algorithm known",
+      "quote": "There exist deterministic Isomorphic-Priors algorithms that solve Parity Game, Mean Payoff Game, Energy Game, and Simple Stochastic Game using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Energy Game",
+      "problem family": "Infinite-duration games",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "no polynomial-time algorithm known",
+      "quote": "There exist deterministic Isomorphic-Priors algorithms that solve Parity Game, Mean Payoff Game, Energy Game, and Simple Stochastic Game using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Simple Stochastic Game",
+      "problem family": "Infinite-duration games",
+      "bound": "\\widetilde{O}(km) \\text{ preprocessing time and } \\widetilde{O}(m) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "no polynomial-time algorithm known",
+      "quote": "There exist deterministic Isomorphic-Priors algorithms that solve Parity Game, Mean Payoff Game, Energy Game, and Simple Stochastic Game using \\widetilde{O}(km) preprocessing time and \\widetilde{O}(m) query time.",
+      "page": 6
+    },
+    {
+      "problem": "Value-determined Game",
+      "problem family": "Infinite-duration games",
+      "bound": "O(k(n+m)\\log n) \\text{ preprocessing time and } O((n+m)\\log n) \\text{ query time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "no polynomial-time algorithm known",
+      "quote": "There is an algorithm that solves the Value-determined Game problem with k prior instances each having at most n vertices and m edges in O(k(n+m)log n) preprocessing time and O((n+m)log n) query time.",
+      "page": 72
+    },
+    {
+      "problem": "3-SAT, Max 2-SAT, Clique, Coloring, 3-Coloring, Clique Cover, Exact Cover, Set Cover, Set Packing, Hitting Set, VC, MaxCut, Steiner Tree, Feedback Arc Set, Feedback Vertex Set, Directed Hamiltonian Cycle, Undirected Hamiltonian Cycle, 3D-Matching, 0/1-Integer Linear Programming, k-Median, Metric TSP, TSP within any approximation factor, and (2-\\epsilon)-approximate k-Center",
+      "problem family": "Karp's 21 NP-complete problems",
+      "bound": "no polynomial preprocessing time and polynomial query time unless \\mathsf{GI}\\in\\mathsf{P}, even with k=1",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Unless \\mathsf{GI}\\in\\mathsf{P}, none of the following problems can be solved in the Isomorphic-Priors model using simultaneously polynomial preprocessing time and polynomial query time, even when restricted to a single prior graph (k=1): 3-SAT, Max 2-SAT, Clique, Coloring, 3-Coloring, Clique Cover, Exact Cover, Set Cover, Set Packing, Hitting Set, VC, MaxCut, Steiner Tree, Feedback Arc Set, Feedback Vertex Set, Directed Hamiltonian Cycle, Undirected Hamiltonian Cycle, 3D-Matching, 0/1-Integer Linear Programming, k-Median, Metric TSP, TSP within any approximation factor, and (2-\\epsilon)-approximate k-Center.",
+      "page": 6
+    },
+    {
+      "problem": "3-SAT, Max 2-SAT, Clique, Coloring, 3-Coloring, Clique Cover, Exact Cover, Set Cover, Set Packing, Hitting Set, VC, MaxCut, Steiner Tree, Feedback Arc Set, Feedback Vertex Set, Directed Hamiltonian Cycle, Undirected Hamiltonian Cycle, 3D-Matching, 0/1-Integer Linear Programming, k-Median, Metric TSP, TSP within any approximation factor, and (2-\\epsilon)-approximate k-Center",
+      "problem family": "Karp's 21 NP-complete problems",
+      "bound": "no polynomial-size data structure and polynomial query time unless \\mathsf{GI}\\in\\mathsf{coMA}, even with unbounded preprocessing and k=1",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Unless \\mathsf{GI}\\in\\mathsf{coMA}, these lower bounds hold even against algorithms with unbounded preprocessing time, provided they are restricted to a polynomial-size data structure for answering queries.",
+      "page": 7
+    },
+    {
+      "problem": "Max-k-Coverage",
+      "problem family": null,
+      "bound": "cannot be approximated within (1-1/e+\\varepsilon') with polynomial preprocessing and query time, even with k=1",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Then there is an \\varepsilon'>0 such that Max-k-Coverage cannot be approximated within (1-1/e+\\varepsilon') in the Isomorphic-Priors model with preprocessing and query time polynomial in n, even when k=1 prior instance is given.",
+      "page": 43
+    },
+    {
+      "problem": "k-Median",
+      "problem family": null,
+      "bound": "cannot be approximated within (1+2/e-\\varepsilon'') with polynomial preprocessing and query time, even with k=1",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Also, there is an \\varepsilon''>0 such that k-Median cannot be approximated within (1+2/e-\\varepsilon'') in the Isomorphic-Priors model with preprocessing and query time polynomial in n, even when k=1 prior instance is given.",
+      "page": 43
+    }
+  ],
+  "paper": "2609.37979",
+  "usage": {
+    "prompt_tokens": 80323,
+    "completion_tokens": 15711,
+    "total_tokens": 96034,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13063,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

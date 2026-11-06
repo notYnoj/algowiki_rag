@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Equal-Subset-Sum (ESS)",
+      "problem family": "Subset-Sum",
+      "bound": "O^*(1.6994^n) time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^*(1.7067^n) time and space (Randolph and Węgrzycki)",
+      "quote": "There exists a Monte Carlo algorithm for ESS that runs in O^*(1.6994^n) time and uses O^*(1.5664^n) space.",
+      "page": 2
+    },
+    {
+      "problem": "Equal-Subset-Sum (ESS)",
+      "problem family": "Subset-Sum",
+      "bound": "O^*(1.5664^n) space",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": "O^*(1.7067^n) space (Randolph and Węgrzycki)",
+      "quote": "There exists a Monte Carlo algorithm for ESS that runs in O^*(1.6994^n) time and uses O^*(1.5664^n) space.",
+      "page": 2
+    },
+    {
+      "problem": "Equal-Subset-Sum (ESS)",
+      "problem family": "Subset-Sum",
+      "bound": "O^*(2.5430^n) time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^*(2.6817^n) time (Mucha, Nederlof, Pawlewicz, and Węgrzycki)",
+      "quote": "There exists a Monte Carlo algorithm for ESS that runs in O^*(2.5430^n) time and uses polynomial space.",
+      "page": 2
+    },
+    {
+      "problem": "Equal-Subset-Sum (ESS)",
+      "problem family": "Subset-Sum",
+      "bound": "O^*(2^{\\mathcal{T}(\\alpha)n}) \\text{ time and } O^*(2^{\\alpha n}) \\text{ space}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Schroeppel–Shamir-type T=O^*(3^n/S^2), O^*(2.6817^n) polynomial-space time, and O^*(1.7067^n) time and space",
+      "quote": "For every constant α satisfying 0≤α≤1, there is a Monte Carlo algorithm for ESS that runs in O^*(2^{\\mathcal{T}(\\alpha)n}) time and uses O^*(2^{\\alpha n}) space, where \\mathcal{T}(\\alpha) is defined in (8) of Section 5.1.",
+      "page": 3
+    }
+  ],
+  "paper": "2607.09289",
+  "usage": {
+    "prompt_tokens": 33311,
+    "completion_tokens": 6735,
+    "total_tokens": 40046,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6111,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

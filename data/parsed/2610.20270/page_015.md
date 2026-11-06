@@ -1,0 +1,20 @@
+## A Related Work
+
+§1 cites prior work in context; this appendix organizes it into four threads.
+
+### Pseudo-Boolean optimization.
+
+PBO is a classical umbrella for discrete optimization \[BH02, KHG<sup>+</sup>14\]. Two classical paradigms use semidefinite relaxations: exact solvers that combine branch- and-bound with polyhedral or SDP bounds \[RRW10\], and approximation algorithms built on SDP rounding \[GW95\]. When these approaches use an SDP relaxation, our result concerns the cost of _solving_ it rather than the cost of rounding or branching.
+
+### Moment-SOS for PBO.
+
+The hierarchy and its 0-1 specializations are classical \[Las01, Par03, Lau03a\]; books and surveys include \[Las09, BPT13, BS14, Moi20\]. Finite convergence and solution extraction are well studied: on the finite cube full order is always exact, generic problems enjoy finite convergence \[Nie14\], and flatness conditions certify exactness and permit extraction \[CF05\]. On the negative side, the worst-case lower bounds cited in §1 \[Lau03b, Gri01, Sch08\] show that no fixed order suffices for all instances, and sum-of-squares lower bounds extend to average-case problems such as planted clique \[BHK<sup>+</sup>19\]. The empirical low-order-exactness literature \[HKS25, WH25, KJY25, YLCT23\] motivates our conditional-on-exactness viewpoint. To our knowledge, the geometry of the _exact_ regime at orders \(d\ge 2\)--unique rank-one moment optimum, primal degeneracy, a generically positive-dimensional certificate set--has not been used to analyze first-order solvers.
+
+### Error bounds and other solvers for degenerate SDP.
+
+The regularity picture for splitting methods was summarized in §1. Other solvers rest on different conditions. Augmented Lagrangian methods converge linearly in their outer loop once a strictly complementary pair _exists_ and the subproblems are solved accurately enough \[Roc76a, Roc76b, LDZ24\]. The reason is quadratic growth of the primal and dual objectives, which for SDP follows from one such pair with compact solution sets \[LDZ24\]. Second-order growth is also the standing assumption of the multiple-solution ALM analysis of \[CST16\], and growth of a convex objective is equivalent to the proximal error bound and to linear rates of proximal methods \[DL18\]. The cost then moves into the subproblems. Generic first-order inner solvers are again worst-case sublinear, and the fast low-rank factorized route \[BM03\] needs a unique, strictly complementary primal optimum ("primal simplicity", see below) and a local initialization \[DLY25\]. Spectral bundle methods \[HR00\] are linear under strict complementarity and sufficient _rank capture_; the capture requirement is set by the kernel of the limiting dual slack, which can be large for degenerate SDPs even when the primal optimum has rank one \[DG23\]. For semidefinite feasibility sets without Slater-type regularity, the general guarantee is a Hölder bound with exponent tied to the singularity degree \[Stu00\]; see also \[ZS17\] for nuclear-norm problems. Splitting methods are governed by a different quantity, the Douglas-Rachford fixed-point residual. An error bound on this residual gives linear convergence of Douglas-Rachford and ADMM, and it is known for piecewise linear-quadratic and well-posed conic feasibility problems \[PVZ21, ACL16\]. For SDP, objective growth does not imply it: the tied-objective instance of Appendix E.5 meets the augmented Lagrangian hypotheses, yet its Douglas-Rachford residual bound fails. Complementarity rigidity is exactly what separates the two cases (Theorem 3.2).
+
+### Setwise versus pointwise guarantees.
+
+Our result differs from the pointwise analyses cited in §1 in two ways. First, the guarantee is _setwise_, so the endpoint the algorithm selects need satisfy neither strict complementarity nor nondegeneracy. Second, the regularity is _imported_, from a uniform interior modulus to every singular boundary endpoint. The bound (3.9) is a linear growth condition on the<tbc>
+

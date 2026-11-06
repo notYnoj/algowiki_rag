@@ -1,0 +1,4 @@
+<tbc>_What are the implications for variational optimization?_ Under the stated compactness and reachable-ground state assumptions, the local synthesis construction produces a bounded-depth, identity-initialized circuit extension block that exposes either first-order descent or a negative-curvature direction at every suboptimal circuit output. Thus, the algebra and geometry of the reachable orbit constrain not only expressivity but also the local optimization landscape.
+
+_What remains open?_ The principal questions are quantitative and algorithmic: how tight the depth bounds are, how large the local synthesis neighborhoods can be chosen, and how the required circuit parameters can be found efficiently. Incorporating hardware connectivity, locality, and noise may lead to substantially sharper architecture-dependent bounds. Resolving these questions would bring the structural guarantees developed here closer to practical finite-depth circuit design and optimization.
+

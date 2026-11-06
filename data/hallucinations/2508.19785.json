@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Approximate sorting with persistent random comparison faults",
+      "problem family": null,
+      "bound": "$O(n \\log n)$ time, $O(\\log n)$ maximum dislocation, $O(n)$ total dislocation w.h.p. for $p < 1/4$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$\\widetilde{O}(n\\sqrt{n})$ time for $p < 1/16$",
+      "quote": "RiffleSort is a randomized algorithm that approximately sorts S in O(n log n) worst-case time. The maximum dislocation and the total dislocation of the returned sequence are at most O(log n) and at most O(n), respectively, with probability at least 1 - O(log n / (n sqrt n)).",
+      "page": 12
+    },
+    {
+      "problem": "Approximate rank estimation in persistent error model",
+      "problem family": null,
+      "bound": "$O(\\log m)$ time, rank estimate within $O(d)$ of true rank w.h.p.",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "NoisySearch(S,x,d) that runs in O(log m) worst-case time and returns an index τ_x ∈ [rank(x,S) - αd, rank(x,S) + αd] with probability at least 1 - O(m^-6), where α ≥ 2 is a constant that depends only on p.",
+      "page": 7
+    },
+    {
+      "problem": "Re-sorting approximately sorted sequence",
+      "problem family": null,
+      "bound": "$O(m w_S)$ time, $O(\\log m)$ maximum dislocation, $O(m)$ total dislocation w.h.p.",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "BasketSort(S,w_S) is a deterministic algorithm that approximately sorts S in O(m w_S) worst-case time. The maximum dislocation and the total dislocation of the returned sequence are at most β_max · lnm and β_tot · m, respectively, with probability 1 - O(m^-3), where β_max ≥ 2 and β_tot are constants that come from Lemma 5.12 and Lemma 5.19, respectively, and depend only on p and q.",
+      "page": 7
+    },
+    {
+      "problem": "Approximate sorting with persistent random comparison faults",
+      "problem family": null,
+      "bound": "$\\Omega(\\log n)$ maximum dislocation lower bound w.h.p.",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "No (possibly randomized) algorithm can achieve maximum dislocation o(log n) with high probability.",
+      "page": 32
+    },
+    {
+      "problem": "Approximate sorting with persistent random comparison faults",
+      "problem family": null,
+      "bound": "$\\Omega(n)$ expected total dislocation lower bound",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "No (possibly randomized) algorithm can achieve an expected total dislocation of o(n).",
+      "page": 32
+    },
+    {
+      "problem": "Approximate sorting with persistent random comparison faults (deterministic)",
+      "problem family": null,
+      "bound": "$O(n \\log n)$ time, $O(\\log n)$ maximum dislocation, $O(n)$ total dislocation w.h.p., deterministic",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There exists a deterministic algorithm that approximately sorts S in O(n log n) worst-case time. The maximum dislocation and the total dislocation of the returned sequence are at most O(log n) and at most O(n), respectively, with high probability.",
+      "page": 36
+    }
+  ],
+  "paper": "2508.19785",
+  "usage": {
+    "prompt_tokens": 51229,
+    "completion_tokens": 11440,
+    "total_tokens": 62669,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10607,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,4 @@
+
+
+Fig. 5: Examples of multispectral texture synthesis using different style distances as optimization objective. The images displayed are obtained by pooling the 11 spectral bands to obtain 3-channels images allowing visual representation of multispectral images (channel 1: bands 1,2,3,4; channel 2: bands 5,6,7,8; channel 3: bands 9,11,12). Exemplar textures are shown on the left, and each following column correspond to a previously presented method of synthesis, label are shown on the bottom. Images that optimize the stochastic loss allow a visual appearance more faithful to the original textures than the ones minimizing a projected style distance, with no grid-like artifacts observed in the first ones. The introduction of color transfer upstream of a projection enables far less of these defects in the generated images.
+

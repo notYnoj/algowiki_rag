@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Dynamic Parameterized Subset Sampling (DPSS)",
+      "problem family": null,
+      "bound": "$O(n)$ preprocessing time, $O(1+\\mu_S(\\alpha,\\beta))$ expected query time, $O(1)$ update time, and $O(n)$ worst-case space",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Our first main result is an optimal algorithm for solving the DPSS problem, which achieves O(n) preprocessing time, O(1+\\mu_S(\\alpha,\\beta)) expected time for each query parameterized by (\\alpha,\\beta), given on-the-fly, and O(1) time for each update; here, \\mu_S(\\alpha,\\beta) is the expected size of the query result.",
+      "page": 1
+    },
+    {
+      "problem": "Bernoulli random variate generation (forms p^* and 1/(2p^*))",
+      "problem family": null,
+      "bound": "$O(1)$ expected time with $O(n)$ worst-case space",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Consider a Bernoulli random variate, Ber(p), in the form of either p=p^* or p=\\frac{1}{2p^*}, with p^*=\\frac{1-(1-q)^n}{n\\cdot q}, where q is a rational number represented by a pair of O(1)-word numerator and denominator, n is a O(1)-word integer, and n\\cdot q\\le 1; Ber(p) can be generated in O(1) expected time with O(n) worst-case space.",
+      "page": 6
+    },
+    {
+      "problem": "Truncated Geometric random variate generation",
+      "problem family": null,
+      "bound": "$O(1)$ expected time and $O(n)$ space in the worst case",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Let p\\in(0,1) be a rational number whose numerator and denominator fit in O(1) words, and n be a positive integer fitting in O(1) words. There exists an algorithm that generates a random variate from T-Geo(p,n) in O(1) expected time and O(n) space in the worst case in the Word RAM model.",
+      "page": 3
+    },
+    {
+      "problem": "deletion-only DPSS with float item weights",
+      "problem family": null,
+      "bound": "$t_p(N)+O(N\\cdot(t_q(N)+t_{del}(N)))$ expected time for Integer Sorting; an optimal deletion-only DPSS with float weights implies $O(N)$-expected-time Integer Sorting",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(N\\cdot\\sqrt{\\log\\log N})$ expected running time for Integer Sorting (Han and Thorup [18])",
+      "quote": "Suppose there exists an algorithm for deletion-only DPSS on a set of N items with float weights that has pre-processing time t_p(N), expected query time (1+\\mu)\\cdot t_q(N), and deletion time t_del(N). Then the Integer Sorting problem for N integers can be solved in t_p(N)+O(N\\cdot(t_q(N)+t_{del}(N))) expected time on the d-bit Word RAM model with d\\in\\Omega(\\log N).",
+      "page": 3
+    }
+  ],
+  "paper": "2409.18036",
+  "usage": {
+    "prompt_tokens": 31904,
+    "completion_tokens": 8028,
+    "total_tokens": 39932,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7249,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

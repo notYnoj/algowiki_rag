@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "N-Queens Problem",
+      "problem family": "NP complete problems",
+      "bound": "O(N^3)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(N!)",
+      "quote": "As a result, it takes quantum operations of order O(_N_<sup>3</sup>) in total to solve the problem, demonstrating that the _N_- Queens Problem can be efficiently solved on a quantum computer in both polynomial time (O(_N_<sup>3</sup>)) and polynomial memory (O(_N_<sup>2</sup>)) using our protocol.",
+      "page": 4
+    },
+    {
+      "problem": "N-Queens Problem",
+      "problem family": "NP complete problems",
+      "bound": "O(N^2)",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "We propose a new algorithm to generate all solutions to the _N_-Queens Problem for a given _N_ in polynomial time of order O(_N_<sup>3</sup>) and polynomial memory of order O(_N_<sup>2</sup>) on a quantum computer.",
+      "page": 1
+    }
+  ],
+  "paper": "1806.10221",
+  "usage": {
+    "prompt_tokens": 9720,
+    "completion_tokens": 9684,
+    "total_tokens": 19404,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9405,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

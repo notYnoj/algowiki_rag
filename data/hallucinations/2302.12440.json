@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Noisy Sorting",
+      "problem family": null,
+      "bound": "$(1+o(1))\\left(\\frac{1}{I(p)}+\\frac{1}{(1-2p)log\\frac{1-p}{p}}\\right)nlogn$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$(1+o(1))\\frac{2}{log\\left(\\frac{1}{\\frac{1}{2}+\\sqrt{p(1-p)}}\\right)}nlogn$ (Wang, Ghaddar and Wang, ISIT 2022)",
+      "quote": "There exists a deterministic algorithm for NoisySorting(n) with error probability o(1) which always uses at most $(1+o(1))\\left(\\frac{1}{I(p)}+\\frac{1}{(1-2p)log\\frac{1-p}{p}}\\right)nlogn$ noisy comparisons.",
+      "page": 2
+    },
+    {
+      "problem": "Noisy Sorting",
+      "problem family": null,
+      "bound": "$(1-o(1))\\left(\\frac{1}{I(p)}+\\frac{1}{(1-2p)log\\frac{1-p}{p}}\\right)nlogn$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$(1-o(1))\\frac{1}{I(p)}nlogn$ (Wang, Ghaddar and Wang, ISIT 2022)",
+      "quote": "Any (deterministic or randomized) algorithm for NoisySorting(n) with error probability o(1) must make at least $(1-o(1))\\left(\\frac{1}{I(p)}+\\frac{1}{(1-2p)log\\frac{1-p}{p}}\\right)nlogn$ noisy comparisons in expectation, even if the input is a uniformly random permutation.",
+      "page": 3
+    },
+    {
+      "problem": "Noisy Binary Search",
+      "problem family": null,
+      "bound": "$(1-o(1))\\left((1-\\delta)\\frac{logn}{I(p)}+\\frac{2log\\frac{1}{\\delta}}{(1-2p)log\\frac{1-p}{p}}\\right)$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "Burnashev and Zigangirov (1974) bounds tight only for $\\delta=1/n^{o(1)}$",
+      "quote": "Any (deterministic or randomized) algorithm for NoisyBinarySearch(n) with error probability $\\le\\delta$ must make at least $(1-o(1))\\left((1-\\delta)\\frac{logn}{I(p)}+\\frac{2log\\frac{1}{\\delta}}{(1-2p)log\\frac{1-p}{p}}\\right)$ noisy comparisons in expectation, even if the position of the element to search for is uniformly random.",
+      "page": 4
+    },
+    {
+      "problem": "Noisy Binary Search",
+      "problem family": null,
+      "bound": "$(1+o(1))\\left((1-\\delta)\\frac{logn}{I(p)}+\\frac{2log\\frac{1}{\\delta}}{(1-2p)log\\frac{1-p}{p}}\\right)$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "Burnashev and Zigangirov (1974) achieves $\\frac{logn+log(1/\\delta)+log((1-p)/p)}{I(p)}$",
+      "quote": "There exists a randomized algorithm for NoisyBinarySearch(n) with error probability $\\le\\delta$ that makes at most $(1+o(1))\\left((1-\\delta)\\frac{logn}{I(p)}+\\frac{2log\\frac{1}{\\delta}}{(1-2p)log\\frac{1-p}{p}}\\right)$ noisy comparisons in expectation.",
+      "page": 4
+    }
+  ],
+  "paper": "2302.12440",
+  "usage": {
+    "prompt_tokens": 25488,
+    "completion_tokens": 6659,
+    "total_tokens": 32147,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5742,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

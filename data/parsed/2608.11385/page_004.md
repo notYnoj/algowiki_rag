@@ -1,0 +1,20 @@
+Here the mixer angles are fixed constants independent of the input, and only the single tied cost phase angle \(\phi:=\gamma_1=\gamma_2\) is varied between oracle queries.
+
+Appendix B strengthens the exact-evaluation statement to a single oracle query. That reduction builds on the construction of Theorem 1.2 and requires additional algebraic steps to recover the Laurent coefficients from one exact output. It also shows hardness for the symmetric fixed choice \(\beta_1=\beta_2=\pi/4\) of mixing angles after adding at most one isolated source vertex. This single-query reduction is algebraic rather than necessarily numerically robust; the polynomial interpolation using Fourier recovery in the main proof remains the stable route for additive approximation.
+
+We show the hardness dichotomy of the theorem extends directly to the setting of exponentially small additive error in Section 2.3.
+
+**Remark 1.4** (Consequences of efficient exact evaluation)**.** _Suppose that, for_ \(p\ge 2\)_, the exact or exponentially precise expectation value of the MaxCut QAOA circuit can be computed in polynomial time on arbitrary graphs. Then by Toda’s theorem [16] the polynomial hierarchy collapses to its lowest level, i.e. P=PH._
+
+For exponentially precise evaluation, we show below that, for an _N_-vertex oracle instance, the extreme Laurent coefficient has magnitude at least 2<sup>-_cN_</sup> for a known constant _c_, and hence _O(N_) bits of additive precision suffice to recover the exact integer count by rounding.
+
+We emphasize that both our results and those of Ref. [5] imply that there exist worst-case families of graphs for which evaluating _F<sub>p</sub>_ appears computationally intractable, but this by no means implies this property applies to all graphs. Indeed, Ref. [5] establishes complementary algorithms parameterized by local treewidth [5], complementing results obtained for other special cases for which rigorous results have been obtained in the literature [2,4,12,17-31]. Furthermore, whether one can efficiently estimate a given QAOA cost expectation value on a classical computer or not, a quantum computer may still be required to obtain corresponding problem solution samples [13].
+
+## 1.2 Relationship to the results of [5] and related work
+
+Prior to [5], a sequence of papers [2,4,12,17-22,24-31] obtained formulas or bounds for \(\text{Eval}_p^\text{MC}\) in special cases. Beyond performance analysis, evaluating QAOA expectation values is also critical for algorithm parameter selection; in [32] it was shown that the parameter optimization problem in some settings can itself become NP-hard.
+
+For computing QAOA expectation values, Reference [5] previously established NP-hardness for every fixed \(p\ge 2\) by identifying the maximum cut value with the largest nonzero exponent of a Laurent polynomial. Here we retain the general Laurent polynomial approach but replace the underlying graph construction with one that utilizes a balanced counting gadget, and for this graph prove a corresponding exact leading coefficient identity. The new balanced gadgets make every maximum cut of the constructed _N_-vertex graph have Hamming distance _N/_2 from each assignment maximizing the cut decrease when the two anchors are flipped, so all such cuts contribute the same known weight to the leading coefficient. This property yields a count, rather than only the optimal value. The resulting new conclusions are: (i) #P-hardness through recovery of the number of maximum cuts; (ii) hardness for a single edge correlator; and (iii) the fixed-angle restrictions of Theorem 1.2. Our analysis is primarily concerned with the _p_=2 case. The \(p\ge 2\) statement then follows by padding a hard depth-two circuit with _p_-2 identity layers (i.e., layers for which \(\gamma=\beta=0\)).
+
+Our results apply instead to computation of QAOA expectation values; these quantities can also be estimated _quantumly_ by repeated sampling from the quantum computer. In [13] Farhi and Harrow adapted the postselection-based framework of [33] to show that efficient classical<tbc>
+

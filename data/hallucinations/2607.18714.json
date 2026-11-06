@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "2-Approximate All-Pairs Shortest Paths (2-APSP)",
+      "problem family": "All-Pairs Shortest Paths",
+      "bound": "\\tilde{\\mathcal{O}}(n^2) randomized time with high probability; 2-approximation for all pairs at distance at least a constant c (c = 906)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\tilde{\\mathcal{O}}(n^2) time for pairs at distance at least O(log log n) (Gupta, FOCS 2025); \\tilde{\\mathcal{O}}(n^2) for distance at least O(log n) (Dor, Halperin, Zwick)",
+      "quote": "Theorem 1.2. There exists a randomized algorithm that, with high probability, runs in $\\tilde{\\mathcal{O}}(n^2)$ time and computes 2-APSP for all pairs of vertices at distance at least c, where $c \\ge 0$ is a constant.",
+      "page": 2
+    }
+  ],
+  "paper": "2607.18714",
+  "usage": {
+    "prompt_tokens": 24268,
+    "completion_tokens": 5311,
+    "total_tokens": 29579,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5059,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

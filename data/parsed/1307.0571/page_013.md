@@ -1,0 +1,6 @@
+<tbc>mers. Assuming perfect pruning, the time spent in the pattern driven part is _Time<sub>p</sub>(t_)=_O(T<sub>t</sub>N<sub>d</sub>q_<sup>_t_-1</sup>_l_).
+
+To estimate _q_ consider the following. Say we know _M_ is a common neighbor for a tuple of size _k_. Then we add one more _l_-mer _v_ to the tuple. We know that _v_ is within distance 2_d_ from the _l_-mer at the top of the stack. The probability that _M_ is within distance _d_ of _v_ is upper bounded by _N<sub>d</sub>/N_<sub>2</sub>_d_. Here we make the generous assumption that the entire _d_-neighborhood of _M_ is included in the 2_d_-neighborhood of _v_. So an upper bound for _q_ is _N<sub>d</sub>/N_<sub>2_d_</sub> and _Time<sub>p</sub>(t_)=_O_((_m-l_+1)_<sup>t</sup>N_<sub>2_d_</sub><sup>_t(t_-1)/2</sup>/|\(\Sigma|^{lt(t-1)/2}N_d^t/N_{2d}^{t-1}l\)).
+
+If we make the two times equal we unfortunately don’t get a closed form solution for the optimal _t_. However, the expressions can be computed for every value of _t_ from 1 to _n_. We then can pick the best _t_. In practice we use a much simpler formula where _t_ increases with _d_ and with \(log|\Sigma|\) and decreases with _m_. The threshold increases as _d_ gets bigger or \(|\Sigma|\) gets bigger to avoid generating very large neighborhoods and decreases with _m_ to avoid spending too much time doing filtering.
+

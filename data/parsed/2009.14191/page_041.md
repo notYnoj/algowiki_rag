@@ -1,0 +1,25 @@
+<tbc>3-sets \(\{c_{i,j},d_{i,j}^5,d_{i,j}^8\}\), \(\{d_{i,j}^2,d_{i,j}^3,d_{i,j}^7\}\), and \(\{d_{i,j}^1,d_{i,j}^4,d_{i,j}^6\}\). For each cut-off gadget _I<sub>i</sub>_ for man _m<sub>i</sub>_, we add the 3-set {_x_<sub>3</sub>_,x_<sub>4</sub>_,x_<sub>5</sub>} to \(M'\).
+
+We claim that \(M'\) is a stable matching. Since _M_ is perfect, every agent _a<sub>i</sub>_ is matched to a 2-set it prefers to any 2-set of agents from its cut-off gadget. By Observation 4.30, we get that no agent from cut-off gadget _I<sub>i</sub>_ except for _a<sub>i</sub>_ can be part of a blocking 3-set. For every tie gadget \(T_i^j\), Observation 4.28 tells us that no blocking 3-set contains only agents of the form \(d_{i,j}^k\). All other acceptable 3-sets are of the form {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_} or \(\{a_i,b_j,c'_{i,j}\}\). First, we consider 3-sets of the form {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_}. Agent _a<sub>i</sub>_ prefers {_b<sub>j</sub>,c<sub>i,j</sub>_} to \(M'(a_i)=\{b_\ell,c_{i,\ell}\}\) if and only if _m<sub>i</sub>_ prefers _w<sub>j</sub>_ to _M(m<sub>i</sub>_) or _m<sub>i</sub>_ ties _w<sub>j</sub>_ and \(w_\ell\) and \(\ell=j+1\). However, in the latter case (i.e., _m<sub>i</sub>_ ties _w<sub>j</sub>_ and \(w_\ell\), and we have \(\ell=j+1\)), we have \(\{c_{i,\ell},d_{i,j}^5,d_{i,j}^8\}\in M'\), and thus \(c_{i_\ell}\) does not prefer \(\{a_i,b_\ell\}\) to \(M'(c_{i_\ell})\). Agent _b<sub>j</sub>_ prefers {_a<sub>i</sub>,c<sub>i,j</sub>_} to \(M'(b_j)\) if and only if _w<sub>j</sub>_ prefers _m<sub>i</sub>_ to _M(w<sub>j</sub>_). Thus, by the stability of _M_, {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_} is not blocking. Next, we consider an acceptable 3-set \(\{a_i,b_j,c'_{i,j}\}\). Agent _a<sub>i</sub>_ prefers \(\{b_j,c'_{i,j}\}\) to \(M'(a_i)\) if and only if _m<sub>i</sub>_ prefers _w<sub>j</sub>_ to _M(m<sub>i</sub>_). Similarly, agent _b<sub>i</sub>_ prefers \(\{a_i,c'_{i,j}\}\) to \(M'(b_j)\) if and only if _w<sub>j</sub>_ prefers _m<sub>i</sub>_ to _M(w<sub>j</sub>_). Therefore, the stability of _M_ implies that \(\{a_i,b_j,c'_{i,j}\}\) is not blocking. Altogether, \(M'\) is stable.
+
+## 4.4.5 Proof of the backward direction
+
+We now turn to the reverse direction, i.e., showing that a stable matching in the 3-DSRI-ML instance implies a perfect stable matching in the Perfect-SMTI-ML instance.
+
+**Lemma 4.33.** _If the_ 3-DSRI-ML _instance_ \(\mathcal{I}'\) _admits a stable matching_ \(M'\)_, then the_ Perfect- SMTI-ML _instance_ I _admits a perfect stable matching._
+
+_Proof._ Let \(M'\) be a stable matching in \(\mathcal{I}'\). By Lemma 4.29, each agent _a<sub>i</sub>_ has to be matched to a 2-set outside its cut-off gadget. Any such 2-set involves an agent _b<sub>j</sub>_. Thus, this defines a perfect matching \(M:=\{(m_i,w_j):\exists v\text{s.t.}\{a_i,b_j,v\}\in M'\}\).
+
+We claim that _M_ is stable. Assume that _M_ admits a blocking pair (_m<sub>i</sub>,w<sub>j</sub>_). If _m<sub>i</sub>_ does not tie _w<sub>j</sub>_ with another woman, then {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_} is a blocking 3-set (_a<sub>i</sub>_ and _b<sub>j</sub>_ prefer this 3-set as (_m<sub>i</sub>,w<sub>j</sub>_) is blocking, and _c<sub>i,j</sub>_ as it is the only acceptable 3-set for _c<sub>i,j</sub>_). If _m<sub>i</sub>_ ties _w<sub>j</sub>_ with a woman \(w_\ell\), then _M_ cannot contain one of the edges (_m<sub>i</sub>,w<sub>j</sub>_) or \((m_i,w_\ell)\) (as else (_m<sub>i</sub>,w<sub>j</sub>_) was not blocking). Thus, \(M'\) does not contain the 3-set \(t:=\left\{\begin{array}{ c c }
+\{a_i,b_j,c_{i,j}\} & \text{if}\ell=j-1 \\
+\{a_i,b_j,c'_{i,j}\} & \text{if}\ell=j+1
+\end{array}\right.\). Since _c<sub>i,j</sub>_ if \(\ell=j-1\) or \(c'_{i,j}\) if \(\ell=j+1\) is unmatched, and (_m<sub>i</sub>,w<sub>j</sub>_) is a blocking pair, we get that _t_ is a blocking 3-set, contradicting the stability of \(M'\).
+
+The NP-completeness of 3-DSRI-ML now easily follows.
+
+**Theorem 4.34.** 3-DSRI-ML _is_ NP_-complete, even if the master poset is a strict order._
+
+_Proof._ 3-DSRI-ML is clearly in NP, as we can check the stability of a matching in _O(n_<sup>3</sup>) time by checking for every set of three agents whether it is blocking, where _n_ is the number of agents. The reduction adds an agent _a<sub>i</sub>_ together with a cut-off gadget or _b<sub>j</sub>_ for every man _m<sub>i</sub>_ or woman _w<sub>j</sub>_. Furthermore, for every acceptable pair (_m<sub>i</sub>,w<sub>j</sub>_), we add an agent _c<sub>i,j</sub>_ together with the acceptable 3-set {_a<sub>i</sub>,b<sub>j</sub>,c<sub>i,j</sub>_} or a tie gadget. As tie and cut-off gadgets have constant size, the reduction can clearly be performed in linear time. The correctness of the reduction is proven in Lemmas 4.32 and 4.33. Observation 4.31 shows that the master poset is a strict order.
+
+Note that every acceptable 3-set contains exactly one agent from \(A:=\{a_i:i\in[|U|]\}\cup\{d_{i,j}^8,d_{i,j}^4,d_{i,j}^7\}\cup\{x_4^{a_i}:i\in[|U|]\}\), one agent from \(B:=\{b_j:j\in[|W|]\}\cup\{d_{i,j}^5,d_{i,j}^6,d_{i,j}^2\}\cup\{x_2^{a_i},x_5^{a_i}:\)<tbc>
+

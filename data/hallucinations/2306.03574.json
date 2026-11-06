@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Preconditioned MINRES for all-at-once wave equation systems",
+      "problem family": "wave equations",
+      "bound": "\\|\\tilde{\\mathbf{r}}_k\\|_2 \\le 2\\nu^{k-1}\\|\\tilde{\\mathbf{r}}_0\\|_2, \\quad k \\ge 1, \\ \\nu \\in (0,1) \\text{ independent of matrix size}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, the MINRES solver for the preconditioned system (1.10) has a convergence rate independent of both \\(\\tau\\) and h, i.e., \\(||\tilde{\\mathbf{r}}_k||_2\\le 2\\nu^{k-1}||\\tilde{\\mathbf{r}}_0||_2,k\\ge 1,\\)",
+      "page": 15
+    }
+  ],
+  "paper": "2306.03574",
+  "usage": {
+    "prompt_tokens": 21591,
+    "completion_tokens": 5660,
+    "total_tokens": 27251,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5433,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

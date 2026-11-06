@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "FWHT-based Pauli LCU decomposition",
+      "problem family": "VQLS",
+      "bound": "peak memory reduced by up to \\(1298\\times\\) versus the naive LCU method on an \\(11\\times 11\\) Hele-Shaw grid",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "naive LCU decomposition",
+      "quote": "the FWHT approach reduces peak memory by up to \\(1298\\times\\) on an \\(11\\times 11\\) Hele-Shaw grid",
+      "page": 1
+    },
+    {
+      "problem": "SVD-based coherent VQLS",
+      "problem family": "VQLS",
+      "bound": "over \\(10,000\\times\\) per-iteration speedup over standard Pauli-based VQLS at 8 qubits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "standard Pauli-based VQLS",
+      "quote": "the SVD-based coherent VQLS delivers over \\(10,000\\times\\) per-iteration speedup over standard Pauli-based VQLS at 8 qubits",
+      "page": 1
+    },
+    {
+      "problem": "15-qubit tridiagonal Toeplitz linear system",
+      "problem family": "VQLS",
+      "bound": "successful simulation of a 15-qubit tridiagonal Toeplitz system on a single Frontier node",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "we deploy the full workflow on the OLCF Frontier supercomputer and successfully simulate a 15-qubit tridiagonal Toeplitz system on a single node",
+      "page": 1
+    },
+    {
+      "problem": "tolerance-controlled approximate Pauli LCU decomposition",
+      "problem family": "VQLS",
+      "bound": "on a \\(2^{15}\\times 2^{15}\\) tridiagonal Toeplitz matrix, tolerance \\(10^{-1}\\) retains only 4 Pauli terms with relative Frobenius error 0.045, while tolerance \\(10^{-5}\\) saturates at 32768 terms with error below \\(10^{-11}\\)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For a tolerance of \\(10^{-1}\\), the decomposition requires only four Pauli terms and achieves a relative Frobenius error of 0.045, indicating substantial compression with limited loss in fidelity.",
+      "page": 7
+    }
+  ],
+  "paper": "2608.09661",
+  "usage": {
+    "prompt_tokens": 12045,
+    "completion_tokens": 10471,
+    "total_tokens": 22516,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9871,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

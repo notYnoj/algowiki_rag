@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "n-Queens' graph Q(n) eigenvalue bounds",
+      "problem family": "spectral graph theory",
+      "bound": "\\lambda_{i_1+j_1-1}(\\mathcal{Q}(n)) \\le \\lambda_{p_1}(G_{1,2}) + \\lambda_{q_1}(G_3) \\le \\lambda_{r_1+s_1-n^2}(\\mathcal{Q}(n))",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then we obtain lower and upper bounds on the eigenvalues of Q(n) as follows.",
+      "page": 27
+    }
+  ],
+  "paper": "2508.01088",
+  "usage": {
+    "prompt_tokens": 24324,
+    "completion_tokens": 11832,
+    "total_tokens": 36156,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11672,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

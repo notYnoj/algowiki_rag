@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Inversion minimization on trees",
+      "problem family": null,
+      "bound": "\\mathrm{log}_2(\\Gamma(\\frac{\\ell(n-\\ell)}{n}+1)) \\text{ queries; in particular } \\mathrm{log}_2(\\Gamma(\\frac{k}{(k+1)^2}\\cdot n+1)) \\text{ for degree } k",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "\\mathrm{log}_2\\genfrac(){pt}{2}{n}{2}=2\\mathrm{log}_2(n)-O(1)",
+      "quote": "The query complexity of inversion minimization on T is at least \\(\\mathrm{log}_2(\\Gamma(\\frac{\\ell(n-\\ell)}{n}+1))\\). In particular, the complexity is at least \\(\\mathrm{log}_2(\\Gamma(\\frac{k}{(k+1)^2}\\cdot n+1))\\) where k denotes the degree of T.",
+      "page": 4
+    },
+    {
+      "problem": "Inversion minimization on binary trees",
+      "problem family": null,
+      "bound": "\\mathrm{log}_2(n!)-O(\\log n) \\text{ queries}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "\\mathrm{log}_2(n!) \\text{ (sorting lower bound)}",
+      "quote": "For binary trees T with n leaves, the query complexity of inversion minimization on T is at least \\(\\mathrm{log}_2(n!)-O(\\log n)\\).",
+      "page": 4
+    },
+    {
+      "problem": "Inversion minimization on trees (restricted classes)",
+      "problem family": null,
+      "bound": "\\mathrm{log}_2(n!)-O(k\\mathrm{log}k) \\text{ queries}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "\\mathrm{log}_2(n!) \\text{ (sorting lower bound)}",
+      "quote": "The query complexity of inversion minimization on T is at least \\(\\mathrm{log}_2(n!)-O(k\\mathrm{log}k)\\).",
+      "page": 4
+    },
+    {
+      "problem": "Counting cross inversions / Mann-Whitney statistic",
+      "problem family": null,
+      "bound": "\\Omega((a+b)\\mathrm{log}(a)) \\text{ queries}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "b\\mathrm{log}_2(a)+O(a\\mathrm{log}a) \\text{ comparisons}",
+      "quote": "Counting cross inversions from a set A of size a to a set B of size \\(b\\ge a\\) with respect to a ranking \\(\\rho\\) of \\(X\\doteq A\\sqcup B\\) requires \\(\\Omega((a+b)\\mathrm{log}(a))\\) queries in the comparison-query model, as does inversion minimization on the tree of Figure 2.",
+      "page": 4
+    },
+    {
+      "problem": "Inversion minimization on trees of degree \\le k",
+      "problem family": null,
+      "bound": "\\Omega(\\frac{n\\mathrm{log}(n/k)}{k\\mathrm{log}(k)}) \\text{ queries}",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Let T be a tree with \\(\\mathrm{deg}(T)\\le k\\). The query complexity of \\(\\Pi_T\\) for bounded-error randomized algorithms is \\(\\Omega(\\frac{n\\mathrm{log}(n/k)}{k\\mathrm{log}(k)})\\).",
+      "page": 27
+    },
+    {
+      "problem": "Inversion minimization on trees (Turing complexity)",
+      "problem family": null,
+      "bound": "NP-hard",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "polynomial-time for binary trees",
+      "quote": "Computing \\(\\text{MinInv}(T,\\rho)\\) is NP-hard.",
+      "page": 51
+    },
+    {
+      "problem": "Inversion minimization on trees",
+      "problem family": null,
+      "bound": "O((\\text{deg}(T)^22^{\\text{deg}(T)}+\\text{deg}(T)\\cdot d_\\text{avg}(T))\\cdot n) \\text{ time}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O((\\text{deg}(T)!+\\text{deg}(T)\\cdot d_\\text{avg}(T))\\cdot n)",
+      "quote": "Using this subroutine for computing MinRInv, we can improve the time complexity of our basic algorithm to \\(O((\\text{deg}(T)^22^{\\text{deg}(T)}+\\text{deg}(T)\\cdot d_\\text{avg}(T))\\cdot n)\\).",
+      "page": 51
+    },
+    {
+      "problem": "Inversion minimization on trees",
+      "problem family": null,
+      "bound": "O(\\mathrm{log}(\\mathrm{deg}(T))\\mathrm{loglog}(\\mathrm{deg}(T))) \\text{ approximation factor}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "O(\\mathrm{log} n\\mathrm{loglog} n) \\text{ for general graphs}",
+      "quote": "Adapting this algorithm for minimizing inversions in trees produces an approximation factor of \\(O(\\mathrm{log}(\\mathrm{deg}(T))\\mathrm{loglog}(\\mathrm{deg}(T)))\\) for \\(\\mathrm{MinInv}(T,\\rho)\\).",
+      "page": 52
+    }
+  ],
+  "paper": "2211.12441",
+  "usage": {
+    "prompt_tokens": 51275,
+    "completion_tokens": 11831,
+    "total_tokens": 63106,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10561,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

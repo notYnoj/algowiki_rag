@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Correlated coalition formation games with constraints",
+      "problem family": "Matching",
+      "bound": "\\text{polynomially many improvement steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In every correlated coalition formation game with constraints and consistent generation and domination rules, for every initial structure S there is a sequence of polynomially many improvement steps that results in a stable coalition structure. The sequence can be computed in polynomial time.",
+      "page": 7
+    },
+    {
+      "problem": "Coalition formation games with constraints",
+      "problem family": "Matching",
+      "bound": "\\text{exponential number of improvement steps}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "If the generation rules contain more than one coalition in the precondition-set, there are instances and initial states such that every sequence to a stable state requires an exponential number of improvement steps.",
+      "page": 10
+    },
+    {
+      "problem": "Coalition formation games with constraints",
+      "problem family": "Matching",
+      "bound": "\\text{exponential number of improvement steps}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "If the generation rules have non-overlapping precondition- and target-coalitions, there are instances and initial states such that every sequence to a stable state requires an exponential number of improvement steps.",
+      "page": 10
+    },
+    {
+      "problem": "Coalition formation games with constraints",
+      "problem family": "Matching",
+      "bound": "\\text{every sequence cycles (no convergence)}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "If the domination rules include target-coalitions that do not overlap with any coalition in the precondition, there are instances and starting states such that every sequence cycles.",
+      "page": 11
+    },
+    {
+      "problem": "Locally stable matching, socially stable matching, considerate matching, friendship matching",
+      "problem family": "Matching",
+      "bound": "\\text{consistent generation and domination rules are present}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Consistent generation and domination rules are present in locally stable matching if agents can create k=1 matching edges and have lookahead \\ell=2 in G=(V,M\\cup L).",
+      "page": 11
+    },
+    {
+      "problem": "Reaching a given stable coalition structure",
+      "problem family": "Coalition formation games with constraints",
+      "bound": "\\text{polynomially many improvement steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In a correlated coalition formation game with constraints and consistent generation and domination rules, for every coalition structure S that is reachable from an initial state S0 through a sequence of improvement steps, there is also a sequence of polynomially many improvement steps from S0 to S.",
+      "page": 12
+    },
+    {
+      "problem": "Reachability of a given stable matching",
+      "problem family": "Matching",
+      "bound": "\\text{NP-complete}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "It is NP-complete to decide if for a given matching game, initial matching S0 and stable matching S, there is a sequence of improvement steps leading form S0 to S. This holds even for bipartite games with strict correlated preferences in the case of socially stable matching and locally stable matching, considerate matching, and friendship matching for symmetric \\alpha-values in [0,1].",
+      "page": 12
+    },
+    {
+      "problem": "Socially stable matching with general preferences",
+      "problem family": "Matching",
+      "bound": "\\text{polynomially many improvement steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In every bipartite instance of socially stable matching G=(V=U\\dot{\\cup}W,E) with general preference lists and social network L, for every initial matching M0 there is a sequence of polynomially many improvement steps that results in a socially stable matching. The sequence can be computed in polynomial time.",
+      "page": 13
+    },
+    {
+      "problem": "Considerate matching with general preferences",
+      "problem family": "Matching",
+      "bound": "\\text{polynomially many improvement steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In every bipartite instance of considerate matching G=(V=U\\dot{\\cup}W,E) with general preference lists and social network L such that \\{w,w'\\}\\notin L for all w,w'\\in W, for every initial matching M0 there is a sequence of polynomially many improvement steps that results in a considerate matching. The sequence can be computed in polynomial time.",
+      "page": 13
+    },
+    {
+      "problem": "Friendship matching with general preferences",
+      "problem family": "Matching",
+      "bound": "\\text{polynomially many improvement steps}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In every bipartite instance of friendship matching G=(V=U\\dot{\\cup}W,E) with benefits b and friendship values \\alpha such that \\alpha_{u,u'}>0 only for u,u'\\in U, for every initial matching M0 there is a sequence of polynomially many improvement steps that results in a friendship matching. The sequence can be computed in polynomial time.",
+      "page": 13
+    }
+  ],
+  "paper": "1409.4304",
+  "usage": {
+    "prompt_tokens": 23785,
+    "completion_tokens": 6638,
+    "total_tokens": 30423,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 21680
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5401,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "0-1 Knapsack",
+      "problem family": null,
+      "bound": "O(n + w_{\\mathrm{max}}^2 \\log^4 w_{\\mathrm{max}})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n + w_{\\mathrm{max}}^{12/5})",
+      "quote": "The 0-1 Knapsack problem can be solved by a deterministic algorithm with time complexity \\(O(n+w_\\mathrm{max}^2\\mathrm{log}^4w_\\mathrm{max})\\).",
+      "page": 4
+    },
+    {
+      "problem": "0-1 Knapsack",
+      "problem family": null,
+      "bound": "O(n + p_{\\mathrm{max}}^2 \\log^4 p_{\\mathrm{max}})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The 0-1 Knapsack problem can be solved by a deterministic algorithm with time complexity \\(O(n+p_\\mathrm{max}^2\\mathrm{log}^4p_\\mathrm{max})\\).",
+      "page": 4
+    },
+    {
+      "problem": "HintedKnapsackExtend+",
+      "problem family": null,
+      "bound": "O(Lb \\log^2(Lb))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "HintedKnapsackExtend$^+$ (Problem 1) with $|S[i]|\\le b$ for all $-L\\le i\\le L$ can be solved deterministically in $O(Lb\\log^2(Lb))$ time.",
+      "page": 21
+    }
+  ],
+  "paper": "2308.04093",
+  "usage": {
+    "prompt_tokens": 48669,
+    "completion_tokens": 4869,
+    "total_tokens": 53538,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4478,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

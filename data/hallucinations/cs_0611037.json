@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "branching problem (optimal alphabetic binary decision tree with asymmetric taken/untaken branch costs, static or no branch prediction)",
+      "problem family": "optimal binary decision tree problems",
+      "bound": "$O(n^{3})$ time, $O(n^{2})$ space",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The optimal tree is thus found through dynamic programming, and this algorithm has O(n^3) time complexity and O(n^2) space complexity, in a similar manner to [21].",
+      "page": 3
+    },
+    {
+      "problem": "generalized branching problem with dynamic branch prediction (multiple splitting cost functions C_k)",
+      "problem family": "optimal binary decision tree problems",
+      "bound": "$O(m n^{3})$ time, $O(n^{2}+n\\log m)$ space",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "assuming all $C_k$ are calculable in constant time, this can be done in $O(mn^3)$ time and $O(n^2+n\\log m)$ space, the $\\log m$ term accounting for recalculation and storage of the type of cost function (decision method) used for each branch.",
+      "page": 5
+    }
+  ],
+  "paper": "cs_0611037",
+  "usage": {
+    "prompt_tokens": 7240,
+    "completion_tokens": 14273,
+    "total_tokens": 21513,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13970,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

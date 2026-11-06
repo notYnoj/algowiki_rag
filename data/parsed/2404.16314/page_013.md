@@ -1,0 +1,34 @@
+work and space by sharing parts of the arrays, while updating them highly in parallel.
+
+Consider the simple case when the ready nodes form a chain (the 1D case in Sec. 4). Here we use persistent BSTs to maintain the best-decision arrays on each node. We first use UpdateBestChoice in Alg. 1 to generate the best-decision array _B_ in the middle node of the chain, and merge it with the old _B_ (the one stored at the node above this chain) using the similar technique in Sec. 4.3. During this process we use path-copying to generate a new version the new array. Then we work on the upper part and the lower part of the chain in parallel. By this divide-and-conquer method, we can generate the best-decision array on each node of the chain with _O(m_log<sup>2</sup>_m_) work and _O_(log<sup>3</sup>_m_) span, where _m_ is the length of the chain.
+
+In the general case, the structure of ready states can be arbitrary. To achieve work-efficiency and high parallelism, our solution is in a "BFS-style" algorithm that utilizes the properties of HLD (see Sec. 5.3.1). For all ready nodes in this round, we extend the heavy chain that is directly connected to the finalized nodes. Since the heavy chain will not diverge, the approach is the same as the 1D case except for additional persistence, with work proportional to the total number of nodes and polylogarithmic span. Once we finish updating the heavy chain, we will in parallel work on the light children of the nodes on the heavy chain we just proceeded. The overall structure is similar to a BFS with heavy edges with weight 0 and light edges with weight 1. Since each node only appears in one heavy chain, the work is still proportional to the number of ready nodes. We can also achieve high parallelism due to the fact that there can be at most _O_(log_n_) heavy chains and light edges from the root to any node _v_. Hence, we can finish updating all paths in a logarithmic number of steps per round, which guarantees both work-efficiency and high parallelism. Here we assume we build the HLD for the entire tree _T_ at the beginning, but we can also build the HLD for the ready states locally for each round.
+
+Combining all pieces together, in each round we can determine the ready states and maintain the best-decision arrays with work proportional to the number of ready states and polylogarithmic span. We hence have the following theorem:
+
+Theorem 5.3. _Cordon Algorithm solves Tree-GLWS in O(n_log<sup>3</sup>_n_) _work and O(k_log<sup>4</sup>_n_) _span, where k is the longest path in the best decision dependency graph._
+
+### 5.4 Parallel _k_-GLWS
+
+Another well-known variant of GLWS is to limit the output that contains a fixed given number of _k_ clusters in the output [91, 95]. Here we refer to it as the _k_-GLWS problem. Formally, let \(D[i,k']\) be the minimum cost for the first _i_ elements in \(k'\) clusters, and the DP recurrence is:
+
+\(D[i,k']=min_{j<i}D[j,k'-1]+w(j,i)\)
+
+where _w(j,i_) is the cost of forming a cluster containing elements indexed from _j_+1 to _i_, and the boundary case _D_[0,0]=0 and \(D[i,0]=+\infty\) for _i\>_0. Directly solving this recurrence takes _O(kn_<sup>2</sup>) work. When the cost function _w_ is convex (which happens in many practical settings), the computation of each column in the DP table is a static matrix-searching problem, i.e., for a totally<tbc>
+
+<tbc>monotone matrix _A_ where \(A[j,i]=D[j,k'-1]+w(j,i)\), we want to compute the minimum element in each column of _A_. Theoretically this problem can be solved in _O(n_) work by the SMAWK algorithm [2], but this algorithm is quite complicated and inherently sequential. Practically, there exists a simple divide-and-conquer algorithm with _O(n_log_n_) work [6], which is similar to the function FindIntervals in Alg. 1. This algorithm first computes the minimum element in the (_n/_2)-th column by enumerating all elements in this column, and recurse on two sides. Due to the monotonicity, the minimum element in the (_n/_2)-th column limits the searches on both sides and guarantees the search ranges shrink by a half. Hence, the work spent on each recursive level is _O(n_), yielding _O(n_log_n_) total work for a recursive structure with log_n_ levels. By parallelizing the divide-and-conquer and using parallel reduce to find the minimum element (with _O_(log_n_) span), the total span is _O_(log<sup>2</sup>_n_).
+
+We now show that when applying Cordon Algorithm to this sequential algorithm, the \(k'\)-th frontier contains all states \(D[\cdot,k']\). We can see that in the first round, states \(D[\cdot,1]\) are ready. Since all states \(D[\cdot,2]\) depend on some state from \(D[\cdot,1]\), we will put sentinels on all states \(D[\cdot,2]\) and they thus block all later states. Then we can inductively show that this applies to all rounds, so finishing this computation requires _k_ rounds. Then computing all states \(D[\cdot,k']\) in each round using the aforementioned algorithm requires _O(n_log_n_) work and _O_(log<sup>2</sup>_n_) span. Hence, the entire algorithm has _O(kn_log_n_) work and _O(k_log<sup>2</sup>_n_) span. In this problem, _k_ is also the depth of the DP DAG, so this algorithm is a perfect parallelization of the classic sequential algorithm.
+
+### 5.5 Optimal Binary Search Tree (OBST)
+
+(Static) OBST is one of the earliest examples of DM optimization. Given an array of frequency _a_<sub>0_..2n_</sub>, it computes the recurrence
+
+\(D[i,j]=min_{j\le k<i}D[j,k]+D[k+1,i]+w(i,j)\) (9)
+
+where \(w(i,j)=\sum_{k^\prime=2(i-1)}^{2j}a_{k^\prime}\), and returns _D_[1_,n_]. Knuth [64] first showed that computing this recurrence only needs _O(n_<sup>2</sup>) work, and later Yao [96] showed that this algorithm applies to any convex function _w(i,j_). Here let the best decision of a state _D[i,j_] be the index _k_ that minimizes _D[i,j_] in eq. (9). In this algorithm, _D[i,j_] depends on _D[i,j_-1] (let _l_ be its best decision), _D[i_+1_,j_] (let _r_ be its best decision), _D[i,l..r_], and _D[l..r,j_]. When applying Cordon Algorithm, due to the dependence from _D[i,j_] to _D[i,j_-1] and _D[i_+1_,j_], the \(\delta\)-th frontier contains the states \(D[i,i+\delta]\). Hence, although it results in optimal parallelization to the standard sequential algorithm, the algorithm requires _n_-1 rounds and thus has _O(n_log_n_) span. Achieving _o(n_) span may need new insights to redesign the dependencies.
+
+## 6 EXPERIMENTS
+
+To demonstrate the practicability of our new algorithms, we designed experiments for LCS and convex GLWS. We implemented our parallel LCS algorithm and parallel GLWS algorithm in C++ using ParlayLib [15] to support fork-join parallelism and some parallel primitives (e.g., reduce). Our tests use a 96-core (192 hyperthreads) machine with four Intel Xeon Gold 6252 CPUs and 1.5 TB of main memory. We implemented two of our new algorithms (LCS<tbc>
+

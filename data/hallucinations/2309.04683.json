@@ -1,0 +1,141 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "kMin-IP",
+      "problem family": null,
+      "bound": "no $O(n^{k-\\varepsilon})$ time algorithm for rank $2^{O(\\log^* n)}$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(n^k)$",
+      "quote": "Assuming SETH, there is no algorithm for kMin-IP_{n,2^{O(log^* n)}} running in time O(n^{k-\\varepsilon}) for any \\varepsilon>0.",
+      "page": 7
+    },
+    {
+      "problem": "kD LWS",
+      "problem family": null,
+      "bound": "$O(n^{k+1-\\varepsilon})$ for constant rank",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^{k+1})$",
+      "quote": "For every constant c>0 there is an \\varepsilon>0 such that kD LWS,[Static]kD LWS can be solved in time O(n^{k+1-\\varepsilon}), O(N^{2-\\varepsilon} \\cdot n^{k-1}) respectively if the rank of the tensor w is at most c.",
+      "page": 7
+    },
+    {
+      "problem": "[Static]kD LWS",
+      "problem family": null,
+      "bound": "$O(N^{2-\\varepsilon} \\cdot n^{k-1})$ for constant rank",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(N^2 \\cdot n^{k-1})$",
+      "quote": "For every constant c>0 there is an \\varepsilon>0 such that kD LWS,[Static]kD LWS can be solved in time O(n^{k+1-\\varepsilon}), O(N^{2-\\varepsilon} \\cdot n^{k-1}) respectively if the rank of the tensor w is at most c.",
+      "page": 7
+    },
+    {
+      "problem": "kD LWS",
+      "problem family": null,
+      "bound": "no $O(n^{k+1-\\varepsilon})$ for rank $2^{O(\\log^* n)}$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(n^{k+1})$",
+      "quote": "Under SETH, for any k>1 and \\varepsilon>0, there is no algorithm running in time O(n^{k+1-\\varepsilon}) for kD LWS when the weight tensor has rank 2^{O(log^* n)}.",
+      "page": 7
+    },
+    {
+      "problem": "[Static]kD LWS",
+      "problem family": null,
+      "bound": "no $O(n^{k+1-\\varepsilon})$ for rank $2^{O(\\log^* n)}$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(N^2 \\cdot n^{k-1})$",
+      "quote": "Assuming SETH, there is no O(n^{k+1-\\varepsilon}) time algorithm for kD LWS or [Static]kD LWS with rank at least 2^{O(log^* n)} for any \\varepsilon>0.",
+      "page": 18
+    },
+    {
+      "problem": "2D LWS",
+      "problem family": null,
+      "bound": "no truly sub-cubic algorithm for slice rank 3",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(n^3)$",
+      "quote": "Assuming the APSP conjecture, there is no truly sub-cubic algorithm for 2D LWS or [Static]2D LWS with slice rank 3.",
+      "page": 8
+    },
+    {
+      "problem": "[Static]2D LWS",
+      "problem family": null,
+      "bound": "no truly sub-cubic algorithm for slice rank 3",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(N^2 \\cdot n^2)$",
+      "quote": "Assuming the APSP conjecture, there is no truly sub-cubic algorithm for 2D LWS or [Static]2D LWS with slice rank 3.",
+      "page": 8
+    },
+    {
+      "problem": "2D LWS",
+      "problem family": null,
+      "bound": "truly sub-cubic time algorithm for slice rank 1",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^3)$",
+      "quote": "There are truly sub-cubic time algorithms for 2D LWS and [Static]2D LWS with slice rank 1.",
+      "page": 8
+    },
+    {
+      "problem": "[Static]2D LWS",
+      "problem family": null,
+      "bound": "$O(n^2 \\cdot N^{1-\\varepsilon})$ for slice rank 1",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(N^2 \\cdot n^2)$",
+      "quote": "[Static]2D LWS_{n,N} with slice rank 1 can be solved in O(n^2 \\cdot N^{1-\\varepsilon}) for some \\varepsilon>0.",
+      "page": 19
+    },
+    {
+      "problem": "2D LWS^{PT}",
+      "problem family": null,
+      "bound": "no truly sub-cubic algorithm for rank $2^{O(\\log^* n)}$ or above",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(n^3)$",
+      "quote": "Under SETH, there is no truly sub-cubic algorithm for 2D LWS^{PT} with weight function whose rank is 2^{O(log^* n)} or above.",
+      "page": 8
+    },
+    {
+      "problem": "2D LWS^{PT}",
+      "problem family": null,
+      "bound": "no truly sub-cubic algorithm for slice rank 3 or above",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(n^3)$",
+      "quote": "Under APSP conjecture, there is no truly sub-cubic algorithm for 2D LWS^{PT} with weight function whose slice rank is 3 or above.",
+      "page": 8
+    },
+    {
+      "problem": "Multiple nested boxes",
+      "problem family": null,
+      "bound": "$O(n^{k+1-\\varepsilon})$ for some \\varepsilon>0",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^{k+1})$",
+      "quote": "Multiple nested boxes with dimension k can be solved in time O(n^{k+1-\\varepsilon}) for some \\varepsilon>0.",
+      "page": 8
+    }
+  ],
+  "paper": "2309.04683",
+  "usage": {
+    "prompt_tokens": 34216,
+    "completion_tokens": 11071,
+    "total_tokens": 45287,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9610,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

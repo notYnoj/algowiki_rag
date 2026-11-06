@@ -1,0 +1,14 @@
+<tbc>point-based neural renderers have recently mixed local neural decoding with deferred shading. Hahlbohm et al. \[18\] uses point-clouds as query points for a global hash-grid encoded feature field, decoded locally using a shallow neural network into implicit features. These are splatted to the camera plane and finally rendered through a convolutional neural network. However, the necessity of large-bandwidth neural networks to uplift the poor scalability and detail afforded by the spatial encoding made them slow and difficult to train; the former requiring guiding networks with regular NeRF-style rendering to steer the optimization, while the latter required expensive perceptual-loss supervision. Earlier work on neural point-based graphics \[1\] and trilinear point splatting \[13\] also attach local features to discrete primitives and decode them with neural networks. Kopanas et al. \[31\] combine per-point features with deferred shading for reflective content, while closer to our work Feature Splatting \[44\] also introduced per-primitive higher dimensional features to be decoded deferredly. Hybrid mesh and surface representations such as NeuMesh \[8\] and SurRF \[77\] similarly pair local learnable features with neural decoding for appearance modeling. Despite the large body of work combining explicit geometry, implicit fields or features and neural decoding, leveraging them efficiently without exploding memory or computational costs remains a challenge.
+
+To improve expressivity without global feature grids, several primitive-based methods introduce per-primitive textures \[4,25,59,71,73,81\]. In particular, BB- Splat \[59\] and Textured Gaussians \[4\] further model opacity as a spatially varying texture on each primitive. Generally, however, highly expressive primitives complicate optimization and are prone to overfitting, apart from the substantial storage cost, which translates as well to slower rendering. Instead, we decouple geometry and appearance by pairing local per-particle features with a shared lightweight neural decoder, in turn enabling the reduction of queries to the neural field to a single deferred pass. This allows particle density to more closely follow geometric complexity rather than being artificially increased to reproduce high-frequency appearance.
+
+### 3 Preliminaries
+
+We review primitive-based radiance fields, primitive-based volume rendering, and positional encodings, focusing on the aspects most relevant to our method.
+
+#### Primitive-based Radiance Fields.
+
+Primitive-based radiance fields represent complex scenes using an unstructured collection of 2D or 3D geometric primitives, such as anisotropic Gaussians \[27\], oriented disks \[24\], or triangles \[23\]. In Sec. 4, we present our formulation on the example of 3D Gaussian primitives \[27, 70\] whose spatial response function
+
+\(\rho(\mathbf{x})=exp\left(-\frac{1}{2}(\mathbf{x}-\mu)^T\Sigma^{-1}(\mathbf{x}-\mu)\right),\) (1)
+

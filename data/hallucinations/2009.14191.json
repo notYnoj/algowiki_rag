@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "3-DSR-ML (3-Dimensional Stable Roommates with Master List of 2-sets)",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "NP-complete",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 3.8. 3-DSR-ML is NP-complete.",
+      "page": 13
+    },
+    {
+      "problem": "MDSR-Poset (Multidimensional Stable Roommates with master poset of agents)",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "O(n) time (or O(n^2) time if the poset is given via pairwise comparisons)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 4.1. If \\\\unknown_\\\\mathrm{ML} is a strict order, then any MDSR-Poset instance admits a uniquely determined stable matching. Assuming that the poset is given as a ranking a_1\\\\succ_\\\\mathrm{ML}a_2\\\\succ_\\\\mathrm{ML}\\\\cdots\\\\succ_\\\\mathrm{ML}a_n, this stable matching can be found in O(n) time, where n is the number of agents. If the poset is given via pairwise comparisons, then the unique stable matching can be found in O(n^2) time.",
+      "page": 14
+    },
+    {
+      "problem": "MDSR-Poset",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "O(n^2) + (\\\\kappa d^4)^{O(\\\\kappa d^4)} n time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 4.4. MDSR-Poset can be solved in O(n^2)+(\\\\kappa d^4)^{O(\\\\kappa d^4)}n time, where \\\\kappa is the maximum number of agents incomparable to a single agent, d is the dimension (i.e., the group size), and n is the number of agents.",
+      "page": 17
+    },
+    {
+      "problem": "MDSR-Poset",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "O(n^2) + (\\\\kappa^5 2^{16\\\\kappa})^{O(\\\\kappa^5 2^{16\\\\kappa})} n time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 4.6. MDSR-Poset can be solved in O(n^2)+(\\\\kappa^52^{16\\\\kappa})^{O(\\\\kappa^52^{16\\\\kappa})}n time, where \\\\kappa is the maximum number of agents an agent is incomparable to, and n is the total number of agents.",
+      "page": 19
+    },
+    {
+      "problem": "3DSR-Poset (3-Dimensional Stable Roommates with master poset)",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "W[1]-hard parameterized by poset width",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.15. 3DSR-Poset parameterized by poset width is W[1]-hard.",
+      "page": 29
+    },
+    {
+      "problem": "3-DSR (3-Dimensional Stable Roommates)",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "W[1]-hard parameterized by \\\\lambda(\\\\mathcal{I}) (deletion distance to a strictly ordered master poset)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.27. 3-DSR parameterized by \\\\lambda(\\\\mathcal{I}) is W[1]-hard, where \\\\lambda(\\\\mathcal{I}) denotes the minimum number of agents such that the preferences of the instance arising through the deletion of these agents are derived from a strict order.",
+      "page": 36
+    },
+    {
+      "problem": "3-DSRI-ML (3-Dimensional Stable Roommates with Incomplete preferences and Master List)",
+      "problem family": "Multidimensional Stable Roommates",
+      "bound": "NP-complete, even if the master poset is a strict order",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.34. 3-DSRI-ML is NP-complete, even if the master poset is a strict order.",
+      "page": 42
+    }
+  ],
+  "paper": "2009.14191",
+  "usage": {
+    "prompt_tokens": 64060,
+    "completion_tokens": 6575,
+    "total_tokens": 70635,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5495,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

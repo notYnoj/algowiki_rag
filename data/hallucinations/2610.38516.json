@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Multi-label Random Walker / Power Watershed",
+      "problem family": "Differentiable segmentation layers",
+      "bound": "\\text{cost affine in } K \\text{ (one shared matrix, one RHS per label); limit: one spanning forest irrespective of } K",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The cost is therefore affine in K and the problem is exact and convex for every K. The limit is one spanning forest irrespective of K.",
+      "page": 4
+    },
+    {
+      "problem": "WS layer differentiation (implicit mode)",
+      "problem family": "Differentiable optimization layers",
+      "bound": "\\text{memory independent of solver depth} \\ (0.09\\,\\text{GB per batch of 16})",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "This adjoint solve therefore yields the gradient with respect to all costs, with memory independent of the solver's depth.",
+      "page": 4
+    },
+    {
+      "problem": "Multi-marker WS layer solve on GPU",
+      "problem family": "Differentiable segmentation layers",
+      "bound": "41+20K\\,\\text{ms per batch of 16 } 256^2 \\text{ images}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "On an A100 the multi-marker solve costs 41+20_K_ms per batch of 16 256^2 images with K markers each",
+      "page": 4
+    },
+    {
+      "problem": "Exact Power Watershed limit",
+      "problem family": "Combinatorial segmentation",
+      "bound": "29\\text{--}51\\,\\text{ms per patch on one CPU core for } K \\le 128",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "and the exact limit 29-51ms per patch on one CPU core for K up to 128",
+      "page": 4
+    },
+    {
+      "problem": "Random Walker linear system conditioning",
+      "problem family": "Numerical linear algebra",
+      "bound": "\\kappa(A) \\gtrsim e^{p\\Delta c}/4",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the condition number \\kappa(A)=\\lambda_\\max(A)/\\lambda_\\min(A) satisfies \\kappa(A)\\gtrsim e^{p\\Delta c}/4",
+      "page": 5
+    },
+    {
+      "problem": "Unrolled conjugate gradient differentiation",
+      "problem family": "Differentiable optimization layers",
+      "bound": "\\text{radius} \\le T \\text{ pixels after } T \\text{ unrolled iterations}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "T then caps how far a boundary can move, since T iterations propagate information at most in a radius of T pixels.",
+      "page": 4
+    }
+  ],
+  "paper": "2610.38516",
+  "usage": {
+    "prompt_tokens": 130551,
+    "completion_tokens": 7870,
+    "total_tokens": 138421,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7178,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

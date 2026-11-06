@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Square matrix multiplication exponent",
+      "problem family": "Matrix multiplication",
+      "bound": "\\omega_{\\mathbb{F}} \\le \\frac{9}{4}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\omega_{\\mathbb{F}} < 2.371339\\ \\text{(laser method, [ADW}^{+}\\text{25])}",
+      "quote": "Theorem 1.1. For every field \\mathbb{F}, \\omega_\\mathbb{F}\\le 9/4.",
+      "page": 2
+    },
+    {
+      "problem": "Rectangular matrix multiplication exponent",
+      "problem family": "Matrix multiplication",
+      "bound": "\\omega_{\\mathbb{F}}(a,b,c)\\le\\begin{cases}a+b & \\text{if }c(a+b)\\le ab,\\\\ \\frac{(ab+bc+ca)^2}{4abc} & \\text{if }c(a+b)>ab,\\end{cases}\\ \\text{with equality if }c(a+b)\\le ab.",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "Rectangular bounds from the laser method (e.g. \\alpha_{\\mathbb{F}}>0.321334\\ [WXXZ}^{+}\\text{24])",
+      "quote": "Theorem 1.2. For every field \\mathbb{F} and all real numbers a\\ge b\\ge c\\ge 0, \\omega_\\mathbb{F}(a,b,c)\\le\\left\\{\\begin{array}{ c c } a+b & \\text{\\textit{if}}c(a+b)\\le ab,\\\\ \\frac{(ab+bc+ca)^2}{4abc} & \\text{\\textit{if}}c(a+b)>ab,\\end{array}\\right.\\ \\text{with equality if }c(a+b)\\le ab.",
+      "page": 2
+    },
+    {
+      "problem": "Rectangular matrix multiplication exponent \\omega_{\\mathbb{F}}(1,k,1)",
+      "problem family": "Matrix multiplication",
+      "bound": "\\omega_{\\mathbb{F}}(1,k,1)\\le\\begin{cases}2 & \\text{if }0\\le k\\le 1/2,\\\\ 1+k+\\frac{1}{4k} & \\text{if }k\\ge 1/2,\\end{cases}\\ \\text{so }\\alpha_{\\mathbb{F}}\\ge 1/2\\ \\text{and }\\omega_{\\mathbb{F}}(1,2,1)\\le 25/8.",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\alpha_{\\mathbb{C}}>0.465\\ [Ope26b],\\ \\alpha_{\\mathbb{F}}>0.321334\\ [WXXZ}^{+}\\text{24],\\ \\omega_{\\mathbb{F}}(1,2,1)\\le 3.250035\\ [ADW}^{+}\\text{25]}",
+      "quote": "Corollary 4.17. For every real number k\\ge 0, \\omega_\\mathbb{F}(1,k,1)\\le\\left\\{\\begin{array}{ c c } 2 & \\text{\\textit{if}}0\\le k\\le 1/2,\\\\ 1+k+\\frac{1}{4k} & \\text{\\textit{if}}k\\ge 1/2.\\end{array}\\right.\\ \\text{In particular, }\\alpha_\\mathbb{F}\\ge 1/2\\ \\text{and }\\omega_\\mathbb{F}(1,2,1)\\le 25/8.",
+      "page": 31
+    },
+    {
+      "problem": "Matrix multiplication exponent (operational barrier)",
+      "problem family": "Matrix multiplication",
+      "bound": "\\log r\\ge\\begin{cases}a+b & \\text{if }c(a+b)\\le ab,\\\\ \\frac{(ab+bc+ca)^2}{4abc} & \\text{if }c(a+b)>ab,\\end{cases}\\ \\text{and in particular }n^{9/4}\\le r\\ \\text{for }n_1=n_2=n_3=n.",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In particular, if n_1=n_2=n_3=n, then n^{9/4}\\le r.",
+      "page": 34
+    }
+  ],
+  "paper": "2610.30054",
+  "usage": {
+    "prompt_tokens": 53533,
+    "completion_tokens": 15263,
+    "total_tokens": 68796,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14275,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

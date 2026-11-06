@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Pigeonhole Equal Subset Sum",
+      "problem family": "Equal Subset Sum",
+      "bound": "\\mathrm{poly}(n)\\cdot M^{\\mathcal{O}(1/\\log \\delta)} \\text{ time, where } \\delta = n/\\log M; \\text{ corollary: } \\mathrm{poly}(n)\\cdot M^{o(1)} \\text{ when } M=2^{o(n)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O^\\star(M^{1/3})",
+      "quote": "There exists a deterministic algorithm that, given an integer n and a set \\(S\\subseteq\\{1,\\dots,M\\}\\) of size n such that nM<2^n-1, runs in time \\(\\mathrm{poly}(n)\\cdot M^{\\mathcal{O}(1/\\mathrm{log}\\delta)}\\) and returns two distinct subsets of S with the same sum, where \\(\\delta=\\delta(n,M):=n/\\mathrm{log}M\\) is the density of the instance.",
+      "page": 2
+    },
+    {
+      "problem": "Pigeonhole Equal Subset Sum",
+      "problem family": "Equal Subset Sum",
+      "bound": "No \\(2^{o(n/\\log n)}\\) time algorithm under Hypothesis 1; no \\(\\mathrm{poly}(n)\\cdot M^{o(1/\\log n)}\\) time algorithm",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Under Hypothesis 1, there is no \\(2^{o(n/\\log n)}\\) time algorithm that solves Pigeonhole Equal Subset Sum. Moreover, there is no \\(\\mathrm{poly}(n)\\cdot M^{o(1/\\log n)}\\) time algorithm for PESS (even for \\(\\delta=n^{1/2+o(1)}\\)).",
+      "page": 3
+    },
+    {
+      "problem": "Average-Case Integer Equal Subset Sum",
+      "problem family": "Equal Subset Sum",
+      "bound": "\\tilde{\\mathcal{O}}(2^{n/4}) \\text{ time with success probability } \\Omega(n^{-2}) \\text{ for } M=\\Theta(2^n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O^\\star(M^{1/3})",
+      "quote": "Let \\(M=\\Theta\\left(2^n\\right)\\). There exists a deterministic algorithm that given a set A of n random integers sampled uniformly from the set {1,...,M}, finds distinct \\(X,Y\\subseteq A\\) such that \\(\\Sigma(X)=\\Sigma(Y)\\) with probability \\(\\Omega\\left(n^{-2}\\right)\\) in \\(\\tilde{\\mathcal{O}}(2^{n/4})\\) time.",
+      "page": 4
+    },
+    {
+      "problem": "Average-Case Modular Equal Subset Sum",
+      "problem family": "Equal Subset Sum",
+      "bound": "\\tilde{\\mathcal{O}}(2^{n/4}) \\text{ time with success probability } \\Omega(1) \\text{ for } M=\\Theta(2^n), M=pqr, p,q=\\Theta(M^{1/4})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O^\\star(M^{1/2})",
+      "quote": "Let the modulus \\(M=\\Theta\\left(2^n\\right)\\), where M=pqr, \\(p,q=\\Theta\\left(M^{1/4}\\right)\\) and p, q, and r are pairwise co-prime integers. There exists a deterministic algorithm that given a set A of n random modular integers sampled uniformly from Z_M, finds distinct \\(X,Y\\subseteq A\\) such that \\(\\Sigma(X)\\equiv_M\\Sigma(Y)\\) with probability \\(\\Omega\\left(1\\right)\\) in \\(\\tilde{\\mathcal{O}}(2^{n/4})\\) time.",
+      "page": 4
+    }
+  ],
+  "paper": "2610.31056",
+  "usage": {
+    "prompt_tokens": 64683,
+    "completion_tokens": 7879,
+    "total_tokens": 72562,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6961,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

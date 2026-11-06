@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "(n,k)-counting",
+      "problem family": "counting",
+      "bound": "lcc(g_k^n) > 1 \\text{ for } 17 \\le k \\le n",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every \\(17\\le k\\le n\\), it follows: \\(lcc(g_k^n)>1\\).",
+      "page": 11
+    },
+    {
+      "problem": "(n,n)-counting",
+      "problem family": "counting",
+      "bound": "11",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every \\(i\\ge 1\\) and n=2^i there exists a protocol that solves (n,n)-counting with a local communication complexity of 11.",
+      "page": 13
+    },
+    {
+      "problem": "symmetric boolean function evaluation",
+      "problem family": "symmetric functions",
+      "bound": "11",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "This protocol can be used to compute any symmetric boolean function with the same local complexity.",
+      "page": 13
+    },
+    {
+      "problem": "(n,k)-counting for k \\le n/10",
+      "problem family": "counting",
+      "bound": "2",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every n and k, such that \\(0\\le k\\le n/10\\), there exists a protocol that solves (n,k)-counting with a local communication complexity of 2.",
+      "page": 15
+    },
+    {
+      "problem": "sorting of 1-bit inputs",
+      "problem family": "sorting",
+      "bound": "12",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The sorting of 1-bit inputs can be solved with local complexity 12.",
+      "page": 17
+    },
+    {
+      "problem": "searching for the kth 1",
+      "problem family": "search",
+      "bound": "O(1)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every network size n=2^i and search location k≤n, searching for the kth 1 can be solved with constant local complexity.",
+      "page": 17
+    },
+    {
+      "problem": "modular arithmetic operations (comparison, addition, subtraction, multiplication, division, exponentiation mod n+1)",
+      "problem family": "modular arithmetic",
+      "bound": "O(1)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Suppose n+1 is a prime number. A balanced 2-symmetric function f:{0,1}^{2n}→N can be computed with constant local complexity if the corresponding function g_f:[n]×[n]→N is: 1. a function of only one of the two variables with range {0,1,...,n}, 2. comparison operator (>,≥,=,≤,<) on two variables with output 0 or 1, 3. a modular (mod (n+1)) addition, subtraction, multiplication or division, exponentiation or 4. a constant applications/composition of functions from first three items in this list.",
+      "page": 19
+    },
+    {
+      "problem": "GCD(x,y) for 1≤x,y≤n",
+      "problem family": "number theory",
+      "bound": "O(1)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For \\(1\\le x,y\\le n\\), the local complexity of computing GCD(x,y) is O(1).",
+      "page": 20
+    }
+  ],
+  "paper": "2111.11460",
+  "usage": {
+    "prompt_tokens": 27990,
+    "completion_tokens": 11500,
+    "total_tokens": 39490,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10616,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

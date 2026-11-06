@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Core size of product of Monge matrices",
+      "problem family": "Monge matrix multiplication",
+      "bound": "\\delta(A\\otimes B) \\le 2\\cdot(\\delta(A)+\\delta(B))",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1.1. Let A be a p\\times q Monge matrix, and let B be a q\\times r Monge matrix. We have \\delta(A\\otimes B)\\le 2\\cdot(\\delta(A)+\\delta(B)).",
+      "page": 3
+    },
+    {
+      "problem": "Core-sparse Monge matrix multiplication",
+      "problem family": "Monge matrix multiplication",
+      "bound": "\\mathcal{O}(p+q+r+(\\delta(A)+\\delta(B))\\log(1+\\delta(A)+\\delta(B)))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}((n+\\delta)\\log^2 n) or \\mathcal{O}((n+\\delta)\\log^3 n) (Russo)",
+      "quote": "Theorem 1.2. There is a (deterministic) algorithm that, given the condensed representations of a p\\times q Monge matrix A and a q\\times r Monge matrix B, in time \\mathcal{O}(p+q+r+(\\delta(A)+\\delta(B))\\log(1+\\delta(A)+\\delta(B))) computes the condensed representation of A\\otimes B.",
+      "page": 4
+    },
+    {
+      "problem": "Witness recovery for min-plus product of Monge matrices",
+      "problem family": "Monge matrix multiplication",
+      "bound": "\\mathcal{O}(n_1+n_2+n_3+\\delta(M_1)+\\delta(M_2)) \\text{ space and } \\mathcal{O}(\\log(2+\\delta(M_1)+\\delta(M_2))) \\text{-time oracle access to } W^{M_1,M_2}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 4.7. The algorithm of Theorem 1.2 can be extended so that, within the same time complexity, it also builds a data structure that takes \\mathcal{O}(n_1+n_2+n_3+\\delta(M_1)+\\delta(M_2)) space and provides \\mathcal{O}(\\log(2+\\delta(M_1)+\\delta(M_2)))-time oracle access to W^{M_1,M_2}.",
+      "page": 11
+    },
+    {
+      "problem": "Range LIS reporting queries",
+      "problem family": "Range LIS queries",
+      "bound": "\\mathcal{O}(n\\log^{3-\\alpha} n) \\text{ preprocessing and } \\mathcal{O}(\\ell\\log^\\alpha n) \\text{ reporting time for any } \\alpha\\in[0,1]",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\mathcal{O}(n^{3/2}\\polylog n) \\text{ preprocessing and } \\mathcal{O}(\\ell+n^{1/2}\\polylog n) \\text{ reporting (Karthik C. S. and Rahul [29])}",
+      "quote": "Theorem 1.3. For every parameter \\alpha\\in[0,1], there exists an algorithm that, given an integer array s[0..n), in time \\mathcal{O}(n\\log^{3-\\alpha} n) builds a data structure that can answer range LIS reporting queries in time \\mathcal{O}(\\ell\\log^\\alpha n), where \\ell is the length of the reported sequence.",
+      "page": 12
+    }
+  ],
+  "paper": "2408.04613",
+  "usage": {
+    "prompt_tokens": 40232,
+    "completion_tokens": 9146,
+    "total_tokens": 49378,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8307,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

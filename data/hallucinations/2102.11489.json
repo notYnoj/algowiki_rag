@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting circuits for short keys",
+      "problem family": "sorting circuits",
+      "bound": "$O(nk(w+k))\\cdot\\max(1,\\mathsf{poly}(\\log^* n - \\log^*(w+k)))$ size and $O(\\log n + \\log w)$ depth",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "$O(n)\\cdot\\min(k,\\log n)$ size with super-polylogarithmic depth [ALS21]",
+      "quote": "There is a constant fan-in, constant fan-out boolean circuit that correctly sorts any array containing n elements each with a k-bit key and a w-bit payloads, whose size is \\(O(nk(w+k))\\cdot\\mathrm{max}(1,\\mathsf{poly}(\\mathrm{log}^*n-\\mathrm{log}^*(w+k)))\\) and whose depth is \\(O(\\mathrm{log}n+\\mathrm{log}w)\\).",
+      "page": 2
+    },
+    {
+      "problem": "Oblivious PRAM sorting",
+      "problem family": "sorting",
+      "bound": "$O(n)\\cdot\\min(k,\\log n)$ total work and $O(\\log n)$ depth",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "$O(kn)$ work and polylogarithmic depth",
+      "quote": "There exists a deterministic oblivious parallel algorithm that sorts any input array containing n elements each with a k-bit key in \\(O(n)\\cdot min(k,logn)\\) total work and \\(O(\\log n)\\) depth, assuming that each element can be stored in \\(O(1)\\) words.",
+      "page": 4
+    },
+    {
+      "problem": "Tight compaction circuit",
+      "problem family": "compaction circuits",
+      "bound": "$O(nw)\\cdot\\max(\\mathsf{poly}(\\log^* n - \\log^* w),1)$ size and $O(\\log n)$ depth",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "$O(nw)$ size with linear depth [ALS21]",
+      "quote": "There is an \\((n,w)\\)-tight compaction circuit with \\(O(nw)\\cdot max(\\mathsf{poly}(log^*n-log^*w),1)\\) generalized boolean gates, \\(O(n)\\cdot max(\\mathsf{poly}(log^*n-log^*w),1)\\) number of \\(w\\)-selector gates, and of depth \\(O(\\log n)\\).",
+      "page": 50
+    },
+    {
+      "problem": "Sorting circuits for short keys",
+      "problem family": "sorting circuits",
+      "bound": "$O(nk(w+k))\\cdot(1+\\log^* n - \\log^*(w+k))$ size and $O(\\log n + \\log w)$ depth",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "$O(nk(w+k)\\cdot(1+\\log^* n - \\log^*(w+k)))$ size and $O(\\log^3 n)$ depth [KK21]",
+      "quote": "There is a constant fan-in, constant fan-out boolean circuit that correctly sorts any array containing n elements each with a k-bit key and a w-bit payloads, whose size is \\(O(nk(w+k))\\cdot(1+log^*n-log^*(w+k))\\) and whose depth is \\(O(\\log n+\\log w)\\).",
+      "page": 58
+    },
+    {
+      "problem": "Tight compaction circuit",
+      "problem family": "compaction circuits",
+      "bound": "$O(nw\\cdot(1+\\log^* n - \\log^* w))$ size and $O(\\log n)$ depth",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "$O(nw)\\cdot\\max(\\mathsf{poly}(\\log^* n - \\log^* w),1)$ size and $O(\\log n)$ depth (Theorem 14.1)",
+      "quote": "There exists a tight compaction circuit of size \\(O(nw\\cdot(1+\\mathrm{log}^*(n)-\\mathrm{log}^*(w)))\\) and depth \\(O(\\log n)\\), where \\(w\\) is the width of the payload.",
+      "page": 59
+    }
+  ],
+  "paper": "2102.11489",
+  "usage": {
+    "prompt_tokens": 59922,
+    "completion_tokens": 7266,
+    "total_tokens": 67188,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6277,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

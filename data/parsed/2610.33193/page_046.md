@@ -1,0 +1,22 @@
+expected heat. Even if every gate releases this much, the expected released heat conditioned on C<sub>0</sub> failing to sort its input is only _O(n_log<sup>2</sup>(_n_)loglog(_n_)). Thus the total expected heat released by C<sub>1</sub> is at most:
+
+\(\left(1-\frac{1}{log(n)loglog(n)}\right)\cdot O(nlog^2(n))/log(n)+\frac{1}{log(n)loglog(n)}\cdot O(nlog^2(n))\cdot loglog(n))=O(nlogn)\)
+
+as desired. Since both C<sub>0</sub> and C<sub>1</sub> release only _O(n_log_n_) expected heat, so does C.
+
+It is important to note that this construction is heavily reliant on the input distribution D. If D gives heavy weight to inputs that C<sub>0</sub> fails to sort, then the analysis presented here falls apart.
+
+## 6 Clean zero entropy circuits for compaction and sorting
+
+We start by considering _bit compaction_ as a special case of sorting with only two possible values for each key. We give a detailed overview of this circuit with zero circuit entropy production and then show how the idea can be extended to more general sorting.
+
+### 6.1 A clean compaction circuit with zero entropy production
+
+We describe a bit-sorting (a.k.a., _bit-compaction_) circuit with zero EP<sub>C</sub> (assuming the distribution of the inputs is _exchangeable_, explained below). For any binary string _x_, write |_x_|<sub>1</sub> to denote the number of 1’s in _x_ and |_x_|<sub>0</sub>=|_x_|-|_x_|<sub>1</sub> to denote the number of 0’s.
+
+First, we note that we are considering compaction _circuits_, rather than sorting networks: these can use more general gates than the comparators used in Sections 5.2, 5.2.2 and 5.3, and they are allowed ancilla wires beyond those needed to store inputs and outputs. Although the problem of sorting bits with a sorting network as in Section 5.2 is nontrivial due to Proposition 5.1, general circuits can perform compaction without payloads by simply counting the number of times each key appears in the input. Thus, we add payloads that must be sorted alongside their keys to make the problem non-trivial.
+
+This problem was studied by Asharov, Lin, and Shi \[ALS21\], who gave an _o(n_log_n_) sized circuit for compaction (when the keys are sufficiently small) without considering the thermodynamic costs.<sup>35</sup> The input is _n_ key-value pairs (_b<sub>i</sub>,V<sub>i,:</sub>_) called _records_, where \(b_i\in\{0,1\}\) is a one-bit _key_ and<tbc>
+
+<sup>35</sup> See also \[LS22\]. The problem has a longer history in other models of computation, going back to Pippenger’s self-routing superconcentrators \[Pip96\].<sup>36</sup> With comparator gates only, compaction is equivalent to sorting: by Proposition 5.1, a comparator network that sorts every 0/1 key vector sorts every input, so \(\Theta(nlogn)\) comparators are necessary and sufficient \[AKS83\]. With general Boolean gates, Asharov, Lin, and Shi \[ALS21\] gave the first compaction circuits of size _O(nm_) for _m_-bit payloads, up to a poly(log<sup>∗</sup>_n_-log<sup>∗</sup>_m_) factor that disappears when _m=O_(1) or \(m\ge log^{(c)}n\) for any constant _c_, but with superpolylogarithmic depth; Koucký and Král \[KK21\] reduced the depth to _O_(log<sup>3</sup>_n_) with size _O(nm_(1+log<sup>∗</sup>_n_-log<sup>∗</sup>_m_)), and Lin and Shi \[LS22\] to the optimal _O_(log_n_+log_m_) with size \(O(nm)\cdot poly(log^*n-log^*m)\). (Pippenger’s self-routing superconcentrators \[Pip96\] already give _O(n_log_n+nm_) gates \[ALS21\]; in the RAM model, oblivious compaction takes linear time \[AKL<sup>+</sup>23\], but word operations cost \(\Omega(logn)\) gates, so this does not yield linear-size circuits.) All of these circuits are non-stable, necessarily so: stable compaction needs \(\Omega(nlogn)\) selector gates if payloads are only routed and never computed on \[LSX19\], and \(\Omega(nmlogn)\) gates in general if the _Li-Li network coding conjecture_ \[LL04\] holds \[AFKL19, ALS21\]. To our knowledge it remains open whether the poly(log<sup>∗</sup>_n_-log<sup>∗</sup>_m_) factor can be removed for every _m_, and no unconditional superlinear lower bound is known for stable compaction, or for sorting keys of length \(\Omega(logn)\), with general gates. The circuits in this paper are much larger than these; they are designed for zero circuit entropy production, not size. <sup>36</sup> A _superconcentrator_ is a network of 2-input, 2-output _switches_, with _n_ inputs and _n_ outputs, such that for every
+

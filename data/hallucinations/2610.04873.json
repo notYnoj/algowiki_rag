@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Hamilton-Jacobi-Bellman equation for scalar analytic input-affine systems",
+      "problem family": null,
+      "bound": "|U_N(x)-V_x|\\le M(1-|x|/\\rho)^{-1}|x/\\rho|^N",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then, \\(|U_N(x)-V_x|\\le M(1-|x|/\\rho)^{-1}|x/\\rho|^N\\) for all \\(x\\in(-\\rho,\\rho)\\) and \\(N\\ge 1\\), where \\(M\\) and \\(\\rho\\) are the constants in (15).",
+      "page": 5
+    },
+    {
+      "problem": "boundedness of the Carleman-lifted Riccati solution operator",
+      "problem family": null,
+      "bound": "\\|\\unknown\\|_{\\mathcal{S}}\\le\\frac{M}{2(\\rho-1)}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\(\\|\\unknown\\|_{\\mathcal{S}}=\\sum_{m=2}^\\infty|\\pi_m(\\mathbf{P})|\\le\\frac{M}{2}\\sum_{m=2}^\\infty\\rho^{-(m-1)}=\\frac{M}{2(\\rho-1)}.\\)",
+      "page": 4
+    }
+  ],
+  "paper": "2610.04873",
+  "usage": {
+    "prompt_tokens": 13165,
+    "completion_tokens": 8358,
+    "total_tokens": 21523,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8012,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

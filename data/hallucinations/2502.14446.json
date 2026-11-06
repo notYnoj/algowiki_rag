@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "top-k multidimensional motif discovery",
+      "problem family": "time series motif mining",
+      "bound": "O\\left(n^{1+1/c}\\log\\frac{1}{\\delta}+Lk\\right) \\text{ distances in expectation, where } c=\\text{contrast}_{d,k|n}(\\mathbf{T}), \\text{ for } L\\in\\Omega\\left(n^{1/c}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^2)",
+      "quote": "On a D-dimensional time series T of length n, with parameters k ≥ 1, d ∈ [1, D], δ ∈ (0,1), Algorithm 1 computes O(n^{1+1/c} log 1/δ + Lk) distances in expectation, where c = contrast_{d,k|n}(T), for L ∈ Ω(n^{1/c}).",
+      "page": 7
+    },
+    {
+      "problem": "top-k multidimensional motif discovery",
+      "problem family": "time series motif mining",
+      "bound": "O(K \\cdot L \\cdot D \\cdot n)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Algorithm 1 has space complexity proportional to O(K·L·D·n).",
+      "page": 8
+    },
+    {
+      "problem": "top-k multidimensional motif discovery",
+      "problem family": "time series motif mining",
+      "bound": "O(D \\cdot K \\cdot \\sqrt{L} \\cdot n \\log n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "With the tensoring approach the index construction takes time proportional to O(D·K·√L·n log n).",
+      "page": 8
+    },
+    {
+      "problem": "top-k multidimensional motif discovery",
+      "problem family": "time series motif mining",
+      "bound": "\\ge 1-\\delta",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "When called with failure probability \\delta'=\\delta/k, Algorithm 1 finds the true top-k motifs with probability \\ge 1-\\delta.",
+      "page": 7
+    }
+  ],
+  "paper": "2502.14446",
+  "usage": {
+    "prompt_tokens": 19376,
+    "completion_tokens": 7254,
+    "total_tokens": 26630,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6753,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

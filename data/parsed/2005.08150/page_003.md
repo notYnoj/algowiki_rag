@@ -1,0 +1,14 @@
+<tbc>Almost Stable Marriage (ASM)<br>
+**Input:** A bipartite graph \(G=(A\cup B,E)\), a set L containing the preference list of each vertex, and non-negative integers _k_ and _t_.<br>
+**Question:** Does there exist a matching whose size is at least _t_ more than the size of a stable matching in _G_ such that the matching has at most _k_ blocking edges?
+
+In ASM, we are happy with a matching that is larger than a stable matching but may contain some blocking edges. The above problem quantifies these two variables: _t_ denotes the minimum increase in size, and _k_ denotes the maximum number of blocking edges we may tolerate.
+
+We note that Biró et al. \[3\] considered the problem of finding, among all matchings of the maximum size, one that has the fewest blocking edges, and showed the NP-hardness of the problem even when the length of every preference list is at most three. Since one can find a maximum matching and a stable matching in the given graph in polynomial time \[29,14\], their NP- hardness result implies NP-hardness for ASM even when the length of every preference list is at most three by setting _t_=`size of a maximum matching`-`size of a stable matching`. We study the parameterized complexity of ASM with respect to parameters, _k_ and _t_, which is not implied by their reduction. Our first result exhibits a strong guarantee of intractability.
+
+**Theorem 1.** ASM _is_ W\[1\]_-hard with respect to k+t, even when the maximum degree is at most four._
+
+We prove Theorem 1, by showing a polynomial-time many-to-one parameter preserving reduction from the Multicolored Clique (MCQ) problem on the regular graphs to ASM. In a _regular graph_, the degree of every vertex is the same. In the Multicolored Clique problem on regular graphs, given a regular graph _G_=(_V,E_) and a partition of _V(G_) into _k_ parts, say _V_<sub>1</sub>_,...,V<sub>k</sub>_; the goal is to decide the existence of a set \(X\subseteq V(G)\) such that \(|X\cap V_i|=1\), for all \(i\in[k]\), and _G_\[_X_\] induces a clique, that is, there is an edge between every pair of vertices in _G_\[_X_\]. MCQ is known to be W\[1\]-hard on regular graphs \[5\].
+
+In light of the intractability result in Theorem 1, we are hard pressed to recalibrate our expectations of what is algorithmically feasible in an efficient manner. Therefore, we consider local search approach for this problem, in which, instead of finding any matching whose size is at least _t_ larger than the size of stable matching, we also want this matching to be "closest", in terms of its symmetric difference, to a stable matching. Such framework of local search has also been studied for other variants of the Stable Marriage problem by Marx and Schlotter \[27,25\]. It has also been studied for several other optimization problems \[12,18,20,23,24,26,28,33\]. This question is formally defined as follows.
+

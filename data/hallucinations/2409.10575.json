@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "MAX-SMTI and MAX-HRT",
+      "problem family": null,
+      "bound": "O(n^2) time per iteration",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "In each iteration, the time complexity of TBLS using GS as the base algorithm is O(n^2), whereas that of TBLS-E using PDB as the base algorithm is O(n^3). The overall space complexity of both algorithms is O(n^3).",
+      "page": 7
+    },
+    {
+      "problem": "MAX-SMTI",
+      "problem family": null,
+      "bound": "O(n^3) time per iteration",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "In each iteration, the time complexity of TBLS using GS as the base algorithm is O(n^2), whereas that of TBLS-E using PDB as the base algorithm is O(n^3). The overall space complexity of both algorithms is O(n^3).",
+      "page": 7
+    },
+    {
+      "problem": "MAX-SMTI and MAX-HRT",
+      "problem family": null,
+      "bound": "O(n^3) space",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "In each iteration, the time complexity of TBLS using GS as the base algorithm is O(n^2), whereas that of TBLS-E using PDB as the base algorithm is O(n^3). The overall space complexity of both algorithms is O(n^3).",
+      "page": 7
+    }
+  ],
+  "paper": "2409.10575",
+  "usage": {
+    "prompt_tokens": 18128,
+    "completion_tokens": 4727,
+    "total_tokens": 22855,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4361,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

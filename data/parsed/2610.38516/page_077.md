@@ -1,0 +1,17 @@
+(Mac timings; jacobian is 20-30 % slower on both.) What remains is dominated by the argsort of the edges and by the solves themselves, so the limit now costs about what the authors' C code costs, and a 256<sup>2</sup> learned-cost patch goes from a second to 50 ms: cheap enough to be an inference-time operator, or to evaluate the limit on a whole fold in a minute instead of in a process pool. The NumPy version stays as the fallback and as the definition.
+
+## Q.2 The exact limit on all of fold 2: was the 307-patch subset representative?
+
+Every limit row of sections 6-11 and of the paper's  2 was computed on 307 of the 2523 test patches (300 evenly spaced through fold 2 plus the 8 patches with the most touching-nuclei pixels), because the NumPy limit cost about 2 s (binary) and 0.7-1 s (K labels) per patch. With the Numba back end of section 12.1 the whole fold costs a few minutes, so the limit was re-evaluated on all 2523 patches for the five trained models whose limit appears in the paper: the binary `rw\_img` and `rw\_learned` of section 6 ( 2), and the multi- marker `bce\_tuned` (section 11 model with the fold-3 marker settings of 11.1), `dist` (11.1) and `dist\_sched10\_bg` (11.5) ( 3). : `experiments/run\_ limit\_full.sh` (one evaluation-only job per model, run on jacobian from the saved `.pt` files; the three instance jobs in parallel), with three new options of `exp\_unet\_seg.py` / `exp\_instance\_pannuke.py`: `--eval-tag limit\_full` writes `\<name\>\_limit\_full.json` / `\_perimage.npz` next to the existing record instead of overwriting it, `--mk-from-json \<json\>` takes the marker post-processing (head, threshold, minimum area, h, fallback) from the stored run instead of retuning on fold 3, and `--subset-n 300` summarises every output on the standard 307-patch subset as well (`test\_subset` of the json), so that the subset and the full-fold numbers of one output come from the same run. `--limit-n` at or above the test-set size means every patch. Both scripts print the back end they use (`PW limit back end: numba` in all five logs). `experiments/compare\_limit\_full. py` (NumPy only) builds the tables below from the records: `results/limit\_full\_ 12\_2.md`; records in `results/pannuke/ {rw\_img,rw\_learned}\_limit\_full.\*`, `results/pannuke\_instances/{bce\_tuned,dist,dist\_sched10\_bg}/ instances\_limit\_full.\*`, logs in `results/limit\_full\_logs/`.
+
+**Checks.** On the same 307 patches the Numba limit reproduces the stored limit summaries of the four models that were evaluated on jacobian to 1e-16 on all seven metrics (bit-identical labels, as section 12.1 claimed), and the re-evaluated finite-p outputs reproduce the stored full-fold numbers exactly. `dist\_sched10\_bg` was evaluated on ruche's A100 in section 11.5 and here on the RTX 6000 Ada: its summaries differ by up to 1.5e-4 (limit, 307) and 4.2e-4 (layer, 2523), the
+
+\begin{tabular}{ccccc}
+regime & NumPy & Numba & reference C (section 12) & \\
+8-bit costs, 512<sup>2</sup>, clean synthetic & 0.40-0.53 s & 0.065-0.08 s & 0.05-0.06 s & \\
+8-bit costs, 512<sup>2</sup>, noisy / camera / astronaut & 0.55-0.8 s & 0.075-0.12 s & 0.05-0.07 s & \\
+continuous costs at 2<sup>-20</sup>, 256<sup>2</sup> augmented graph, two labels & 0.70 s & 0.048 s & — & \\
+same, 40 markers (K-vector solve) & 0.31 s & 0.032 s & — & \\
+continuous costs at 2<sup>-8</sup> (many large plateaus), two labels / 40 markers & 0.77 / 0.99 s & 0.08 / 0.08 s & — & \\
+\end{tabular}
+

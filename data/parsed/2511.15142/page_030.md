@@ -1,0 +1,22 @@
+## B Omitted proofs from Section 3
+
+_Proof of Lemma 3.4._ For the first part, observe that \(C_\pi\) is the intersection of _N_-1 closed half- spaces, and is thus a convex polyhedron.
+
+Assume \(C_\pi\) is full-dimensional. Then its interior, \(\mathrm{int}(C_\pi)\), is non-empty. For any \(w\in\mathrm{int}(C_\pi)\), strict inequalities \(\langle w,x_{\pi(1)}\rangle<\langle w,x_{\pi(2)}\rangle<\cdots<\langle w,x_{\pi(N)}\rangle\) hold. Consequently, \(\mathrm{int}(C_\pi)\) does not intersect any hyperplane in A. Since \(C_\pi\) is convex, it is connected. To show \(C_\pi\) is a cell, we check maximality. Suppose \(S\subseteq\mathbb{R}^d\) is a connected region such that \(C_\pi\subseteq S\) and \(\mathrm{int}(S)\cap\mathcal{A}=\emptyset\). Since _S_ is connected and its interior avoids all hyperplanes _h_<sub>{_i,j_}</sub>, the sign of \(\langle w,x_i-x_j\rangle\) must be constant for all \(w\in\mathrm{int}(S)\). Because \(\mathrm{int}(C_\pi)\subset\mathrm{int}(S)\), this sign pattern is determined by \(\pi\). Thus, every \(w\in S\) must satisfy the constraints defining \(C_\pi\), implying \(S\subseteq C_\pi\). Therefore, \(C_\pi\) is a maximal connected region whose interior avoids A, making it a cell.
+
+Conversely, let _C_ be any cell of the arrangement A. Since cells are full-dimensional, int(_C_) is non- empty. Pick any \(w\in\mathrm{int}(C)\); the values \(\{\langle w,x_k\rangle\}_{k=1}^N\) are distinct and induce a permutation \(\pi\in S_N\). Since _C_ is connected and \(\mathrm{int}(C)\cap\mathcal{A}=\emptyset\), the ordering \(\pi\) is constant over int(_C_). Thus \(C\subseteq C_\pi\). Since _C_ is a maximal region with this property and \(C_\pi\) is a region satisfying the property (as shown above), it must be that \(C=C_\pi\).
+
+For the second part regarding partial orders, \(C_\sigma\) is the intersection of the half-spaces _H<sub>j,i</sub>_ for all pairs \(i\unknown_\sigma j\), which implies it is a convex polyhedron. To prove the decomposition, consider any \(w\in C_\sigma\). The scalar values \(\{\langle w,x_k\rangle\}_{k=1}^N\) induce a total ordering. Since _w_ satisfies the constraints of \(\sigma\), this total ordering is a linear extension of \(\sigma\). Thus, there exists some \(\pi\in\mathcal{L}(\sigma)\) such that \(w\in C_\pi\). Conversely, if \(w\in C_\pi\) for some \(\pi\in\mathcal{L}(\sigma)\), then by transitivity, _w_ satisfies \(\langle w,x_i\rangle\le\langle w,x_j\rangle\) for all \(i\unknown_\sigma j\), implying \(w\in C_\sigma\). Therefore, \(C_\sigma=\bigcup_{\pi\in\mathcal{L}(\sigma)}C_\pi\).
+
+_Proof of Lemma 3.5._ By definition, the partial order \(\sigma^*\) contains exactly those relations \(i\unknown_{\sigma^*} j\) for which \(\langle w^*,x_j-x_i\rangle>0\). Since \(C_{\sigma^*}\) is defined by the intersection of half-spaces \(\langle w,x_j-x_i\rangle\ge 0\) for all \(i\unknown_{\sigma^*} j\), and _w_<sup>∗</sup> satisfies all these inequalities strictly, _w_<sup>∗</sup> must lie in the interior of \(C_{\sigma^*}\).
+
+For the second part, we prove the contrapositive: \(\langle w^*,x_i-x_j\rangle>0\Longrightarrow\langle\widehat{w},x_i-x_j\rangle>0\). Suppose \(\langle w^*,x_i-x_j\rangle>0\). By the definition of \(\sigma^*\), this strict inequality implies the relation \(j\unknown_{\sigma^*}i\). Consequently, every point \(w\in C_{\sigma^*}\) must satisfy \(\langle w,x_i-x_j\rangle\ge 0\). Since \(\widehat{w}\) is in the interior of \(C_{\sigma^*}\), it must strictly satisfy the inequalities implied by the partial order. Therefore, \(\langle\widehat{w},x_i-x_j\rangle>0\).
+
+_Proof of Corollary 3.6._ By the definition of the CCO output for \(\widehat{w}\), the sequence is non-decreasing with respect to \(\widehat{w}\), meaning \(\langle\widehat{w},y_i-y_{i+1}\rangle\le 0\) for all \(1\le i\le k-1\). Applying Lemma 3.5, the implication
+
+\(\langle\widehat{w},x_u-x_v\rangle\le 0\Longrightarrow\langle w^*,x_u-x_v\rangle\le 0\)
+
+holds for all pairs from P. Therefore, we have \(\langle w^*,y_i-y_{i+1}\rangle\le 0\) for all _i_. By transitivity, \(\langle w^*,y_i-y_j\rangle\le 0\) for all \(1\le i\le j\le k\).
+
+Finally, using the property that \(\mathcal{P}\subseteq y_1+\mathrm{env}(y_1,\dots,y_k)\), and observing that _w_<sup>∗</sup> makes a non- negative inner product with the generators of this envelope (as implied by the sorted order), it follows that \(y_1\in\mathrm{argmin}_{x\in\mathcal{P}}\langle w^*,x\rangle\).
+

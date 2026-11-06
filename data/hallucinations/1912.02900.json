@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Gap between strong Wilber 1 bound and OPT",
+      "problem family": "Binary Search Trees",
+      "bound": "\\frac{\\mathsf{OPT}(X)}{\\mathsf{WB}(X)} = \\Omega\\left(\\frac{\\log\\log n}{\\log\\log\\log n}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "In other words, for every partitioning tree T, \\(\\frac{\\mathsf{OPT}(X)}{\\mathsf{WB}_T(X)}\\ge\\Omega\\left(\\frac{loglogn}{logloglogn}\\right)\\).",
+      "page": 8
+    },
+    {
+      "problem": "Gap between Consistent Guillotine Bound and OPT",
+      "problem family": "Binary Search Trees",
+      "bound": "\\mathsf{OPT}(X) = \\Omega(n \\log\\log n) \\text{ but } \\mathsf{cGB}(X) = O(n \\log\\log\\log n)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1.2 _For every integer_ \\(n'\\)_, there is an integer_ \\(n\\ge n'\\)_, and an access sequence X on n keys with_ |_X_|=_n, such that X is a permutation,_ \\(\\mathsf{OPT}(X)=\\Omega(nloglogn)\\) _but_ cGB(_X_)=_O(n_logloglog_n)._",
+      "page": 8
+    },
+    {
+      "problem": "Min-Sat / BST approximation",
+      "problem family": "Binary Search Trees",
+      "bound": "O(D \\cdot \\mathsf{OPT}(X)) \\text{ cost, time } \\mathrm{poly}(m) \\cdot \\exp\\left(O\\left(n^{1/2^{O(D)}} \\log n\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(loglog n)-approximation in polynomial time (Tango Trees)",
+      "quote": "Theorem 1.3 _There is an offline algorithm for_ Min-Sat_, that, given any integral parameter_ \\(D\\ge 1\\)_, and an access sequence X to n keys of length m, has cost at most_ \\(O(D\\cdot\\mathsf{OPT}(X))\\) _and has running time at most_ \\(\\mathrm{poly}(m)\\cdot\\mathrm{exp}\\left(O\\left(n^{1/2^{O(D)}}logn\\right)\\right)\\)_. When D=O_(loglog_n), the algorithm’s running time is polynomial in n and m, and it can be adapted to the online setting, achieving an O_(loglog_n)- competitive ratio._",
+      "page": 6
+    },
+    {
+      "problem": "Gap between Second Wilber Bound and Wilber Bound",
+      "problem family": "Binary Search Trees",
+      "bound": "\\mathsf{WB}^{(2)}(X) \\ge \\Omega(n \\log\\log n) \\text{ but } \\mathsf{WB}(X) \\le O(n \\log\\log\\log n)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4.16 _For every integer_ \\(n'\\)_, there is an integer_ \\(n\\ge n'\\) _and a point set X that is a permutation with_ |_X_|=_n, such that_ \\(\\mathsf{WB}^{(2)}(X)\\ge\\Omega(n\\mathrm{loglog}n)\\) _but_ \\(\\mathsf{WB}(X)\\le O(n\\mathrm{logloglog}n)\\).",
+      "page": 38
+    },
+    {
+      "problem": "Guillotine Bound lower bound",
+      "problem family": "Binary Search Trees",
+      "bound": "\\mathsf{GB}(X) \\le 2 \\mathsf{OPT}(X)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Lemma 5.3 _For any point set X that is a permutation,_ \\(\\mathsf{GB}(X)\\le 2\\mathsf{OPT}(X)\\).",
+      "page": 41
+    }
+  ],
+  "paper": "1912.02900",
+  "usage": {
+    "prompt_tokens": 77449,
+    "completion_tokens": 15491,
+    "total_tokens": 92940,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14545,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

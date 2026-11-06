@@ -1,0 +1,161 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "3SUM",
+      "problem family": "3SUM class",
+      "bound": "O(n^{1.9992})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^2)",
+      "quote": "3SUM on n numbers in O(n^{1.9992}) time.",
+      "page": 7
+    },
+    {
+      "problem": "APSP",
+      "problem family": "APSP class",
+      "bound": "O(n^{2.9995})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^3)",
+      "quote": "APSP on directed n-vertex graphs with no negative cycles in O(n^{2.9995}) time,",
+      "page": 7
+    },
+    {
+      "problem": "Exact Triangle",
+      "problem family": "APSP class",
+      "bound": "O(n^{2.9983})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^3)",
+      "quote": "Exact Triangle on n-vertex graphs in O(n^{2.9983}) time,",
+      "page": 7
+    },
+    {
+      "problem": "(min,+)-product",
+      "problem family": "APSP class",
+      "bound": "O(n^{2.9995})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^3)",
+      "quote": "the (min,+)-product of two n\\times n matrices in O(n^{2.9995}) time, and",
+      "page": 7
+    },
+    {
+      "problem": "Directed Unweighted APSP",
+      "problem family": "APSP class",
+      "bound": "O(n^{2+\\mu-\\varepsilon''}) \\text{ for some constant } \\varepsilon''>0, \\text{ where } \\mu<0.5275 \\text{ is defined by } \\omega(1,\\mu,1)=1+2\\mu",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n^{2+\\mu}) \\le O(n^{2.5275}) \\text{ (Zwick's algorithm)}",
+      "quote": "Directed Unweighted APSP: a deterministic algorithm running in O(n^{2+\\mu-\\varepsilon^{\\prime\\prime}}) time for some constant \\varepsilon''>0, where \\mu<0.5275 is defined by \\omega(1,\\mu,1)=1+2\\mu, and \\omega(1,\\mu,1) is the exponent of multiplying an n\\times n^\\mu by an n^\\mu\\times n matrix. Note that \\widetilde{O}(n^{2+\\mu})\\le O(n^{2.5275}) is the longstanding running time of Zwick's algorithm. This is the first improvement over Zwick's algorithm that does not come from faster rectangular matrix multiplication, and it refutes the Directed Unweighted APSP hypothesis [CVX21, CVX23, Fis26] (Theorem 34).",
+      "page": 5
+    },
+    {
+      "problem": "Real-valued 3SUM",
+      "problem family": "3SUM class",
+      "bound": "O(n^{1.998}) \\text{ expected time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^2)",
+      "quote": "3SUM on n numbers in O(n^{1.998}) expected time, whose only operations on real numbers are comparisons, additions, and subtractions",
+      "page": 5
+    },
+    {
+      "problem": "Real-valued APSP",
+      "problem family": "APSP class",
+      "bound": "O(n^{2.998}) \\text{ expected time}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^3)",
+      "quote": "for real weights, Las Vegas algorithms with O(n^{2.998}) expected time, again using only comparisons, additions, and subtractions on real numbers (Theorem 35).",
+      "page": 5
+    },
+    {
+      "problem": "Sparse entries of thin matrix product",
+      "problem family": "Rectangular matrix multiplication",
+      "bound": "O(N^2/D^{0.063})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "N^2\\sqrt{D} \\text{ (one by one) or } N^{2+o(1)} \\text{ (Coppersmith)}",
+      "quote": "Let X be an N\\times D integer matrix and Y a D\\times N integer matrix with D\\le N^{1/18}, and let W be any set of at most N^2/\\sqrt{D} positions. We compute the entries (XY)[I,J], (I,J)\\in W, in O(N^2/D^{0.063}) operations, which is polynomially less than the time needed to write down XY or to compute N^2/\\sqrt{D} inner products one by one.",
+      "page": 1
+    },
+    {
+      "problem": "Online Set Disjointness data structure",
+      "problem family": "Data structures",
+      "bound": "O(N^2/D^{0.063}) \\text{ preprocessing, } O(D^{0.437}) \\text{ query}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "N^{2+o(1)} \\text{ preprocessing or } O(D) \\text{ query}",
+      "quote": "For D\\le N^{1/18}, the preprocessing takes O(N^2/D^{0.063}) time and the queries take O(D^{0.437}) time (Theorem 3).",
+      "page": 5
+    },
+    {
+      "problem": "Hinted OMv (v-hinted Mv)",
+      "problem family": "Online Matrix-Vector conjectures",
+      "bound": "O(n^{2-0.063\\tau}) \\text{ phase 2, } O(n^{1+0.437\\tau}) \\text{ phase 3}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "n^{2-o(1)} \\text{ and } n^{1+\\tau-o(1)} \\text{ (conjectured)}",
+      "quote": "For hint dimension t=n^\\tau with 0<\\tau<1/18, the phase after the hint takes O(n^{2-0.063\\tau}) time and the phase after the vector O(n^{1+0.437\\tau}) time, against the conjectured n^{2-o(1)} and n^{1+\\tau-o(1)}.",
+      "page": 8
+    },
+    {
+      "problem": "Weighted k-Clique (Zero-, Min-, Max-Weight)",
+      "problem family": "Clique problems",
+      "bound": "O(n^{k-\\varepsilon_T\\lfloor k/3\\rfloor})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^k)",
+      "quote": "Given a complete k-partite graph with parts of n vertices and integer edge weights of absolute value at most n^\\nu, deterministic algorithms decide in O(n^{k-\\varepsilon_T\\lfloor k/3\\rfloor}) time whether some k-clique, with one vertex in each part, has total edge weight zero, and find a k-clique of minimum, or of maximum, total edge weight.",
+      "page": 59
+    },
+    {
+      "problem": "Tree Edit Distance",
+      "problem family": "APSP class",
+      "bound": "O(n^{2.9995})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^3)",
+      "quote": "Tree Edit Distance: O(n^{2.9995}) time for polynomially bounded integer costs via the tight reduction of [NPS^{+}25].",
+      "page": 5
+    },
+    {
+      "problem": "MonoConvolution",
+      "problem family": "3SUM class",
+      "bound": "O(n^{1.4999})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n^{1.5})",
+      "quote": "Our approach gives O(n^{1.4999}) time for MonoConvolution, improving on the previous \\tilde{O}(n^{1.5}) time of [LPV20].",
+      "page": 10
+    },
+    {
+      "problem": "#3SUM",
+      "problem family": "3SUM class",
+      "bound": "truly subquadratic (O(n^{2-\\delta}))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^2)",
+      "quote": "We give the first truly subcubic algorithms for #Exact Triangle and for counting the witnesses of the (min,+)-product, and the first truly subquadratic algorithm for #3SUM.",
+      "page": 11
+    }
+  ],
+  "paper": "2610.06783",
+  "usage": {
+    "prompt_tokens": 75989,
+    "completion_tokens": 10042,
+    "total_tokens": 86031,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7998,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

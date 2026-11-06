@@ -1,0 +1,111 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Induced subgraph detection for G05, G09, G12-G14",
+      "problem family": "5-vertex connected graphs",
+      "bound": "\\widetilde{O}(nm)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given an n-vertex, m-edge host graph H as input, there are \\widetilde{O}(nm)-time algorithms to detect induced subgraphs for the five 5-vertex graphs G05, G09, G12 to G14 in 1 and in Figure 1.",
+      "page": 10
+    },
+    {
+      "problem": "Induced subgraph detection for sixty-five 6-vertex graphs",
+      "problem family": "6-vertex connected graphs",
+      "bound": "\\widetilde{O}(m^2)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given an n-vertex, m-edge host graph H as input, there are \\widetilde{O}(m^2)-time algorithms to detect induced subgraphs for the sixty-five 6-vertex graphs in 4.",
+      "page": 12
+    },
+    {
+      "problem": "Induced P5 detection",
+      "problem family": null,
+      "bound": "O(nm)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(m^2)",
+      "quote": "We derive O(nm), O(m^2), and O(nm^2) algorithms for detecting induced P5, P6, and P7 respectively. To the best of our knowledge, the previous best algorithmic upper bounds which are given by Hoang, Kaminski, Sawada, and Sritharan [6] for detecting induced P5, P6, and P7 are O(m^2), O(nm^2), and O(m^3) respectively when considering both number of vertices and edges of the host graph.",
+      "page": 3
+    },
+    {
+      "problem": "Induced P6 detection",
+      "problem family": null,
+      "bound": "O(m^2)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(nm^2)",
+      "quote": "We derive O(nm), O(m^2), and O(nm^2) algorithms for detecting induced P5, P6, and P7 respectively. To the best of our knowledge, the previous best algorithmic upper bounds which are given by Hoang, Kaminski, Sawada, and Sritharan [6] for detecting induced P5, P6, and P7 are O(m^2), O(nm^2), and O(m^3) respectively when considering both number of vertices and edges of the host graph.",
+      "page": 3
+    },
+    {
+      "problem": "Induced P7 detection",
+      "problem family": null,
+      "bound": "\\widetilde{O}(nm^2)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(m^3)",
+      "quote": "Given an m-edge host graph H as input, we can detect whether H has an induced P7 (C7) in \\widetilde{O}(nm^2)-time.",
+      "page": 12
+    },
+    {
+      "problem": "Induced C7 detection",
+      "problem family": null,
+      "bound": "\\widetilde{O}(nm^2)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(n^5)",
+      "quote": "Given an m-edge host graph H as input, we can detect whether H has an induced P7 (C7) in \\widetilde{O}(nm^2)-time.",
+      "page": 12
+    },
+    {
+      "problem": "Induced C5 detection",
+      "problem family": null,
+      "bound": "\\widetilde{O}(nm)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(n^3)",
+      "quote": "We give a \\widetilde{O}(nm)-time algorithm for C5 which is optimal. This algorithm is an improvement on the O(n^3)-time algorithm given by Komarath, Kumar, Mishra, and Setthia [7] when m=o(n^2).",
+      "page": 3
+    },
+    {
+      "problem": "Induced P_{2k} detection in bipartite graphs",
+      "problem family": "bipartite graphs",
+      "bound": "\\widetilde{O}(m^{k-1})",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(n^{2k-2})",
+      "quote": "Given an m-edge bipartite host graph H as input, we can detect whether H has an induced P_{2k} in \\widetilde{O}(m^{k-1})-time.",
+      "page": 13
+    },
+    {
+      "problem": "Induced C_{2k} detection in bipartite graphs",
+      "problem family": "bipartite graphs",
+      "bound": "\\widetilde{O}(nm^{k-1})",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(m^k)",
+      "quote": "Given an n-vertex, m-edge bipartite host graph H as input, we can detect whether H has an induced C_{2k} in \\widetilde{O}(nm^{k-1})-time.",
+      "page": 13
+    }
+  ],
+  "paper": "2610.00567",
+  "usage": {
+    "prompt_tokens": 32454,
+    "completion_tokens": 11030,
+    "total_tokens": 43484,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9858,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

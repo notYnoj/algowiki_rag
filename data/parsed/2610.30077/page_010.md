@@ -1,0 +1,22 @@
+<tbc>behaves well whenever it has a solution is of limited practical use if the underlying linear system can fail to be solvable, or have more than one solution, at some step sizes or some states; an implementation would then have no guarantee that the linear solve it calls every step is even well posed. This section closes that gap. Theorem 5.1 shows the linear system is uniquely solvable at _every_ step, for _every_ \(\Delta t>0\), reusing the energy identity of Theorem 4.1 itself as the proof’s main tool. Proposition 5.1 records a second structural property, exact mass conservation, needed along the way.
+
+**Theorem 5.1** (Unconditional unique solvability)**.** _Under the same assumptions as Theorem 4.1, and additionally_ \(b_\star\ge b_1>0\)_, the linear system (S1)-(S4) is uniquely solvable for every_ \(\Delta t>0\).
+
+_Proof._ Since (S1)-(S4) is linear, finite-dimensional, and square, existence and uniqueness for every choice of data are equivalent to the homogeneous system (all data set to zero) having only the trivial solution. So take a solution of (S1)-(S4) with \(\phi^n=\phi^{n-1}=q^n=q^{n-1}=r^n=r^{n-1}=0\). Plugging this data into (12) collapses it to a sum of non-negative terms equal to zero, which forces \(\nabla\phi^{n+1}=q^{n+1}=r^{n+1}=0\) and \(\widetilde{\mathcal{D}}^{n+1}=0\). Mass conservation (Proposition 5.1) then pins \(\phi^{n+1}\equiv 0\). With _q_<sup>_n_+1</sup>=0, the condition \(\widetilde{\mathcal{D}}^{n+1}=0\) reduces to \(\int_\Omega b_\star|\nabla\mu^{n+1}|^2=0\). Since \(b_\star\ge b_1>0\), this forces \(\nabla\mu^{n+1}=0\), so \(\mu^{n+1}\) is spatially constant, though not yet known to be zero. Equation (S2), with \(\phi^{n+1}\equiv 0\) and _r_<sup>_n_+1</sup>=0 already established, gives \(\mu^{n+1}=0\) directly, pinning that constant. So the homogeneous system has only the trivial solution, and (S1)-(S4) is uniquely solvable for every \(\Delta t>0\). Full proof in Appendix A.
+
+**Proposition 5.1** (Exact mass conservation)**.** \(M^n:=\int_\Omega\phi^n\) _satisfies_ \(M^n\equiv M^0\) _for every n._
+
+_Proof._ Test (S1) with the constant function 1. By (6a) with _g_=1, \(\left(\nabla\cdot F,1\right)=-\left(F,\nabla 1\right)=0\) for any flux _F_, since the gradient of a constant is zero; so the right-hand side of (S1) integrates to exactly zero, whatever \(\mu^{n+1},q^{n+1}\) turn out to be. The left-hand side, integrated, is \(\int_\Omega D_2\phi^{n+1}=\frac{1}{2\Delta t}\left(3M^{n+1}-4M^n+M^{n-1}\right)\) by the definition (7) of _D_<sub>2</sub>, so
+
+\(3M^{n+1}-4M^n+M^{n-1}=0\) (14)
+
+at every step \(n\ge 1\): a linear recursion relating three consecutive mass values, forced purely by the structure of (S1), regardless of \(\mu^{n+1},q^{n+1}\). The same argument, applied to the (simpler) backward- Euler startup step, gives _M_<sup>1</sup>=_M_<sup>0</sup>. We now show \(M^n\equiv M^0\) for every \(n\ge 0\) by induction: this holds for _n_=0,1 by definition and by the startup property just established. Suppose it holds up to some \(n\ge 1\), i.e. _M_<sup>_n_-1</sup>=_M<sup>n</sup>=M_<sup>0</sup>; then (14) gives 3_M_<sup>_n_+1</sup>=4_M<sup>n</sup>-M_<sup>_n_-1</sup>=4_M_<sup>0</sup>-_M_<sup>0</sup>=3_M_<sup>0</sup>, i.e. _M_<sup>_n_+1</sup>=_M_<sup>0</sup>, extending the claim to _n_+1. Hence \(M^n\equiv M^0\) for every _n_.
+
+## 6 Accuracy and implementation
+
+Theorems 4.1 and 5.1 establish that the scheme is unconditionally stable and solvable; neither says anything about whether it is actually _accurate_, or what turning (S1)-(S4) into working code involves. This section addresses both in turn. Algorithm 1 summarises the computation performed at every time step of the implementation used throughout the rest of the paper; the text below justifies why that computation is second-order accurate, and fills in the specific spatial discretisation and linear solver Algorithm 1 leaves unspecified.
+
+### Accuracy.
+
+The scheme’s formal order follows from a standard truncation argument, combining three separate sources of \(O(\Delta t^2)\) error into one. First, BDF2 itself contributes a local truncation error of \(O(\Delta t^2)\), by construction. Second, the extrapolation \(\phi^\star=\phi(t_{n+1})+O(\Delta t^2)\) (Section 3) makes every frozen coefficient consistent to the same order, _provided_ \(\phi^\star\) stays inside the clamp range; this proviso is verified to hold throughout the convergence regime studied below, so the clamp safeguard never actually bites and never degrades the order. Third, the SAV substitution<tbc>
+

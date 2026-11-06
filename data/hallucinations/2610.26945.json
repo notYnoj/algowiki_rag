@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "DGEMM emulation with INT8 on Intel Arc/Xe2",
+      "problem family": "dense linear algebra",
+      "bound": "17.3, 12.1, 9.3\\ \\mathrm{TFLOP/s}\\ (N=8192,\\ s=8,12,16);\\ \\le 21.1\\ \\mathrm{TFLOP/s};\\ 12\\text{--}28\\times\\ \\text{native FP64 DGEMM}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "0.76\\ \\mathrm{TFLOP/s}\\ (\\text{native FP64 DGEMM})",
+      "quote": "On an Intel Arc Pro B60 (24GB) the emulated DGEMM reaches 17.3, 12.1 and 9.3 TFLOP/s with s=8, 12 and 16 moduli at N=8192, and up to 21.1 TFLOP/s overall, i.e. 12-28× the native FP64 DGEMM of the same board; 75-90% of the run time is spent in INT8 GEMM at ≈95% of its attainable rate.",
+      "page": 1
+    },
+    {
+      "problem": "ZGEMM emulation with INT8 on Intel Arc/Xe2",
+      "problem family": "dense linear algebra",
+      "bound": "24.4, 16.8, 12.8\\ \\mathrm{TFLOP/s}\\ (N=8192,\\ s=8,12,16);\\ \\le 27.4\\ \\mathrm{TFLOP/s};\\ 13.7\\text{--}17.8\\times\\ \\text{native ZGEMM for }N\\ge 4096\\ (s=16)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "0.76\\ \\mathrm{TFLOP/s}\\ (\\text{native ZGEMM})",
+      "quote": "The emulated ZGEMM, which uses the 3M form exactly in integer arithmetic, reaches up to 27.4 TFLOP/s and is 13.7-17.8× faster than native ZGEMM for N≥4096 at s=16.",
+      "page": 1
+    },
+    {
+      "problem": "DGEMM/ZGEMM accuracy (correct rounding)",
+      "problem family": "dense linear algebra",
+      "bound": "s\\ge 16\\ \\text{correctly rounded (well-scaled)};\\ s=20\\text{--}24\\ \\text{extended-width path (wide exponent range)}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "2\\text{--}13\\%\\ \\text{correctly rounded (native DGEMM)}",
+      "quote": "With s≥16 the results are correctly rounded for well-scaled inputs and, using an extended-width residue path (s=20-24), also for inputs with wide exponent ranges, whereas native DGEMM on GPU or CPU rounds only 2-13% of the entries correctly.",
+      "page": 1
+    },
+    {
+      "problem": "Ozaki scheme I vs. scheme II on INT8 engine",
+      "problem family": "dense linear algebra",
+      "bound": "15\\text{--}16\\ \\text{INT8 GEMMs (scheme II) vs. }36\\text{--}45\\ \\text{(scheme I)};\\ 2.3\\text{--}2.9\\times\\ \\text{faster}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "36\\text{--}45\\ \\text{INT8 GEMMs (Ozaki scheme I)}",
+      "quote": "At comparable accuracy, scheme I needs 36-45 INT8 GEMMs where scheme II needs 15-16, and it is 2.3-2.9 times slower ( 15, Figure 5).",
+      "page": 15
+    }
+  ],
+  "paper": "2610.26945",
+  "usage": {
+    "prompt_tokens": 23670,
+    "completion_tokens": 15763,
+    "total_tokens": 39433,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14792,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

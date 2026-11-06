@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "n-Queens Completion",
+      "problem family": null,
+      "bound": "$O(n)$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "An algorithm is described which allows solving in linear time the n-Queens Completion problem for an arbitrary composition of k queens, consistently distributed on a chessboard of size n×n.",
+      "page": 28
+    },
+    {
+      "problem": "n-Queens Completion",
+      "problem family": null,
+      "bound": "\\le 0.0001",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "The probability of an error in making such a decision does not exceed 0.0001, and this value decreases with increasing size of a chessboard.",
+      "page": 28
+    }
+  ],
+  "paper": "1912.05935",
+  "usage": {
+    "prompt_tokens": 23748,
+    "completion_tokens": 14213,
+    "total_tokens": 37961,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14007,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

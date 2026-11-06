@@ -1,0 +1,2 @@
+The Figure 22 shows the Input image (1st column), the number of layers that contribute to loss function (2nd-5th) and last columns depict the method (Average or Minimum Exemplar Gram Matrices) across all these layers used along with the loss function metric used Minimum or Average Mean Square Displacement (MSD). In addition, results of different setups are presented where clean exemplar images of the same inscription are used to restore a ruined part of it. It appears that the best setup is using the ruined image as input with 5 contributory
+

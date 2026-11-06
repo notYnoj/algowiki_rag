@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maximum flow (directed, uncapacitated)",
+      "problem family": null,
+      "bound": "(m+nF)\\cdot n^{o(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized, augmenting paths-based algorithm that computes the maximum flow on a directed, uncapacitated graph in time \\((m+nF)\\cdot n^{o(1)}\\), where \\(F\\) is the value of the maximum flow.",
+      "page": 1
+    },
+    {
+      "problem": "Maximum flow (directed, uncapacitated)",
+      "problem family": null,
+      "bound": "mn^{1/2+o(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(m\\cdot\\min\\{m^{1/2},n^{2/3}\\})",
+      "quote": "There is a randomized, augmenting paths-based algorithm that computes the maximum flow on a directed, uncapacitated graph in time \\(mn^{1/2+o(1)}\\).",
+      "page": 2
+    },
+    {
+      "problem": "Dynamic sparsification",
+      "problem family": null,
+      "bound": "quality \\(q=n^{o(1)}\\log U\\), amortized update time \\(n^{o(1)}\\log U\\), Sparsifier\\((\\beta)\\) time \\(O(q\\beta n\\log U)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized dynamic sparsifier data structure with quality \\(q=n^{o(1)}\\log U\\) such that each call to \\(\\mathrm{InsertArc}(e),\\mathrm{DeleteArc}(e)\\) is processed in amortized time \\(n^{o(1)}\\log U\\), and each call to \\(\\mathrm{Sparsifier}(\\beta)\\) takes time \\(O(q\\beta n\\log U)\\).",
+      "page": 6
+    }
+  ],
+  "paper": "2604.14633",
+  "usage": {
+    "prompt_tokens": 14804,
+    "completion_tokens": 6743,
+    "total_tokens": 21547,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6268,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Erdős distinct subset sums problem (largest element $a_n$)",
+      "problem family": null,
+      "bound": "$a_n\\ge 2\\binom{n-1}{\\left\\lfloor\\frac{n-1}{2}\\right\\rfloor}$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$\\left(\\sqrt{\\frac{2}{\\pi}}-o(1)\\right)\\frac{2^n}{\\sqrt{n}}$ (Dubroff, Fox, and Xu [4])",
+      "quote": "Theorem 1. If \\(a_1<a_2<\\cdots<a_n\\) are positive integers with distinct subset sums, then \\(a_n\\ge 2\\genfrac(){pt}{2}{n-1}{\\left\\lfloor\\frac{n-1}{2}\\right\\rfloor}\\).",
+      "page": 2
+    },
+    {
+      "problem": "Erdős distinct subset sums problem (second largest element $a_{n-1}$)",
+      "problem family": null,
+      "bound": "$a_{n-1}\\ge\\left(\\frac{2}{\\sqrt{3}}-o(1)\\right)\\frac{2^{n-1}}{\\sqrt{n-1}}$",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$\\left(\\sqrt{\\frac{2}{\\pi}}-o(1)\\right)\\frac{2^{n-1}}{\\sqrt{n-1}}$ (direct lower bound)",
+      "quote": "Theorem 2. If \\(a_1<a_2<\\cdots<a_n\\) are positive integers with distinct subset sums, then \\(a_{n-1}\\ge\\left(\\frac{2}{\\sqrt{3}}-o(1)\\right)\\frac{2^{n-1}}{\\sqrt{n-1}}\\).",
+      "page": 4
+    }
+  ],
+  "paper": "2610.32580",
+  "usage": {
+    "prompt_tokens": 3711,
+    "completion_tokens": 10385,
+    "total_tokens": 14096,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9954,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

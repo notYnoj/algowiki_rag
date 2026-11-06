@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Joint mixed-field parameter estimation (AoA, distance, AoD, delay, Doppler) for XL-MIMO AFDM systems",
+      "problem family": null,
+      "bound": "O(Q N_r + Q I_{AoA} N_r)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Furthermore, the SD-RMO algorithm for AoA estimation takes O(QN_r+QI_AoA N_r) operations, with I_AoA being the total number of iterations.",
+      "page": 5
+    },
+    {
+      "problem": "Joint mixed-field parameter estimation (AoA, distance, AoD, delay, Doppler) for XL-MIMO AFDM systems",
+      "problem family": null,
+      "bound": "O(Q M \\log_2 M + Q G M)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Additionally, in the process of BR-AEG, the computational complexity connected with the baseband reconstruction and initial correlation search is O(QM log_2 M+QGM), where G denotes the total number of low-resolution grid points.",
+      "page": 5
+    }
+  ],
+  "paper": "2609.11051",
+  "usage": {
+    "prompt_tokens": 9832,
+    "completion_tokens": 14575,
+    "total_tokens": 24407,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14303,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

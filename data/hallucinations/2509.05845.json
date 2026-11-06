@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Counting 3-colorings of generalized circular chord graphs",
+      "problem family": "generalized circular chord graphs",
+      "bound": "O(2.8^n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(3^n \\cdot m)",
+      "quote": "We developed an optimized backtracking algorithm with memoization to count valid 3-colorings efficiently, reducing complexity from \\(\\mathcal{O}(3^n\\cdot m)\\) in brute-force enumeration to O(2.8^n), where m is the number of edges.",
+      "page": 2
+    },
+    {
+      "problem": "Chromatic count P(C_n^(3),3) for odd n",
+      "problem family": "generalized circular chord graphs",
+      "bound": "P(\\mathcal{C}_n^{(3)},3)=\\varphi^n+O(\\rho^n)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Hence \\(P(\\mathcal{C}_n^{(3)},3)=\\varphi^n+O(\\rho^n),\\) as \\(n\\rightarrow\\infty\\) through odd integers.",
+      "page": 4
+    },
+    {
+      "problem": "Counting 3-colorings of C_{2m}^(3) (even n)",
+      "problem family": "generalized circular chord graphs",
+      "bound": "\\text{size}(\\widehat{A}) \\le 144",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For \\(n=2m\\), there exists a finite matrix \\(\\widehat{A}\\) of size at most 144 such that \\(P(\\mathcal{C}_{2m}^{(3)},3)=\\mathrm{tr}(\\widehat{A}^m).\\)",
+      "page": 5
+    },
+    {
+      "problem": "Positivity of P(C_n^(3),3) for odd n",
+      "problem family": "generalized circular chord graphs",
+      "bound": "P(\\mathcal{C}_n^{(3)},3) > 0 \\text{ for all sufficiently large odd } n",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Consequently \\(a(n)=\\varphi^n+R_n\\ge\\varphi^n-C\\rho^n>0\\) for all odd \\(n\\ge N_0\\). Hence \\(a(n)>0\\) for infinitely many n (indeed for all sufficiently large odd n), proving (ii).",
+      "page": 7
+    }
+  ],
+  "paper": "2509.05845",
+  "usage": {
+    "prompt_tokens": 9954,
+    "completion_tokens": 9315,
+    "total_tokens": 19269,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8738,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

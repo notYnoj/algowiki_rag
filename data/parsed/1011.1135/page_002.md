@@ -1,0 +1,16 @@
+<tbc>can be carried over to the stable marriage problem, thus demonstrating the model’s general applicability.
+
+**Keywords** Two-sided market \(\cdot\) Generalized matching mechanism \(\cdot\) Reciprocating preference \(\cdot\) Strategy-proofness \(\cdot\) Social welfare
+
+**JEL Classification** C78 \(\cdot\) I23 \(\cdot\) I31
+
+## 1 Introduction
+
+One of the main features of many market and social processes is their bilateral structure and the need to match agents from one side of the market with the other side, e.g. students and schools in college admissions, employees and companies in the job market (see Arcaute and Vassilvitskii 2009), men and women in online dating sites, advertisers and advertising slots in sponsored search (see Dütting et al. 2010). A class of "two-sided matching model" for studying such problems was first introduced by Gale and Shapley in 1962 in their seminal paper (Gale and Shapley 1962), in the context of college admissions and the marriage problem. Yet, the original model is quite general and can be easily adapted for other two-sided markets, such as the well-known National Resident Matching Program (NRMP)<sup>1</sup> for assigning medical students to residency positions in US.
+
+In Gale and Shapley’s seminal paper, the college admissions problem is formulated as follows. Let there be a set of colleges C={_c_<sub>1</sub>_,...,c<sub>m</sub>_} and a set of students S={_s_<sub>1</sub>_,...,s<sub>n</sub>_}. Each college \(c_i(i\in\{1,\dots,m\})\) has a quota _q<sub>i</sub>_, that denotes the maximum number of students it can admit. Each student \(s_j(j\in\{1,\dots,n\})\) can apply to any number of colleges, represented by a _strict_ preference (ordering) over the _m_ colleges.<sup>2</sup> Each college also has a strict ranking for all students (e.g. according to their test scores, interview performances or other criteria). A _matching_ is simply an assignment of students to colleges such that each college accepts no more students than its quota, and each student is admitted to at most one college. For convenience, we use _c_<sub>0</sub> to denote a dummy college that takes all unmatched students. The college admissions problem can then be stated as the problem of designing an algorithm to arrive at a matching satisfying certain properties. The _mechanism_ that implements the solution can be considered as a blackbox that takes the students’ and colleges’ preferences (denoted by _p_) as input, and outputs the matching, as depicted in Fig. 1.<sup>3</sup>
+
+In Gale and Shapley (1962), two desirable properties are defined: _stability_ and _optimality_. Stability of a matching means that it is not possible to find a student and a college that are not matched to each other, but both prefer each<tbc>
+
+<sup>1</sup> Readers can refer to the official website `http://www.nrmp.org/` for details. <sup>2</sup> By _strict_ preference we mean that a student is NOT indifferent between any two colleges. This simplifies our discussion. In practice, ties can be broken by random lotteries. <sup>3</sup> There are more complicated mechanisms that allow students and colleges to interact with each other multiple times before determining the matching, e.g. in Abdulkadiroğlu and Sönmez (2003). They are not considered in this paper.
+

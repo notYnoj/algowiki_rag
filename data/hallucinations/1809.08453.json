@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "GGI Stable Marriage (GGISM)",
+      "problem family": "Stable marriage problem",
+      "bound": "\\text{NP-hard}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2 The GGISM problem is NP-hard.",
+      "page": 8
+    },
+    {
+      "problem": "GGI Stable Marriage",
+      "problem family": "Stable marriage problem",
+      "bound": "2",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 3 ROUNDING ALGORITHM is a polynomial time 2-approximation algorithm for the GGI stable marriage problem, and the bound is tight.",
+      "page": 17
+    },
+    {
+      "problem": "GGI Stable Marriage with a bounded number of non-zero weights",
+      "problem family": "Stable marriage problem",
+      "bound": "O(2^{K} n^{2K+4})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In this section, we provide an algorithm whose complexity is O(2^K n^{2K+4}) where K=max{i:λ_i>0}. Hence, the complexity is polynomial time if K is assumed to be a constant, where K is the number of non-zero weights in the GGI operator.",
+      "page": 19
+    }
+  ],
+  "paper": "1809.08453",
+  "usage": {
+    "prompt_tokens": 28813,
+    "completion_tokens": 5903,
+    "total_tokens": 34716,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5573,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

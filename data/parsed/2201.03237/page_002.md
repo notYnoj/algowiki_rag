@@ -1,0 +1,10 @@
+<tbc>been released on Github.
+
+_Keywords:_ information retrieval, approximate nearest neighbors search, graph-based search
+
+## 1. Introduction
+
+Nearest neighbor search is to find the closest vector to a query vector from a given vector set. The distance measurement is defined by the application requirements, where most of them adopt euclidean distance. Nearest neighbor search is the fundamental technology in many domains including database, machine learning, and computer vision. However, exact nearest neighbor search in high dimensional space is often computationally expensive. Hence, researchers propose approximate nearest neighbor search (ANNS) to trade searching accuracy for computational efficiency[1][2][3].
+
+We classify the ANNS algorithm into four categories: tree-based methods[4][5][6], hashing-based methods[7] [8][9], quantization-based methods[10][11][12], and graph-based methods[13][14][15][16][17][18]. Hashing-based methods try to map close vectors to the same bucket through multiple hash functions and reduce computation cost by only performing search in the bucket corresponding to the query vector. The hashing-based algorithms are renowned for Locality Sensitive Hashing (LSH)[7] and Spectral Hashing[9]. The tree-based methods recursively divide the vector set into multiple subsets until it meets the end condition. The establishment of tree index is often very fast, but too much backtracking is often required during search procedure, which leads to high computational cost. Typical methods include Randomized KD-Tree[6] and Ball Tree[19]. The quantization-based methods try to decompose the original vector space into cartesian product of multiple subspaces and use the cartesian product of short codes instead of the original vector to perform the accelerated distance evaluation. Representative methods include Product Quantization (PQ)[11] and Composite Quantization (CQ)[12]. Graph-based methods build a proximity graph that concatenates all vectors with vertexes representing vectors and edges repre<tbc>
+

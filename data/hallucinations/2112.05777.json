@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "INCREMENTAL STABLE MARRIAGE (ISM) and ISM-T",
+      "problem family": "Incremental stable matching",
+      "bound": "Swap, Replace, Delete, and Add are linearly equivalent for ISM and ISM-T",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1. Swap, Replace, Delete, and Add are linearly equivalent for ISM and ISM-T.",
+      "page": 5
+    },
+    {
+      "problem": "INCREMENTAL ALMOST STABLE MARRIAGE (IASM)",
+      "problem family": "Incremental stable matching",
+      "bound": "NP-hard and W[1]-hard when parameterized by k+b+|\\mathcal{P}_1\\oplus\\mathcal{P}_2|",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2. IASM is NP-hard and W[1]-hard when parameterized by k+b+|\\mathcal{P}_1\\oplus\\mathcal{P}_2|.",
+      "page": 8
+    },
+    {
+      "problem": "INCREMENTAL ALMOST STABLE MARRIAGE (IASM)",
+      "problem family": "Incremental stable matching",
+      "bound": "XP when parameterized by k or b or |\\mathcal{P}_1\\oplus\\mathcal{P}_2|",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 1. IASM is in XP when parameterized by any of k or b or |\\mathcal{P}_1\\oplus\\mathcal{P}_2|.",
+      "page": 10
+    },
+    {
+      "problem": "INCREMENTAL HOSPITAL RESIDENTS (IHR)",
+      "problem family": "Incremental stable matching",
+      "bound": "\\mathcal{O}(n^{2.5}\\cdot m^{1.5})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 2. IHR is solvable in \\mathcal{O}(n^{2.5}\\cdot m^{1.5}) time, where n is the number of residents and m is the number of hospitals.",
+      "page": 10
+    },
+    {
+      "problem": "INCREMENTAL HOSPITAL RESIDENTS WITH TIES (IHR-T)",
+      "problem family": "Incremental stable matching",
+      "bound": "\\mathcal{O}(n^{2n}\\cdot nm)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 3. IHR-T is solvable in \\mathcal{O}(n^{2n}\\cdot nm) time.",
+      "page": 11
+    },
+    {
+      "problem": "INCREMENTAL HOSPITAL RESIDENTS WITH TIES (IHR-T)",
+      "problem family": "Incremental stable matching",
+      "bound": "W[1]-hard when parameterized by m even if |\\mathcal{P}_1\\oplus\\mathcal{P}_2|=1",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 3. Parameterized by the number m of hospitals, IHR-T is W[1]-hard even if |\\mathcal{P}_1\\oplus\\mathcal{P}_2|=1.",
+      "page": 12
+    },
+    {
+      "problem": "INCREMENTAL HOSPITAL RESIDENTS WITH TIES (IHR-T)",
+      "problem family": "Incremental stable matching",
+      "bound": "XP when parameterized by m",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 4. IHR-T is in XP when parameterized by the number m of hospitals.",
+      "page": 13
+    },
+    {
+      "problem": "INCREMENTAL STABLE MARRIAGE WITH TIES (ISM-T)",
+      "problem family": "Incremental stable matching",
+      "bound": "\\mathcal{O}(2^{(t_U+1)\\cdot(t_W+1)}\\cdot n^{2.5})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 5. ISM-T is solvable in \\mathcal{O}(2^{(t_U+1)\\cdot(t_W+1)}\\cdot n^{2.5}) time, where t_U respectively t_W is the number of agent types of men respectively women in P_2.",
+      "page": 13
+    }
+  ],
+  "paper": "2112.05777",
+  "usage": {
+    "prompt_tokens": 30935,
+    "completion_tokens": 6399,
+    "total_tokens": 37334,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5394,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

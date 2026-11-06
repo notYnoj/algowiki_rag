@@ -1,0 +1,20 @@
+<tbc>element is sampled. Then, all sets covering the element are recorded. The amount of votes a set received is used as an estimator for its size, used to pick larger sets. This produces an algorithm that computes a _O_(log_n_)-approximation of the sparsest navigable graph in \(\widetilde{O}(n\cdot\text{OPT})\) time. Pairing this with clever preprocessing that exploits relationships between the different set cover instances reduces the running time for general \(\alpha\ge 1\) to \(\widetilde{O}(\mathrm{min}\{n\cdot\text{OPT},n^{2.5}\})\). For the case of \(\alpha=1\), i.e., navigable graphs, further dependencies can be exploited to produce a near-optimal \(\widetilde{O}(n^2)\) running time.
+
+The work by \[25\] includes an algorithm that computes an _O_(log_n_)-approximation of the sparsest \(\alpha\)-navigable graph in \(\widetilde{O}(n\cdot\text{OPT})\) time. It features the same core idea of a randomized simulation of the greedy algorithm seen in \[12\]. It also includes a potentially faster resource augmented approximation algorithm that runs in \(O(n^\omega\cdot\mathrm{log}(\Delta)/\varepsilon)\) time, and computes an _O_(log_n_)-approximation of the sparsest \(2\alpha\cdot(1+\varepsilon)\)-navigable graph, where \(\varepsilon>0\) can be chosen arbitrarily, and \(\Delta\) is the aspect ratio of the point set. Observe that this is a weaker density guarantee as the sparsest \(2\alpha\cdot(1+\varepsilon)\)-navigable graph may be much denser than the sparsest \(\alpha\)-navigable graph. This resource augmented approximation is largely comprised of two subroutines. The first subroutine covers a constant fraction of all uncovered source-target constraints, and the second subroutine is used to verify all satisfied constraints. The implementation of the first subroutine introduces the multiplicative 2 in the \(2\alpha\cdot(1+\varepsilon)\)-approximation. Further, for a fast implementation of the second subroutine, specifically by using fast matrix multiplication, distances are discretized, which introduces the multiplicative \((1+\varepsilon)\) approximation term.
+
+## 2 Preliminaries
+
+### 2.1 Navigability and \(\alpha\)-Navigability
+
+**Definition 2.1** (Navigable Graph)**.** _Given point set P and distance function_ \(d:P\times P\rightarrow\mathbb{R}^+\)_, we say that a directed graph G_=(_P,E_) _is_ navigable _if, for any source point_ \(s\in P\) _and target point_ \(t\in P\), \(s\neq t\)_, there exists some edge_ \((s,v)\in E\) _such that d(v,t)\<d(s,t). That is, s has an edge that, when taken, gets closer to t._
+
+Equivalently, for every source _s_ and target _t_, there exists a directed path _p_<sub>0</sub>=_s,p_<sub>1</sub>_,...,p<sub>k</sub>=t_ from _s_ to _t_ such that \(\forall i:d(p_{i+1},t)<d(p_i,t)\). That is for every source-target pair, there exists a monotone path from the source to the target, and thus the most basic form of greedy search will succeed. Navigability has been studied in the nearest-neighbor search literature for decades \[5, 12, 22, 25\].
+
+While the definition of navigability only guarantees the convergence of basic greedy search for targets that are within _P_, recent work also shows that multiplicative approximation guarantees can be obtained for points outside of _P_ in an arbitrary metric when using Adaptive Beam Search, a variant of basic greedy search \[1\].
+
+#### \(\alpha\)-Navigable graphs
+
+A well-studied direct generalization of navigable graphs \[12, 21, 25, 28\], \(\alpha\)- Navigability requires not only that a monotone path between every source and target exists, but that the distance to the target shrinks at a multiplicative rate of \(\frac{1}{\alpha}\) at every step along the path.
+
+**Definition 2.2** (\(\alpha\)-Navigable Graph)**.** _Given point set P and distance function_ \(d:P\times P\rightarrow\mathbb{R}^+\)_, and_ \(\alpha\ge 1\)_, we say that a directed graph G_=(_P,E_) _is_ \(\alpha\)-navigable _if, for any source point_ \(s\in P\) _and target point_ \(t\in P\), \(s\neq t\)_, there exists some edge_ \((s,v)\in E\) _such that_ \(d(v,t)<\frac{1}{\alpha}\cdot d(s,t)\).
+

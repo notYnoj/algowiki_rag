@@ -1,0 +1,22 @@
+group 1b stays satisfied because all shadow variables are 0. Group 2 does not contain input variables \(x_j^B\).<sup>3</sup> Group 3 contains \(f\rightarrow(z_j^T=x_j^B)\) (4.3), which are actually two clauses; \(\alpha\) violates exactly one of them, and changing \(x_j^B\) to 0 satisfies both. Other clauses in group 3 do not contain \(x_j^B\). This is an improving step.
+
+**Case 1:** There is exactly one \(1\le i\le n\) with \(\alpha(x_i^T)\neq\alpha(x_i^B)\). As argued above, \(\alpha(\mathbf{z}^T)\) really is the correct output \(C_N(\alpha(\mathbf{x}^T))\). By design, it’s the best neighbor of \(\alpha(\mathbf{x}^T)\). So both \(\alpha(\mathbf{x}^B)\) and \(\alpha(\mathbf{z}^T)\) have Hamming distance 1 to \(\alpha(\mathbf{x}^T)\) (the former by assumption of Case 1; the latter by design). So there are actually exactly two positions where \(\alpha(\mathbf{z}^T)\) and \(\alpha(\mathbf{x}^B)\) differ: _i_ and _j_. Changing \(x_i^B\) instead of \(x_j^B\) makes **x**_<sup>T</sup>_ and **x**_<sup>B</sup>_ equal, which keeps group 0 and 1 satisfied and does not affect group 2; in group 3 it additionally satisfies clauses \(f\rightarrow(z_i^T=x_i^B)\) (4.3) (strictly speaking it satisfies both those clauses whereas one of them used to be violated). It might affect group 1b, but only in a beneficial way: making \(z_j^B\) and \(x_j^T\) agree can only improve things here.
+
+**Case 2:** \(\alpha(\mathbf{x}^B)\) and \(\alpha(\mathbf{x}^T)\) differ in more than one coordinate, say _i_ and _j_. Then a clause coming from \(x_i^T\neq x_i^B\rightarrow x_j^T=x_j^B\) (4.8) in group 0 is violated and flipping the violating input position _i_ surely improves the weight. \(\blacktriangleleft\)
+
+We now know that under \(\alpha\) the following hold: **z**_<sup>T</sup>_ equals **x**_<sup>B</sup>_, and it is the best neighbor of **x**_<sup>T</sup>_. **v**_<sup>T</sup>_ is the value of **x**_<sup>T</sup>_ and **v**_<sup>B</sup>_ is the value of **x**_<sup>B</sup>_. If \(\alpha(\mathbf{v}^T)\ge\alpha(\mathbf{v}^B)\), then \(\alpha(\mathbf{x}^T)\) is at least as good as its best neighbor, is a solution to Flip, and we are done. Otherwise, there exists \(1\le i\le n\) with \(\alpha(v_i^T)=0\) and \(\alpha(v_i^B)=1\) and \(\alpha(v_j^T)=\alpha(v_j^B)\) for all \(1\le j<i\). We will derive a contradiction.
+
+\(\blacktriangleright\) **Lemma 16.** _Under_ \(\alpha\) _we have_ \(o_j=v_j^T=v_j^B\) _for all_ \(1\le j<i\).
+
+**Proof.** We already know that \(\alpha(s_j^T)=0\) by Lemma 10. We claim that \(\alpha(s_j^B)=0\), too: If \(\alpha(s_j^B)\) were 1, then changing it to 0 leaves groups 0 and 1 unaffected; in group 1b clauses (4.9) and (4.10) are and stay satisfied; among (4.11) exactly one is violated under \(\alpha(s_j^B)=1\) and both are satisfied under \(\alpha(s_j^B)=0\) (which one depends on whether \(v_j^B,v_j^T\) are both 1 or both 0). So changing \(\alpha(s_j^B)\) to 0 would improve the satisfied weight. Thus, both \(s_j^B\) and \(s_j^T\) are 0 under \(\alpha\).
+
+Next we claim that \(\alpha(o_j)=\alpha(v_j^T)\). Suppose not. If \(\alpha(o_j)=0\) and \(\alpha(v_j^T)=1\) then changing _o<sub>j</sub>_ to 1 wins us clause (_o<sub>j</sub>_) (4.15); if \(\alpha(o_j)=1\) and \(\alpha(v_j^T)=0\) then changing _o<sub>j</sub>_ to 1 wins us \((f\rightarrow(o_j\le v_j^T)\vee s_j^B)\) (4.13). All other clauses in block _j_ of group 2 remain as they were; clauses in other blocks or other groups do not even contain the variable _o<sub>j</sub>_. \(\blacktriangleleft\)
+
+Let us summarize: all circuits are correctly evaluated and BOTTOM reads as input the output of TOP. We have \(\alpha(v_i^T)=0\) and \(\alpha(v_i^B)=1\); all TOP shadow variables \(s_j^T\) are 0; for BOTTOM, the shadow variables \(s_j^B\) for \(1\le j\le i-1\) are all 0. We consider four cases, depending on the values of _o<sub>i</sub>_ and \(s_i^B\):
+
+**Case 10:** \(\alpha(o_i)=1\) and \(\alpha(s_i^B)=0\). Then the control clause \((f\rightarrow(o_i\le v_i^T)\vee s_i^B)\) (4.13) is violated; changing _o<sub>i</sub>_ to 0 satisfies it and only loses the lesser clause (_o<sub>i</sub>_) (4.15).
+
+**Case 00:** \(\alpha(o_i)=0\) and \(\alpha(s_i^B)=0\). Then \((f\wedge v_i^B\wedge\neg v_i^T)\rightarrow s_i^B\) (4.18) is false and we can change \(s_i^B\) to 1 and satisfy it. This does not change any other clause in group 5, 4, 3
+
+<sup>3</sup> We assume that every input of the circuit passes through at least one gate, so no input variable doubles as an output variable.
+

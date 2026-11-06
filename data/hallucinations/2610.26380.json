@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Top-k identification with ratings and pairwise comparisons",
+      "problem family": "Ranking and selection / pure exploration",
+      "bound": "\\mathbb{E}\\left[\\sum_{i\\in S_k^*(\\theta)}\\theta_i-\\sum_{i\\in S_k^*(\\mu_T)}\\theta_i\\right]\\rightarrow 0\\text{ as }R\\rightarrow\\infty",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Under Assumptions 1 and 2, Algorithm 2 with EVALUATIONRULE^{R_t}=SA satisfies \\mathbb{E}\\left[\\sum_{i\\in S_k^*(\\theta)}\\theta_i-\\sum_{i\\in S_k^*(\\mu_T)}\\theta_i\\right]\\rightarrow 0\\text{ as }R\\rightarrow\\infty.",
+      "page": 18
+    }
+  ],
+  "paper": "2610.26380",
+  "usage": {
+    "prompt_tokens": 58194,
+    "completion_tokens": 2772,
+    "total_tokens": 60966,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2555,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

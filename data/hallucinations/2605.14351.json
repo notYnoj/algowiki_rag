@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Uniform convergence of randomized atomic feature kernels",
+      "problem family": "System identification",
+      "bound": "\\Pr\\left(\\max_{0\\le s,t\\le T}|\\widehat{K}_M(s,t)-K_\\mu(s,t)|>\\varepsilon\\right)\\le 4(T+1)^2\\exp\\left(-M\\varepsilon^2/8\\right)",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For any finite horizon _T_ and \\\\(\\varepsilon>0\\\\), \\\\(Pr\\\\left(max_{0\\\\le s,t\\\\le T}|\\\\widehat{K}_M(s,t)-K_\\\\mu(s,t)|>\\\\varepsilon\\\\right) \\\\le 4(T+1)^2exp\\\\left(-M\\\\varepsilon^2/8\\\\right)\\\\).",
+      "page": 3
+    },
+    {
+      "problem": "RKHS-to-\\ell_1 embedding for disk-supported kernels",
+      "problem family": "System identification",
+      "bound": "\\sum_{t=0}^\\infty|h(t)|\\le\\frac{\\sqrt{\\|\\mu\\|}}{1-\\rho}\\|h\\|_{\\mathcal{H}(K_\\mu)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "every \\\\(h\\\\in\\\\mathcal{H}(K_\\\\mu)\\\\) satisfies \\\\(\\\\sum_{t=0}^\\\\infty|h(t)|\\\\le\\\\frac{\\\\sqrt{\\\\|\\\\mu\\\\|}}{1-\\\\rho}\\\\|h\\\\|_{\\\\mathcal{H}(K_\\\\mu)}\\\\\\).",
+      "page": 4
+    },
+    {
+      "problem": "Radius defect for disk-supported kernels",
+      "problem family": "System identification",
+      "bound": "\\rho^2K(s,t)-K(s+1,t+1)\\unknown 0",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If _K_ has representation (14) with \\\\(\\\\text{supp}(\\\\mu)\\\\subseteq\\\\overline{\\\\mathbb{D}_\\\\rho}\\\\), then _K_ is PSD and satisfies \\\\(\\\\rho^2K(s,t)-K(s+1,t+1)\\\\unknown 0\\\\\\).",
+      "page": 4
+    }
+  ],
+  "paper": "2605.14351",
+  "usage": {
+    "prompt_tokens": 15051,
+    "completion_tokens": 11514,
+    "total_tokens": 26565,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10954,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

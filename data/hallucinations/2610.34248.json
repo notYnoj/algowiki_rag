@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(log N)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(sqrt(N))",
+      "quote": "For a single query, HNSecW achieves _O_(log_N_) online searching complexity over a database of size _N_.",
+      "page": 2
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(U log N)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(U sqrt(N))",
+      "quote": "For _U_ sequential queries, we propose a multi-query protocol with an amortized cost of _O_(U_log_N_).",
+      "page": 2
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(log^2 U + log N)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(U log N)",
+      "quote": "We also propose a batch-query protocol with higher parallelism that processes a batch of _U_ queries simultaneously with a much lower critical-path length of _O_(log^2_U_+log_N_).",
+      "page": 2
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(log N) critical-path length for single-query; O(U log N) for multiple-query",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "for the single-query protocol, the critical-path length is _O_(log_N_), and for the multiple- query protocol, it is _O_(U_log_N_).",
+      "page": 2
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "2x increase in vector storage",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Overall, our single-query MPC protocol achieves logarithmic online search complexity with at most a \\(2\\times\\) increase in vector storage.",
+      "page": 2
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(Uk(d + k log^2 k + Uk) + (Ud + U^2) log N)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Therefore, the multiple-query protocol has total communication and local computation costs \\(O\\big(Uk(d+klog^2k+Uk)+(Ud+U^2)logN\\big)\\).",
+      "page": 10
+    },
+    {
+      "problem": "Approximate Nearest Neighbor Search",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(log^2 U) round complexity (reduced from O(U))",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "O(U)",
+      "quote": "We propose a batch protocol that processes the U queries in parallel, reducing the round complexity from O(U) to O(log^2 U).",
+      "page": 10
+    }
+  ],
+  "paper": "2610.34248",
+  "usage": {
+    "prompt_tokens": 19268,
+    "completion_tokens": 11155,
+    "total_tokens": 30423,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10377,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

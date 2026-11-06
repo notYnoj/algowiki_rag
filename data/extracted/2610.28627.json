@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Matrix multiplication",
+      "problem family": null,
+      "bound": "O(n^{9/4+\\gamma}) \\text{ for every } \\gamma>0, \\text{ hence } \\omega \\le 9/4",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every \\(\\gamma>0\\), there is an explicit recursive algorithm that, for every positive integer n, multiplies two \\(n\\times n\\) integer matrices with \\(O(n^{9/4+\\gamma})\\) integer arithmetic operations. In particular, \\(\\omega\\le 9/4\\).",
+      "page": 2
+    }
+  ],
+  "paper": "2610.28627",
+  "usage": {
+    "prompt_tokens": 16797,
+    "completion_tokens": 3489,
+    "total_tokens": 20286,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3319,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

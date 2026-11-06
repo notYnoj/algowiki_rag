@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "thresholded First Order Logic (FOL) triadic queries",
+      "problem family": "temporal motif counting",
+      "bound": "$O(m\\alpha \\log \\sigma_{\\max})$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(m\\alpha \\log \\sigma_{\\max})$ for temporal triangle counting [39]",
+      "quote": "The overall running time of the algorithm is \\(O(m\\alpha log\\sigma_{max})\\)",
+      "page": 9
+    }
+  ],
+  "paper": "2507.17215",
+  "usage": {
+    "prompt_tokens": 28461,
+    "completion_tokens": 5298,
+    "total_tokens": 33759,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5166,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

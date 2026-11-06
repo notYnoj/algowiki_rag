@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Rectangular matrix multiplication",
+      "problem family": "Matrix multiplication",
+      "bound": "\\omega(a,b,c)\\le\\begin{cases} a+b, & c\\le\\frac{ab}{a+b},\\\\ \\frac{a+b+c}{2}+\\frac{1}{4}\\left(\\frac{ab}{c}+\\frac{ac}{b}+\\frac{bc}{a}\\right), & c>\\frac{ab}{a+b}.\\end{cases}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every fixed \\(a\\ge b\\ge c\\ge 0\\),\n\n\\(\\omega(a,b,c)\\le\\left\\{\\begin{array}{ c c }\na+b, & c\\le\\frac{ab}{a+b},\\\\ \\frac{a+b+c}{2}+\\frac{1}{4}\\left(\\frac{ab}{c}+\\frac{ac}{b}+\\frac{bc}{a}\\right), & c>\\frac{ab}{a+b}.\n\\end{array}\\right.\\) (1)",
+      "page": 2
+    },
+    {
+      "problem": "Rectangular matrix multiplication \\omega(k) = \\omega(1,k,1)",
+      "problem family": "Matrix multiplication",
+      "bound": "\\omega(k)\\le\\begin{cases} 2, & 0\\le k\\le\\frac{1}{2},\\\\ 1+k+\\frac{1}{4k}, & k\\ge\\frac{1}{2}.\\end{cases} \\text{ Consequently } \\omega(k)=2 \\text{ for } 0\\le k\\le\\frac{1}{2}.",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every fixed real \\(k\\ge 0\\),\n\n\\(\\omega(k)\\le\\left\\{\\begin{array}{ c c }\n2, & 0\\le k\\le\\frac{1}{2},\\\\ 1+k+\\frac{1}{4k}, & k\\ge\\frac{1}{2}.\n\\end{array}\\right.\\) (2)\n\nConsequently \\(\\omega(k)=2\\) for \\(0\\le k\\le\\frac{1}{2}\\).",
+      "page": 2
+    },
+    {
+      "problem": "Dual exponent \\alpha",
+      "problem family": "Matrix multiplication",
+      "bound": "\\alpha \\ge \\frac{1}{2}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The output-size lower bound \\(\\omega(k)\\ge 2\\) proves equality for \\(0\\le k\\le\\frac{1}{2}\\) and hence \\(\\alpha\\ge\\frac{1}{2}\\).",
+      "page": 9
+    },
+    {
+      "problem": "All-pairs shortest paths in directed unweighted graphs",
+      "problem family": "Graph algorithms / Shortest paths",
+      "bound": "O(n^{2.5}) \\text{ and } O(n^{2.4999})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Zwick's deterministic algorithm for directed unweighted APSP [15, Section 6] has exponent \\(2+\\mu\\), where \\(\\omega(\\mu)\\le 1+2\\mu\\). Here \\(\\omega(\\frac{1}{2})=2=1+2(\\frac{1}{2})\\), so it gives _O(n_<sup>2.5</sup>) running time. Combining the full curve with the deterministic (min,+)-product algorithm and APSP reduction of Alman and Vassilevska Williams [1, Theorems 22 and 33-34] further gives _O(n_<sup>2.4999</sup>) running time.",
+      "page": 10
+    }
+  ],
+  "paper": "2610.10494",
+  "usage": {
+    "prompt_tokens": 14504,
+    "completion_tokens": 7494,
+    "total_tokens": 21998,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6590,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

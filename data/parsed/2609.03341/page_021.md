@@ -1,0 +1,11 @@
+Textured Gaussians [3] adopts the same core idea as GSTex [16]: both methods attach a learnable per-Gaussian texture map to each Gaussian primitive and query it via ray-Gaussian intersection with UV mapping defined by the Gaussian’s local coordinate axes. Both also decompose appearance into a spatially varying texture and spatially constant spherical harmonics, and both follow a two-stage optimization that first trains a standard Gaussian model before adding textures. The main differences are that Textured Gaussians builds on 3D Gaussians rather than 2D, uses a fixed texture resolution across all primitives (instead of adapting the resolution to each Gaussian’s scale), and optionally includes an alpha channel in the texture map. Given the strong architectural similarity and the fact that texture editing is not the main focus of Textured Gaussians (their released codebase does not include an editing pipeline), we compare against GSTex as a representative method from this family.
+
+NeST-Splatting [30] decouples geometry and appearance by replacing per- Gaussian spherical harmonics with a global shell texture, parameterized as a multi-resolution hash grid encoding. During rendering, each ray-Gaussian intersection is queried against the hash grid in _world space_ to obtain textures. While this design yields a compact representation that achieves high-fidelity rendering with fewer primitives, the hash grid remains anchored in world space rather than attached to individual Gaussians. Consequently, displacing or deforming the Gaussian geometry causes the ray-Gaussian intersections to sample the hash grid at the wrong locations. NeST-Splatting also does not provide an editable texture pipeline in their released codebase. As a result, NeST-Splatting is unable to perform geometry editing without the use of additional proxies, such as cages [26] or explicit meshes [29], to establish a correspondence between the deformed and canonical space.
+
+edited scene
+(1) baseline
+(2) + on-ray regularizer
+(3) + deform-aware corr.
+
+**Fig.12:** Additional texture editing results. We show both edited scene and close-up views of two different regions of the scene. As shown, the proposed on-ray regularizer and deformation-aware correspondence maintain the high-fidelity.
+

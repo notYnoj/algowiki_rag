@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting",
+      "problem family": null,
+      "bound": "\\Theta(n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Thus, total cost, \\(T(n)=\\sum_{i=0}^dcn\\le cn+cn+cn\\le 3cn=\\Theta(n)\\)",
+      "page": 5
+    },
+    {
+      "problem": "Sorting",
+      "problem family": null,
+      "bound": "\\Theta(n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Therefore, total cost \\(T(n)=(\\mathrm{depth})\\times(\\mathrm{workperlevel})=2\\cdot n=\\Theta(n)\\)",
+      "page": 6
+    }
+  ],
+  "paper": "2605.14419",
+  "usage": {
+    "prompt_tokens": 13941,
+    "completion_tokens": 8959,
+    "total_tokens": 22900,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8766,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

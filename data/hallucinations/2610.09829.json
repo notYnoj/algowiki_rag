@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Edge-Disjoint Shortest Cycle Packing",
+      "problem family": "Cycle packing",
+      "bound": "W[1]-hard parameterized by k",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Edge-Disjoint Shortest Cycle Packing is W[1]-hard parameterized by k on unweighted subcubic graphs.",
+      "page": 3
+    },
+    {
+      "problem": "Vertex-Disjoint Shortest Cycle Packing",
+      "problem family": "Cycle packing",
+      "bound": "W[1]-hard parameterized by k",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Vertex-Disjoint Shortest Cycle Packing is W[1]-hard parameterized by k on unweighted subcubic graphs.",
+      "page": 3
+    },
+    {
+      "problem": "Diverse Shortest Cycle Coverage",
+      "problem family": null,
+      "bound": "2^{\\mathcal{O}(k)}\\cdot n^{\\mathcal{O}(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "k^{\\mathcal{O}(k)}\\cdot n^{\\mathcal{O}(1)}",
+      "quote": "Diverse Shortest Cycle Coverage on planar graphs admits an algorithm with running time \\(2^{\\mathcal{O}(k)}\\cdot n^{\\mathcal{O}(1)}\\).",
+      "page": 4
+    }
+  ],
+  "paper": "2610.09829",
+  "usage": {
+    "prompt_tokens": 53813,
+    "completion_tokens": 6044,
+    "total_tokens": 59857,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5712,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

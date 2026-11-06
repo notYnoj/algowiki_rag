@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting signed and unsigned integers and floating-point values",
+      "problem family": null,
+      "bound": "O(nw)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n log n)",
+      "quote": "The bsort algorithm sorts an array of n elements with a word size w in O(nw) time.",
+      "page": 4
+    },
+    {
+      "problem": "Sorting signed and unsigned integers and floating-point values",
+      "problem family": null,
+      "bound": "O(w)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The bsort algorithm operates with O(w) auxiliary space",
+      "page": 4
+    }
+  ],
+  "paper": "2603.08929",
+  "usage": {
+    "prompt_tokens": 10454,
+    "completion_tokens": 5036,
+    "total_tokens": 15490,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4862,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

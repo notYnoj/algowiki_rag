@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting under partial information",
+      "problem family": null,
+      "bound": "$O(m)$ preprocessing time and $O(\\log e(G))$ sorting time and comparisons",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(m)$ preprocessing and $O(\\log e(G)+m)$ sorting time (Haeupler et al. [14, SODA'25] and van der Hoog et al. [30, SOSA'25]); $O(n^\\omega)$ preprocessing and $O(\\log e(G))$ sorting time (van der Hoog and Rutschmann [19, FOCS'24])",
+      "quote": "We can preprocess a DAG G on X in O(m) time, so that, given an unknown linear order L on X and the guarantee that all edges in G go from smaller items to larger items with respect to L, we can sort X in O(log e(G)) time and comparisons.",
+      "page": 4
+    },
+    {
+      "problem": "Heap with unified bound",
+      "problem family": "adaptive heaps",
+      "bound": "insert: amortized $O(1)$; first extractMin: amortized $O(1)$; subsequent extractMin: amortized $O\\left(\\min_{y:b(y)<b(x)}\\left(1+\\log|a(x)-a(y)|+\\log(b(x)-b(y))\\right)\\right)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a heap data structure with the unified bound.",
+      "page": 4
+    }
+  ],
+  "paper": "2604.12653",
+  "usage": {
+    "prompt_tokens": 22160,
+    "completion_tokens": 7034,
+    "total_tokens": 29194,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6651,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

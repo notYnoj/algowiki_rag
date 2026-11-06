@@ -1,0 +1,27 @@
+**Edge gadget.** Fix a pair \((i,j)\in[k]^2\) with _i\<j_, and let \(E^{i,j}:=\{\{v,w\}\in E(G):v\in V^i,w\in V^j\}\) be the set of edges between _V<sup>i</sup>_ and _V<sup>j</sup>_. For each edge \(e=\{v_{r_i}^i,v_{r_j}^j\}\in E^{i,j}\), our reduction contains an edge gadget between _S<sup>i</sup>_ and _S<sup>j</sup>_, containing the 15 agents \(h_a^{e,i}\), \(h_b^{e,i}\), \(h_a^{e,j}\), \(h_b^{e,j}\), \(g_1^e\), \(g_2^e\), \(g_3^e\), \(\bar{g}_1^e\), \(\bar{g}_2^e\), \(\bar{g}_3^e\), _f<sup>e</sup>_, \(\bar{f}^e\), \(\alpha_1^e\), \(\alpha_2^e\), and \(\alpha_3^e\).
+
+The intuitive function of the edge gadget is the following. By Lemma 4.8, in any stable matching _M_ there exists some _i_<sup>∗</sup> such that _S<sup>i</sup>_ selects \(v_{i^*}^i\), i.e., \(a_\ell^i\) is matched to a pair \(\{d_p,\bar{d}_q\}\) if and only if \(\ell\ge i^*\). Given an edge _e_, for any \(\ell\ge i^*\), agent \(a_\ell^i\) prefers being matched to the edge gadget (more specifically, to the 2-set \(\{h_a^{e,i},\alpha_1^e\}\)) to being matched to _M_. Similarly, \(b_\ell\) for \(\ell>n-i^*\) prefers to be matched to the edge gadget, namely to the 2-set \(\{h_b^{e,i},\alpha_1^e\}\) to being matched to _M_. The agent \(h_a^{e,i}[h_b^{e,i}]\) prefers the 2-set \(\{a_{i^*}^i,\alpha_1^e\}[\{b_{n+1-i^*}^i,\alpha_1^e\}]\) to the 2- set \(\{f^e,\bar{f}^e\}\) if \(r_i\le i^*[r_i\ge i^*]\). Thus, if \(v_{r_i}^i=v_{i^*}^i\), i.e., if the vertex selected by _S<sup>i</sup>_ is an endpoint of _e_, then both \(h_a^{e,i}\) and \(h_b^{e,i}\) cannot be matched to \(\{f^e,\bar{f}^e\}\). The edge gadget is now designed in such a way that an arbitrary of these vertices \(h_x^{e,y}(x\in\{a,b\}\) and \(y\in\{i,j\})\) has to be matched to \(\{f^e,\bar{f}^e\}\), which is possible if and only if _e_ is not an edge between the two vertices selected by the vertex-selection gadgets, i.e., \(e\neq\{v_{i^*}^i,v_{j^*}^j\}\).
+
+We now give a formal description of the edge gadget. We fix an arbitrary order \(\succ^{i,j}\) of the edges from _E<sup>i,j</sup>_, and denote by \(E^{\unknown e}\) the set of edges \(e'\in E^{i,j}\) with \(e'\unknown^{i,j}e\). In the master poset, an agent _x<sup>e</sup>_ is before \(y^{e^\prime}\) for \(x\in\{h_a^{:i},h_a^{:j},h_b^{:i},h_b^{:j},g_1,g_2,g_3,\bar{g}_1,\bar{g}_2,\bar{g}_3,f,\bar{f},\alpha_1,\alpha_2,\alpha_3\}\) if and only if _x=y_ and _e_ is before \(e'\) in the order of edges from _E<sup>i,j</sup>_. Let \(e=\{v_{r_i}^i,v_{r_j}^j\}\). The preferences of the agents look as follows.
+
+\(h_a^{e,i}:\{\{g_p^{e^\prime},\bar{g}_q^{e^{\prime\prime}}\}:p,q\in[3],e',e''\in E^{\unknown e}\}\succ\{\{a_p^i,\alpha_1^{e^\prime}\}:p\le r_i,e'\in E^{\unknown e}\}\)<br>
+\(\succ\{f^{e^\prime},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{h_a^{e,i}},\)<br>
+\(h_a^{e,j}:\{\{g_p^{e^\prime},\bar{g}_q^{e^{\prime\prime}}\}:p,q\in[3],e',e''\in E^{\unknown e}\}\succ\{\{a_p^j,\alpha_1^{e^\prime}\}:p\le r_j,e'\in E^{\unknown e}\}\)<br>
+\(\succ\{f^{e^\prime},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{h_a^{e,j}},\)<br>
+\(h_b^{e,i}:\{\{g_p^{e^\prime},\bar{g}_q^{e^{\prime\prime}}\}:p,q\in[3],e',e''\in E^{\unknown e}\}\succ\{\{b_p^i,\alpha_1^{e^\prime}\}:p\le n+1-r_i,e'\in E^{\unknown e}\}\)<br>
+\(\succ\{f^{e^\prime},\bar{f}^{e^{\prime\prime}}:e'\in E^{\unknown e}\}\succ\mathrm{CO}_{h_b^{e,i}},\)<br>
+\(h_b^{e,j}:\{\{g_p^{e^\prime},\bar{g}_q^{e^{\prime\prime}}\}:p,q\in[3],e',e''\in E^{\unknown e}\}\succ\{\{b_p^j,\alpha_1^{e^\prime}\}:p\le n+1-r_j,e'\in E^{\unknown e}\}\)<br>
+\(\succ\{f^{e^\prime},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{h_b^{e,j}},\)<br>
+\(g_p^e:\{\{h_a^{e^\prime,i},\bar{g}_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\{\{h_b^{e^\prime,i},\bar{g}_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\)<br>
+\(\succ\{\{h_a^{e^\prime,j},\bar{g}_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\{\{h_b^{e^\prime,j},\bar{g}_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{g_p^e},\)<br>
+\(\bar{g}_p^e:\)<br>
+\(\{\{h_b^{e^\prime,j},g_p^{e^\prime}\}:e',e''\in E^{\unknown e}\}\succ\{\{h_a^{e^\prime,j},g_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\)<br>
+\(\succ\{\{h_b^{e^\prime,i},g_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\{\{h_a^{e^\prime,j},g_p^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{\bar{g}_p^e},\)<br>
+\(f^e:\{h_a^{e^\prime,i},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\{h_b^{e^\prime,i},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\)<br>
+\(\succ\{h_a^{e^\prime,j},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\{h_b^{e^\prime,j},\bar{f}^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{f^e},\)<br>
+\(\bar{f}^e:\{h_b^{e^\prime,j},f^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\{h_a^{e^\prime,j},f^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\)<br>
+\(\succ\{h_b^{e^\prime,i},f^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\{h_a^{e^\prime,j},f^{e^{\prime\prime}}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{\bar{f}^e},\)<br>
+\(\alpha_1^e:\{\{a_p^i,h_a^{e^\prime,i}\},\{b_p^i,h_a^{e^\prime,i}\},\{a_p^j,h_a^{e^\prime,j}\},\{b_p^j,h_a^{e^\prime,j}\}:p\in[n]:e'\in E^{\unknown e}\}\)<br>
+\(\succ\{\{\alpha_2^{e^\prime},\alpha_3^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{\alpha_1^e},\)<br>
+\(\alpha_2^e:\{\{\alpha_1^{e^\prime},\alpha_3^{e^{\prime\prime}}\}:e',e''\in E^{\unknown e}\}\succ\mathrm{CO}_{\alpha_2^e},\)
+

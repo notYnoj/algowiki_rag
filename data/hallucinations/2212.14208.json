@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Linear systems Ax=b with A=H+S arising from dissipative Hamiltonian ODEs/DAEs and port Hamiltonian systems",
+      "problem family": "Krylov subspace methods",
+      "bound": "\\|b-Ax_m\\|_{H^{-1}}\\le\\|b-Ax_0\\|_{H^{-1}}\\cdot\\frac{2}{R^k+R^{-k}},\\quad \\frac{1}{2}\\left(R+\\frac{1}{R}\\right)=\\frac{\\sqrt{\\beta^2+1}+\\sqrt{\\alpha^2+1}}{\\beta-\\alpha},\\; R>1",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\|b-Ax_m\\|_{H^{-1}}\\le\\|b-Ax_0\\|_{H^{-1}}\\cdot 2\\left(\\frac{\\lambda}{\\sqrt{1+\\lambda^2}+1}\\right)^m",
+      "quote": "Then the residuals of the \\(\\ell\\)MR iterates \\(x_m\\) from (2.2) satisfy \\(\\|b-Ax_m\\|_{H^{-1}}\\le\\|b-Ax_0\\|_{H^{-1}}\\cdot\\frac{2}{R^k+R^{-k}}\\).",
+      "page": 7
+    },
+    {
+      "problem": "Linear systems Ax=b with A=H+S arising from dissipative Hamiltonian ODEs/DAEs and port Hamiltonian systems",
+      "problem family": "Krylov subspace methods",
+      "bound": "\\|b-Ax_m\\|_{H^{-1}}\\le\\|V_{m+1}\\|_{H^{-1}}\\cdot\\varrho_m,\\quad \\text{and if }\\|z_m-H^{-1}v_m\\|_H\\le\\varepsilon\\|H^{-1}v_m\\|_H,\\text{ then }\\|V_{m+1}\\|_{H^{-1}}\\le\\left(\\frac{m+1}{1-\\varepsilon}\\right)^{1/2}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then (4.2) \\(\\|b-Ax_m\\|_{H^{-1}}\\le\\|V_{m+1}\\|_{H^{-1}}\\cdot\\varrho_m,\\)",
+      "page": 9
+    }
+  ],
+  "paper": "2212.14208",
+  "usage": {
+    "prompt_tokens": 15242,
+    "completion_tokens": 7757,
+    "total_tokens": 22999,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7220,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

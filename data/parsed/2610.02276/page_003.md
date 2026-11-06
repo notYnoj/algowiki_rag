@@ -1,0 +1,20 @@
+_Proof._ If the output is _I_, every \(w\notin I\) was rejected by a previously accepted neighbour, which necessarily belongs to _I_.
+
+Conversely, assume the stated condition and suppose that some vertex outside _I_ is accepted. Choose the earliest accepted such vertex _w_. By hypothesis there is \(u\in I\cap N(w)\) with \(u\prec_\pi w\). If _u_ had been rejected, it would have had an earlier accepted neighbour. Since _I_ is independent, that neighbour would lie outside _I_, contradicting the choice of _w_. Thus _u_ was accepted before _w_, forcing _w_ to be rejected, a contradiction. Hence no outside vertex is accepted, and every vertex of _I_ is accepted because _I_ is independent.
+
+For background and computation it is also useful to condition on the first scanned vertex. If \(I\in\mathcal{M}(G)\) and _n_=|_V(G_)|_\>_0, then
+
+\(\mathsf{G}_G(I)=\frac{1}{n}\sum_{v\in I}\mathsf{G}_{G-N[v]}(I\backslash\{v\}),\) (1)
+
+with the empty-graph probability interpreted as 1. The recurrence is elementary: the first vertex must lie in _I_, and after accepting _v_ only the relative order on _G-N_\[_v_\] remains relevant. We use (1) only as background and as a computational check, not in the shortest proof of theorem 1.1.
+
+## 3 Related work and novelty boundary
+
+Random-order greedy maximal independent sets have been studied in several forms. Krivelevich, Mészáros, Michaeli and Shikhelman study the same uniformly random vertex-order process and its equivalent continuous arrival-time formulation, with emphasis on output size, density and local limits \[6\]. Gazmuri’s random greedy deletion algorithm is another equivalent finite implementation; Dall’Asta, Pin and Ramezanpour discuss it in a statistical-mechanics treatment of maximal independent sets and explicitly distinguish a dynamical measure from a flat blocked- state ensemble \[2, 5\]. Blocking random sequential adsorption and parking models supply further background on greedy occupation processes on graphs and trees \[3, 9, 10, 12\].
+
+For fixed deterministic graphs, the closest exact-uniformity source located in the final audit is Kryven, Versendaal and de Vries \[7\]. Their iterative maximal independent set process chooses uniformly from currently available vertices and is therefore equivalent in law, on a fixed finite graph, to restricting a uniformly random permutation as vertices are removed. Their Proposition 3.8 gives a _sufficient_ structural condition--regular independent sets--under which the terminal maximal independent set is uniform. The checked version does not state the converse. Their stronger 2-uniformity condition and its classification therefore do not classify all graphs with exactly uniform greedy output. On connected trees their sufficient regular-independent-set hypothesis already forces ordinary vertex regularity, leaving only the trivial tree cases, but that one-way implication does not prove the necessity direction of theorem 1.1.
+
+Other nearby results concern different observables. Contat obtains an exact distributional identity for the _size_ of the greedy independent set on a uniform Cayley tree \[1\]. The RSA literature largely studies occupation probabilities and limiting densities rather than the complete terminal-set law. Gadouleau and Kutner study the same deterministic greedy MIS map from an ordering; in particular, their _P_<sub>3</sub> example displays unequal permutation fibres, but their main questions concern reachability and fixing orders rather than random-output equiprobability \[4\]. The maximal-independent-set counting inequality used below sits in standard counting territory; compare Sagan and Vatter’s _m_-bound \[11\].
+
+These sources make several boundaries important. We make no novelty claim for the greedy process, its random-priority representation, random sequential adsorption, the dynamic-versus- flat comparison, first-choice recurrences, elementary fibre counting, maximal-independent-set counting bounds, or diameter-end geometry. The contribution-level claims are the exact tree obstruction in theorem 1.1 and the exact mixed-spider formulas and tuned near-uniform sequence<tbc>
+

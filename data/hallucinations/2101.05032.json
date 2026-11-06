@@ -1,0 +1,141 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimum",
+      "problem family": "arbitrary sets",
+      "bound": "(2+\\varepsilon)\\cdot\\mathrm{opt}_k+\\mathrm{O}\\left(\\frac{1}{\\varepsilon}\\cdot\\mathrm{lg}m\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "We present an algorithm that requires at most \\((2+\\varepsilon)\\cdot opt_k+O\\left(\\frac{1}{\\varepsilon}\\cdot lgm\\right)\\) rounds, for every \\(0<\\varepsilon<1\\), where opt_<sub>k</sub> is the optimal number of rounds and _m_=|S|.",
+      "page": 3
+    },
+    {
+      "problem": "Minimum",
+      "problem family": "disjoint sets",
+      "bound": "BAL_k\\le opt_k+O(lgmin\\{k,m\\})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 4.4.** \\(BAL_k\\le opt_k+O(lgmin\\{k,m\\})\\).",
+      "page": 12
+    },
+    {
+      "problem": "Minimum",
+      "problem family": "disjoint sets",
+      "bound": "BAL is O(lgmin\\{k,m\\}/lglgmin\\{k,m\\})-round-competitive",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 4.10.** BAL _is_ O(lgmin{_k,m_}/lglgmin{_k,m_})-round-competitive.",
+      "page": 14
+    },
+    {
+      "problem": "Minimum",
+      "problem family": "arbitrary sets",
+      "bound": "no o(lgmin\\{k,m\\}/lglgmin\\{k,m\\})-round-competitive deterministic algorithm",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 4.11.** _For arbitrarily large m and any deterministic algorithm ALG, there exists an instance with m sets and k>m queries per round, such that_ opt_<sub>k</sub>_=1, \\(\\mathrm{ALG}_k\\ge W^{-1}(\\mathrm{lg}m)\\) _and_ \\(\\mathrm{ALG}_k=\\Omega(W^{-1}(\\mathrm{lg}k))\\)_. Hence, there is no_ o(lgmin{_k,m_}/lglgmin{_k,m_})-round- competitive deterministic algorithm.",
+      "page": 14
+    },
+    {
+      "problem": "Minimum",
+      "problem family": "disjoint sets",
+      "bound": "No deterministic algorithm ALG attains \\mathrm{ALG}_k\\le\\mathrm{opt}_k+\\mathrm{o}(lgmin\\{k,m\\})",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 4.12.** _No deterministic algorithm ALG attains_ \\(\\mathrm{ALG}_k\\le\\mathrm{opt}_k+\\mathrm{o}(lgmin\\{k,m\\})\\).",
+      "page": 15
+    },
+    {
+      "problem": "Sorting",
+      "problem family": null,
+      "bound": "2-round-competitive",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "2\\cdot opt_k+1",
+      "quote": "\\blacktriangleright **Theorem 3.1.** _The algorithm of Halldórsson and de Lima [21] yields a_ 2_-round-competitive algorithm for Sorting that runs in polynomial time._",
+      "page": 6
+    },
+    {
+      "problem": "Sorting",
+      "problem family": null,
+      "bound": "2",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The problem has a lower bound of 2 on the round-competitive factor.",
+      "page": 7
+    },
+    {
+      "problem": "Selection",
+      "problem family": "finding the i-th smallest value",
+      "bound": "\\left\\lceil\\frac{\\mathrm{opt}_1+i-1}{k}\\right\\rceil\\le\\mathrm{opt}_k+\\left\\lceil\\frac{i-1}{k}\\right\\rceil",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 5.1.** _For instances of the i-th smallest value problem where all input intervals are open or trivial, there is an algorithm that returns the i-th smallest value v_<sup>∗</sup> _and uses at most_ \\(\\left|\\frac{\\mathrm{opt}_1+i-1}{k}\\right|\\le\\mathrm{opt}_k+\\left|\\frac{i-1}{k}\\right|\\) _rounds._",
+      "page": 16
+    },
+    {
+      "problem": "Selection",
+      "problem family": "finding all elements with value v*",
+      "bound": "2-round-competitive",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 5.6.** _There is a_ 2_-round-competitive algorithm for Selection._",
+      "page": 19
+    },
+    {
+      "problem": "Selection",
+      "problem family": "finding all elements with value v*",
+      "bound": "any algorithm that makes k queries in the first round needs at least two rounds",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Lemma 5.7.** _There is a family of instances of_ Selection _with_ \\(k=i\\ge 2\\) _with_ \\(\\mathrm{opt}_1\\le i\\) _(and hence_ opt_<sub>k</sub>_=1_) such that any algorithm that makes k queries in the first round needs at least two rounds and performs at least_ \\(\\mathrm{opt}_1+\\lceil(i-1)/2\\rceil\\) _queries._",
+      "page": 19
+    },
+    {
+      "problem": "general",
+      "problem family": null,
+      "bound": "conversion from batch model to round model: \\alpha\\cdot\\mathrm{opt}_k+r-1 rounds",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 6.1.** _If there is an_ \\(\\alpha\\)_-query-competitive algorithm that performs at most r batches, then there is an algorithm that performs at most_ \\(\\alpha\\cdot\\mathrm{opt}_k+r-1\\) _rounds of k queries. Conversely, if a problem has a lower bound of_ \\(\\beta\\cdot\\mathrm{opt}_k+t\\) _on the number of rounds of k queries, then any algorithm running at most t_+1 _batches has query-competitive ratio at least_ \\(\\beta\\).",
+      "page": 20
+    },
+    {
+      "problem": "general",
+      "problem family": null,
+      "bound": "conversion from round model to batch model: query-competitive ratio O(\\alpha\\cdot n^{\\lfloor\\alpha\\rfloor/(r-1)})",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\blacktriangleright **Theorem 6.2.** _If there is an_ \\(\\alpha\\)_-round-competitive algorithm for rounds of k queries, with_ \\(\\alpha\\) _independent of k, then there is an algorithm that performs at most r batches with query-competitive ratio_ \\(\\mathrm{O}(\\alpha\\cdot n^{\\lfloor\\alpha\\rfloor/(r-1)})\\)_, with_ \\(r\\ge\\lfloor\\alpha\\rfloor\\cdot x+1\\) _for an arbitrary natural number x. In particular, for_ \\(r\\ge\\lfloor\\alpha\\rfloor\\cdot lgn+1\\)_, the query-competitive factor is_ \\(\\mathrm{O}(\\alpha)\\).",
+      "page": 20
+    }
+  ],
+  "paper": "2101.05032",
+  "usage": {
+    "prompt_tokens": 26364,
+    "completion_tokens": 10662,
+    "total_tokens": 37026,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8766,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

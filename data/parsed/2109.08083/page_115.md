@@ -1,0 +1,22 @@
+<tbc>6.4.1.3. _Step 3._ We now wish to cover all vertices remaining outside _I_<sub>_t_<sub>_i_+1</sub></sub> in _H_<sub>_i._1</sub> in order to reach _H_<sub>_i_+1</sub>. We do this via the following random greedy algorithm. Let \(v_1,v_2,\dots,v_\chi\) be an arbitrary enumeration of the vertices in _V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\]). We build a matching \(M_i^c:=\{e_i:i\in[\chi]\}\) as follows. For every \(i\in[\chi]\), one by one we choose an edge _e<sub>i</sub>_ for _v<sub>i</sub>_ so that \(e_i\in E_{H_{i.1}}(v_i,I_{t_i})\) and _e<sub>i</sub>_ is chosen uniformly at random from all such edges that are disjoint from all previous choices {_e<sub>j</sub>}<sub>j\<i</sub>_. If there is no such choice available for _e<sub>i</sub>_ for some \(i\in[\chi]\) the algorithm aborts.
+
+We want to track how this process affects degree-type properties and the density of vertices remaining in the graph. Our random greedy algorithm uses the properties given in Corollary 6.32, that we have (G1)-(G3) with _H_<sub>_i._1</sub> in place of _G_.
+
+Note that since there are at most \(2.1c_2\mathrm{log}^{l_4}(n)t_i^{1-\epsilon_1}p_\mathrm{gr}\) vertices to cover via the random greedy algorithm above and each vertex is in at least \(\frac{0.9c_1t_ip_\mathrm{gr}^3}{\mathrm{log}^{2l_3+2}(n)}\) suit able edges, where, recalling Definition 3.5, \(p_\mathrm{gr}^2\gg t_i^{-\epsilon_1}\), a greedy algorithm would successfully complete. Indeed, since the maximum pair degree in _H_<sub>_i._1</sub> is at most 1 (for every \(i\ge 1\), since T\[_I_<sub>_t_<sub>1</sub></sub>\] contains no wrap-around edges), choosing one edge destroys at most 4 choices for the next vertex, so by the final choice we still have at least \(\frac{0.9c_1^3t_ip_\mathrm{gr}^3}{\mathrm{log}^{4l_3+6}(n)}-8.4c_2\mathrm{log}^{l_4}(n)t_i^{1-\epsilon_1}p_\mathrm{gr}\ge\frac{0.89c_1^3t_ip_\mathrm{gr}^3}{\mathrm{log}^{4l_3+6}(n)}\). However we wish to run a _random_ greedy algorithm to ensure ‘nice’ properties remain in the graph at the end of the process, in particular those properties relating to permissibility of a weighted subgraph of _H_<sub>1∗</sub>.
+
+Let \(p_v^i\) be the probability that a vertex \(v\in V(H_{i.1}[I_{t_{i+1}}])\) is covered by the random greedy cover process.
+
+Proposition 6.40. _Suppose that_ 8|_V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\])|_\<d_<sub>_H<sub>i._1</sub></sub>(_v_) _for every vertex_<br>
+\(v\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])\)_. Then for every_ \(v\in V(H_{i.1}[I_{t_{i+1}}])\),<br>
+\(p_v^i\le\frac{2|E_{H_{i.1}}(v,I_{t_i}\backslash I_{t_{i+1}},*,*)|}{\mathrm{min}_{v\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])}d_{H_{i.1}}(v)}.\)
+
+Proof. Since \(v\in V(H_{i.1}[I_{t_{i+1}}])\), the probability that it is covered in the random greedy cover is the probability that it is in an edge chosen for one of the vertices in _V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\]). There are at most |_E_<sub>_H<sub>i._</sub></sub>(_v,I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>,∗,∗)| instances where an edge containing _v_ might be chosen to cover a vertex in _V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\]). Every time an edge is chosen for a vertex \(v_i\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])\) it reduces the possible choices for _v_<sub>_i_+1</sub> by at most 4, (since the four vertices in _e<sub>i</sub>_ are no longer available, and each of these could have been in at most one edge with _v_<sub>_i_+1</sub>). Thus since every vertex in _V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\]) starts with at least \(\mathrm{min}_{v\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])}d_{H_{i.1}}(v)\) choices, and there are |_V(H_<sub>_i._1</sub>\[_I<sub>t<sub>i</sub></sub>_\\_I_<sub>_t_<sub>_i_+1</sub></sub>\])| such vertices to consider in the process, every vertex _v<sub>i</sub>_ we wish to cover will have at least
+
+\(\mathrm{min}_{v\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])}d_{H_{i.1}}(v)-4|V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])|\ge\frac{1}{2}\mathrm{min}_{v\in V(H_{i.1}[I_{t_i}\backslash I_{t_{i+1}}])}d_{H_{i.1}}(v)\)
+
+choices for the edge _e<sub>i</sub>_ used to cover it. The proposition follows. □
+
+Corollary 6.41. _For every_ \(v\in V(H_{i.1}[I_{t_{i+1}}])\),
+
+\(p_v^i<\frac{5c_3\mathrm{log}^{4l_3+l_4+6}(n)}{c_1^3t_i^{\epsilon_1}}.\)
+

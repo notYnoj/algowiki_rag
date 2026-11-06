@@ -1,0 +1,22 @@
+_Proof._ We reduce the problem to deciding if there exists a matching that covers a given side of a bipartite graph _H_=(_U,W;F_) entirely. We may assume that there is no edge \(e\in E\backslash M\) whose rank is fixed on both of its vertices in such a way that _e_ necessarily blocks _M_, as otherwise the answer is clearly ‘NO’. Also, we may assume that no edge \(e\in E\backslash M\) has a fixed rank at a vertex where all edges in _M_ have better rank, because then _e_ is dominated and can be removed.
+
+We construct a bipartite graph _H_=(_U,W;F_) as follows. For each saturated vertex \(v\in V\) , we add vertices _v_<sub>1</sub>_,...,v_<sub>_p<sub>v</sub>(f_)-1</sub> to _U_ where _f_ is the worst edge for _v_ in _M_. If _p<sub>v</sub>(f_)=1, then we do not include any copies of _v_. Also, if there is an index \(1\le j\le p_v(f)-1\) such that _j_ is already assigned to an edge, then we delete that copy of _v_ from the graph. For each edge \(e\notin M\) we add a vertex _v<sub>e</sub>_ to _W_. Finally, we add an edge between a copy _v<sub>j</sub>_ of a vertex \(v\in V\) and a vertex _v<sub>e</sub>_ corresponding to edge \(e\in E(v)\) if and only if _p<sub>v</sub>(e_) is not yet fixed.
+
+We claim that the preferences can be extended in such a way that _M_ is a stable _q_-matching if and only if _H_ admits a matching covering the vertices in _W_. First suppose there is a matching _N_ in _H_ covering all vertices in _W_. We allocate the unassigned preferences of the saturated vertices that are worse than its worst edge in any order to the edges that are matched to its copies in _N_. The remaining preferences are chosen arbitrarily from the free positions. Then _M_ will become a stable _q_-matching of _G_ with respect to those preferences, since any edge contains a vertex that is saturated with strictly better edges.
+
+For the other direction, suppose that it is possible to extend the preferences in _G_ such that _M_ becomes stable. If we take the matching _M_ in _H_ that matches _v<sub>j</sub>_ to the vertex corresponding to its _j_’th worst edge, then _M_ covers all vertices in _W_ as an uncovered vertex would correspond to a blocking edge.
+
+As a matching covering the vertices in _W_ can be found in polynomial time, the theorem follows.
+
+As a slightly more general problem, suppose that lower and upper bounds \(\ell_v(e)\) and _u<sub>v</sub>(e_) are given for each vertex \(v\in V\) and edge incident to _v_. The goal is to extend the preferences in such a way that _M_ is stable and \(\ell_v(e)\le p_v(e)\le u_v(e)\) holds for each vertex _v_ and each edge _e_ adjacent to _v_.
+
+**Theorem 30.** _If only lower bounds are given, then_ inc-max-SPE _can be solved in polynomial time._
+
+_Proof._ We give an algorithm consisting of four phases.
+
+_Phase 1:_ We construct a bipartite graph _H_=(_U,W;F_) similarly as in the proof of the unbounded case (Theorem 29). For each saturated vertex \(u\in V\) , we add _p<sub>u</sub>(f_)-_k<sub>u</sub>_ copies of _u_ to _U_, where _f_ is the worst edge for _u_ in _M_ and _k<sub>u</sub>_ is the number of fixed values in the first _p<sub>u</sub>(f_) places. Also, for each edge \(e\in E\backslash M\) that is not dominated already, we add a vertex _v<sub>e</sub>_ to _W_. We add an edge between a copy _u<sub>j</sub>_ of a vertex \(u\in V\) and a vertex _v<sub>e</sub>_ corresponding to an edge \(e\in E(u)\) if and only if _p<sub>u</sub>(e_) is not yet fixed and \(j\ge\ell_u(e)\).
+
+We check whether there exists a matching that covers all vertices of _W_; such a matching corresponds to the domination of the edges in _E_\\_M_ not yet dominated. If no such matching exists, then the algorithm stops with the answer ‘NO’, the preferences cannot be extended in such a way that _M_ is a stable _q_-matching and the lower bounds are met. Otherwise, let _N_<sub>1</sub> be a matching covering _W_.
+
+_Phase 2:_ We extend the bipartite graph _H_ by adding another vertex to _W_ for each edge that was not dominated originally, and two vertices for every edge that was not considered in Phase 1. That is, for each edge \(e=xy\in E\), there are two corresponding vertices \(v_e^x\) and \(v_e^y\) in _W_. We modify the edges of _H_ in such a way that \(v_e^x\) is only connected to the copies _x<sub>i</sub>_ of _x_ and \(v_e^y\) is only connected to the copies _y<sub>j</sub>_ of _y_ where \(i\ge\ell_x(e)\) an \(j\ge\ell_y(e)\), respectively. Finally,<tbc>
+

@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "\\gamma-Approximate Nearest Neighbor Search under \\ell_\\infty",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "N^{1-\\delta} query time with polynomial preprocessing",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Assuming SETH, for any \\(\\delta>0\\), there exists a constant \\(\\gamma\\in(1,2)\\) such that \\(\\gamma\\)-ANN under the \\(\\ell_\\infty\\) norm cannot be solved with polynomial preprocessing and \\(N^{1-\\delta}\\) query time.",
+      "page": 4
+    },
+    {
+      "problem": "\\gamma-approximate Bichromatic Closest Pair under \\ell_\\infty",
+      "problem family": "Bichromatic Closest Pair",
+      "bound": "N^{2-\\delta} time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Assuming SETH, for any \\(\\delta>0\\) and \\(\\gamma<3\\), there exists a constant c\\>_0 such that \\(\\gamma\\)-approximate Bichromatic Closest Pair on instances with dimension d=c\\(\\log N\\) under the \\(\\ell_\\infty\\) norm cannot be solved in \\(N^{2-\\delta}\\) time.",
+      "page": 4
+    },
+    {
+      "problem": "\\gamma-Approximate Nearest Neighbor Search under \\ell_\\infty",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "N^{1-\\delta} query time with polynomial preprocessing on instances with d=c\\log N",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Assuming SETH, for any \\(\\delta>0\\) and \\(\\gamma<3\\), there exists a constant c\\>_0 such that \\(\\gamma\\)-ANN on instances with dimension d=c\\(\\log N\\) under the \\(\\ell_\\infty\\) norm cannot be solved with polynomial preprocessing and \\(N^{1-\\delta}\\) query time.",
+      "page": 5
+    }
+  ],
+  "paper": "2011.06135",
+  "usage": {
+    "prompt_tokens": 14791,
+    "completion_tokens": 4076,
+    "total_tokens": 18867,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3561,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

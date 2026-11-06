@@ -1,0 +1,22 @@
+Because it can be adjusted dynamically after index creation, practitioners can cheaply sweep \(\varepsilon\) at query time to achieve their desired QPS and recall targets.
+
+Figure 11 evaluates two second-order tuning parameters for GIST on Panorama-IVFFlat at a fixed recall target (_R_=0.96).
+
+**_Number of Levels (L)_**. Increasing _L_ monotonically reduces the average number of dimensions scanned. However, each extra level introduces branch-prediction overhead and disrupts CPU prefetching by breaking predictable memory strides. Empirical results on GIST reflect this hardware tension: throughput peaks at _L_=30 with a 16.6\(\times\) speedup over _L_=1, but regresses to 8.4\(\times\) at _L_=120 as systems overhead outpaces pruning gains. Kernel specialization compounds this: because our dot-product kernels target level widths that are multiples of 8 (Section 6.1), _L_=60 (width 16) outpaces _L_=64 (width 15, generic-kernel fallback) by 1.22\(\times\).
+
+**_Batch Size (B)_**. Throughput peaks at _B_=1024 (6.6\(\times\) over un- batched), our standard across all datasets. Larger _B_ degrades throughput through threshold staleness: all _B_ points are pruned against the previous batch’s bound, so oversized batches scan an inflated fraction of dimensions before the threshold updates, decaying to 3.8\(\times\) at _B_=8192.
+
+**_Out-of-distribution queries_**. Following Hephaestus [10], we evaluate out-of-distribution resilience on GIST using three relative- contrast targets: RC = 3.00 (easy), 1.70 (medium), and 1.35 (hard) (Figure 12). As query difficulty intensifies, throughput declines across all evaluated frameworks. However, Panorama-IVFFlat
+
+demonstrates superior algorithmic robustness: while its QPS decreases under harder workloads, it completely preserves perfect recall while maintaining substantial speedups over the Faiss baseline (25.1\(\times\) easy, 19.2\(\times\) medium, and 12.1\(\times\) hard). Conversely, alternative probabilistic approaches suffer a dual penalty to both throughput and accuracy; for example, PDX-IVFFlat experiences monotonic recall degradation-dropping from -0.41pp at RC=3.00 to -1.27pp at RC=1.35. This stark disparity underscores the inherent fragility of probabilistic heuristics like ADSampling under distribution shifts, contrasting with Panorama’s predictable exactness.
+
+**_Measured vs. predicted speedup_**. To assess how closely runtime tracks the reduction in features scanned, we compare empirical speedups aggregated across all six datasets against the semi- empirical model _s_exp = 1/_p_, where _p_ is the fraction of dimensions processed (Figure 13)-a post-hoc measure of actual data reduction, distinct from our a priori theoretical predictions. We restrict this analysis to the contiguous IVFFlat and IVFPQ families, whose custom layouts avoid poor scan strides. Predictions track measured QPS closely, with IVFPQ (and to a lesser extent IVFFlat) often exceeding them: both pin the query slice in registers across candidates, avoiding redundant memory accesses and cache thrashing relative to streaming the full query per candidate.
+
+## 8 CONCLUSION
+
+We introduced Panorama, an accretive refinement layer that integrates broadly into modern vector indexes. Panorama accumulates _L_<sub>2</sub> contributions along the PCA basis and prunes candidates the moment a tight Cauchy-Schwarz lower bound exceeds the running _k_-NN threshold; we prove its expected cost scales as \(\mathcal{O}(Nd/\alpha)\) in the dataset’s spectral decay rate \(\alpha\). Across six datasets and four index families (IVFPQ/Flat, HNSW, and PQ-refine), Panorama outperforms the baselines at any target recall, delivering up to 28.9\(\times\) speedups, while remaining robust on OOD queries. It has been upstreamed into Faiss and ships in its official releases.
+
+## REFERENCES
+
+[1] Stephen F Altschul, Warren Gish, Webb Miller, Eugene W Myers, and David J Lipman. 1990. Basic local alignment search tool. _Journal of molecular biology_ 215, 3 (1990), 403-410. [2] Gene M. Amdahl. 1967. Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities. In _AFIPS ’67 (Spring): Proceedings of the April 18-20, 1967, Spring Joint Computer Conference_ (Atlantic City, New Jersey). Association for Computing Machinery, New York, NY, USA, 483-485. [3] Alexandr Andoni and Piotr Indyk. 2008. Near-optimal hashing algorithms for approximate nearest neighbor in high dimensions. In _Proceedings of the 47th Annual IEEE Symposium on Foundations of Computer Science (FOCS)_. 459-468.
+

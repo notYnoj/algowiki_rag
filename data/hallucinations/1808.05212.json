@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting 3 elements",
+      "problem family": "sorting networks",
+      "bound": "3\\text{ stages},\\ \\max\\text{ swaps}=2,\\ \\text{avg swaps}=\\frac{7}{6}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\max\\text{ swaps}=3,\\ \\text{avg swaps}=\\frac{3}{2}",
+      "quote": "More striking is a reduction in maximum exchange, which was lowered from 3 to 2! Moreover, the average number of swaps was lowered from 3/2=1.5 to 7/6≈1.167.",
+      "page": 4
+    },
+    {
+      "problem": "Sorting 4 elements",
+      "problem family": "sorting networks",
+      "bound": "5\\text{ links},\\ 3\\text{ stages},\\ \\max\\text{ swaps}=4,\\ \\text{avg swaps}=\\frac{7}{3}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\max\\text{ swaps}=5,\\ \\text{avg swaps}=2.667\\text{ ([4, Figure 44])",
+      "quote": "Applied to the network seen in Figure 12(a), we obtain the network depicted in Figure 13 below, where the maximum number of exchanges dropped from 5 to 4.",
+      "page": 10
+    },
+    {
+      "problem": "Sorting 5 elements",
+      "problem family": "sorting networks",
+      "bound": "9\\text{ links (minimum)}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In practice, nine links is the minimum CE implementation.",
+      "page": 14
+    },
+    {
+      "problem": "Sorting 6 elements",
+      "problem family": "sorting networks",
+      "bound": "12\\text{ links (minimum)},\\ 6\\text{ stages},\\ \\max\\text{ swaps}=8,\\ \\text{avg swaps}=4.7",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\max\\text{ swaps}=11,\\ \\text{avg swaps}=5.367,\\ 5\\text{ stages (Shapiro\\('s\\text{ network in }[4])",
+      "quote": "Given the minimum number of links (12), Shapiro’s network has the minimum number of stages (5); however, in terms of worst case scenario and average number of swaps, the networks in Figure 20 and Figure 21 do better at the expense of just one more stage.",
+      "page": 16
+    },
+    {
+      "problem": "Sorting 8 elements",
+      "problem family": "sorting networks",
+      "bound": "19\\text{ links (minimum)},\\ \\max\\text{ swaps}=15,\\ \\text{avg swaps}=7.933",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\max\\text{ swaps}=19,\\ \\text{avg swaps}=10.65\\text{ (Batcher\\('s\\text{ network in }[2])",
+      "quote": "Batcher's network is known to realize the minimum number of links, 19. However, we now present two networks with the same number of links, but with much improved statistics. First, the network in Figure 27 has a much improved average number of exchanges, 7.933 vs Batcher's 10.65 and the maximum number of swaps is only 15 vs Batcher's 19.",
+      "page": 18
+    },
+    {
+      "problem": "Sorting 8 elements",
+      "problem family": "sorting networks",
+      "bound": "19\\text{ links (minimum)},\\ \\max\\text{ swaps}=14,\\ \\text{avg swaps}=7.943",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\max\\text{ swaps}=19\\text{ (Batcher\\('s\\text{ network in }[2])",
+      "quote": "Second, the network in Figure 28 has a maximum number of swaps of only 14 compared to Batcher's 19.",
+      "page": 18
+    },
+    {
+      "problem": "Sorting 8 elements",
+      "problem family": "sorting networks",
+      "bound": "28\\text{ links},\\ \\max\\text{ swaps}=12,\\ \\text{avg swaps}=6.862",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "We conclude in Figure 29 with a network with an even lower maximum number, namely 12, albeit with 28 links:",
+      "page": 18
+    }
+  ],
+  "paper": "1808.05212",
+  "usage": {
+    "prompt_tokens": 21813,
+    "completion_tokens": 14821,
+    "total_tokens": 36634,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13718,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

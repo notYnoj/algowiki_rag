@@ -1,0 +1,24 @@
+<tbc>Then, since \(P\subset F_j\), \(\hat{\delta}(y^*,z^*)\le\delta(y,z)+2\) and \(\hat{\delta}(y^*,w^*)\le\delta(y,w)+2\). Executing **Dijkstra** from _w_<sup>∗</sup>, the path \((w^*,y^*,z^*,z)\circ P_{z,v}\subset G_{7,w^*}\) so that the distance estimate,<tbc>
+
+\(\hat{\delta}(w^*,v)\le\hat{\delta}(w^*,y^*)+\hat{\delta}(y^*,z^*)+1+\delta(z,v)\le\delta(w,v)+5\)
+
+<tbc>Then, returning to the shortest path _P_ with endpoints _u,v_, the graph _G_<sub>8_,u_</sub> contains \(F_8\cup(u\times v)\). If _w_ denotes the closest vertex to _v_ on _P_ such that \(P_{w,u}\subset F_8\) and _w_<sup>∗</sup>=_r(w,C_<sub>7</sub>), then the path \((v,w^*,w)\circ P_{w,u}\subset G_{8,v}\) so that the distance estimate computed is at most,
+
+\(\hat{\delta}(v,u)\le\hat{\delta}(v,w^*)+1+\delta(w,u)\le\delta(v,u)+6\)
+
+Note that we have not actually required the use of every \(C_{j_1}\times C_{j_2}\) such that \(i+j_1+j_2\le 17\) when executing **Dijkstra** from _C<sub>j</sub>_. Instead, we have only used the sets \(C_i\times C_6\) for \(i\le 4\) when executing **Dijkstra** from _C_<sub>7</sub>. Instead of adding these edges, we can compute the distances that would have been obtained with these edges with a (min,+) product and encode these distances into the smaller edge set \(w\times V\) . We encode the distances \(C_i\times C_7\) into a matrix _A<sub>i</sub>_ and the distances \(C_i\times C_6\) into a matrix _B<sub>i</sub>_ and compute _A<sub>i</sub>∗B<sub>i</sub>_ with entries bounded by 14 for _i_=1,2,3,4. In the example above, this gives the estimate \(\hat{\delta}(w^*,z^*)\le\delta(w,z)+4\). Then, when executing **Dijkstra** from \(w^*\in C_7\), the path \((w^*,z^*,z)\circ P_{z,v}\subset G_{7,w^*}\) so the distance estimate is again at most,
+
+\(\hat{\delta}(w^*,v)\le\hat{\delta}(w^*,z^*)+1+\delta(z,v)\le\delta(w,v)+5\)
+
+## Paths of length 5 or less
+
+We now describe the most challenging cases: obtaining a (2,0) approximation on shortest paths _P<sub>u,v</sub>_ of length at most 5. Let _G<sub>x</sub>_=(_V,E<sub>n<sup>x</sup></sub>_) denote the graph _G_ pruned so that the maximum degree of _G<sub>x</sub>_ is strictly less than _n<sup>x</sup>_. We can compute a depth 2 **BFS**(that is **BFS**tree upto two levels) in time _n_<sup>2_x_</sup> from each vertex, with a total time of _n_<sup>1+2_x_</sup>. Our choice of _x_ will ensure this is allowed.
+
+As a warm-up, consider obtaining a +2 approximation on paths of length at most 3. For 2 edge paths, a depth 2 **BFS** computes exact distances for all paths of length 2 in _G<sub>x</sub>_. For 3 edge paths _P_=(_u,u_<sub>2</sub>_,v_<sub>2</sub>_,v_), assume \(deg(u)\ge deg(v)\). A depth 2 **BFS** from _u_ implies \(\hat{\delta}(u,v_2)=2\) and if \(u^*=r(u,D_{\ell(u)})\) then we can efficiently update \(\hat{\delta}(u^*,v_2)\le 1+\hat{\delta}(u,v_2)=3\). Then, in the graph \(G_{\ell(u),u^*}\), there is the path (_u_<sup>∗</sup>_,v_<sub>2</sub>_,v_) so **Dijkstra** computes a distance estimate \(\hat{\delta}(u^*,v)\le 4\). Finally, in the graph _G<sub>k,v</sub>_ (that is at the lowest level) there is the path (_v,u_<sup>∗</sup>_,u_) so **Dijkstra** computes a distance estimate \(\hat{\delta}(u,v)\le 5\), which is a +2 approximation.
+
+Finally, we consider paths _P_=(_u,u_<sub>2</sub>_,u_<sub>3</sub>_,v_<sub>3</sub>_,v_<sub>2</sub>_,v_) of 5 edges. Paths of length 4 are easier to handle and we will mention the necessary modifications in the full proof. Recall that we have decomposed the graph _G<sub>x</sub>_ into _k_=7 levels with degree thresholds _s_<sub>1</sub>_,s_<sub>2</sub>_,...,s_<sub>6</sub>_,s_<sub>7</sub>=0.
+
+Consider the case where both endpoints have low degree deg(_u_),deg(_v)\<s_<sub>6</sub>, or identically \(\ell(u),\ell(v)=7\). Let w.l.o.g, \(deg(u_2)\ge deg(v_2)\). Let \(u_2^*=r(u_2,D_{\ell(u_2)})\). If \(P\subset E_{\ell(u_2)}\), then \(\hat{\delta}(u_2^*,v)\le\delta(u_2,v)+1\). Otherwise, both \(\ell(u_3),\ell(v_3)<\ell(u_2)\) (since even if one of them is at \(\ell(u_2)\) or higher, we have \(P\subset E_{\ell(u_2)}\)). Therefore, \(\hat{\delta}(v_3^*,u_2^*)\le\delta(v_3,u_2)+2\) so the path \((u_2^*,v_3^*,v_3)\circ P_{v_3,v}\subset G_{\ell(u_2),u_2^*}\) and **Dijkstra** computes the desired distance estimate: \(\hat{\delta}(u_2^*,v)\le\delta(u_2,v)+3\). Then, as \((v,u_2^*,u_2,u)\subset G_{7,v}\), **Dijkstra** computes a +4 additive approximation. Figure 2 gives an illustration.
+
+Then, assume at least one endpoint (say _u_) has degree \(\ge s_{k-1}\). Suppose there is some vertex (say _v_<sub>3</sub>) with \(n^x>deg(v_3)\ge s_1\). Using a bounded rectangular (min,+) product for matrices of size \(D_1\times V\) and \(D_1\times D_6\), the (min,+) product yields an estimate \(\hat{\delta}(u^*,v)\le\delta(u^*,v)+2\le\delta(u,v)+3\). Then, as \((v,u^*,u)\subset G_{7,v}\), **Dijkstra** computes a +4 additive approximation. Figure 3 gives an illustration.
+

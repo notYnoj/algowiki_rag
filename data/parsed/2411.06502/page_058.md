@@ -1,0 +1,2 @@
+\(\blacktriangleright\) **Main Theorem 2.** _Let_ \(\mathbf{F},\mathbf{F}'\) _be two forests of size_ \(n=|\mathbf{F}|,m=|\mathbf{F}'|\) _with_ \(n\ge m\)_. Suppose that_ \(\mathsf{T}_{MonMUL}(N,N,N,\mathrm{D})=\mathcal{O}(f(N)g(\mathrm{D}))\)_. Then, there is an algorithm computing Unweighted Tree Edit Dis tance between_ \(\mathbf{F},\mathbf{F}'\) _in time_ \(\tilde{\mathcal{O}}\left((n/m)^{1+o(1)}\cdot\left(\mathsf{T}_{MonMUL}(m)+m^{2+o(1)}g(m)\right)\right)\). \(\blacktriangle\)
+

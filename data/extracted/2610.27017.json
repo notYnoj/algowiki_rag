@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Riesz space fractional diffusion equation",
+      "problem family": "multigrid methods",
+      "bound": "0<\\omega<\\frac{2a_0}{\\|f_{\\gamma_1,\\gamma_2}\\|_\\infty},\\quad a_0=-2g_1^{(\\gamma_1)}-\\frac{2\\eta_2}{\\eta_1}g_1^{(\\gamma_2)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If \\(\\omega\\) satisfies \\(0<\\omega<\\frac{2a_0}{\\|f_{\\gamma_1,\\gamma_2}\\|_\\infty}\\), where \\(a_0=-2g_1^{(\\gamma_1)}-\\frac{2\\eta_2}{\\eta_1}g_1^{(\\gamma_2)}\\), then there exists a constant \\(\\alpha\\) satisfying (3.7) in Lemma 3.1.",
+      "page": 9
+    },
+    {
+      "problem": "Riesz space fractional diffusion equation",
+      "problem family": "multigrid methods",
+      "bound": "\\beta=\\beta_0\\left(1+\\frac{\\hat{d}}{\\eta_1 a_0}\\right)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let \\(\\beta=\\beta_0\\left(1+\\frac{\\hat{d}}{\\eta_1a_0}\\right)\\). Then \\(\\beta\\) does not depend on the time instant _m_.",
+      "page": 13
+    },
+    {
+      "problem": "Riesz space fractional diffusion equation",
+      "problem family": "multigrid methods",
+      "bound": "\\text{TGM converges for } \\omega\\in\\left(0,\\frac{2a_0}{\\|f_{\\gamma_1,\\gamma_2}\\|_\\infty}\\right)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If the coefficient function _d(x,y,t_) is nonnegative and uniformly bounded, _G_ is the weighted Jacobi method with \\(\\omega\\in(0,\\frac{2a_0}{\\|f_{\\gamma_1,\\gamma_2}\\|_\\infty})\\), and \\(I_H^h\\) is as in (3.2), then the TGM method converges.",
+      "page": 13
+    },
+    {
+      "problem": "Riesz space fractional diffusion equation",
+      "problem family": "multigrid methods",
+      "bound": "\\omega\\in(0,1]",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Under the conditions of Theorem 3.3, \\(\\omega\\in(0,1]\\) serves as a sufficient condition for the convergence of the TGM with weighted Jacobi as the smoother when solving (2.4).",
+      "page": 13
+    }
+  ],
+  "paper": "2610.27017",
+  "usage": {
+    "prompt_tokens": 19526,
+    "completion_tokens": 8227,
+    "total_tokens": 27753,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7540,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

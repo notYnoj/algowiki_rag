@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "sparse Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "$O(L \\log n)$ work and $O(k \\log n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Combining with a tournament tree, Cordon Algorithm leads to a perfect parallelization (O(L log n) work and O(k log n) span) of sequential LCS algorithm in [7]",
+      "page": 4
+    },
+    {
+      "problem": "convex Generalized Least Weight Subsequence (GLWS)",
+      "problem family": null,
+      "bound": "$O(n \\log n)$ work and $O(k \\log^2 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^{1.5} \\log n)$ work and $O(\\sqrt{n} \\log n)$ span (Larmore and Przytycka [69])",
+      "quote": "Given an input sequence of size n, and the sequential GLWS algorithm Γ_lws introduced in Sec. 4.1, let k = d̂(G*_{Γ_lws}) be the effective depth of the Γ_lws-perfect DAG. Then the Cordon Algorithm for the convex GLWS has O(n log n) work and O(k log^2 n) span. It is a perfect parallelization of Γ_lws.",
+      "page": 8
+    },
+    {
+      "problem": "concave Generalized Least Weight Subsequence (GLWS)",
+      "problem family": null,
+      "bound": "$O(n \\log n)$ work and $O(k \\log^2 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Given an input sequence of size n, and the sequential GLWS algorithm Γ_lws introduced in Sec. 4.1, let k = d̂(G_{Γ_lws}) be the effective depth of the Γ_lws-optimized DAG. Then the Cordon Algorithm for the concave GLWS has O(n log n) work and O(k log^2 n) span. It is an optimal parallelization of Γ_lws.",
+      "page": 8
+    },
+    {
+      "problem": "Optimal Alphabetic Tree (OAT)",
+      "problem family": null,
+      "bound": "$O(n \\log^2 n)$ work and $O(h \\log^3 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^{1.5} \\log^2 n)$ work and $O(\\sqrt{n} \\log^2 n)$ span (Larmore and Przytycka [69])",
+      "quote": "The optimal alphabetic tree (OAT) can be constructed in O(n log^2 n) work and O(h log^3 n) span, where n is the size of input weight sequence and h is the height of the OAT.",
+      "page": 9
+    },
+    {
+      "problem": "Optimal Alphabetic Tree (OAT) with word size W = n polylog n",
+      "problem family": null,
+      "bound": "$O(n \\log^2 n)$ work and polylog(n) span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If the input key weights are positive integers with word size W=n polylog n, the OAT can be constructed in O(n log^2 n) work and polylog(n) span, where n is the input size.",
+      "page": 9
+    },
+    {
+      "problem": "GAP Edit Distance",
+      "problem family": null,
+      "bound": "$O(mn \\log n)$ work and $O(k \\log^2 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$\\Omega(n^2 m)$ work (existing parallel algorithms)",
+      "quote": "The Cordon Algorithm for the GAP problem has O(mn log n) work and O(k log^2 n) span, where n and m≤n are the input size and k is the effective depth of the Γ_gap-optimized DAG for the sequential algorithm Γ_gap introduced in Sec. 5.2.",
+      "page": 10
+    },
+    {
+      "problem": "Tree-GLWS",
+      "problem family": null,
+      "bound": "$O(n \\log^3 n)$ work and $O(k \\log^4 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Cordon Algorithm solves Tree-GLWS in O(n log^3 n) work and O(k log^4 n) span, where k is the longest path in the best decision dependency graph.",
+      "page": 12
+    },
+    {
+      "problem": "k-GLWS",
+      "problem family": null,
+      "bound": "$O(k n \\log n)$ work and $O(k \\log^2 n)$ span",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Hence, the entire algorithm has O(k n log n) work and O(k log^2 n) span. In this problem, k is also the depth of the DP DAG, so this algorithm is a perfect parallelization of the classic sequential algorithm.",
+      "page": 12
+    }
+  ],
+  "paper": "2404.16314",
+  "usage": {
+    "prompt_tokens": 31377,
+    "completion_tokens": 8184,
+    "total_tokens": 39561,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6992,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Directed Unweighted APSP",
+      "problem family": null,
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in directed unweighted graphs cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the Strong APSP Hypothesis fails. In particular, conditioned on ω=2, the Strong APSP and Directed Unweighted APSP Hypotheses are equivalent.",
+      "page": 5
+    },
+    {
+      "problem": "APSP in directed graphs with weights",
+      "problem family": null,
+      "bound": "O(n^{2.5+\\delta/2-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in directed graphs with weights {0,...,n^δ} cannot be solved in time O(n^{2.5+δ/2-ε}) (for any constant ε>0), unless the Strong APSP Hypothesis fails.",
+      "page": 5
+    },
+    {
+      "problem": "APSP in undirected graphs with weights",
+      "problem family": null,
+      "bound": "O(n^{2+\\delta-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in undirected graphs with weights {0,...,n^δ} cannot be solved in time O(n^{2+δ-ε}) (for any constant ε>0), unless the Strong APSP Hypothesis fails.",
+      "page": 5
+    },
+    {
+      "problem": "APSP in graphs with low-doubling weights",
+      "problem family": null,
+      "bound": "O(n^{3-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in graphs with integer weights X⊆Z where |X|≤n and |X+X|≤n^κ|X| cannot be solved in time O(n^{3-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 6
+    },
+    {
+      "problem": "APSP",
+      "problem family": null,
+      "bound": "subcubic reduction from APSP to APSP over the universe {0,...,n}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Conditioned on Hypothesis 1.12, there is a subcubic reduction from APSP to APSP over the universe {0,...,n}. In particular, conditioned on Hypothesis 1.12 and on the assumption that ω=2, the APSP and Strong APSP Hypotheses are equivalent.",
+      "page": 7
+    },
+    {
+      "problem": "Node-Weighted APSP",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in undirected node-weighted graphs cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 9
+    },
+    {
+      "problem": "All-Pairs Bottleneck Paths",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "All-Pairs Bottleneck Paths cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 9
+    },
+    {
+      "problem": "Row-Bounded-Difference Row-Monotone Min-Plus Product",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The min-plus product of a row-bounded-difference, row-monotone matrix A∈Z^{n×n} and a column-bounded-difference, column-monotone matrix B∈Z^{n×n} cannot be computed in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 9
+    },
+    {
+      "problem": "Low-Rank Min-Plus Product",
+      "problem family": null,
+      "bound": "n^{3+o(1)}\\cdot(r/n^{3-\\omega})^{\\Omega(1)}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The min-plus product of two given matrices A,B can be computed in deterministic time n^{3+o(1)}·(r/n^{3-ω})^{Ω(1)}, provided that we have access to a select-plus rank-r decomposition of A or B (or of a matrix C that approximates A∗B with entry-wise additive error ±O(1)).",
+      "page": 10
+    },
+    {
+      "problem": "Low-Rank Exact Triangle",
+      "problem family": null,
+      "bound": "n^{3+o(1)}\\cdot(r/n^{3-\\omega})^{1/200000}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The r-rank Exact Triangle problem can be solved in deterministic time ExactTri(n,n,n|r)≤n^{3+o(1)}·(r/n^{3-ω})^{1/200000}.",
+      "page": 21
+    },
+    {
+      "problem": "Node-Weighted APSP with Small Weights",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{\\min\\{2.5,2+\\delta\\}-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "APSP in undirected node-weighted graphs with weights in {0,...,n^δ} cannot be solved in time O(n^{min{2.5,2+δ}-ε}) (for any constant ε>0), unless the Strong APSP Hypothesis fails.",
+      "page": 46
+    },
+    {
+      "problem": "Min Product",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Min Product cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 47
+    },
+    {
+      "problem": "Min-Max Product",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Min-Max Product cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 48
+    },
+    {
+      "problem": "Min-Equality Product",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{2.5-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Min-Equality Product cannot be solved in time O(n^{2.5-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 48
+    },
+    {
+      "problem": "Min-Witness Product",
+      "problem family": "Intermediate problems",
+      "bound": "O(n^{7/3-\\epsilon})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Min-Witness Product cannot be solved in time O(n^{7/3-ε}) (for any constant ε>0), unless the APSP Hypothesis fails.",
+      "page": 52
+    }
+  ],
+  "paper": "2603.27736",
+  "usage": {
+    "prompt_tokens": 69559,
+    "completion_tokens": 12324,
+    "total_tokens": 81883,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10496,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

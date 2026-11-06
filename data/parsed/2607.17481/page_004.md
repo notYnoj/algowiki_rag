@@ -1,0 +1,36 @@
+<tbc>all retained samples at once, and nothing is recomputed for them. The only new value entering the sum is the arriving sample.
+
+Formally, let \(S=\sum_rt_{i+r}\) and \(Q=\sum_rt_{i+r}^2\) be the running sum and sum of squares of the current window, with moments \(\mu_{i,m}=S/m\) and \(\sigma_{i,m}^2=Q/m-\mu_{i,m}^2\). When the window advances by one sample,
+
+\(S'=S-t_i+t_{i+m},Q'=Q-t_i^2+t_{i+m}^2,\)<br>
+\(X_{i+1,m,k}=e^{2\pi ik/m}\left(X_{i,m,k}-t_i+t_{i+m}\right),\)<br>
+\(F_{i+1,m}=(X_{i+1,m,1},\dots,X_{i+1,m,K^\prime},0,\dots,0)/\sigma_{i+1,m},\)
+
+so advancing one indexed length by one sample costs _O(K_). The update runs in four steps. (i) The running sums advance to \(S'\) and \(Q'\), giving the new moments. (ii) The remove-insert correction (_X<sub>i,m,k</sub>-t<sub>i</sub>+t<sub>i+m</sub>_) subtracts the departing sample and adds the arriving one to each retained coefficient. (iii) One rotation by the fixed factor \(e^{2\pi ik/m}\) re-phases all retained samples, as above. Steps ii-iii are the sliding DFT \[13, 14\]. (iv) The rotated coefficients are divided by the new \(\sigma_{i+1,m}\) to form _F_<sub>_i_+1_,m_</sub>. Incremental updates accumulate floating-point rounding error, so the implementation recomputes the moments and coefficients from the raw samples every 4,096 slides per anchor.
+
+_Hash key. F<sub>i,m</sub>_ is the state that is hashed to a signature and committed to a bucket of a hash directory after every slide. Windows with similar normalized shapes subtend small angles in this truncated spectral space (Figure 2B), and SimHash converts small angles into high collision probability, so similar windows tend to share buckets (the mechanics are the subject of §3.4).
+
+_Rejection bound._ A collision only proposes a candidate pair. The bound that filters these pairs before any exact computation is built from the same stored vector _F<sub>i,m</sub>_. With \(K'\) as defined above, the rejection bound is
+
+\(\underline{\text{d}_{K,m}^2}(i,j)=\frac{2}{m}\sum_{k=1}^{K^\prime}|F_{i,m,k}-F_{j,m,k}|^2.\)
+
+Lemma 2 (Parseval lower bound). _For equal-length windows i,j_: \(\underline{\text{d}_{K,m}}(i,j)\le\text{d}_m(i,j)\).
+
+By Parseval’s theorem, the squared z-normalized distance equals \(\frac{1}{m}\sum_k|\hat{X}_{i,m,k}-\hat{X}_{j,m,k}|^2\) over all _m_ bins, and the DC term vanishes after z-normalization. Any subset of the remaining terms is a lower bound on the sum. The factor 2 accounts for conjugate-symmetric bin pairs of real signals, and the cap on \(K'\) prevents a bin and its alias from being counted twice when _m\<_2_K_ (proof in Appendix C). A candidate pair (_i,j_) is evaluated exactly only if <u>d</u>_<sub>K,m</sub>(i,j_) is smaller than \(\hat{P}_m[i]\) or \(\hat{P}_m[j]\), the two cells that the pair can lower. Otherwise, the exact distance cannot lower either cell, and the pair is skipped. On the ECG5000 example of Figure 2C, this test rejects 214 of the 215 candidates in the probed buckets. Features are cached in single precision. The bound is therefore multiplied by \(1-\lambda\) before the comparison, and Lemma 4 shows that \(\lambda=10^{-4}\) preserves validity at every magnitude where the bound can prune.
+
+_Spectral width selection._ The spectral width _K_ sets how many leading Fourier coefficients the state retains. The prefix _F<sub>i,m</sub>_ above holds bins 1 through \(K'(m)\), zero-padded to the shared width _K_-1, and the signature and the bound are both built from it, so their precision depends on _K_. Signatures are compared bit for bit, so every<tbc>
+
+<tbc>window in the directory must be hashed at one shared width, and _K_ cannot change once insertion has begun. The width is therefore fixed before insertion begins by a calibration. The calibration step reads sampled windows at each of _m_min, the midpoint length, and _m_max, in the implementation at most 256 windows for each length, and selects the smallest _K_ satisfying
+
+\(\mathbb{E}\left[\frac{2}{m^2}\sum_{k=1}^{K^\prime}|\hat{X}_{i,m,k}|^2\right]\ge\eta\text{and}n\mathbb{E}\big[(1-\theta_K/\pi)^B\big]\le 2\gamma\alpha,\)
+
+where \(\theta_K\) is the sampled angle between _K_-dimensional features and \(R=\gamma\alpha\) is the verification budget of §3.4. The first condition requires the retained coefficients to capture a fraction \(\eta\) of the normalized spectral energy, so that features separate windows. A z-normalized window carries total spectral energy \(\sum_k|\hat{X}_{i,m,k}|^2=m^2\), so the criterion leaves, in expectation over the sampled windows, at most \((1-\eta)m^2\) outside the retained bins. Since \(|a-b|^2\le 2|a|^2+2|b|^2\), the expected squared-distance mass invisible to <u>d</u> is at most \(4(1-\eta)m\), a correlation slack of \(2(1-\eta)\). Larger \(\eta\) therefore tightens pruning at the cost of a larger _K_. Retaining most of the spectral energy in a small prefix of coefficients is the established practice of the Fourier-indexing tradition \[1, 11, 27\], so we set \(\eta=0.85\). The second condition bounds the expected number of accidental signature collisions at the target stream length _n_ by twice the verification budget. Near-duplicate pairs are excluded from the estimate, since collisions between near-duplicates are the intended behavior. Classes that exceed the budget are handled by the emit stage (§3.6). It is important to notice that the calibration keeps no state and returns only the integer _K_, so any sample of windows serves, including the earliest windows of a live stream. The pass itself is unchanged. Every sample is read once, in stream order. No choice of _K_ can invalidate a reported motif. The width decides the cost of the search, never the validity of its output, and recovery is measured unchanged at every admissible width (Appendix E).
+
+Proposition 2 (Soundness is width-independent). _For every_ \(K\ge 2\)_: (i) the bound stays valid,_ \(\underline{\text{d}_{K,m}}(i,j)\le\text{d}_m(i,j)\) _for every equal-length pair, and is non-decreasing in K; (ii) the profile computed at width K is a sound upper pan-profile (the proof is in Appendix C)._
+
+## 3.3 Anchor Lengths
+
+Maintaining an online index at every length in \[_m_min,_m_max\] would still be one-pass and linear in the stream length, but each arriving sample would pay for _L_ spectral states, _L_ directories, and _L_ probes. Panache optimizes further. It maintains output rows for every length but builds online indexes only at the anchor lengths \(A=\{m_\mathrm{min}+rs:m_\mathrm{min}+rs\le m_\mathrm{max}\}\cup\{m_\mathrm{max}\}\), for a stride _s_ and integers \(r\ge 0\), so the online search cost scales with \(|A|=\lceil L/s\rceil\) rather than _L_. Every experiment in this paper uses _s_=2 (§4).
+
+The assumption behind anchors is not that motifs occur at anchor durations, but that low PMP cells occupy contiguous regions of the length-position plane. When two subsequences match at length _m_, their z-normalized distance after re-cutting both one sample longer or shorter is bounded above and below by explicit functions of the distance at length _m_ \[24\]. Nearby start positions usually remain in the same low-distance region. A region that spans at least _s_ consecutive lengths intersects at least one anchor. Each<tbc>
+

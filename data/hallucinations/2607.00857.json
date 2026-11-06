@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "All-Pairs Shortest Paths (APSP) with predictions",
+      "problem family": null,
+      "bound": "$\\mathcal{O}(n^2(q+\\log n)+n^{3.66}/p+\\eta(G,C,p)\\cdot n)$, or $\\mathcal{O}(n^{2.83}+\\eta n)$ for $p=\\Theta(n^{0.83})$ and $q=\\Theta(p)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$\\mathcal{O}(n^3)$ (up to subpolynomial factors)",
+      "quote": "There is an algorithm that, given an n-vertex graph G=(V,E,w_G), a certificate C with |C[u,v]|=q≤n for all u,v∈V, and a parameter p≤q, computes APSP in G in time $\\mathcal{O}(n^2(q+\\mathrm{log}n)+n^{3.66}/p+\\eta(G,C,p)\\cdot n)$. For $p=\\Theta(n^{0.83})$ and $q=\\Theta(p)$ it runs in time $\\mathcal{O}(n^{2.83}+\\eta n)$.",
+      "page": 4
+    },
+    {
+      "problem": "APSP Certificate Learning (Problem 2)",
+      "problem family": null,
+      "bound": "NP-hard",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For every $\\gamma,\\delta\\in(0,1)$ with $\\gamma\\le\\delta$, Problem 2 is NP-hard for $p=n^\\gamma$ and $q=n^\\delta$ with $k=\\Omega(q^2)$. The same holds for $p=n-n^\\delta$ and $q=n-n^\\gamma$.",
+      "page": 15
+    }
+  ],
+  "paper": "2607.00857",
+  "usage": {
+    "prompt_tokens": 20415,
+    "completion_tokens": 5431,
+    "total_tokens": 25846,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5003,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

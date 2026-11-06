@@ -1,0 +1,20 @@
+for D_<sub>A</sub>_ and _T<sub>B</sub>_ for D_<sub>B</sub>_, which become the two subtrees of the root of _T_. The amount of storage of the structure satisfies the recurrence \(S(n)=O(n^{7/4+\varepsilon})+S(n_A)+S(n_B)\), where \(n_A,n_B\unknown 2n/3\) and \(n_A+n_B\unknown n\). This solves to \(S(n)=O(n^{7/4+\varepsilon})\).
+
+To answer a query for the hop-distance between two disks _D<sub>i</sub>,D<sub>j</sub>_ we proceed as follows. First, we determine \(Z_1:=min_{C_k\in\mathcal{S}}(hdist(D_i,C_k)+hdist(C_k,D_j))\). When _D<sub>i</sub>_ and _D<sub>j</sub>_ do not lie in the same part of the partition, we are done and report _Z_<sub>1</sub>. Otherwise, assuming without loss of generality that \(D_i,D_j\in\mathcal{D}_A\), we recursively query in _T<sub>A</sub>_, thus obtaining a value _Z_<sub>2</sub>, and we report min(_Z_<sub>1</sub>_,Z_<sub>2</sub>). Thus the query time satisfies the recurrence \(Q(n)=O(n^{3/4+\varepsilon})+Q(n_A)\), where \(n_A\unknown 2n/3\), which solves to \(Q(n)=O(n^{3/4+\varepsilon})\). It is easily seen that our query reports a value _d_<sup>∗</sup> such that \(d^*\unknown hdist(D_i,D_j)\unknown d^*+1\).
+
+\(\blacktriangleright\) **Theorem 3.1.** _Let d be a well-behaved shortest-path metric on a closed and path-connected subset_ \(F\subset\mathbb{R}^2\)_, and let_ D _be a set of n geodesic disks with respect to the metric d. Let_ \(\varepsilon>0\) _be any fixed constant. Then there is a distance oracle for_ \(\mathcal{G}^\times(\mathcal{D})\) _that uses_ \(O(n^{7+\varepsilon})\) _storage and that can report, for any two query disks_ \(D_i,D_j\in\mathcal{D}\)_, in_ \(O(n^{3/4+\varepsilon})\) _time a value d_<sup>∗</sup> _such that_ \(d^*\unknown hdist(D_i,D_j)\unknown d^*+1\).
+
+## 4 Concluding remarks
+
+In this paper, we showed that the intersection graph of a set of geodesic disks, in any well-behaved shortest-path metric in the plane, admits a clique-based separators of sublinear size, using a method that is quite different from previously used approaches. Separators have been used extensively to obtain efficient graph algorithms, and clique-based separators have already found many uses as well. We gave two straightforward applications of our new clique-based separators, namely for _q_-Coloring and almost exact distance oracles, but we expect our separator to have more applications. More generally, we hope that our paper inspires more research on intersection graphs of geodesic disks in the general setting that we studied--or, more modestly, of geodesic disks in polygons with holes or on terrains.
+
+An obvious open problem is to improve upon our bounds: do intersection graphs of geodesic disks admit a separator of size _o(n_<sup>3/4</sup>), either in general or perhaps in the setting of polygons with holes? Our distance oracle is the first almost exact distance oracle with sublinear query time and subquadratic storage in such a general setting, but (besides our novel separator) it uses only standard techniques. It would be interesting to see if more advanced techniques can be applied to get better bounds.
+
+## References
+
+1 Ittai Abraham and Cyril Gavoille. On approximate distance labels and routing schemes with affine stretch. In _Proc._ 25_<sup>th</sup> International Symposium on Distributed Computing (DISC 2011)_, volume 6950 of _Lecture Notes in Computer Science (ARCoSS)_, pages 404-415, 2011. `doi:10.1007/978-3-642-24100-0\_39`.
+
+2 M. Ajtai, V. Chvátal, M.M. Newborn, and E. Szemerédi. Crossing-free subgraphs. In Peter L. Hammer, Alexander Rosa, Gert Sabidussi, and Jean Turgeon, editors, _Theory and Practice of Combinatorics_, volume 60 of _North-Holland Mathematics Studies_, pages 9-12. North-Holland, 1982. `doi:doi.org/10.1016/S0304-0208(08)73484-4`.
+
+3 Srinivasa Rao Arikati, Danny Z. Chen, L. Paul Chew, Gautam Das, Michiel H. M. Smid, and Christos D. Zaroliagis. Planar spanners and approximate shortest path queries among obstacles in the plane. In _Proc. 4th Annual European Symposium on Algorithms (ESA 1996)_, volume 1136 of _Lecture Notes in Computer Science_, pages 514-528, 1996. `doi:10.1007/ 3-540-61680-2\\79`.
+

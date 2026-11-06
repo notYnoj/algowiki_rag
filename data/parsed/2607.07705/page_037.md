@@ -1,0 +1,20 @@
+and from _b_ to \(x'(e)\). This implies that _T-S+e_ contains a path from _x_ to \(x'(e)\). Therefore, _e_ is (_x,S_)-active. \(\lrcorner\)
+
+As we show below, this implies that if some edge from \(B\backslash B'_0\) can be used as a unique blocked edge in the prefix of the path from _x_ to _v_, then the edge \(e\in B\backslash B'_0\) with the lowest \(x'(e)\) can also be used on such a prefix.
+
+**Claim 18.** _Let X=T-S_+Inv(_S_) _with_ \(S\subseteq E(T)\) _be a subgraph that satisfies_ \((F_0,R_0,B'_0)\)_. Consider a vertex x lying on P. If there exists_ \(e'\in B\backslash B'_0\) _such that_ \(e'\) _is_ (_x,S)-active and X contains a path from_ \(x'(e')\) _to v, then_ \(e\in B\backslash B'_0\) _with the lowest_ \(x'(e)\) _is also_ (_x,S)-active and X contains a path from_ \(x'(e)\) _to v._
+
+_Proof of Claim 18._ Since \(e'\) is (_x,S_)-active, Claim 17 guarantees that the subpath of _P_ from \(x'(e')\) to _x_ contains an edge \(s\in S\). By the choice of _e_, the vertex \(x'(e)\) is not higher than \(x'(e')\) on _P_, and hence _s_ also belongs to the subpath of _P_ from \(x'(e)\) to _x_. Consequently, by the same claim, _e_ is (_x,S_)-active.
+
+We now aim to show that a subpath of _P_ from \(x'(e)\) to \(x'(e')\) does not contain edges from _S_. Assume the contrary, and let \(s'\) be such an edge. Note that \(s\neq s'\). It follows that the subpath of _P_ from \(x'(e)\) to _x_ contains two edges from _S_. Since _e_ is _x_-active, these edges also lie on the path from _b_ to _a_ in _T_. By Observation 1, we have \(e\in\mathrm{Inv}(s)\cap\mathrm{Inv}(s')\). However, this contradicts the fact that _X_ satisfies \((F_0,R_0,B'_0)\) because \(e\notin B'_0\). Therefore, \(T-S\subseteq X\) contains the path from \(x'(e)\) to \(x'(e')\). Consequently, a path from \(x'(e)\) to _v_ in _X_ can be obtained by concatenating the path from \(x'(e)\) to \(x'(e')\) with the path from \(x'(e')\) to _v_.
+
+We now construct a constraint set that forbids a path from _u_ to _v_. To obtain such a set, we use a recursive algorithm A that takes as an input _U_ and \(F\supseteq F_0\), where _U_ is a set of vertices lying on _P_ and \(F\subseteq E(T)\). The constraint set returned by this algorithm will have the following properties: for every \(S\subseteq E(T)\), define _X_:=_T-S_+Inv(_S_). If _X_ satisfies A(_U,F_), then _X_ contains no directed path from \(u'\) to _v_ for any \(u'\in U\). Conversely, if _X_ satisfies \((F,R_0,B'_0)\) and contains no directed path from \(u'\) to _v_ for any \(u'\in U\), then _X_ satisfies A(_U,F_). Moreover, for each \((F',R',B')\in\mathcal{A}(U,F)\), we will have \(F\subseteq F',R'=R_0,B'=B'_0\), and \(F'\backslash F\) will be a union of at most \(|B'_0|+|U|\) directed paths in _T_.
+
+We output the result of the call A({_u},F_<sub>0</sub>). Note that if A is correct, this matches the lemma statement.
+
+Let us start with two trivial cases. If \(v\in U\), then \(\mathcal{A}(U,F)=\emptyset\). This output is correct because the antecedents of both implications are false: no subgraph satisfies the empty constraint set by definition, and every subgraph contains a path from \(v\in U\) to _v_. If \(U=\emptyset\), then there are no paths to forbid, so we simply set \(\mathcal{A}(U,F)=\{(F,R_0,B'_0)\}\). From now on, we assume that \(U\neq\emptyset\) and \(v\notin U\).
+
+Let _x_ be the highest vertex in _U_. Note that \(x\neq v\). We first find all edges \(e\in B'_0\) such that _e_ is _x_-active and _T-R_<sub>0</sub>+_e_ contains a path from _x_ to \(x'(e)\). Let \(U'\) be the set of vertices \(x'(e)\) for all such edges. We define _U_<sub>1</sub> as \((U\cup U')\backslash\{x\}\).
+
+If \(B\backslash B'_0\) does not contain _x_-active edges, we define _U_<sub>2</sub>:=_U_<sub>1</sub> and \(F':=\emptyset\). Otherwise, let \(e\in B\backslash B'_0\) be an _x_-active edge with the lowest \(x'(e)\). We define _U_<sub>2</sub> as \(U_1\cup\{x'(e)\}\). Since _e_ is _x_-active, \(x'(e)\) is lower on _P_ than _x_. Let \(F'\) be the set of edges on the subpath of _P_ from \(x'(e)\) to _x_. Finally, we set \(\mathcal{A}(U,F)=\mathcal{A}(U_1,F\cup F')\cup\mathcal{A}(U_2,F)\).
+

@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting \\(\\pi\\)-avoiding sequences",
+      "problem family": null,
+      "bound": "O((\\log c_\\pi + 1) \\cdot n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is an algorithm that sorts a \\(\\pi\\)-avoiding sequence S of length n in \\(O((logc_\\pi+1)\\cdot n)\\) time even if \\(\\pi\\) is a priori unknown.",
+      "page": 3
+    },
+    {
+      "problem": "Sorting permutations of bounded twin-width",
+      "problem family": null,
+      "bound": "O(d \\cdot n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n \\log n)",
+      "quote": "There is a comparison-based algorithm that sorts a permutation of length n and twin-with d in \\(O(d\\cdot n)\\) time even if d is a priori unknown.",
+      "page": 4
+    },
+    {
+      "problem": "Sorting \\(\\pi\\)-avoiding sequences",
+      "problem family": null,
+      "bound": "\\Omega((\\log c_\\pi + 1) \\cdot n)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Any comparison-based sorting algorithm must make at least \\(\\Omega((logc_\\pi+1)\\cdot n)\\) comparisons in the worst case on \\(\\pi\\)-avoiding sequences.",
+      "page": 5
+    },
+    {
+      "problem": "Multi-way merging of \\(\\pi\\)-avoiding sequences",
+      "problem family": null,
+      "bound": "O((\\log c_\\pi + 1) \\cdot n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is an algorithm that receives on input a \\(\\pi\\)-avoiding sequence S of length n partitioned into m presorted sequences S_1,...,S_m with \\(m\\le\\frac{n}{\\mathrm{log}n}\\), and outputs S sorted in \\(O((\\mathrm{log}c_\\pi+1)\\cdot n)\\) time even if \\(\\pi\\) is a priori unknown.",
+      "page": 6
+    },
+    {
+      "problem": "Sorting many short \\(\\pi\\)-avoiding sequences",
+      "problem family": null,
+      "bound": "O((\\log c_\\pi + 1) \\cdot n) + 2^{2^{O(k \\log k)}}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let S_1,...,S_{n/k} be \\(\\pi\\)-avoiding sequences, each of length k. Then there is an algorithm that sorts all S_i's in time \\(O((\\mathrm{log}c_\\pi+1)\\cdot n)+2^{2^{O(k\\mathrm{log}k)}}\\) even if \\(\\pi\\) is a priori unknown.",
+      "page": 11
+    }
+  ],
+  "paper": "2409.07868",
+  "usage": {
+    "prompt_tokens": 15152,
+    "completion_tokens": 10885,
+    "total_tokens": 26037,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10190,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

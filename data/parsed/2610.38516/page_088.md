@@ -1,0 +1,16 @@
+<tbc>The U-Net forward takes 1.7 ms for one image and 14.5 ms for a batch of 16 (0.9 ms per image). The exact K-label limit on one CPU core (median over 4 patches \(\times\) 3 runs, each back end in its own process pinned to one core, the same costs and markers as the GPU runs):
+
+- **The cost is affine in K, once the GPU is busy.** At a fixed number of PCG steps (the training setting, which hits its 100-step cap at every K here) the forward time of a batch of 16 is 41 + 20.3 K ms for K = 8-128, within 1 % of the fit at every point; a PCG step costs 12.8-14 \(\mu\)s per 256<sup>2</sup> system as soon as a batch carries more than about 150 systems, and the backward pass (one adjoint solve with the same matrix) costs the same as the forward. Below that the GPU is launch-bound: 0.34 ms per step whatever the number of systems, so one image costs the same for K = 1 and K = 16. Memory is exactly linear in the number of systems: 4.8 MB per marker per image for forward + backward, the same at batch 1 and 16 and for both settings (it is the stacked (M,1,H,W) tensors of PCG and the saved solution), i.e. 9.8 GB for a batch of 16 images with 128 markers each. "Affine in K" is therefore true of the work and of the memory, with the caveat that small problems do not fill the GPU (figure `multi\_k.png` (a, b)).<tbc>
+
+**-** **Converged, the cost grows more slowly than K,** because more markers make the systems better conditioned: the forward needs 464 PCG steps per batch at K = 1 and 254 at K = 128 (to 1e-5). The adjoint needs about twice the forward’s steps (995 \(\rightarrow\) 519), presumably because the cross-entropy’s gradient -1/x is a rougher right-hand side than the attachments; at K = 1-2 it reaches the 1000-step cap. So the converged forward + backward of a batch of 16 goes from 0.57 s (K = 1) to 6.2 s (K = 32) and 20 s (K = 128).<tbc>
+
+**-** **The limit is flat in K.** One CPU core computes the exact K-label Power Watershed of a 256<sup>2</sup> patch in 29 ms at K = 1 and 51 ms at K = 128 with the Numba back end (1.8 \(\times\) for 128 \(\times\) the labels; presumably the K-vector plateau solves and the K extra label nodes, not profiled), and in 0.85-0.88 s with the NumPy one (+4 %). At the K of real patches (≈ 30) the limit on one core (33 ms) is 2.4 times faster than the converged GPU solve of one image (78 ms) and 3.7 times faster than its per-image cost in a batch of 16 (123 ms); it is 20-35 times the U-Net’s forward (1.7 ms alone, 0.9 ms per image in a batch). The claim "one spanning forest whatever K" holds as stated, and with the Numba back end the limit is the cheapest way to run the trained layer.
+
+**Experiment C (a): gradient accuracy of the binary WS layer.** Inputs: the edge and unary costs of the trained binary model `rw\_learned` (section 6) on 8 evenly spaced fold-2 patches; loss = the BCE of the WS layer output against the mask (the training loss), at p in {5, 20, 50}. Reference: autograd through a float64 PCG run to a relative residual of 1e-12 (71-246 steps: these costs give<tbc>
+
+\begin{tabular}{cccccccccc}
+back end & K = 1 & 2 & 4 & 8 & 16 & 32 & 64 & 128 \\
+Numba (`pw\_fast.py`) & 29 ms & 29 & 29 & 30 & 32 & 33 & 40 & 51 \\
+NumPy & 850 ms & 848 & 851 & 850 & 857 & 864 & 877 & 883 \\
+\end{tabular}
+

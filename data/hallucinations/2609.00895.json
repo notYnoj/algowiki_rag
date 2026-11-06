@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "KEG-D method (Eckhoff acceleration for Dirac eigenfunction expansions with approximate boundary values)",
+      "problem family": null,
+      "bound": "\\widetilde{g}_k^\\pm - g_k^\\pm = O(N^{k-q}),\\quad k=0,\\dots,q-1",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "$\\widetilde{g}_k^\\pm-g_k^\\pm=O(N^{k-q}),k=0,\\dots,q-1.$",
+      "page": 20
+    },
+    {
+      "problem": "KEG-D method (Eckhoff acceleration for Dirac eigenfunction expansions with approximate boundary values)",
+      "problem family": null,
+      "bound": "\\lim_{N\\rightarrow\\infty} N^{2q+1}\\|\\widetilde{R}_{q,N}(f)\\|^2 = \\frac{2^{2q}}{\\pi^{2q+2}}[(A+B)^2 J_E + (A-B)^2 J_O]",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "$\\lim_{N\\rightarrow\\infty} N^{2q+1}\\|\\widetilde{R}_{q,N}(f)\\|^2=\\frac{2^{2q}}{\\pi^{2q+2}}[(A+B)^2J_E+(A-B)^2J_O],$",
+      "page": 21
+    },
+    {
+      "problem": "Exact-jumps method for Dirac eigenfunction expansions",
+      "problem family": null,
+      "bound": "\\lim_{N\\rightarrow\\infty} N^{2q+1}\\|R_{q,N}(f)\\|^2 = \\frac{2^{2q+2}}{\\pi^{2q+2}(2q+1)}(A^2+B^2)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "$\\lim_{N\\rightarrow\\infty} N^{2q+1}\\|R_{q,N}(f)\\|^2=\\frac{2^{2q+2}}{\\pi^{2q+2}(2q+1)}(A^2+B^2),$",
+      "page": 5
+    }
+  ],
+  "paper": "2609.00895",
+  "usage": {
+    "prompt_tokens": 20332,
+    "completion_tokens": 10720,
+    "total_tokens": 31052,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10213,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<tbc>case cannot happen due to Definition 5.9 (3b). Thus, when \(N_i=\emptyset\), there is no solution for \(\Pi_{\mathcal{P},\alpha,h}(\gamma_i,h_i,\theta_i)_{i\in[b]}\).
+
+For second item, consider a solution \(\widehat{\mathcal{C}}\) for \(\Pi_{\mathcal{P},\alpha,h}(\gamma_{i^\prime},h_{i^\prime},\theta_{i^\prime})_{i^\prime\in[b]}\), where for \(i'\in[b]\), \(\gamma_{i^\prime}\) is the \((\alpha,\widehat{\mathcal{C}})\)-representative of \(\widehat{\beta}_{i^\prime}\in\widehat{\mathcal{C}}\) and \(\widehat{\mathcal{C}}_{i^\prime}=\widehat{\mathcal{C}}\cap V(\mathcal{T}_{\widehat{\beta}_{i^\prime}})\). If \(\beta_i=\iota_i\), then item 2 holds for \(\mathcal{C}=\widehat{\mathcal{C}}\). So we now suppose that \(\beta_i\neq\iota_i\). By the choice of \(\iota_i\) and the definition of \((\gamma_i,h_i)\)-nice, \(\Pi_\mathcal{P}(\iota_i,h_i)\neq-\infty\); let \(\mathcal{C}_i^*\) be an optimal solution for \(\Pi_\mathcal{P}(\iota_i,h_i)\). Let \(\mathcal{C}=(\widehat{\mathcal{C}}\backslash\widehat{\mathcal{C}}_i)\cup\mathcal{C}_i^*\). The construction of C implies that C is a solution for \(\Pi_{\mathcal{P},\alpha,h}(\gamma_{i^\prime},h_{i^\prime},\theta_{i^\prime})_{i^\prime\in[b]}\) that satisfies the requirements of the observation.
+
+From the above lemma, for any \(i\in[b]\) where \(\gamma_i\in R_\mathtt{n}\) and \(\gamma_i\neq\gamma_i^\mathtt{t}\), we can set \(\beta_i=\iota_i\).
+
+## Construction of an auxiliary graph.
+
+We will focus on \(i\in[b]\), where \(\gamma_i\in R_\mathtt{o}\), and let \(\theta_i=(\psi_i,\tau_i)\). Recall that for \(i\in[b]\), for the (unknown) \(\beta_i^*\), \(P_i^*=\beta_i^*\cap\gamma_i\) must be a path in _G_. Furthermore, \(\psi_i\cap\gamma_i\) (resp. \(\tau_i\cap\gamma_i\)) (see Definition 5.9 (3c)) is supposed to denote the "first" (resp. "last") intersection of \(P_i^*\) with the cycles in \(\Gamma_i\) (in the clockwise cyclic ordering \(\gamma_i^\circ\)). We construct an auxiliary graph that will precisely capture these "end" intersections, where we can have "partial" containment of the edges from the path \(\iota\cap\gamma_i\) in \(\beta_i^*\), for \(\iota\in\Gamma_i\).
+
+We now state the construction of the auxiliary graph _H_. Set _V(H_)=_R_<sub>o</sub>, and for distinct \(i,j\in[b]\), where \(\gamma_i,\gamma_j\in R_\mathtt{o}\), we add the edge \(\{\gamma_i,\gamma_j\}\) to _E(H_) if and only if \(\gamma_i\in\{\psi_j,\tau_j\}\) and \(\gamma_j\in\{\psi_i,\tau_i\}\). We want to highlight that, for instance, if \((\psi_i,\tau_i)=(\gamma_j,\gamma_j)\) and \((\psi_j,\tau_j)=(\gamma_i,\gamma_i)\), then \(\gamma_i,\gamma_j\) will be in a connected component with no other vertex and this component will still be a simple graph with exactly one edge, namely, \(\{\gamma_i,\gamma_j\}\).
+
+The next observation easily follows from the fact that for any \(i\in[b]\), where \(\gamma_i\in R_\mathtt{o}\), the only possible neighbors of \(\gamma_i\) in _H_ are \(\psi_i\) and \(\tau_i\).
+
+**Observation 5.9.** _Each connected component of the graph H is either i) a path (with one or more vertices), or ii) a cycle (with at least three vertices)._
+
+We will handle each connected component of _H_ separately. We begin by giving an intuitive description of our dynamic programming routine that will help us construct the \(\beta_i\)s for the \(\gamma_i\)s that appear in a fixed connected component of _H_.
+
+## Intuitive description of our dynamic programming routine.
+
+Consider a connected component \(\widetilde{H}=(\widetilde{\gamma}_1,\widetilde{\gamma}_2,\cdots,\widetilde{\gamma}_\widetilde{p})\) of _H_, where for \(i\in[\widetilde{p}]\), \(\widetilde{\gamma}_i=\gamma_{i_j}\). Recall \(\widetilde{H}\) must either be a cycle or a path. For each \(i\in[\widetilde{p}]\), we initialize \(\widetilde{\beta}_i=\beta_{i_j}\) (recall the initialization \(\beta_{i_j}=\phi\)). Intuitively speaking, the states of our table will capture the following:
+
+• We begin by fixing pairs \(\varepsilon_1=(u_1,v_1)\) and \(\varepsilon_\widetilde{p}=(u_\widetilde{p},v_\widetilde{p})\) that are _d_-diverse (i.e., \(w(\widetilde{\gamma}_1[u_1,v_1]\cap\widetilde{\gamma}_\widetilde{p}[u_\widetilde{p},v_\widetilde{p}])\le d\))--these will respectively denote the endpoints of the subpaths \(\widetilde{\gamma}_1[u_1,v_1]=\widetilde{\beta}_1\cap\widetilde{\gamma}_1\) and \(\widetilde{\gamma}_\widetilde{p}[u_\widetilde{p},v_\widetilde{p}]=\widetilde{\beta}_\widetilde{p}\cap\widetilde{\gamma}_\widetilde{p}\) (see Figure 17). We remark that the above two guesses help us in unifying the cases for paths and cycles.<tbc>
+
+• We will start identifying the "best" possible \(\widetilde{\beta}_i\) for each \(q\in[\widetilde{p}]\), starting from _q_=1. For _q_=1, we would like to choose a cycle that is "compliant" with the fixed intersection of \(\widetilde{\beta}_1\cap\widetilde{\gamma}_1\), which should precisely be \(\widetilde{\gamma}_1[u_1,v_1]\). In the above, knowing the exact edges in \(\widetilde{\beta}_1\cap\widetilde{\gamma}_1\) helps us to "extend" it meaningfully as our dynamic programming progresses. At the _q<sup>th</sup>_ stage, where \(q\in[\widetilde{p}]\backslash\{1\}\), we will assume that we have identified the "best choices" for each \(i\in[q-1]\),<tbc>
+

@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "PROCESS fusion systems code optimization",
+      "problem family": "multidisciplinary design analysis and optimisation (MDAO)",
+      "bound": "$10^2\\text{--}10^3\\times$ reduction in model runtime during optimisation",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "base PROCESS model runtime",
+      "quote": "Compared to PROCESS, the sequencing and execution back-end together yield a two to three orders of magnitude reduction in model runtime during optimisation.",
+      "page": 1
+    },
+    {
+      "problem": "PROCESS fusion systems code optimization (stellarator configuration)",
+      "problem family": "multidisciplinary design analysis and optimisation (MDAO)",
+      "bound": "$40\\times$ speedup from removing orchestration overhead by compiling the cottax graph",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "uncompiled cottax graph execution (interpreted Python orchestration)",
+      "quote": "The timing results show two to three orders of magnitude less model time (i.e. not including driver computations) in cottax compared to base PROCESS, and show that removing orchestration overhead (by compiling the cottax graph) results in a 40× speedup in a stellarator configuration.",
+      "page": 4
+    },
+    {
+      "problem": "PROCESS fusion systems code optimization",
+      "problem family": "multidisciplinary design analysis and optimisation (MDAO)",
+      "bound": "$10^1\\text{--}10^2\\times$ faster evaluation and $10^2\\text{--}10^3\\times$ faster Jacobian computation than finite differences in base PROCESS",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "finite differences used in base PROCESS",
+      "quote": "The evaluation is one to two orders of magnitude faster and the cottax Jacobian computation is two to three orders of magnitude faster than the finite differences used in base PROCESS.",
+      "page": 23
+    },
+    {
+      "problem": "PROCESS fusion systems code MDA (batched on GPU)",
+      "problem family": "multidisciplinary design analysis and optimisation (MDAO)",
+      "bound": "$>2\\times 10^5$ MDA Jacobians per second on NVIDIA H100 GPU",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Furthermore, for the stellarator, over two hundred thousand MDA Jacobians can be computed per second.",
+      "page": 24
+    }
+  ],
+  "paper": "2610.22687",
+  "usage": {
+    "prompt_tokens": 35092,
+    "completion_tokens": 7713,
+    "total_tokens": 42805,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7140,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,26 @@
+## 2.4 Extension to Bounded Weights
+
+Finally, we describe how to extend the algorithm to handle weighted graphs with small integer weights bounded by _B_. Note that an algorithm that computes MSSP on graphs with integer weights bounded by \(\Theta(B)\) also computes the rectangular (min,+)-product of two integer matrices with entries bounded by _B_. Given \(S_\mathrm{in}\times n\) matrix _X_ and \(n\times n\) matrix _Y_ , construct a three-layer graph with _V_<sub>1</sub>=_S_<sub>in</sub>_,V_<sub>2</sub>=\[_n_\]_,V_<sub>3</sub>=\[_n_\] and edges (_s,u_) for \(s\in V_1,u\in V_2\) with weight 10_B+X_\[_s,u_\] and edges (_u,v_) for \(u\in V_2,v\in V_3\) with weight 10_B+Y_\[_u,v_\]. Then, dist(_s,v_)=20_B_+(_X⋆Y_)\[_s,v_\] whenever \((X\star Y)[s,v]<\infty\) and is at least 40_B_ otherwise.
+
+Thus, our goal is to develop an algorithm that runs in \(\mathsf{T}_\mathrm{MPP}(|S_\mathrm{in}|,n,n|B)=\widetilde{O}\left(B\mathsf{T}_\mathrm{MUL}(|S_\mathrm{in}|,n,n)\right)\) time, where \(\mathsf{T}_\mathrm{MPP}(n^a,n^b,n^c|B)\) denotes the time required to compute the (min,+)-product between integer matrices of dimension \(n^a\times n^b\times n^c\) with integer entries bounded by _B_.
+
+We first describe an \(\hat{O}(B^2\mathsf{T}_\mathrm{MUL}(|S_\mathrm{in}|,n,n))\) time algorithm. Treat _G_ as an unweighted graph, and compute an (_n_<sup>_o_(1)</sup>_,n_<sup>_o_(1)</sup>)-low diameter small neighborhood decomposition.
+
+Now, fix a source _s_. To ensure correctness, in order to compute _L(s,_level(_s_)+1) we need two modifications to account for the fact that edge weights can be up to _B_. We need to (1) consider any cluster _V<sub>i</sub>_ that intersects _L(s,r_) for any \(\mathrm{level}(s)-B\unknown r\unknown\mathrm{level}(s)\), and (2) compute \(N(V_i)\cap L(s,\mathrm{level}(s)+1)\) via a _B_- bounded (min,+)-product. Revisiting the analysis of our unweighted algorithm, we obtain a running time of \(\hat{O}(B^2\mathsf{T}_\mathrm{MUL}(|S_\mathrm{in}|,n,n))\) since (1) implies that _V<sub>i</sub>_ is relevant to _s_ for _Bn_<sup>_o_(1)</sup> iterations (in contrast to _n_<sup>_o_(1)</sup>), while (2) implies that we must use _B_-bounded (min,+)-products in place of a Boolean product.
+
+To ensure that each cluster is relevant to any source _s_ only for _n_<sup>_o_(1)</sup> iterations of the while loop, we instead take the following approach. Consider graphs _G<sub>b</sub>_ for \(b\unknown\mathrm{log}B\) consisting of all edges with weight between 2_<sup>b</sup>_ and 2<sup>_b_+1</sup>. We obtain low diameter small neighborhood decompositions for all _G<sub>b</sub>_ as unweighted graphs, denoted \(\mathcal{C}_b=\left\{V_i^{(b)}\right\}\). Now, while each cluster \(V_i^{(b)}\) has diameter 2_<sup>b</sup>n_<sup>_o_(1)</sup>, we only need to consider cluster edges in _G<sub>b</sub>_ incident to \(V_i^{(b)}\) for every 2_<sup>b</sup>_ layers of the shortest path tree from _s_, since each of these edges has weight at least 2_<sup>b</sup>_. Our final algorithm for bounded weights selects a cluster that is relevant to many sources, and relaxes all edges of the appropriate weight range incident to this cluster. To ensure correctness and efficiency, we carefully manage which vertices are active for each source and edge weight class, ensuring that the shortest path tree of each source is built accurately (see Theorem 1.3 for details).
+
+## 2.5 Multiple Source Reachability
+
+Our algorithm for Multiple Source Reachability (and MSSP on DAGs) employs a simple recursive scheme. Assume that _G_ is sorted in topological order. Let \(\mathrm{pred}(\pi,v)\) denote the predecessor of _v_ in path \(\pi\). For any interval \[_L,R_\] of \(\ell\) vertices, we employ a recursive scheme `complete`(_G,S_<sub>in</sub>_,L,R_) with the following input/output conditions:
+
+Input: reach(_s,v_) is computed if there is a path \(\pi\) from \(s\in S_\mathrm{in}\) to \(v\unknown R\) where \(\mathrm{pred}(\pi,v)\unknown L\).
+
+Output: reach(_s,v_) is computed for all \(s\in S_\mathrm{in}\) and \(v\unknown R\).
+
+Our Multiple Source Reachability algorithm computes `complete`(_G,S_<sub>in</sub>,0,|_V_|). In this overview, we describe how to compute `complete`(_G,S_<sub>in</sub>_,L,R_). Let _M_=(_L+R)/_2 be the midpoint of the interval. Note that we can compute `complete`(_G,S_<sub>in</sub>_,L,M_) since the input condition is satisfied. Our goal is to satisfy the input condition of `complete`(_G,S_<sub>in</sub>_,M,R_) which would satisfy the output condition of `complete`(_G,S_<sub>in</sub>_,L,R_). To do so, we need to ensure reach(_s,v_) is computed for any path \(\pi\) from _s_ to _v_ with \(L\unknown\mathrm{pred}(\pi,v)\unknown M\). We can do this with a single computation of BMM by constructing matrix _X_ as a \(S_\mathrm{in}\times[L,M]\) containing reach(_s,u_) for \(u\in[L,M]\) and a matrix _Y_ as a \([L,M]\times[M,R]\) submatrix of the adjacency matrix, ensuring that all paths passing through \[_L,M_\] are accounted for. The running time of the recursion is thus
+
+\(T(\ell)=2T(\ell/2)+\mathsf{T}_\mathrm{BMM}(S_\mathrm{in},\ell,\ell)\)
+
+which yields \(\mathsf{T}_\mathrm{BMM}(S_\mathrm{in},n,n)\) by appealing to the root-heavy case of the Master Theorem. Our algorithm for MSSP on DAGs employs a similar recursive structure, replacing each BMM instance with an appropriate Min-Plus Product.
+

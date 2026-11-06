@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Optimal search tree on tree (STT) approximation",
+      "problem family": "Search trees on trees (STTs)",
+      "bound": "\\(O(n^{2t+1})\\) time, approximation ratio \\((1+\\frac{1}{t})\\)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1. Let X be a search sequence over the nodes of an n-node tree S and let OPT(X) be the minimum cost of serving X in a fixed search tree on S. For every integer \\(t\\ge 1\\) we can find in time O(\\(n^{2t+1}\\)) a search tree on S that serves X with cost at most \\((1+\\frac{1}{t})\\cdot\\mathsf{OPT}(X)\\).",
+      "page": 4
+    },
+    {
+      "problem": "Rotation distance between k-cut search trees on trees",
+      "problem family": "Search trees on trees (STTs)",
+      "bound": "\\(\\text{at most } (2k-1)n-(k+1)k+1 \\text{ rotations}; O(k^2 n) \\text{ pointer moves}\\)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 2. Given two k-cut search trees T and \\(T'\\) on the same n-node tree S, we can transform T into \\(T'\\) through a sequence of at most (2_k_-1)_n_-(_k_+1)_k_+1 rotations. Moreover, starting with a pointer at the root, we can transform T into \\(T'\\) through a sequence of O(_k_<sup>2</sup>_n_) pointer moves and rotations at the pointer. All intermediate trees are k-cut trees.",
+      "page": 6
+    },
+    {
+      "problem": "Static optimality for Splay trees on trees (SplayTT)",
+      "problem family": "Search trees on trees (STTs)",
+      "bound": "\\(O(\\mathsf{OPT}(X)+n^2)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 3. Let S be a tree of size n and let X be a sequence of m searches over the nodes of S. Let OPT(X) denote the minimum cost of serving X in a static search tree on S. Then the cost of SplayTT for serving X is O(OPT(X)+n^2).",
+      "page": 6
+    },
+    {
+      "problem": "Rotation distance between Steiner-closed search trees on trees",
+      "problem family": "Search trees on trees (STTs)",
+      "bound": "\\(\\text{at most } 3n-5 \\text{ rotations}; O(n) \\text{ pointer moves}\\)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Corollary 1. Given two Steiner-closed STTs T and \\(T'\\) on the same n-node tree S, we can transform T into \\(T'\\) through a sequence of at most 3n-5 rotations, such that all intermediate trees are Steiner-closed. Moreover, starting with a pointer at the root, we can transform T into \\(T'\\) through a sequence of O(n) pointer moves and rotations at the pointer.",
+      "page": 20
+    }
+  ],
+  "paper": "2010.00931",
+  "usage": {
+    "prompt_tokens": 28170,
+    "completion_tokens": 10941,
+    "total_tokens": 39111,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10177,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<tbc>the approximation ratio. To be more comprehensive, we can define an LP to find the unknown direction _f_ that maximize the distance between a non-STT vertex _P_ and all the STTs that root rounding can reach from it. Formally:
+
+**Definition 2.10** (LP for Best-Case Approximation Ratio)**.** Assume knowledge of all the depths- vectors of STTs, denoted by _D_<sup>1</sup>_,...,D<sup>N</sup>_, and another (non-STT) vertex _P_. Also, let _S_<sup>1</sup>_,...,S<sup>M</sup>_ be the set of all STTs we can get by root roundings of _P_. Ideally we aim to determine a frequencies vector _f_ that maximizes the separation: \(min_i\{S^i\cdot f\}-min_i\{D^i\cdot f\}\), subject to \(min_i\{D^i\cdot f\}\ge P\cdot f\). For reason we explain later, we guess and fix the minimizer for \(min_i\{D^i\cdot f\}\), denoted by \(D'\).
+
+The LP: Maximize \(x-D'\cdot f\), for the variables _x_ (scalar) and _f_ (vector), subject to:
+
+1. Frequencies: (i) \(\forall 1\le i\le n:f_i\ge 0\); (ii) \(\sum_{i=1}^nf_i=1\).<tbc>
+
+2. Hierarchy: (iii) \(P\cdot f\le D'\cdot f\); (iv) \(\forall 1\le i\le N:D'\cdot f\le D^i\cdot f\).<tbc>
+
+3. Technical helper variable: (v) \(\forall 1\le i\le M:x\le S^i\cdot f\).
+
+Ideally we would define two helper variables _x_ and _y_ such that the constraints give us \(x=min_i\{S^i\cdot f\}\) and \(y=min_i\{D^i\cdot f\}\), and then maximize _x-y_. We defined _x_, but cannot do it for _y_. Since we maximize _x-y_ attempting to do it by requiring \(\forall 1\le i\le N:y\le D^i\cdot f\) will simply lead to an unbounded small value for _y_ (or the minimum possible if we artificially bound it from below, say with \(y\ge 0\)). For this reason, we compromised and solved for each option of \(D'\in\{D^1,\dots,D^N\}\). The LP has no solution for some wrong guesses of \(D'\), but this does not affect us. However, solving this large number of instances is highly inefficient, and is feasible only for small topologies. We obtained from this LP the directions marked by ∗/∗∗ in  3. Note that just like with the integrality gap, we optimized the direction _f_ to maximize a difference rather than the actual approximation ratio, so the actual lower bound may be larger.
+
+**Remark 2.11.** Definition 2.10 technically allows for \(P\cdot f=D'\cdot f\). Then there is no integrality gap, and when we solve the original LP (Definition 1.2) we may find an STT induced vertex, so that we do not even need to approximate, in contrast to what we aim to find. This, in fact, happens when we run the solver on the topology _U_<sub>(8,13)</sub>, see the direction marked in ∗∗ in  3. To overcome this issue, we replace constraint (iii) by the constraint \(P\cdot f+\epsilon\le D'\cdot f\) for a small \(\epsilon>0\), say 0.001, to truly guarantee an approximation ratio that is larger than 1.
+
+Moving on to maximizing the worst-case approximation ratio, we can try a similar LP as in Definition 2.10. In this case, using the same notations, we would like to maximize \(max_i\{S^i\cdot f\}-min_i\{D^i\cdot f\}\). The problem here is that we cannot define the helper-variable _x_ such that modifying its constraints gives \(x=max_i\{S^i\cdot f\}\) while simultaneously maximizing \(x-D'\cdot f\). Instead, we can guess an \(S'\in\{S^1,\dots,S^M\}\) that maximizes the expression, similar to our guess of \(D'\). The problem is that we get an additional slowdown factor of _M_, since we now solve \(M\cdot N\) instances (one per guess of \(D'\) and \(S'\)). For the small topologies we already have _M_≈30, depending on the vertex that we round.
+
+At this point, it does not seem too important to pin-point the exact approximation ratios for only a few specific small topologies. So, as a crude replacement, we may check each primary direction for its worst-case rounding. This is feasible, and we find some larger ratios compared to the best-case roundings, as should be expected. The primary directions for topologies _U_<sub>(8,4)</sub> and _U_<sub>(8,13)</sub> break the 1.3 barrier, they appear in  3 marked with _p_. To emphasize that these<tbc>
+

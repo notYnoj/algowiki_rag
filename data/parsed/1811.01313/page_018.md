@@ -1,0 +1,22 @@
+We argue that for sufficiently large choices of \(\rho_i\), one can use A<sup>∗</sup> to efficiently transmit _w_ bits of information between every source-sink pair (_s<sub>i</sub>,t<sub>i</sub>_). Our protocol for this problem uses Lemma 7 from Section 3 as a subroutine. We defer the proof of Lemma 7 to Section 4.1 and proceed to show how we use it together with A<sup>∗</sup> to transmit data through the network _G_<sup>∗</sup>.
+
+## Transmitting Data.
+
+Let \(X_1,\dots,X_n\in\{0,1\}^w\) be independent uniform random sources of data for which we need to transmit _X<sub>i</sub>_ from _s<sub>i</sub>_ to _t<sub>i</sub>_ in _G_<sup>∗</sup> for every _i_. Our protocol is as follows:
+
+1. The sources _s<sub>i</sub>_ send their inputs _X<sub>i</sub>_ to _u_ via the directed edge from _s<sub>i</sub>_ to _u_. They also send their input to _p<sub>i</sub>_ via the directed edge from _s<sub>i</sub>_ to _p<sub>i</sub>_.<tbc>
+
+2. The coordinator node _u_ runs the protocol from Lemma 7 (the coordinator knows the _X<sub>i</sub>_’s). Let _R<sub>i</sub>_ be the message that the coordinator wishes to send to player _i_ based on Lemma 7. The node _u_ sends _R<sub>i</sub>_ to both _p<sub>i</sub>_ and _t<sub>i</sub>_. We fix the parameters \(\rho_i\) such that \(\rho_i=\mathbb{E}[|R_i|]\). From Lemma 7, we know that if \(|\mathcal{F}|\ge 2^{nw-o(nw)}\) then \(\sum_i\rho_i=o(nw)\).<tbc>
+
+3. Each node _p<sub>i</sub>_ now knows _X<sub>i</sub>_ and a vector \(\tau_i\) such that \((\tau_1\oplus X_1)\circ\cdots\circ(\tau_n\oplus X_n)\in\mathcal{F}\). Node _p<sub>i</sub>_ now computes \(d_i=\tau_i\oplus X_i\) and sends _d<sub>i</sub>_ to the node in _G_<sup>∗</sup> representing the input block node containing _A_\[_i_\]. Each input block node in _G_<sup>∗</sup> thus knows the contents of the corresponding block on the input array _A_ corresponding to \(\pi\) with data (_d_<sub>1</sub>_,...,d<sub>n</sub>_).<tbc>
+
+4. Since _A_ is an input array for which A<sup>∗</sup> results in the I/O-graph _G_, the network can now run the algorithm A<sup>∗</sup> as follows: The memory nodes will be simulating the algorithm A<sup>∗</sup> and the block nodes will simply serve as forwarding nodes that receive the contents that are written to the corresponding block by A<sup>∗</sup> and which sends it to the next memory node that reads the block. Ignoring the output block nodes for now, the network does as follows:
+
+• The input block nodes forward their data as soon as they have received data from all the associated sources (they are connected to at most one memory node).<tbc>
+
+• Internal block nodes (neither input or output) are connected to two (distinct) memory nodes. When they receive data from one, they forward it to the other.<tbc>
+
+• The first memory node _v_ starts running A<sup>∗</sup>, maintaining its _m_ bit memory state at all times. Whenever A<sup>∗</sup> accesses a disk block we do one of the following: If this is the first time the disk block is being accessed (a write to an untouched disk block), _v_ sends the contents to be written to the block to the corresponding block node in _G_<sup>∗</sup>. Otherwise, the contents of the accessed block has already been sent to A<sup>∗</sup> by the corresponding block node. The node _v_ now sends the new contents of the block to the block node in _G_<sup>∗</sup> that was created due to the access (the contents may be the same if this was a read operation, or different if it was a write operation). When A<sup>∗</sup> has made _m/b_ I/Os, _v_ sends the memory state of A<sup>∗</sup> to the next memory node and becomes inactive. The next memory node now continues the simulation of A<sup>∗</sup> for another _m/b_ I/Os and so forth. As a technical detail, recall that we deleted block nodes where the two adjacent edges both go to the same memory node (to keep the graph acyclic). When a memory node wants to access such a block, it simply remembers itself what the contents would be. This is sufficient since no other memory node will access the block.<tbc>
+
+5. When the above terminates (with all memory nodes inactive), A<sup>∗</sup> has finished processing the array _A_ and we had \((d_1,\dots,d_n)\in\mathcal{F}\) (meaning that A<sup>∗</sup> is correct on _A_). Therefore, it now must be the case that the output block node containing the array entry \(C[\pi(i)]\) knows the value _d<sub>i</sub>_. Thus for all _i_, we let the output block node containing \(C[\pi(i)]\) send _d<sub>i</sub>_ to _t<sub>i</sub>_.<tbc>
+

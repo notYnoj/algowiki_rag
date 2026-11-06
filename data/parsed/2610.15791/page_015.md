@@ -1,0 +1,18 @@
+## 8 Discussion and future work
+
+The results above apply to the instance of QOO with exact comparisons and one selected design. The following questions consider other instances of Definition 1 with larger quantum budgets, comparisons inferred from evaluations and selection of multiple designs. They also address the cost of implementing coherent comparisons and checking feasibility. These changes affect the information available, the success criterion or the cost assigned to a query, so each extension requires a common information and cost model for classical and quantum procedures.
+
+### 8.1 Larger comparison budgets
+
+The two-comparison problem is studied in a companion paper [42], which gives a complete semidefinite characterization of attainable success. Computer-assisted proofs determine the optimum for seven designs and every good-enough set, and for selecting the best of eight designs. In particular, _Q_<sub>2</sub>(7,1)≈0.7166 and _Q_<sub>2</sub>(8,1)≈0.6586. For best-design selection, _nQ_<sub>2</sub>(_n,_1) is nondecreasing and bounded for \(n\ge 7\), with a limit in (7.43710307,7.43815019]. This limit is strictly greater than that of the explicit algorithm family constructed in the companion paper. Two quantum comparisons beat six classical comparisons exactly when \(n\ge 46\). The values for general _n_ and _r_ and the precise scaled limit remain open. Although Theorem 2 restricts the possible rank laws, it does not by itself characterize attainability. The two-comparison characterization resolves this issue at that budget, while explicit reductions and optimal values for higher budgets remain to be determined.
+
+For every budget \(q\ge 1\), the search lower bound [11, 12] gives _nQ<sub>q</sub>(n,_1)=_O(q_<sup>2</sup>) by a reduction. Rank a single marked item first and order the others by label. A comparison of distinct labels _i_ and _j_ is then true exactly when _i_ is marked, or when neither is marked and _i\<j_, which four search queries compute and uncompute. Minimum finding [8] reaches the minimum of a set of designs after an expected number of comparisons of the order of the square root of their number. Stopped at a constant multiple of that expectation, it has found the minimum with probability bounded below by a constant, by Markov’s inequality, so applied to a blind pick of order _q_<sup>2</sup> designs it achieves _nQ<sub>q</sub>(n,_1) of order _q_<sup>2</sup> when _n_ is at least of that order. The exact values and the sharp constants in these bounds are open.
+
+These search bounds are for selecting the best design. For OO, larger budgets should also be studied when the good-enough set remains a fixed fraction of all designs as their number grows. The one-comparison values in Section 7 show that the relative gain in blind-pick units depends on this fraction. Determining that dependence at larger budgets would show when accepting more designs as good enough changes the benefit of quantum comparisons.
+
+### 8.2 Evaluation and selection models
+
+The preceding questions keep comparisons exact. In simulation-based OO, however, comparisons are inferred from observations. Their error probabilities can depend on the performance gaps, so the ordered performance curve affects the alignment probability [3]. Asymptotic query counts for best-arm identification depend on reward gaps [16, 18]. The corresponding question here is the largest alignment probability at a fixed budget, under a specified model of comparison errors.
+
+When comparisons are computed from quantum estimates of design means [43, 44], the budget counts calls to the underlying evaluation oracle. The estimation precision and the<tbc>
+

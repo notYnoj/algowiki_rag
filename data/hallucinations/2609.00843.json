@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Unstable integer sorting of small-range integer keys on GPUs",
+      "problem family": "Integer sorting",
+      "bound": "O(mn + n \\log T + R) \\text{ total work, where } m = \\lceil R/T \\rceil",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The simplified total work is thus O(mn + n log T + R).",
+      "page": 12
+    },
+    {
+      "problem": "Unstable integer sorting of small-range integer keys on GPUs",
+      "problem family": "Integer sorting",
+      "bound": "O(R + m) \\text{ global memory workspace; } 4T \\text{ bytes shared memory per thread block}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The workspace is therefore O(R + m). Furthermore, with 32-bit integers, the histogram-construction and output-generation kernels use 4T bytes of dynamic shared memory.",
+      "page": 12
+    },
+    {
+      "problem": "Unstable integer sorting of small-range integer keys on GPUs",
+      "problem family": "Integer sorting",
+      "bound": "4.39 \\times \\text{ maximum speedup over the fastest baseline}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "CUB DeviceRadixSort, RefHP, and Kolonias et al. implementation",
+      "quote": "For all-equal inputs, the maximum speedup observed in the entire experiment, 4.39, occurred at R=2^9 and n=10^6.",
+      "page": 31
+    }
+  ],
+  "paper": "2609.00843",
+  "usage": {
+    "prompt_tokens": 33410,
+    "completion_tokens": 6027,
+    "total_tokens": 39437,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5645,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

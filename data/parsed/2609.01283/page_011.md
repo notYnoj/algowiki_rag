@@ -1,0 +1,22 @@
+### _s_-min-cut and global min-cut.
+
+The _s_-min-cut is \(min_{v\neq s}\lambda(s,v)\); storing an (_s,v_) oracle for every _v_ makes a query _n_ evaluations, which is too slow. For _deletions only_ there is a simple fix: if the _s_-min-cut decreases, some deleted edge (_x<sub>i</sub>,y<sub>i</sub>_) crosses the new minimum cut, hence the new cut separates _s_ from some _y<sub>i</sub>_; so it suffices to query the \(\le f\) sinks {_y<sub>i</sub>_}, plus compare against the old value. _Insertions break this_: the new min-cut may avoid all updated edges yet still be smaller than the old cut _would have been after insertions_, the baseline itself moves. We restore the argument with a preprocessing trick based on Frank’s augmentation approach \[Fra90\]. We compute an _optimal_ set _I_<sup>∗</sup> of _f_ edges whose insertion maximizes the _s_-min-cut, and let \(\lambda^*=\mu_{G+I^*}(s)\). For any update set _U_ (with \(|U|\le f\) insertions), \(\mu_{G+U}(s)\le\lambda^*\) by optimality of _I_<sup>∗</sup>; and if the minimum cut of _G+U_ is not crossed by any edge of \(I^*\cup U\), its capacity is identical in _G+U_ and _G+I_<sup>∗</sup>, hence at least \(\lambda^*\). Therefore, we have (Theorem 4.7)
+
+\(\mu_{G+U}(s)=min\big(\lambda^*,min_{y\in Y,y\neq s}\lambda_{G+U}(s,y)\big),Y=\text{heads of}I^*\cup U,|Y|\le 2f,\)
+
+reducing the query to _O(f_) fixed-pair max-flow queries against precomputed (_s,v_)-oracles. Global min-cut follows by symmetry: it equals \(min(\mu_G(s),\mu_{G^\mathrm{rev}}(s))\) for any fixed _s_.
+
+### Spanning structures and arboricity
+
+Arborescence packing is the second application of the same framework: by Edmonds’ theorem, _k_ disjoint _z_-rooted arborescences correspond to a _k_-packing of the graphic matroid against the in-degree partition matroid. To support a _query-time root s_, we keep an isolated dummy root _z_ at preprocessing and, at query time, insert _k_ parallel edges (_z,s_); by the cheap-parallel-elements refinement this bundle costs only _O(k_<sup>2</sup>) additional Laplacian entries.
+
+As in (_s,t_)-max-flow scenario, the parallel copies of one element share the same sparse column support, so all _k_ copies together touch only an \(O(k)\times O(k)\) submatrix (_O(k_<sup>2</sup>) entries total), the same as a _single_ update (Theorem 3.6). Thus a query consisting of _f_ genuine updates plus a bundle of _k_ parallel query edges costs \(O((fk^2+k^2)^\omega)=O((fk^2)^\omega)\), not \(O(((f+k)k^2)^\omega)\). This observation is small but load-bearing: it is what makes _dynamic-root_ arborescence queries and _all-pairs_ flow queries as cheap as static-root ones. So a dynamic-root query is exactly as cheap as a static one with query time \(O((fk^2)^\omega)\), and \(O(f^\omega)\) for _k_=1, which is the single-source reachability-tree oracle highlighted in the introduction. Spanning-tree packing (_M_<sub>1</sub>=_M_<sub>2</sub>=graphic), colorful spanning trees (graphic vs. color-partition, _k_=1), and arboricity (_k_-covering of the graphic matroid, using the random-augmentation covering oracle) follow the same recipe with \(\delta=f\) column updates.
+
+Arboricity (partitioning a graph into _k_ forests) is a _covering_ problem. Here the goal is to determine if the entire edge set is independent in the _k_-fold graphic union, i.e., whether the \(kr\times m\) (where _r=n_-1) representation union matrix _U_ has full column rank. We convert rank to determinant by squaring it up, appending _kr-m_ uniformly random columns _R_. A Laplace-expansion argument proves that the square matrix is non-singular, \(\mathrm{det}([U|R])\neq 0\), w.h.p. exactly when the rank is full (Theorem 3.9) and the graph is _k_-coverable. Since the random columns never change and each edge update touches _O(k_) entries, we apply our determinant oracles directly, yielding a query time of \(O((fk)^\omega)\) (Theorems 3.10 and 5.10).
+
+## 1.2.4 Matroid Parity and \(\alpha\)-Factors
+
+### Sparse linear matroid parity.
+
+The parity (matroid matching) problem admits an analogous algebraic formulation: the determinant of the skew-symmetric matrix _ADB<sup>T</sup>-BDA<sup>T</sup>_ is the square of a Pfaffian enumerating parity bases (Theorem 6.1). For _c_-sparse matroids, _f_ pair updates modify _O(c_<sup>2</sup>_f_) entries, and this yields the parity oracle (Theorem 6.2), and in turn the bounded-degree \(\alpha\)-factor and perfect matching oracles.
+

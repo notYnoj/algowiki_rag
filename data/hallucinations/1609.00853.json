@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "counting nonattacking configurations",
+      "problem family": null,
+      "bound": "\\lceil p(\\kappa-\\frac{1}{2}\\mathrm{codim}\\EuScript{U})\\rceil+\\varepsilon",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For a subspace \\EuScript{U}\\in\\mathscr{L}(\\mathscr{A}_\\mathbb{P}) whose equations involve \\kappa pieces, for which \\alpha(\\EuScript{U};n) has period p, the number of values of \\alpha(\\EuScript{U};n) that are sufficient to determine all the coefficients in all constituents is \\lceil p(\\kappa-\\frac{1}{2}\\mathrm{codim}\\EuScript{U})\\rceil+\\varepsilon, where \\varepsilon=1 if \\mathrm{codim}\\EuScript{U} is even and 0 if it is odd.",
+      "page": 14
+    },
+    {
+      "problem": "partial nightrider counting",
+      "problem family": "nightriders",
+      "bound": "\\left[-\\frac{5k}{24}\\right]^i\\frac{q^{2i}}{i!}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For a partial nightrider \\mathbb{N}^k, the coefficient q!\\gamma_i of n^{2q-i} in o_{\\mathbb{N}^k}(q;n) is a polynomial in q, periodic in n, with leading term \\left[-\\frac{5k}{24}\\right]^i\\frac{q^{2i}}{i!}.",
+      "page": 15
+    },
+    {
+      "problem": "partial nightrider counting",
+      "problem family": "nightriders",
+      "bound": "\\gamma_2=\\frac{1}{2!(q-2)!}\\left\\{\\left(\\frac{5k}{24}\\right)^2(q-2)_2+\\left(\\frac{k}{8}+\\frac{11\\lambda_1}{32}+\\frac{53\\lambda_2}{144}+\\frac{27\\lambda_3}{80}\\right)(q-2)+(k-1)\\right\\}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The third coefficient of the partial nightrider counting quasipolynomial is independent of n; it is \\gamma_2=\\frac{1}{2!(q-2)!}\\left\\{\\left(\\frac{5k}{24}\\right)^2(q-2)_2+\\left(\\frac{k}{8}+\\frac{11\\lambda_1}{32}+\\frac{53\\lambda_2}{144}+\\frac{27\\lambda_3}{80}\\right)(q-2)+(k-1)\\right\\}.",
+      "page": 15
+    },
+    {
+      "problem": "partial nightrider counting",
+      "problem family": "nightriders",
+      "bound": "(-1)^n\\frac{1}{3!(q-2)!}\\left\\{\\frac{3k}{8}\\right\\}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The next coefficient, \\gamma_3, is periodic in n with period 2 and periodic part (-1)^n\\frac{1}{3!(q-2)!}\\left\\{\\frac{3k}{8}\\right\\}.",
+      "page": 16
+    },
+    {
+      "problem": "partial nightrider counting",
+      "problem family": "nightriders",
+      "bound": "-(-1)^n\\frac{1}{4!(q-2)!}\\big\\{\\frac{5k^2}{16}(q-2)_2+\\big(\\frac{3k}{2}+\\frac{9\\lambda_2}{4}\\big)(q-2)\\big\\}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The coefficient \\gamma_4 has period 2 and periodic part -(-1)^n\\frac{1}{4!(q-2)!}\\big\\{\\frac{5k^2}{16}(q-2)_2+\\big(\\frac{3k}{2}+\\frac{9\\lambda_2}{4}\\big)(q-2)\\big\\},",
+      "page": 16
+    }
+  ],
+  "paper": "1609.00853",
+  "usage": {
+    "prompt_tokens": 23724,
+    "completion_tokens": 11725,
+    "total_tokens": 35449,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10723,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "square matrix multiplication",
+      "problem family": null,
+      "bound": "O(n^{2.37115924}) arithmetic operations, equivalently \\omega < 2.37115924",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "< 2.371177 (Dupont et al.)",
+      "quote": "There is an algorithm for multiplying two \\(n\\times n\\) matrices over Q using \\(O(n^{2.37115924})\\) arithmetic operations.",
+      "page": 2
+    }
+  ],
+  "paper": "2610.10593",
+  "usage": {
+    "prompt_tokens": 10428,
+    "completion_tokens": 3407,
+    "total_tokens": 13835,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3254,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

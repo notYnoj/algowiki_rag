@@ -1,0 +1,16 @@
+# Selecting the Best Few with Human Evaluators: Adaptively Combining Ratings and Pairwise Comparisons
+
+**Abstract.** This paper considers a decision-maker tasked with identifying the _k_ best items from a large pool of candidates, such as job applicants, LLMs, award nominees, or new product ideas. The decision-maker learns about the items’ quality by soliciting human evaluations. Each evaluation can be costly, so the decision-maker aims to use the limited evaluation budget efficiently by allocating evaluations adaptively. A key consideration is the form of evaluation to solicit, which should be something evaluators are comfortable providing. Two popular forms are ratings and pairwise comparisons, and we allow for both, as they may be especially useful in combination given the limited budget. Ratings can be used early on to get a coarse picture of which items are good and which are not. As that picture forms, comparisons can refine the ordering of the good items, narrowing in on the ultimate top-_k_ selection. To solve the allocation problem, we develop an adaptive algorithm built from two allocation policies. The first, our primary contribution, is based on a surrogate objective that is naturally forward-looking, valuing evaluations that help inform what to evaluate in future rounds, not just those that directly improve the selection decision. The decision rule is interpretable, and we prove that it is asymptotically consistent. Late in the evaluation process, when being forward-looking is less productive, we construct a myopic policy and a criterion for switching to it. In simulation, the method gives insight into how to combine these two types of evaluations, and beats the (limited) existing benchmarks.
+
+**Key words:** ranking and selection, top-_k_ identification, pairwise comparisons, ratings, human evaluations
+
+### 1. Introduction
+
+This paper considers a decision-maker tasked with identifying the _k_ best items from a large pool of candidates. This is done using data the decision-maker sources sequentially from human evaluators, where the adaptive choice of upcoming evaluations is informed by what has been learned so far. When modeling such human judgment, a key decision is the form of the evaluation input. While one may wish for some sophisticated multidimensional input, providing it is often beyond the scope, time, and ability for evaluators, which is why inputs such as thumbs-up/thumbs-down and swiping left or right have become popular. Rather than restrict the decision-maker to soliciting one type of input, we allow for the combination of thumbs-up/thumbs-down ratings and pairwise comparisons, which, as we will discuss, can be complementary in our problem. This model can form a basis for many applications, including selecting the best few among LLMs, job applicants, university applicants, financial analysts, award nominees, promotion candidates, new product ideas, and sports draft prospects.
+
+While problems of this type are clearly important, they also tend to be difficult in two distinct ways. One challenge is the _analysis and algorithm design_. The aim is a sequential evaluation allocation policy that is<tbc>
+
+Motti Goldberger<br> Yale School of Management, motti.goldberger@yale.edu
+
+Nils Rudi<br> Yale School of Management, nils.rudi@yale.edu
+

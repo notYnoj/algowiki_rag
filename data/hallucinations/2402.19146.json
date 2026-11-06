@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "CT-MSeq",
+      "problem family": null,
+      "bound": "$O(nm)$ time and $O(n)$ space",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(nm \\log\\log n)$ time (Oizumi et al.)",
+      "quote": "**Theorem 1** _CT-MSeq on binary strings can be solved in O(nm_) _time and O(n_) _space._",
+      "page": 10
+    },
+    {
+      "problem": "CT-MSeq",
+      "problem family": null,
+      "bound": "$O((nm)^{1-\\epsilon})$ time (conditional lower bound under OVH)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "$O(nm \\log\\log n)$ time (Oizumi et al.)",
+      "quote": "**Theorem 2** _If there is an_ \\(\\epsilon>0\\) _such that CT-MSeq for an alphabet of size_ 4 _can be solved in_ \\(O((|T||P|)^{1-\\epsilon})\\) _time, then OVH and SETH are false._",
+      "page": 11
+    },
+    {
+      "problem": "CT-LCS",
+      "problem family": null,
+      "bound": "$O(n^6)$ time and $O(n^4)$ space",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "**Theorem 4** _CT-LCS can be solved in O(n_<sup>6</sup>) _time and O(n_<sup>4</sup>) _space._",
+      "page": 20
+    },
+    {
+      "problem": "CT-LCS",
+      "problem family": null,
+      "bound": "$O(n^2/\\log n)$ time and space",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "**Theorem 5** _CT-LCS on binary strings can be solved in O(n_<sup>2</sup>/log_n_) _time and O(n_<sup>2</sup>/log_n_) _space._",
+      "page": 21
+    },
+    {
+      "problem": "CT-LCS",
+      "problem family": null,
+      "bound": "$O(n^{2-\\epsilon})$ time (conditional lower bound under OVH)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "**Theorem 6** _If there is an_ \\(\\epsilon>0\\) _such that CT-LCS for an alphabet of size_ 5 _can be solved in_ \\(O((|S||T|)^{1-\\epsilon})\\) _time, then OVH and SETH are false._",
+      "page": 24
+    }
+  ],
+  "paper": "2402.19146",
+  "usage": {
+    "prompt_tokens": 29360,
+    "completion_tokens": 8559,
+    "total_tokens": 37919,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7932,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

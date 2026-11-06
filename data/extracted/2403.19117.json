@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Pigeonhole Equal Sums",
+      "problem family": null,
+      "bound": "O^{*}(2^{0.4n})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^{*}(2^{n/2})",
+      "quote": "Pigeonhole Equal Sums can be solved by a randomized algorithm in O_<sup>∗</sup>(2<sup>0.4_n_</sup>) time.",
+      "page": 2
+    },
+    {
+      "problem": "Pigeonhole Equal Sums",
+      "problem family": null,
+      "bound": "O^{*}(2^{0.75n}) time and poly(n) space",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O^{*}(2^n) time and poly(n) space",
+      "quote": "Pigeonhole Equal Sums can be solved by a randomized algorithm in O_<sup>∗</sup>(2<sup>0.75_n_</sup>) time and poly(_n_) space.",
+      "page": 2
+    }
+  ],
+  "paper": "2403.19117",
+  "usage": {
+    "prompt_tokens": 11766,
+    "completion_tokens": 3183,
+    "total_tokens": 14949,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2925,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

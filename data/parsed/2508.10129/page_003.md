@@ -1,0 +1,26 @@
+<tbc>that differs from a given matching \(\mu\) by at most _q_ edges, has at most _k_ blocking pairs, and has size at least \(|\mu|+t\), parameterized by _q+k+t_. Moreover, they show that this local search problem is W\[1\]-hard parameterized by _k+t_ even when the maximum length of a preference list is three. Chen et al. \[6\] study the parameterized complexity of two optimization variants of SRI and SRTI (Stable Roommates with Ties and Incomplete lists), one being Min-BP-SRI and the other Egalitarian SR, which aims at a stable matching with minimum egalitarian cost (i.e., sum of the ranks of the agents’ partners). They show that Min-BP-SRI-dec is W\[1\]-hard with respect to \(\beta\), even when the preference lists are of length at most five. Abraham et al. \[1\] show that Min-BP-SRI is XP with respect to \(\beta\), i.e., it is solvable in polynomial time for every fixed constant \(\beta\).
+
+Now we turn to the last problem Max-SMTI. Manlove et al. \[22\] show that Max-SMTI is NP-hard. Irving et al. \[18\] strengthen this by showing that the hardness remains even when one side has preference lists of length at most three. From the approximation point of view, Király \[19\] and McDermid \[25\] show that Max-SMTI can be approximated to factor \(\frac{2}{3}\). Yanagisawa \[28\] show the problem does not admit a factor-\(\frac{29}{33}\) approximation (polynomial-time) algorithm unless P=NP. Dudycz et al. \[9\] and Huang et al. \[16\] show that under the assumption of one of two different variants of Unique Games Conjecture, the factor-\(\frac{2}{3}\) approximation algorithm by Király \[19\] and McDermid \[25\] are that best achievable ones. Further approximation results for Max-SMTI under various restrictions have been presented, see for example \[16, 7, 20\].
+
+Marx and Schlotter \[24\], Adil et al. \[2\] investigate parameterized complexity of Max-SMTI. Marx and Schlotter \[24\] show that Max-SMTI is W\[1\]-hard with respect to the number of ties, but FPT with respect to the total sum of the lengths of the ties. They also study fixed-parameter tractability of other variants of SMTI, such as egalitarian and minimum regret SMTI. Adil et al. \[2\] show that Max-SMTI admits a size-_O(k_<sup>2</sup>) problem kernel and can be solved in _k_<sup>_O(k_)</sup>+_n_<sup>_O_(1)</sup> time.
+
+Parameterized approximation has also been studied in the context of voting. Bredereck et al. \[5\] show that Minimum Cost Borda Shift Bribery admits an FPT-approximation scheme for the parameter number of shifts. Skowron and Faliszewski \[27\] and Gupta et al. \[13\] study the fixed-parameter approximability of multiwinner voting rules.
+
+## 2 Preliminaries
+
+Given a non-negative integer _t_, we use \[_t_\] to denote the set {1_,...,t_}.
+
+### Preference profiles and stable matchings.
+
+Let _V_ be a set of _n_ agents with _V_={_v_<sub>1</sub>_,...,v<sub>n</sub>_}. Each agent \(v_i\in V\) has a subset \(V_i\subseteq V\backslash\{i\}\) that it finds _acceptable_ and has a _preference list_ \(\unknown_i\) on _V<sub>i</sub>_ which is a weak order over _V<sub>i</sub>_. We assume the acceptability to be mutualm, i.e., an agent _x_ is in the preference list of another agent _y_ if and only _y_ is also in the preference list of _x_. For two acceptable agents \(x,y\in V_i\) of _v<sub>i</sub>_, we say that _v<sub>i</sub> weakly prefers x_ over _y_ if \(x\unknown_iy\). If not also \(y\unknown_ix\), we write \(x\succ y\) and say that _v<sub>i</sub> strictly prefers_ (or simply _prefers_) _x_ over _y_. If \(x\unknown_iy\) and \(y\unknown_x\), we write _x∼<sub>i</sub>y_, and say that _v<sub>i</sub>_ is _indifferent_ between _x_ and _y_, and has _ties_ in his preference list.
+
+A preference profile \(\mathcal{P}=(V,(\unknown_i)_{i\in V})\) is a collection of the agents and their preference lists. Associated to each preference profile P there is an underlying _acceptability graph G_, which has _V_ as its vertex set, and an edge between each pair of agents who find each other acceptable. We say that P is a _marriage_ instance if the corresponding acceptability graph is bipartite, otherwise it is a _roommates_ instance. Further, P is _complete_ if the acceptability graph is complete.
+
+We say that P contains _ties_ if there is an agent \(v_i\in V\) and two other agents \(x,y\in V_i\) such that _x∼<sub>i</sub>y_. If P has no ties, then we say that it is _strict_.
+
+For example, assume we have four agents {_v_<sub>1</sub>_,v_<sub>2</sub>_,v_<sub>3</sub>_,v_<sub>4</sub>}. Let agent _v_<sub>1</sub>’s preference list be \(v_2\succ_1v_3\sim_1v_4\). This means that agent _v_<sub>1</sub> prefers _v_<sub>2</sub> to both _v_<sub>3</sub> and _v_<sub>4</sub>, but is indifferent between _v_<sub>3</sub> and _v_<sub>4</sub>.
+
+The _rank_ of an agent _x_ in the preference list of another agent _v<sub>i</sub>_ denotes the number of agents that _v<sub>i</sub>_ strictly prefers over _x_: \(\mathrm{rank}_i^\mathcal{P}(x):=|\{y\in V_i|y\succ_ix\}|\). We omit the superscript P if it is clear from the context.
+
+Given a preference profile \(\mathcal{P}=(V,(\unknown_i)_{i\in V})\), a _matching_ \(M\subseteq E(G)\) is a subset of disjoint edges in _G_. Given an pair \(\{v_i,v_j\}\in M\), we say that _v<sub>j</sub>_ is the _partner_ of _v<sub>i</sub>_, denoted _M(v<sub>i</sub>_), and we say that _v<sub>i</sub>_ and<tbc>
+

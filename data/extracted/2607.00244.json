@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Max Independent Set",
+      "problem family": "graphs of bounded twin-width",
+      "bound": "n^{\\gamma/(loglogn)^2}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Unless the ETH fails, there is a constant \\(\\gamma>0\\) such that Max Independent Set does not admit a polynomial-time \\(n^{\\gamma/(loglogn)^2}\\)-approximation algorithm on n-vertex graphs of twin-width at most 4, even when a 4-sequence is given as part of the input.",
+      "page": 2
+    },
+    {
+      "problem": "Min Coloring",
+      "problem family": "graphs of bounded twin-width",
+      "bound": "n^{\\gamma/(loglogn)^2}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Unless the ETH fails, there is a constant \\(\\gamma>0\\) such that Min Coloring does not admit a polynomial-time \\(n^{\\gamma/(loglogn)^2}\\)-approximation algorithm on n-vertex graphs of twin-width at most 4, even when a 4-sequence is given as part of the input.",
+      "page": 2
+    },
+    {
+      "problem": "k-Independent Set",
+      "problem family": "graphs of bounded merge-width",
+      "bound": "\\forall r=o(k),\\ \\text{W[1]-hard}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\text{FPT for radius-}2^{O(k^2)}\\text{ merge sequences}",
+      "quote": "\\(\\forall r=o(k)\\), k-Independent Set is W[1]-hard in graphs of bounded mw<sub>r</sub>.",
+      "page": 3
+    },
+    {
+      "problem": "k-Dominating Set",
+      "problem family": "graphs of bounded merge-width",
+      "bound": "\\forall r=o(k),\\ \\text{W[1]-hard}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\forall r=o(k)\\), k-Dominating Set is W[1]-hard in graphs of bounded mw<sub>r</sub>.",
+      "page": 3
+    }
+  ],
+  "paper": "2607.00244",
+  "usage": {
+    "prompt_tokens": 20140,
+    "completion_tokens": 10244,
+    "total_tokens": 30384,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9722,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

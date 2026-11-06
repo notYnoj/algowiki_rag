@@ -1,0 +1,16 @@
+# The Power Watershed as a Differentiable Layer
+
+37<tbc>
+
+<tbc>`rw\_learned` model, layer minus its own logits: +0.035 IoU, +0.068 BF<sub>2</sub>, better on 81 % / 86 % of the patches. Limit minus converged on the same 307 patches: -0.046 IoU [-0.066, -0.027], -0.034 BF<sub>2</sub>.
+
+Figures: `results/pannuke/figures/training.png`,`examples\_\<variant\>.png` (full patches) and `examples\_\<variant\>\_crop.png` (64-px crops around the densest cluster of touching nuclei), for the 8 fold-2 patches with the most touching- nuclei pixels; all eight are Colon, where crowding is worst.
+
+- **Honest outcome: on real nuclei the WS layer does not help, and costs a little.** The learned-cost variant is 0.01 IoU and 0.017 BF<sub>2</sub> below the plain U-Net, consistently across tolerances (1, 2, 3 px), tissues (HeadNeck is the one exception, +0.02 IoU and +0.014 BF<sub>2</sub> on 169 patches), and at the instance level (F1 0.60 vs 0.66, PQ 0.48 vs 0.53). The difference is small but not noise. The image-gradient variant is clearly worse, as on Pets.<tbc>
+
+- **Why: the WS layer is a smoother here, and nuclei are small.** With p \(\le\) 50 the WS layer diffuses the unaries across every edge whose cost is not large, so the output is softer than the U-Net’s (16 % soft pixels against 15 %, and visibly blurrier blobs in `examples\_rw\_learned\_crop.png`), and it bridges the 1-2 px gaps between touching nuclei that the U-Net’s logits keep. On Pets the object was 100 px across and this cost nothing; on nuclei about 25 px across it costs the boundary metrics directly and the instance count indirectly (the IoU gap grows with the number of nuclei per patch). The learned edge head is nevertheless a clean contour detector that does respond to the interfaces between touching nuclei (last column of the crop panels), but its contours are 2-3 px wide and the costs along them are not large enough at p = 50 to stop the diffusion. Lower p than Pets was never tried, nor a sharper cost parametrisation (e.g. the costs through an exponential rather than a sigmoid).<tbc>
+
+- **The division of labour is extreme.** As on Pets, the network leaves the decision to the WS layer: its own logits are a checkerboard of speckle (348 components per patch against 24 true nuclei, F1 0.08) that the WS layer cleans up into 23.8 components with F1 0.60. The WS layer adds 0.035 IoU and 0.068 BF<sub>2</sub> over its own logits, but the two-stage system does not beat the one-stage one.<tbc>
+
+**-** **Deployment at p** \(=\infty\) **costs 0.05 IoU at the pixel level but is the best instance segmenter of the RW outputs.** The exact PW limit on the learned costs loses 0.046 IoU and 0.034 BF<sub>2</sub> against the converged finite-p solve, and the panels show why: in crowded regions it floods whole clusters into one component. Yet on the same 307 patches its instance metrics are better than the WS layer’s (F1 0.618 vs 0.581, PQ 0.49 vs 0.46, count error 0.25 vs 0.34), because it is binary and removes the faint spurious blobs that survive thresholding the soft output; on Breast it even reaches the U-Net’s PQ (0.535 vs 0.547) with a lower count error. The train-at-finite-p / deploy- at-the-limit scheme therefore works on real data in the sense that the limit is usable (unlike with image-gradient costs, 0.18 IoU), but it is not free.
+

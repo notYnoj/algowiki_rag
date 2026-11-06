@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Subsequence (LCS) approximation",
+      "problem family": null,
+      "bound": "\\widetilde{O}(n^{0.8}/T^{0.4})\\text{-approximation in time }O(T)",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(n^{0.497956})\\text{-approximation in linear time in expectation (Hajiaghayi et al. [SODA'19]); naive }\\widetilde{O}(n^{\\varepsilon/2})\\text{-approximation in time }O(n^{2-\\varepsilon})",
+      "quote": "There is a randomized algorithm that, given strings x,y of length \\(n\\ge 1\\) and a time budget \\(T\\in[n,n^2]\\), with high probability computes a multiplicative \\(\\widetilde{O}(n^{0.8}/T^{0.4})\\)-approximation of the length of the LCS of x and y in time O(T).",
+      "page": 2
+    }
+  ],
+  "paper": "2106.08195",
+  "usage": {
+    "prompt_tokens": 29292,
+    "completion_tokens": 5128,
+    "total_tokens": 34420,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4876,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

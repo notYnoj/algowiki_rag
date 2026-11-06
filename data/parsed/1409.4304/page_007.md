@@ -1,0 +1,18 @@
+<tbc>set of undominated candidate coalitions then forms the blocking coalitions for state S. Using suitable generation and domination rules, this allows to describe socially, locally, considerate and friendship matching in this scenario.
+
+More formally, there is a set \(T\subseteq\{(\mathcal{T},C)|\mathcal{T}\subset\mathcal{C},C\in\mathcal{C}\}\) of _generation rules_. If in the current state S we have \(\mathcal{T}\subseteq\mathcal{S}\) and \(C\unknown\in\mathcal{S}\), then _C_ becomes a candidate coalition. For convenience, we exclude generation rules of the form \((\emptyset,C)\) from _T_ and capture these rules by a set \(\mathcal{C}_g\subseteq\mathcal{C}\) of self-generating coalitions. A coalition \(C\in\mathcal{C}_g\) is a candidate coalition for all states S with \(C\unknown\in\mathcal{S}\). In addition, there is a set \(D\subseteq\{(\mathcal{T},C)|\mathcal{T}\subset\mathcal{C},C\in\mathcal{C}\}\) of _domination rules_. If \(\mathcal{T}\subseteq\mathcal{S}\) for the current state S, then _C_ must not be inserted. To capture the underlying preferences of the agents, we assume that _D_ always includes at least the set \(D_w=\{(\{C_1\},C_2)|w(C_1)\ge w(C_2),C_1\cap C_2\neq\emptyset,C_1\neq C_2\}\) of all weight domination rules.
+
+The undominated candidate coalitions represent the blocking coalitions for S. In particular, the latter assumption on _D_ implies that a blocking coalition must at least yield strictly better profit for every involved agent. Note that in an improvement step, one of these coalitions is inserted, and every coalition that is dominated in the resulting state is removed. By assumption on _D_, we remove at least every overlapping coalition with smaller weight. A coalition structure is stable if the set of blocking coalitions is empty.
+
+Note that we could also define coalition formation games with constraints for general preferences. Then \(D_w=\{(\{C_1\},C_2)|C_1\cap C_2\neq\emptyset,C_1\neq C_2,\exists v\in C_1:w_v(C_1)\ge w_v(C_2)\}\). However, a crucial point in our proofs is that in a chain of succeeding deletions no coalition can appear twice. This is guaranteed for correlated preferences as coalitions can only be deleted by more worthy ones. For general preferences on the other hand there is no such argument.
+
+In the following we define _consistency_ for generation and for domination rules. This encompasses many classes of matching cases described above and is key for reaching stable states (quickly).
+
+**Definition 1.** _The generation rules of a coalition formation game with constraints are called_ consistent _if_ \(T\subseteq\{(\{C_1\},C_2)|C_1\cap C_2\neq\emptyset\}\)_, that is, all generation rules have only a single coalition in their precondition and the candidate coalition shares at least one agent._
+
+**Definition 2.** _The domination rules of a coalition formation game with constraints are called_ consistent _if_ \(D\subseteq\{(\mathcal{S},C)|\mathcal{S}\subset\mathcal{C},C\in\mathcal{C},C\notin\mathcal{S},\exists S\in\mathcal{S}:S\cap C\neq\emptyset\}\)_, that is, at least one of the coalitions in_ S _overlaps with the dominated coalition. Note that weight domination rules are always consistent._
+
+**Theorem 1.** _In every correlated coalition formation game with constraints and consistent generation and domination rules, for every initial structure_ S _there is a sequence of polynomially many improvement steps that results in a stable coalition structure. The sequence can be computed in polynomial time._
+
+_Proof._ At first we analyze the consequences of consistency in generation and domination rules. For generation rules we demand that there is only a single precondition coalition and that this coalition overlaps with the candidate coalition.
+

@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Streaming graph ANN index maintenance (inserts-only toy setting)",
+      "problem family": null,
+      "bound": "L^*(c,T) \\le O(\\lambda_{\\mathrm{ins}} T c^{a-1} N_0^{-b}),\\ a-1 \\in [0.03, 0.52]\\ (95\\%\\ \\mathrm{CI}),\\ \\hat{a}-1 \\approx 0.28",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "so this upper bound is non-decreasing in the merge size c (strictly increasing on the point estimate) and L^*(c) itself is measured non-decreasing directly (§V-B): the naive \"batch bigger to amortize\" (L^*∝1/c) is wrong in direction.",
+      "page": 3
+    },
+    {
+      "problem": "Filtered multi-tenant ANN with concurrent updates (deletes/migration)",
+      "problem family": null,
+      "bound": "L_\\tau^*(T) \\le \\kappa_g N_\\tau^{\\mathrm{tale}} c^{a-1} N_0^{-b} + g_0^{\\mathrm{del}}(L, \\lambda_{\\mathrm{del}}) + (1 - \\bar{h}_\\tau(L,k)) + \\delta_{\\mathrm{ann}}(L)",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Under Assumptions 2, 4, 5, 6 with per-tenant insert rate λ_ins^(τ), local density σ_loc^(τ), SLA staleness ceiling S_τ, and deletes/migration permitted, the worst-case (in t) per-tenant recall@k loss decomposes additively:",
+      "page": 4
+    }
+  ],
+  "paper": "2610.15130",
+  "usage": {
+    "prompt_tokens": 30538,
+    "completion_tokens": 8236,
+    "total_tokens": 38774,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7818,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

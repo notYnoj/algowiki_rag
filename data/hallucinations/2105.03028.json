@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Longest Common Subsequence over k-ary alphabet",
+      "problem family": "Longest Common Subsequence",
+      "bound": "$(1/k + \\epsilon_k)$-approximation in truly subquadratic time, conditional on a $(1/2 + \\epsilon)$-approximation for binary LCS",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1. For any fixed integer $k\\ge 2$ there is an $O(n)$ time algorithm that given an instance of LCS for strings of length at most $n$ over an alphabet of size $k$, reduces it to $O(k^2)$ instances of LCS over binary strings of length at most $n$, so that $(1/2+\\epsilon)$-approximate solutions (for $\\epsilon>0$) for these LCS instances can be translated in $O(n)$ time into a $(1/k+\\epsilon_k)$ approximation of the $k$-ary alphabet LCS instance, where $\\epsilon_k>0$ is a constant only depending on $\\epsilon$ and $k$.",
+      "page": 2
+    },
+    {
+      "problem": "Longest Common Subsequence over k-ary alphabet",
+      "problem family": "Longest Common Subsequence",
+      "bound": "$1/k + \\epsilon$ approximation in $O(n^{2-\\delta})$ time (near-linear time)",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "$1/k$ approximation in linear time (trivial)",
+      "quote": "Theorem 2. Given two strings $A$ and $B$ of length $n$ over an arbitrary alphabet of size $k$, there exist positive constants $\\epsilon$ and $\\delta$ such that we can compute a $1/k+\\epsilon$ approximation for the longest common subsequence of $A$ and $B$ in $O(n^{2-\\delta})$ time.",
+      "page": 3
+    }
+  ],
+  "paper": "2105.03028",
+  "usage": {
+    "prompt_tokens": 16516,
+    "completion_tokens": 6564,
+    "total_tokens": 23080,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6119,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

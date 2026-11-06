@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "LLM ORDER BY (semantic sorting)",
+      "problem family": null,
+      "bound": "O\\left(\\frac{N}{m}\\left(2 + \\log\\frac{K}{m}\\right)\\right) \\text{ LLM calls for LIMIT } K",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O\\left(\\frac{KN}{m^2}\\right) \\text{ LLM calls for external bubble sort with LIMIT } K",
+      "quote": "Hence, the total LLM function calls can be approximated as \\(O(\\frac{N}{m}(2+log\\frac{K}{m}))\\).",
+      "page": 5
+    }
+  ],
+  "paper": "2509.00303",
+  "usage": {
+    "prompt_tokens": 17734,
+    "completion_tokens": 15392,
+    "total_tokens": 33126,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 15222,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

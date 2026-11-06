@@ -1,0 +1,111 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Triangle Listing",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^{1/3}/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For triangle listing, where every triangle in the graph is output by at least one of its nodes, the worst case energy complexity is $\\Omega\\big(n^{1/3}/logn\\big)$ rounds for algorithms that fail with some small constant probability $\\epsilon>0$.",
+      "page": 14
+    },
+    {
+      "problem": "Local Triangle Listing",
+      "problem family": null,
+      "bound": "\\Omega\\left(n/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For local triangle listing, which requires every node to output all triangles that it is part of, we obtain a lower bound of $\\Omega(n/logn)$ that holds even for the expected node-averaged energy complexity.",
+      "page": 14
+    },
+    {
+      "problem": "s-Clique Listing",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^{1-2/s}/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For s-clique listing, where every s-clique in the graph is output by at least one of its nodes, the worst case energy complexity is $\\Omega\\big(n^{1-2/s}/logn\\big)$ rounds for algorithms that fail with some small constant probability $\\epsilon>0$.",
+      "page": 16
+    },
+    {
+      "problem": "Minimum Vertex Cover",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^2/\\log^2 n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Computing an exact minimum vertex cover, maximum independent set, or minimum dominating set has a node-averaged energy complexity of $\\Omega\\big(\\frac{n^2}{log^2n}\\big)$ in expectation.",
+      "page": 16
+    },
+    {
+      "problem": "Maximum Independent Set",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^2/\\log^2 n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Computing an exact minimum vertex cover, maximum independent set, or minimum dominating set has a node-averaged energy complexity of $\\Omega\\big(\\frac{n^2}{log^2n}\\big)$ in expectation.",
+      "page": 16
+    },
+    {
+      "problem": "Minimum Dominating Set",
+      "problem family": null,
+      "bound": "\\Omega\\left(n^2/\\log^2 n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Computing an exact minimum vertex cover, maximum independent set, or minimum dominating set has a node-averaged energy complexity of $\\Omega\\big(\\frac{n^2}{log^2n}\\big)$ in expectation.",
+      "page": 16
+    },
+    {
+      "problem": "Diameter Computation",
+      "problem family": null,
+      "bound": "\\Omega\\left(n/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Computing the exact network diameter with $\\epsilon$ error, for some small constant $\\epsilon>0$, has a node-averaged energy complexity of $\\Omega(n/logn)$ in expectation.",
+      "page": 16
+    },
+    {
+      "problem": "All-Pairs Shortest Paths (APSP)",
+      "problem family": null,
+      "bound": "\\Omega\\left(n/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "The same bound holds for computing exact all-pair-shortest-paths (APSP) routing tables.",
+      "page": 16
+    },
+    {
+      "problem": "Minimum Weight Cycle",
+      "problem family": null,
+      "bound": "\\Omega\\left(n/\\log n\\right)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "In any undirected, weighted graph G, or directed, unweighted graph G, computing the exact Minimum Weight Cycle with $\\epsilon$ error, for some small constant $\\epsilon>0$, has a node-averaged energy complexity of $\\Omega(n/logn)$ in expectation.",
+      "page": 16
+    }
+  ],
+  "paper": "2608.18992",
+  "usage": {
+    "prompt_tokens": 24506,
+    "completion_tokens": 14054,
+    "total_tokens": 38560,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13022,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

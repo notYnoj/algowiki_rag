@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Coloring 3-Colorable Graphs",
+      "problem family": null,
+      "bound": "O^*\\left(exp\\left(\\tilde{O}\\left(\\frac{nlog^{11/2}r}{r^3}\\right)\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 1.1. _Given a 3-colorable graph G_=(_V,E_) _and a parameter r\\>0_, there exists an algorithm that, with high probability, outputs a valid coloring of G using at most _O(r_) _colors in time_ \\(O^*\\left(exp\\left(\\tilde{O}\\left(\\frac{nlog^{11/2}r}{r^3}\\right)\\right)\\right)\\).",
+      "page": 3
+    },
+    {
+      "problem": "Coloring 3-Colorable Graphs",
+      "problem family": null,
+      "bound": "O^*\\left(exp\\left(O(n^{1-3\\epsilon})\\right)\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "2^{\\Theta(n^{1-2\\epsilon} log(n))} (Atserias and Dalmau)",
+      "quote": "For any fixed real \\(\\epsilon\\in(0,1/3)\\), setting _r_ to be \\(n^\\epsilon\\), we obtain a coloring of _G_ using \\(O(n^\\epsilon)\\) colors in time \\(O^*\\left(exp\\left(O(n^{1-3\\epsilon})\\right)\\right)\\).",
+      "page": 3
+    }
+  ],
+  "paper": "2406.15563",
+  "usage": {
+    "prompt_tokens": 6108,
+    "completion_tokens": 6721,
+    "total_tokens": 12829,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6338,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

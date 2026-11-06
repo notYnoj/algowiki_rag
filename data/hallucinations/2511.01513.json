@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Infinite stationary texture generation",
+      "problem family": null,
+      "bound": "O(1) VRAM (constant GPU memory with respect to texture size)",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": "Naive full-image diffusion: memory scales poorly with size (>24 GB VRAM for 2048×2048)",
+      "quote": "we develop a window-based infinite texture generation process that uses constant VRAM.",
+      "page": 8
+    },
+    {
+      "problem": "Texture synthesis",
+      "problem family": null,
+      "bound": "Linear time complexity with respect to image resolution",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "the complexity of texture synthesis is linear with respect to the images resolution",
+      "page": 13
+    },
+    {
+      "problem": "Interactive texture generation",
+      "problem family": null,
+      "bound": "1 second for a 512×512 image",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Our diffusion model can generate new textures interactively (1 sec for a 512×512 image).",
+      "page": 4
+    },
+    {
+      "problem": "Texture editing",
+      "problem family": null,
+      "bound": "1.5 seconds per edit",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "reducing the time to about 1.5 seconds per edit.",
+      "page": 10
+    }
+  ],
+  "paper": "2511.01513",
+  "usage": {
+    "prompt_tokens": 18270,
+    "completion_tokens": 8936,
+    "total_tokens": 27206,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8576,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

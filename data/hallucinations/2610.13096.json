@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Small blocking set detection and construction",
+      "problem family": null,
+      "bound": "O(m^2)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Consequently, the overall running time is O(m^2).",
+      "page": 13
+    }
+  ],
+  "paper": "2610.13096",
+  "usage": {
+    "prompt_tokens": 6749,
+    "completion_tokens": 2117,
+    "total_tokens": 8866,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2029,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

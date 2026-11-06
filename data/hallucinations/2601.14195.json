@@ -1,0 +1,171 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Minimax-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "OPT = \\Omega(\\log n)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "In the worst case, OPT=Ω(log(n)), where OPT is the optimal solution value of Minimax-AlmostStable-sri and n is the number of agents, even when all preference lists are complete.",
+      "page": 10
+    },
+    {
+      "problem": "Minimax-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "OPT = \\Theta(n)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "In the worst case, OPT=Θ(n), where OPT is the optimal solution value of Minimax-AlmostStable-Max-smi and n is the number of agents.",
+      "page": 11
+    },
+    {
+      "problem": "k-Max-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "\\text{NP-complete for } k=1 \\text{ and } d \\le 10",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "k-Max-AlmostStable-sri is NP-complete, even if k=1 and all preference lists are of length at most 10.",
+      "page": 12
+    },
+    {
+      "problem": "k-Max-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "\\text{NP-complete for } k=1 \\text{ and complete preference lists}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "k-Max-AlmostStable-sri is NP-complete, even if k=1 and all preference lists are complete.",
+      "page": 18
+    },
+    {
+      "problem": "Minimax-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "\\text{para-NP-hard w.r.t. } \\kappa = \\min_{M \\in \\mathcal{M}} \\max_{a_i \\in A} |bp_{a_i}(M)|",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The problem Minimax-AlmostStable-sri is para-NP-hard with respect to parameter κ=min_{M∈M}max_{a_i∈A}|bp_{a_i}(M)|, regardless of whether preference lists are of bounded length at most 10 or whether preferences are complete.",
+      "page": 19
+    },
+    {
+      "problem": "k-Max-AlmostStable-Perfect-smi",
+      "problem family": "Stable Marriage",
+      "bound": "\\text{NP-complete for } k=1 \\text{ and } d \\le 3",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "k-Max-AlmostStable-Perfect-smi is NP-complete, even if k=1 and all preference lists are of length at most 3.",
+      "page": 19
+    },
+    {
+      "problem": "Minimax-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "\\text{para-NP-hard w.r.t. } \\kappa = \\min_{M \\in \\mathcal{M}^+} \\max_{a_i \\in A} |bp_{a_i}(M)| \\text{ for } d \\le 3",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The problem Minimax-AlmostStable-Max-smi is para-NP-hard with respect to parameter κ=min_{M∈M^+}max_{a_i∈A}|bp_{a_i}(M)| even if all preference lists are of length at most 3. By generalisation, this also applies to Minimax-AlmostStable-Max-sri.",
+      "page": 22
+    },
+    {
+      "problem": "k-Max-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "\\text{NP-complete for any fixed } k \\ge 1",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "k-Max-AlmostStable-sri is NP-complete for any fixed positive integer k.",
+      "page": 22
+    },
+    {
+      "problem": "k-Max-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "\\text{NP-complete for any fixed } k \\ge 1",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "k-Max-AlmostStable-Max-smi is NP-complete for any fixed positive integer k.",
+      "page": 26
+    },
+    {
+      "problem": "k-Max-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "\\text{NP-complete for } k = \\lfloor N^{1-\\varepsilon} \\rfloor",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For any ε∈(0,1), the problem k-Max-AlmostStable-Max-smi is NP-complete for k=⌊N^{1-ε}⌋, where N is the number of agents.",
+      "page": 27
+    },
+    {
+      "problem": "Minimax-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "O(n) \\text{ time, } \\min_{M \\in \\mathcal{M}} \\max_{a_i \\in A} |bp_{a_i}(M)| \\le 1",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let I be an sri instance with n agents. If all preference lists of I are of length at most 2, then min_{M∈M}max_{a_i∈A}|bp_{a_i}(M)|≤1 and Algorithm 1 computes an optimal solution to Minimax-AlmostStable-sri in O(n) time.",
+      "page": 30
+    },
+    {
+      "problem": "Minimax-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "O(n) \\text{ time, } \\min_{M \\in \\mathcal{M}^+} \\max_{a_i \\in A} |bp_{a_i}(M)| \\le 1",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let I be an smi instance with n agents. If all preference lists of I are of length at most 2, then min_{M∈M^+}max_{a_i∈A}|bp_{a_i}(M)|≤1 and Algorithm 2 computes an optimal solution to Minimax-AlmostStable-Max-smi in O(n) time.",
+      "page": 31
+    },
+    {
+      "problem": "Minimax-AlmostStable-sri and Minimax-AlmostStable-Max-smi",
+      "problem family": "Stable Roommates, Stable Marriage",
+      "bound": "\\text{no approximation better than } 2 \\text{ unless } P = NP",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The problems Minimax-AlmostStable-sri and Minimax-AlmostStable-Max-smi admit no polynomial-time approximation algorithms with a guarantee better than 2, unless P=NP.",
+      "page": 32
+    },
+    {
+      "problem": "Minimax-AlmostStable-sri",
+      "problem family": "Stable Roommates",
+      "bound": "\\lceil d_{\\max}/2 \\rceil \\text{-approximation, } O(n \\cdot d_{\\max}^2) \\text{ time}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Algorithm 3 returns a matching M of I such that |bp_i(M)|≤⌈d_i/2⌉ and thus max_{a_i∈A}|bp_i(M)|≤⌈d_max/2⌉. Furthermore, the algorithm returns a ⌈d_max/2⌉-approximation for Minimax-AlmostStable-sri and terminates in at most O(n·d_max^2) time.",
+      "page": 34
+    },
+    {
+      "problem": "Minimax-AlmostStable-Max-smi",
+      "problem family": "Stable Marriage",
+      "bound": "\\text{not approximable within } N^{1/2} \\text{ unless } P = NP",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Minimax-AlmostStable-Max-smi is not approximable within N^{1/2}, where N is the number of agents, unless P=NP.",
+      "page": 35
+    }
+  ],
+  "paper": "2601.14195",
+  "usage": {
+    "prompt_tokens": 52454,
+    "completion_tokens": 12504,
+    "total_tokens": 64958,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10435,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

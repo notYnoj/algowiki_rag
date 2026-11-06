@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "4-approximate sorting",
+      "problem family": "Sorting",
+      "bound": "$O(n\\log^2 n)$ comparisons, $O(\\log n)$ rounds, $4$-approximate sorting, success probability $>1-\\frac{1}{n^2}$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O(n\\log n)$ expected comparisons for 2-approximate sorting vs. non-adaptive adversary [AFJ+18]; deterministic $O(4^k n^{1+1/2^{k-1}})$ and $\\Omega(n^{1+1/2^{k-1}})$ [AFHN15]",
+      "quote": "There exists a randomized algorithm that takes $O(n\\log^2 n)$ comparisons, uses $O(\\log n)$ parallel rounds, and returns a $4$-approximate sorting with probability $>1-\\frac{1}{n^2}$.",
+      "page": 3
+    },
+    {
+      "problem": "4-approximate i-selection",
+      "problem family": "Selection",
+      "bound": "$O(n\\log n)$ comparisons, $O(\\log n)$ rounds, $4$-approximate $i$-selection, success probability $>1-\\frac{1}{n^2}$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O(n)$ expected comparisons for 2-approximate selection vs. non-adaptive adversary [AFJ+18]; deterministic $\\Omega(n^{9/8})$ lower bound [AFHN15]",
+      "quote": "For any $i$, there exists a randomized algorithm that takes $O(n\\log n)$ comparisons, uses $O(\\log n)$ parallel rounds, and returns a $4$-approximate $i$-selection with probability $>1-\\frac{1}{n^2}$.",
+      "page": 3
+    },
+    {
+      "problem": "2d-approximate sorting in d rounds",
+      "problem family": "Sorting",
+      "bound": "$d$ rounds, $n^{1+O(1/d)}d$ comparisons, $2d$-approximate sorting",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "deterministic $k$-approximate sorting: $\\Omega(n^{1-1/(2^k-1)})$ rounds and $O(4^k n^{1+1/2^{k-1}})$ comparisons [AFHN15], at best $\\Omega(n^{2/3})$ rounds",
+      "quote": "For any integer $d>0$, there exists a deterministic algorithm that takes $d$ rounds, uses $n^{1+O(1/d)}d$ comparisons, and returns a $2d$-approximate sorting.",
+      "page": 4
+    },
+    {
+      "problem": "2d-approximate sorting in d rounds (smaller constant)",
+      "problem family": "Sorting",
+      "bound": "$d$ rounds, $n^{1+2/\\sqrt{d}}d$ comparisons, $2d$-approximate sorting",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "deterministic $k$-approximate sorting: $\\Omega(n^{1-1/(2^k-1)})$ rounds and $O(4^k n^{1+1/2^{k-1}})$ comparisons [AFHN15], at best $\\Omega(n^{2/3})$ rounds",
+      "quote": "For any integer $d>0$, there exists a deterministic algorithm that takes $d$ rounds, uses $n^{1+2/\\sqrt{d}}d$ comparisons, and returns a $2d$-approximate sorting.",
+      "page": 4
+    },
+    {
+      "problem": "202-approximate i-selection in d+O(log d) rounds",
+      "problem family": "Selection",
+      "bound": "$d+O(\\log d)$ rounds, $n^{1+O(1/d)}d\\log n$ comparisons, $202$-approximate $i$-selection, success probability $>1-\\frac{1}{n^2}$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "deterministic selection: $\\Omega(n^{1-1/(2^k-1)})=\\Omega(n^{2/3})$ rounds [AFHN15]; deterministic lower bound $\\Omega(n^{1+\\varepsilon})$",
+      "quote": "For any integer $d>1$ and $i$, there exists a randomized algorithm that takes $d+O(\\log d)$ rounds, uses $n^{1+O(1/d)}d\\log n$ comparisons, and returns a $202$-approximate $i$-selection with probability $>1-\\frac{1}{n^2}$.",
+      "page": 4
+    }
+  ],
+  "paper": "2310.09483",
+  "usage": {
+    "prompt_tokens": 23274,
+    "completion_tokens": 10052,
+    "total_tokens": 33326,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8952,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

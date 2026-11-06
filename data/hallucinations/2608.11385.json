@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "QAOA expectation value evaluation for MaxCut (Eval_p^MC)",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\text{Eval}_p^\\text{MC} \\text{ is } \\#P\\text{-hard for every fixed } p \\ge 2 \\text{ (and } \\text{Eval}_1^\\text{MC} \\in \\mathsf{FP}\\text{)}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "NP-hard for every fixed p \\ge 2 (Wang et al. [5])",
+      "quote": "For unweighted simple graphs, \\(\\text{Eval}_1^\\text{MC}\\in\\mathsf{FP}\\), \\(\\text{Eval}_p^\\text{MC}\\text{\\textit{is}}\\#P\\text{\\textit{-hard for every fixed}}p\\ge 2\\).",
+      "page": 3
+    },
+    {
+      "problem": "Single two-qubit correlator evaluation \\langle Z_r Z_s \\rangle for QAOA MaxCut",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard for every fixed } p \\ge 2 \\text{ (same hardness as the global expectation)}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "NP-hardness for global expectation (Ref. [5]); correlator hardness not previously established",
+      "quote": "The same conclusions of the theorem hold if the oracle evaluates only one designated two-qubit correlator \\(\\langle Z_rZ_s\\rangle\\) rather than the global cost expectation value \\(\\langle C_G\\rangle\\).",
+      "page": 3
+    },
+    {
+      "problem": "QAOA expectation value evaluation for MaxCut on diameter-two graphs",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard under deterministic polynomial-time Turing reductions even on connected, unweighted, simple graphs of diameter two}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "\\#P-hard on general graphs (Theorem 1.2); no prior diameter-two restriction",
+      "quote": "For every fixed \\(p\\ge 2\\), exact evaluation of the MaxCut QAOA expectation is \\(\\#P\\)-hard under deterministic polynomial-time Turing reductions, even when restricted to connected, unweighted, simple graphs of diameter two.",
+      "page": 11
+    },
+    {
+      "problem": "Exponentially precise additive evaluation of QAOA MaxCut expectation",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard for additive error } \\le 2^{-\\alpha N} \\text{ for some constant } \\alpha > 0",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "Exact evaluation \\#P-hard (Theorem 1.2); no prior exponentially precise approximation hardness",
+      "quote": "Fix \\(p\\ge 2\\) and the mixer angle choices of Theorem 1.2. There exists a constant \\(\\alpha>0\\) such that the following problem is \\(\\#P\\)-hard under deterministic polynomial-time Turing reductions: given an \\(N\\)-vertex MaxCut instance from the family constructed in the proof and a tied phase angle specified by the exact algebraic input \\(z=e^{\\mathrm{i}\\phi}\\), return a rational number \\(\\widetilde{F}_G(\\phi)\\) satisfying \\(\\left|\\widetilde{F}_G(\\phi)-F_G(\\phi)\\right|\\le 2^{-\\alpha N}\\).",
+      "page": 12
+    },
+    {
+      "problem": "Phase derivatives of QAOA MaxCut expectation F_G^{(r)}(\\phi)",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard under deterministic polynomial-time Turing reductions for every fixed } p \\ge 2 \\text{ and } r \\ge 1",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "No earlier \\#P-hardness result for exact derivatives of the standard fixed-depth QAOA for MaxCut objective",
+      "quote": "For every fixed \\(p\\ge 2\\) and every fixed integer \\(r\\ge 1\\), exact computation of \\(F_G^{(r)}(\\phi)=\\frac{dr}{d\\phi^r}F_G(\\phi)\\) is \\(\\#P\\)-hard under deterministic polynomial-time Turing reductions.",
+      "page": 13
+    },
+    {
+      "problem": "Full gradient and Hessian of QAOA MaxCut objective",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard under deterministic polynomial-time Turing reductions}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "None (inherits from Theorem 3.1)",
+      "quote": "Exact computation of the full gradient \\(\\nabla\\mathcal{F}_G\\) and of the full Hessian \\(\\nabla^2\\mathcal{F}_G\\) is \\(\\#P\\)-hard under deterministic polynomial-time Turing reductions.",
+      "page": 13
+    },
+    {
+      "problem": "Exponentially precise approximation of QAOA phase derivatives",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard for additive error at most } 2^{-cN} \\text{ for some constant } c > 0",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "Exact derivative computation \\#P-hard (Theorem 3.1); no prior exponentially precise derivative approximation hardness",
+      "quote": "For the mixer angles of Theorem 1.2 and every fixed \\(r\\ge 1\\), there exists a constant \\(c>0\\) such that approximating \\(F_G^{(r)}(\\phi)\\) to additive error at most \\(2^{-cN}\\), where \\(N=|V(G)|\\), is \\(\\#P\\)-hard under deterministic polynomial-time Turing reductions.",
+      "page": 14
+    },
+    {
+      "problem": "Single-query exact QAOA MaxCut expectation evaluation",
+      "problem family": "QAOA for MaxCut",
+      "bound": "\\#P\\text{-hard under a deterministic polynomial-time reduction making one oracle call}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "Polynomially many queries (Theorem 1.2); single-query hardness not previously established",
+      "quote": "Under the explicit number field representation above, for every fixed \\(p\\ge 2\\), exact evaluation of the MaxCut QAOA expectation is \\(\\#P\\)-hard under a deterministic polynomial-time reduction making one oracle call.",
+      "page": 21
+    }
+  ],
+  "paper": "2608.11385",
+  "usage": {
+    "prompt_tokens": 17542,
+    "completion_tokens": 6003,
+    "total_tokens": 23545,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4490,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

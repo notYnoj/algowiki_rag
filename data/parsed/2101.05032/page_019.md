@@ -1,0 +1,20 @@
+\(|D|\le|C|\) and hence \(|C\cup D|\le 2\cdot|C^*|\le 2(|C^*|+|D^*|)\). If that category is (4), we have |_D_|=|_D_<sup>∗</sup>| and \(|C|\le|D|+1\), giving \(|C\cup D|\le 2\cdot|D^*|+1\le 2(|C^*|+|D^*|)+1\). In both cases, we thus have \(|C\cup D|\le 2(|C^*|+|D^*|)+1\).
+
+Combining the bounds obtained in the two previous paragraphs, we get \(|A\cup B\cup C\cup D|\le 2(|A^*|+|B^*|+|C^*|+|D^*|)\). This shows that, among the queries made in the round, at most half are wasted. The total number of wasted queries in all rounds except the last one is hence bounded by opt<sub>1</sub>. Since the algorithm fills each round except possibly the last one and also queries all intervals in OPT<sub>1</sub>, the theorem follows by Proposition 2.1.
+
+We also have the following lower bound, which proves that our algorithm has the best possible multiplicative factor. We remark that it uses instances with opt_<sub>k</sub>_=1, and we do not know how to scale it to larger values of opt_<sub>k</sub>_. In its present form, it does not exclude the possibility of an algorithm using at most opt_<sub>k</sub>_+1 rounds.
+
+\(\blacktriangleright\) **Lemma 5.7.** _There is a family of instances of_ Selection _with_ \(k=i\ge 2\) _with_ \(\mathrm{opt}_1\le i\) _(and hence_ opt_<sub>k</sub>_=1_) such that any algorithm that makes k queries in the first round needs at least two rounds and performs at least_ \(\mathrm{opt}_1+\lceil(i-1)/2\rceil\) _queries._
+
+**Proof.** Consider the instance with _i_-1 copies of interval [0,3] (called **left-side** intervals), _i_-1 copies of interval [5,8] (called **right-side** intervals), and one interval [2,6] (called **middle** interval). The precise values are always 1 for the left-side intervals, and 7 for right-side intervals. The value of the middle interval depends on the behavior of the algorithm, but in all cases it will be the _i_-th smallest element. If the algorithm does not query the middle interval in the first round, then we set its value to 4, so we have opt<sub>1</sub>=1 and the algorithm performs at least \(\mathrm{opt}_1+i=(i+1)\cdot\mathrm{opt}_1\) queries. So assume that the algorithm queries the middle interval in the first round. If it queries more left-side than right-side intervals, then we set the value of the middle interval to 5.5, so all right-side intervals must be queried (and all queries of left-side intervals are wasted); otherwise, we set the middle value to 2.5. In either case, we have opt<sub>1</sub>=_i_ and the algorithm wastes at least \(\lceil(i-1)/2\rceil\) queries.
+
+## 6 Relationship with the Parallel Model by Meißner
+
+In [27, Section 4.5], Meißner describes a slightly different model for parallelization of queries. There, one is given a maximum number _r_ of **batches** that can be performed, and there is no constraint on the number of queries that can be performed in a given batch. The goal is to minimize the total number of queries performed, and the algorithm is compared to an optimal query set. The number of uncertain elements in the input is denoted by _n_. In this section, we discuss the relationship between this model and the one we described in the previous sections.
+
+Meißner argues that the sorting problem admits a 2-query-competitive algorithm for \(r\ge 2\) batches. For the minimum problem with one set, she gives an algorithm which is \(\lceil n^{1/r}\rceil\)-query-competitive, with a matching lower bound. She also gives results for the selection and the minimum spanning tree problems.
+
+\(\blacktriangleright\) **Theorem 6.1.** _If there is an_ \(\alpha\)_-query-competitive algorithm that performs at most r batches, then there is an algorithm that performs at most_ \(\alpha\cdot\mathrm{opt}_k+r-1\) _rounds of k queries. Conversely, if a problem has a lower bound of_ \(\beta\cdot\mathrm{opt}_k+t\) _on the number of rounds of k queries, then any algorithm running at most t_+1 _batches has query-competitive ratio at least_ \(\beta\).
+
+**Proof.** Given an \(\alpha\)-query-competitive algorithm _A_ on _r_ batches, we construct an algorithm _B_ for rounds of _k_ queries in the following way. For each batch in _A_, algorithm _B_ simply performs
+

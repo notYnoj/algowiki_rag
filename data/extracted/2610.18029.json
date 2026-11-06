@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maximum Weighted Clique Enumeration (via Maximum Weighted Independent Set on the complement graph)",
+      "problem family": "Maximum compatibility phylogeny",
+      "bound": "$440 \\to 281$ vertices and $1868 \\to 1076$ conflict edges ($36.1\\%$ fewer logical variables, $42.4\\%$ fewer conflict edges) on an 819-sample SARS-CoV-2 instance",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "Cherry's original preprocessing reductions [5]",
+      "quote": "Thus, relative to the original residual graph, the combined deterministic reductions remove 36.1% of the logical variables and 42.4% of the conflict edges.",
+      "page": 18
+    },
+    {
+      "problem": "Maximum Weighted Independent Set / QAOA",
+      "problem family": "Maximum compatibility phylogeny",
+      "bound": "$\\lambda / w_{\\max} = 0.1$ maximizes the proportion of low-energy subgraphs that repair to MWCs on small enumerable graphs",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "Lagrange multiplier at least as large as the largest vertex weight (e.g., twice the largest)",
+      "quote": "Taking small graph examples for which we can enumerate all possible subgraphs, and by applying the postprocessing methodology above to the low-energy subgraphs, we see that taking the ratio between the Lagrange multiplier and the highest vertex weight to be 0.1 gives the highest proportion of subgraphs that yield MWCs.",
+      "page": 14
+    },
+    {
+      "problem": "Maximum Weighted Clique Enumeration sampling",
+      "problem family": "Maximum compatibility phylogeny",
+      "bound": "modified QAOA recovers more distinct certified MWCs than random-shot baseline in each of ten runs of 20,000 shots on a 64-vertex graph",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": "random shot baseline",
+      "quote": "On a graph with 64 vertices, the modified QAOA procedure recovered more distinct certified MWCs than the random shot baseline in each of the ten reported runs.",
+      "page": 22
+    },
+    {
+      "problem": "Maximum Weighted Independent Set Enumeration",
+      "problem family": "Maximum compatibility phylogeny",
+      "bound": "$64 \\to 5$ edge-free vertices (complete exact reduction)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Our solver-agnostic approach has the potential to completely reduce the input graph: in one instance, the residual graph could be completed exactly after a reduction from 64 to five edge-free vertices.",
+      "page": 22
+    }
+  ],
+  "paper": "2610.18029",
+  "usage": {
+    "prompt_tokens": 15758,
+    "completion_tokens": 5828,
+    "total_tokens": 21586,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5212,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

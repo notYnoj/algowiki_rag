@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Parameter-free streaming triangle counting",
+      "problem family": "streaming triangle counting",
+      "bound": "O(p) passes, expected space \\widetilde{O}\\left(\\delta^{-1}\\varepsilon^{-3.5}\\left(\\frac{m+T}{\\sqrt{T}}\\right)\\right), mixed approximation (1+\\varepsilon, \\widetilde{O}(n^{1/2^p}))",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Let S be a stream of edges representing a simple graph G with n vertices, m edges and T triangles. Then there exists an O(p) pass algorithm that uses expected \\widetilde{O}\\left(\\delta^{-1}\\varepsilon^{-3.5}\\left(\\frac{m+T}{\\sqrt{T}}\\right)\\right) space, and with probability 1-\\delta-1/poly(n) outputs a mixed (1+\\varepsilon,\\widetilde{O}(n^{1/2^p})) approximation of T. The algorithm does not require any prior knowledge of T.",
+      "page": 10
+    },
+    {
+      "problem": "Parameter-free streaming triangle counting",
+      "problem family": "streaming triangle counting",
+      "bound": "O(log log n) passes, (1+\\varepsilon, 0) mixed approximation, expected space \\widetilde{O}(\\delta^{-1}\\varepsilon^{-3.5}(m+T)/\\sqrt{T})",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "LOGLOGPASS returns a \\((1+\\varepsilon,0)\\) mixed approximation of T with probability at least \\(1-\\delta-1/poly(n)\\), using \\(\\widetilde{O}(\\delta^{-1}\\varepsilon^{-3.5}(m+T)/\\sqrt{T})\\) expected space.",
+      "page": 17
+    },
+    {
+      "problem": "Parameter-free streaming triangle counting",
+      "problem family": "streaming triangle counting",
+      "bound": "\\Omega(m/\\sqrt{\\beta}) space for (\\alpha,\\beta)-approximation; \\Theta(m) space for multiplicative approximation for all T",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Let \\alpha>1 and \\beta>0 satisfy \\beta<\\sqrt{m/2} and 2(\\alpha+1)\\beta<m/4. Let A be a one-pass, parameter-free algorithm that returns an (\\alpha,\\beta)-approximation of T with failure probability 1/m^4 when the stream is in random order. Then A may require \\Omega(m/\\sqrt{\\beta}) space even when run on an input for any T<m/4.",
+      "page": 21
+    }
+  ],
+  "paper": "2609.24829",
+  "usage": {
+    "prompt_tokens": 24529,
+    "completion_tokens": 10135,
+    "total_tokens": 34664,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9515,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

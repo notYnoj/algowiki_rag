@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Distance selection",
+      "problem family": "computational geometry",
+      "bound": "O(n^{4/3})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{4/3} \\log n) deterministic time (Wang and Zhao 2023); O(n^{4/3}) expected randomized time (Chan and Zheng 2023)",
+      "quote": "Theorem 5. _Given two sets A and B, each consisting of n points in the plane, and an integer K with_ \\(1\\le K\\le n^2\\)_, one can compute the K-th smallest distance among all interpoint distances between A and B in O(n_<sup>4/3</sup>) _deterministic time._",
+      "page": 21
+    },
+    {
+      "problem": "Bichromatic distance selection (asymmetric)",
+      "problem family": "computational geometry",
+      "bound": "O(m \\log^2 n + n \\log^2 m + m^{2/3} n^{2/3})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O((m \\log n + n \\log m + m^{2/3} n^{2/3}) \\log(m+n)) time (Wang and Zhao 2023)",
+      "quote": "Theorem 6. _Given a set A of m points and a set B of n points in the plane, and an integer K with_ \\(1\\le K\\le mn\\)_, one can compute the K-th smallest distance among all interpoint distances between A and B in O(n_log<sup>2</sup>_m+m_log<sup>2</sup>_n+m_<sup>2/3</sup>_n_<sup>2/3</sup>) _deterministic time._",
+      "page": 22
+    }
+  ],
+  "paper": "2610.10780",
+  "usage": {
+    "prompt_tokens": 36715,
+    "completion_tokens": 9137,
+    "total_tokens": 45852,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8700,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

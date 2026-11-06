@@ -1,0 +1,6 @@
+# Faster Algorithms for Induced Patterns
+
+33<tbc>
+
+`r = q[::-1]` `reps = [tuple(q[i:] + q[:i]) for i in range(n)]` `reps += [tuple(r[i:] + r[:i]) for i in range(n)]` `cycles.add(min(reps))` `return cycles` `# Exhaustive enumeration of connected graphs on seven vertices` `graphs7 = [G for G in graphs(7) if G.is\_connected()]` `# Graphs with an odd number of Hamiltonian paths` `P7 = []` `for G in graphs7:` `p7 = len(hamiltonian\_paths(G))` `if p7 % 2 == 1:` `P7.append(` `(G, p7, G.automorphism\_group().cardinality())` `)` `# Canonical signatures of the P\_7 graphs` `P7\_labels = {` `G.canonical\_label().graph6\_string()` `for G, \_, \_ in P7` `}` `# Graphs with an odd number of Hamiltonian cycles,` `# excluding graphs already occurring in P\_7` `C7 = []` `for G in graphs7:` `if G.canonical\_label().graph6\_string() in P7\_labels:` `continue` `c7 = len(hamiltonian\_cycles(G))` `if c7 % 2 == 1:` `Aut = G.automorphism\_group()` `C7.append(` `(G, c7, Aut.cardinality(), list(Aut))` `)` `# Fixed 21-edge encoding` `edge\_order = [` `(i, j) for i in range(7) for j in range(i + 1, 7)` `]` `def edge\_bitstring(G):` `return ’’.join(` `’1’ if G.has\_edge(u, v) else ’0’` `for u, v in edge\_order` `)`<tbc>
+

@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "z-normalized pan matrix profile (PMP) motif discovery",
+      "problem family": "time series",
+      "bound": "O\\big(n|A|\\big(BK+R(K+\\varphi m)\\big)\\big) for |A|=\\lceil L/s\\rceil",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "L quadratic self-joins (one per length)",
+      "quote": "Per sample, each anchor spends _O(K_) on the sliding state, _O(BK_) on the signature, and at most _R_ candidate inspections. If a fraction \\(\\varphi\\) of inspected candidates reaches exact evaluation, the online work is \\(O\\big(n|A|\\big(BK+R(K+\\varphi m)\\big)\\big)\\) for \\(|A|=\\lceil L/s\\rceil\\).",
+      "page": 7
+    },
+    {
+      "problem": "z-normalized pan matrix profile (PMP) motif discovery",
+      "problem family": "time series",
+      "bound": "O(n|A|(K+B) + nL + n)",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "\\Theta(nL) (materialized pan-profile)",
+      "quote": "Memory is _O(n|A_|(_K+B_)+_nL+n_), covering the cached features, signatures and hash metadata, profile rows, and retained raw samples.",
+      "page": 7
+    },
+    {
+      "problem": "z-normalized pan matrix profile (PMP) motif discovery",
+      "problem family": "time series",
+      "bound": "O(n(\\log n + wm)) for the emit stage; total runtime near-linear in n",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For a fixed length interval and configuration, the online work is linear in _n_ and the emit stage is bounded by _O(n_(log_n_+wm_)), so the total runtime is near-linear in the series length.",
+      "page": 7
+    },
+    {
+      "problem": "z-normalized pan matrix profile (PMP) motif discovery",
+      "problem family": "time series",
+      "bound": "P_m^\\mathcal{S}[i] \\ge P_m[i] for every cell (sound upper pan-profile)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Proposition 1 (Soundness). _For every_ \\(\\mathcal{S}\\subseteq\\mathcal{U}\\)_, the induced profile is a sound upper pan-profile: every finite cell equals the exact z- normalized distance to the valid neighbor it stores, and_ \\(P_m^\\mathcal{S}[i]\\ge P_m[i]\\) _for every cell._",
+      "page": 3
+    }
+  ],
+  "paper": "2607.17481",
+  "usage": {
+    "prompt_tokens": 48414,
+    "completion_tokens": 10500,
+    "total_tokens": 58914,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9868,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

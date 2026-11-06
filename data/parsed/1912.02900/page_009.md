@@ -1,0 +1,18 @@
+<tbc>therefore \(\mathsf{WB}^{(2)}(X)/\mathsf{WB}(X)\ge\Omega(loglogn/logloglogn)\) for that sequence, implying that the gap between WB(_X_) and WB<sup>(2)</sup>(_X_) may be as large as \(\Omega(loglogn/logloglogn)\). We note that we only realized that our results provide this stronger separation between the two Wilber bounds after hearing the statements of the results from the independent work of Lecomte and Weinstein \[LW19\] mentioned above.
+
+## 1.2 Algorithmic Results
+
+We provide new simple approximation algorithms for the problem, that rely on its geometric interpretation, namely the Min-Sat problem.
+
+**Theorem 1.3** _There is an offline algorithm for_ Min-Sat_, that, given any integral parameter_ \(D\ge 1\)_, and an access sequence X to n keys of length m, has cost at most_ \(O(D\cdot\mathsf{OPT}(X))\) _and has running time at most_ \(\mathrm{poly}(m)\cdot\mathrm{exp}\left(O\left(n^{1/2^{O(D)}}logn\right)\right)\)_. When D=O_(loglog_n), the algorithm’s running time is polynomial in n and m, and it can be adapted to the online setting, achieving an O_(loglog_n)- competitive ratio._
+
+Our results show that the problem of obtaining a constant-factor approximation for Min-Sat cannot be NP-hard, unless \(\mathsf{NP}\subseteq\mathsf{SUBEXP}\), where \(\mathsf{SUBEXP}=\cap_{\epsilon>0}\mathsf{DTime}[2^{n^\epsilon}]\). This, in turn provides a positive evidence towards the dynamic optimality conjecture, as one natural avenue to disproving it is to show that obtaining a constant-factor approximation for BST’s is NP-hard. Our results rule out this possibility, unless \(\mathsf{NP}\subseteq\mathsf{SUBEXP}\), and in particular the Exponential Time Hypothesis is false. While the _O_(loglog_n_)-approximation factor achieved by our algorithm in time poly(_mn_) is similar to that achieved by other known algorithms \[DHIP07, Geo08, WDS06\], this is the first algorithm that relies solely on the geometric formulation of the problem, which is arguably cleaner, simpler, and better suited for exploiting the rich toolkit of algorithmic techniques developed in the areas of online and approximation algorithms. Our algorithmic framework can be naturally adapted to work with both vertical and horizontal cuts, and so a natural direction for improving our algorithms is to try to combine them with the GB bound.
+
+## 1.3 Technical Overview
+
+As already mentioned, both our positive and negative results use the geometric interpretation of the problem, namely the Min-Sat problem. This formulation allows one to ignore all the gory details of pointer moving and tree rotations, and instead to focus on a clean combinatorial problem that is easy to state and analyze. Given an input set of points _X_, we denote by OPT(_X_) the value of the optimal solution to the Min-Sat problem on _X_.
+
+### Nevative results.
+
+For our main negative result - the proof of Theorem 1.1, we start with the standard bit-reversal sequence _X_ on _n_ keys of length _n_. It is well known that \(\mathsf{OPT}(X)=\Theta(nlogn)\) for such an instance _X_. Again, we view _X_ as a set of points in the plane. Next, we transform this set of points by introducing _exponential spacing_: if we denote the original set of points by _X_=(_p_<sub>1</sub>_,...,p<sub>n</sub>_), where for all \(1\le i\le n\), the _x_-coordinate of _p<sub>i</sub>_ is _i_, then we map each such point _p<sub>i</sub>_ to a new point \(p'_i\), whose _y_-coordinate remains the same, and _x_-coordinate becomes 2_<sup>i</sup>_. Let \(\tilde{X}\) denote the resulting set of points. It is well known that, if _T_ is a **balanced** partitioning tree (that is, every vertical strip is always partitioned by a vertical line crossing it in the middle),<tbc>
+

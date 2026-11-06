@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Sorting \\(\\pi\\)-avoiding permutations",
+      "problem family": "pattern-avoiding permutations sorting",
+      "bound": "\\(O(n \\cdot 2^{O(k^2) + (1+o(1))\\alpha(n)})\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(O(n \\cdot 2^{(\\alpha(n))^{3k/2 - O(1)}})\\)",
+      "quote": "Corollary 1.4. If S is \\(\\pi\\)-free, then BST Sort using GreedyFuture and Heap Sort using the SmoothHeap will sort S in \\(n\\cdot 2^{O(k^2)+(1+o(1))\\alpha(n)}\\) time.",
+      "page": 4
+    },
+    {
+      "problem": "Extremal function for \\(P_\\pi\\otimes(\\bullet)\\)-free matrices",
+      "problem family": "0-1 matrix extremal functions",
+      "bound": "\\(\\mathrm{Ex}(Q,n)\\le n\\cdot\\left(2^{O(k^2)}+O(\\alpha(n))^{3k-2}\\right)2^{\\alpha(n)} = n\\cdot 2^{O(k^2)+(1+o(1))\\alpha(n)}\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\(O(n \\cdot 2^{(\\alpha(n))^{3k/2 - O(1)}})\\)",
+      "quote": "Theorem 1.3. Let \\(P_\\pi\\) be the \\(k\\times k\\) permutation matrix of \\(\\pi\\) and \\(Q=P_\\pi\\otimes(\\bullet)\\) be a \\(2k\\times 3k\\) light matrix. Then \\(\\mathrm{Ex}(Q,n)\\le n\\cdot\\left(2^{O(k^2)}+O(\\alpha(n))^{3k-2}\\right)2^{\\alpha(n)}=n\\cdot 2^{O(k^2)+(1+o(1))\\alpha(n)}.\\)",
+      "page": 4
+    },
+    {
+      "problem": "Extremal function for \\(I_k\\otimes(\\bullet)\\)-free matrices",
+      "problem family": "0-1 matrix extremal functions",
+      "bound": "\\(\\mathrm{Ex}(I_k\\otimes(\\bullet), n) \\le 2(k-1) n \\alpha(n) + O(kn)\\)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1.5. If \\(I_k\\) is the \\(k\\times k\\) identity matrix, then \\(\\mathrm{Ex}(I_k\\otimes(\\bullet),n)\\le 2(k-1)n\\alpha(n)+O(kn).\\)",
+      "page": 4
+    },
+    {
+      "problem": "Sorting \\(\\pi\\)-avoiding permutations for \\(\\pi\\) containing (3,1,2) or (2,1,3)",
+      "problem family": "pattern-avoiding permutations sorting",
+      "bound": "\\(\\Omega(n 2^{\\alpha(n)})\\)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "We prove that \\(\\mathrm{Ex}(P_\\pi\\otimes(\\bullet),n)=\\Omega(n2^{\\alpha(n)})\\) whenever \\(\\pi\\) contains (3,1,2) or (2,1,3).",
+      "page": 4
+    },
+    {
+      "problem": "Extremal function for W-free matrices",
+      "problem family": "0-1 matrix extremal functions",
+      "bound": "\\(\\Theta(n 2^{\\alpha(n)})\\)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1.6. \\(\\mathrm{Ex}(W,n)=\\Theta(n2^{\\alpha(n)})\\)_, where_<tbc>",
+      "page": 4
+    }
+  ],
+  "paper": "2307.02294",
+  "usage": {
+    "prompt_tokens": 16971,
+    "completion_tokens": 11736,
+    "total_tokens": 28707,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10801,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

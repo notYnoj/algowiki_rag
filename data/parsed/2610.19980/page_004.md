@@ -1,0 +1,22 @@
+rectangle intersection graph. The score is
+
+\(\mathrm{score}_\mathrm{MISR}(\mathcal{R})=\frac{\alpha^*(\mathcal{R})}{\alpha(\mathcal{R})}.\)
+
+Informally, MISR asks for the largest subfamily of pairwise-disjoint rectangles, and a difficult instance is one whose clique-LP optimum \(\alpha^*\) substantially exceeds the integer optimum \(\alpha\). Figure 1 (left) shows a small instance together with a maximum independent set.
+
+Deciding MISR, and the corresponding covering problem, is NP-complete \[17\]. A long line of work has developed approximation algorithms: Adamaszek and Wiese gave a quasi-polynomial-time approximation scheme (QPTAS) for the weighted problem \[2\], and Chuzhoy and Ene obtained an asymptotically faster QPTAS \[12\], while Mitchell gave the first polynomial-time constant-factor approximation for unweighted MISR \[25\], later improved to a 3-approximation by Gálvez, Khan, Mari, Mömke, Pittu, and Wiese \[18\].
+
+The quantity we search over is the integrality gap of the clique-LP relaxation, for which lower and upper bounds are known. Chalermsook and Chuzhoy gave a polynomial-time _O_(loglog_n_)-approximation by rounding this relaxation, which also shows that its integrality gap is at most _O_(loglog_n_) \[8\]; a simpler _O_(loglog_n_)- approximation was subsequently given by Chalermsook \[9\]. On the lower side, Chalermsook and Chuzhoy constructed rectangle families whose clique-LP integrality gap is asymptotically at least 3/2 \[8\], and Caoduro, Cslovjecsek, Pilipczuk, and Wegrzycki proved essentially tight bounds for axis-parallel segments, exhibiting families whose gap tends to 2 \[6\]. Since axis-parallel segments are a degenerate special case of axis-parallel rectangles, these families carry over, so the gap for rectangles can likewise be driven arbitrarily close to 2. In summary, the best known bounds on the clique-LP integrality gap are an upper bound of _O_(loglog_n_) \[8\] and a lower bound approaching 2 in the limit \[6\]; the value 2 is a supremum over growing families rather than a gap realized by any single finite instance. Our search targets finite instances of fixed, small size, for which the largest gap realizable is a different and generally smaller quan<tbc>
+
+<tbc>tity than these asymptotic limits; the certificate stores rectangles, the intersection graph, maximal cliques, an optimal integral independent set, LP primal and dual values, and solver status.
+
+## 3.2 Unit-square stabbing integrality gap
+
+In the unit-square stabbing problem, we are given a finite family S of axis-parallel unit squares, and we seek the minimum number of axis-parallel lines that together intersect every square. A horizontal or vertical line stabs a square if it intersects it. Let L(S) be the finite set of critical lines obtained by taking one representative per interval cell induced by the square-side coordinates. Because the set of squares a line stabs changes only when the line crosses a square edge, all lines whose coordinate lies in the same cell stab exactly the same squares, so this compression is exact: it reduces the infinitely many candidate lines to a finite universe while leaving both the integer and the fractional stabbing optima unchanged. Let \(\tau(\mathcal{S})\) be the minimum number of axis-parallel lines stabbing all squares, and \(\tau^*(\mathcal{S})\) the optimum of the set-cover LP over L(S). The score is
+
+\(\mathrm{score}_\mathrm{stab}(\mathcal{S})=\frac{\tau(\mathcal{S})}{\tau^*(\mathcal{S})}.\)
+
+Informally, the goal is to pierce every square with as few horizontal and vertical lines as possible, and a difficult instance is one whose set-cover LP optimum \(\tau^*\) is much smaller than the integer optimum \(\tau\). Figure 1 (middle) shows a small instance and an optimal integer stabbing.
+
+The rectangle stabbing LP relaxation has integrality gap exactly 2 for general rectangles \[19, 4\], and _e/(e_-1)≈1.582 for horizontal segments \[23\]. For unit squares, Elbassioni and Ray gave the best known bounds via threshold rounding: the integrality gap is strictly below 2, at most 1.9<o>3</o>, and at least 3/2, the lower bound coming from a four-square construction whose LP optimum is 2 but whose integer optimum is 3 \[14\]; they conjecture the true value is \((35-\sqrt{5})/20\approx 1.638\). The certificate stores square coordinates, the compressed critical-line universe, the incidence matrix, an optimal integer cover, LP primal and dual witnesses,<tbc>
+

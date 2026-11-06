@@ -1,0 +1,28 @@
+cycles. However, the use of integer variables and DFS creates an iterative (not linear or convex) optimization approach that is solved using linear programming relaxation sub-problems. MATLAB<sup>®</sup>`intlinprog` uses a branch-and-bound technique to solve BILPs and is generally fast, but can devolve into exhaustive enumeration in its worst case. With parameters _N_=100 and _L_=50, gait synthesis for the datasets presented in this paper is generally solved in 1 to 2 minutes on a desktop computer with an Intel(R) Xeon(R) CPU E5-1650 v4 @ 3.60GHz processor and 64 GB of RAM. This speed is important because this process will need to be repeated multiple times per robot-environment interaction to properly tune the hyperparameters to the user’s satisfaction.
+
+There is an active area of research into solving these types of combinatorial optimization problems, particularly when there is a large number of graph nodes. Because branch-and- bound solvers may not scale to systems with a larger number of actuators, alternative approaches like those mentioned in Section V-A can be used. However, our presented methodology (Fig. 3) with MATLAB<sup>®</sup>`intlinprog` is preferred in our case due to its tractability for the robots presented in Section VI, the tunability based of the hyperparameters, and the near optimality demonstrated in Section VII-A5.
+
+## VI. EXPERIMENTAL SETUP AND PROCEDURE
+
+### A. Robot Design and Fabrication
+
+To validate the efficacy and versatility of the proposed gait synthesis, we fabricate two motor-tendon actuated (MTA) soft robots with different morphologies: the three-limb TerreSoRo- IIIand the four-limb TerreSoRo-IV. Both are designed and fabricated to be radially symmetric modular soft robots that are capable of multi-module reconfiguration into a sphere, as detailed in [47]. This design leads to unique locomotive behavior of the individual robot modules as the curling of the limbs induces coupled translation and rotation. All robot configurations are statically stable, which simplifies calculations in the pMFC framework. Furthermore, the motion primitives are quasi-static, provided that the binary actuation is performed at the appropriate power level for the appropriate time duration such that the limb curling and uncurling reaches steady state. Hence, this robot can be used to highlight and validate this gait synthesis procedure as: 1) simple actuation produces complex movement with coupled translation and rotation; 2) the stick- slip nature of the limb movement complicates traditional gait synthesis and increases the dependence of the robot behavior on the environment; and 3) the exploration of a diverse set of gaits can be used for open-loop path planning.
+
+Both robots consist of a 3D-printed semi-flexible robot hub which houses the motors and tether connector and silicone limbs that are cast in a 3D-printed mold. Fishing line attached to the motor spool is then threaded through Teflon-reinforced channels in the limb and secured to the tips of the limbs with fishing hooks. The tendon routing and hub design for the TerreSoRo-IV is shown in Fig. 4 and the two robots are shown in Fig. 5. The resulting MTAs are powered via a tether that connects to an off-board power supply and motor driver circuit, controlled via an Arduino Nano microcontroller.
+
+Both robots are supplied with 12 V DC and utilize binary actuation (step functions) with consistent time constants for all motion primitives that are experimentally determined (550 ms for TerreSoRo-III and 450 ms for TerreSoRo-IV). To facilitate passive uncurling of the limbs, a brief motor reversal is incorporated when transitioning from a curled to uncurled limb state. The tether for the TerreSoRo-IV is equipped with a slip ring connector at the hub to prevent motion bias due to accumulated torsional effects when the robot performs rotations for an extended period of time.
+
+### B. Experimental Setup
+
+Experiments are performed on flat substrates placed on top of a laboratory floor and secured to prevent slippage. Three substrates with varying frictional and roughness properties are used in this experiment: a rubber garage mat, a whiteboard, and a carpet. As shown in Fig. 6, the robot is placed in the center of the substrate and fluorescent markers (fiducials) are placed on the hub. Two overhead webcams (approx. 30 fps) are placed above to capture the substrate with a field of view of approximately 4 feet by 7 feet. One webcam is reserved for capturing video of the experiments while the other adjusts the camera properties (e.g., contrast, brightness, etc.) to facilitate tracking by improving image segmentation of the fluorescent markers. Both cameras are calibrated to account for distortion using the MATLAB Camera Calibrator App and a printed checkerboard pattern.
+
+Tracking of the robot is performed frame by frame in MATLAB by using the Color Thresholder App to segment the markers as regions of interest in a binary mask. The marker centroids are calculated and recorded for each frame. The robot pose \([x,y,\theta]^T\) can then be estimated by finding the least- squares solution for the rotation and translation between the first frame and the current frame [48]. In cases where the tether
+
+Motors Tendon paths (a) (b) (c)
+
+Slip ring 17.5 cm 13.0 cm (a) (b)
+
+Fig. 4. TerreSoRo-III CAD drawings with (a) hub cap removed to show motors unactuated state, (b) bottom view with tendon routing (red), and (c) spherical curling in fully actuated state.
+
+Fig. 5. Soft MTA robots with labelled distance from robot center to limb tip: (a) three-limb TerreSoRo-III and (b) four-limb TerreSoRo-IV with slip ring tether connector.
+

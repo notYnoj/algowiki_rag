@@ -1,0 +1,20 @@
+_in randomized time_
+
+\(\widetilde{O}\big(\frac{|A_1|\dots|A_k|}{p}\big).\)
+
+**Proof.** Denote \(A=A_1\times\cdots\times A_k\). For a large constant _C_, we uniformly independently sample \(m=\lceil\frac{C|A|log|A|}{p}\rceil k\)-tuples \(t_1,t_2,\dots,t_m\in A\). Let _s<sub>i</sub>_ denote the sum of the _k_ components in the tuple _t<sub>i</sub>_. Let \(\tilde{f}_x\) denote the number of times the integer _x_ occurs in the list of sums (_s_<sub>1</sub>_,...,s<sub>m</sub>_). Let _P_ be the set of all integers _x_ with \(\tilde{f}_x\ge 1.5p\cdot\frac{m}{|A|}\). We compute and return _P_ in \(\widetilde{O}(m)=\widetilde{O}(\frac{|A_1|\dots|A_k|}{p})\) time.
+
+We now show that _P_ satisfies the claimed property with high probability. For every integer _x_, if _x_ can be expressed in _f<sub>x</sub>_ ways as \(x=a_1+\cdots+a_k\) for \((a_1,\dots,a_k)\in A\), then P\[_s<sub>i</sub>=x_\]=_f<sub>x</sub>/|A_| for every \(1\le i\le m\). Hence, if \(f_x\ge 2p\), then by Chernoff bound, \(x\notin P\) happens with probability \(\mathbb{P}[\tilde{f}_x<1.5p\cdot\frac{m}{|A|}]\le exp(-\frac{pm}{16|A|})\le|A|^{-C/16}\). If _f<sub>x</sub>\<p_, then by Chernoff bound, \(x\in P\) happens with probability \(\mathbb{P}[\tilde{f}_x\ge 1.5p\cdot\frac{m}{|A|}]\le exp(-\frac{pm}{12|A|})\le|A|^{-C/12}\). By a union bound over all \(x\in A_1+\cdots+A_k\), we conclude that _P_ is correct with high probability in |_A_|.
+
+## 3.1 Qualitative Optimality
+
+Let us briefly comment that Theorem 1.2 is (qualitatively) optimal. For every _c\>_0 and every integer \(k\ge 2\), there is a small enough \(\epsilon\in(0,1)\) that would violate the theorem statement. More specifically, there is a family of size-_n_ sets _A_ such that \(Pop^k(A;p)\neq\emptyset\) for some \(p=\Omega(|A|^{k-1-c})\), and so that any set _H_ with \(|A\cap H|\ge n^{1-\epsilon}\) and \(|H|\le n^{1+c+\epsilon}\) would have doubling constant much larger than \(n^\epsilon\). The same proof would also show for every \(\epsilon\in(0,1)\) and every \(k\ge 2\), there exists _c\>_0 that violates the theorem statement. This shows that _k_ in the theorem necessarily depends on _c_ and \(\epsilon\) (though the dependence could possibly be improved to linear in \(c/\epsilon\)).
+
+Indeed, take _A=I+R_ where _I_ is an interval (or any other low-doubling set) of size _n_<sup>1-_c/_(_k_-1)</sup>, and where _R_ is a random set of size _n_<sup>_c/_(_k_-1)</sup> that is not correlated with _H_. By taking _R_ from a large enough universe, we can assume that, for every \(\ell\le(c+2)logn\), there is no \(\ell\)-term additive relation
+
+\((i_1+r_1)+\cdots+(i_\ell+r_\ell)=(i_{\ell+1}+r_{\ell+1})+\cdots+(i_{2\ell}+r_{2\ell}),\)
+
+where \(r_1,\dots,r_{2\ell}\) are distinct, while \(i_1,\dots,i_{2\ell}\) might not. Then _A_ has size roughly |_I_||_R_|=_n_. Moreover, Pop_<sup>k</sup>(A_;|_A_|<sup>_k_-1-_c_</sup>) is non-empty as each sum \(r_1+\cdots+r_k\in kR\) can be extended in about |_I_|<sup>_k_-1</sup>=_n_<sup>_k_-1-_c_</sup> ways to a common popular sum in _kI+kR_. Take _H_ to be any set where \(|H|\le n^{1+c+\epsilon}\) and \(|A\cap H|\ge n^{1-\epsilon}\). By pigeonhole principle, \(A\cap H\) must contain _p<sub>t</sub>=i<sub>t</sub>+r<sub>t</sub>_ for \(i_t\in I,r_t\in R\) where the values _r<sub>t</sub>_ are distinct, for some \(t\ge n^{1-\epsilon}/n^{1-c/(k-1)}=n^{c/(k-1)-\epsilon}\). By our assumption on _R_, there is no \(\ell\)-term additive relation for numbers _P_={_p_<sub>1</sub>_,...,p<sub>t</sub>_} for every \(\ell\le(c+2)logn\).
+
+Now consider the additive energy _E(P,H_). For every nontrivial solution, _p_<sub>1</sub>+_h_<sub>1</sub>=_p_<sub>2</sub>+_h_<sub>2</sub> for \(p_1,p_2\in P\) and \(h_1,h_2\in H\), we consider adding an edge between _h_<sub>1</sub> and _h_<sub>2</sub>. Note that an \(\ell\)-cycle in this graph induces an \(\ell\)-term additive relation for numbers _P_. Hence, the girth of this graph is _\>(c_+2)log_n_, which implies that the number of edges is _O_(|_H_|) by the graph Moore bound \[AHL02\]. Hence, _E(P,H_) is dominated by the trivial solutions, so _E(P,H_)=_O_(|_P_||_H_|).
+

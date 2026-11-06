@@ -1,0 +1,20 @@
+In our generalized demand case, however, the independent rectangle number turns out to be a bad estimate on the value of an optimal solution. Instead, we consider the notion of vertically separable demands, used implicitly in \[9\].
+
+We say that a subset of demands \(D'\subseteq D\) is _vertically separable_ if there exists an ordering _R_<sub>1</sub>_,R_<sub>2</sub>_,...,R<sub>k</sub>_ of its demand rectangles and vertical line segments \(\ell_1,\ell_2\dots,\ell_k\) such that \(\ell_i\) connects the respective interiors of top and bottom boundaries of _R<sub>i</sub>_ and does not intersect any _R<sub>j</sub>_, for _j\>i_. For an input (_P,D_), denote by V5(_P,D_) the maximum cardinality of such a subset. We call a set of demands _D monotone_, if either _y(p)\<y(q_) for all \((p,q)\in D\) or _y(p)\>y(q_) for all \((p,q)\in D\). We assume the former case holds as both are symmetrical. In the following, we argue that V5 is indeed a lower bound on OPT (proof in Appendix B).
+
+**Lemma 6** (\[9\])**.** _Let_ (_P,D_) _be an input for_ MinGMConn_. If D is monotone, then we have_ \(\mathsf{IR}(P,D)\le\mathsf{V5}(P,D)\le\mathsf{OPT}(P,D)\)_. Thus, in general,_ \(\frac{1}{2}\mathsf{IR}(P,D)\le\mathsf{V5}(P,D)\le 2\cdot\mathsf{OPT}(P,D)\).
+
+The charging scheme described in the proof of Lemma 6 injectively maps a demand rectangle _R_ to a point of the optimal solution that lies in _R_. This implies the following corollary.
+
+**Corollary 7.** _Let D be a vertically separable, monotone set of demands and Q a feasible solution. If_ |_Q_|=|_D|, there is a bijection_ \(c:Q\rightarrow D\) _such that_ \(q\in R(c(q))\) _for all_ \(q\in Q\)_. In particular, for_ \(Q'\subseteq Q\) _there are at least_ \(|Q'|\) _demands from D that each covers some_ \(q\in Q'\).
+
+In general, the independent rectangle number and the maximum size of a vertically separable set are incomparable. By Lemma 6, we have \(\mathsf{IR}(P,D)\le 2\cdot\mathsf{V5}(P,D)\). However, IR(_P,D_) may be smaller than V5(_P,D_) up to a factor of _n_. To see this, consider _n_ diagonally shifted copies of a demand, e.g. _R<sub>i</sub>=R_\(\big(\)(_i,i),(i+n,i+n_)\(\big)\), for _i_=1_,...,n_. Here, IR(_P,D_)=1 and V5(_P,D_)=_n_. Thus, the concept of vertical separability is more useful as a lower bound.
+
+## 3 NP-hardness
+
+In this section, we show Theorem 1 by reducing the MinGMConn problem to 3-SAT. In 3-SAT, we are given a formula \(\phi\) consisting of _m_ clauses _C_<sub>1</sub>_,C_<sub>2</sub>_,...,C<sub>m</sub>_ over _n_ variables _X_<sub>1</sub>_,X_<sub>2</sub>_,...,X<sub>n</sub>_, each clause consisting of three literals. The goal is to decide whether \(\phi\) is satisfiable. For our reduction, we construct a MinGMConn instance \((P_\phi,D_\phi)\) and a positive integer \(\alpha=\alpha(\phi)\) such that \((P_\phi,D_\phi)\) has an optimal solution of size \(\alpha\) if and only if \(\phi\) is satisfiable (Lemmas 15 and 18). This immediately implies Theorem 1. In the following, we identify a demand \(d\in D_\phi\) with its demand rectangle _R(d_). This allows us to speak, for example, of intersections of demands, corners of demands, or points covered by demands.
+
+Our construction of the MinGMConn instance \((P_\phi,D_\phi)\) is based on different _gadgets_ and their connections among each other. A gadget can be thought of as a rectangle in the Euclidean plane that contains a specific set of input points and demands between these. We start with a coarse overview of our construction by describing how gadgets are placed and how they interact (Figure 2). We then give the intuition behind our reduction and describe the detailed inner structure of gadgets afterward (Figure 3). Because of space constraints, the actual proof of the NP-hardness is given in Appendix D.
+
+**Overview of the Construction.** For each clause _C<sub>j</sub>_, we create a _clause gadget GC<sub>j</sub>_ and for each variable _X<sub>i</sub>_, a _variable gadget GX<sub>i</sub>_. Clause gadgets are arranged along a descending diagonal line, so all of _GC<sub>j</sub>_ is to the bottom-right of _GC_<sub>_j_-1</sub>. Variable gadgets are arranged in<tbc>
+

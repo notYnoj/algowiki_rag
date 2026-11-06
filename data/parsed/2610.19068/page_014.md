@@ -1,0 +1,28 @@
+The main findings replicate. On G1, RtP outperforms PtR on precision (+0.088), recall (+0.113), and pass rate (+0.069). On G2, PtR outperforms RtP on precision (+0.039) and recall (+0.051); pass rate is a statistical tie (0.826\(\pm\)0.029 vs. 0.820\(\pm\)0.029). On G3, RtP has higher precision (0.135 vs. 0.123\(\pm\)0.008, n.s.) and recall (0.160 vs. 0.146\(\pm\)0.008, _p_=0.035) while PtR leads on pass rate (0.805\(\pm\)0.013 vs. 0.790\(\pm\)0.008, n.s.); unlike Gemini, the small G3 recall gap reverses toward RtP here, underscoring that G3 (the smallest set) is the least stable across model families. RtP retrieval metrics are identical to the Gemini results, confirming they depend only on the query embedding and registry. The slightly lower PtR precision and recall for gpt- oss-120b vs. Gemini on G1 suggests stub quality varies across model families, though the crossover direction is preserved.
+
+## K Prompts
+
+We use two zero-shot system prompts, reproduced verbatim below. The discovery prompt (PtR only) elicits abstract tool stubs from the query alone; the planner prompt (both architectures) selects APIs from the retrieved set.
+
+## L FAISS Index Configuration
+
+Each API is embedded with `thenlper/gte-base` (768-dimensional, L2-normalized) from the string `"{tool\_ name}/{api\_name}: {description}"`, and all APIs are indexed with `faiss.IndexFlatIP` (exact inner- product search, equivalent to cosine similarity for normalized vectors).
+
+Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries and regions.
+
+Discovery prompt (stub generation)
+You are a tool discovery assistant. Given a user query, identify what tools or APIs would be needed to answer it. You do NOT have access to any tool registry -instead, describe the tools you think are needed based on the query alone.
+Respond ONLY with a JSON array:
+[
+{"tool\_name": "hypothetical\_tool\_name", "reasoning": "why this tool is needed"},
+]
+Be specific about tool functionality. Use snake\_case for tool names.
+Planner prompt
+You are a tool-augmented assistant. Given a user query and a set of available APIs, select the best API(s) to answer the query and produce a step-by-step plan.
+Respond in JSON:
+{
+"selected\_apis": ["tool\_name/api\_name", ...],
+"plan": "step-by-step plan",
+"answer": "final answer to the user"
+}
+

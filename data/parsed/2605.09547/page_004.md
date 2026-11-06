@@ -1,0 +1,26 @@
+<tbc>\[JNS26\]. We remark that on unweighted graphs the max-flow can use at most _O(n_<sup>1.5</sup>) edges<sup>2</sup>, so the problem is substantially easier in the unweighted setting. A subquadratic communication algorithm for weighted flows (but also the simpler weighted _st_-min-cut problem where solutions have size _O(n_)) was stated as open problem in \[BBE<sup>+</sup>22\].
+
+When it comes to flow _f_, rather than its cost/size, note that not just the _computation_ is difficult, but just _communication_ of the solution is already a challenge. Namely, assume one party already knows all the edges and the flow. How would that party communicate the flow to the other party? This is clearly a simpler problem than jointly computing the flow since the 1st party could just throw away the extra information. However, how would one communicate the flow if no low space representation of the flow is possible? In particular, the communicated messages would be an encoding of the flow.
+
+#### Computing Flow In Subquadratic Space
+
+We show that computation of the min-cost/max flows in subquadratic space is possible. In addition to the exact flow cost/size, our algorithm also returns the flow _f<sub>e</sub>_ on each edge \(e\in E\). This is unexpected, as it appears to contradict the lower bound of \[CJWY25\]. We can circumvent the lower bound, because it assumes a decoding algorithm of form D(_M_) for encoding \(M\in\{0,1\}^*\) of the flow, i.e., decoding must be performed without access to the graph. The lower bound does not rule out a decoding algorithm of form D(_M,e_) that receives edge _e_ as part of the input in addition to some subquadratic space encoding \(M\in\{0,1\}^*\) of the flow. The assumption that we have access to the edge during decoding is naturally satisfied in many low space models. In the communication model, each party knows their own (possibly \(\Omega(n^2)\) sized) set of edges. For multi-pass streaming algorithms, the edges are available via another pass over the input. In particular, during the last pass over the edges, the algorithm returns the flow on each edge when it is read in the stream. This approach allows us to compute flows in subquadratic space, even though the flow uses up to \(\Omega(n^2)\) many edges.
+
+Our main technical contribution is such an encoding/decoding scheme adapted to the framework of "robust interior point methods" for linear programming. In the context of streaming algorithms, the mere existence of such encoding does not suffice, but we show that the computation of this encoding can be done in low space, too. Using the encoding with the robust interior point method of \[BLL<sup>+</sup>21\] (which solves linear programs/min-cost flow in \(\widetilde{O}(\sqrt{n})\) iterations), we present a \(\widetilde{O}(\sqrt{n})\)-pass, \(\widetilde{O}(n^{1.5})\)-space streaming algorithm, which can be implemented with \(\widetilde{O}(n^{1.5})\) communication in the 2-party model.
+
+## 1.1 Our Results
+
+We present the following result for computing min-cost flows in the multi-pass streaming model.
+
+**Theorem 1.1** (Min-cost Flow, Streaming)**.** _There is a randomized multi-pass streaming algorithm that, given an input graph G_=(_V,E_) _with integer capacities_ \(u\in[1,W]^E\) _and costs_ \(c\in[1,W]^E\)_, vertex demand vector_ \(b\in\mathbb{R}^V\) _and accuracy parameter_ \(\epsilon\in[0,1]\)_, computes w.h.p. a min-cost flow in_ \(\widetilde{O}(n^{1.5}log(W/\epsilon))\) _space and_ \(\widetilde{O}(\sqrt{n}log(W/\epsilon))\) _passes over the input. The total time is_ \(\widetilde{O}(mnlog^2(W/\epsilon))\).
+
+_The algorithm returns a randomized_ \(\widetilde{O}(n^{1.5}log(W/\epsilon))\)_-space data structure that supports edge-queries: For any given edge e_=((_w,v),c<sub>e</sub>,u<sub>e</sub>), the query returns in_ \(\widetilde{O}(\sqrt{n}log(W/\epsilon))\) _time an estimate_ <o>_f_</o><sub>e</sub> _of the flow on that edge, with_ \(0\le\overline{f_e}\le u_e\) _and_ \(|\overline{f_e}-f_e|\le\epsilon\) _with high probability._
+
+_Alternatively, we can also assume that during the last pass, the algorithm returns for each given edge e_=((_w,v),c<sub>e</sub>,u<sub>e</sub>_) _the flow_ <o>_f_</o><sub>e</sub> _on that edge._
+
+While the streaming area often focuses on small number of passes (e.g., constant or polylog), it was proven that polynomial number of passes may be necessary for flows in the weighted case. In the presence of capacities as large as sub-exponential in _n_, \[ACK19\] showed that a streaming algorithm for computing the size of the max-flow in _p_ passes needs \(\Omega(n^2/p^5)\) space. This lower bound was later improved to \(\Omega(n^2/p^3)\) space \[AGL<sup>+</sup>24\]. For smaller polynomially-sized capacities, Theorem 1.1 is the first upper bound for computing the exact size of the max-flow in the weighted case (when interested in the size, we can simply round the result to nearest integer). It is also the first result to return the flow \(f\in\mathbb{R}^E\) with high accuracy rather than the cut or cost/size of the flow.
+
+Previous work was either highly inaccurate with polynomial error when returning the flow \[CJWY25\], or when exact, previous work was only for the unweighted undirected case \[RSW18\] and returned only<tbc>
+
+<sup>2</sup>See Theorem A.3
+

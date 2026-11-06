@@ -1,0 +1,22 @@
+<tbc>are to store the value of _l_<sub>1</sub>. This sub-array A\[_l_<sub>1</sub>_,l_<sub>2</sub>\] along with the value of _l_<sub>1</sub> together is called a _compact representation_ of A.
+
+When answering a PSS query with the previous query algorithm with a compact representation of A, one can simply treat every bucket met during the query with index outside the range \[_l_<sub>1</sub>_,l_<sub>2</sub>\] as empty, i.e., of size 0. The correctness and query complexity of the query algorithm still holds. Next, we show the length of A\[_l_<sub>1</sub>_,l_<sub>2</sub>\] is bounded by _O_(loglog_n_<sub>0</sub>).
+
+Lemma 4.18. _For every final-level PSS instance on Z<sub>k</sub>, the space consumption of the compact representation of the adapter_ A _is bounded by O_(1) _words._
+
+Proof. Recall that each item \(v_i\in V_k\) corresponds to a bucket _B<sub>Z<sub>k</sub></sub>(i_) of items in _Z<sub>k</sub>_ at bucket index _i_. Our goal is to show that those non-empty buckets _B<sub>Z<sub>k</sub></sub>(i_) must have bucket index _i_ in range \[_l_<sub>1</sub>_,l_<sub>2</sub>\], for some _l_<sub>1</sub> and _l_<sub>2</sub>.
+
+To prove this, we show that the _minimum possible_ weight and the _maximum possible_ weight of the items in _Z<sub>k</sub>_ would not differ by too much. To see this, observe that the item set _Z<sub>k</sub>_ is constructed from the buckets in the group _G<sub>Y<sub>j</sub></sub>(k_), where _G<sub>Y<sub>j</sub></sub>(k_) contains buckets _B<sub>Y<sub>j</sub></sub>(i_) with bucket indices from \(k_1=k\cdot log_2|Y_j|\) to \(k_2=(k+1)\cdot log_2|Y_j|\). Therefore, the minimum possible weight of a bucket in _G<sub>Y<sub>j</sub></sub>(k_) is 2<sup>_k_<sub>1</sub>+1</sup>, while the maximum possible weight of a bucket in _G<sub>Y<sub>j</sub></sub>(k_) is \(2^{k_2+1}\cdot|Y_j|\). And each of the buckets corresponds to an item \(z_i\in Z_k\) with the same weight. As a result, the _possible weight ratio_ of the items in _Z<sub>k</sub>_, i.e. the ratio between the maximum and minimum possible weights, can be computed as
+
+\(\frac{2^{k_2+1}\cdot|Y_j|}{2^{k_1+1}}=2^{k_2-k_1}\cdot|Y_j|=2^{log_2|Y_j|}\cdot|Y_j|=|Y_j|^2\le(log_2n_0)^2,\)
+
+where \(|Y_j|\le log_2n_0\). Thus, there can be at most \(log_2\left((log_2n_0)^2\right)=2log_2log_2n_0\in O(loglogn_0)\) possible buckets on the items in _Z<sub>k</sub>_. Moreover, since the smallest possible bucket weight of _B<sub>Z<sub>k</sub></sub>(i_) is 2<sup>_k_<sub>1</sub>+1</sup>, the smallest possible bucket index for _B<sub>Z<sub>k</sub></sub>(i_) is \(l_1=k_1+1=k\cdot log_2|Y_j|+1\). And hence, \(l_2\le l_1+2log_2log_2n_0\).
+
+By the previous discussion, a compact representation of A consists of a sub-array A\[_l_<sub>1</sub>_,l_<sub>2</sub>\], where each cell stores an integer in range \[0_,m_\], and an integer value _l_<sub>1</sub>. The total space consumption is thus bounded by \((l_2-l_1+1)\cdot\lceil log_2(m+1)\rceil+d\in O(loglogn_0\cdot logloglogn_0+d)\) bits which is bounded by _O_(1) words. □
+
+## 4.5 Handling Updates
+
+Next, we discuss how to update our HALT structure on the item set _S_. Specifically, each update on _S_ is either an insertion of a new item _x_ with weight _w(x_) or a deletion of an existing item _x_ from _S_. For simplicity, we assume that \(\frac{1}{2}n_0\le n\le 2n_0\), where _n_ is the current size of |_S_| after the update.
+
+The HALT structure on _S_ can be maintained as follows. First, observe that the lookup table in the HALT structure on _S_ does not need to be updated. Second, the three-level sampling hierarchy is basically a hierarchy of sorted lists of buckets and groups with length at most _O(d_). Each update operation (either insertion or deletion) on these sorted lists can be easily done in _O_(1) time in the Word RAM Model. The only issue to be careful about is that each update operation at the previous level in the hierarchy could trigger a _weight update_ of a next-level item, which would require two update operations to achieve: delete the item first and then insert the item again with the new weight. As the hierarchy has only three levels, therefore, there can be in total at most _O_(1) update operations to the hierarchy. Moreover, there is also only _O_(1) final-level instances would be affected by an update to _S_. Their adapters can be updated simply by updating the corresponding bucket sizes in the sub-array A\[_l_<sub>1</sub>_,l_<sub>2</sub>\]. Therefore, the overall update time is bounded by _O_(1) worst-case time.
+

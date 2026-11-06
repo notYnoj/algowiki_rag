@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Selected-entry matrix multiplication",
+      "problem family": null,
+      "bound": "\\widetilde{O}((n+m)d^{\\kappa} + d^{\\tau}\\sqrt{nmw}) \\text{ where } \\kappa = O(\\tau^{-2}) \\text{ and } d^{\\kappa} \\le min\\{n,m\\}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Given integer matrices $X\\in\\mathbb{Z}^{n\\times d}$ and $Y\\in\\mathbb{Z}^{d\\times m}$, with entries of polynomial magnitude in $n+m$, and $w\\ge 1$ distinct specified positions in $XY$, those entries can be computed deterministically in time $\\widetilde{O}((n+m)d^\\kappa+d^\\tau\\sqrt{nmw})$.",
+      "page": 1
+    },
+    {
+      "problem": "Integer 3SUM",
+      "problem family": null,
+      "bound": "$O(n^{2-\\delta_1})$ for some absolute constant $\\delta_1>0$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There are absolute constants $\\delta_1,\\delta_2>0$ such that integer 3SUM on n polynomially bounded integers has a deterministic $O(n^{2-\\delta_1})$-time algorithm, and APSP on an n-vertex directed graph with polynomially bounded integer edge weights and no negative cycle has a deterministic $O(n^{3-\\delta_2})$-time algorithm.",
+      "page": 2
+    },
+    {
+      "problem": "All-pairs shortest paths (APSP)",
+      "problem family": null,
+      "bound": "$O(n^{3-\\delta_2})$ for some absolute constant $\\delta_2>0$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There are absolute constants $\\delta_1,\\delta_2>0$ such that integer 3SUM on n polynomially bounded integers has a deterministic $O(n^{2-\\delta_1})$-time algorithm, and APSP on an n-vertex directed graph with polynomially bounded integer edge weights and no negative cycle has a deterministic $O(n^{3-\\delta_2})$-time algorithm.",
+      "page": 2
+    }
+  ],
+  "paper": "2610.15663",
+  "usage": {
+    "prompt_tokens": 10026,
+    "completion_tokens": 7887,
+    "total_tokens": 17913,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7347,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

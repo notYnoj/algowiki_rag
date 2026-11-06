@@ -1,0 +1,16 @@
+<tbc>_edge of_ \(\mu\) _whose both the endpoints are colored_ 2 _by f, and (b) there exists a family of components_ C _of G<sup>⋆</sup> such that_ \(\eta\) _contains all the edges in_ C _that do not belong to_ \(\mu\) _but are colored_ 1 _by g._
+
+In light of Lemma 5, our goal is reduced to find a family of components C of _G_<sub>1</sub> that contains the edges of \(\mu\triangle\eta\). Due to Observation 1, to obtain a matching of size \(|\mu|+t\), we can choose _t_ components of _G<sup>⋆</sup>_ which are \(\mu\)-augmenting paths (an alternating path, a path that alternates between matching and a non-matching edge, where the first and the last edge are non-matching edge). However, choosing _t_ components arbitrarily might lead to a large number of blocking edges in the matching \(\eta\). Thus, to choose the components of _G<sup>⋆</sup>_ appropriately, we move to Phase III.
+
+**Phase III:** Size-Fitting **with respect to** _g_**.** In this phase, we proceed with the function _g_ and the graph _G<sup>⋆</sup>_ obtained after Phase II (that is the one where every component satisfies the property that edges which are colored 1 form a \(\mu\)-alternating path/cycle). Next, we will reduce the instance to an instance of Two-Dimensional Knapsack (2D-KP), and after that use an algorithm for 2D-KP, described in Proposition 2, as a subroutine.
+
+**Proposition 2** \[17\] _There exists an algorithm_ A _that given an instance_ (X_,c_<sub>1</sub>_,c_<sub>2</sub>_,p_) _of_ 2D-KP_, in time_ O(_nc_<sub>1</sub>_c_<sub>2</sub>)_, outputs a solution if it is a_ Yes- _instance of_ 2D-KP_; otherwise_ A _outputs "no"._
+
+Next, we construct an instance of 2D-KP as follows. Let \(C_1,\dots,C_\ell\) be the components of the graph _G<sup>⋆</sup>_. For each \(i\in[\ell]\), we compute the number of blocking edges, _k<sub>i</sub>_, incident on the vertices in _C<sub>i</sub>_ by constructing a matching \(\eta_i\) as follows. We first add all the edges inside the component _C<sub>i</sub>_ which are not in \(\mu\), to \(\eta_i\). Further, we add all the edges in \(\mu\) which are not in _C<sub>i</sub>_ and whose at least one of the endpoint is a neighbor of a vertex in _C<sub>i</sub>_. Clearly, \(\eta_i\) is a matching in the graph _G_. We set _k<sub>i</sub>_ as the number of blocking edges with respect to \(\eta_i\). Let _q<sub>i</sub>_ denote the number of edges in _C<sub>i</sub>_, where \(i\in[\ell]\). Let \(\mu_i\subseteq\mu\) be the set edges in _C<sub>i</sub>_, where \(i\in[\ell]\). For each \(i\in[\ell]\), let \(t_i=q_i-2|\mu_i|\). Intuitively, _t<sub>i</sub>_ denote the increase in the size of the matching, if we include the \(\mu\)-alternating path/cycle in _C<sub>i</sub>_ to the solution matching \(\eta\)
+
+Let \(\mathcal{X}=\{(k_i,q_i,t_i):i\in[\ell]\}\). This gives us an instance (X_,k,q,t_) of 2D-KP. We invoke algorithm A given in Proposition 2 on the instance (X_,k,q,t_) of 2D- KP. If A returns a set _Z_, then we return "yes". Otherwise, we report _failure_ of the algorithm. It is relatively straightforward to create the solution \(\eta\) when the answer is "yes".
+
+Two-Dimensional Knapsack (2D-KP)
+Input: A set of tuples, X={(a_i,b_i,p_i)\in\mathbb{N}^3:i\in[n]\}, and non-negative integers c1,c2 and p
+Question: Does there exist a set Z [n] such that {iin Z ai c1, {iin Z bi c2, and {iin Z p p?
+

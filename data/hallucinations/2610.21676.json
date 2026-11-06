@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Disk-based ANNS end-to-end retrieval latency",
+      "problem family": "Disk-based ANNS",
+      "bound": "48\\%\\text{ on DiskANN and }25\\%\\text{ on SPANN}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "best per-document-read baseline",
+      "quote": "Across three multi-hop QA workloads with _K_ from 10 to 1600, ConStore reduces end-to-end retrieval latency over the best per-document-read baseline by up to 48% on DiskANN and 25% on SPANN.",
+      "page": 1
+    },
+    {
+      "problem": "Disk-based ANNS end-to-end retrieval latency (large-scale SIFT)",
+      "problem family": "Disk-based ANNS",
+      "bound": "42\\%\\text{ on SIFT100M and }40\\%\\text{ on SIFT1B for DiskANN; }30\\text{--}43\\%\\text{ for SPANN at }K=1600",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "Sequential fetch after search",
+      "quote": "At recall targets 0.90/0.95, DiskANN’s latency reductions reach 42% on SIFT100M and 40% on SIFT1B; SPANN saves 30-43% at _K_=1600 across the two scales.",
+      "page": 11
+    },
+    {
+      "problem": "Content fetch latency",
+      "problem family": "Disk-based ANNS",
+      "bound": "45\\text{--}47\\%\\text{ over Random and }19\\text{--}22\\%\\text{ over K-Means}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "Random and K-Means layouts",
+      "quote": "With both optimizations, RPAG lowers fetch latency by 45-47% over Random and 19-22% over K-Means using the same optimized fetch path.",
+      "page": 11
+    },
+    {
+      "problem": "Document-to-segment mapping metadata",
+      "problem family": "Disk-based ANNS",
+      "bound": "8\\,\\mathrm{B}\\text{ per document}",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The runtime representation is a packed pair of 32-bit integers, so the map costs 8 B per document, roughly one percent of the embedding-side ANN index memory in our workloads.",
+      "page": 5
+    },
+    {
+      "problem": "Device read bandwidth",
+      "problem family": "Disk-based ANNS",
+      "bound": "23.4\\%\\text{ on DiskANN and }19.7\\%\\text{ on SPANN}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "baseline without ConStore",
+      "quote": "At those same operating points, ConStore lowers device read bandwidth by 23.4% on DiskANN and 19.7% on SPANN.",
+      "page": 11
+    },
+    {
+      "problem": "Sustainable offered QPS",
+      "problem family": "Disk-based ANNS",
+      "bound": "20\\%\\text{ on DiskANN and }12.5\\%\\text{ on SPANN}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "Post-Parallel-Fetch / baselines",
+      "quote": "ConStore increases sustainable offered QPS by 20% on DiskANN and 12.5% on SPANN.",
+      "page": 10
+    },
+    {
+      "problem": "P99 latency",
+      "problem family": "Disk-based ANNS",
+      "bound": "1.46\\times\\text{ and }2.90\\times\\text{ lower}",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": "baselines at highest sustainable rates",
+      "quote": "At the baselines’ highest sustainable rates , P99 latency is lower by factors of 1.46\\(\\times\\) and 2.90\\(\\times\\).",
+      "page": 10
+    },
+    {
+      "problem": "Layout rewrite volume",
+      "problem family": "Disk-based ANNS",
+      "bound": "2.5\\text{--}12\\%\\text{ of the corpus vs. }15\\text{--}26\\%\\text{ for periodic full rebuilds}",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": "periodic full rebuilds",
+      "quote": "Across the seven scenarios in Figure 16(b), WASR rewrites 2.5-12% of the corpus, compared with 15-26% for periodic full rebuilds.",
+      "page": 11
+    }
+  ],
+  "paper": "2610.21676",
+  "usage": {
+    "prompt_tokens": 14469,
+    "completion_tokens": 14380,
+    "total_tokens": 28849,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13256,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

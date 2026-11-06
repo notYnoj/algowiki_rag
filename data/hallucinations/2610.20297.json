@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "(min,+)-Matrix Multiplication",
+      "problem family": null,
+      "bound": "\\tilde{O}(N^{2.9963432})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O(N^{2.9995})$",
+      "quote": "There is a Las Vegas algorithm computing the (min,+)-product of two \\(N\\times N\\) matrices A,B with polynomially bounded integer entries in expected time \\(\\tilde{O}\\left(N^{2.9963432}\\right)\\).",
+      "page": 2
+    },
+    {
+      "problem": "(min,+)-Matrix Multiplication",
+      "problem family": null,
+      "bound": "\\tilde{O}(N^{2.9963432})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(N^{2.9995})$",
+      "quote": "There is a deterministic algorithm computing the (min,+)-product of two \\(N\\times N\\) matrices A,B with polynomially bounded integer entries in time \\(\\tilde{O}\\left(N^{2.9963432}\\right)\\).",
+      "page": 3
+    }
+  ],
+  "paper": "2610.20297",
+  "usage": {
+    "prompt_tokens": 17483,
+    "completion_tokens": 4206,
+    "total_tokens": 21689,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 17344
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3913,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

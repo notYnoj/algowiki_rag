@@ -1,0 +1,12 @@
+_Keywords:_ Small blocking set, Critical independent set, Projection theorem, Perfect matching, Strongly connected component
+
+## 1. Introduction
+
+Connections in communication, transportation, and social contact networks are inherently temporal, and the order of interactions affects reachability and propagation. Dynamic and temporal graphs are therefore widely used to model and analyze such systems [1, 2]. For example, Pan and Saramäki used temporal networks to study paths and centrality in human communication and air transportation, revealing differences between static distances and temporal reachability [3]. Salathé et al. recorded interpersonal contacts using wireless sensors to construct a high-resolution contact network for studying infectious disease transmission [4].
+
+Research on computation and communication under dynamic topology has addressed fundamental problems such as information dissemination, distributed computation, and network exploration. Kuhn, Lynch, and Oshman studied distributed computation in continuously changing networks and analyzed how connectivity and stability affect computational efficiency [5]. In temporal graph exploration, a mobile agent must visit all vertices using edges available at the corresponding time steps. Michail and Spirakis investigated algorithms and complexity for this problem [6]. Erlebach, Hoffmann, and Kammer further studied exploration time bounds, hardness of approximation, and exploration algorithms for special classes of underlying graphs [7], while Erlebach and Spooner obtained improved exploration time bounds for degree-bounded temporal graphs [8].
+
+Restless exploration additionally requires the agent to move at every time step, rather than wait for an edge to become available. For infinite periodic temporal graphs, Bellitto, Conchon-Kerjan, and Escoffier showed that the problem is solvable in polynomial time for period two and is NP-hard for every fixed period of at least three [9]. These results demonstrate that the combination of temporal variation and restrictions on waiting gives exploration a structure and complexity distinct from static graph traversal.
+
+Ayoubi and Narayanan studied restless exploration and token dissemination in vertex-permuted temporal graphs [10]. Every snapshot in such a graph is isomorphic to the same base graph, but the correspondence between vertices may change over time. They introduced blocking sets and proved<tbc>
+

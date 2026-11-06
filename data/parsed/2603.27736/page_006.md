@@ -1,0 +1,24 @@
+## Step 1: Doubling Reduction.
+
+We start with the first and technically more involved step. Specifically, we establish that APSP on general graphs with polynomially bounded weights can be reduced to graphs with at most _n_ distinct weights (i.e., much fewer than the trivial upper bound of _n_<sup>2</sup>). In addition, we can enforce that there are only few distinct _sums_ of two weights. To formalize this requirement we use the following notation: For an integer set _X_ we write \(X+X=\{x+y:x,y\in X\}\) to denote its so-called _sumset_. In the additive combinatorics literature the ratio |_X+X|/|X_| is typically called the _doubling_ of _X_ (hence the term "doubling reduction"). Formally we prove:
+
+**Theorem 1.10** (Uniform Low-Doubling APSP)**.** _Let_ \(\kappa>0\) _be a constant. APSP in graphs with integer weights_ \(X\subseteq\mathbb{Z}\) _where_ \(|X|\le n\) _and_ \(|X+X|\le n^\kappa|X|\) _cannot be solved in time_ \(O(n^{3-\epsilon})\) _(for any constant_ \(\epsilon>0\)_), unless the APSP Hypothesis fails._
+
+Theorem 1.10 is already a strong and arguably surprising result. Even ignoring the extra constraint on the doubling of _X_, it demonstrates that the worst-case APSP instances have only _n_ distinct weights (rather than the naive upper bound of _n_<sup>2</sup>)! An appropriate technical generalization of Theorem 1.10 is the key tool for various interesting fine-grained lower bounds (that we will survey soon). We are optimistic that it will be similarly helpful in the design of future APSP-based lower bounds.
+
+## Step 2: Sum-Order-Preserving Hashing.
+
+But how is Theorem 1.10 useful for the desired universe reduction? To understand this, let us take a step back and forget about Theorem 1.10 for a minute, to review a naive _hashing-based_ approach for the universe reduction. At first thought hashing appears to be a reasonable idea--after all, for many problems (such as 3SUM) we can analogously obtain weight reductions using additive hash functions. But as we will see, naively this approach is bound to fail.
+
+In the language of Hypotheses 1.4 and 1.5 our goal is to reduce the computation of a min-plus product of two arbitrary \(n\times n\) matrices _A,B_ to the computation of a min-plus product with entries bounded by _n_. Let \(X\subseteq\mathbb{Z}\) be the set of entries that appear in _A_ and _B_. Suppose there was a hash function \(h:X\rightarrow\{0,\dots,n\}\) satisfying the property that for all \(x_1,x_2,y_1,y_2\in X\):
+
+We call such a function _h sum-order-preserving_. We could then define matrices \(A'=h(A)\) and \(B'=h(B)\) (where we apply _h_ entry-wise) which, as desired, have entries bounded by _n_, and we could read off _A∗B_ from \(A'*B'\) with the aid of some standard tricks.<sup>6</sup>
+
+Unfortunately, clearly such a hash function cannot exist in general! There are up to |_X_|<sup>2</sup> distinct sums of the form _x+y_, which in the worst case is up to _n_<sup>4</sup>, but only _O(n_) possible values for _h(x_)+_h(y_). By the pigeonhole principle there is necessarily a collision _h(x_<sub>1</sub>)+_h(x_<sub>2</sub>)=_h(y_<sub>1</sub>)+_h(y_<sub>2</sub>) for some _x_<sub>1</sub>+_x_<sub>2</sub>_\<y_<sub>1</sub>+_y_<sub>2</sub>. So it seems that the hashing-based idea is fundamentally flawed.
+
+This is where Theorem 1.10 comes into play. It allows us to assume that the sumset _X+X_ does not have size up to _n_<sup>4</sup> as the trivial bound would suggest, but rather only roughly _linear_ in _n_. For this reason it would be sufficient to have a sum-order-preserving hash function \(h:X\rightarrow\{0,\dots,|X+X|\}\). The previous pigeonhole argument does _not_ rule out such a function. So could it possibly be the case that such a hash function always exists? At least in the relevant special case when _X_ has small doubling, i.e., when |_X+X_| is small?
+
+The surprising answer is: yes, almost! By combining two results from additive combinatorics--the first by Amirkhanyan, Bush, and Croot \[11\] on so-called order-preserving Freiman isomorphisms, and second, the quasi-polynomial bounds for the Freiman-Ruzsa theorem due to Sanders \[87\]--one obtains the following theorem stating that for any small-doubling set _X_ there exists a reasonably large subset \(Y\subseteq X\) that can be hashed by a sum-order-preserving hash function. (See Appendix A.1 for how to derive Theorem 1.11 from \[11, 87\].)
+
+<sup>6</sup>Specifically, call _k_ a _witness_ of (_i,j_) in _A∗B_ if (_A∗B_)\[_i,j_\]=_A_\[_i,k_\]+_B_\[_k,j_\]. Then the sum-order-preserving property implies that any witness _k_ of (_i,j_) in \(A'*B'\) is also a witness of (_i,j_) in _A∗B_. Moreover, by a standard trick we can turn any algorithm to compute the min-plus product of two matrices into an algorithm that also reports a witness for each entry (_i,j_); see Lemma 5.1.
+

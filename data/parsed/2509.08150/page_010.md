@@ -1,0 +1,14 @@
+by \(\text{LOGP}=logp_\phi(A|S,Q)=\sum_tlogp_\phi(A_t|A_{1:t-1},S,Q)\), i.e., the sum of logits over the tokens in _A_. This logits are obtained by feeding \(\phi\) a prompt concatenating _Q,S,A_ in order. If _S≈S_<sup>∗</sup>, the likelihood should be higher. We also measured the Jaccard distance between _S_ and _S_<sup>∗</sup>.
+
+We compared VGSM with 2 baselines. **Embedding** baseline uses state-of-the-art Qwen3-Embedding- 8B for top-_k_ documents retrieval with cosine distance. **Verbalized KwickSelect** uses a symmetrized parallel KwickSelect algorithm, a top-_k_ selection variant of kwicksort (when the right branch _R_ has |_R|\>k_ elements, recurse into it; otherwise, recurse into the left branch _L_ and select top-|_L_|-_k_-1 elements). We evaluate it in order to see the impact of ignoring the submodularity. In VGSM and KwickSelect, we tested \(\psi\in\{\text{Qwen3-4B, Qwen3-32B}\}\) with \(\phi=\text{Qwen3-32B}\). To reduce the runtime of the experiment, VGSM and Verbalized KwickSelect pre-selects 2_k_ or 4_k_ documents using the embedding baseline before running the respective algorithm.
+
+Fig. 5 shows that _k_ documents retrieved by VGSM from 2_k_ or 4_k_ documents have better LOGP than those simply selected by the embedding. KwickSelect has worse LOGP with similar runtime, thus the implicit objective encoded by the query was indeed approximately submodular. Thinking was not cost-effective; VGSM already took care of the sequential algorithmic thoughts, thus there is significantly less need for thinking in each document selection step.
+
+## 7 Conclusion, Discussion, Future Work
+
+We demonstrated the feasibility of _Verbalized Algorithms_ (VAs), a general disciplined paradigm for performing algorithmic reasoning with LLMs. It leverages the strong prior and the established theoretical results of classical discrete algorithms to significantly improve the accuracy even with a small model without costly training, and improve the runtime of such reasoning. While this paper explored only a limited number of examples due to space, our experiments demonstrated that overall, spurious free-form self-thought via think-tags could harm the accuracy, and theoretically grounded algorithmic reasoning targeted to specific tasks tends to be superior. We would like to remind the community that algorithms and computers were born out of humanity’s particular weakness in long sequential reasoning, and that algorithmic analysis is a tool developed to understand it. These tools are still useful even on opaque LLM-based reasoning, and throwing them out is not an option.
+
+Future work includes extending VA to more complex, potentially combinatorial algorithms, including Pareto front computation for diverse / non-dominated document retrieval, DPLL/CDCL, local search, best-first search for combinatorial reasoning / optimization / planning.
+
+## References
+

@@ -1,0 +1,20 @@
+## 23:2 Improved Approximation for Longest Common Subsequence over Small Alphabets
+
+number of insertions and deletions (in fact, both versions of edit distance are the same up to a factor of 2, so with respect to constant factor approximation algorithms they are equivalent). Both the LCS and the edit distance of two length _n_ strings can be computed in _O(n_<sup>2</sup>) time using a classic dynamic programming approach. The fastest algorithm for both problems is the _O(n_<sup>2</sup>/(log_n_)<sup>2</sup>) time algorithm of Masek and Paterson [20].
+
+Hardness results from fine-grained complexity have shown that truly subquadratic time algorithms (those running in time \(O(n^{2-\delta})\) for some constant \(\delta>0\)) for LCS and edit distance cannot exist under the Strong Exponential Time Hypothesis [2, 9, 14] and other even more believable hypotheses [3, 16]. Consequently, much of the recent interest around LCS and edit distance has concerned approximation algorithms for the problems. A long chain of progress on edit distance approximation (e.g. [19, 11, 19, 10, 8, 6, 12]) has culminated in the breakthrough constant-factor approximation algorithm of [15] running in truly subquadratic time. Several improvements followed this breakthrough including [5, 18, 13], with the most recent result being a constant factor approximation algorithm running in near linear time [7].
+
+In contrast, much less is known about how well LCS can be approximated in truly subquadratic time. For inputs over non-constant size alphabets, some fine-grained hardness results [1, 4, 16] and nontrivial super-constant approximations [17] are known. When the input strings come from a fixed alphabet of constant size _k_, there is a trivial 1_/k_-approximation algorithm that returns in linear time the longest common _unary_ subsequence of two inputs. Despite the simplicity of this algorithm, until recently no better constant-factor approximation algorithm was known for _any_ constant size alphabet. There are also no existing hardness results that rule out better approximation algorithms.
+
+Recently, for the case of _binary_ strings of _equal_ length, Rubinstein and Song [21] were able to improve upon the simple 1/2-approximation algorithm described above, obtaining for some constants \(\epsilon,\delta>0\) an \(O(n^{2-\delta})\) time algorithm that returns a \((1/2+\epsilon)\)-approximation. It is still open, however, whether one can obtain such an algorithm for binary strings of unequal length, and whether one can extend the result to achieve a truly subquadratic time algorithm achieving a better than _k_-approximation for strings over an alphabet of size _k_, for every constant _k_.
+
+## Our results.
+
+In this paper we present two results. The first result shows that if one can obtain a truly subquadratic time, better than 2-approximation algorithm for the LCS of binary strings of possibly unequal lengths, then one can use this algorithm to obtain a truly subquadratic time, better than _k_-approximation algorithm for the LCS of strings over a _k_-ary alphabet, for any constant _k_.
+
+\(\blacktriangleright\) **Theorem 1.** _For any fixed integer_ \(k\ge 2\) _there is an O(n_) _time algorithm that given an instance of LCS for strings of length at most n over an alphabet of size k, reduces it to O(k_<sup>2</sup>) _instances of LCS over_ binary _strings of length at most n, so that_ \((1/2+\epsilon)\)_-approximate solutions (for_ \(\epsilon>0\)_) for these LCS instances can be translated in O(n_) _time into a_ \((1/k+\epsilon_k)\) _approximation of the k-ary alphabet LCS instance, where_ \(\epsilon_k>0\) _is a constant only depending on_ \(\epsilon\) _and k._
+
+In other words, in order to beat the longstanding 1_/k_-approximation algorithm for LCS, one merely needs to obtain a better than 1/2 approximation for the binary case, i.e. to extend the Rubinstein and Song result to strings of possibly unequal length.
+
+Our second result generalizes the Rubinstein-Song result by proving that one can beat the simple 1_/k_-approximation algorithm for every constant _k_, as long as the input strings
+

@@ -1,0 +1,16 @@
+<tbc>acters in a 16 bit integer, divided into 8 groups of 2 bits. For every 16 bit integer _i_ we store in a table the number of non-zero groups of bits in _i_. To compute the Hamming distance between two _l_-mers we first perform an exclusive or of their compressed representations. Equal characters produce bits of 0, different characters produce non-zero bits. Therefore, one table lookup provides the Hamming distance for 8 characters. One compressed _l_-mer requires \(l*\lceil log|\Sigma|\rceil\) bits of storage. However, we only need the first 16 bits of this representation because the next 16 bits are the same as the first 16 bits of the _l_-mer 8 positions to the right of the current one. Therefore, the table of compressed _l_-mers only requires _O(n(m-l_+1)) words of memory.
+
+**Preprocess distances for pairs of** _l_**-mers.** The filtering step tests many times if two _l_-mers have a distance of no more than 2_d_. Thus, for every pair of _l_-mers we compute this bit of information in advance.
+
+**Cache locality.** We can update _R_ in an efficient manner as follows. Every row in the updated matrix \(R'\) is a subset of the corresponding row in the current matrix _R_ and thus we can store it in the same memory locations as _R_ by rearranging the row elements and keeping track how many of them belong to \(R'\). This both reduces the memory requirement and improves cache locality: the surviving _l_-mers in one filtering step will soon be accessed in the next one.
+
+## 2.2 Memory and Runtime
+
+Since we store all matrices _R_ in the space of a single matrix they only require _O(n(m-l_+1)) words of memory to which we add _O(n_<sup>2</sup>) words to store row sizes. The bits of information for compatible _l_-mer pairs take _O_((_n(m-l_+1))<sup>2</sup>_/w_) words, where _w_ is the number of bits in a machine word. The table of compressed _l_-mers takes _O(n(m-l_+1)) words. Therefore, the total memory used by the algorithm is _O(n(n+m-l_+1)+(_n(m-l_+1))<sup>2</sup>_/w_).
+
+The more time we spend in the sample driven part, the less time we have to spend in the pattern driven part and vice-versa. Ideally we want to choose the threshold where we switch between the two parts such that their runtimes are almost equal. The optimal threshold can be determined empirically by running the algorithm on a small subset of the tuples. In practice, PMS8 heuristically estimates the threshold _t_ such that it increases with _d_ and \(|\Sigma|\) to avoid generating very large neighborhoods and it decreases with _m_ to avoid spending too much time on filtering. A strong closed form runtime for the algorithm is difficult to derive. A more in depth analysis can be found in appendix D. All the results reported in this paper have been obtained using the default threshold estimation.
+
+## 2.3 Parallel implementation
+
+To parallelize PMS8 we create _m-l_+1 sub problems, one for each _l_-mer in the first string. The first string in each sub problem is an _l_-mer of the original first string and the rest of the strings are the same as in the original input. The processor with rank 0 is a scheduler and the others are workers. The scheduler spawns a separate worker thread to avoid using one processor just for scheduling.
+

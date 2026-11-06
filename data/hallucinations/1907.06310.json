@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Splay tree transformation",
+      "problem family": "Binary search tree algorithms",
+      "bound": "208|T|",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Since k<4|T|, the total cost of this execution is at most 208|T|.",
+      "page": 8
+    },
+    {
+      "problem": "Crossing bound change",
+      "problem family": "Binary search tree algorithms",
+      "bound": "\\Lambda(X,T)-\\Lambda(X,\\text{move-to-root}(T,y))\\le 4\\ell_T(y)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\Lambda(X,T)-\\Lambda(X,\\text{move-to-root}(T,y))\\le 4\\ell_T(y).",
+      "page": 19
+    },
+    {
+      "problem": "Crossing bound approximate monotonicity",
+      "problem family": "Binary search tree algorithms",
+      "bound": "subsequence overhead at most 4",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "which suffices to establish that the crossing bound has subsequence overhead at most four.",
+      "page": 19
+    },
+    {
+      "problem": "Crossing bound vs optimal cost",
+      "problem family": "Binary search tree algorithms",
+      "bound": "\\Lambda(X,T)\\le 44\\mathrm{OPT}(X,T)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\\Lambda(X,T)\\le 44\\mathrm{OPT}(X,T).",
+      "page": 25
+    },
+    {
+      "problem": "Equivalence of execution cost models",
+      "problem family": "Binary search tree algorithms",
+      "bound": "1/2\\le\\mathrm{OPT}(X,T)/\\mathrm{OPT}_\\mathrm{rot}(X,T)\\le 2",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "1/2\\le\\mathrm{OPT}(X,T)/\\mathrm{OPT}_\\mathrm{rot}(X,T)\\le 2.",
+      "page": 22
+    }
+  ],
+  "paper": "1907.06310",
+  "usage": {
+    "prompt_tokens": 34999,
+    "completion_tokens": 7842,
+    "total_tokens": 42841,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7343,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

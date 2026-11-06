@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Chvatal-Sankoff constant \\gamma_{2,2}",
+      "problem family": "Longest Common Subsequence",
+      "bound": "\\gamma_{2,2} \\ge 0.792665992",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "0.788071",
+      "quote": "Building off previous algorithms for lower-bounding the constants, we implement runtime optimizations, parallelization, and an efficient memory reading and writing scheme to obtain an improved lower bound of 0.792665992 for \\(\\sigma=2,d=2\\).",
+      "page": 1
+    }
+  ],
+  "paper": "2407.10925",
+  "usage": {
+    "prompt_tokens": 13563,
+    "completion_tokens": 9281,
+    "total_tokens": 22844,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9113,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

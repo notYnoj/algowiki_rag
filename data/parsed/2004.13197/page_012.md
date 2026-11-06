@@ -1,0 +1,14 @@
+• While the above three cases are tight, the main issue is in getting _an upper bound on how much a small block I/O can achieve_. The main memory can hold _p_=(_M-B)/w_ large elements, and an incoming small block has _B_ small elements. Thus naively the maximum fan-out can be upper bounded by _B<sup>p</sup>_, which is not tight. Our main aim is to get a better upper bound on this fan-out.
+
+Both our upper and lower bounds are a minimum of two terms, where one dominates the other depending on how large the large elements are (whether they can be brought into memory multiple times or just once).
+
+**2. Requiring output-sensitive lower bound limits adversarial arguments:** Lower bounds on the unit-sized batched predecessor problem in external memory were recently obtained in \[8\]. The adversary strategy in the comparison model was quite simple since the adversary had the freedom to place the elements being searched for at any place in the sorted set. By maintaining the invariant that all the elements being searched for currently in main memory must have disjoint search spaces, it was able to guarantee a fan-out of at most 2_<sup>B</sup>_, and in some cases, a fan-out of at most _B_.
+
+In our setting, a more complicated adversarial analysis is required that forms exactly _k_ stripes at the end. Using this, we can argue a fan-out of at most 2_<sup>B</sup>_ on _most_ small block I/Os.
+
+**3. Have to take preprocessing into account:** PLE is not a traditional searching problem, but a subproblem of sorting. We cannot be concerned only with the query time, but also the preprocessing time: what is the minimum amount of preprocessing needed to achieve a given query time? Even for the classical single-element-search (for which the well known _B_- tree provides optimal query time), this is, to the best of our knowledge, not known. We have the following observation which might be surprising at a first glance.
+
+**Observation 7.** _Given a sorted array of N keys on disk, there exists an algorithm that uses extra space of O(N_<sup>(1-1/log_B_)</sup>_/B_)(=_o(N/B_)) _blocks, and answers single-element search query in (optimal) O_(log_<sub>B</sub>N_) _I/Os. If the query time is required to be at most c_log_<sub>B</sub>N, then any algorithm needs to preprocess_ \(\Omega(N^{(1-(2c/logB))}/B)\) _extra blocks._
+
+_Proof._ We first prove the lower bound. We can assume that the element _x_ being searched for is always inside the memory at all times. The _N_ keys on disk are stored in _N/B_ blocks; call the set of these blocks B. Let _S_ denote the current _search space_ of _x_: this is the set of locations in _N_ that _x_ can lie in, given all the information achieved by the algorithm until now. Any algorithm that solves this problem is described by a decision tree which has<tbc>
+

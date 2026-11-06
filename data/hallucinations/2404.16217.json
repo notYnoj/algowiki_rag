@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "(\\lambda,k)-Fault-Tolerant Bounded-Flow-Preserver",
+      "problem family": null,
+      "bound": "\\lambda 2^k n \\text{ edges}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "2^{k+\\lambda} n",
+      "quote": "There exists an algorithm that for any directed graph G on n vertices and m edges, and any integers \\lambda,k\\ge 1, computes in O(\\lambda 2^kmn) time a (\\lambda,k)-FT-BFP for G with at most \\lambda 2^kn edges.",
+      "page": 2
+    },
+    {
+      "problem": "(\\lambda,k)-Fault-Tolerant Bounded-Flow-Preserver",
+      "problem family": null,
+      "bound": "\\Omega(\\min\\{2^k \\lambda n, n^2\\}) \\text{ edges}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For every \\lambda,k,n\\ge 1, there exists a construction of an n-vertex directed graph whose optimal (\\lambda,k)-FT-BFP contains \\Omega(\\min\\{2^k\\lambda n,n^2\\}) edges.",
+      "page": 2
+    },
+    {
+      "problem": "Approximate (\\lambda,k)-Fault-Tolerant Bounded-Flow-Preserver",
+      "problem family": null,
+      "bound": "O(\\log(\\lambda^{-1} n)) \\text{ approximation is NP-hard}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For any \\lambda,k,n\\ge 1 satisfying k=\\Omega(log(\\lambda^{-1}n)), the problem of computing an O(log(\\lambda^{-1}n)) approximate (\\lambda,k)-FT-BFP for n vertex digraphs is NP-hard.",
+      "page": 2
+    },
+    {
+      "problem": "All-pairs fault-tolerant \\lambda-reachability oracle",
+      "problem family": null,
+      "bound": "O(n^2) \\text{ size}, O(n^{1+o(1)}) \\text{ query time}",
+      "bound_type": "space upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Given any directed graph G=(V,E) on n vertices and any positive constants \\lambda,k\\ge 1, we can preprocess G in polynomial time to build an O(n^2) size data structure that, given any query vertex-pair (x,y) and any set F of k edges, reports the (x,y)\\lambda-reachability in G\\\\F in O(n^{1+o(1)}) time.",
+      "page": 2
+    }
+  ],
+  "paper": "2404.16217",
+  "usage": {
+    "prompt_tokens": 16059,
+    "completion_tokens": 8963,
+    "total_tokens": 25022,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8351,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

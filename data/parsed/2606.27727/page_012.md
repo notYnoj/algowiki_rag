@@ -1,0 +1,20 @@
+## 8:12 Beating Trivial Time for Tricky Triangle Tasks
+
+**Proof of Theorem 21.** The entries of each matrix are in \([O(n^{1-\delta})]\), and thus can each be written down in _w_ bits. Our goal is to pack these matrices into a smaller space, which will improve query time. We will create new matrices \(A'\) and \(B'\) in the following way. We define \(h_r(x):=\langle r,x\rangle\), where the inner product is taken mod 2. For each \(k\in[n^\delta]\), we draw \(\ell-2\) bitstrings \(r_1,\dots,r_{\ell-2}\) uniformly at random from {0,1}_<sup>w</sup>_, for \(\ell\) to be set later. For every non-null element _x_ in row _k_ of _A_ (or column _k_ of _B_), replace _x_ with the length-\(\ell\) bitstring \(h_{r_1}(x)\cdots h_{r_\ell}(x)00\) in the corresponding location of either \(A'\) or \(B'\). If _x_ is \(\perp\) and an entry of _A_, put 0_..._001 in \(A'\). If _x_ is \(\perp\) and in _B_, put 0_..._010 in \(B'\). This way, the hash values of null entries cannot equal one another or anything else. Note that if \(x\neq y\), we have that Pr_<sub>r</sub>[h<sub>r</sub>(x_)=_h<sub>r</sub>(y_)]=1/2. Thus, over all \(\ell-2\) inner products, the probability that _x_ and _y_ hash to the same value is \(1/2^{\ell-2}\).
+
+Each row of \(A'\) (and column of \(B'\)) has \(n^\delta\) entries, each of which is a length-\(\ell\) bitstring. Then we require \(n^\delta\ell/w\) words to store each one. Our queries are of the form (_i,j_), so we can think of them as computing equality product on the \(n^\delta\ell/w\) registers associated with the _i_th row of \(A'\) and the _j_th column of \(B'\).
+
+We set \(\ell=3logw\), so that the probability that two distinct values hash to the same bitstring (a false positive) is 4_/w_<sup>3</sup>. To achieve the desired runtime, we need to answer each query in \(n^\delta\ell/w\) time, which is precisely the number of pairs of words we are operating on. For each pair of words that make up the relevant row/column pair, XOR them. Note that any matching entries become the all-zeroes entry, and we can create an indicator mask for them using Claim 16. Then, we use Claim 18 to extract the index of the most significant set bit. This index can be translated to a value of \(k\in[n^\delta]\) provided we keep track of which registers we are checking, and then we can look up the original entries _A[i,k_] and _B[k,j_] to verify. If it turns out that this value is a false positive, we can set this bit to zero and then rerun the algorithm to find the new most significant set bit, which corresponds to another witness.
+
+However, we would like to keep our runtime per query at \(n^\delta logw/w\). Since identifying and looking up a false positive, we can check at most \(O(n^\delta logw)/w\) of them per query. Fixing a particular query, let _P_ be the random variable corresponding to the number of false positives in the associated compressed equality inner product calculation. By construction, we have \(\mathbb{E}[P]=4n^\delta/w^3\). By Markov’s inequality,
+
+\(Pr[P\ge 100n^\delta logw/w]\le\frac{1}{25w^2\cdot logw}\le\frac{1}{25}.\)
+
+We can keep a counter for the number of false positives we process per query, and if we exceed \(100n^\delta logw/w\), we will rerun the query in a subsequent round of the algorithm. The time per edge query is \(O(n^\delta logw/w)\), and we will run the algorithm on \(n^{1+\delta}\) edges in the first round, \(n^{1+\delta}/25\) in the second, and so on until all queries have definitive answers. Thus, the total number of edge queries required is bounded by
+
+\(n^{1+\delta}\cdot\sum_{i=0}^\infty\left(\frac{1}{25}\right)^i\le\frac{n^{1+\delta}}{1-\frac{1}{25}}=O(n^{1+\delta}).\)
+
+Thus, the expected runtime is \(O(n^{1+2\delta} logw/w)\). \(\blacktriangleleft\)
+
+While this algorithm works well for triangle _detection_, the color coding reduction preserves every triangle with constant probability. Thus, if we tried to use this approach to solve All- Edges Sparse Triangle, we would answer each edge query correctly with constant probability. However, we would like the following stronger correctness guarantee: the entire \(O(n^{1+\delta})\)-bit
+

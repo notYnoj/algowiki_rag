@@ -1,0 +1,14 @@
+<tbc>_where the terms on the right are entries of C<sub>M,n</sub> and hence admit exact finite-sample covariance formulas. Equation_ (E.4) _is_ not _an exact covariance identity for the ratios._
+
+_Proof._ The appended marginal L-moments are fixed-order U-statistics, so the multivariate Hoeffding central limit theorem applies (Hoeffding, 1948; Serfling, 1980). Their population L-scales are positive; applying the delta method to _g_ proves (E.2). The estimator \(\widehat{\Omega}_{M,n}\) is consistent by Corollary 4.5, and \(\widehat{J}_n\rightarrow_pJ\); continuous mapping yields (E.3). The derivative of _a/b_ is _b_<sup>-1</sup>(d_a-r_d_b_), and expanding the covariance of the resulting linear combinations gives (E.4).
+
+_Remark_ E.2 (Scope of the ratio approximation). The ratio estimators are generally not exactly unbiased, even though their numerator and denominator moment estimators are. Likewise, inserting an exactly unbiased estimate of _C<sub>M,n</sub>_ into the linearized covariance formula does not give an exactly unbiased estimate of the covariance of the nonlinear ratios. First-order linearization is sufficient for the limiting covariance in (E.2). Higher-order corrections involve the third and fourth moments of the moment estimators and additional remainder control, and are not pursued here. Appendix E.1 shows that the linearization can overstate the variance of \(\widehat{\tau}_3\) noticeably under heavy-tailed margins.
+
+### E.1 Accuracy of first-order ratio approximations
+
+With the notation of Section 6 and the three designs of Section 6.3, we also examined the first-order ratio approximation of Corollary E.1. For each ratio \(\widehat{\tau}\) in (E.1), we computed two variances. The Taylor variance is the corresponding diagonal entry of _JC<sub>n</sub>J_<sup>T</sup>, the first-order approximation of Corollary E.1 evaluated with the reference covariance _C<sub>n</sub>_ and the Jacobian _J_ at the population moments. The Monte Carlo variance is the sample variance of \(\widehat{\tau}\) over the 10<sup>6</sup> reference replications, which serves as the true finite-sample variance.  5 reports the ratio of the Taylor variance to the Monte Carlo variance, averaged over the two directions, which gave nearly identical values; a value above one means that the Taylor approximation overstates the variance.
+
+The Taylor variance is within 8% of the Monte Carlo variance for \(\tau_2\) in all designs and for \(\tau_3\) in the independent and Gaussian designs, and the discrepancy decreases with _n_. For \(\tau_3\) under heavy-tailed GEV margins, however, it overstates the variance by 29%, 23%, and 16% at _n_=20, 30, and 50. This agrees with Remark E.2: for small samples and heavy tails, higher-order corrections may be needed for ratio inference.
+
+## References
+

@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Flip-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "2^{O(k \\log k)}(n+m) \\text{ for } k=\\mathrm{vc}(G)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let k=vc(G). In 2^{O(k log k)}(n+m) time, one can compute the minimum number of flips needed to reach a proper coloring, or determine that no proper q-coloring exists. In particular, Flip-CD is fixed-parameter tractable parameterized by vc(G).",
+      "page": 6
+    },
+    {
+      "problem": "Flip-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "2^{O(k^2)} n^3 \\text{ for } k=\\mathrm{dtc}(G)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let k=dtc(G). In 2^{O(k^2)} n^3 time, one can compute the minimum number of flips needed to reach a proper coloring, or determine that no proper q-coloring exists.",
+      "page": 7
+    },
+    {
+      "problem": "Swap-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "\\text{FPT parameterized by } \\mathrm{vc}(G)+q",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Swap-CD is fixed-parameter tractable parameterized by vc(G)+q.",
+      "page": 8
+    },
+    {
+      "problem": "Flip-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "\\text{W[1]-hard parameterized by } \\mathrm{td}(G)+\\mathrm{fvs}(G)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Flip-CD is W[1]-hard parameterized by td(G)+fvs(G).",
+      "page": 10
+    },
+    {
+      "problem": "Swap-CD and Slide-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "\\text{W[1]-hard parameterized by } q+\\mathrm{bw}(G) \\text{ and by } q+\\mathrm{ddp}(G)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Each of Swap-CD and Slide-CD is W[1]-hard parameterized by q+bw(G) and by q+ddp(G). For the parameter q+ddp(G), hardness holds even on graphs with a dominating vertex, and hence on graphs of diameter at most two.",
+      "page": 10
+    },
+    {
+      "problem": "Flip-CD, Swap-CD, and Slide-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "\\text{NP-complete on connected graphs with } q=4 \\text{ and } \\mathrm{diam}(G)=2; \\text{ para-NP-complete parameterized by } q+\\mathrm{diam}(G)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For each of flipping, swapping, and sliding, Coloring Discovery is NP-complete on connected graphs of diameter exactly two, even with exactly four available colors. Consequently, on connected input graphs, each variant is para-NP-complete parameterized by q+diam(G), and also by q together with either radius or domination number.",
+      "page": 11
+    },
+    {
+      "problem": "Flip-CD, Swap-CD, and Slide-CD",
+      "problem family": "Coloring Discovery",
+      "bound": "\\text{no universal } \\theta \\text{ such that } O(\\theta^{\\mathrm{vc}(G)} n^{O(1)}) \\text{ for all fixed } q, \\text{ unless ETH fails}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For each variant X\\in\\{\\text{Flip-CD},\\text{Swap-CD},\\text{Slide-CD}\\}, there is no universal constant \\theta such that, for every fixed q, the restriction of X to q colors can be solved in O(\\theta^{\\mathrm{vc}(G)}n^{O(1)}) time, unless ETH fails.",
+      "page": 12
+    }
+  ],
+  "paper": "2609.09837",
+  "usage": {
+    "prompt_tokens": 15264,
+    "completion_tokens": 8386,
+    "total_tokens": 23650,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7413,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

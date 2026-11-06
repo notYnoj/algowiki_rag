@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Almost Stable Marriage (ASM)",
+      "problem family": null,
+      "bound": "W[1]-hard with respect to k+t, even when the maximum degree is at most four",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 1. ASM is W[1]-hard with respect to k+t, even when the maximum degree is at most four.",
+      "page": 3
+    },
+    {
+      "problem": "Local Search Almost Stable Marriage (LS-ASM)",
+      "problem family": null,
+      "bound": "W[1]-hard with respect to k+t, even when maximum degree is at most four",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2. LS-ASM is W[1]-hard with respect to k+t, even when maximum degree is at most four.",
+      "page": 4
+    },
+    {
+      "problem": "Local Search Almost Stable Marriage (LS-ASM)",
+      "problem family": null,
+      "bound": "W[1]-hard with respect to k+q+t",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 3. LS-ASM is W[1]-hard with respect to k+q+t.",
+      "page": 4
+    },
+    {
+      "problem": "Local Search Almost Stable Marriage (LS-ASM)",
+      "problem family": null,
+      "bound": "2^{O(q \\log d) + o(dq)} n^{O(1)} time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 4. There exists an algorithm that given an instance of LS-ASM, solves the instance in 2^{O(q log d)+o(dq)} n^{O(1)} time, where n is the number of vertices in the given graph, and d is the maximum degree of the given graph.",
+      "page": 4
+    },
+    {
+      "problem": "Local Search Almost Stable Marriage (LS-ASM)",
+      "problem family": null,
+      "bound": "2^{3q+6dq} n^{O(1)} time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 5. There exists a randomized algorithm that given an instance of LS-ASM runs in 2^{3q+6dq} n^{O(1)} time, where n is the number of vertices in the given graph, and either reports a failure or outputs \"yes\". Moreover, if the algorithm is given a Yes-instance of the problem, then it returns \"yes\" with a constant probability.",
+      "page": 27
+    }
+  ],
+  "paper": "2005.08150",
+  "usage": {
+    "prompt_tokens": 34468,
+    "completion_tokens": 3099,
+    "total_tokens": 37567,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2486,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

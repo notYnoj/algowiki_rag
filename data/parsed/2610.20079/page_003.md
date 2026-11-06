@@ -1,0 +1,18 @@
+### Formal verification.
+
+Using Lean 4 \[dU21\], we have formally verified the sorting algorithm’s correctness and I/O complexity bound under the model of Section 3.<sup>1</sup> The verification covers \(\varepsilon=1.5\times 10^{-5}\) and all parameter ranges of Theorem 3.1. Appendix D gives the formal statements and verification details.
+
+Section 2 reviews related work. Sections 3-4 give the model, main results, and proof overview. Section 5 constructs the coding counterexample, and Section 6 applies it to address-field interchange. Sections 7-8 construct the sorting algorithm and complete the main proof. The appendices supply memory simulation, fixed-parameter calculations, interchange for general field widths and prefix counts, and formalization details.
+
+## 2 Related work
+
+### External-memory sorting.
+
+Aggarwal and Vitter (1988) \[AV88\] established the classical I/O bounds for sorting and related problems, with multiway merge sort and distribution sort attaining the optimal comparison-sorting complexity. Their separate lower bound under record indivisibility also explains the cost of rearranging records, while leaving open what can be achieved by encoding their bits. The subsequent development of external-memory algorithms is surveyed by Vitter (2001) \[Vit01\]. Frigo, Leiserson, Prokop, and Ramachandran (1999) \[FLPR99\] introduced cache- oblivious sorting algorithms that attain optimal comparison I/O complexity without knowing _M_ or _B_, under the tall-cache assumption \(M=\Omega(B^2)\). Arge and Thorup \[AT15\] later combined external distribution sorting with integer-sorting techniques to improve internal computation time while retaining the classical comparison-sorting I/O bound.
+
+Integer representations have nevertheless yielded I/O improvements for other external-memory problems. Iacono and Pˇatraşcu (2012) \[IP12\] used hashing to improve dictionary updates beyond comparison-based bounds and proved a matching lower bound in the external-memory cell-probe model, which charges for accessing stored blocks rather than for computation. Jiang and Larsen (2019) \[JL19\] obtained faster external-memory priority queues supporting DecreaseKey, the operation that lowers an existing item’s priority. These results concern different operations and do not themselves improve the I/O bound for general sorting. For general integer sorting, Farhadi, Hajiaghayi, Larsen, and Shi (2019) \[FHLS19\] proved an I/O lower bound conditional on the multiple- unicast conjecture, even allowing arbitrary bit operations. Since the conjecture has been refuted, this implication does not establish an unconditional sorting lower bound.
+
+Our sorting construction uses a different established line of work. Leighton’s (1985) Columnsort \[Lei85\] alternates column sorts with fixed permutations. Chaudhry, Cormen, and Wisniewski (2001) \[CCW01\] developed an external-memory implementation, and Chaudhry and Cormen (2006) \[CC06\] developed Slabpose Columnsort to relax problem-size restrictions for distributed-memory clusters. Our algorithm uses classical Columnsort and accelerates its fixed permutations. The rearrangement method builds on OpenAI’s (2026) integer-multiplication work \[Ope26\], which recursively exploits finite linear-circuit savings to accelerate address-field interchange on a multitape Turing machine. We adapt this method to block transfers through memory-dependent recursion base cases, buffering, padding, and space bounds, then combine it with Columnsort and most-significant-digit radix partitioning.
+
+<sup>1</sup>Lean source code: https://github.com/rtyu-1/coded-sorting-lean.
+

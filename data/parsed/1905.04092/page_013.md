@@ -1,0 +1,4 @@
+## 5 Conclusion
+
+By mapping unrestricted uniform draws from the _N_-dimensional unit hypercube onto a restricted subspace based on given lower and upper bounds, we can utilize inverse transform sampling to simulate draws from the _k_-th order statistic of _N_ random variables with known CDFs and inverse CDFs. This procedure results in an unbiased draw from this distribution, and in the case where the PDF density in the region of interest is low, the speed of execution is much faster than rejection sampling. This method could be used in place of rejection sampling to ensure that the execution will take a known amount of time if the density of the PDF is unknown in the bounded volume. A practical example would be in drawing from the tail of the minimum or maximum of a set of random variables which are not identically distributed; in such a case, this method would dramatically outperform rejection sampling.
+

@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Symbol-error correction in MDS array codes",
+      "problem family": "MDS array codes",
+      "bound": "\\text{Corrects one symbol error for }m\\ge 2\\text{ with unknown error locations}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Next, we present Algorithm 1, which corrects a single symbol error when \\(m\\ge 2\\).",
+      "page": 6
+    },
+    {
+      "problem": "Symbol-error correction in MDS array codes",
+      "problem family": "MDS array codes",
+      "bound": "\\text{Corrects up to two symbol errors for }m\\ge 4\\text{ with unknown error locations}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Then Algorithm 2 corrects up to two symbol errors with unknown locations.",
+      "page": 9
+    },
+    {
+      "problem": "Symbol-error correction in MDS array codes",
+      "problem family": "MDS array codes",
+      "bound": "r_{i-2}=l_2\\text{ for }i=3,\\dots,m\\text{ (Vandermonde two-error simplification; fewer algebraic operations)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "then Equation (4.26) simplifies to \\(r_{i-2}=l_2\\)",
+      "page": 12
+    },
+    {
+      "problem": "Symbol-error correction in MDS array codes",
+      "problem family": "MDS array codes",
+      "bound": "\\widehat{r}_{i1}=l_3-Z(l_2-l_3)+Z(2l_2-2l_3),\\ \\widehat{r}_{i2}=3l_2-l_3-Z(l_2-l_3)+Z(l_3-l_2-Z(l_2-l_3)+Z(2l_2-2l_3))\\text{ for }i=4,\\dots,m\\text{ (Vandermonde three-error simplification)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "If A is a Vandermonde matrix, then the simplified forms of (4.41) and (4.42) are",
+      "page": 15
+    }
+  ],
+  "paper": "2605.00376",
+  "usage": {
+    "prompt_tokens": 17438,
+    "completion_tokens": 14566,
+    "total_tokens": 32004,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 14038,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

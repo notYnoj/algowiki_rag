@@ -1,0 +1,22 @@
+**Correctness:** As a first step, we show that
+
+\(f_{ST}(G)=det(\tilde{L}_1^{\tilde{G}_i})=\sum_{w_1\le\cdots\le w_{n-1}}c_{w_1,\dots,w_{n-1}}(G)\prod_{i=1}^{n-1}r(w_i)=P_{ST}(G)(\mathbf{r}).\) (2)
+
+Here _P<sub>ST</sub>(G_)(**r**) denotes the evaluation of _P<sub>ST</sub>(G_) obtained by assigning the value _r(w<sub>i</sub>_) to each variable _x<sub>w<sub>i</sub></sub>_. A standard result (e.g. \[CY00, Page 3\]) states that for any \(j\in[n]\)
+
+\(det(\tilde{L}_j^{\tilde{G}_i})=\sum_T\prod_{w\in T}r(w),\)
+
+where the sum is over all spanning trees _T_ of _G_ and \(\prod_{w\in T}\) is the product over all edge-weights in _T_. By combing spanning trees with the same edge-weights, we obtain Equation (2).
+
+Let _H_ be a graph on which we are queried. The graph _H_ is isomorphic to some \(G_i\in\mathcal{S}\) only if all edge-weights of _H_ appear as edge-weights in S. If this is not the case, then our query algorithm rejects. Thus, we assume that all edge-weights in _H_ appear in the list _w_<sub>1</sub>_,...,w<sub>m</sub>_.
+
+We consider two cases. First, suppose that _H_ is isomorphic to some _G<sub>i</sub>_. Then, _f<sub>ST</sub>(G<sub>i</sub>_)=_f<sub>ST</sub>(H_) due to Equation (2) and the fact that \(P_{ST}(G_i)\equiv P_{ST}(H)\) since \(H\cong G_i\). Thus, _D_<sub>S</sub>(_f<sub>ST</sub>(H_)) returns _OPT<sub>i</sub>_ provided there is no other graph _G<sub>j</sub>_ such that _f<sub>ST</sub>(G<sub>i</sub>_)=_f<sub>ST</sub>(G<sub>j</sub>_) and \(OPT_i\neq OPT_j\). By Lemma 6.5, this only occurs if \(P_{ST}(G_i)\unknown\equiv P_{ST}(G_j)\) but _P<sub>ST</sub>(G<sub>i</sub>_)(**r**)=_P<sub>ST</sub>(G<sub>j</sub>_)(**r**). Since all _r<sub>i</sub>_ are chosen independently and uniformly at random over F_<sub>p</sub>_, Lemma 6.1 yields that the event \(P_{ST}(G_i)\unknown\equiv P_{ST}(G_j)\) and _P<sub>ST</sub>(G<sub>i</sub>_)(**r**)=_P<sub>ST</sub>(G<sub>j</sub>_)(**r**) has probability at most \(\frac{n-1}{p}\) for every fixed index \(j\neq i\). Using union bound, we obtain that the failure probability is at most \(\frac{(n-1)k}{p}\le k^{-1}n^{-log(n)}\). Thus, our success probability is at least 1-_k_<sup>-1</sup>_n_<sup>-log(_n_)</sup> and there w.h.p with respect to the query size _n_.
+
+Second, suppose _H_ is non-isomorphic to every \(G_i\in\mathcal{S}\) and let _OPT<sub>H</sub>_ denote the value of the optimal spanning tree that satisfies the budget constraint. The only way that the algorithm fails is if there exist a _G<sub>i</sub>_ with _f<sub>ST</sub>(G<sub>i</sub>_)=_f<sub>ST</sub>(H_) and \(OPT_i\neq OPT_H\). By using the same argument as above, we obtain that the probability of this happening is at most \(\frac{(n-1)k}{p}\le k^{-1}n^{-log(n)}\). Thus, our success probability is at least 1-_k_<sup>-1</sup>_n_<sup>-log(_n_)</sup> and there w.h.p with respect to the query size _n_.
+
+**Reconstruction:** Assume that each graph _G<sub>i</sub>_ is equipped with a multiset of cost-distance pairs \(W_i:=\{w_1^{(i)},\dots w_{n-1}^{(i)}\}\) corresponding to an optimal spanning tree in _G<sub>i</sub>_. Suppose the algorithm is queried on a graph _H_ such that \(P_{ST}(H)\equiv P_{ST}(G_i)\) for some \(G_i\in\mathcal{S}\). By Lemma 6.7, _H_ must contain a spanning tree with the same multiset of cost-distance pairs _W<sub>i</sub>_. Upon retrieving _W<sub>i</sub>_, let _k<sub>c,d</sub>_ denote the multiplicity of the pair (_c,d_) in _W<sub>i</sub>_. We formulate the reconstruction of an optimal tree in _H_ as a matroid intersection problem over the ground set _E(H_) between: (1) a graphic matroid M_<sub>G</sub>_ (where independent sets are forests), and (2) a partition matroid M_<sub>P</sub>_ (where independent sets contain at most _k<sub>c,d</sub>_ edges of type (_c,d_)). Consequently, the desired spanning tree in _H_ can be computed in polynomial time using classical matroid intersection algorithms \[Sch03\], and specifically in \(\widetilde{O}(m\sqrt{n})\) time via recent advancements \[BMNT23, CLS<sup>+</sup>19, GS85\].
+
+## 7 Algorithms via 1-WL (Elementary Arguments)
+
+In this section, we show that Constrained Shortest Path and Energy Game can be solved in near-linear time in the Isomorphic-Priors model using the 1-dimensional Weisfeiler-Leman (1-WL) algorithm. We start by formally defining both problems and stating the main algorithmic results for both problems. After that, we give an introduction to the 1-WL algorithm and prove our algorithmic results.
+

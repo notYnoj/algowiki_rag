@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Weak villainy of repeated disjoint unions (mG)",
+      "problem family": "Chromatic villainy",
+      "bound": "0 \\le mF_k(G) - \\beta_k(mG) \\le r\\big(F_k(G) - \\beta_k(G)\\big) \\text{ where } m = qk + r, 0 \\le r < k; \\text{ in particular } \\beta_k(mG) = mF_k(G) \\text{ when } k \\mid m, \\text{ and } \\lim_{m\\to\\infty} \\beta_k(mG)/m = F_k(G)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Then \\(0\\le mF_k(G)-\\beta_k(mG)\\le r\\big(F_k(G)-\\beta_k(G)\\big)\\). In particular, \\(\\beta_k(mG)=mF_k(G)\\) whenever \\(k|m\\), and \\(\\lim_{m\\rightarrow\\infty}\\frac{\\beta_k(mG)}{m}=F_k(G)\\).",
+      "page": 6
+    },
+    {
+      "problem": "Weak villainy stabilization for repeated disjoint unions",
+      "problem family": "Chromatic villainy",
+      "bound": "For m \\ge N = (k-1)M with M = (2(k-1)n+1)^{k-1}, the defect mF_k(G) - \\beta_k(mG) is eventually periodic with least period h = \\gcd\\{\\ell \\ge 1 : \\beta_k(\\ell G) = \\ell F_k(G)\\}, h \\mid k, computable using \\ell \\le M; \\beta_k(mG) = mF \\iff h \\mid m for m \\ge N",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "The number h is the least eventual period of the defect sequence d_m=mF-\\beta_k(mG): it is the least positive integer for which d_{m+h}=d_m for all sufficiently large m. In particular, for m\\ge N, \\beta_k(mG)=mF \\Longleftrightarrow h|m. Moreover, h=\\gcd\\{1\\le\\ell\\le M:\\beta_k(\\ell G)=\\ell F\\}.",
+      "page": 8
+    },
+    {
+      "problem": "Ordinary villainy asymptotic slope for repeated disjoint unions",
+      "problem family": "Chromatic villainy",
+      "bound": "B(mG) = m\\Lambda(G) + O_G(1) where \\Lambda(G) \\ge F_k(G) is a computable rational from a finite optimization using at most k source words; the error is bounded independently of m and eventually periodic with computable period and threshold; B((m+h)G) = B(mG) + a for m \\ge M with a = h\\Lambda(G)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For every fixed graph G with k=\\chi(G), the number \\Lambda(G) is rational and effectively computable. The maximum in (4.16) is attained by a distribution supported on at most k source words, meaning that at most k coordinates x_w are positive. Moreover, B(mG)=m\\Lambda(G)+O_G(1), \\Lambda(G)\\ge F_k(G).",
+      "page": 11
+    },
+    {
+      "problem": "Ordinary vs weak villainy difference under repetition",
+      "problem family": "Chromatic villainy",
+      "bound": "B(mG) - B_w(mG) = m(\\Lambda(G) - F_k(G)) + O_G(1); the difference is bounded if and only if \\Lambda(G) = F_k(G), in which case it is eventually periodic; otherwise it tends to infinity linearly",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "B(mG)-B_w(mG)=m(\\Lambda(G)-F_k(G))+O_G(1). The difference is bounded if and only if \\Lambda(G)=F_k(G). In that case it is eventually periodic; otherwise it tends to infinity linearly.",
+      "page": 13
+    },
+    {
+      "problem": "Exact computation of villainy and weak villainy / threshold recognition",
+      "problem family": "Chromatic villainy",
+      "bound": "Time h(B_w(G))(n+1)^c for exact computation of both B(G) and B_w(G) without either value supplied; f(t)(n+1)^c for truncated values min{B(G),t+1} and min{B_w(G),t+1}; fixed-parameter tractable in t with polynomial exponent independent of t",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There are computable functions f,h and an absolute constant c such that both B(G) and B_w(G) can be computed exactly on an n-vertex graph in time h(B_w(G))(n+1)^c, without either value being supplied. Moreover, given an integer t \\ge 0, both min{B(G),t+1} and min{B_w(G),t+1} can be computed in time f(t)(n+1)^c for a computable function f.",
+      "page": 14
+    },
+    {
+      "problem": "Villainy recognition at fixed values",
+      "problem family": "Chromatic villainy",
+      "bound": "Unless P=NP, there is no fixed integer t for which recognition of B(G)=t is NP-complete; the same holds for B_w(G)=t",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Unless P=NP, there is no fixed integer t for which recognition of B(G)=t is NP-complete. The same conclusion holds for B_w(G)=t.",
+      "page": 20
+    }
+  ],
+  "paper": "2610.13556",
+  "usage": {
+    "prompt_tokens": 21340,
+    "completion_tokens": 11618,
+    "total_tokens": 32958,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10301,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

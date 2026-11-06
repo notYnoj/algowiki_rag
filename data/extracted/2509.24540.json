@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "in-place Mergesort",
+      "problem family": null,
+      "bound": "O(n \\log n) comparisons",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n \\log n) comparisons (Franceschini's stable in-place sorting algorithm)",
+      "quote": "Albeit its running time of O(_n_log<sup>2</sup>_n_) is not quite optimal, it still works efficiently, both in theory using the optimal number of O(_n_log_n_) comparisons and in practice with low constants, while being easily comprehensible.",
+      "page": 1
+    },
+    {
+      "problem": "in-place Mergesort",
+      "problem family": null,
+      "bound": "O(n \\log^2 n) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "On that account, the total running time of _in-place Mergesort_ consequently becomes O(_n_log<sup>2</sup>_n_).",
+      "page": 12
+    },
+    {
+      "problem": "in-place Mergesort",
+      "problem family": null,
+      "bound": "O(\\log n) additional space",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Both prerequisites work with O(1) additional space and the usual recursion necessitates only an additional O(_log_n_) space for the stack.",
+      "page": 12
+    }
+  ],
+  "paper": "2509.24540",
+  "usage": {
+    "prompt_tokens": 12523,
+    "completion_tokens": 4878,
+    "total_tokens": 17401,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4537,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

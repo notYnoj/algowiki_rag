@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "External-memory integer sorting",
+      "problem family": "external-memory sorting",
+      "bound": "O\\big(\\frac{N}{B}\\big[1+\\frac{logN}{(log(M/B))^{1-\\varepsilon}(logM)^\\varepsilon}\\big]\\big)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\Theta\\big(\\frac{N}{B}\\big[1+\\frac{log(N/M)}{log(M/B)}\\big]\\big)",
+      "quote": "Under these conventions, there is a constant \\(\\varepsilon>0\\) such that, for every \\(2B\\le M\\le N\\), _N_ integers of \\(\\Theta(logN)\\) bits can be sorted deterministically in \\(O\\big(\\frac{N}{B}\\big[1+\\frac{logN}{(log(M/B))^{1-\\varepsilon}(logM)^\\varepsilon}\\big]\\big)\\) block transfers.",
+      "page": 4
+    },
+    {
+      "problem": "Undirected multiple-unicast network coding",
+      "problem family": "undirected multiple-unicast networks",
+      "bound": "R_\\text{route}\\le 1-\\frac{33}{338432}<1=R_\\text{code}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a finite undirected network with unit edge capacities and independent source messages such that \\(R_\\text{route}\\le 1-\\frac{33}{338432}<1=R_\\text{code}\\).",
+      "page": 6
+    }
+  ],
+  "paper": "2610.20079",
+  "usage": {
+    "prompt_tokens": 26112,
+    "completion_tokens": 6105,
+    "total_tokens": 32217,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5718,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

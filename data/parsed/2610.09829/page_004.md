@@ -1,0 +1,18 @@
+sense. On planar graphs, _d_-diversity among shortest cycles translates directly to _d_-diversity among global minimum cuts in the dual graph, connecting our result to the work of de Berg, Martínez, and Spieksma \[7\] on diverse minimum _s-t_ cuts.<tbc>
+
+• **Maximum Edge Coverage by Shortest Cycles.** Taking _d=w(E(G_)) removes the diversity requirement, leaving the problem of finding _k_ shortest cycles whose union covers edges of total weight as large as possible. This can be seen as a variant of the classical Maximum Coverage problem (find _k_ sets from a family S covering the most elements) with the important distinction that S is not given explicitly: the family of all shortest cycles of _G_ can be exponentially large and given implicitly rather than enumerated.
+
+Our main algorithmic result not only resolves the open question from \[3\] asking for a single- exponential algorithm for Edge-Disjoint Shortest Cycle Packing on planar graphs, but also establishes the first FPT algorithms for Diverse Shortest Cycles and Maximum Edge Coverage by Shortest Cycles on planar graphs.
+
+**Theorem 1.2.** Diverse Shortest Cycle Coverage _on planar graphs admits an algorithm with running time_ \(2^{\mathcal{O}(k)}\cdot n^{\mathcal{O}(1)}\).
+
+The running time in Theorem 1.2 is stated assuming the word RAM model. We note that the result holds for real-valued edge weights assuming the standard real RAM model of computation, in which basic arithmetic operations on real numbers can be performed in constant time.
+
+## 1.1 Related Work
+
+Both Edge-Disjoint Shortest Cycle Packing and Vertex-Disjoint Shortest Cycle Packing are NP-complete even on planar graphs, since they generalize the triangle packing problem \[4, 3\]. Rautenbach and Regen \[24\] studied these problems on graphs of girth \(g\in\{4,5\}\). In this case, both problems are solvable in polynomial time on graphs of maximum degree 3, but are APX-hard for maximum degree 4. For \(g\ge 6\), the problems are APX-hard already on cubic graphs. Approximation algorithms of ratio \((3+\varepsilon)\) for Edge-Disjoint Shortest Cycle Packing and Vertex-Disjoint Shortest Cycle Packing on planar graphs follow from the framework of Schlomberg, Thiele, and Vygen \[26\] for uncrossing families of cycles.
+
+The systematic parameterized study of Vertex-Disjoint Shortest Cycle Packing and Edge-Disjoint Shortest Cycle Packing was initiated in \[4, 3\]. For general graphs, they gave an XP algorithm with running time _n_<sup>O(_k_<sup>6</sup>)</sup>, which constituted the first algorithm solving these problems for any fixed _k_, and ruled out a polynomial kernel under standard complexity assumptions. The FPT vs. W\[1\]-hard status of Edge-Disjoint Shortest Cycle Packing and Vertex-Disjoint Shortest Cycle Packing on general graphs was left explicitly open. For planar graphs, they obtained a polynomial kernel with O(_k_<sup>2</sup>) vertices and an FPT algorithm with running time \(k^{\mathcal{O}(k)}\cdot n^{\mathcal{O}(1)}\), and explicitly asked whether a single-exponential algorithm exists. Our Theorem 1.1 resolves the first open question by proving W\[1\]-hardness on subcubic graphs, and Theorem 1.2 resolves the second by giving a \(2^{\mathcal{O}(k)}\cdot n^{\mathcal{O}(1)}\) algorithm for the more general Diverse Shortest Cycle Coverage on planar graphs.
+
+A close relative of shortest cycle packing is Disjoint Shortest Paths. In this problem, given _k_ pairs of terminal vertices, the task is to decide whether they can be connected by pairwise vertex- (or edge-) disjoint shortest paths. The problem is NP-hard when _k_ is part of the input \[13\] and<tbc>
+

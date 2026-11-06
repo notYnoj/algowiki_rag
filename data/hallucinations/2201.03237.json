@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Monotonic Search Network (MSNET)",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\Pr[\\text{monotonic search}] \\ge 0.5",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Therefore, the lower bound is 50%.",
+      "page": 11
+    },
+    {
+      "problem": "(r,p)-MSNET edge selection",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "\\Pr[\\text{monotonic search}] \\ge 1 - \\frac{\\varphi}{2\\pi}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "0.5",
+      "quote": "The probability is difficult to calculate in high dimension, but we prove that it must not be less than \\(1-\\frac{\\varphi}{2\\pi}\\).",
+      "page": 13
+    },
+    {
+      "problem": "TBSG (Tree-based Search Graph) construction",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "O(c^{6} n \\log n d + n^{1.16} + K m d n)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^2 m)",
+      "quote": "The overall complexity of TBSG is O(c^6 n log n d + n^1.16 + K m d n).",
+      "page": 18
+    }
+  ],
+  "paper": "2201.03237",
+  "usage": {
+    "prompt_tokens": 14498,
+    "completion_tokens": 9082,
+    "total_tokens": 23580,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8730,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "OR (fixed-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{K}{1-H(p)}+\\frac{K\\log(1/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\Omega\\left(\\frac{K\\log(1/\\delta)}{\\log((1-p)/p)}\\right) \\text{ (Feige et al., 1994)}",
+      "quote": "Thus, the number of queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(K/(1-H(p))+Klog(1/\\delta)/D_\\mathsf{KL}(p\\|1-p))\\).",
+      "page": 5
+    },
+    {
+      "problem": "OR (fixed-length, non-adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\max\\left(K,\\frac{K\\log(K)p}{1-H(p)},\\frac{K\\log(K)}{\\log((1-p)/p)}\\right)\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\Omega\\left(\\frac{K\\log(K)}{\\log((1-p)/p)}\\right) \\text{ (Reischuk and Schmeltz, 1991; Gács and Gál, 1994)}",
+      "quote": "This shows that the query complexity is at least \\(\\Omega(max(K,Klog(K)p/(1-H(p))))\\).",
+      "page": 6
+    },
+    {
+      "problem": "MAX (fixed-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{K}{1-H(p)}+\\frac{K\\log(1/\\delta)}{D_{\\text{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\Omega\\left(\\frac{K\\log(1/\\delta)}{\\log((1-p)/p)}\\right) \\text{ (Feige et al., 1994)}",
+      "quote": "Thus, the number of queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(K/(1-H(p))+Klog(1/\\delta)/D_\\text{KL}(p\\|1-p))\\).",
+      "page": 8
+    },
+    {
+      "problem": "MAX (fixed-length, non-adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{K^2}{1-H(p)}+\\frac{K^2\\log(1/\\delta)}{D_{\\text{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Thus the queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(K^2/(1-H(p))+K^2log(1/\\delta)/D_\\text{KL}(p\\|1-p))\\).",
+      "page": 8
+    },
+    {
+      "problem": "SEARCH (fixed-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{\\log(K)}{1-H(p)}+\\frac{\\log(1/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Thus the queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(log(K)/(1-H(p))+log(1/\\delta)/D_\\mathsf{KL}(p\\|1-p))\\).",
+      "page": 9
+    },
+    {
+      "problem": "SEARCH (fixed-length, non-adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{K}{1-H(p)}+\\frac{K\\log(1/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Thus, the queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(K/(1-H(p))+Klog(1/\\delta)/D_\\mathsf{KL}(p\\|1-p))\\).",
+      "page": 9
+    },
+    {
+      "problem": "SORT (fixed-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\frac{K\\log(K)}{1-H(p)}+\\frac{K\\log(K/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "\\Omega\\left(\\frac{K\\log(K)}{1-H(p)}+\\frac{\\log(1/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right) \\text{ (Feige et al., 1994; Wang et al., 2023)}",
+      "quote": "Thus, the queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(Klog(K)/(1-H(p))+Klog(K/\\delta)/D_\\mathsf{KL}(p\\|1-p)))\\).",
+      "page": 9
+    },
+    {
+      "problem": "SORT (fixed-length, non-adaptive)",
+      "problem family": null,
+      "bound": "\\Omega\\left(\\max\\left(K^2,\\frac{K^2\\log(K)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)\\right)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Thus, the queries required to recover the true value with probability at least \\(1-\\delta\\) is lower bounded by \\(\\Omega(max(K^2,K^2log(K)/D_\\mathsf{KL}(p\\|1-p)))\\).",
+      "page": 9
+    },
+    {
+      "problem": "OR (variable-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Theta\\left(\\frac{K}{1-H(p)}+\\frac{K\\log(1/\\delta)}{D_{\\mathsf{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\Theta(\\frac{K}{1-H(p)}+\\frac{Klog(1/\\delta)}{D_\\mathsf{KL}(p\\|1-p)})\\) for computing OR;",
+      "page": 10
+    },
+    {
+      "problem": "MAX (variable-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Theta\\left(\\frac{K}{1-H(p)}+\\frac{K\\log(1/\\delta)}{D_{\\text{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\Theta(\\frac{K}{1-H(p)}+\\frac{Klog(1/\\delta)}{D_\\text{KL}(p\\|1-p)})\\) for computing MAX;",
+      "page": 10
+    },
+    {
+      "problem": "SEARCH (variable-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Theta\\left(\\frac{\\log(K)}{1-H(p)}+\\frac{\\log(1/\\delta)}{D_{\\text{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\Theta(\\frac{log(K)}{1-H(p)}+\\frac{log(1/\\delta)}{D_\\text{KL}(p\\|1-p)})\\) for computing SEARCH;",
+      "page": 10
+    },
+    {
+      "problem": "SORT (variable-length, adaptive)",
+      "problem family": null,
+      "bound": "\\Theta\\left(\\frac{K\\log(K)}{1-H(p)}+\\frac{K\\log(K/\\delta)}{D_{\\text{KL}}(p\\|1-p)}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\Theta(\\frac{Klog(K)}{1-H(p)}+\\frac{Klog(K/\\delta)}{D_\\text{KL}(p\\|1-p)})\\) for computing SORT.",
+      "page": 10
+    }
+  ],
+  "paper": "2306.11951",
+  "usage": {
+    "prompt_tokens": 22359,
+    "completion_tokens": 12958,
+    "total_tokens": 35317,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10968,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

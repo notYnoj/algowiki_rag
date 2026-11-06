@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Bichromatic sorting",
+      "problem family": "Sorting with priced information",
+      "bound": "O(\\log^3 N)",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": "O(N)",
+      "quote": "There exists an algorithm InversionSort for bichromatic sorting and a constant c>0, such that for every instance I, the cost of InversionSort on I, with probability at least 1-1/N, is at most c(log N)^3 H_I, where H_I is the cost of the Hamiltonian.",
+      "page": 3
+    },
+    {
+      "problem": "Bichromatic sorting",
+      "problem family": "Sorting with priced information",
+      "bound": "O(N^2)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "InversionSort runs in O(N^2) time.",
+      "page": 3
+    }
+  ],
+  "paper": "2311.05773",
+  "usage": {
+    "prompt_tokens": 15499,
+    "completion_tokens": 6019,
+    "total_tokens": 21518,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5796,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

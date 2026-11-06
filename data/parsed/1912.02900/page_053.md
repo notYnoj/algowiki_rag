@@ -1,0 +1,22 @@
+<tbc>\(\hat{Y}\) is a special solution for instance _X<sup>c</sup>_, \(r\in X^c\) must hold. If \(R''\) denotes the row on which _r_ lies, then \(R''\) is an active row for strip \(S(u')\), and so a point that lies on the intersection of row \(R''\) and the right boundary of \(S(u')\) belongs to _Z_. That point satisfies \(\square_{p,q}\). The case where _r_ lies on the right boundary of \(\square_{p^\prime,q^\prime}\) is treated similarly.
+
+Assume now that _r_ lies on the top or the bottom boundary of \(\square_{p^\prime,q^\prime}\), but not on one of its corners. Then, since solution \(\hat{Y}\) is special for _X<sup>c</sup>_, point _r_ must lie in the rectangle \(\square_{p,q}\). Moreover, since we have assumed that neither _p_ nor _q_ lie in \(\hat{Y}\), \(r\neq p,q\). But then \(r\in X^c\cup\hat{Y}\) lies in \(\square_{p,q}\backslash\{p,q\}\) and by Observation 6.11, pair (_p,q_) is satisfied in \(X\cup Y^*\).
+
+The third case happens when exactly one of the two points (say _p_) lies in \(\hat{Y}\), and the other point does not lie in \(\hat{Y}\), so \(q\in Z\) must hold. We define the strip \(S(v')\) and the point \(q'\in X^c\) exactly as in Case 2. Since \(p,q'\in X^c\cup\hat{Y}\), there must be a point \(r\in\square_{p,q^\prime}\backslash\{p,q'\}\) that lies in \(X^c\cup\hat{Y}\). From Observation 6.9, we can choose the point _r_, so that it lies on the left or on the bottom boundary of \(\square_{p,q^\prime}\) (that is, its _x_- or its _y_-coordinate is aligned with the point _p_). If _r_ lies on the left boundary of \(\square_{p,q^\prime}\), then it also lies in \(\square_{p,q}\), and from Observation 6.11, pair (_p,q_) is satisfied in \(X\cup Y^*\). If it lies on the bottom boundary of \(\square_{p,q^\prime}\), but it is not the bottom right corner of the rectangle, then, using the same reasoning as in Case 2, it must lie in \(\square_{p,q}\), and it is easy to see that \(r\neq q\). Lastly, if _r_ is the bottom right corner of \(\square_{p,q^\prime}\), then \(r\in X^c\). As before, there is a copy of _r_, that lies on the left boundary of strip \(S(v')\) and belongs to _Z_, that satisfies the pair (_p,q_). □
+
+In order to analyze the solution cost, consider the final solution _Y_<sup>∗</sup> to the input instance _X_. We distinguish between two types of pints in _Y_<sup>∗</sup>: a point \(p\in Y^*\) is said to be of type-2 if it was added to the solution by Algorithm LeafBST, and otherwise we say that it is of type 1. We start by bounding the number of points of type 1 in _Y_<sup>∗</sup>.
+
+**Claim 6.12** _The number of points of type 1 in the solution Y_<sup>∗</sup> _to the original instance X is at most_ \(O(log(height(T)/\rho))\cdot\mathsf{OPT}(X)\).
+
+**Proof:** Observe that the number of recursive levels is bounded by \(\lambda=O(log(height(T)/\rho))\). This is since, in every recursive level, the heights of all trees go down by a constant factor, and we terminate the algorithm once the tree heights are bounded by \(\rho\). For each \(1\le i\le\lambda\), let X_<sub>i</sub>_ be the collection of all instances in the _i_th recursive level, where the instances are in the reduced form. Notice that the only points that are added to the solution by Algorithm RecursiveBST directly are the points in the sets _Z_. The number of such points added at recursive level _i_ is bounded by \(\sum_{X^\prime\in\mathcal{X}_i}2|X'|\). It is now sufficient to show that for all \(1\le i\le\lambda\), \(\sum_{X^\prime\in\mathcal{X}_i}|X'|\le O(\mathsf{OPT}(X))\). We do so using the following observation.
+
+**Observation 6.13** _For all_ \(1\le i\le\lambda\), \(\sum_{X^\prime\in\mathcal{X}_i}\mathsf{OPT}(X')\le\mathsf{OPT}(X)\).
+
+Assume first that the observation is correct. For each instance \(X'\in\mathcal{X}_i\), let \(T'\) be the partitioning tree associated with \(X'\). From Lemma 6.5, \(|X'|\le O(\mathsf{OPT}(X'))\). Therefore, the number of type-1 points added to the solution at recursive level _i_ is bounded by _O_(OPT).
+
+We now turn to prove Observation 6.13.
+
+**Proof of Observation 6.13.** The proof is by induction on the recursive level _i_. It is easy to see that the claim holds for _i_=1, since, from Observation 6.2, removing redundant points from _X_ to turn it into reduced form cannot increase OPT(_X_).
+
+Assume now that the claim holds for level _i_, and consider some level-_i_ instance \(X'\in\mathcal{X}_i\). Let \((X^c,\{X_u^s\}_{u\in U})\) be the split of \((X',T')\) that we have computed. Then, from Theorem 3.3, \(\sum_{v\in U}\mathsf{OPT}(X_v^s)+\)<tbc>
+

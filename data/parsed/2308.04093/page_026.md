@@ -1,0 +1,20 @@
+sets _S_\[_j_\], the number of collected indices _j_ is usually sublinear in the array size _L_, so in order to save time we need to let SMAWK return a compact output representation, described as several arithmetic progressions (APs) with difference _w_, where each AP contains the indices _i_ that have the same maximizer _j_.<tbc>
+
+• The second stage is to combine all the APs found in the first stage, and update them onto a single DP array. Ideally, we would like to take the entry-wise maximum over all the APs, that is, for each _i_ we would like to maximize \(q[j]+Q_w(\frac{i-j}{w})\) over all APs containing _i_, where _w_ is the difference of the AP and _j_ is the maximizer associated to that AP. Unfortunately, the total length of these APs could be much larger than the array size _L_, which would prevent us from getting an \(\widetilde{O}(L)\) time algorithm. To overcome this challenge, the idea here is to crucially use the relaxation in the definition of Problem 1, so that we can skip a lot of computation based on the concavity of \(Q_w(\cdot)\). We perform a linear scan from left to right, and along the way we discard many APs that cannot contribute to any useful answers. In this way we can get the time complexity down to near-linear.
+
+_Proof of Lemma 4.1._ The algorithm is given in Algorithm 1.
+
+## Time complexity.
+
+We first analyze the time complexities of the two stages of Algorithm 1.
+
+• The first stage contains a **for** loop over \(w\in[w_\mathrm{max}]\) and \(c\in\{0,1\dots,w-1\}\) (Line 4), but we actually only need to execute the loop iterations such that the index set \(J:=\{j:w\in S[j]\text{and}j\equiv c(\mathrm{mod}w),-L\le j\le L\}\) (defined at Line 5) is non-empty. Since \(|S[j]|\le 1\) for all _j_, these sets _J_ over all (_w,c_) form a partition of the size-_L_<sub>1</sub> set \(\{-L\le j\le L:S[j]\neq\emptyset\}\), and can be prepared efficiently. Then, for each of these sets _J_, at Line 7 we run SMAWK algorithm (Theorem A.1) to find all row maxima (with compact output representation) of an \(O(1+L/w)\times|J|\) matrix in _O_(|_J_|log_L_) time. The output of SMAWK is represented as |_J_| intervals on the row indices of this matrix, which correspond to |_J_| APs of difference _w_. These |_J_| APs are then added into P. Thus, in the end of the first stage, set P contains at most \(\sum_J|J|\le L_1\le 2L+1\) APs (each AP only takes _O_(1) words to describe), and the total running time of this stage is \(O(\sum_J|J|\mathrm{log}L)=O(L_1\mathrm{log}L)\).<tbc>
+
+• In the second stage, we initialize (2_L_+1) buckets _B_\[-_L...L_\], and first insert each AP from P into a bucket (Line 13). Then we do a scan \(i\leftarrow-L,\dots,L\) (Line 15), where for each _i_ we examine all APs in the bucket _B_\[_i_\] at Line 18, and then copy at most one winning AP from this bucket into another bucket (Line 22). Hence, in total we only ever inserted at most |P|+(2_L_+1)=_O(L_) APs into the buckets. So the second stage takes _O(L_) overall time.
+
+Hence the total time complexity of Algorithm 1 is \(O(L_1\mathrm{log}L+L)\le O(L\mathrm{log}L)\).
+
+## Correctness.
+
+It remains to prove that the return values (**_x_**\[_i_\]_,z_\[_i_\]_,r_\[_i_\]) correctly solve Problem 1. Fix any \(i\in\{-L,\dots,L\}\), and let (**_x_**<sup>∗</sup>\[_i_\]_,z_<sup>∗</sup>\[_i_\]_,r_<sup>∗</sup>\[_i_\]) be an maximizer of Eq. (15) (subject to Eq. (16)). If **_x_**<sup>∗</sup>\[_i_\]=**0**, then it is the trivial solution, which cannot be better than our solution, due to Lines 16 and 19. So in the following we assume \(|\mathrm{supp}(\mathbf{x}^*[i])|\ge 1\), which means _i\>z_<sup>∗</sup>\[_i_\]. If the support containment condition \(\mathrm{supp}(\mathbf{x}^*[i])\subseteq S\big[z^*[i]\big]\) (Eq. (17)) is violated, then by definition of Problem 1 we are not required to find a maximizer for _i_. Hence, we can assume \(\mathrm{supp}(\mathbf{x}^*[i])\subseteq S\big[z^*[i]\big]\) holds. Since \(\big|S\big[z^*[i]\big]\big|\le 1\le|\mathrm{supp}(\mathbf{x}^*[i])|\), we assume \(\mathrm{supp}(\mathbf{x}^*[i])=S\big[z^*[i]\big]=\{w^*\}\).
+

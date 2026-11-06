@@ -1,0 +1,16 @@
+To prove termination and bound the length, we consider each phase separately. In Phase 1 in each round we replace an existing marking by a marking of higher value either by using an exchange edge or by deleting it through domination by weight. Further the remaining markings either stay untouched or get deleted. Now the number of improvements that can be made per marking is limited by _m_ and the number of markings is limited by _n_. Hence, there can be at most _mn_ rounds in Phase 1. Additionally, the number of steps we need per round is limited _m_ again, as we move the marking along the DAG structure of exchange edges. Thus, phase 1 generates a total of \(O(n\cdot m^2)\) steps.
+
+If in Phase 1 we cannot come up with an improvement, there is no way to (re)move the existing markings, no matter which other steps are made in subsequent iterations. This relies on the fact that the presence of additional markings can only restrict the subgraph of reachable positions. For the same reason, iteratively generating the reachable marking of highest weight results in markings that cannot be deleted in subsequent steps. Thus, at the end of every iteration in Phase 3, the number of markings is increased by one, and all markings are un(re)movable. Consequently, in Phase 2 there are \(O(m\cdot n)\) steps.
+
+For computation of the sequence, the relevant tasks are constructing the graph _Gmov_, checking edges in _Tmov_ for possible improvement of markings, or constructing subgraphs and checking connectivity of single vertices to _Vg_. Obviously, all these tasks can be executed in time polynomial in _n_, _m_, |_T_| and |_D_| using standard algorithmic techniques.
+
+Next, we want to analyze whether consistency of generation and domination rules is necessary for the existence of short sequences or can be further relaxed.
+
+**Proposition 1** _If the generation rules contain more than one coalition in the precondition-set, there are instances and initial states such that every sequence to a stable state requires an exponential number of improvement steps._
+
+The proof uses a coalition formation game with constraints and inconsistent generation rules obtained from locally stable matching, when agents are allowed to match with partners at a hop distance of at most \(\ell=3\) in \((V,L\cup M)\). For this setting in [16, Theorem 3] we have given an instance such that every sequence to a stable state requires an exponential number of improvement steps. Note that the example is minimal in the sense that now we have at most 2 coalitions in the precondition-set. The detailed proof can be found in the appendix.
+
+**Proposition 2** _If the generation rules have non-overlapping precondition- and target-coalitions, there are instances and initial states such that every sequence to a stable state requires an exponential number of improvement steps._
+
+The construction used for the proof exploits the fact that if precondition- and target-coalition do not overlap the precondition can remain when the target- coalition is formed. Then the dynamics require additional steps to clean up the leftover precondition-coalitions which results in an exponential blow-up. The entire proof as well as a sketch of the resulting movement graph can be found in the appendix.
+

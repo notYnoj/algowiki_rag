@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": null,
+      "bound": "\\text{diameter } m^{\\Omega(1/t)} \\text{ or } m^{1+\\Omega(1/t)} \\text{ edges}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1.3. For \\(t\\ge 1\\), there exists an m-edge graph G such that every t-thick Steiner shortcut graph G_+ for G either has diameter \\(m^{\\Omega(1/t)}\\) or \\(m^{1+\\Omega(1/t)}\\) edges.",
+      "page": 5
+    },
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": "\\mathcal{G}_k",
+      "bound": "|E_+| = |E|/n^{\\Omega(1/k)}, \\ \\forall (s,t)\\in P: \\mathrm{dist}_{G_+}(s,t)=k",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "Hesse's lower bound: either |E_+| \\ge |P| or diameter n^{\\Omega(1/k)}",
+      "quote": "Theorem 2.2. Let \\(k\\ge 2\\) be an integer, and let \\(G=(V,E)\\in\\mathcal{G}_k\\) be an n-vertex, n^{1+O(1/k)}-edge graph with associated critical vertex pairs \\(P\\subseteq V\\times V\\). Then G admits a k-thick Steiner shortcut graph \\(G_+=(V\\cup V_+,E\\cup E_+)\\) with \\(|E_+|=|E|/n^{\\Omega(1/k)}\\), such that every \\((s,t)\\in P\\) has dist_{G_+}(s,t)=k.",
+      "page": 7
+    },
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": "\\mathcal{G}_k",
+      "bound": "\\text{diameter } m^{\\Omega(1/k)} \\text{ or } m^{1+\\Omega(1/k)} \\text{ edges}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 3.1. For \\(k\\ge 2\\), \\(t\\le 0.99k\\), and \\(m=2^{\\omega(k\\mathrm{log}k)}\\), every t-thick Steiner shortcut for the m-edge graph \\(G\\in\\mathcal{G}_k\\) requires either \\(m^{\\Omega(1/k)}\\) diameter or \\(m^{1+\\Omega(1/k)}\\) edges.",
+      "page": 11
+    },
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": "\\widetilde{\\mathcal{G}}_k(c,d,p)",
+      "bound": "\\text{diameter } m^{\\Omega(1/k)} \\text{ or } m^{1+\\Omega(1/k)} \\text{ edges}",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Theorem 3.3. For \\(k\\ge 2\\), there are parameters c,d,p such that with probability 1-1/poly(m), every t-thick Steiner shortcut for the m-edge graph \\(G\\in\\widetilde{\\mathcal{G}}_k(c,d,p)\\) requires either diameter \\(m^{\\Omega(1/k)}\\) or \\(m^{1+\\Omega(1/k)}\\) edges, provided that \\(1.01t\\le\\frac{8}{7}k\\) and \\(m=2^{\\omega(k\\mathrm{log}k)}\\).",
+      "page": 12
+    },
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": null,
+      "bound": "\\text{size } \\tilde{\\Omega}(m^{1-\\epsilon}) \\text{ or } \\text{diameter } \\Omega(n^\\epsilon)",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem A.1. For every sufficiently small constant \\(\\epsilon>0\\), there exists an infinite family of n-node, m-edge directed graphs G, where \\(m\\in\\left[n,n^{2-4\\epsilon^{1/2}+\\epsilon}\\right]\\), such that every Steiner reachability shortcut of G has size at least \\(\\tilde{\\Omega}(m^{1-\\epsilon})\\) or diameter at least \\(\\Omega(n^\\epsilon)\\).",
+      "page": 27
+    },
+    {
+      "problem": "Steiner reachability shortcut",
+      "problem family": "[VXX24] construction",
+      "bound": "|V_+| = O(r^4), |E_+| = O(r^5), \\ \\forall P\\in\\mathcal{P}: \\text{hopbound } 2",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "VXX24 lower bound: any O(m)-size shortcut has diameter \\Omega(n^{1/5})",
+      "quote": "Theorem C.3 (Steiner Shortcut for [VXX24] Construction). Graph G and set of paths P admit a Steiner reachability shortcut set H such that 1. H has O(r^4)=O(|V(G)|/r) Steiner nodes and O(r^5)=O(|E(G)|) edges, and 2. For every \\(s\\rightsquigarrow t\\) path \\(P\\in\\mathcal{P}\\), there exists an \\(s\\rightsquigarrow t\\) path of length two in \\(G\\cup H\\).",
+      "page": 33
+    }
+  ],
+  "paper": "2510.24954",
+  "usage": {
+    "prompt_tokens": 37731,
+    "completion_tokens": 11439,
+    "total_tokens": 49170,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10154,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

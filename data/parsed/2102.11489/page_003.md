@@ -1,0 +1,20 @@
+<tbc>et al. \[CDR86\]; moreover, the log_w_ part of the depth is needed even for propagating the comparison result to all bits of the output. Our sorting circuit leverages _non-comparison-based_ techniques, and moreover it does _not_ preserve stability -- as mentioned earlier, forgoing the comparison-based restriction and the stability requirement is inherent even for the 1-bit key special case.
+
+## 1.2 Technical Highlights
+
+**Blueprint and challenges.** To get our main results, we need two major stepping stones:
+
+1. _Linear-sized, logarithmic-depth compaction circuit._ First, we solve the problem for the 1-bit special case. We show how to get a 1-bit sorting circuit (also called a compaction circuit) that is linear in size (modulo polylog<sup>∗</sup> factors) and logarithmic in depth. In comparison, the prior state-of-the-art \[ALS21\] is also linear in size (modulo polylog<sup>∗</sup> factors) but suffers from \((\mathrm{log}n)^{\omega(1)}\) depth.<tbc>
+
+2. 1_-bit to k-bit upgrade._ Next, our goal is to upgrade 1-bit sorting to _k_-bit sorting. Since any _o(n_log_n_)-sized circuit that sorts 1-bit keys inherently cannot be stable \[AFKL19,ALS21\], we cannot use classical techniques such as Radix sort to get _k_-bit sorting from 1-bit sorting. To date, the only known technique for accomplishing the 1-bit to _k_-bit upgrade _without relying on stability_ was a clever two-parameter recursion trick suggested by Lin, Shi, and Xie \[LSX19\]. Unfortunately, their approach incurs at least polylogarithmic depth. We propose a brand new paradigm for performing the 1-bit to _k_-bit upgrade, elaborated below.
+
+We now explain at a very high level the novel ideas that allow us to overcome these challenges.
+
+**Technical highlight: a brand new 1-bit to** _k_**-bit upgrade.** Given a linear-sized, logarithmic- depth circuit that sorts 1-bit keys, we want to leverage it to construct a _k_-bit sorting circuit that is _O(k_) times larger in size, and without blowing up the depth. As mentioned, the only known prior technique \[LSX19\] for performing this upgrade inherently suffers from poly-logarithmic depth, and it seems unlikely that we can hope to overcome this depth barrier if we stick to the known technical frameworks. Therefore, our approach completely departs from prior works.
+
+Our novel idea lies in using the famous AKS construction in a non-blackbox manner. Specifically, we propose a new building block called a _nearly ordered segmenter_ which can be constructed by running the beginning 6_k=o_(log_n_) layers of the AKS circuit. We prove that such a nearly ordered segmenter can _partially sort_ an input array in the following sense: if we divide the outcome into 2<sup>3_k_</sup> segments, then, inside each segment, at most \(\frac{1}{2^{8k}}\) fraction of elements do not belong to the current segment. This new abstraction "nearly ordered segmenter" is of independent interest and may be useful in other applications.
+
+Now, imagine that we apply a nearly ordered segmenter to an input array with a small number of distinct keys (specifically, 2_<sup>k</sup>_ distinct keys), resulting in 2<sup>3_k_</sup> segments, where for each segment, only a small fraction of elements are in the wrong segment. Since there are only 2_<sup>k</sup>_ distinct keys but as many as 2<sup>3_k_</sup> segments, most of the segments would have only a single key had the array been completely sorted. This means that if we apply the nearly ordered segmenter to an input array with only 2_<sup>k</sup>_ distinct keys, then we can prove something even stronger about the outcome: in fact, only a small fraction of the elements are _misplaced_ in the sense that they do not belong to the current _position_ (had the array been completely sorted).
+
+If we could somehow extract these misplaced elements, sort them, and then route the sorted result back into the misplaced positions, then we could fully sort the input! Indeed, this is what we do, and we accomplish this with the help of the compaction circuit. How to use the compaction<tbc>
+

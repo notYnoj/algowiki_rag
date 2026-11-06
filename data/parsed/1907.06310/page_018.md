@@ -1,0 +1,24 @@
+<tbc>defined recursively in the standard way starting respectively from the priority functions for _T_ and move-to-root(_T,y_). Requests subsequent to _y_ have the same after-trees in both executions, so we may assume without loss of generality that \(y\notin Y\) and _k\>_0.
+
+By Theorem 7.3, when \(Y\neq\emptyset\) the keys in _T_\\_I_ comprise a rooted hull in _R_ and _S_. (If \(Y=\emptyset\) then _T_\\_I_ is empty.) These keys have the same priorities in both _R_ and _S_, meaning the two rooted hulls are identical. The window subtree _J_ has the same keys as _K_, none of which are requested in _Y_ , meaning these keys have their initial priorities in _R_ and _S_. The only key with differing priority in _J_ and _K_ is _y_, which has maximal priority among keys in _K_. Therefore, _K_=move-to-root(_J,y_).
+
+If \(z\notin I\) then \(k'=k\) and \(\ell_R(z)=\ell_S(z)\), so we may assume \(z\in I\) without loss of generality. If _J=R_ set _J_<sup>+</sup>=_J_, otherwise set _J_<sup>+</sup> to be the subgraph in _R_ comprising the union of keys in _J_ with the window boundary for _y_ determined by _Y_ of which the root of _J_ is a child in _R_. Define _K_<sup>+</sup> analogously for _K_ in _S_. The access path to root(_J_<sup>+</sup>) in _R_ is identical to the access path for root(_K_<sup>+</sup>) in _S_ whenever _Y_ is nonempty, and the access paths to this key in _R_ and _S_ are identical. Thus, \(\ell_R(root(J^+))=\ell_S(root(K^+))\) while \(\ell_R(z)=\ell_R(root(J^+))+\ell_{J^+}(z)-2\) and \(\ell_S(z)=\ell_S(root(K^+))+\ell_{K^+}(z)-2\), meaning \(\ell_R(z)-\ell_S(z)=\ell_{J^+}(z)-\ell_{K^+}(z)\).
+
+Let _P_ be the be the smallest rooted hull in _J_ containing the neighborhood of _z_ in _J_. Since Move-to-Root is a natural algorithm, the subtrees hanging from _P_ are unaffected by executing move-to-root(_J,y_), and so these subtrees are identically arranged in _K_. Therefore, we may assume with no loss of generality that either \(z\in P\) or that the parent of _z_ in _R_ is defined and lies in _P_\\{_y_}.
+
+Let _w_<sub>1</sub>_,...,w_<sub>_k_-1</sub> be the first _k_-1 crossing nodes for _y_ in _J_ in increasing order of depth and let _w_<sub>0</sub>=_y_. Since _J=K_ and _R=S_ if _y_ is the root of _J_, we may may assume without loss of generality that _y_ has a parent in _J_. Thus, let _w<sub>k</sub>_ be the child of _y_ in the same direction as _y_ with respect to its parent in _J_ and let _w_<sub>_k_+1</sub> be the child of _y_ in the opposite direction. Define \(j=\ell_J(w_c)\) where _c_ is the largest integer for which _w<sub>c</sub>_ is an ancestor of _z_ in _J_ if \(z\neq y\) and otherwise _c_=0. Let _D_ be the indicator for \(Y\neq\emptyset\), let _A_ be the indicator for \(z\notin P\), let _B_ be the indicator for \(z\neq w_c\), let _G_ be the indicator for \(\ell_J(y)<\ell_{J^+}(y)\) and let _F_ be the indicator for \(\ell_K(z)<\ell_{K^+}(z)\). (An _indicator_’s value is one when its condition is true and zero otherwise.) By Theorem 7.1 and case analysis,
+
+\(\ell_{J^+}(z)=j+\left\{\begin{array}{ c c }
+G & c=0 \\
+H & c=1 \\
+B(1+A)+G & \text{otherwise}
+\end{array}\right.\text{and}\ell_{K^+}(z)=\left\{\begin{array}{ c c }
+1+D & c=0 \\
+2+F+B(1+A) & 1\le c\le 2 \\
+3+F+A & \text{otherwise},
+\end{array}\right.\)
+
+where _H=A_(1-_B_)(1+_D_(1-_G_))+_B_(1+_A+G_)+(1-_A_)(1-_B)D_. (See Figure 6.)
+
+Note that if _c_=1 then _F=G_, and if _c_=2 then _F=D_(1-_G_), and if _G_=1 or _F_=1 then _D_=1. Combining these facts with some case analysis reveals that if \(1\le j\le 2\) then \(\ell_{J^+}(z)-\ell_{K^+}(z)=0\), and otherwise \(\ell_{J^+}(z)-\ell_{K^+}(z)\le j\). If _c_=0 then \(k'=0\) and _j=k_. Otherwise, we apply Theorem 7.1 to deduce the structure of the access path \(P'\) for _y_ in \(J'\). If _c_=1 then \(P'\) is a subgraph of _P_ and \(k'\le k\). If _z_ is in the subtree rooted at _w<sub>k</sub>_ then \(P'\) is a right spine ending at _y_ and if _z_ is in the subtree rooted at _w_<sub>_k_+1</sub> then \(P'\) is a left spine ending at _y_. Therefore when _z_ is a strict descendant of _y_, if _k_=2 and _c_=3 then \(k'=1\) since _w_<sub>_k_+1</sub> and the parent of _y_ in _P_ are on the same side of _y_ in symmetric order, and otherwise \(k'\le 2\) and \(j\le k+1\). Otherwise, \(2\le c\le k-1\), in which case if \(z\in P\) then set _q_ to be the child of _z_ child in _P_ and otherwise set _q_ to be the parent of _z_ in _P_. Let _U_ be a right spine comprising the strict ancestors of _q_ in _P_ that are less than _y_ and let _V_ be a left spine of the strict ancestors of _q_ in _P_ that are greater than _y_, and let _M_ be the path from _q_ to _y_ in _P_. If _z\<y_ then \(P'\) results from attaching _M_ as the left subtree of the node with smallest key in _V_ , and if _z\>y_ then _y_ then \(P'\) results from attaching _M_ as the right subtree of the node with largest key in _U_. Thus, \(k'\le k-j+2\). In all cases, \(\ell_{J^+}(z)-\ell_{K^+}(z)\) is at most \(4(k-k')\).
+

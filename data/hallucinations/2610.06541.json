@@ -1,0 +1,121 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Bit-truncation product approximation of continuous unitary evolution",
+      "problem family": "Unitary evolution discretization",
+      "bound": "\\|W-U(T)\\|\\le\\sqrt{2}\\sigma 2^{-k}T",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\"Theorem\" A. Let H be a regulated, \\(\\sigma\\)-sparse Hermitian family on \\([0,T]\\), with evolution U starting at the identity. If its entrywise k-bit truncation \\(H^{(k)}\\) is piecewise constant, the induced product W, one exponential per constant piece, satisfies \\(\\|W-U(T)\\|\\le\\sqrt{2}\\sigma 2^{-k}T\\).",
+      "page": 2
+    },
+    {
+      "problem": "Midpoint product approximation with bounded total variation",
+      "problem family": "Unitary evolution discretization",
+      "bound": "O(T\\ell/\\varepsilon) factors and O(log_2(\\sigma T/\\varepsilon)) bits",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\"Theorem\" B. For a regulated, \\(\\sigma\\)-sparse Hermitian family H on \\([0,T]\\) with total variation \\(0<\\ell<\\infty\\), holding truncated midpoint samples between equal-variation checkpoints gives a product within \\(\\varepsilon\\) of U(T), with \\(O(T\\ell/\\varepsilon)\\) factors and \\(O(log_2(\\sigma T/\\varepsilon))\\) bits as \\(\\varepsilon\\rightarrow 0\\).",
+      "page": 2
+    },
+    {
+      "problem": "Unit-step product to continuous evolution comparison",
+      "problem family": "Unitary evolution discretization",
+      "bound": "\\|e^{-iH(1)/2}W_Te^{iH(0)/2}-U(T)\\|=O_{\\gamma,\\bar{w}}((L+L^2+\\nu)/T)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "\"Theorem\" C. For integer \\(T\\ge 1\\), let H be a twice continuously differentiable Hermitian family on \\([0,1]\\) with \\(\\|H'\\|\\le L\\) and \\(\\|H''\\|\\le 2\\nu\\), U its evolution under H(t/T) starting at the identity, and \\(W_T=e^{-iH((T-1)/T)}\\cdots e^{-iH(1/T)}e^{-iH(0)}\\). Suppose each interior sample H(j/T), 0<j<T, has spectrum in an interval of length at most \\(\\bar{w}\\), and its nonzero eigenvalue differences lie at distance at least \\(\\gamma>0\\) from every nonzero multiple of \\(2\\pi\\), with L, \\(\\nu\\), \\(\\gamma\\), and \\(\\bar{w}\\) independent of T. Then \\(\\big\\|e^{-iH(1)/2}W_Te^{iH(0)/2}-U(T)\\big\\|=O_{\\gamma,\\bar{w}}((L+L^2+\\nu)/T)\\).",
+      "page": 3
+    },
+    {
+      "problem": "Fine-step adiabatic theorem via midpoint products",
+      "problem family": "Adiabatic theorem",
+      "bound": "n\\le 1+16\\ell C/\\delta^2 unitary factors, leakage \\|(1-Q)WP\\|\\le 2C/T",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Corollary 3.15. ... Then W has (k+1)-bit generators, \\(n\\le 1+4\\ell T^2/C\\) unitary factors, and leakage \\(\\|(1-Q)WP\\|\\le 2C/T\\). For a target leakage \\(\\delta>0\\) and \\(T=2C/\\delta\\), provided \\(\\delta^2\\le 4\\sqrt{2}\\sigma C\\), the entry precision and the number of unitaries obey \\(k+1\\le 2log_2(1/\\delta)+log_2(4\\sqrt{2}\\sigma C)+2\\), \\(n\\le 1+16\\ell C/\\delta^2\\).",
+      "page": 10
+    },
+    {
+      "problem": "Explicit unit-step comparison with frame corrections",
+      "problem family": "Unitary evolution discretization",
+      "bound": "\\|W_T-e^{iH(1)/2}U(T)e^{-iH(0)/2}\\|\\le(c_0L+c_1L^2+c_2\\nu)/T",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 6.4. Let T, H, U, and W_T be as in Definition 6.1. Suppose that H is differentiable, \\(\\|H'\\|\\le L\\), \\(\\|H'(s)-H'(s')\\|\\le 2\\nu|s-s'|\\), and each sample H(j/T), 0<j<T, is \\(\\gamma\\)-separated of width at most \\(\\bar{w}\\) (Definition 2.8). Then \\(\\left\\|W_T-e^{iH(1)/2}U(T)e^{-iH(0)/2}\\right\\|\\le\\frac{c_0L+c_1L^2+c_2\\nu}{T}\\), with c_i from Definition 6.3, or c_i(w) for width at most w<2\\pi.",
+      "page": 15
+    },
+    {
+      "problem": "Discrete adiabatic theorem for unit-step products",
+      "problem family": "Adiabatic theorem",
+      "bound": "\\|(1-Q)W_TP\\|\\le(J_m(\\|H'\\|,\\|H''\\|,g)+c_0L+c_1L^2+c_2\\nu)/T",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Corollary 6.7. ... Then the product W_T of (6.1) satisfies \\(\\|(1-Q)W_TP\\|\\le\\frac{J_m(\\|H'\\|,\\|H''\\|,g)+c_0L+c_1L^2+c_2\\nu}{T}\\), with the Jansen-Ruskai-Seiler coefficient J_m of Definition 3.14 and c_i from Definition 6.3.",
+      "page": 16
+    },
+    {
+      "problem": "Quantum linear systems via unit-step adiabatic product",
+      "problem family": "Quantum linear systems",
+      "bound": "\\|(1-P(1))W_TP(0)\\|\\le 45\\kappa/T, \\text{so } \\lceil 45\\kappa/\\delta\\rceil \\text{ unit steps give leakage at most } \\delta",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(\\kappa/\\delta) via discrete adiabatic theorem",
+      "quote": "Corollary 6.9. ... If \\kappa>1, then, for every integer T\\ge 1, the product (6.1) satisfies \\(\\|(1-P(1))W_TP(0)\\|\\le\\frac{5J_1(|f'|,|f''|,g)}{4T}\\le\\frac{45\\kappa}{T}\\), with the Jansen-Ruskai-Seiler coefficient J_1 of Definition 3.14. If \\kappa=1, then (1-P(1))W_TP(0)=0. Thus, for \\delta>0, \\lceil 45\\kappa/\\delta\\rceil unit steps give leakage at most \\delta.",
+      "page": 17
+    },
+    {
+      "problem": "Walk logarithm comparison via free spectral arc",
+      "problem family": "Quantum walks",
+      "bound": "\\|W_T-e^{i\\Lambda(1)/2}U_\\Lambda(T)e^{-i\\Lambda(0)/2}\\|\\le(c_0L_\\Lambda+c_1L_\\Lambda^2+c_2\\nu_\\Lambda)/T, \\ L_\\Lambda=\\mathcal{B}L, \\ \\nu_\\Lambda=\\mathcal{B}(\\nu+(\\frac{1}{2}+\\mathcal{B}')L^2)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 6.11. Let T\\ge 1 be an integer, let w<2\\pi, and let W be differentiable and unitary on [0,1], with \\|W'\\|\\le L and \\|W'(s)-W'(s')\\|\\le 2\\nu|s-s'|. Suppose that some open arc of length 2\\pi-w meets the spectrum of no W(s). Then there is a differentiable Hermitian path \\Lambda on [0,1] with e^{-i\\Lambda}=W such that, for the product W_T of the compatible walk and evolution U_\\Lambda of \\Lambda(t/T), \\big\\|W_T-e^{i\\Lambda(1)/2}U_\\Lambda(T)e^{-i\\Lambda(0)/2}\\big\\|\\le\\frac{c_0L_\\Lambda+c_1L_\\Lambda^2+c_2\\nu_\\Lambda}{T}, where c_i=c_i(w), L_\\Lambda=\\mathcal{B}L, and \\nu_\\Lambda=\\mathcal{B}(\\nu+(\\frac{1}{2}+\\mathcal{B}')L^2), with the Bernoulli majorant \\mathcal{B} of Definition 2.8 and its derivative \\mathcal{B}' evaluated at w.",
+      "page": 17
+    },
+    {
+      "problem": "Quantum linear systems via rescaled qubitized walk",
+      "problem family": "Quantum linear systems",
+      "bound": "\\|(I-P(1))W((T-1)/T)\\cdots W(0)P(0)\\|\\le K\\kappa/T, \\text{so } \\lceil K\\kappa/\\delta\\rceil \\text{ steps suffice; each attempt uses } N+2\\le(2K+3)\\kappa/\\delta \\text{ controlled O queries}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(\\kappa/\\delta) query count [Costa et al. [8]]",
+      "quote": "Corollary A.2. ... The walk W(s) of Definition A.1 uses one controlled O query per step. For the constant K>0 of Lemma A.4: (1) For every integer T\\ge 1, \\|(I-P(1))W((T-1)/T)\\cdots W(0)P(0)\\|\\le K\\kappa/T, where P(s) projects onto the line through F_sL([(1-f(s))I+f(s)A]^{-1}b,0), a+i eigenvector of W(s). Thus, for 0<\\delta\\le 1, \\lceil K\\kappa/\\delta\\rceil steps suffice for leakage at most \\delta. (2) For 0<\\delta\\le 1, put N=\\lceil 2K\\kappa/\\delta\\rceil. ... Each attempt uses N+2\\le(2K+3)\\kappa/\\delta controlled O queries, excluding preparing b, implementing Q_b, and operations built from V .",
+      "page": 21
+    },
+    {
+      "problem": "Explicit constant K for qubitized walk quantum linear systems",
+      "problem family": "Quantum linear systems",
+      "bound": "K<3.1\\cdot 10^4",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Lemma A.4. ... (4) At width 5\\pi/3, \\mathcal{B}'\\le 6.6027, c_0\\le 0.6538, c_1\\le 0.3577, c_2\\le 0.4872, and K<3.1\\cdot 10^4.",
+      "page": 24
+    }
+  ],
+  "paper": "2610.06541",
+  "usage": {
+    "prompt_tokens": 36435,
+    "completion_tokens": 12517,
+    "total_tokens": 48952,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9727,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

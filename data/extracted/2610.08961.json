@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maximum Independent Set in a k-polymatroid (MISkP)",
+      "problem family": null,
+      "bound": "\\frac{2}{k+1}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": "((2/k)-\\epsilon)-approximation",
+      "quote": "In this paper, we study this local-swap heuristic with j=1 and obtain a tight approximation ratio of 2/(k+1).",
+      "page": 2
+    }
+  ],
+  "paper": "2610.08961",
+  "usage": {
+    "prompt_tokens": 6362,
+    "completion_tokens": 2811,
+    "total_tokens": 9173,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2686,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

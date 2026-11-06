@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Delay-Constrained Maximum Concurrent Flow (DCMCF)",
+      "problem family": "multi-commodity flow",
+      "bound": "\\text{strongly NP-hard}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": "weakly NP-hard",
+      "quote": "Theorem 2.1. DCMCF is strongly NP-hard, even when there are at most 3 commodities, all sharing the same source and destination, and when every path from the source to the destination can potentially be used by each commodity.",
+      "page": 15
+    },
+    {
+      "problem": "Delay-Constrained Maximum Concurrent Flow (DCMCF)",
+      "problem family": "multi-commodity flow",
+      "bound": "\\text{DCMCF}_{\\text{env}} \\text{ is a second-order cone program}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "From Proposition 3.5, one can observe that the DCMCF_env problem can be formulated as a second-order cone program.",
+      "page": 22
+    },
+    {
+      "problem": "Delay-Constrained Maximum Concurrent Flow (DCMCF)",
+      "problem family": "multi-commodity flow",
+      "bound": "\\text{DCMCF}_{\\text{env}} \\text{ dominates } \\text{DCMCF}_{\\text{red}}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "DCMCF_red (disjunctive programming relaxation from [16])",
+      "quote": "Proposition 4.1. DCMCF_env dominates DCMCF_red.",
+      "page": 26
+    },
+    {
+      "problem": "Delay-Constrained Maximum Concurrent Flow (DCMCF)",
+      "problem family": "multi-commodity flow",
+      "bound": "\\frac{1}{\\alpha\\beta|K|(|P|-1)+1} \\text{ approximation in polynomial time, with } \\beta=\\frac{max_{k\\in K}b^k}{min_{k\\in K}b^k}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 5.2. Given a scalar \\alpha>1, it is possible to build a \\frac{1}{\\alpha\\beta|K|(|P|-1)+1} approx imation of the DCMCF problem in polynomial time, with \\beta=\\frac{max_{k\\in K}b^k}{min_{k\\in K}b^k}.",
+      "page": 33
+    }
+  ],
+  "paper": "2609.05068",
+  "usage": {
+    "prompt_tokens": 36941,
+    "completion_tokens": 10061,
+    "total_tokens": 47002,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9495,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

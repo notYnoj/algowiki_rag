@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Ordinal optimization with exact pairwise comparisons, one selected design, alignment level one",
+      "problem family": "Quantum ordinal optimization",
+      "bound": "C_q(n,r) = 1 - \\frac{\\binom{n-r}{q+1}}{\\binom{n}{q+1}} = B(n,r,q+1)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For every classical comparison budget smaller than the number of designs, we prove that a knockout among uniformly sampled designs attains the optimum.",
+      "page": 1
+    },
+    {
+      "problem": "Quantum ordinal optimization with coherent pairwise comparisons",
+      "problem family": "Quantum ordinal optimization",
+      "bound": "rank law polynomial degree at most \\min(2q, n-1)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "degree at most q for classical algorithms",
+      "quote": "its rank law w_t=Pr[x_I=t], t\\in[n], is independent of the order and satisfies w_t=p(t) for a polynomial p of degree at most min(2q,n-1).",
+      "page": 10
+    },
+    {
+      "problem": "Quantum ordinal optimization with one comparison",
+      "problem family": "Quantum ordinal optimization",
+      "bound": "Q_1(n,r) = \\frac{r}{n} + \\frac{r(n-r)}{n(n-1)}\\zeta, \\text{ where } \\zeta \\text{ is the smallest positive root of } F_{n,r}(z) = 2nhz^3 + 3(nk-h^2)z^2 - 4(2n-3)hz - 6mk",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "C_1(n,r) = \\frac{r}{n} + \\frac{r(n-r)}{n(n-1)} \\text{ (one classical comparison)}",
+      "quote": "Then Q_1(n,r) = \\frac{r}{n} + \\frac{r(n-r)}{n(n-1)}\\zeta.",
+      "page": 11
+    },
+    {
+      "problem": "Selecting the best design with one quantum comparison",
+      "problem family": "Quantum ordinal optimization",
+      "bound": "Q_1(n,1) = \\frac{3(n-1) + \\sqrt{13n^2 - 18n + 9}}{2n^2}, \\quad nQ_1(n,1) > 3 = nC_2(n,1) \\text{ exactly when } n > 9",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "nC_2(n,1) = 3 \\text{ (two classical comparisons)}",
+      "quote": "The equivalent blind-pick size nQ_1(n,1) increases with n toward (3+\\sqrt{13})/2 \\approx 3.3028, and for n \\ge 3, nQ_1(n,1) > 3 = nC_2(n,1) exactly when n > 9, with equality at n = 9.",
+      "page": 12
+    },
+    {
+      "problem": "Quantum ordinal optimization with fixed good-enough fraction",
+      "problem family": "Quantum ordinal optimization",
+      "bound": "\\lim_{n\\to\\infty} Q_1(n, \\lfloor \\varrho n \\rfloor) = \\varrho + \\varrho(1-\\varrho)\\zeta(\\varrho)",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "classical limit 1 - (1-\\varrho)^2",
+      "quote": "Then \\lim_{n\\rightarrow\\infty} Q_1(n,r_n) = F_1(\\varrho) = \\varrho + \\varrho(1-\\varrho)\\zeta(\\varrho), where \\zeta(\\varrho) is the smallest positive root of H_\\varrho(z) = 2(1-2\\varrho)z^3 + 12\\varrho(1-\\varrho)z^2 - 8(1-2\\varrho)z - 6 = 0.",
+      "page": 12
+    }
+  ],
+  "paper": "2610.15791",
+  "usage": {
+    "prompt_tokens": 18074,
+    "completion_tokens": 8917,
+    "total_tokens": 26991,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7976,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

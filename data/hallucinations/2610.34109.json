@@ -1,0 +1,131 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Disk active set complexity for 2D geographic disks",
+      "problem family": "Approximate nearest neighbor search",
+      "bound": "|\\mathcal{A}(\\mathcal{D})|=\\Omega(n^2) \\text{ (and } |\\mathcal{A}(\\mathcal{D})|\\le O(n^4)\\text{)}",
+      "bound_type": "lower bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The family $\\mathcal{A}(\\mathcal{D})=\\{\\mathcal{A}(c):c=(g,r),g\\in\\mathbb{S}^2,r\\ge 0\\}$ of distinct disk active sets satisfies $|\\mathcal{A}(\\mathcal{D})|\\le\\sum_{i=0}^4\\genfrac(){pt}{2}{n}{i}=O(n^4)$, and reaches $|\\mathcal{A}(\\mathcal{D})|=\\Omega(n^2)$ on worst-case n-object collections.",
+      "page": 3
+    },
+    {
+      "problem": "Contiguous ordering of 2D disk active sets",
+      "problem family": "Approximate nearest neighbor search",
+      "bound": "No linear order makes $\\mathcal{A}(c)$ contiguous for all disks $c$ (even for 3 objects)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Place three objects $V=\\{1,2,3\\}$ at the vertices of a small equilateral spherical triangle on $\\mathbb{S}^2$. A disk centered at the midpoint of any pair $\\{i,j\\}$ with radius $\\Delta(s_i,s_j)/2$ admits only $\\{i,j\\}$; because the first and last elements in any permutation of $V$ are non-contiguous, no linear order makes $\\mathcal{A}(c)$ contiguous for all disks $c$.",
+      "page": 3
+    },
+    {
+      "problem": "Strong connectivity of recovery graph $\\mathcal{H}_\\ell(c)$",
+      "problem family": "Proximity graph index",
+      "bound": "$\\mathcal{H}_\\ell(c)$ is strongly connected iff $\\ell\\ge\\ell_{\\mathrm{SC}}(c)$, where $\\ell_{\\mathrm{SC}}(c)=\\max_{\\varnothing\\neq S\\subseteq\\mathcal{A}(c)}\\min_{u\\in S,v\\in C_u(c)\\backslash S}\\mathrm{rank}_{u,c}(v)$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any graph $G=(V,E)$ of row width $B$, disk $c$, and budget $\\ell\\ge 1$: ... (c) for $|\\mathcal{A}(c)|\\ge 2$, $\\mathcal{H}_\\ell(c)$ is strongly connected if and only if $\\ell\\ge\\ell_{\\mathrm{SC}}(c)$, where the cut rank is $\\ell_{\\mathrm{SC}}(c)=\\mathrm{max}_{\\varnothing\\neq S\\subseteq\\mathcal{A}(c)}\\mathrm{min}_{u\\in S,v\\in C_u(c)\\backslash S}\\mathrm{rank}_{u,c}(v)$ (with inner minimum $\\infty$ if no edge of $\\mathcal{H}_\\infty(c)$ leaves $S$).",
+      "page": 4
+    },
+    {
+      "problem": "Coordinate-fiber closure under disk filters",
+      "problem family": "Geo-filtered approximate nearest neighbor search",
+      "bound": "$F(z)\\cap\\mathcal{A}(c)\\neq\\emptyset \\iff F(z)\\subseteq\\mathcal{A}(c)$",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every disk $c=(g,r)$ and coordinate $z$, $F(z)\\cap\\mathcal{A}(c)\\neq\\emptyset\\Longleftrightarrow F(z)\\subseteq\\mathcal{A}(c)$. Because all $v\\in F(z)$ have the same distance $\\Delta(z,g)$ to $g$, a disk never splits a fiber (Figure 2(a)), and the induced fiber subgraph $G[F(z)]$ is identical under every disk that admits $z$.",
+      "page": 4
+    },
+    {
+      "problem": "Strong connectivity decomposition of active projection",
+      "problem family": "Proximity graph index",
+      "bound": "$G[\\mathcal{A}(c)]$ is strongly connected if intra-fiber connectivity and coordinate-quotient connectivity hold",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any directed graph $G=(V,E)$ and disk $c$, $G[\\mathcal{A}(c)]$ is strongly connected if: (i) (Intra-fiber connectivity) $G[F(z)]$ is strongly connected for every active fiber $F(z)\\subseteq\\mathcal{A}(c)$; and (ii) (Coordinate-quotient connectivity) the quotient graph formed by contracting each active fiber $F(z)\\subseteq\\mathcal{A}(c)$ into a single site vertex $z$ is strongly connected.",
+      "page": 4
+    },
+    {
+      "problem": "Polylogarithmic-degree strong connectivity under marked-site model",
+      "problem family": "Geo-filtered approximate nearest neighbor search",
+      "bound": "$B_g\\ge a_\\alpha(h_c+1)=\\Theta(\\log^2(nM/\\delta))$, $K_f\\ge C_f\\log(3nM/\\delta)$ guarantees $\\mathcal{H}_\\infty(c)=G[\\mathcal{A}(c)]$ strongly connected with probability $\\ge 1-\\delta$",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Under the regular marked-site model (Appendix A.4), for any disk $c$ with $M\\pi_c\\ge \\log(6/\\delta)$, setting quotas $B_g\\ge a_\\alpha(h_c+1)=\\Theta(\\log^2(nM/\\delta))$, $K_f\\ge C_f\\log(3nM/\\delta)$ guarantees that: ... (c) consequently, $\\mathcal{H}_\\infty(c)=G[\\mathcal{A}(c)]$ is strongly connected ($\\ell_{\\mathrm{SC}}(c)\\le B$) with probability $\\ge 1-\\delta$ (and across $Q$ disks upon replacing $\\delta$ by $\\delta/Q$).",
+      "page": 5
+    },
+    {
+      "problem": "Greedy routing and approximation on compact disks",
+      "problem family": "Geo-filtered approximate nearest neighbor search",
+      "bound": "Greedy routing reaches $v$ in at most $\\lceil \\log_\\alpha(D_x/\\varepsilon_\\alpha)\\rceil$ hops; local minimum satisfies $d(x_q,x_u)\\le\\frac{\\alpha+1}{\\alpha-1}\\min_{v\\in\\mathcal{A}(c)}d(x_q,x_v)$",
+      "bound_type": "approximation",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "On the event of Theorem 3.7, if $\\mathrm{diam}(\\Omega_c)\\le\\rho_c$ and $K_f\\ge|F(z)|-1$ for $F(z)\\subseteq\\mathcal{A}(c)$, then for every $u,v\\in\\mathcal{A}(c)$ with $d(x_u,x_v)>\\varepsilon_\\alpha$, $u$ has an active out-neighbor $w\\in F(s_v)$ satisfying $d(x_w,x_v)\\le d(x_u,x_v)/\\alpha$. Greedy routing therefore reaches $v$ in at most $\\lceil \\log_\\alpha(D_x/\\varepsilon_\\alpha)\\rceil$ hops, and any local minimum $u$ for query $x_q$ satisfies $d(x_q,x_u)\\le\\frac{\\alpha+1}{\\alpha-1}\\min_{v\\in\\mathcal{A}(c)}d(x_q,x_v)$.",
+      "page": 5
+    },
+    {
+      "problem": "Dual-source row construction guarantees",
+      "problem family": "Proximity graph index",
+      "bound": "$\\mathrm{row}(u)$ contains at most $B$ valid IDs ordered by $\\prec_u$ ($4nB$ bytes in total); witness and coverage guarantees",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For $B_v+B_g\\le B$, Algorithm 1 guarantees that: (i) every candidate $v\\in F(z)\\backslash\\{u\\}$ examined in lines 7-11 is either stored in $\\mathrm{row}(u)$ or witnessed by some $w\\in\\mathrm{row}(u)\\cap F(z)$ with $d(x_v,x_w)\\le d(x_u,x_v)/\\alpha$; (ii) if $L_u(\\rho)\\le B_g$, every site $z\\neq s_u$ with $\\Delta(s_u,z)\\le\\rho$ has $\\mathrm{row}(u)\\cap F(z)\\neq\\varnothing$; and (iii) $\\mathrm{row}(u)$ contains at most $B$ valid IDs ordered by $\\prec_u$ ($4nB$ bytes in total).",
+      "page": 6
+    },
+    {
+      "problem": "Fixed-width row construction for REACH index",
+      "problem family": "Proximity graph index",
+      "bound": "Algorithm 1 constructs one width-$B$ row per vertex by merging global vector candidates with a fiber-aware geographic stream",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Offline, each vertex merges globally closest vector candidates with a nearest-first geographic stream into one row; online, beam search evaluates vector distances only for the first $\\ell$ active entries of each visited row.",
+      "page": 1
+    },
+    {
+      "problem": "Two-phase first-$\\ell$-active expansion for query processing",
+      "problem family": "Geo-filtered approximate nearest neighbor search",
+      "bound": "Beam search traverses $\\mathcal{H}_\\ell(c_q)$ with at most $\\min\\{\\ell,B\\}$ vector evaluations per expanded vertex",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "In Phase 1 (Lines 1-7), the algorithm scans $\\mathrm{row}(u)$ sequentially, testing each neighbor $v$ against disk $c_q$ ... the scan stops once $j=\\ell$. In Phase 2 (Lines 8-10), $D$-dimensional Euclidean distances $d(x_q,x_v)$ are computed only for $v\\in A$ (at most $\\min\\{\\ell,B\\}$ vector evaluations vs. at most $B$ scalar checks in Phase 1).",
+      "page": 6
+    },
+    {
+      "problem": "Spatial entry seeding",
+      "problem family": "Geo-filtered approximate nearest neighbor search",
+      "bound": "$O(n)$ grid directory collects $\\tau=16$ active seeds in $1.2\\mu\\mathrm{s}$ using $<0.4\\%$ of graph memory",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "To seed the beam, a $0.5^\\circ\\times 0.5^\\circ$ grid directory [14, 34] scans Chebyshev rings around $g_q$ to collect $\\tau=16$ active seeds in $1.2\\mu\\mathrm{s}$ using $<0.4\\%$ of graph memory (Appendix B.2; graph-descent seeding is compared in Exp-5).",
+      "page": 6
+    }
+  ],
+  "paper": "2610.34109",
+  "usage": {
+    "prompt_tokens": 28221,
+    "completion_tokens": 13629,
+    "total_tokens": 41850,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11070,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

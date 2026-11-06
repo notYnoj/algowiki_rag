@@ -1,0 +1,20 @@
+**Sparse loose compactor.** A sparse loose compactor is defined almost in the same way as a loose compactor (see Section 7), except that 1) it works only on 1/polylog(_n_)-sparse arrays; and 2) it compresses the array by 1/log_n_ factor without losing any real elements.
+
+More formally, let \(C_\triangledown>8\) be a sufficiently large universal constant. Given an input array **I** of length _n_ that is promised to be \(1/(\mathrm{log}n)^{C_\triangledown}\)-sparse, an (_n,w_)-sparse loose compactor outputs an array **O** whose length is \(\lfloor n/\mathrm{log}n\rfloor\), and moreover, the multiset of real elements in **O** must be equal to the multiset of real elements in **I**.
+
+In the remainder of the section, we will prove the following theorem:
+
+**Theorem 13.3** (Sparse loose compactor)**.** _There is an_ (_n,w)-sparse loose compactor circuit, with O(nw_) _generalized boolean gates and O(n_) _number of w-selector gates, and of depth O_(log_n)._
+
+## 13.3 Intuition
+
+Now that we have a 1/(log_n)<sup>C</sup>_-approximate tight compactor with \(O(nw)\cdot\mathsf{poly}(\mathrm{log}^*n-\mathrm{log}^*w)\) boolean gates and _O_(log_n_) depth, we can apply it to the input array, such that all but 1/polylog_n_ fraction of the elements are in the correct place. Next, we want to extract the 1/polylog_n_ fraction of misplaced elements to an array of length at most \(\Theta(n/\mathrm{log}n)\). If we can accomplish this, we can then use AKS to swap every misplaced 0 with a distinct misplaced 1 in the extracted short array, and reverse route the result back.
+
+Therefore, the crux is how to solve the sparse loose compaction problem, that is, we want to extract the 1/polylog_n_ fraction of misplaced elements to an output array of a fixed length of \(\lfloor n/\mathrm{log}n\rfloor\); besides containing the misplaced elements, the output array is otherwise padded with filler elements.
+
+**Bipartite expander graphs with poly-logarithmic degree.** We are inspired by the loose compactor construction of Asharov et al. \[ALS21\] which in turn builds on Pippenger’s self-routing superconcentrator \[Pip96\]. Asharov et al. \[ALS21\]’s construction relies on _d_-regular bipartite expander graph with constant degree _d_ and constant spectral expansion \(\epsilon\in(0,1)\). We will instead need a bipartite expander graph with _m_ vertices on the left and _m_ vertices on the right, where each vertex has degree _d_=log<sup>_c_<sub>1</sub></sup>_m_. The spectral expansion of the graph is \(\epsilon:=1/\mathrm{log}^{c_2}m\). In the above, _c_<sub>1</sub>_\>c_<sub>2</sub>_\>_1, and both _c_<sub>1</sub> and _c_<sub>2</sub> are suitable constants. Such a bipartite expander graph can be constructed using standard techniques. As we shall see later, using a polylogarithmic degree bipartite expander graph introduces additional complications to the algorithm in comparison with earlier works \[ALS21,Pip96\].
+
+**Intuition.** Given such a polylogarithmic-degree bipartite expander graph, where _L_ denotes the left vertices and _R_ denotes the right vertices, we construct a sparse loose compactor as follows. Throughout, our algorithm will operate on _super-elements_ rather than elements, where each super- element contains log_n_ consecutive elements in the input array. Each super-element is real if it contains at least one real element. If the fraction of real elements in the input is at most 1/(log_n)<sup>C</sup>_, then the fraction of real super-elements is at most 1/(log_n_)<sup>_C_-1</sup>. Henceforth let \(n':=n/\mathrm{log}n\) denote the number of super-elements.
+
+We divide the input array into chunks each containing only _d/_2 super-elements. Henceforth let \(m=2n'/d\) be the number of chunks. For simplicity, we assume that the numbers log_n_, _n/_log_n_, and \(2n'/d\) are integers in this informal overview, and we will deal with rounding issues in the formal technical sections. We will think of each of the _m_ chunks as a left vertex in the bipartite expander graph. If the chunk contains at most _d/_(2log<sup>2</sup>_m_) real super-elements, it is said to be sparse; else it is said to be dense.
+

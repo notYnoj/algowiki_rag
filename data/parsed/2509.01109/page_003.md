@@ -1,0 +1,22 @@
+• We propose GPSToken, an effective Gaussian parameterized spatially-adaptive tokenization method for image representation and generation. GPSToken leverages 2D Gaussian functions to dynamically model varying region shapes and positions, significantly reducing representation redundancy in simple regions while achieving finer representation in texture-rich regions.<tbc>
+
+• With GPSToken, we present a shape-texture decomposition method for image generation, reducing generation complexity, accelerating model training, and improving generation quality.<tbc>
+
+• Extensive experiments validate the effectiveness of GPSToken. Our work paves the way toward effective and efficient spatially-adaptive image representations, benefiting a variety of vision tasks.
+
+## 2 Related Work
+
+**Latent Generative Models**. Latent models have gained significant attention in visual generation. VAE \[20\] constructs continuous latent spaces with Gaussian priors, while VQVAE \[34\] couples codebooks with autoregressive modeling for discrete latent representation. VQGAN \[11\] incorporates adversarial training and transformer-based autoregressive components, further improving generative performance. MaskGiT \[3\] refines discrete latent generation through scheduled parallel sampling, significantly accelerating inference. LDM \[29\] enables high-resolution synthesis by embedding diffusion in compressed latent spaces. DiT \[26\] demonstrates transformer scalability in latent diffusion, and SiT \[23\] extends DiT with flexible interpolation, offering versatile distribution mapping.
+
+**Image Tokenization**. Image tokenization aims to create compact representations of high-dimensional images. Early methods often use VAE \[20\] for continuous tokenization and VQVAE \[34\] for discrete tokenization. VQVAE-2 \[28\] introduces a multi-scale structure, while RQVAE \[21\] builds extra codebooks to quantize residuals. DCAE \[7\] ensures quality at high compression ratios. MaskBit \[35\] proposes an embedding-free autoencoder using bit tokens. Recently, 1D grid-based tokenization has gained attention for more compact representations. TiTok \[38\] is among the first to convert 2D images into 1D latent tokens using masked transformers for encoding and decoding. SoftVQ \[6\] uses soft categorical posteriors to combine multiple codewords into one continuous token. FlexTok \[1\] and One-D-Piece \[24\] project 2D images into variable-length, ordered 1D sequences, allowing good reconstructions. MaeTok \[5\] leverages mask modeling to learn semantically rich and reconstructive latent spaces, highlighting the importance of space structure for generation.
+
+Despite the significant progress, grid-based methods remain inefficient and inflexible in capturing regions with varying content. To address this, we propose GPSToken, which parameterizes each token using a 2D Gaussian function to encode region positions and shapes, allowing spatially adaptive alignment with local texture complexity. Note that while GaussianToken \[9\] also uses 2D Gaussians, it simply replaces the original tokens in VQVAE with Gaussian distributions without spatial adaptivity. Besides, our GPSToken can decouple the visual generation process into layout synthesis and texture feature generation, while GaussianToken does not possess a corresponding generator.
+
+## 3 Methodology
+
+In this section, we first describe the parameterization of GPSToken using 2D Gaussian functions, then present the detailed training procedure for obtaining GPSToken. The resulting tokens can be transformed into pixel-domain images through a decoder. Finally, leveraging the inherent shape- texture decomposition property of GPSToken, we propose a two-stage image generation pipeline to accelerate the training of generative models while improving their performance.
+
+### 3.1 Gaussian Parameterized Tokenization
+
+Processing images in pixel space is computationally expensive and increases model complexity. To reduce cost, existing methods \[34, 28, 38, 5\] employ image tokenizers that project an image \(\mathbf{x}\in\mathbb{R}^{H\times W\times 3}\) into low-dimensional tokens \(\mathbf{z}\in\mathbb{R}^{l\times c}\), with \(l\checkmark H\times W\). However, current 2D/1D tokenizers are limited by rigid grid structures, restricting flexible representation of regions with varying sizes and contents. We propose **GPSToken**, a novel method that parameterizes tokens using 2D Gaussian functions, enabling adaptive and efficient modeling of complex visual regions.
+

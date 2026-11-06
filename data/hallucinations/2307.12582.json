@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Bounded Knapsack",
+      "problem family": "Knapsack",
+      "bound": "\\widetilde{O}(n+w_\\mathrm{max}^{12/5})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n + w_max^3) [Polak et al. ’21]",
+      "quote": "Theorem 1.1. _There is an_ \\(\\widetilde{O}(n+w_\\mathrm{max}^{12/5})\\)-time algorithm for Bounded Knapsack.",
+      "page": 3
+    },
+    {
+      "problem": "Bounded Knapsack",
+      "problem family": "Knapsack",
+      "bound": "\\widetilde{O}(n+p_\\mathrm{max}^{12/5})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n + p_max^3) [Polak et al. ’21]",
+      "quote": "Corollary 1.1. _There is an_ \\(\\widetilde{O}(n+p_\\mathrm{max}^{12/5})\\)-time algorithm for Bounded Knapsack.",
+      "page": 3
+    },
+    {
+      "problem": "Bounded Subset Sum",
+      "problem family": "Subset Sum",
+      "bound": "\\widetilde{O}(nw_\\mathrm{max})",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n + w_max^{5/3}) [Polak et al. ’21]",
+      "quote": "Theorem 1.2. _There is an_ \\(\\widetilde{O}(nw_\\mathrm{max})\\)-time algorithm for Bounded Subset Sum.",
+      "page": 3
+    },
+    {
+      "problem": "Bounded Subset Sum",
+      "problem family": "Subset Sum",
+      "bound": "\\widetilde{O}(n+w_\\mathrm{max}^{3/2})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\widetilde{O}(n + w_max^{5/3}) [Polak et al. ’21]",
+      "quote": "Theorem 1.3. _There is an_ \\(\\widetilde{O}(n+w_\\mathrm{max}^{3/2})\\)-time randomized algorithm for Bounded Subset Sum.",
+      "page": 3
+    }
+  ],
+  "paper": "2307.12582",
+  "usage": {
+    "prompt_tokens": 29142,
+    "completion_tokens": 5239,
+    "total_tokens": 34381,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4714,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

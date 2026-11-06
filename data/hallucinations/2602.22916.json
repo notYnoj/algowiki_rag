@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Distributed deterministic planar balanced separator",
+      "problem family": null,
+      "bound": "\\tilde{O}(D)\\text{-round deterministic distributed algorithm; }\\frac{3}{4}\\text{-balanced path separator of size }O(D)\\text{ when }T\\text{ is a BFS tree}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "randomized \\tilde{O}(D) rounds [Ghaffari-Parter DISC'17]; deterministic \\tilde{O}(D) rounds [Jauregui et al. PODC'25]",
+      "quote": "Theorem 1. Let G be an embedded planar graph of hop-diameter D, T be a spanning tree of G, and w(·) be a weight assignment to G’s vertices s.t. no vertex weighs more than 1/12 fraction of the total weight of G. There is a deterministic \\tilde{O}(D)-round distributed algorithm that finds a u-to-v path P in T that is a 3/4-balanced separator of G. Adding the edge e=(u,v) to G (if it does not already exist), closes a fundamental cycle P∪{e} in T. Setting T to be a BFS tree produces a separator of size O(D).",
+      "page": 2
+    },
+    {
+      "problem": "Distributed deterministic planar balanced separator in multiple vertex-disjoint subgraphs simultaneously",
+      "problem family": null,
+      "bound": "\\tilde{O}(D)\\text{-round deterministic distributed algorithm; for each }G_i\\text{, a }\\frac{3}{4}\\text{-balanced path separator of }O(\\mathrm{depth}(T_i))\\text{ vertices}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 3. Let {G_i}_{i=1}^k be a partition of G into vertex-disjoint connected subgraphs, and {T_i}_{i=1}^k be spanning trees of G_i's. In addition let {w_i(·)}_{i=1}^k be 1/12-proper weight assignments to G_i's vertices. Then, there is a deterministic \\tilde{O}(D)-round distributed algorithm that for each G_i finds a 3/4-balanced path separator P_i w.r.t. w_i(·) of O(depth(T_i)) vertices. In addition, P_i∪{e} is a fundamental cycle of T_i, where e=(u,v) and u,v are the endpoints of P. In case e∉G_i, then u,v learn the ID of each other, and a local ordering (embedding) of e that preserves planarity.",
+      "page": 14
+    }
+  ],
+  "paper": "2602.22916",
+  "usage": {
+    "prompt_tokens": 22710,
+    "completion_tokens": 6555,
+    "total_tokens": 29265,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5948,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

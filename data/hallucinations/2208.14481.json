@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Optimal binary search tree construction",
+      "problem family": null,
+      "bound": "O(n \\log n)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "It follows from Proposition 9 that the optimized tree can be found in time O(n log(n)), a complexity identical to the cost of building the tree in the first place.",
+      "page": 10
+    }
+  ],
+  "paper": "2208.14481",
+  "usage": {
+    "prompt_tokens": 7042,
+    "completion_tokens": 2908,
+    "total_tokens": 9950,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2798,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

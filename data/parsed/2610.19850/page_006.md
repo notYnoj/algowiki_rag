@@ -1,0 +1,18 @@
+to decrease the running time for PMC enumeration.
+
+Some alternative results on specific graph classes were proposed to decrease this output- quadratic running time. Several graph classes admit a number of PMCs which is polynomial in _n_: weakly chordal, polygon-circle, circular-arc, and _d_-trapezoid \[4, 14\]. BT-enum guarantees that, on graph classes with a number of PMCs (and hence minimal separators) polynomial in _n_, its running time is polynomial in _n_ too. Then, a very recent contribution was proposed in \[18\]: PMCs can be enumerated in polynomial delay on triconnected planar graphs, which gives thus an output-linear time on this large family of graphs. From a more parameterized viewpoint, two PMC enumeration algorithms were proposed \[13\] where the running time depends exponentially on respectively two parameters: _vertex cover_ and _modular width_.
+
+BT-enum might use a quantity of memory exponential in _n_, since it is necessary to store all PMCs of _G_\\{_a_} but also all minimal separators of _G_ to return the final set \(\Pi_G\). It was shown very recently \[7\] that it is possible to modify BT-enum so that its running time stays output-polynomial while the memory used in the process is polynomial in _n_.
+
+A natural technique in enumeration consists in looking at the _extension version_ of the enumeration problem: if this extension version can be solved in polynomial time, then it gives an enumeration algorithm with polynomial delay and space \[26\]. Such an approach - called _Flashlight Search_, but also sometimes _Backtrack_ or _Binary Partition_ - could be tried for PMC enumeration. The following problem is called PMC Extension: given a graph _G_, a _mandatory_ set \(M\subseteq V(G)\) and a _forbidden_ one \(F\subseteq V(G)\), is there a PMC \(\Omega\in\Pi_G\) satisfying \(M\subseteq\Omega\) and \(\Omega\cap F=\emptyset\)? Observe that PMC Extension is thus a decision problem. Being able to solve it in polynomial time would offer the possibility to "flashlight" PMCs, _i.e._ construct a binary decision tree, where each node represents a suitable partition (_M,F_) and each leaf is related to a unique PMC. Flashlight Search works for the enumeration of minimal separators in polynomial delay and space \[28\]. Unfortunately, we will show that such an approach will unlikely not work for PMC, strengthening our choice to propose different techniques.
+
+## 1.3 Contributions and consequences
+
+Our main contribution is the proposal of an output-linear time algorithm enumerating all PMCs of a graph.
+
+**Theorem 1.** _Given a graph G with n_=|_V(G_)|_, one can compute the list of all PMCs of G in output-linear time_ \(\tilde{O}(|\Pi_G|)=O(n^4m|\Pi_G|)\).
+
+Many literature results mentioned earlier looks like: given a graph _G_ with its lists of PMCs \(\Pi_G\), one can solve a problem P in time \(O(|\Pi_G|f_\mathcal{P}(n))\), where _f_<sub>P</sub> is some function depending on P. Thanks to Theorem 1, we can now get rid of this assumption that set \(\Pi_G\) is given. We can simply list the PMCs in output-linear time and then set \(\Pi_G\) is available, without affecting asymptotically the running time for problem P.
+
+For example, as the time complexity of the enumeration of PMCs used to be in \(\tilde{O}(|\Delta_G|^2)\), we already had that the treewidth can be computed in \(\tilde{O}(|\Delta_G|^2)\), but this was potentially quadratic in the number of PMCs, since we have \(|\Pi_G|=\tilde{O}(|\Delta_G|)\) on certain graph classes. Our output-linear time enumeration of PMCs thus allows us to deduce an exact algorithm for treewidth whose running time depends linearly on the number of PMCs. The same observation<tbc>
+

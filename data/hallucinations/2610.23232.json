@@ -1,0 +1,71 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Dynamic Approximate Nearest Neighbor Search",
+      "problem family": null,
+      "bound": "\\sim 3\\text{-}35\\times \\text{ update throughput while maintaining } \\sim 3\\text{-}5\\times \\text{ search throughput}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "state-of-the-art SSD-based ANNS systems (OdinANN, SPFresh)",
+      "quote": "Evaluations show that, compared with state-of-the-art systems, PrairieFire can sustain ∼3-35\\(\\times\\) update throughput while maintaining ∼3-5\\(\\times\\) search throughput simultaneously.",
+      "page": 1
+    },
+    {
+      "problem": "Dynamic Approximate Nearest Neighbor Search",
+      "problem family": null,
+      "bound": "\\sim 1.5\\text{-}8.7\\times \\text{ cost efficiency}",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": "state-of-the-art SSD-based ANNS systems",
+      "quote": "It also achieves ∼1.5-8.7\\(\\times\\) cost efficiency.",
+      "page": 1
+    },
+    {
+      "problem": "Micro-scale clustering for local rebuilds",
+      "problem family": null,
+      "bound": "<5\\,\\text{ms}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "standard GPU K-Means backends (10-30 ms rebuild time)",
+      "quote": "By fusing assignment with statistics accumulation, PrairieFire avoids materializing and regrouping assignments, reduces global-memory traffic, and removes several kernel launches from the CPU side, achieving <5ms micro-scale clustering.",
+      "page": 9
+    },
+    {
+      "problem": "1 Billion-scale Dynamic Approximate Nearest Neighbor Search",
+      "problem family": null,
+      "bound": "\\sim 3\\times \\text{ higher search throughput and up to } \\sim 27\\times \\text{ higher update throughput than baselines}",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "state-of-the-art SSD-based ANNS systems (OdinANN, SPFresh)",
+      "quote": "PrairieFire still achieves ∼3× higher search throughput and up to ∼27× higher update throughput than the baselines.",
+      "page": 10
+    },
+    {
+      "problem": "Storage cost for Dynamic Approximate Nearest Neighbor Search",
+      "problem family": null,
+      "bound": "4.9\\text{-}8.7\\times \\text{ storage-cost efficiency of baselines}",
+      "bound_type": "space upper bound",
+      "deterministic": false,
+      "previous_best": "OdinANN and SPFresh",
+      "quote": "As a result, the storage cost of PrairieFire is ∼1.65K$. As shown in Figure 17c, this achieves 4.9-8.7× storage-cost efficiency of baselines.",
+      "page": 12
+    }
+  ],
+  "paper": "2610.23232",
+  "usage": {
+    "prompt_tokens": 18335,
+    "completion_tokens": 7547,
+    "total_tokens": 25882,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 6889,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

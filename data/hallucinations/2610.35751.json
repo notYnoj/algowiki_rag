@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Dual-Vector Query (DVQ)",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "$1.20\\text{--}1.43\\times$ insertion throughput",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "DEG incremental construction",
+      "quote": "ACTIVE improves insertion throughput by 1.20-1.43\\(\\times\\) compared with the incremental construction of DEG.",
+      "page": 8
+    },
+    {
+      "problem": "Dual-Vector Query (DVQ)",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "$1.64\\text{--}2.06\\times$ deletion throughput",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "neighbor-reconnection-based repair (NRBR)",
+      "quote": "ACTIVE consistently achieves higher throughput than both RBR and NRBR across all datasets, improving deletion throughput by 22.64-39.51\\(\\times\\) over RBR and 1.64-2.06\\(\\times\\) over NRBR.",
+      "page": 8
+    },
+    {
+      "problem": "Dual-Vector Query (DVQ)",
+      "problem family": "Approximate Nearest Neighbor Search",
+      "bound": "$22.64\\text{--}39.51\\times$ deletion throughput",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "reinsertion-based repair (RBR)",
+      "quote": "ACTIVE consistently achieves higher throughput than both RBR and NRBR across all datasets, improving deletion throughput by 22.64-39.51\\(\\times\\) over RBR and 1.64-2.06\\(\\times\\) over NRBR.",
+      "page": 8
+    }
+  ],
+  "paper": "2610.35751",
+  "usage": {
+    "prompt_tokens": 22193,
+    "completion_tokens": 6262,
+    "total_tokens": 28455,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5821,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

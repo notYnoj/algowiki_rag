@@ -1,0 +1,31 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "testing k-colorability",
+      "problem family": "property testing",
+      "bound": "$S_k(\\varepsilon)=O\\!\big(\\frac{k\\log k}{\\varepsilon}\\big)$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O\\!\big(\\frac{k}{\\varepsilon}\\log\\frac{1}{\\varepsilon}\\big)$ (Kushnir and Shapira [19])",
+      "quote": "For every integer $k\\ge 2$ and every $\\varepsilon>0$, $S_k(\\varepsilon)=O\\big(\\frac{k}{\\varepsilon}\\log k\\big)$, with an absolute implied constant.",
+      "page": 2
+    }
+  ],
+  "paper": "2610.31489",
+  "usage": {
+    "prompt_tokens": 12476,
+    "completion_tokens": 8148,
+    "total_tokens": 20624,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7974,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

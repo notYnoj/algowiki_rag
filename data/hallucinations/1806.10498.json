@@ -1,0 +1,81 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Dynamic approximately optimal binary search tree",
+      "problem family": "weighted binary search trees",
+      "bound": "\\min(\\log(W/w_i), \\log n) + O(f)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any \\(f\\ge 1\\) there exists a binary search tree T<sup>f</sup>, such that the depth of a leaf holding an element e<sub>i</sub> in T<sup>f</sup> does not exceed min(log(W/w<sub>i</sub>), log n)+O(f) and the amortized cost of updating T<sup>f</sup> after an element access or an insertion is O(log<sup>(f)</sup> n+f).",
+      "page": 10
+    },
+    {
+      "problem": "Dynamic approximately optimal binary search tree",
+      "problem family": "weighted binary search trees",
+      "bound": "O(\\log^{(f)} n + f) \\text{ amortized}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any \\(f\\ge 1\\) there exists a binary search tree T<sup>f</sup>, such that the depth of a leaf holding an element e<sub>i</sub> in T<sup>f</sup> does not exceed min(log(W/w<sub>i</sub>), log n)+O(f) and the amortized cost of updating T<sup>f</sup> after an element access or an insertion is O(log<sup>(f)</sup> n+f).",
+      "page": 10
+    },
+    {
+      "problem": "Dynamic approximately optimal binary search tree",
+      "problem family": "weighted binary search trees",
+      "bound": "\\min(\\log(W/w_i), \\log n) + O(k)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any \\(k\\ge 1\\) there exists a binary search tree T<sup>k</sup>, such that the depth of a leaf holding an element e<sub>i</sub> in T<sup>k</sup> does not exceed min(log(W/w<sub>i</sub>), log n)+O(k) and the cost of updating T<sup>k</sup> after an element access or an insertion is O(log<sup>(k)</sup> n+k).",
+      "page": 13
+    },
+    {
+      "problem": "Dynamic approximately optimal binary search tree",
+      "problem family": "weighted binary search trees",
+      "bound": "O(\\log^{(k)} n + k) \\text{ worst-case}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For any \\(k\\ge 1\\) there exists a binary search tree T<sup>k</sup>, such that the depth of a leaf holding an element e<sub>i</sub> in T<sup>k</sup> does not exceed min(log(W/w<sub>i</sub>), log n)+O(k) and the cost of updating T<sup>k</sup> after an element access or an insertion is O(log<sup>(k)</sup> n+k).",
+      "page": 13
+    },
+    {
+      "problem": "Dynamic alphabetic coding",
+      "problem family": "adaptive alphabetic coding",
+      "bound": "\\min(\\log(t/w_i(t)), \\log n) + O(1)",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "(H+2)m total encoding length (Gagie [12])",
+      "quote": "There is a binary alphabetic code C, such that (1) for t=0, ..., W-1 the codeword length of a symbol S[t+1]=a_i in C does not exceed min(log(t/w_i(t)), log n)+O(1) (2) the cost of encoding the next symbol, updating C after encoding a symbol or inserting a new symbol into C is O(1).",
+      "page": 16
+    },
+    {
+      "problem": "Dynamic alphabetic coding",
+      "problem family": "adaptive alphabetic coding",
+      "bound": "O(1) \\text{ per symbol}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(m(H+1)) time (Gagie [12])",
+      "quote": "There is a binary alphabetic code C, such that (1) for t=0, ..., W-1 the codeword length of a symbol S[t+1]=a_i in C does not exceed min(log(t/w_i(t)), log n)+O(1) (2) the cost of encoding the next symbol, updating C after encoding a symbol or inserting a new symbol into C is O(1).",
+      "page": 16
+    }
+  ],
+  "paper": "1806.10498",
+  "usage": {
+    "prompt_tokens": 18028,
+    "completion_tokens": 11845,
+    "total_tokens": 29873,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10747,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

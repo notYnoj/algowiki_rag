@@ -1,0 +1,19 @@
+holds that _Y<sub>p</sub>=V_ .
+
+A **_contraction_** of an edge {_u,v_} in a graph removes _u_ and _v_ from the graph, creates a new vertex _uv_ and replaces each other edge {_x,y_} with \(x\in\{u,v\}\) with an edge {_uv,y_}. Depending on the context, one sometimes removes parallel edges and self loops and other times allows the resulting graph to be a multigraph. To show the versatility of our framework, we will consider both versions and say that a contraction is simple if it removes parallel edges and self loops and it is a parallel contraction otherwise. A (multi)graph _H_=(_U,F_) is a **_simple/parallel minor_** of a simple graph _G_=(_V,E_) if there is a subgraph \(G'\) of _G_ such that simple/parallel contractions of \(G'\) result in a graph isomorphic to _H_. We say that _H_ is an **_induced simple/parallel minor_** if there is an induced subgraph \(G'\) of _G_ that can be contracted to obtain _H_. In all cases, the graph \(G'\) is called the **_model_** of _H_ and we also study rooted versions. Here, additionally to the (multi)graph _H_, we are given a function \(\eta:U\rightarrow 2^V\) that describes for each node<sup>3</sup> of _H_ a set of vertices of _G_ that have to be contained in the desired model of _H_. More formally, for any \(u\in U\), all vertices in \(\eta(u)\) have to be contracted into a single vertex \(u'\) such that there is an isomorphism from the resulting graph to _H_ mapping \(u'\) to _u_.
+
+A **_proper weight assignment_** _w_ is an assignment of non-negative weights at most \(\frac{1}{4}\) to vertices summing to 1. For \(q\in[0,1]\), a **q-_balanced cycle separator_** for a proper weight assignment _w_ is a cycle _C_ such that the sum of weights of all vertices in the strict interior of _C_ is at most _q_ and the sum of weights of all vertices in the strict exterior of _C_ is at most _q_.
+
+We say a pair (_C,x_) consisting of a set _C_ of vertices and partitioned into heavy vertices _C_<sub>he</sub>, light vertices _C_<sub>li</sub>, and discarded vertices _C_<sub>di</sub> and an integer _x_ is **_almost measured_** with respect to two integers _k_ and \(\alpha\) if \(x\le\mathrm{max}(200\mathrm{log}^7(k),1)\), \(|C_\mathrm{he}|\le 40x\alpha\sqrt{k}\), and \(|C_\mathrm{li}|\le 60x\alpha k\mathrm{log}(k)\). It is **_measured_** if it is almost measured and \(x\le\mathrm{max}(40\mathrm{log}^7(k),1)\) holds. A **_pebble set_** for \((C,k,\alpha,x)\) is a set \(\mathcal{M}\subseteq C_\mathrm{he}\cup C_\mathrm{li}\) with \(|\mathcal{M}\cap C_\mathrm{li}|\le 20x\alpha\sqrt{k}\mathrm{log}(k)\). Intuitively, pebble sets describe the possible sets of vertices in a collection of cycle separators for which we wish to store a solution in a lookup table.
+
+## 2.1 Problem Definitions
+
+Here, we define the problems mentioned in the introduction. We start with different variants of finding minors in a graph. We deliberately chose to use both simple and parallel contractions, minors and induced minors, minimization and maximization variants to illustrate the versatility of our framework. The other possible combinations can be solved similarly, but for the sake of conciseness, we do not explicitly study them.
+
+Minimum-Weight Rooted Simple Minor<br>
+**Input:** A graph _G_=(_V,E_), an edge-weight function \(w:E\rightarrow\mathbb{R}^+\), a graph _H_=(_U,F_),<br>
+a function \(\eta:U\rightarrow 2^V\), an integer _k_, and a value \(W\in\mathbb{R}\).<br>
+**Question:** Is there a subgraph \(G'\) of _G_ with at most _k_ vertices and of total weight at most _W_ such that \(G'\) is a model of _H_, that is, it contains all vertices in \(\bigcup_{u\in U}\eta(u)\) and _H_ is a rooted simple minor of \(G'\)?<tbc>
+
+<sup>3</sup>We call the vertices in the pattern graph _H_ nodes in order to avoid confusion with the vertices in the graph _G_.
+

@@ -1,0 +1,22 @@
+**Claim 5.5.** _If_ \(e\in Q^h\) _and e is an outer edge for h (i.e. it lies in P_<sub>1</sub> _or P<sub>k</sub>) , then_ \(f^h(e)\ge\frac{d(h)}{2}\) .
+
+_Proof._ Since _e_ is an outer edge, it is in either _P_<sub>1</sub> or _P<sub>k</sub>_, in addition to _Q<sup>h</sup>=P_<sub>_i_<sup>∗</sup></sub>. From Theorem 5.4 we have that \(e\in P_r\) either for all \(1\le r\le i^*\) or for all \(i^*\le r\le k\). In the former case, \(f^h(e)\ge\sum_{1\le r\le i^*}f^h(P_r)\ge\frac{d(h)}{2}\) . For the latter case, \(f^h(e)\ge\sum_{i^*\le r\le k}f^h(P_r)=d(h)-\sum_{1\le r<i^*}f^h(P_r)>d(h)-\frac{d(h)}{2}=\frac{d(h)}{2}\) , where the last inequality follows since \(\sum_{1\le r<i^*}f^h(P_r)<\frac{d(h)}{2}\) by definition of _i_<sup>∗</sup>. \(\diamond\)
+
+To obtain an unsplittable flow \(f'\), for each \(h\in E(H)\) we route _d(h_) units of flow along the path _Q<sup>h</sup>_. For the congestion bound, consider an arbitrary edge \(e\in E(G)\). We will bound the amount of flow through _e_. Let \(H_e=\big\{h\in E(H):e\in Q^h\big\}\), so \(f'(e)=\sum_{h\in H_e}d(h)\). Define \(O_e=\{h\in H_e:e\text{is an outer edge of}h\}\) and also \(I_e=\{h\in H_e:e\text{is an inner edge of}h\}\). These sets partition _H<sub>e</sub>_, so \(f'(e)=\sum_{h\in O_e}d(h)+\sum_{h\in I_e}d(h)\). We know that \(|I_e|\le 1\) from Theorem 5.1. Additionally, by Theorem 5.5, for each \(h\in O_e\) we have that \(f^h(e)\ge\frac{d(h)}{2}\) . We now split into two cases.
+
+Case 1: \(\sum_{h\in O_e}\frac{d(h)}{2}<u(e)\). Then,<tbc>
+
+\(f'(e)<2u(e)+\sum_{h\in I_e}d(h)\le 2u(e)+d_\mathrm{max}.\)
+
+<tbc>Case 2: \(\sum_{h\in O_e}\frac{d(h)}{2}\ge u(e)\). Then \(\sum_{h\in O_e}f^h(e)\ge\sum_{h\in O_e}\frac{d(h)}{2}\ge u(e)\), so the commodities of _O<sub>e</sub>_ saturate _e_ in _f_. It follows that \(I_e=\emptyset\). Hence,
+
+\(f'(e)=\sum_{h\in O_e}d(h)\le\sum_{h\in O_e}2f^h(e)\le 2f(e)\le 2u(e)<2u(e)+d_\mathrm{max}.\)
+
+This concludes the proof of Item 2. The above is easily turned into a polynomial time algorithm. We now prove Item 1 from Item 2.
+
+First, we split each \(e\in E(G)\) into _u(e_) parallel copies with capacity 1, and each \(h\in E(H)\) into _d(h_) parallel copies with demand 1, so that we have a new planar multiflow instance \((G',H',u'=\vec{1},d'=\vec{1})\) with unit capacities and demands. The splitting step is technically not polynomial time, but at the end we discuss how to convert this to an efficient algorithm. An integral congestion 2 multiflow for the new instance clearly implies an integral congestion 2 multiflow for the original instance. Given the feasible strongly uncrossed multiflow for the original instance, it is straightforward to construct a feasible strongly uncrossed multiflow for the new instance. To do this, for commodity \(h=(s,t)\in E(H)\), order the support paths clockwise about _s_. The first unit-demand _st_-flow is obtained by iterating over the paths, assigning up to _f<sup>h</sup>(P_) amount of flow on each path _P_, until 1 unit of flow has been routed. We then continue iterating from this path and assign flow for the second unit-demand _st_-flow, ensuring we do not assign more than _f<sup>h</sup>(P_) flow in total to each path _P_, and so on.
+
+Then, Item 2 implies an there exists an unsplittable (and hence, integral) multiflow \(f'\) for the unit weight instance, where the congestion on each edge is strictly less than 3. Since the flow is integral, the congestion is at most 2.
+
+We now briefly explain how to convert this into a polynomial time algorithm. Consider a demand \(h=(s,t)\in E(H)\). The following is an equivalent description of how the pseudo-polynomial time algorithm above behaves. It picks a starting support path and scans clockwise about _s_ counting the total amount of flow it sees, finding the first path at which 0.5 units of total flow has been routed, then 1.5 units in total, then 2.5 units in total, and so on. These are what would be the central paths were we to split _h_ up into _d(h_) separate demands. The algorithm iterates over this list, and routes one unit of flow on each path (if a walk appears multiple times in the list because its flow is large, we route one unit of flow on it each time it appears). However, this can be implemented in polynomial time: just by scanning clockwise about _s_ and performing a constant number of simple arithmetic calculations at each path, we can determine how many times each path _P_ would appear in this list of central paths without explicitly constructing the list, which tells us how much flow to route on _P_.
+

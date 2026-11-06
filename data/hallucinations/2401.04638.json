@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with splittable and segregated routing",
+      "problem family": null,
+      "bound": "2\\text{-approximation}",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Theorem 1. When \\tau=SS, the min-congestion reconfigurable network problem has a polynomial-time 2-approximation algorithm.",
+      "page": 4
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with splittable and segregated routing",
+      "problem family": null,
+      "bound": "\\text{APX-complete}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 4. For \\tau=SS, the min-congestion reconfigurable network problem (MCRN) is APX-complete, even if the demands D are uniform in size and the graph G_D induced by D is acyclic and bipartite, e.g., a 3D matching.",
+      "page": 5
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with splittable and segregated routing, single source/destination demands",
+      "problem family": null,
+      "bound": "\\text{polynomial-time solvable}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 3. When \\tau=SS, if the demands D have a single source (resp., dest.), the MCRN problem is polynomial-time solvable.",
+      "page": 5
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with unsplittable and segregated routing",
+      "problem family": null,
+      "bound": "O(\\log m / \\log \\log m)\\text{-approximation}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 2. If the min-congestion multi-commodity unsplittable flow problem has a \\rho\\text{-approximation algorithm based on rounding techniques on its LP solution, e.g., }\\rho=O(\\log m/\\log\\log m) [32], then the MCRN problem with \\tau=US can be approximated by 2\\rho.",
+      "page": 4
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with unsplittable and segregated routing",
+      "problem family": null,
+      "bound": "\\Omega(\\log m / \\log \\log m)",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Thus, the lower bound \\Omega(\\log m/\\log\\log m) [34] on approximating the min-congestion of multi-commodity unsplittable flow problem is also an approximation lower bound for the MCRN problem with \\tau=US.",
+      "page": 6
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with non-segregated routing (splittable or unsplittable), single source/destination demands",
+      "problem family": null,
+      "bound": "\\Omega(c_{\\max}/c_{\\min})",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 6. When \\tau\\in\\{SN,UN\\}, given demands D of a single source (resp., destination), the MCRN problem cannot be approximated better than \\Omega(c_{\\max}/c_{\\min}) unless P=NP.",
+      "page": 7
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with non-segregated routing (splittable or unsplittable), single source/destination demands, uniform capacities",
+      "problem family": null,
+      "bound": "\\text{NP-hard}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 7. When \\tau\\in\\{SN,UN\\}, the MRCN problem remains NP-hard for demands of a single source (resp., destination) and uniform capacities.",
+      "page": 8
+    },
+    {
+      "problem": "Min-Congestion Reconfigurable Network Problem (MCRN) with non-segregated routing (splittable or unsplittable), single commodity demand, uniform capacities",
+      "problem family": null,
+      "bound": "\\text{polynomial-time solvable}",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "Theorem 8. For \\tau\\in\\{SN,UN\\}, given a single-commodity demand and uniform capacities, the MCRN problem is polynomial-time solvable.",
+      "page": 8
+    }
+  ],
+  "paper": "2401.04638",
+  "usage": {
+    "prompt_tokens": 16669,
+    "completion_tokens": 9571,
+    "total_tokens": 26240,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8484,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

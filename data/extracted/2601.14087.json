@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "'1'-bit count-based sorting (popcount sorting)",
+      "problem family": "Sorting",
+      "bound": "35.4\\% \\text{ area reduction}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "ACC-PSU (accurate popcount-sorting unit)",
+      "quote": "The approximation yields 24.9% and 36.7% area reductions in the popcount unit and sorting unit, respectively, at a kernel size of 25, resulting in an overall reduction of 35.4%.",
+      "page": 3
+    },
+    {
+      "problem": "'1'-bit count-based sorting (popcount sorting)",
+      "problem family": "Sorting",
+      "bound": "19.50\\% \\text{ BT reduction} \\ (\\text{vs } 20.42\\% \\text{ precise})",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "20.42\\% \\text{ (ACC-PSU / precise implementation)}",
+      "quote": "ACC-PSU reduces link-related power by 18.27% and link BT by 20.42%, while APP-PSU achieves 16.48% and 19.50%, respectively.",
+      "page": 4
+    }
+  ],
+  "paper": "2601.14087",
+  "usage": {
+    "prompt_tokens": 3944,
+    "completion_tokens": 10182,
+    "total_tokens": 14126,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9875,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

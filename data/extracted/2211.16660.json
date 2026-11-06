@@ -1,0 +1,41 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "binary Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "\\((\\frac{1}{2}+\\delta)\\)-approximation in \\(O(n^{1+\\varepsilon})\\) time",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "\\(\\frac{1}{2}\\)-approximation in linear time for arbitrary inputs; \\((\\frac{1}{2}+\\delta)\\)-approximation in \\(O(n^{1+\\varepsilon})\\) for equal-length inputs only [RS20]",
+      "quote": "For all \\(\\varepsilon>0\\), there exists an absolute constant \\(\\delta=\\delta(\\varepsilon)>0\\) and a deterministic algorithm that, given two binary strings _x_ and _y_ of not-necessarily-equal length, outputs a \\((\\frac{1}{2}+\\delta)\\)-approximation of the longest common subsequence in time \\(O(n^{1+\\varepsilon})\\) where _n_=max(|_x_|,|_y_|).",
+      "page": 2
+    },
+    {
+      "problem": "q-ary Longest Common Subsequence (LCS)",
+      "problem family": null,
+      "bound": "\\((\\frac{1}{q}+\\delta)\\)-approximation in \\(O(n^{1+\\varepsilon})\\) time",
+      "bound_type": "approximation",
+      "deterministic": true,
+      "previous_best": "\\(\\frac{1}{q}\\)-approximation in linear time for arbitrary inputs; \\((\\frac{1}{q}+\\delta)\\)-approximation in \\(O(n^{1+\\varepsilon})\\) for equal-length inputs only [AW21]",
+      "quote": "For all \\(\\varepsilon>0\\) and integers \\(q\\ge 2\\), there exists an absolute constant \\(\\delta=\\delta(\\varepsilon)>0\\) and a deterministic algorithm that, given two q-ary strings _x_ and _y_ of not-necessarily-equal length, outputs a \\((\\frac{1}{q}+\\delta)\\)-approximation of the longest common subsequence in time \\(O(n^{1+\\varepsilon})\\) where _n_=max(|_x_|,|_y_|).",
+      "page": 3
+    }
+  ],
+  "paper": "2211.16660",
+  "usage": {
+    "prompt_tokens": 28815,
+    "completion_tokens": 5555,
+    "total_tokens": 34370,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5014,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

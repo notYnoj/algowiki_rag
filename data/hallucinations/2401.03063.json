@@ -1,0 +1,111 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Variance of functions of independent random variables",
+      "problem family": null,
+      "bound": "liminf_{n\\rightarrow\\infty}\\frac{\\mathrm{Var}S(n)}{J'_1(n)}\\ge\\frac{1}{4C}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "if there is a constant _C\\>_1 (independent of _n_) such that \\(J'_2(n)\\le CJ'_1(n)\\), then, taking \\(k=\\lfloor\\frac{n}{2C}\\rfloor\\) will lead to \\(liminf_{n\\rightarrow\\infty}\\frac{\\mathrm{Var}S(n)}{J'_1(n)}\\ge\\frac{1}{4C}\\).",
+      "page": 6
+    },
+    {
+      "problem": "Longest Common Subsequence variance",
+      "problem family": null,
+      "bound": "\\mathrm{Var}LC_n\\le\\left(1-\\sum_{k=1}^m p_k^2\\right)n/2",
+      "bound_type": "other",
+      "deterministic": null,
+      "previous_best": "\\mathrm{Var}LC_n\\le\\left(1-\\sum_{k=1}^m p_k^2\\right)n \\text{ (from [21])}",
+      "quote": "then \\(\\mathrm{Var}LC_n\\le\\left(1-\\sum_{k=1}^mp_k^2\\right)n/2\\), which improves, by a factor of two, on the upper bound obtained in \\[21\\] (see also \\[13\\]).",
+      "page": 21
+    },
+    {
+      "problem": "Longest Common Subsequence variance with omitted letter",
+      "problem family": null,
+      "bound": "\\mathrm{Var}LC_n\\ge\\frac{p p_{X,\\mathrm{min}}(1-\\gamma^*)}{8k_0}n",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\mathrm{Var}LC_n\\ge\\frac{pp_{X,\\mathrm{min}}(1-\\gamma^*)}{8k_0}n.\\)",
+      "page": 24
+    },
+    {
+      "problem": "Longest Common Subsequence variance (Bernoulli)",
+      "problem family": null,
+      "bound": "limsup_{n\\rightarrow\\infty}\\frac{\\mathrm{Var}LC_n}{n}\\ge 2p_0(1-p_0)\\left(\\frac{\\gamma(p_0)-\\gamma(1/2)}{1/2-p_0}\\right)^2",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\mathrm{limsup}_{n\\rightarrow\\infty}\\frac{VarLC_n}{n}\\ge 2p_0(1-p_0)\\left(\\frac{\\gamma(p_0)-\\gamma(1/2)}{1/2-p_0}\\right)^2.\\)",
+      "page": 25
+    },
+    {
+      "problem": "Longest Common Subsequence variance (Bernoulli, explicit)",
+      "problem family": null,
+      "bound": "limsup_{n\\rightarrow\\infty}\\frac{\\mathrm{Var}LC_n}{n}\\ge 1.8/10^8",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "we can apply the above theorem with p_0=0.096, to get for some p_1\\in(0.096,0.5),\\mathrm{limsup}_{n\\rightarrow\\infty}\\mathrm{Var}LC_n/n\\ge 1.8/10^8.",
+      "page": 25
+    },
+    {
+      "problem": "Longest Common Subsequence variance (binary uniform, B_1 bound)",
+      "problem family": null,
+      "bound": "B_1(2n)\\ge C > 0",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There exists C\\>0 such that for all n large enough, B_1(2n)\\ge C.",
+      "page": 27
+    },
+    {
+      "problem": "Longest Common Subsequence variance (conditional)",
+      "problem family": null,
+      "bound": "\\mathrm{Var}LC_n\\ge C' n^{1-\\alpha}",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "So for some constant C'>0, \\(\\mathrm{Var}LC_n\\ge C'n^{1-\\alpha}.\\)",
+      "page": 30
+    },
+    {
+      "problem": "Gaussian variance of smooth functions",
+      "problem family": null,
+      "bound": "\\frac{\\left(\\mathbb{E}\\left(G^{(k+1)}(Z)\\right)\\right)^2}{(k+1)!}\\le(-1)^k\\left(\\mathrm{Var}G(Z)-\\mathbb{E}\\left(G'(Z)^2\\right)+\\cdots+(-1)^k\\frac{\\mathbb{E}\\left(G^{(k)}(Z)^2\\right)}{k!}\\right)\\le\\frac{\\mathbb{E}\\left(G^{(k+1)}(Z)^2\\right)}{(k+1)!}",
+      "bound_type": "approximation",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "\\(\\frac{\\left(\\mathbb{E}\\left(G^{(k+1)}(Z)\\right)\\right)^2}{(k+1)!}\\le(-1)^k\\left(\\mathrm{\\textit{Var}}G(Z)-\\mathbb{E}\\left(G'(Z)^2\\right)+\\cdots+(-1)^k\\frac{\\mathbb{E}\\left(G^{(k)}(Z)^2\\right)}{k!}\\right)\\le\\frac{\\mathbb{E}\\left(G^{(k+1)}(Z)^2\\right)}{(k+1)!}.\\)",
+      "page": 16
+    },
+    {
+      "problem": "Jackknife variance bounds (complete monotonicity of B_k)",
+      "problem family": null,
+      "bound": "D^\\ell B_k \\ge 0",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": "(B_k) non-increasing (from [2])",
+      "quote": "In particular, \\(D^\\ell B_k\\ge 0\\), i.e., \\((B_k)_{1\\le k\\le n}\\) is completely monotone (recall that D=Id-T).",
+      "page": 2
+    }
+  ],
+  "paper": "2401.03063",
+  "usage": {
+    "prompt_tokens": 37814,
+    "completion_tokens": 12523,
+    "total_tokens": 50337,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11052,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

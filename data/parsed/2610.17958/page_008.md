@@ -1,0 +1,32 @@
+most _h_ letters apart, where _h_ is a non-negative integer. (Note that for _h_=0, we count the edges in which there exists a substring in each endpoint that both \((\ell,d)\)-motifs for that endpoint match.)
+
+Let `occ`_<sub>X</sub>(u_) denote the set of occurrences of an \((\ell,d)\)-motif _X_ in string _u_, namely \(\text{\texttt{occ}}_X(u)=\{i|X\text{\texttt{matches}}u[i..i+\ell-1]\}\). Let \(E'_h((X,Y),(W,Z))\subseteq E\) be the set of edges {_u,v_} such that there exists:
+
+(1) \(i\in\text{\texttt{occ}}_X(u)\) and \(j\in\text{\texttt{occ}}_W(u)\) with \(|i-j|\le h\); and<tbc>
+
+(2) \(i\in\text{\texttt{occ}}_Y(v)\) and \(j\in\text{\texttt{occ}}_Z(v)\) with \(|i-j|\le h\).
+
+Further let \(E_h(\{X,Y\},\{W,Z\})=E'_h((X,Y),(W,Z))\cup E'_h((X,Y),(Z,W))\). Then, we define the _similarity index_ between \((\ell,d)\)-motif pairs {_X,Y_} and {_Z,W_} as
+
+\(s_h(\{X,Y\},\{Z,W\}):=\frac{|E_h(\{X,Y\},\{Z,W\})|}{|E_{X,Y}\cup E_{Z,W}|}.\)
+
+In particular, we note that _s_<sub>0</sub> corresponds to the similarity index used by \[1\] in their experimental evaluation of SLIDER. In our evaluation, we used the more lenient version \(s_\ell\) for a motif length \(\ell\); that is, we afforded SLIDER’s solution set more slack when it was compared to our exact algorithm’s solution set.
+
+_Reduced solution set._ Let _S_={_M_<sub>1</sub>_,M_<sub>2</sub>_,...,M<sub>k</sub>_} be a solution set ranked from the highest-scoring motif pair _M_<sub>1</sub> to the lowest-scoring one, _M<sub>k</sub>_. We construct a _reduced solution set_ \(S^*\subseteq S\) with the following property: for any distinct motif pairs \(M'\) and \(M''\) in _S_<sup>∗</sup>, we require that \(s_0(M',M'')<1\). Note that our similarity relation _s<sub>h</sub>_ is not transitive, so there may exist multiple subsets of _S_ with this property. Following the approach of \[1\], our set _S_<sup>∗</sup> is constructed with the following greedy strategy: for each _i_=1_,...,k_, we remove every \(M_j\in S\) with _j\>i_ satisfying _s_<sub>0</sub>(_M<sub>i</sub>,M<sub>j</sub>_)=1.
+
+_Coverage of one solution set by another._ Given two reduced solution sets _S<sub>A</sub>_ and _S<sub>B</sub>_, we define the _coverage of S<sub>B</sub> by S<sub>A</sub>_, parameterized by _h_ and \(\tau\), as
+
+\(\text{Cov}_{h,\tau,A}(S_B):=\frac{|\{M\in S_B|\exists M'\in S_A,s_h(M,M')\ge\tau\}|}{|S_B|}.\)
+
+This resembles the notion of _recall_: we are effectively measuring the fraction of motif pairs from _S<sub>B</sub>_ retrieved by _A_ (under similarity _s<sub>h</sub>_ at a threshold \(\tau\)).
+
+_Setup._ In order to compare M-SLIDER and SEQ- SLIDER’s solution quality with that of our exact algorithm, we used complementary metrics: first, we compared the \(f_{\chi^2}\) score distribution of M-SLIDER and SEQ-SLIDER’s reduced solution sets with our exact algorithm’s (RQ1); second, we used the similarity index introduced above to measure how similar the reduced solution sets are (RQ2).
+
+We ran M-SLIDER and SEQ-SLIDER over 10 trials, each with a maximum convergence time of 10 minutes<tbc>
+
+<tbc>(totaling 100 minutes of running time for each dataset), and requested at most 10,000 highest scoring \((\ell,d)\)- motif pairs per trial. Then, we concatenated them, removed identical \((\ell,d)\)-motif pairs (i.e., the same pair rediscovered across independent trials), sorted by the \(f_{\chi^2}\) score descending, retained at most 10,000 top- scoring distinct \((\ell,d)\)-motif pairs, and applied the "de- duplication" procedure described above. The resulting reduced solution sets of M-SLIDER and SEQ-SLIDER are denoted by _S_<sub>M-SLIDER</sub> and _S_<sub>SEQ-SLIDER</sub>, respectively. We ran our exact algorithm once, retrieved the top 10,000 highest scoring \((\ell,d)\)-motif pairs, and applied the "de-duplication" procedure; the resulting reduced solution set is denoted by _S_<sub>Exact</sub>. For RQ1 and RQ2, we ran this setup for parameter pairs \((\ell=8,d=5)\) and \((\ell=8,d=3)\), following the setup of \[1\].
+
+**5.5 Results for RQ1.** We compared the \(f_{\chi^2}\) scores of _S_<sub>M-SLIDER</sub> and _S_<sub>SEQ-SLIDER</sub> with _S_<sub>Exact</sub> as follows. Since any solution set is ranked from highest to lowest \(f_{\chi^2}\) score and the highest scoring \((\ell,d)\)-motif pair _M_<sup>∗</sup> of _S_<sub>Exact</sub> has the best possible \(f_{\chi^2}\) score, we normalized the \(f_{\chi^2}\) score of each \((\ell,d)\)-motif pair from all (reduced) solution sets by dividing each by \(f_{\chi^2}(M^*)\). Since we are comparing the top-scoring \((\ell,d)\)-motif pairs across _S_<sub>M-SLIDER</sub>, _S_<sub>SEQ-SLIDER</sub>, and _S_<sub>Exact</sub>, the resulting solution sets \(S'_{\text{M-SLIDER}}\), \(S'_{\text{SEQ-SLIDER}}\), and \(S'_{\text{Exact}}\) after normalization were truncated to have size min{|_S_<sub>M-SLIDER</sub>|,|_S_<sub>SEQ-SLIDER</sub>|,|_S_<sub>Exact</sub>|}. Figure 5.1 shows the resulting (normalized) \(f_{\chi^2}\) score distributions of \(S'_{\text{M-SLIDER}}\) and \(S'_{\text{SEQ-SLIDER}}\) compared to \(S'_{\text{Exact}}\) for the parameter pair \((\ell=8,d=5)\); for the parameter pair \((\ell=8,d=3)\), see Figure 5.2. Firstly, we note that SEQ-SLIDER consistently outperforms M-SLIDER in all datasets, which confirms the evaluation in \[1\]. Secondly, the \(f_{\chi^2}\) score of \(S'_{\text{SEQ-SLIDER}}\) is comparable to \(S'_{\text{Exact}}\) only for the E. coli, S. cerevisiae (I and II), and D. melanogaster datasets across parameter pairs \((\ell=8,d=3)\) and \((\ell=8,d=5)\). For the (larger) remaining datasets, A. thaliana and H. sapiens (I and II), the \(f_{\chi^2}\) score of \(S'_{\text{SEQ-SLIDER}}\) is far from \(S'_{\text{Exact}}\). For instance, for the parameter pair \((\ell=8,d=5)\), _S_<sub>SEQ-SLIDER</sub> has average \(f_{\chi^2}\) score 14,963, 7313, and 1094 for the A. thaliana, H. sapiens I, and H. sapiens II datasets, respectively, whereas _S_<sub>Exact</sub> has average \(f_{\chi^2}\) score 26,777, 10,439, and 1514, respectively. We note that these gaps are larger for the parameter pair \((\ell=8,d=3)\) (see Figure 5.2).
+
+These results establish that our exact algorithm mines motif pairs whose \(f_{\chi^2}\) scores are at least as high as SEQ-SLIDER’s on all datasets and substantially higher on larger ones. Two possible explanations are: (1) our algorithm captures the same interactions with more precise motif pairs, raising the score; or (2)<tbc>
+

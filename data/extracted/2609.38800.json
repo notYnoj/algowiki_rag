@@ -1,0 +1,51 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Variational quantum algorithm optimization",
+      "problem family": null,
+      "bound": "\\mathcal{O}\\left(\\max\\left\\{\\frac{p}{\\epsilon^2},\\frac{p^{2/3}}{\\epsilon^{10/3}}\\right\\}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\mathcal{O}\\left(\\frac{p}{\\epsilon^4}\\right)",
+      "quote": "Through rigorous Lyapunov analysis, we establish that this variant is structurally bottlenecked at a sample complexity of \\(\\mathcal{O}(max\\{p/\\epsilon^2,p^{2/3}/\\epsilon^{10/3}\\})\\) to reach an \\(\\epsilon^2\\)-stationary point when restricted to hardware-efficient single-sample inner loops.",
+      "page": 2
+    },
+    {
+      "problem": "Variational quantum algorithm optimization",
+      "problem family": null,
+      "bound": "\\mathcal{O}\\left(\\max\\left\\{\\frac{p}{\\epsilon^2},\\frac{\\sqrt{p}}{\\epsilon^3}\\right\\}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "\\mathcal{O}\\left(\\max\\left\\{\\frac{p}{\\epsilon^2},\\frac{p^{2/3}}{\\epsilon^{10/3}}\\right\\}\\right)",
+      "quote": "we prove that our recursive variant removes the dimensionality bottleneck, converging to an \\(\\epsilon^2\\)-stationary point with an improved sample complexity of \\(\\mathcal{O}(max\\{p/\\epsilon^2,\\sqrt{p}/\\epsilon^3\\})\\).",
+      "page": 2
+    },
+    {
+      "problem": "Variational quantum algorithm optimization",
+      "problem family": null,
+      "bound": "3",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "4",
+      "quote": "This mathematical recycling drops the inner-loop circuit cost from 4 to exactly 3, yielding a strict 25% reduction in quantum hardware utilization.",
+      "page": 5
+    }
+  ],
+  "paper": "2609.38800",
+  "usage": {
+    "prompt_tokens": 31390,
+    "completion_tokens": 8784,
+    "total_tokens": 40174,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 8306,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

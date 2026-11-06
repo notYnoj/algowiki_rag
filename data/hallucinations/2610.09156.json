@@ -1,0 +1,111 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "All-pairs shortest path (APSP)",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "5.8\\times",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "lowering without compiler support (B0)",
+      "quote": "On APSP (Fig. 3a), B3 reaches 5.2, 5.2, and 5.8\\(\\times\\) on ca-GrQc, p2p- Gnutella08, and OSM (geo-mean 5.4\\(\\times\\)), 90% of the throughput bound and meeting it at OSM.",
+      "page": 4
+    },
+    {
+      "problem": "Sequence alignment (Smith-Waterman)",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "16.7\\times",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "lowering without compiler support (B0)",
+      "quote": "On alignment (Fig. 3b,c), B3 grows with read length (2.8 \\(\\rightarrow\\) 9.9\\(\\times\\) PacBio, 4.1 \\(\\rightarrow\\) 16.7\\(\\times\\) ONT over 2-10 kbp) and lies _on_ the critical- path bound throughout (B3/B2= 100%)",
+      "page": 4
+    },
+    {
+      "problem": "Semi-ring dynamic programming (APSP and alignment)",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "1.2-1.4\\times",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "standard affine-tiling PIM pass (B1)",
+      "quote": "Throughout, B3 beats the standard affine-tiling PIM pass B1 by 1.2-1.4\\(\\times\\), the gain from tier-aware placement and communication a size-agnostic pipeline forgoes.",
+      "page": 4
+    },
+    {
+      "problem": "Semi-ring dynamic programming",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "90-100\\%",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "achievable bound (B2)",
+      "quote": "reaching 90-100% of an achievable-performance bound.",
+      "page": 1
+    },
+    {
+      "problem": "Blocked semi-ring grid update",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "B^\\star=\\left\\lfloor\\sqrt{S/3w}\\right\\rfloor",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For _w=_4 (the 32-bit APSP datapath), _B<sup>⋆</sup>=_256.",
+      "page": 3
+    },
+    {
+      "problem": "All-pairs shortest path (APSP)",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "192\\times",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "untiled baseline",
+      "quote": "tiling cuts APSP traffic 192\\(\\times\\) versus the untiled baseline; the already-local alignment DP sees 1.8\\(\\times\\)",
+      "page": 4
+    },
+    {
+      "problem": "Sequence alignment",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "1.8\\times",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": "untiled baseline",
+      "quote": "tiling cuts APSP traffic 192\\(\\times\\) versus the untiled baseline; the already-local alignment DP sees 1.8\\(\\times\\)",
+      "page": 4
+    },
+    {
+      "problem": "All-pairs shortest path (APSP)",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "37.4 \\to 34.6 \\text{ ns}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "untiled baseline",
+      "quote": "For APSP, B3 keeps the reused pivot working set in T0, whereas the untiled baseline holds only 25% of its 16 GB footprint there, so average access latency drops from 37.4 to 34.6 ns.",
+      "page": 4
+    },
+    {
+      "problem": "Sequence alignment",
+      "problem family": "Semi-ring dynamic programming",
+      "bound": "55.1 \\to 43.7 \\text{ ns}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "untilered baseline",
+      "quote": "For alignment, where the tiering deliberately trades the latency of the scoring matrix _H_ for that of the PTR/CAL tables, B3 places _H_ at tier 4 (43.7 ns) against tier 7 (55.1 ns) untilered ( 2).",
+      "page": 4
+    }
+  ],
+  "paper": "2610.09156",
+  "usage": {
+    "prompt_tokens": 9014,
+    "completion_tokens": 12472,
+    "total_tokens": 21486,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 11317,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<tbc>such that _M_<sup>-1</sup>_D_<sup>†</sup>_D_=I. We propose to leverage the dependence of the Dirac operator on the gauge field to produce an operator, \(\Gamma\), such that \(\Gamma\approx M^{-1}\). Specifically, we construct \(\Gamma=D^\dagger D[\tilde{U}_\mu(x)]\), i.e., the _D_<sup>†</sup>_D_ operator generated from new field \(\tilde{U}_\mu(x)\). We note the focus on producing another set of "gauge field configuration" shares some similarity with the framework in \[53\] where an effective gauge field is used in place of the original field during an intermediate stage in the hybrid Monte-Carlo process that generates the gauge field configurations. To this end, the learning objective becomes to obtain \(\tilde{U}_\mu(x)\) for a given \(U_\mu(x)\), such that \(D^\dagger D[\tilde{U}_\mu(x)]D^\dagger D[U_\mu(x)]\approx\mathbb{I}\). Moreover, we aim to find an operator such that the mapping is general for gauge fields \(U_\mu(x)\) regardless of the size of the underlying physical system. Therefore, the mapping to be learned is \(\mathcal{G}:\{U_\mu(x)\}\mapsto\{\tilde{U}_\mu(x)\}\), where \(\{U_\mu(x)\}\) and \(\{\tilde{U}_\mu(x)\}\) represent sets of lattice gauge field configurations, potentially coming from _arbitrary_ action parameters, and their corresponding inverse-approximating generating configurations, respectively. Our goal is to use a neural network parameterized by learnable weights to learn the mapping, G, between the infinite dimensional spaces. In particular, considering training efficiency and data accessibility, we plan to train the network on relatively small configurations generated from a specific set of geometries and couplings and directly apply to other settings<sup>1</sup>.
+
+## 3.2 Operator learners
+
+We aim to learn from the input lattice gauge fields and produce fields with the same structure for the preconditioning operator and expect to learn the general mapping across gauge configurations. Therefore, we leverage operator learning neural networks that learn the transformation of functions. These networks can therefore preserve the shape of the input (output has the same shape) while being able to handle variable input shapes. In particular, we adopt fully Convolutional Networks (FCN) \[49\], restricted to learning from local features, and Fourier Neural Operators \[48\], equipped to learn from both local and global features, to investigate how G can be approximated.
+
+These networks aim to learn the mapping from instances of the lattice gauge fields and their inverse approximation generating fields, shown in (5).
+
+\(\mathcal{G}_\theta(U_\mu(x))=\tilde{U}_\mu(x),U_\mu(x),\tilde{U}_\mu(x)\in U(1)^{X\times T\times d}\subset\mathbb{C}^{X\times T\times d},\) (5)
+
+where _X_ and _T_ are the spatial and temporal lattice extents, and _d=_2 is the spacetime dimension used in this study. Here \(\tilde{U}_\mu(x)\) and the corresponding \(\kappa_{\tilde{U}_\mu(x)}\) construct a linear function such that \(g(x)=\Gamma x=D^\dagger D[\tilde{U}_\mu(x),\kappa_{\tilde{U}_\mu(x)}]x\), which is used as the preconditioning operator in the iterative solver (see Section 3.1). While it is possible to learn \(\kappa_{\tilde{U}_\mu(x)}\), for simplicity and consistency, we use the same hopping parameter as for the original linear operator in this study, i.e., \(\kappa_{\tilde{U}_\mu(x)}=\kappa\).
+
+At each layer, both FCN and FNO perform the kernel integral to transform the input function to another, shown in (6),
+
+\((\mathcal{K}_\theta u)(x)=\int_{y\in\mathcal{D}}K_\theta(x,y)u(y)dy,\) (6)
+
+where D is the lattice domain, and _u_ is the input function (e.g., \(U_\mu(x)\) in the first layer of the networks), and _K_ is a kernel function parameterized by \(\theta\) that can be learned from data. We use the composition of the kernel integral with nonlinear activation functions, \(\sigma\), to approximate the underlying true operator as follows
+
+<sup>1</sup>Training the preconditioner on sets of gauge field configurations with different geometries and couplings is also possible, but not pursued in this study.
+

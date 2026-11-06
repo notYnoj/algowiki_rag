@@ -1,0 +1,61 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Maxwell eigenproblem in 3D photonic crystals with anisotropic media",
+      "problem family": null,
+      "bound": "\\text{single 3D global DFT per iteration}",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "By using 3D discrete Fourier transform (DFT), we design matrix-free discrete differential operators, reducing the per-iteration cost of the eigensolver to a single 3D global DFT.",
+      "page": 2
+    },
+    {
+      "problem": "Maxwell eigenproblem in 3D photonic crystals with anisotropic media",
+      "problem family": null,
+      "bound": "192 N^3 \\text{ bytes}",
+      "bound_type": "space upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The total memory usage of storing K_A,K_B and K_P^{-1} sums up to 192_N^3 bytes with double precision.",
+      "page": 10
+    },
+    {
+      "problem": "Maxwell eigenproblem in 3D photonic crystals with anisotropic media",
+      "problem family": null,
+      "bound": "\\kappa(\\text{preconditioned system}) \\le \\kappa(\\mathcal{M}_\\varepsilon)",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "The condition number of the preconditioned system (2.32) is bounded by the condition number of the permittivity matrix M_\\varepsilon.",
+      "page": 9
+    },
+    {
+      "problem": "discrete permittivity matrix for anisotropic media",
+      "problem family": null,
+      "bound": "\\mathcal{M}_\\varepsilon \\succ 0 \\text{ (Hermitian positive definite)}",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "we propose a novel discretization for permittivity tensor containing off-diagonal entries and prove that the resulting matrix is Hermitian positive definite",
+      "page": 1
+    }
+  ],
+  "paper": "2511.17107",
+  "usage": {
+    "prompt_tokens": 24056,
+    "completion_tokens": 5531,
+    "total_tokens": 29587,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 5083,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

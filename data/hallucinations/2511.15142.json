@@ -1,0 +1,181 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Boolean Linear Optimization",
+      "problem family": "Linear combinatorial optimization over arbitrary set systems",
+      "bound": "O(n log^2 n \\cdot log|\\mathcal{F}|) = \\widetilde{O}(n^2) comparison queries",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For any family \\(\\mathcal{F}\\subseteq 2^U\\) and unknown weight function \\(w^*:U\\rightarrow\\mathbb{R}\\), we can solve \\(argmin_{S\\in\\mathcal{F}}\\sum_{e\\in S}w_e^*\\) using \\(O(nlog^2n\\cdot log|\\mathcal{F}|)=\\widetilde{O}(n^2)\\) comparison queries, where n=|U|.",
+      "page": 2
+    },
+    {
+      "problem": "General Linear Optimization",
+      "problem family": "Linear optimization over point sets",
+      "bound": "O(k log k log|\\mathcal{P}|) comparisons",
+      "bound_type": "other",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is an algorithm that, for any point set \\(\\mathcal{P}\\subseteq\\mathbb{R}^d\\) with conic dimension k and unknown weights \\(w^*\\in\\mathbb{R}^d\\), returns the minimizer \\(x^*=\\mathrm{arg}\\mathrm{min}_{x\\in\\mathcal{P}}\\langle w^*,x\\rangle\\) using at most O(k\\log k\\log|\\mathcal{P}|) comparisons.",
+      "page": 3
+    },
+    {
+      "problem": "Optimization from Certification (Dual Ellipsoid)",
+      "problem family": "Linear combinatorial optimization",
+      "bound": "O(d^3 \\langle\\mathcal{P}\\rangle) calls to the Conic-Certification Oracle",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a deterministic algorithm that, given access to a Conic-Certification Oracle (CCO) for a family F represented by points \\(\\mathcal{P}\\subseteq\\mathbb{R}^d\\) with bit complexity \\(\\langle\\mathcal{P}\\rangle\\), finds the optimal solution \\(S^*=argmin_{S\\in\\mathcal{F}}\\langle w^*,\\unknown_S\\rangle\\) using \\(O(d^3\\langle\\mathcal{P}\\rangle)\\) calls to the CCO and separating hyperplane updates.",
+      "page": 3
+    },
+    {
+      "problem": "Boolean Linear Optimization (Bounded-Weights)",
+      "problem family": "Linear combinatorial optimization with integer weights",
+      "bound": "O(nB log(nB)) comparison queries",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "\\widetilde{O}(n^2)",
+      "quote": "There is an algorithm that, for any family \\(\\mathcal{F}\\subseteq 2^U\\) and unknown integer weight vector satisfying \\(|w_e^*|\\le B\\), sorts the feasible sets according to their weight w^*(S) (and hence solves the optimization problem) using O(nB\\log(nB)) comparison queries, where n=|U|.",
+      "page": 4
+    },
+    {
+      "problem": "Linear Matroid Optimization",
+      "problem family": "Matroids",
+      "bound": "poly(n,B) time; O(nB log nB) comparison queries, or O((n+C) log C) where C is the number of distinct basis weights",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "Let F be the bases of a rank-k linear matroid M=(U,\\mathcal{I}), represented by V\\in\\mathbb{R}^{k\\times n} with entry representation size poly(n). For an unknown integer weight function w^* satisfying |w_e^*|\\le B, we can sort the bases according to their weight w^*(S), and hence find the minimum-weight basis argmin_{S\\in\\mathcal{F}}w^*(S) in poly(n,B) time. The number of comparison queries required is O(nB\\log nB) and more generally, O((n+C)\\log C), where C=|\\{w^*(S):S\\in\\mathcal{F}\\}| is the number of distinct basis weights.",
+      "page": 4
+    },
+    {
+      "problem": "k-SUM",
+      "problem family": "Integer problems with bounded weights",
+      "bound": "O((n+kB) log(kB)) comparison queries, poly(n,B) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(kn log^2 n)",
+      "quote": "Using Theorem 1.5 with C=kB, we obtain an algorithm with query complexity O((n+kB)\\log(kB)) and running time poly(n,B), which improves both measures when B=o(n).",
+      "page": 20
+    },
+    {
+      "problem": "SUBSET-SUM",
+      "problem family": "Integer problems with bounded weights",
+      "bound": "O(nB log(nB)) comparison queries, poly(n,B) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^2 log n)",
+      "quote": "Using Algorithm Section 4.1.1 with the efficient separation step stated in Section 4.2.1, we obtain an algorithm with query complexity O(nB\\log(nB)) and running time poly(n,B), which again improves both parameters when B=o(n).",
+      "page": 20
+    },
+    {
+      "problem": "Sorting A+B (Sumsets)",
+      "problem family": "Integer problems with bounded weights",
+      "bound": "O((n+B) log B) comparison queries, poly(n,B) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n log^2 n)",
+      "quote": "we can apply Theorem 1.5 with C=2B to obtain an algorithm with query complexity O((n+B)\\log B) and running time poly(n,B). This improves on previous bounds when B=o(n) and uses only valid pairwise comparisons among elements of A+B.",
+      "page": 20
+    },
+    {
+      "problem": "Minimum Cut",
+      "problem family": "Graph cuts",
+      "bound": "\\widetilde{O}(|V|) cut comparison queries, \\widetilde{O}(|V|^2) time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a randomized algorithm that computes the exact minimum cut of a simple graph G with high probability using \\widetilde{O}(|V|) cut comparison queries and \\widetilde{O}(|V|^2) time.",
+      "page": 5
+    },
+    {
+      "problem": "Graph Recovery",
+      "problem family": "Graph cuts",
+      "bound": "O(min\\{(|E|+|V|) log|V|, |V|^2\\}) cut comparison queries, \\widetilde{O}(|V|^2) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "A simple unweighted graph G\\notin\\{K_2,\\bar{K}_2,K_3,\\bar{K}_3\\} can be recovered using O(min\\{(|E|+|V|)\\log|V|,|V|^2\\}) cut comparison queries and in \\widetilde{O}(|V|^2) time.",
+      "page": 5
+    },
+    {
+      "problem": "Weighted Minimum Cut",
+      "problem family": "Graph cuts",
+      "bound": "(nB)^{O(r^2 log B)} queries and time, where r is the number of distinct weighted degrees; (nB)^{O(log B)} for degree-regular graphs",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For a graph G=(V,E) with unknown integer edge weights in the range [0,B], the minimum cut can be found using (nB)^{O(r^2\\log B)} queries and time, where r=|\\partial_w(u):u\\in V| is the number of distinct weighted degrees among all vertices. In the special case of degree-regular graphs, the complexity is (nB)^{O(\\log B)}.",
+      "page": 5
+    },
+    {
+      "problem": "Matroid Basis",
+      "problem family": "Matroids",
+      "bound": "O(n log n) comparison queries, \\widetilde{O}(n^2) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the minimum-weight basis of a matroid on n elements can be found O(n\\log n) comparison queries in \\widetilde{O}(n^2) time",
+      "page": 6
+    },
+    {
+      "problem": "Matroid Intersection",
+      "problem family": "Matroids",
+      "bound": "O(n^4) comparison queries/time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the minimum-weight set in the intersection of two matroids on an n-element ground set can be found using O(n^4) comparison queries/time",
+      "page": 6
+    },
+    {
+      "problem": "Shortest s-t Path",
+      "problem family": "Graph paths",
+      "bound": "O(n^3) walk comparisons, O(n^3) time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "the minimum-length s-t path in a graph (or a negative cycle, if one exists) can be found using using O(n^3) walk comparisons in O(n^3) time.",
+      "page": 6
+    },
+    {
+      "problem": "Bipartite Perfect Matching",
+      "problem family": "Matchings",
+      "bound": "polynomial-time algorithm using only comparisons between perfect matchings",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a polynomial-time algorithm to find the minimum-weight perfect matching in a complete bipartite graph K_{n,n} using only comparisons between perfect matchings.",
+      "page": 6
+    },
+    {
+      "problem": "Boolean Linear Optimization (Bounded-Weights, refined)",
+      "problem family": "Linear combinatorial optimization with integer weights",
+      "bound": "O((n+C) log C) comparison queries where C is the number of distinct weight values",
+      "bound_type": "other",
+      "deterministic": true,
+      "previous_best": "O(nB log(nB))",
+      "quote": "In fact, the number of comparison queries required is O((n+C)\\log C) if C is the number of distinct weight values realized by the feasible set.",
+      "page": 17
+    }
+  ],
+  "paper": "2511.15142",
+  "usage": {
+    "prompt_tokens": 47699,
+    "completion_tokens": 11772,
+    "total_tokens": 59471,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9413,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

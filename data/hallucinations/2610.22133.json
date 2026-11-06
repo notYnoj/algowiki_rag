@@ -1,0 +1,91 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Induced subgraph connected component problem",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(\\mathrm{MM}(|\\mathcal{S}|,n,n))",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "There is a deterministic algorithm that solves the induced subgraph connected component problem in time $\\tilde{\\mathcal{O}}(\\mathrm{MM}(|\\mathcal{S}|,n,n))$ for an n-node input graph and a non-empty input set S.",
+      "page": 4
+    },
+    {
+      "problem": "Neighborhood-deleted components, extremities, star cut-set, fixed two-pair",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(n^\\omega)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{2.79})",
+      "quote": "The following problems have a deterministic $\\tilde{\\mathcal{O}}(n^\\omega)$-time algorithm on an n-node input graph: computing neighborhood-deleted components in a graph, listing all extremities in a graph and determining whether the graph has a star cut-set, determining whether two fixed vertices x, y are a two-pair.",
+      "page": 5
+    },
+    {
+      "problem": "Recognizing AT-free graphs",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(n^\\omega)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{2.82})",
+      "quote": "There is a deterministic $\\tilde{\\mathcal{O}}(n^\\omega)$-time algorithm that determines if a graph is AT-free.",
+      "page": 5
+    },
+    {
+      "problem": "Listing all dominating pairs",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(n^\\omega)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{2.79})",
+      "quote": "There is a deterministic $\\tilde{\\mathcal{O}}(n^\\omega)$-time algorithm for listing all dominating pairs.",
+      "page": 5
+    },
+    {
+      "problem": "Listing all two-pairs",
+      "problem family": null,
+      "bound": "\\tilde{\\mathcal{O}}(n^\\omega)",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "O(n^{2.79})",
+      "quote": "There is a deterministic $\\tilde{\\mathcal{O}}(n^\\omega)$-time algorithm for listing all two-pairs.",
+      "page": 5
+    },
+    {
+      "problem": "Decremental Simplicial Vertex",
+      "problem family": null,
+      "bound": "\\mathcal{O}\\left(min_{\\Delta\\in[1..n]}\\left\\{n/\\Delta\\cdot MM(n,\\Delta,n)+m\\cdot\\Delta\\right\\}\\right)",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is an algorithm for Decremental Simplicial Vertex that on an n-node graph runs in time $\\mathcal{O}\\left(min_{\\Delta\\in[1..n]}\\left\\{n/\\Delta\\cdot MM(n,\\Delta,n)+m\\cdot\\Delta\\right\\}\\right)$.",
+      "page": 6
+    },
+    {
+      "problem": "Finding uv-trails (Induced Non-shortest Paths)",
+      "problem family": null,
+      "bound": "Triangle detection reduces to uv-trail detection in O(T) time",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For any $k\\ge 3$, suppose there exists an algorithm that, in time $\\mathsf{T}=\\Omega(n^2)$, determines whether an n-node graph $\\mathbf{G}$ contains a uv-trail for two vertices u,v with d(u,v)=k. Then there is an algorithm solving triangle detection in time O(T).",
+      "page": 6
+    }
+  ],
+  "paper": "2610.22133",
+  "usage": {
+    "prompt_tokens": 35075,
+    "completion_tokens": 10849,
+    "total_tokens": 45924,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 9952,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

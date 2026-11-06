@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "All-Edges Sparse Triangle",
+      "problem family": null,
+      "bound": "O(n^{1+2\\delta} \\log w)/w",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^{1+2\\delta})",
+      "quote": "For all \\(\\delta\\in(0,1/2]\\), there is a Las Vegas algorithm for All-Edges Sparse Triangle on graphs with maximum degree \\(n^\\delta\\) running in \\(O(n^{1+2\\delta} logw)/w\\) expected time, where w is the word size.",
+      "page": 3
+    },
+    {
+      "problem": "All-Edges Sparse Monochromatic Triangle",
+      "problem family": null,
+      "bound": "O(n^{1+2\\delta} \\log w)/w",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^{1+2\\delta})",
+      "quote": "For all \\(\\delta\\in(0,1/2]\\), there is a Las Vegas algorithm for All-Edges Sparse Monochromatic Triangle running in \\(O(n^{1+2\\delta} logw)/w\\) expected time.",
+      "page": 3
+    },
+    {
+      "problem": "Set Intersection query",
+      "problem family": null,
+      "bound": "\\tilde{O}(nkw) preprocessing, O(1+(k\\log w)/w) query",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a data structure for the Set Intersection query problem with \\(\\tilde{O}(nkw)\\) preprocessing time, such that all queries can be answered in \\(O(1+(klogw)/w)\\) time, using only poly(log n) randomness in preprocessing and AC0 operations on w-bit words.",
+      "page": 3
+    },
+    {
+      "problem": "Exact Triangle",
+      "problem family": null,
+      "bound": "O(n^3 (\\log w)^{3/2} / w^{3/2})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^3)",
+      "quote": "There is a Las Vegas algorithm for Exact Triangle on n-node graphs in \\(O(n^3(logw)^{3/2}/w^{3/2})\\) expected time.",
+      "page": 3
+    },
+    {
+      "problem": "4-cycle detection",
+      "problem family": null,
+      "bound": "O(T(n, \\sqrt{n}, (\\log_2 n)/2))",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For \\(T(n,k,\\ell)\\ge n+k+\\ell\\), if Concatenated Element Distinctness can be solved in \\(O(T(n,k,\\ell))\\) time, then 4-cycle detection in n-node graphs can be done in \\(O(T(n,\\sqrt{n},(log_2n)/2))\\) time.",
+      "page": 4
+    },
+    {
+      "problem": "4-cycle detection",
+      "problem family": null,
+      "bound": "O(n^2 \\log^2 n / w)",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^2)",
+      "quote": "We can detect a 4-cycle in n-node graphs in \\(O(n^2log^2n)/w\\) time in the AC0 Word RAM.",
+      "page": 4
+    },
+    {
+      "problem": "4-cycle detection in dense graphs",
+      "problem family": null,
+      "bound": "O(n^{5/4 - \\delta/2})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "O(n^2)",
+      "quote": "There is a Las Vegas algorithm that, given a graph with n vertices and at least \\(n^{3/2+\\delta}\\) edges for \\(\\delta\\in(0,\\frac{1}{2})\\), returns a 4-cycle and runs in expected \\(O(n^{5/4-\\delta/2})\\) time.",
+      "page": 4
+    },
+    {
+      "problem": "4-cycle detection in dense graphs",
+      "problem family": null,
+      "bound": "O(n^{\\min\\{5/4 - \\delta/2, 2-4\\delta\\}})",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "There is a Las Vegas algorithm that, given a graph with at least \\(n^{3/2+\\delta}\\) edges for \\(\\delta\\in(0,\\frac{1}{2})\\), returns a 4-cycle and runs in expected \\(O(n^{min\\{5/4-\\delta/2,2-4\\delta\\}})\\) time.",
+      "page": 4
+    }
+  ],
+  "paper": "2606.27727",
+  "usage": {
+    "prompt_tokens": 26283,
+    "completion_tokens": 8859,
+    "total_tokens": 35142,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 7762,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

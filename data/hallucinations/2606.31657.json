@@ -1,0 +1,101 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "MaxCSP(C) induced by a linear LTC C",
+      "problem family": "CSP",
+      "bound": "\\frac{n}{2\\theta}\\left(\\delta\\left(1-\\frac{p}{p-1}\\frac{\\varepsilon}{r\\kappa}\\right)-\\frac{2\\varepsilon}{\\kappa}\\right)-\\frac{1}{2\\theta}",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "Then, any \\((1-\\varepsilon)\\)-approximation algorithm for MaxCSP(C) has sensitivity at least \\(\\frac{n}{2\\theta}\\left(\\delta\\left(1-\\frac{p}{p-1}\\frac{\\varepsilon}{r\\kappa}\\right)-\\frac{2\\varepsilon}{\\kappa}\\right)-\\frac{1}{2\\theta}.\\)",
+      "page": 4
+    },
+    {
+      "problem": "Max E3LIN2",
+      "problem family": "CSP",
+      "bound": "\\Omega(n)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(n^\\delta) for some \\delta>0, only for arbitrary instances [15]",
+      "quote": "There exists \\(\\varepsilon>0\\) such that every \\((1-\\varepsilon)\\)-approximation algorithm for Max E3LIN2 must have sensitivity \\(\\Omega(n)\\) even when the input instances are satisfiable.",
+      "page": 4
+    },
+    {
+      "problem": "Max Cut on bipartite graphs",
+      "problem family": null,
+      "bound": "\\Omega(1/\\varepsilon)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(n) for 2-coloring of bipartite graphs [45], only for \\varepsilon<1/n",
+      "quote": "There exists a constant \\(\\varepsilon_0>0\\) such that for every even n and every \\(0<\\varepsilon\\le\\varepsilon_0/\\sqrt{n}\\), any \\((1-\\varepsilon)\\)-approximation algorithm for Max Cut on bipartite graphs on n vertices must have sensitivity \\(\\Omega(1/\\varepsilon)\\).",
+      "page": 4
+    },
+    {
+      "problem": "maximum clique",
+      "problem family": null,
+      "bound": "\\Omega(n^{1-c\\varepsilon})",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(n^\\delta) for some constants \\varepsilon,\\delta>0 [15]",
+      "quote": "Let \\(\\varepsilon>0\\). Then, any algorithm for the maximum clique problem that outputs an \\(n^{-\\varepsilon}\\)-approximate clique with probability 1-\\(O(1/n)\\) must have sensitivity \\(\\Omega(n^{1-c\\varepsilon})\\) for some universal constant c>0.",
+      "page": 5
+    },
+    {
+      "problem": "maximum k-coverage",
+      "problem family": null,
+      "bound": "\\Omega(k)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(k/n^{1-\\delta}) (negligible) from prior Max E3SAT bound [15]",
+      "quote": "There exists \\(\\varepsilon_0>0\\) such that, for every \\(0<\\varepsilon<\\varepsilon_0\\) and \\(k<1/(2\\varepsilon)\\), any \\((1-\\varepsilon)\\)-approximation algorithm for the maximum k-coverage problem must have sensitivity \\(\\Omega(k)\\), even when the instance admits a solution that covers all elements with k sets.",
+      "page": 5
+    },
+    {
+      "problem": "Max E3LIN2 in the non-signaling model",
+      "problem family": "CSP",
+      "bound": "\\Omega(\\log n)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "\\Omega(\\log n) for general instances [15]; extended here to satisfiable instances",
+      "quote": "There exists \\(\\varepsilon>0\\) such that any \\((1-\\varepsilon)\\)-approximate non-signaling distribution for Max E3LIN2 must have locality \\(\\Omega(\\log n)\\), even on satisfiable instances.",
+      "page": 6
+    },
+    {
+      "problem": "Max Cut on bipartite graphs in the non-signaling model",
+      "problem family": null,
+      "bound": "\\Omega(\\log(1/\\varepsilon))",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": "No stronger locality lower bound was known for bipartite inputs",
+      "quote": "There exists a constant \\(\\varepsilon_0>0\\) such that for every even n and every \\(0<\\varepsilon\\le\\varepsilon_0/\\sqrt{n}\\), any \\((1-\\varepsilon)\\)-approximate non-signaling distribution for the maximum cut problem on bipartite graphs must have locality \\(\\Omega(\\log(1/\\varepsilon))\\).",
+      "page": 6
+    },
+    {
+      "problem": "finding near-satisfying assignments for satisfiable Max E3SAT",
+      "problem family": "CSP",
+      "bound": "\\mathrm{exp}\\big(n^{\\Omega_D(1)}\\big)",
+      "bound_type": "lower bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "More quantitatively, for every fixed depth D, any such depth-D randomized circuit family must have size \\(\\mathrm{exp}\\big(n^{\\Omega_D(1)}\\big)\\).",
+      "page": 32
+    }
+  ],
+  "paper": "2606.31657",
+  "usage": {
+    "prompt_tokens": 31053,
+    "completion_tokens": 14434,
+    "total_tokens": 45487,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 13183,
+      "rejected_prediction_tokens": null
+    }
+  }
+}

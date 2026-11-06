@@ -1,0 +1,131 @@
+{
+  "claims_new_result": true,
+  "results": [
+    {
+      "problem": "Computing an sd-degeneracy sequence",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "$O_{\\mathcal{C}}(n^2)$ time, width $O_{\\mathcal{C}}(1)$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^3)$ time with width $O(1)$, or $O((n+m)\\log n)$ time with width $O(\\log^2 n)$ [23, 12]",
+      "quote": "For every graph class C of linear neighborhood complexity, there is an O_C(n^2)-time algorithm that, given an n-vertex graph G∈C, outputs an sd-degeneracy sequence of G of width O_C(1).",
+      "page": 5
+    },
+    {
+      "problem": "Computing an sd-degeneracy sequence",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "expected $O_{\\mathcal{C}}(|V(G)|+|E(G)|)$ time, width $O_{\\mathcal{C}}(1)$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O(n^3)$ time with width $O(1)$, or $O((n+m)\\log n)$ time with width $O(\\log^2 n)$ [23, 12]",
+      "quote": "For every graph class C of linear neighborhood complexity, there is a randomized algorithm that, given a graph G∈C, outputs an sd-degeneracy sequence of G of width O_C(1) in expected time O_C(|V(G)|+|E(G)|).",
+      "page": 5
+    },
+    {
+      "problem": "Computing an sd-degeneracy sequence",
+      "problem family": "Graphs of VC density ρ",
+      "bound": "$O_{\\mathcal{C}}(n^{3-1/\\rho})$ time, width $O_{\\mathcal{C}}(n^{1-1/\\rho})$",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": null,
+      "quote": "For every real number ρ≥1 and every graph class C of VC density ρ, there is an O_C(n^{3-1/ρ})-time algorithm that, given an n-vertex graph G∈C, outputs an sd-degeneracy sequence of G of width O_C(n^{1-1/ρ}).",
+      "page": 5
+    },
+    {
+      "problem": "Computing an sd-degeneracy sequence",
+      "problem family": "Graphs of VC density ρ",
+      "bound": "expected $O_{\\mathcal{C}}(|V(G)|+|E(G)|)$ time, width $O_{\\mathcal{C}}(n^{1-1/\\rho})$",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For every real number ρ≥1 and every graph class C of VC density ρ, there is a randomized algorithm that, given a graph G∈C, outputs an sd-degeneracy sequence of G of width O_C(n^{1-1/ρ}) in expected time O_C(|V(G)|+|E(G)|).",
+      "page": 5
+    },
+    {
+      "problem": "Single-Source Shortest Paths (SSSP)",
+      "problem family": null,
+      "bound": "$O(n+b)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "DAG-compression technique with extra superconstant factors [5]",
+      "quote": "There is an O(n+b)-time algorithm that, given an interval biclique partition of an n-vertex graph G with b bicliques and s∈V(G), outputs a shortest-path tree from vertex s in G.",
+      "page": 6
+    },
+    {
+      "problem": "All-Pairs Shortest Paths (APSP)",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "$O_{\\mathcal{C}}(n^2)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "$O(n^2\\log^2 n)$ for linear neighborhood complexity [18]",
+      "quote": "For every graph class C of linear neighborhood complexity, All-Pairs Shortest Path can be solved in O_C(n^2) time on n-vertex graphs of C.",
+      "page": 6
+    },
+    {
+      "problem": "Matrix-vector product and matrix multiplication with adjacency matrix",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "$O_{\\mathcal{C}}(n^2)$ preprocessing, $O_{\\mathcal{C}}(n)$ per vector; $O_{\\mathcal{C}}(n^2)$ for $n\\times n$ matrix",
+      "bound_type": "time upper bound",
+      "deterministic": true,
+      "previous_best": "extra polylog factors [14, 2, 12, 35, 18]",
+      "quote": "For every graph class C of linear neighborhood complexity, there is an O_C(n^2)-time algorithm that, given any adjacency matrix M of an n-vertex graph of C, yields a data structure that computes the matrix-vector product MX in time O_C(n) for any n-vector X. In particular, the product MN can be computed in O_C(n^2) time for any n×n matrix N.",
+      "page": 6
+    },
+    {
+      "problem": "Triangle Detection",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "expected $O_{\\mathcal{C}}(n+m)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": "$O(\\min(n^\\omega, m^{2\\omega/(\\omega+1)}))$ on general graphs; no linear-time algorithm known for bounded clique-width",
+      "quote": "For every graph class C of linear neighborhood complexity, Triangle Detection can be solved in expected time O_C(n+m) on n-vertex m-edge graphs of C.",
+      "page": 6
+    },
+    {
+      "problem": "K4 Detection",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "expected $O_{\\mathcal{C}}(n\\log^5 n + m\\log n)$ or deterministic $O_{\\mathcal{C}}(n^2)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "For every graph class C of linear neighborhood complexity, a K4 subgraph can be found in expected O_C(n log^5 n + m log n) or in deterministic O_C(n^2) time on n-vertex m-edge graphs of C.",
+      "page": 6
+    },
+    {
+      "problem": "K5 Detection",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "expected $O_{\\mathcal{C}}(n\\log^9 n + m\\log^5 n)$ time",
+      "bound_type": "time upper bound",
+      "deterministic": false,
+      "previous_best": null,
+      "quote": "For every graph class C of linear neighborhood complexity, a K5 subgraph can be found in expected time O_C(n log^9 n + m log^5 n) on n-vertex m-edge graphs of C.",
+      "page": 6
+    },
+    {
+      "problem": "k-Clique",
+      "problem family": "Graphs of linear neighborhood complexity",
+      "bound": "cannot be solved in time $f(k)n^{o(k/\\log k)}$ unless ETH fails",
+      "bound_type": "lower bound",
+      "deterministic": null,
+      "previous_best": null,
+      "quote": "There is a class C of linear neighborhood complexity such that k-Clique cannot be solved in time f(k)n^{o(k/log k)} for any function f, unless the ETH fails.",
+      "page": 24
+    }
+  ],
+  "paper": "2608.25212",
+  "usage": {
+    "prompt_tokens": 27805,
+    "completion_tokens": 12409,
+    "total_tokens": 40214,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 10700,
+      "rejected_prediction_tokens": null
+    }
+  }
+}
