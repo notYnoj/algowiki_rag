@@ -56,7 +56,7 @@ def get_until_ok(link, params=None, timeout=60):
         raise RuntimeError(f"arXiv HTTP {res.status_code} for {link}")
 
 
-#start = how many results to skip, so we can page past the first max_results
+#start = how many results to skip, so we can go past the first max_results
 def search_arxiv(query, max_results=10, start=0):
     params = {
         "search_query": build_query(query),

@@ -22,7 +22,7 @@ def ingest_pdf(folder):
 
     doc = {
         "paper": folder.name,
-        "pages": pages,
+        "pages": pages, #list of dictionary each contianing page_num : text
         "n_words": sum(len(p["text"].split()) for p in pages),
     }
 

@@ -12,6 +12,7 @@ How it works:
 - arxiv.py:
 - extract.py
 - ingest.py
+*Converts a folder of md files into a json object that holds: the folder name (aka the pdf name) + the pages as a list of dictionaries (each dictionary holds the page number and the text) + n_words
 - match.py
 
 - parse.py

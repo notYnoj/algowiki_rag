@@ -69,7 +69,7 @@ def make_tasks(problems, rows):
         task["family"] = family
         task["variation"] = variation
         tasks.append(task)
-        save_json(TASKS_PATH, tasks)
+        save_json(TASKS_PATH, tasks) #we save tasks after we finish them
     return tasks
 
 
@@ -164,12 +164,9 @@ if __name__ == "__main__":
         build_index()
 
     rows = load_rows()
-    if "--skip-search" in sys.argv:
-        # skip plan + agents, just read the papers already in downloads.json
-        downloads = load_json(DOWNLOADS_PATH)
-    else:
-        tasks = make_tasks(all_problems(), rows)
-        downloads = find_papers(tasks)
+    
+    tasks = make_tasks(all_problems(), rows)
+    downloads = find_papers(tasks)
 
     review = []
     for download in downloads:
