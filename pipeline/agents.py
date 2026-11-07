@@ -74,7 +74,7 @@ def run_agents():
     OUT_PATH.parent.mkdir(parents = True, exist_ok=True)
 
     downloads = []
-
+    #i wonder if we could use await here and make it async?
     for task in load_tasks():
         candidates = collect_candidates(task)
         kept_papers = triage(task, candidates)

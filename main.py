@@ -84,7 +84,7 @@ def find_papers(tasks):
         if len(have) >= MIN_PAPERS_PER_TASK:
             continue
         print(f"[agents] {task['family']}: {task['queries']} ({len(have)} papers so far)")
-        seen = {d["id"] for d in have}
+        seen = {d["id"] for d in have} #set 
         try:
             for search_round in range(MAX_SEARCH_ROUNDS):
                 candidates = collect_candidates(task, PER_QUERY, search_round * PER_QUERY)
@@ -133,12 +133,12 @@ def review_rows(download, extracted, quote_ok, rows):
     out = []
     for result in extracted["results"]:
         m = match_result(result, rows)
-        matched = f"{m['family']}: {m['variation']}" if m["family"] else ""
+        matched = f"{m['family']}: {m['variation']}" if m["family"] else "NOT_MATCHED"
         out.append({**base,
                     "problem_in_paper": result.get("problem"),
                     "new_bound": result.get("bound"),
                     "matched_algowiki_problem": matched,
-                    "algowiki_best": m["algowiki_best"],
+                    "algowiki_best": m["algowiki_best"] if m["algowiki_best"] else "NOT_MATCHED",
                     "verdict": m["verdict"],
                     "reason": m["reason"],
                     "quote": result.get("quote"),

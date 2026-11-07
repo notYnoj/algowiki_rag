@@ -11,6 +11,7 @@ PAPERS_DIR = Path("data/papers")
 NS = {"a": "http://www.w3.org/2005/Atom"}
 
 
+#build the query we will be sending arxiv search this word in all fields is waht all means AND is just AND
 def build_query(query):
     words = query.split()
     ret = "all:"
@@ -19,19 +20,23 @@ def build_query(query):
     return (ret.removesuffix(' AND all:'))
 
 
-
+#
 def parse_entry(entry):
     start = entry.find("a:id", NS).text
+    #after abs is what we like
     _, _, after = start.partition("/abs/")
+    #reverse split the first one first is version
     id_ = after.rsplit("v", 1)[0]
+    #title
     title_2 = entry.find("a:title", NS).text
+    #^ can be new lines. split to get it all with just spaces
     title = " ".join(title_2.split())
     abst = entry.find("a:summary", NS).text
     abstract = " ".join(abst.split())
-    pub = entry.find("a:published", NS).text
-    published = pub[:10]
+    #^same thing
 
-    return {"id": id_, "title":title, "abstract" : abstract, "published" : published}
+
+    return {"id": id_, "title":title, "abstract" : abstract}
 
 
 
@@ -43,20 +48,24 @@ def get_until_ok(link, params=None, timeout=60):
             res = requests.get(link, params=params, timeout=timeout)
         except requests.RequestException as e:
             print(f" network error ({e}), retrying...")
-            time.sleep(min(3 * 2 ** attempt, 60))
-            attempt += 1
+            time.sleep(min(2 ** attempt, timeout))
+            #im scared of overflow
+            if 2**attempt < timeout:
+                attempt += 1
             continue
         if res.status_code == 200:
             return res
         if res.status_code == 429 or res.status_code >= 500:
             print(f"  HTTP {res.status_code} from arXiv, retrying...")
-            time.sleep(min(3 * 2 ** attempt, 60))
-            attempt += 1
+            time.sleep(min(2 ** attempt, timeout))
+            #im scared of overflow
+            if 2**attempt < timeout:
+                attempt += 1
             continue
         raise RuntimeError(f"arXiv HTTP {res.status_code} for {link}")
 
 
-#start = how many results to skip, so we can go past the first max_results
+#start = how many results to skip in case were looking at the same problem for more than max results like 20 but max results is 10 at a time for limit reasons
 def search_arxiv(query, max_results=10, start=0):
     params = {
         "search_query": build_query(query),
@@ -68,6 +77,7 @@ def search_arxiv(query, max_results=10, start=0):
 
     res = get_until_ok(API_URL, params=params, timeout=60)
 
+    #this code is magic...
     root = ET.fromstring(res.text)
     papers = [parse_entry(e) for e in root.findall("a:entry", NS)]
     time.sleep(3)

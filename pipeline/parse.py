@@ -36,11 +36,11 @@ def send_payload(image):
     payload = {
         "messages": [{"role": "user", "content": [{"type": "image_url", "image_url": {"url": "data:image/png;base64," + image}}]}],
         "model": "nvidia/nemotron-parse",
-        "frequency_penalty": 0, # no penatly for token appearence
-        "max_tokens": 8192, #endpoint max context is 9000 tokens (prompt + completion)
-        "presence_penalty": 0,
-        "stream": False, #send it back once its all complete
-        "temperature": 0,
+        "frequency_penalty": 0, # no penatly for token appearence <- flat single instance set to 0 for same reason as Presence pen
+        "max_tokens": 8192, #endpoint max context is 9000 tokens (prompt + completion <- don't want to be context window limited)
+        "presence_penalty": 0, #penalty for repeating tokens set it to 0 (no need for this, repeating tokens or words in a page is fine)
+        "stream": False, #send it back once its all complete (we don't want to take in text one chunk at a time, thats annoying just recieve one response back)
+        "temperature": 0, #choose the best (makes it very rigid)
     }
     headers = {
         "accept": "application/json", #send as json
